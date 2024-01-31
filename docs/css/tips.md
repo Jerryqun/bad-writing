@@ -9,14 +9,12 @@ title: tips
 # 两行换行出现点点点
 
 ```css
-.div {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  word-break: break-all; /* 解决纯数字不生效问题 */
-}
+overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 2;
+-webkit-box-orient: vertical;
+word-break: break-all; /* 解决纯数字不生效问题 */
 ```
 
 ## css 兼容性问题检测
@@ -26,9 +24,7 @@ https://caniuse.com/?search=where
 ## 行内块元素
 
 ```html
-<img />
-<input />
-<td />
+ <img>、<input>、<button>、<select>、<textarea>
 ```
 
 1、和相邻行内元素（行内块）在一行上,但是之间会有空白缝隙，一行可以显示多个
@@ -39,13 +35,11 @@ https://caniuse.com/?search=where
 
 ## 浏览器默认字体大小
 
-Chrome 浏览器默认字体大小是 16px
-
-每个浏览器默认字体大小可能都不一样
-
-正常情况下 Chrome 浏览器支持最小字体大小是 12px
+Chrome 浏览器默认字体大小是 16px，每个浏览器默认字体大小可能都不一样，正常情况下 Chrome 浏览器支持最小字体大小是 12px
 
 如何让 Chrome 浏览器支持小于 12px 的文字
+
+- 🚀 **方法一**
 
 ```html
 <div><span> hello world</span></div>
@@ -59,7 +53,11 @@ Chrome 浏览器默认字体大小是 16px
     -webkit-transform: scale(0.6); /* 则文字大小为6px 10*0.6 */
   }
 </style>
+```
 
+- 🚀 **方法二**
+
+```html
 <style type="text/css">
   .span1 {
     font-size: 12px;
@@ -109,54 +107,46 @@ await acceptWebp('https://interview.poetries.top/logo.png');
 
 ```css
 CSS 滤镜 -webkit-filter
-
 blur 模糊-webkit-filter:blur(2px);
-
 brightness 亮度-webkit-filter:brightness(25%);
-
 contrast 对比度-webkit-filter: contrast(50%);
-
 drop-shadow 阴影-webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
-
 opacity 透明度-webkit-filter: opacity(50%);
-
 grayscale 灰度-webkit-filter: grayscale(80%);
-
 sepia 褐色-webkit-filter: sepia(100%);
-
 invert 反色-webkit-filter: invert(100%);
-
 hue-rotate 色相旋转-webkit-filter:hue-rotate(180deg);
-
 saturate 饱和度-webkit-filter: saturate(1000%);
 ```
 
-```html
+```css
 html { filter: grayscale(.95); -webkit-filter: grayscale(.95);
 ```
 
 ## 样式浏览器兼容写法
 
+```css
 -moz : firefox
 
 -ms : IE
 
 -webkit : chrome、safari
+```
 
 ## 隐藏滚动条
 
 ```css
+/*Safari*/
+/*chrome*/
 .classname::-webkit-scrollbar {
   display: none;
-  /*Safari*/
-  /*chrome*/
 }
 
 .classname {
   /* firefox */
   scrollbar-width: 0;
-  -ms-overflow-style: none;
   /* IE 10+ */
+  -ms-overflow-style: none;
 }
 ```
 
@@ -173,6 +163,12 @@ html { filter: grayscale(.95); -webkit-filter: grayscale(.95);
 5、z-index:-9999: 原理是将层级放到底部，这样就被覆盖了，看起来隐藏了
 
 6、transform: scale(0,0): 平面变换，将元素缩放为 0，但是依然占据空间，但不可交互
+
+# 隐藏元素方法对事件的影响
+
+1、设置元素 opacity:0 之后，也可以触发点击事件<br/>
+2、visibility:hidden 的元素无法触发其点击事件<br/>
+3、dispaly:none 元素不占据空间<br/>
 
 # Attr 属性
 
@@ -202,3 +198,18 @@ html { filter: grayscale(.95); -webkit-filter: grayscale(.95);
 ```
 
 ![Alt text](./image.png)
+
+# css 解决幽灵不换行问题
+
+```css
+p {
+  word-break: break-all;
+}
+```
+
+# CSS 设置背景颜色透明
+
+1、通过 background-color 和 opacity 来设置
+
+2、通过 rgba 方式设置背景颜色透明
+background: rgba(R, G, B, A); A 为透明度
