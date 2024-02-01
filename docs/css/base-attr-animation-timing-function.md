@@ -6,9 +6,9 @@ group:
 title: animation-timing-function
 ---
 
-# 指定动画将如何完成一个周期。
+# animation-timing-function
 
-animation-timing-function
+指定动画将如何完成一个周期。
 
 默认值: ease
 

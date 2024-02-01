@@ -16,7 +16,7 @@ TailwindCSS 是一个基于类的 CSS 框架，旨在简化网页开发过程中
 
 TailwindCSS 其本质就是一款 PostCSS 插件。
 
-https://tailwind.nodejs.cn/docs/line-height
+https://tailwind.nodejs.cn/docs/line-heightt
 
 ## UnoCSS
 

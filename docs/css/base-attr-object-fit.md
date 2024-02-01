@@ -6,7 +6,9 @@ group:
 title: object-fit
 ---
 
-# https://www.runoob.com/cssref/pr-object-fit.html
+# object-fit: ;
+
+https://www.runoob.com/cssref/pr-object-fit.html
 
 object-fit 属性指定元素的内容应该如何去适应指定容器的高度与宽度。
 object-fit 一般用于 img 和 video 标签，一般可以对这些元素进行保留原始比例的剪切、缩放或者直接进行拉伸等

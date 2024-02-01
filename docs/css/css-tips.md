@@ -213,3 +213,28 @@ p {
 
 2、通过 rgba 方式设置背景颜色透明
 background: rgba(R, G, B, A); A 为透明度
+
+# css 注释
+
+```css
+/*
+这是一个多行注释：
+.container 选择器是给所有要容器指定基本的布局格式
+*/
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 这是一个单行注释 */
+.selector {
+  color: red; /* 这是一个单行注释 */
+  /* 这是一个单行注释 */
+  background: blue;
+}
+```
+
+可以看到在 CSS 中只有 /\*\*/ 格式的注释，并没有 // 格式的，
+这也解释了上述三大预处理器为什么会把 // 格式的注释在转化成最终 CSS 的时候进行舍弃，
+因为标准的 CSS 不支持 // 这种格式的注释，不进行舍弃则会报错导致程序无法正常运行。
