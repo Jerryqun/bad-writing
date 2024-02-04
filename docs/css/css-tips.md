@@ -197,7 +197,7 @@ html { filter: grayscale(.95); -webkit-filter: grayscale(.95);
 </html>
 ```
 
-![Alt text](./image.png)
+![Alt text](../css/img/image.png)
 
 # css 解决幽灵不换行问题
 

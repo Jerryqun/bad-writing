@@ -28,5 +28,8 @@
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1"
   },
-  "repository": "https://github.com/Jerryqun/bad-writing.git"
+  "repository": "https://github.com/Jerryqun/bad-writing.git",
+  "dependencies": {
+    "antd": "^5.13.3"
+  }
 }

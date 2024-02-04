@@ -1,5 +1,5 @@
 ---
-nav: NODE
+nav: Node
 group: webpack
 toc: content
 mobile: false

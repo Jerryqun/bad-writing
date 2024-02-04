@@ -39,4 +39,4 @@ nth-last-of-type(n) n 从 1 开始 倒序<br />
 </html>
 ```
 
-![Alt text](./image-1.png)
+![Alt text](../css/img/image-1.png)

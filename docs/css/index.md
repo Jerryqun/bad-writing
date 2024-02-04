@@ -1,5 +1,5 @@
 ---
-nav: CSS
+nav: Css
 group:
   title: 基础概念
   order: 2

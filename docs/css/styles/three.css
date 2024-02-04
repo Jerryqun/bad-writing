@@ -1,0 +1,50 @@
+.sjx {
+  width: 0px;
+  height: 0px;
+  border-top: 10px solid transparent;
+  border-right: 10px solid red;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid transparent;
+}
+.sjx-1 {
+  width: 0px;
+  height: 0px;
+  border-top: 10px solid red;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid transparent;
+}
+.sjx-2 {
+  width: 0px;
+  height: 0px;
+  border-top: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid red;
+  border-left: 10px solid transparent;
+}
+
+.div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  margin-top: 20px;
+}
+
+.box1 {
+  /* 圆 */
+  /* border-radius: 50%; */
+  border-radius: 50px;
+}
+
+.box2 {
+  /* 半圆 */
+  height: 50px;
+  border-radius: 50px 50px 0 0;
+}
+
+.box3 {
+  /* 椭圆 */
+  height: 50px;
+  border-radius: 50px/25px;
+  /* x轴/y轴 */
+}

@@ -1,0 +1,13 @@
+.col {
+  font-size: 20px;
+  .col-1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: break-all; /* 解决纯数字不生效问题 */
+    background: red;
+    color: #fff;
+  }
+}

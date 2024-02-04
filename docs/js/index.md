@@ -1,5 +1,5 @@
 ---
-nav: JS
+nav: Js
 group: 基础概念
 toc: content
 mobile: false
