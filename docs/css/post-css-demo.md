@@ -1,7 +1,7 @@
 ---
 toc: content
 group:
-  title: 预编译和PostCSS
+  title: 预编译和PostCss
   order: 3
 title: 手写一个 PostCss 插件
 ---
@@ -34,7 +34,7 @@ title: 手写一个 PostCss 插件
 //     color: red;
 //   }
 
-const postcss = require('postcss');
+const PostCss = require('PostCss');
 
 function myComplexPlugin(options) {
   const {
@@ -49,10 +49,10 @@ function myComplexPlugin(options) {
   } = options;
 
   return {
-    postcssPlugin: 'postcss-plugin-complex',
+    PostCssPlugin: 'PostCss-plugin-complex',
     Once(root, { result }) {
       // 创建版权声明注释节点
-      const comment = postcss.comment({ text: copyright });
+      const comment = PostCss.comment({ text: copyright });
 
       // 将注释节点插入到根节点的最顶部
       root.prepend(comment);
@@ -98,11 +98,11 @@ function myComplexPlugin(options) {
     OnceExit(root, { result }) {
       // 添加新的 CSS 规则和声明
       Object.keys(newSelectors).forEach((selector) => {
-        const rule = postcss.rule({ selector });
+        const rule = PostCss.rule({ selector });
 
         Object.keys(newDeclarations).forEach((property) => {
           const value = newDeclarations[property];
-          const declaration = postcss.decl({ prop: property, value });
+          const declaration = PostCss.decl({ prop: property, value });
 
           rule.append(declaration);
         });
@@ -182,7 +182,7 @@ const css = `#app {
   }
 `;
 
-const result = postcss([myComplexPlugin(pluginOptions)]).process(css, {
+const result = PostCss([myComplexPlugin(pluginOptions)]).process(css, {
   /* options */
 });
 

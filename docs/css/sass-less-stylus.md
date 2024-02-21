@@ -1,7 +1,7 @@
 ---
 toc: content
 group:
-  title: 预编译和PostCSS
+  title: 预编译和PostCss
   order: 3
 title: 三大预编译语言
 ---

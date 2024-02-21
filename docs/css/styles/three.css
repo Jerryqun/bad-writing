@@ -48,3 +48,18 @@
   border-radius: 50px/25px;
   /* x轴/y轴 */
 }
+
+/*
+0% 0% 表示左上角的顶点。
+100% 0% 表示右上角的顶点。
+100% 100% 表示右下角的顶点。
+0% 50% 表示左边缘，距离顶部一半高度的点。
+当我们将这些顶点连接起来，元素的左下角就会呈现出一个对角线裁剪的三角形效果，如同将左下角剪掉一半一样。
+*/
+.three-img {
+  background-image: url('../img//qrcode.svg');
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 0%);
+}

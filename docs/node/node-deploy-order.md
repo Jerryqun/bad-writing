@@ -34,12 +34,17 @@ yum install -y redhat-lsb即可
 
 
 
-防火墙相关
-systemctl start firewalld	 开启防火墙
-systemctl stop firewalld     停止防火墙
-systemctl status firewalld	 查看防火墙状态
-systemctl disable firewalld	 开机禁用防火墙
-systemctl enable firewalld	 开机启用防火墙
+```
+
+## 防火墙相关
+
+```bash
+
+systemctl start firewalld 开启防火墙
+systemctl stop firewalld 停止防火墙
+systemctl status firewalld 查看防火墙状态
+systemctl disable firewalld 开机禁用防火墙
+systemctl enable firewalld 开机启用防火墙
 
 查看防火墙版本，确保防火墙已安装：firewall-cmd --version
 查看防火墙状态，确保防火墙已开启：firewall-cmd --state
