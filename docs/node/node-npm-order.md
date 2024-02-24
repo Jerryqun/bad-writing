@@ -35,3 +35,13 @@ npm info xxx 查看包的详细信息
 上述dev 并行运行前三个命令 start build:server build:client
 
 ```
+
+## eslint 初始化
+
+```bash
+npm install eslint eslint-plugin-react @typescript-eslint/eslint-plugin @typescript-eslint/parser  --save-dev
+```
+
+然后我们用执行 npx eslint --init
+
+依据提示选择

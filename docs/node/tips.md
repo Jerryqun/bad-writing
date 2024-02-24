@@ -69,6 +69,17 @@ fs.writeFileSync('./public/config.json', JSON.stringify(config));
   ^0.0.3-beta.2 代表 >= 0.0.3-beta.2 < 0.0.4-0
 ```
 
+限制模块只能在某种架构的 cpu 下运行
+"cpu" : [ "x64", "ia32" ]
+
+可以指定你的模块只能在哪个操作系统上运行
+"os" : [ "darwin", "linux", "win32" ]
+
+engines 字段指明了该模块运行的平台，比如 Node 或者 npm 的某个版本或者浏览器。
+{ "engines" : { "node" : ">=0.10.3 <0.12", "npm" : "~1.0.20" } }
+
+需要注意，engines 只是起一个说明的作用，即使用户安装的版本不符合要求，也不影响依赖包的安装。
+
 ## node 获取 ip
 
 ```js
@@ -79,7 +90,7 @@ console.log('host: ', host);
 
 ## 终端动画
 
-https://www.npmjs.com/package/ora
+<a target="_blank" href="https://www.npmjs.com/package/ora">参考</a>
 
 ```js
 import ora from 'ora';
@@ -94,7 +105,7 @@ setTimeout(() => {
 
 ## 描文件目录
 
-https://www.npmjs.com/package/glob
+<a target="_blank" href="https://www.npmjs.com/package/glob">参考</a>
 
 ```js
 import { glob } from 'glob';
@@ -119,14 +130,16 @@ const cwd = process.cwd(); //用于获取 node.js 流程的当前工作目录。
 
 ## live-server 静态资源服务器
 
-https://www.npmjs.com/package/live-server
+<a href="https://www.npmjs.com/package/live-server">参考</a>
 
+```js
 npm install -g live-server
 live-server
+```
 
 ## immer
 
-https://zhuanlan.zhihu.com/p/146773995
+<a href="https://zhuanlan.zhihu.com/p/146773995">参考</a>
 
 ```js
 /**

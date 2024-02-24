@@ -3,8 +3,10 @@ nav: Node
 group: NPM
 toc: content
 mobile: false
-title: npm包大小
+title: 查看npm包大小
 ---
+
+## npm 包大小
 
 ```bash
 # 安装

@@ -8,7 +8,7 @@ title: 检查package.json中包的更新
 
 ## 检查 package.json 中包的更新
 
-https://www.npmjs.com/package/npm-check-updates
+<a href="https://www.npmjs.com/package/npm-check-updates" target="_blank">npm-check-updates</a>
 
 ### 安装
 

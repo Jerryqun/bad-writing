@@ -42,8 +42,10 @@ n use xx.xx.xx a.js
 
 ### 方式一：nvm
 
-https://github.com/nvm-sh/nvm
+<a href="https://github.com/nvm-sh/nvm" target="_blank">nvm</a>
 
 安装
 
+```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+```

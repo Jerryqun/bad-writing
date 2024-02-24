@@ -10,7 +10,7 @@ mobile: false
 
 # 反向代理与正向代理
 
-https://juejin.cn/post/6844904064266960903?searchId=20230712200442E5A62CE23F42D1F4763D
+<a target="_blank" href="https://juejin.cn/post/6844904064266960903?searchId=20230712200442E5A62CE23F42D1F4763D">参考</a>
 
 ## 正向代理
 

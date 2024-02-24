@@ -8,7 +8,7 @@ title: Babel
 
 ## Babel
 
-https://juejin.cn/post/6844904008679686152 <br/>
+<a target="_blank" href="https://juejin.cn/post/6844904008679686152">参考</a>
 
 Babel 是一个工具链，主要用于将 ECMAScript 2015+ 版本的代码转换为向后兼容的 JavaScript 语法，以便能够运行在当前和旧版本的浏览器或其他环境中。
 
@@ -24,7 +24,7 @@ Polyfill 是一种 JavaScript 的 API 的 Polyfill，用来模拟实现一些 Ja
 
 ## babel-polyfill 和 babel-runtime 的区别
 
-https://juejin.cn/post/6844903869353295879?searchId=20230718094626F6E170D8E496316FE991
+<a target="_blank" href="https://juejin.cn/post/6844903869353295879?searchId=20230718094626F6E170D8E496316FE991">参考</a>
 
 1、babel-polyfill 污染全局变量，会影响其他库<br/>
 2、babel-runtime 不会污染全局变量，不会影响其他库<br/>

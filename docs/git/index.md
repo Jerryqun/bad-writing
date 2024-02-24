@@ -29,9 +29,9 @@ git clone <repository> <path>
 
 ## 通过 SSH 方式拉取代码
 
-https://www.jianshu.com/p/1c3cadc68b4b
+<a href="https://www.jianshu.com/p/1c3cadc68b4b" target="_blank">参考</a>
 
-https://www.runoob.com/git/git-remote.html
+<a href="https://www.runoob.com/git/git-remote.html" target="_blank">git-remote</a>
 
 ```bash
 
@@ -155,7 +155,7 @@ git config user.email
 
 ## git 回退到某个 commit 方法
 
-https://www.jianshu.com/p/f860bf857456
+<a target="_blank" href="https://www.jianshu.com/p/f860bf857456">参考</a>
 
 ```bash
 git log

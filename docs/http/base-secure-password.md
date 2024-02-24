@@ -10,7 +10,7 @@ mobile: false
 
 # https 中的加密方式
 
-https://blog.csdn.net/FairLikeSnow/article/details/120943479
+<a target="_blank" href="https://blog.csdn.net/FairLikeSnow/article/details/120943479">参考</a>
 
 按照密钥的使用方式，加密可以分为两大类：对称加密和非对称加密。
 

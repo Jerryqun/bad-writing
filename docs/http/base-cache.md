@@ -10,7 +10,7 @@ mobile: false
 
 # 缓存
 
-https://mp.weixin.qq.com/s/O4C3hlO6tYV6qiIwgQXhEA
+<a href="https://mp.weixin.qq.com/s/O4C3hlO6tYV6qiIwgQXhEA" target="_blank">参考</a>
 
 web 缓存主要指的是两部分<br/>
 1、浏览器缓存<br/>
