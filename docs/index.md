@@ -29,12 +29,8 @@ features:
     description: 提供与全新的 NPM 包研发工具 <a href="https://github.com/umijs/father" target="_blank" rel="noreferrer">father 4</a> 集成的脚手架，为开发者提供一站式的研发体验
 ---
 
-## 谁在使用
-
-## 反馈与共建
-
-请访问 [GitHub](https://github.com/umijs/dumi) 或加入讨论群：
+## 联系作者
 
 <div>
-  <img data-type="dingtalk" src="https://mdn.alipayobjects.com/huamei_i7qs1c/afts/img/A*T94jRZmW1fgAAAAAAAAAAAAADs-oAQ" width="300" />
+  <img data-type="dingtalk" src="../img/IMG_4689.JPG" width="200" />
 </div>
