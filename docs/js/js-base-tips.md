@@ -810,3 +810,81 @@ const outList = [
   [{ name: 'zy' }, { average: '15' }],
 ];
 ```
+
+```js
+/**
+ * 元素的实际高度
+ * document.getElementById("div").offsetHeight
+ * 元素的实际宽度
+ * document.getElementById("div").offsetWidth
+ * 元素距离左边的距离
+ * document.getElementById("div").offsetLeft
+ * 元素距离上边的距离
+ * document.getElementById("div").offsetTop
+ */
+```
+
+## createDocumentFragment
+
+Document.createDocumentFragment()
+
+创建一个新的空白的文档片段
+let fragment = document.createDocumentFragment();
+
+DocumentFragments (en-US) 是 DOM 节点。它们不是主 DOM 树的一部分。通常的用例是创建文档片段，将元素附加到文档片段，然后将文档片段附加到 DOM 树。在 DOM 树中，文档片段被其所有的子元素所代替。
+
+因为文档片段存在于内存中，并不在 DOM 树中，所以将子元素插入到文档片段时不会引起页面回流（对元素位置和几何上的计算）。因此，使用文档片段通常会带来更好的性能。
+
+```js
+/**
+ * 创建一个文档片段
+ */
+
+var element = document.getElementById('ul'); // assuming ul exists
+var fragment = document.createDocumentFragment();
+var browsers = ['Firefox', 'Chrome', 'Opera', 'Safari', 'Internet Explorer'];
+
+browsers.forEach(function (browser) {
+  var li = document.createElement('li');
+  li.textContent = browser;
+  fragment.appendChild(li);
+});
+
+element.appendChild(fragment);
+```
+
+## console.time
+
+```js
+console.time('times');
+for (i = 0; i < 100000; i++) {
+  // 代码部分
+}
+console.timeEnd('times'); //  times: 2.551025390625 ms
+
+// 注意 time和timeEnd的两个参数必须保持一致
+```
+
+## Array.prototype.slice.call
+
+<a href="https://juejin.cn/post/6844903550342938637" target="_blank">Array.prototype.slice</a>
+
+Array.prototype.slice.call 是把类数组转成数组
+
+```js
+function test(a, b, c, d) {
+  var arg = Array.prototype.slice.call(arguments, 0);
+  console.log(arg);
+}
+test('a', 'b', 'c', 'd'); // ['a', 'b', 'c', 'd']
+```
+
+## 转 Boolean
+
+在条件判断时，除了 undefined，null， false， NaN， ''， 0， -0，其他所有值都转为 true，包括所有对象
+
+## 暂时性死区
+
+暂时性死区是浏览器的 bug：<br/>
+检测一个未被声明的变量类型时，不会报错，会返回 undefined 如：console.log(typeof a) //undefined <br/>
+而直接使用一个未定义的变量时会报错： ReferenceError: a is not defined<br/>

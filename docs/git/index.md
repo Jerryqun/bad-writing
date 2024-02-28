@@ -1,6 +1,8 @@
 ---
 nav: Git
+   order: 1
 toc: content
+   
 mobile: false
 title: 随笔
 ---

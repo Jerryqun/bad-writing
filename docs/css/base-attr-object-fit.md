@@ -6,7 +6,7 @@ group:
 title: object-fit
 ---
 
-# object-fit: ;
+## object-fit
 
 https://www.runoob.com/cssref/pr-object-fit.html
 
@@ -20,3 +20,12 @@ contain： 保持原有尺寸比例。内容被缩放。
 cover： 保持原有尺寸比例。但部分内容可能被剪切。
 
 scale-down： 保持原有尺寸比例。内容的尺寸与 none 或 contain 中的一个相同，取决于它们两个之间谁得到的对象尺寸会更小一些。
+
+## background-size
+
+cover<br/>
+把背景图像扩展至足够大，以使背景图像完全覆盖背景区域。<br/>
+背景图像的某些部分也许无法显示在背景定位区域中。<br/>
+
+contain<br/>
+把图像图像扩展至最大尺寸，以使其宽度和高度完全适应内容区域。<br/>
