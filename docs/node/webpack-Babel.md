@@ -10,11 +10,13 @@ title: Babel
 
 <a target="_blank" href="https://juejin.cn/post/6844904008679686152">参考</a>
 
+Babel is a JavaScript compiler.
+
 Babel 是一个工具链，主要用于将 ECMAScript 2015+ 版本的代码转换为向后兼容的 JavaScript 语法，以便能够运行在当前和旧版本的浏览器或其他环境中。
 
 ## 为何 proxy 不能被 polyfill
 
-如 Class 可以用 funcition 模拟<br/>
+如 Class 可以用 function 模拟<br/>
 如 Promise 可以用 callback 模拟<br/>
 但 Proxy 的功能用 Object.defineProperty 无法模拟<br/>
 

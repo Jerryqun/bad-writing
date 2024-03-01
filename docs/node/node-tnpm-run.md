@@ -9,7 +9,7 @@ title: npm run xxx
 ## npm run xxx
 
 <a target="_blank" href="https://juejin.cn/post/7078924628525056007">参考</a><br/>
-1、去 package.json 的 script 中找到对应的命令 并执行<br/>
+1、去 package.json 的 script 中找到对应的命令并执行<br/>
 2、直接执行 xxx 会报错，因为操作系统中没有存在 xxx 这一条指令<br/>
 3、运行 npm run xxx 的时候，npm 会先在当前目录的 node_modules/.bin 查找要执行的程序，如果找到则运行；
 没有找到则从全局的 node_modules/.bin 中查找，<br/>

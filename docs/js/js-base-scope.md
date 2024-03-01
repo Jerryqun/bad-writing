@@ -89,3 +89,17 @@ console.log(a); // 1
  这是个函数表达式，这个 a 就是函数名称，它的特点是作为函数体（作用域内）的本地变量，不能被修改，也不能被外部访问。
  */
 ```
+
+### 变量提升
+
+- 变量提升过程中 只会提升声明 不会提升变量的赋值
+- 函数提升时会提升整个函数体
+- 函数的提升优先级大于变量
+
+```js
+console.log('a', a); // function a
+function a() {}
+
+console.log('b', b); //  b is not a function
+var b = function name() {};
+```

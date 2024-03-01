@@ -33,6 +33,7 @@ export default () => {
       headers: {
         'Content-Type': 'multipart/form-data',
       },
+      // progress.loaded表示当前上传的数据大小，progress.total表示整个要上传的数据大小
       onUploadProgress: ({ total, loaded }) => {
         setProcess(((loaded / total) * 100).toFixed(2));
       },

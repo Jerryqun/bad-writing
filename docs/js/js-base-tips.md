@@ -888,3 +888,80 @@ test('a', 'b', 'c', 'd'); // ['a', 'b', 'c', 'd']
 暂时性死区是浏览器的 bug：<br/>
 检测一个未被声明的变量类型时，不会报错，会返回 undefined 如：console.log(typeof a) //undefined <br/>
 而直接使用一个未定义的变量时会报错： ReferenceError: a is not defined<br/>
+
+## 验证 setTimeout 递归产生的时差
+
+```js
+let time = 0;
+let nowTime = +new Date();
+let timer;
+const poll = function () {
+  timer = setTimeout(() => {
+    const lastTime = nowTime;
+    nowTime = +new Date();
+    console.log('递归setTimeout(fn,0)产生时间差：', nowTime - lastTime);
+    poll();
+  }, 0);
+  time++;
+  if (time === 20) clearTimeout(timer);
+};
+poll();
+```
+
+## 数组置空
+
+```js
+const arr = [1, 3, 4, 5];
+const arr1 = arr;
+arr.length = 0;
+console.log('arr', arr, 'arr1', arr1); // arr [] arr1 []
+
+let arr = [1, 3, 4, 5];
+const arr1 = arr;
+arr = [];
+console.log('arr', arr, 'arr1', arr1); // arr [] arr1 (4) [1, 3, 4, 5]
+```
+
+## 全局监听 promise 错误
+
+```js
+// 浏览器
+window.addEventListener('unhandledrejection', (event) => {
+  const {
+    error, // 错误对象
+    promise, // 出现异常的promise对象
+  } = event;
+  console.log(error, promise);
+  event.preventDefault();
+});
+
+// node
+process.on('unhandledRejection', (error, promise) => {
+  console.log(error, promise);
+});
+```
+
+## 判断是否是 promise 对象
+
+```js
+function isPromise(val) {
+  return typeof val.then === 'function' && typeof val.catch === 'function';
+}
+```
+
+## 能否使用自闭合 script 标签引入脚本文件
+
+不能。自闭合标签来自于 XML 语法，而不是 HTML 语法。
+
+根据现在的 HTML 语法，只有不需要结束标签的 void element（如 img 之类的），或者是外部元素（如 svg）可以使用自闭合。script 标签显然不在此列。
+
+```js
+
+// 正确写法
+
+<script src="..."></script>
+
+// 错误写法
+
+<script src="..." />
+```

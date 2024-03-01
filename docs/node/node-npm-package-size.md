@@ -6,7 +6,7 @@ mobile: false
 title: 查看npm包大小
 ---
 
-## npm 包大小
+## package-size 查看 npm 包大小
 
 ```bash
 # 安装

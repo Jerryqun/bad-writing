@@ -17,6 +17,7 @@ npm install -S = npm install --save
 
 npm info xxx 查看包的详细信息
 
+
 # npm-run-all
 
 --parallel: 并行运行多个命令，例如：npm-run-all --parallel lint build
@@ -45,3 +46,26 @@ npm install eslint eslint-plugin-react @typescript-eslint/eslint-plugin @typescr
 然后我们用执行 npx eslint --init
 
 依据提示选择
+
+## npm 全局安装
+
+在 macOS 系统上，使用 npm 全局安装的包通常位于以下目录
+
+```bash
+/usr/local/lib/node_modules
+```
+
+要检查你的系统中 npm 全局包的确切位置，你可以在命令行中运行以下命令
+
+输出后拼接上 /lib/node_modules
+
+```bash
+npm config get prefix
+
+```
+
+或
+
+```bash
+npm list -g --depth 0
+```

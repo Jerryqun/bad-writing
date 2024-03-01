@@ -130,29 +130,34 @@ person.hasOwnProperty('age'); // true
 person.hasOwnProperty('toString'); // false
 ```
 
-## ES6 有哪些新特性
-
-一、语法
-1、let 和 const 的块级作用域
-let、const 声明的变量，在 for，if 语句中，会形成块级作用域，块级作用域内的变量，不能被作用域外部使用
-let、const 声明变量不再会有声明提升，在变量声明之前使用运行时会报错
-
-2、解构赋值、展开、参数默认值、模板字符串
-解构赋值时注意 null 和 undefined
-
-3、同名属性可以省略 key:value 形式，直接 key
-
-4、函数可以省略 key：value 形式 直接 func()
-
-5、计算属性 [Math.random()]:11122
-
-二、全新的数据类型和数据结构
-Symbol Set Map WeakSet WeakMap
-
-三、全新的对象、全新的方法、全新的功能
-比如 promise、proxy、object 的 assign、is
-
 ## document.getElementById 和 document.querySelector 的区别
 
 document.getElementById 获取动态 dom
 document.querySelector 获取静态 dom
+
+## 项目中拦截器做了什么事情
+
+在软件项目中，拦截器（Interceptor）是一种常用的设计模式，用来拦截一系列的操作，然后在这些操作之前或之后执行特定的功能
+
+```bash
+1、认证和授权
+2、日志记录
+3、数据验证、数据加工
+4、错误处理
+5、性能监控
+6、缓存管理
+7、请求和响应的修改
+8、跨域处理
+9、安全增强
+10、限流和降级
+```
+
+## 所有的事件都有冒泡吗？
+
+```bash
+并不是所有的事件都有冒泡的，例如以下事件就没有：
+onblur
+onfocus
+onmouseenter
+onmouseleave
+```

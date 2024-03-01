@@ -23,7 +23,9 @@ function type(obj) {
 }
 ```
 
-1、typeOf(不能将 Object、Array 和 Null 区分，都返回 object)
+### typeOf
+
+不能将 Object、Array 和 Null 区分，都返回 object
 
 ```js
 typeof 1; // number
@@ -36,9 +38,12 @@ typeof []; // object
 typeof {}; //object
 typeof null; //object
 typeof undefined; // undefined
+typeof NaN; // number
 ```
 
-2、instanceof 后面的构造函数去前面的实例对象的原型链上找本身，找到了返回 true 没扎到返回 false<br/>
+### instanceof
+
+instanceof 后面的构造函数去前面的实例对象的原型链上找本身，找到了返回 true 没扎到返回 false<br/>
 优点：能够区分 Array、Object 和 Function，适合用于判断自定义的类实例对象<br/>
 缺点：Number，Boolean，String 基本数据类型不能判断<br/>
 
@@ -54,7 +59,9 @@ obj instanceof Object; // true
 arr instanceof Array; // true
 ```
 
-3、Object.prototype.toString.call() 精准判断数据类型
+### Object.prototype.toString.call()
+
+精准判断数据类型
 
 ```js
 const toString = Object.prototype.toString;
