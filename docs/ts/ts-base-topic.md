@@ -95,6 +95,9 @@ b1 = a1; // Error 不能将类型“unknown”分配给类型“string”。
 
 ## interface 和 type 的区别
 
+- 在定义公共 API 时(比如编辑一个库）使用 interface，这样可以方便使用者继承接口，这样允许使用最通过声明合并来扩展它们；
+- 在定义组件属性（Props）和状态（State）时，建议使用 type，因为 type 的约束性更强。
+
 ```ts
 //1、interface 能够声明合并 type 不行（interface 可以重复声明 会自动合并，type 定义后不能重复声明）
 interface A {

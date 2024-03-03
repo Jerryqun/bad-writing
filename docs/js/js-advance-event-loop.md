@@ -7,8 +7,13 @@ title: Event-loop
 
 ## Event-loop
 
-宏任务: script （主代码块）、setTimeout、 setInterval 、setImmediate、 I/O UI 、rendering
-微任务: process.nextTick（Nodejs） 、promise then 里面的 js 代码 、async await await 后面的 js 代码 、 Object.observe 、MutationObserver
+### 宏任务
+
+script （主代码块）、setTimeout、 setInterval 、setImmediate、 I/O 、UI rendering
+
+### 微任务
+
+process.nextTick（Nodejs） 、promise then 里面的 js 代码 、async await (await 后面的 js 代码) 、 Object.observe 、MutationObserver
 
 宏任务 => 微任务的 Event Queue => 宏任务的 Event Queue
 

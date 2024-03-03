@@ -78,3 +78,76 @@ async function asyncPool(poolLimit, array, iteratorFn) {
   return Promise.all(ret);
 }
 ```
+
+## 另一种解法
+
+```js
+/**
+
+设计一个异步并发限制
+
+异步并发数限制问题还是比较容易理解，假设我们某个页面有10个接口数据需要请求，现在考虑到网络并发通道阻塞问题，现在需要限制这10个接口请求时最多一次性3个在处理，当最大请求次数超过3个时，未处理的接口只能等待。当有接口数据请求完成后，立即将请求资源给其余接口使用。这个处理是不是很像操作系统的线程任务队列。
+综合上面的简单例子，我们可以知道这个异步并发限制的工具
+
+队列，存储所有任务
+limit,保存当前最大异步请求接口的数量。
+ */
+
+class limitRequest {
+  constructor(limit, promises) {
+    this.limit = limit;
+    this.count = 0;
+    this.queue = promises;
+    this.result = [];
+    this.length = promises.length;
+  }
+  run() {
+    if (this.queue.length > 0 && this.count < this.limit) {
+      const top = this.queue.shift();
+      this.count++;
+      top.then((res) => {
+        this.count--;
+        this.result.push(res);
+        this.run();
+        return new Promise((resolve) => {
+          if (this.queue.length === 0) {
+            resolve(this.result);
+          }
+        });
+      });
+    }
+  }
+  start() {
+    this.run();
+    return new Promise((resolve) => {
+      const i = setInterval(() => {
+        if (this.result.length === this.length) {
+          resolve(this.result);
+          clearInterval(i);
+        }
+      }, 500);
+    });
+  }
+}
+
+const sleep = (timer, res) =>
+  new Promise((resolve, reject) =>
+    setTimeout(() => {
+      console.log(`${timer}开始了`);
+      resolve(res);
+    }, timer),
+  );
+
+const limitRequestObj = new limitRequest(2, [
+  sleep(1000, { a: 1 }),
+  sleep(2000, { a: 2 }),
+  sleep(3000, { a: 3 }),
+  sleep(5000, { a: 5 }),
+]);
+const result = limitRequestObj.start();
+console.log(
+  result.then((res) => {
+    console.log('res', res);
+  }),
+);
+```

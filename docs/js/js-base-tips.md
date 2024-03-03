@@ -941,14 +941,6 @@ process.on('unhandledRejection', (error, promise) => {
 });
 ```
 
-## 判断是否是 promise 对象
-
-```js
-function isPromise(val) {
-  return typeof val.then === 'function' && typeof val.catch === 'function';
-}
-```
-
 ## 能否使用自闭合 script 标签引入脚本文件
 
 不能。自闭合标签来自于 XML 语法，而不是 HTML 语法。
@@ -964,4 +956,15 @@ function isPromise(val) {
 // 错误写法
 
 <script src="..." />
+```
+
+## 谷歌控制台 ƒ () { [native code] }
+
+在谷歌控制台中看到 ƒ () { [native code] } 这种表示通常意味着你正在查看一个浏览器内置的原生函数或方法。这是控制台的一种展示方式，用来告诉你这个函数是由浏览器底层实现的，而不是由 JavaScript 编写的。
+
+例如，当你在控制台输入 console.log 或者 document.getElementById 然后回车时，你可能会看到如下输出：
+
+```js
+ƒ log() { [native code] }
+ƒ getElementById() { [native code] }
 ```
