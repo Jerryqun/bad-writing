@@ -22,3 +22,8 @@ dom 事件流：
 ## 触摸事件的响应顺序
 
 ontouchstart -> ontouchmove -> ontouchend -> onclick
+
+## e.target 和 e.currentTarget 有什么区别？
+
+e.target：触发事件的元素  
+e.currentTarget：绑定事件的元素

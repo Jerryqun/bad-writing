@@ -968,3 +968,348 @@ process.on('unhandledRejection', (error, promise) => {
 ƒ log() { [native code] }
 ƒ getElementById() { [native code] }
 ```
+
+## window 和 Window 的区别
+
+window 是 Window 的实例对象
+
+```js
+window.__proto__.constructor === Window;
+```
+
+## window.location.href 和 window.location.reload 的区别
+
+1、当 window.location.href = 'xxxx' orgin 相同时不会刷新页面，只会切换路由，相当于 history.push
+
+2、特别注意 history.push 不会全局刷新页面，如果用到了全局的 store，store 里面的数据不会清空，而 window.location.relad()会重置页面
+
+## window.isNaN 和 Number.isNaN 的区别
+
+### Number.isNaN
+
+判断传入值是否为 NaN 内部不会做任何转换
+
+```js
+Number.isNaN(Number('avc')); // true
+Number.isNaN('avc'); // false
+
+Number.isNaN(1 + null); // false
+Number.isNaN(1 + undefined); // true
+```
+
+### window.isNaN
+
+判断传入值是否是数字 内部会进行 Number 转换 转换不是 NaN 会返回 false 转换是 NaN 返回 true
+
+```js
+window.isNaN('abc'); // true
+window.isNaN(1); // false
+window.isNaN('1212'); // false
+```
+
+## slice 和 splice 区别
+
+```js
+/**
+ * ArrayObject.slice(start,end)   start-开始截取的下标  end-结束截取的下标(截取出来后不包含end)
+ * 返回新数组 不改变原数据
+ * ArrayObject.slice(Array)   删除Array中的值
+ */
+var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+var citrus = fruits.slice(1, 3);
+
+console.log(citrus); //["Orange", "Lemon"]
+
+var citrus = fruits.slice(["Orange"]);
+
+console.log(citrus); //["Lemon"]
+
+[1, 2, 3].slice(); //   [1, 2, 3]
+
+/**
+ * splice
+ * 通过删除或替换现有元素或者原地添加新的元素来修改数组，并以数组形式返回被修改的内容。此方法会改变原数组。
+ */
+
+const months = ["Jan", "March", "April", "June"];
+months.splice(1, 0, "Feb");
+// inserts at index 1
+console.log(months);
+// expected output: Array ["Jan", "Feb", "March", "April", "June"]
+
+months.splice(4, 1, "May");
+// replaces 1 element at index 4
+console.log(months);
+// expected output: Array ["Jan", "Feb", "March", "April", "May"]
+
+/**
+ * substring
+ * substring() 方法返回一个字符串在开始索引到结束索引之间的一个子集，或从开始索引直到字符串的末尾的一个子集。
+ * 不会改变原字符串
+ *
+
+const a = "zcq001";
+const b = a.substring(0, 3);
+console.log(b); // "zcq"
+console.log(a); //  "zcq001";
+
+```
+
+## setTimeout 实现 setInterval
+
+```js
+/**
+ * 1
+ */
+
+let n = setTimeout(function () {
+  console.log('start');
+  //something
+  n = setTimeout(arguments.callee, 2000);
+}, 2000);
+
+/**
+ * 2
+ */
+
+function say() {
+  //something
+  setTimeout(say, 200);
+}
+setTimeout(say, 200);
+```
+
+## arguments.callee
+
+arguments.callee 是一个在旧版的 JavaScript 中使用的属性，它引用当前执行的函数。在严格模式（'use strict'）下，使用 arguments.callee 会引发一个错误，因为它在 ECMAScript 5 严格模式中被禁用了。
+
+在非严格模式下，arguments.callee 可以用于递归地调用匿名函数，例如：
+
+```js
+var factorial = function (n) {
+  if (n <= 1) return 1;
+  return n * arguments.callee(n - 1);
+};
+
+console.log(factorial(5)); // 输出: 120
+```
+
+## setTimeout 的第三个参数
+
+setTimeout 的第三个参数。 第三个参数会作为回掉函数的入参
+
+```js
+for (var i = 0; i < 5; i++) {
+  setTimeout(
+    (j) => {
+      console.log(j);
+    },
+    1000,
+    i,
+  );
+}
+// 0 1 2 3 4
+
+// 运用闭包解决上述问题
+const fu = (i) => {
+  let j = i;
+  return () => {
+    console.log('j', j);
+  };
+};
+for (var i = 0; i < 5; i++) {
+  fu(i)();
+}
+
+for (var i = 0; i < 5; i++) {
+  (function (j) {
+    setTimeout(function () {
+      console.log(j);
+    }, j * 1000);
+  })(i);
+}
+
+// 迭代器
+
+const arr = [1, 2, 3, 4];
+function test() {
+  let i = 0;
+  return function () {
+    return arr[i++] || '结束咯';
+  };
+}
+```
+
+## replace
+
+<a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace#%E8%AF%AD%E6%B3%95">参考</a>
+
+```js
+str.replace(regexp|substr, newSubStr|function)
+
+// function:  一个用来创建新子字符串的函数，该函数的返回值将替换掉第一个参数匹配到的结果
+//   function(target,index){
+//    return ...
+//   }
+
+
+"a124".replace("a", function (c) {
+  return 0;
+}); // '0124'
+
+/**
+ * HTML标签转义（< -> &lt;）
+ * @param sHtml
+ * @returns
+ */
+function html2Escape(sHtml) {
+  return sHtml.replace(/[<>&"]/g, function (c) {
+    console.log("c", c);
+    return { "<": "&lt;", ">": "&gt;", "&": "&amp;", '"': "&quot;" }[c];
+  });
+}
+
+/**
+ *  HTML标签反转义（&lt; -> <）
+ * @param str
+ * @returns
+ */
+function escape2Html(str) {
+  var arrEntities = { lt: "<", gt: ">", nbsp: " ", amp: "&", quot: '"' };
+  return str.replace(/&(lt|gt|nbsp|amp|quot);/gi, function (all, t) {
+    return arrEntities[t];
+  });
+}
+
+```
+
+## reduce
+
+```js
+[1, 2, 3, 4].reduce((a, b) => {
+  console.log(a, b);
+});
+
+// 1 2 undefined 3 undefined 4 a为上一轮的返回值  第一次默认为数组第一项
+
+[1, 2, 3, 4].reduce((a, b) => {
+  console.log(a, b);
+}, 0);
+
+// 0 1 undefined 2 undefined 3  undefined 4
+```
+
+## pushState、replaceState、popstate
+
+pushState(state, title, url)
+
+state: 可以通过 history.state 读取  
+title: 可选参数，暂时没有用，建议传个短标题  
+url: 改变过后的 url 地址
+
+浏览器不会向服务端请求数据，直接改变 url 地址，可以类似的理解为变相版的 hash；但不像 hash 一样，浏览器会记录 pushState 的历史记录，可以使用浏览器的前进、后退功能作用
+
+replaceState 用法与 pushState 一样 区别是不会增加浏览器历史记录，只是修改浏览器当前记录。
+
+当用户在浏览器点击进行后退、前进，或者在 js 中调用 histroy.back()，history.go()，history.forward()等，会触发 popstate 事件；但 pushState、replaceState 不会触发这个事件。
+
+当界面跳转到 pushState 或者 replaceState 的时候 就会打印出来 pushState 或者 replaceState 之前设置的 state 值
+
+```js
+window.onpopstate = function (e) {
+  console.log(JSON.stringify(e.state));
+};
+```
+
+## ||运算符
+
+使用|| 运算符 我们可以返回第一个真值 如果所有的值都是假值 则返回最后一个值
+
+```js
+const one = false || {} || null; // {}
+const two = null || false || ''; // ''
+const three = [] || 0 || true; // []
+```
+
+## ++i 与 i++的区别
+
+看被加的数 ，如果在前面返回被加前的数 如果在后面就反悔被加后的数
+
+```js
+let i = 1;
+let a = ++i; // a = 2  i = 2
+
+let g = 1;
+let b = i++; // b = 1  i = 2
+```
+
+## window.setImmediate
+
+谷歌不兼容的 window.setImmediate()
+
+在 MDN 上看 window.setImmediate() 描述
+
+该方法可能不会被批准成为标准，目前只有最新版本的 Internet Explorer 和 Node.js 0.10+实现了该方法。
+
+它遇到了 Gecko(Firefox) 和 Webkit (Google/Apple) 的阻力.
+
+该特性是非标准的，所以说、请尽量不要在生产环境中使用它！
+
+语法：
+var immediateID = setImmediate(func, [param1, param2, ...]);
+var immediateID = setImmediate(func);
+window.clearImmediate 方法可以用来取消通过 setImmediate 设置的将要执行的语句, 就像 window.clearTimeout 对应于 window.setTimeout 一样.
+
+因为其兼容性不好，所以会用 setTimeout(fn, 0) 来代替，常用来： 处理 繁重任务（数组操作等等）以避免 js 执行阻塞 ui 的更新
+
+## console 控制台中加入 cdn 资源
+
+```js
+function addScript(url = 'https://code.jquery.com/jquery-3.5.1.min.js') {
+  const script = document.createElement('script');
+  script.src = url;
+  document.getElementsByTagName('head')[0].appendChild(script);
+}
+```
+
+## 阻止事件传播兼容写法
+
+```js
+/**
+ * 阻止冒泡事件
+ */
+
+function stopPropagation(e) {
+  if (typeof e.stopPropagation === 'function') {
+    e.stopPropagation();
+  } else {
+    // 兼容ie
+    e.cancelBubble = true;
+  }
+}
+
+/**
+ * 阻止默认事件
+ */
+
+function preventDefault(e) {
+  if (typeof e.preventDefault === 'function') {
+    e.preventDefault();
+  } else {
+    // 兼容ie
+    e.returnValue = false;
+  }
+}
+```
+
+## Function.length
+
+在 JavaScript 中，Function.length 属性表示函数在定义时期望接收的参数个数。这个属性并不考虑函数在运行时可能接收的额外参数，也不考虑默认参数、剩余参数和解构赋值参数。
+
+```js
+function myFunction(a, b, c) {
+  // 函数体
+}
+
+console.log(myFunction.length); // 输出：3
+```

@@ -59,3 +59,45 @@ sideEffects 是用于标识我们的 ES 模块是否有副作用，从而提供�
   "sideEffects": ["./esm/Input/index.js", "*.css", "*.less"]
 }
 ```
+
+如果你的项目中有一些模块实际上是有副作用的，比如 CSS 或者其他资产文件（assets）（通常使用诸如 import './styles.css' 这样的语句来引入），设置 "sideEffects": false 可能会导致这些模块在打包过程中被错误地剔除，因为打包工具认为它们没有被使用。这就可能导致在打包后的应用程序中出现样式丢失或错乱。
+
+## Tree shaking
+
+Tree shaking 的作用：消除无用的 JS 代码，减少代码体积
+
+项目中只使用了 targetType 方法，但未使用 deepClone 方法，项目打包后，deepClone 方法不会被打包到项目里
+
+依赖于 ES6 的模块特性，ES6 模块依赖关系是确定的，和运行时的状态无关，可以进行可靠的静态分析，这就是 tree-shaking 的基础
+静态分析就是不需要执行代码，就可以从字面量上对代码进行分析。ES6 之前的模块化，比如 CommonJS 是动态加载，只有执行后才知道引用的什么模块，
+就不能通过静态分析去做优化，正是基于这个基础上，才使得 tree-shaking 成为可能
+
+## tree-shaking 只对使用 export 导出的变量生效
+
+同样的，项目中只使用了 targetType 方法，未使用 deepClone 方法，项目打包后，deepClone 方法还是被打包到项目里
+
+```js
+// util.js
+export function targetType(target) {
+  return Object.prototype.toString.call(target).slice(8, -1).toLowerCase();
+}
+export function deepClone(target) {
+  return JSON.parse(JSON.stringify(target));
+}
+
+// Tree shaking 并不是万能的
+
+// util.js
+export default {
+  targetType(target) {
+    return Object.prototype.toString.call(target).slice(8, -1).toLowerCase();
+  },
+  deepClone(target) {
+    return JSON.parse(JSON.stringify(target));
+  },
+};
+
+// 引入并使用
+import util from '../util';
+util.targetType(null);
+```

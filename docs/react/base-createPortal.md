@@ -78,10 +78,63 @@ export default () => {
 ## 空渲染
 
 这是 React 官方文档上对 Portal 特性的介绍，值得注意的是，这里只是说“父组件以外的 DOM 节点”，但没有要求这个 DOM 节点是真的在页面上，
-还是只是存在于内存中。 因此，我们可以先通过 document.createElement 在内存中创建一个元素，然后再通过 React.createPoral
+还是只是存在于内存中。 因此，我们可以先通过 document.createElement 在内存中创建一个元素，然后再通过 React.createPortal
 把 React 子节点渲染到这个元素上，这样就实现了“空渲染”。
 
 ```js
 const targetElement = document.createElement('div');
 ReactDOM.createPortal(child, targetElement);
+```
+
+## 基于 createPortal 实现最简单的 keep-alive
+
+<a href="https://zhuanlan.zhihu.com/p/214166951" target="_blank">参考</a>
+
+```jsx
+import { useState, useRef, useLayoutEffect } from 'react';
+import ReactDOM from 'react-dom';
+const App = (props) => {
+  const [targetElement] = useState(() => document.createElement('div'));
+  const containerRef = useRef();
+  // 增加一个 ref 记录组件是否“被激活过”
+  const activatedRef = useRef(false);
+  activatedRef.current = activatedRef.current || props.active;
+  useLayoutEffect(() => {
+    if (props.active) {
+      containerRef.current.appendChild(targetElement);
+    } else {
+      try {
+        containerRef.current.removeChild(targetElement);
+      } catch (e) {}
+    }
+  }, [props.active]);
+  return (
+    <>
+      <div id="232" ref={containerRef} />
+      {activatedRef.current && // 如果“被激活过”，才渲染 children
+        ReactDOM.createPortal(props.children, targetElement)}
+    </>
+  );
+};
+
+const Children = () => {
+  console.log('render');
+  return (
+    <div>
+      <input />
+    </div>
+  );
+};
+
+export default () => {
+  const [active, setActive] = useState(false);
+  return (
+    <div className="wrap-01">
+      <App active={active}>
+        <Children />
+      </App>
+      <button onClick={() => setActive(!active)}>点击</button>
+    </div>
+  );
+};
 ```

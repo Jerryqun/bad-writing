@@ -9,33 +9,30 @@ title: cloneElement
 ## React.cloneElement
 
 该方法接收三个参数，注意参数的数据类型：  
-第一个参数为必选参数：TYPE（ReactElement）  
-第二个参数为可选参数：[PROPS（object）]，  
-第三个参数为可选参数：[CHILDREN（ReactElement）]
+第一个参数为必选参数：要克隆的 React 元素。这是一个有效的 React 元素，通常是通过 JSX 或 React.createElement 创建的。
 
-第一个参数：用于克隆的母体 React 元素。  
-第二个参数：为克隆后生成的 React 元素添加新的 props 或覆盖从母体中克隆而来的部分或全部 props。  
-第三个参数：为新生成的 React 元素添加新的 children，取代从母体中克隆而来的 children。
+第二个参数为可选参数：一个对象，包含想要在克隆的元素上设置或覆盖的新 props。传递给此参数的 props 会合并到克隆元素的原始 props 中，如果有相同的键，则新的 props 会优先。
+
+第三个参数为可选参数：新的子元素来替换克隆元素的子元素。如果提供了这个参数，它会覆盖原始元素的子元素。你可以传递多个子元素作为额外的参数
 
 ```jsx
-function Son(props) {
-  console.log(props); // {name: "alien", age: "28", mes: "let us learn React !"}
-  return <div> hello,world </div>;
-}
-function Father(prop) {
-  return React.cloneElement(
-    prop.children,
-    { mes: 'let us learn React !' },
-    <div>212</div>,
-  );
-}
-function Index() {
-  return (
-    <Father>
-      <Son name="alien" age="28" />
-    </Father>
-  );
-}
+const MyComponent = () => {
+  const original = <div className="original">Original Text</div>;
 
-export default Index;
+  // 克隆元素，并添加新的 props 和 children
+  const cloned = React.cloneElement(
+    original,
+    { className: 'cloned', style: { color: 'red' } },
+    'Cloned Text',
+  );
+
+  return (
+    <div>
+      {original}
+      {cloned}
+    </div>
+  );
+};
+
+export default MyComponent;
 ```

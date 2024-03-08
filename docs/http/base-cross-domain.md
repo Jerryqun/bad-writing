@@ -45,7 +45,7 @@ this.header('Access-Control-Allow-Credentials', 'true');
 该字段是一个逗号分隔的字符串，指定浏览器 CORS 请求会额外发送的头信息字段
 this.header("Access-Control-Allow-Headers", "appId, appKey");
 
-预检成功后的返回头字段
+预检成功后的返回头字段  
 1、Access-Control-Allow-Methods
 该字段必需，它的值是逗号分隔的一个字符串，表明服务器支持的所有跨域请求的方法。注意，返回的是所有支持的方法，而不单是浏览器请求的那个方法。这是为了避免多次"预检"请求。
 
@@ -58,12 +58,11 @@ this.header("Access-Control-Allow-Headers", "appId, appKey");
 ## 三、写一个 JSONP 跨域
 
 ```js
-
 //动态创建 script
-const script = document.createElement('script')
+const script = document.createElement('script');
 // 设置回调函数
 function getData(data) {
-console.log(data);
+  console.log(data);
 }
 //设置 script 的 src 属性，并设置请求地址
 script.src = 'http://localhost:3000/?callback=getData';
@@ -71,27 +70,27 @@ script.src = 'http://localhost:3000/?callback=getData';
 // 让 script 生效
 document.body.appendChild(script);
 
-JSONP 的缺点: JSON 只支持 get，因为 script 标签只能使用 get 请求； JSONP 需要后端配合返回指定格式的数据。
+// JSONP 的缺点: JSON 只支持 get，因为 script 标签只能使用 get 请求； JSONP 需要后端配合返回指定格式的数据。
 
 function jsonp({ url, params, cb }) {
-let createUrl = () => {
-let dataStr = ''
-for (let k in params) {
-dataStr += `${k}=${params[k]}&`
-}
-dataStr += `callback=${cb}`
-return `${url}?${dataStr}`
-}
-return new Promise((resolve, reject) => {
-let script = document.createElement('script')
-script.src = createUrl()
-document.body.appendChild(script)
-// 添加回调
-window[cb] = data => {
-resolve(data)
-document.body.removeChild(script)
-}
-})
+  let createUrl = () => {
+    let dataStr = '';
+    for (let k in params) {
+      dataStr += `${k}=${params[k]}&`;
+    }
+    dataStr += `callback=${cb}`;
+    return `${url}?${dataStr}`;
+  };
+  return new Promise((resolve, reject) => {
+    let script = document.createElement('script');
+    script.src = createUrl();
+    document.body.appendChild(script);
+    // 添加回调
+    window[cb] = (data) => {
+      resolve(data);
+      document.body.removeChild(script);
+    };
+  });
 }
 ```
 

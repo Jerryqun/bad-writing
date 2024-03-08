@@ -3,7 +3,7 @@ nav: Node
 group: 部署
 toc: content
 mobile: false
-title: CentOS 常用命令
+title: 快捷键
 ---
 
 ## CentOS 常用命令
@@ -36,6 +36,10 @@ yum install -y redhat-lsb即可
 
 ```
 
+## Centos7 下安装 MySQL 详细步骤
+
+<a href="https://blog.csdn.net/lyouhuan/article/details/124868523" target="_blank">点击查看</a>
+
 ## 防火墙相关
 
 ```bash
@@ -54,3 +58,23 @@ systemctl enable firewalld 开机启用防火墙
 查看指定端口是否已开放：firewall-cmd --zone=public --query-port=9999/tcp
 删除指定端口：firewall-cmd --zone=public --remove-port=9999/tcp --permanent
 ```
+
+## mac 常用快捷键
+
+```bash
+command + shift + . mac显示隐藏文件 （https://www.zhihu.com/question/40870712）
+control + c vscode cmd杀死进程
+ifconfig  mac查看ip地址 在 en0  inet后面
+mkdir xxx 创建文件夹
+option + command + i  Mac打开safari、chrome开发者工具快捷键
+command + 空格  打开应用快捷搜索
+command + shift + 3   截图全屏
+command + shift + 4   截图所选区域
+Command + Option + c  复制选中文件的路径
+
+```
+
+## sketch 快捷键
+
+吸色
+control + c

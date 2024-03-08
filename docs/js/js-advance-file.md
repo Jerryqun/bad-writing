@@ -87,9 +87,21 @@ Base64 是一种基于 64 个可打印字符来表示二进制数据的表示方
 - atob：解码，解码一个 Base64 字符串<br/>
 - btoa：编码，从一个字符串或者二进制数据编码一个 Base64 字符串<br/>
 
-前端实现上传文件的预览
+### 前端实现上传文件的预览
+
+1、基于 FileReader
+
+- 创建 FileReader 对像；
+- 调用 readAsDataURL 方法读取文件；
+- 调用 onload 事件监听。因为我们需要拿到完整的数据，但我们又不知道文件何时读完，所以需要第三步监听；
+- 通过 FileReader 的 result 属性拿到读取结果。
 
 ```js
+<body>
+  <input type="file" id="fileInput" />
+  <img id="preview" />
+</body>;
+
 const fileInput = document.getElementById('fileInput');
 const preview = document.getElementById('preview');
 const reader = new FileReader();
@@ -101,5 +113,25 @@ fileInput.onchange = (e) => {
 reader.onload = (e) => {
   preview.src = e.target.result;
   console.log(e.target.result);
+};
+```
+
+1、基于 window.URL.createObjectURL
+方法对选择的图片数据（可以勉强理解为 input 的 value）生成一个 blob 对象路径
+
+```js
+<body>
+  <input type="file" id="fileInput" />
+  <img id="preview" />
+</body>;
+
+const fileInput = document.getElementById('fileInput');
+const preview = document.getElementById('preview');
+const reader = new FileReader();
+
+fileInput.onchange = (e) => {
+  document.querySelector('img').src = window.URL.createObjectURL(
+    e.target.files[0],
+  );
 };
 ```

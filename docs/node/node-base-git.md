@@ -1,10 +1,9 @@
 ---
-nav: Git
-   order: 1
+nav: Node
+group: 基础
 toc: content
-   
 mobile: false
-title: 随笔
+title: git
 ---
 
 ## “git pull”和“git fetch”之间有什么区别
@@ -17,10 +16,10 @@ git fetch:是从远程获取最新版本到本地，不会自动 merge. 更新.g
 从安全角度出发，git fetch 比 git pull 更安全，因为我们可以先比较本地与远程的区别后，选择性的合并。
 git push 默认推送到 master，如果有多个分支，则多个分支一起推送到远程.
 
-合并 master 简洁版
-
+```bash
 git fetch
 git merge origin/master
+```
 
 ## 将 Git 存储库克隆到特定文件夹中
 
@@ -32,8 +31,6 @@ git clone <repository> <path>
 ## 通过 SSH 方式拉取代码
 
 <a href="https://www.jianshu.com/p/1c3cadc68b4b" target="_blank">参考</a>
-
-<a href="https://www.runoob.com/git/git-remote.html" target="_blank">git-remote</a>
 
 ```bash
 
@@ -48,7 +45,13 @@ cat ~/.ssh/id_rsa.pub
 然后拉取代码
 git clone git@github.com:Jerryqun/react-antd-admin.git
 
+```
 
+## git-remote
+
+<a href="https://www.runoob.com/git/git-remote.html" target="_blank">参考</a>
+
+```bash
 显示所有远程仓库：
 git remote -v
 

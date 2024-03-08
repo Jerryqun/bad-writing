@@ -105,18 +105,27 @@ hooks 的实现就是基于 fiber 的，会在 fiber 节点上放一个链表，
 
 React.isValidElement();
 
-## 类组件中的 setState 和函数组件中的 useState 有什么异同
+## 为什么说 React 中的 props 是只读的
 
-一、相同点：
+保证 react 的单向数据流的设计模式，使状态更可预测。如果允许自组件修改，那么一个父组件将状态传递给好几个子组件，这几个子组件随意修改，就完全不可预测，不知道在什么地方修改了状态，所以我们必须像纯函数一样保护 props 不被修改
 
-首先从原理角度出发，setState 和 useState 更新视图，底层都调用了 scheduleUpdateOnFiber 方法，
-而且事件驱动情况下都有批量更新规则。
+## 怎么防止 HTML 被转义
 
-二、 不同点
+1、在前端 JavaScript 中直接插入 HTML：
+使用 innerHTML 属性可以将字符串作为 HTML 插入元素中，而不是作为文本。例如：
 
-1、在不是 pureComponent 组件模式下， setState 不会浅比较两次 state 的值，只要调用 setState，在没有其他优化手段的前提下，就会执行更新。  
-但是 useState 中的 dispatchAction 会默认比较两次 state 是否相同，然后决定是否更新组件。
+```js
+document.getElementById('myDiv').innerHTML = '<strong>这是加粗的文字</strong>';
+```
 
-2、setState 有专门监听 state 变化的回调函数 callback，可以获取最新 state；但是在函数组件中，只能通过 useEffect 来执行 state 变化引起的副作用。
+2、在 React 中防止转义
 
-3、setState 在底层处理逻辑上主要是和老 state 进行合并处理，而 useState 更倾向于重新赋值。
+```js
+function MyComponent() {
+  return (
+    <div
+      dangerouslySetInnerHTML={{ __html: '<strong>这是加粗的文字</strong>' }}
+    />
+  );
+}
+```

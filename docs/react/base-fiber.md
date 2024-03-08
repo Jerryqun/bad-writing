@@ -3,10 +3,10 @@ nav: React
 group: 基础
 toc: content
 mobile: false
-title: fiber
+title: Fiber
 ---
 
-## fiber 的概念
+## Fiber 的概念
 
 <a target="_blank" href="https://juejin.cn/post/7063321486135656479">参考</a>
 
@@ -26,6 +26,8 @@ schedule： 空闲调度 (调度这 fiber 节点执行 reconcile,requestIdleCall
 reconcile： vdom => fiberl （并且还会准备好要用的 dom 节点、确定好是增、删、还是改，通过 schdule 的调度，最终把整个 vdom 树转成了 fiber 链表）
 
 commit: 把 reconcile 产生的 fiber 链表一次性添加到 dom 中，因为 fiber 对应的节点提前创建好了、是增是删还是改也都知道了，所以，这一个阶段很快
+
+整个 Fiber 的遍历是基于循环而非递归，可以随时中断
 
 ## 双缓冲的原理
 

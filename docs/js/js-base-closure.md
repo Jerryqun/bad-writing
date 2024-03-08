@@ -97,3 +97,79 @@ console.log(o.get('abc')); // 破坏obj对象成功
    以上的闭包保存的仅仅是window和当前作用域。
  */
 ```
+
+## 闭包应用
+
+1、数据封装和私有变量
+
+```js
+function createCounter() {
+  let count = 0;
+  return {
+    increment: function () {
+      count++;
+    },
+    decrement: function () {
+      count--;
+    },
+    getCount: function () {
+      return count;
+    },
+  };
+}
+
+const counter = createCounter();
+counter.increment();
+console.log(counter.getCount()); // 输出 1
+counter.decrement();
+console.log(counter.getCount()); // 输出 0
+```
+
+2、回调函数
+
+```js
+function delayedGreeting(name) {
+  setTimeout(function () {
+    console.log('Hello, ' + name);
+  }, 1000);
+}
+
+delayedGreeting('John'); // 约1000ms后输出: Hello, John
+```
+
+3、函数工厂
+
+```js
+function makeMultiplier(multiplier) {
+  return function (x) {
+    return x * multiplier;
+  };
+}
+
+const double = makeMultiplier(2);
+console.log(double(5)); // 输出 10
+
+const triple = makeMultiplier(3);
+console.log(triple(5)); // 输出 15
+```
+
+4、柯里化  
+闭包允许你柯里化一个函数，即创建一个接受较少参数的新函数。
+
+```js
+function curry(fn) {
+  return function (a) {
+    return function (b) {
+      return fn(a, b);
+    };
+  };
+}
+
+const add = function (a, b) {
+  return a + b;
+};
+
+const curriedAdd = curry(add);
+const addFive = curriedAdd(5);
+console.log(addFive(3)); // 输出 8
+```

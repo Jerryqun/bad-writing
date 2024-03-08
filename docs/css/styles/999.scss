@@ -1,0 +1,45 @@
+// 定义变量
+$cell-padding: 10px;
+
+.row + .row {
+  position: relative;
+  margin-top: $cell-padding * 3;
+}
+
+.item {
+  display: inline-block;
+  width: 70px;
+}
+
+.item + .item {
+  margin-left: $cell-padding * 1.5;
+}
+
+// 定义函数 - 计算格子颜色
+@function calculateCellColor($row, $column) {
+  @if $row % 2 == 0 {
+    @if $column % 2 == 0 {
+      @return #007bff;
+    } @else {
+      @return #ff005d;
+    }
+  } @else {
+    @if $column % 2 == 0 {
+      @return #ff005d;
+    } @else {
+      @return #007bff;
+    }
+  }
+}
+// 使用 @for 循环生成九九乘法表格子
+@for $i from 1 through 9 {
+  @for $j from 1 through 9 {
+    .item-#{$i}-#{$j} {
+      &::after {
+        padding: $cell-padding;
+        border: 2px solid calculateCellColor($i, $j);
+        content: '#{$i}*#{$j}=#{$i * $j}';
+      }
+    }
+  }
+}

@@ -1,10 +1,4 @@
----
-nav: React
-group: 基础
-toc: content
-mobile: false
-title: ErrorBoundary
----
+c
 
 ## ErrorBoundary
 
