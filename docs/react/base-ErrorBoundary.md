@@ -1,5 +1,3 @@
-c
-
 ## ErrorBoundary
 
 <a target="_blank" href="https://fe.ecool.fun/topic/d27c3517-ab5a-49f5-91e9-fd973eb1cd11?orderBy=updateTime&order=desc&tagId=13">react 中怎么捕获异常？</a>

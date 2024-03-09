@@ -335,3 +335,211 @@ const settings = {
 const data = JSON.stringify(settings, ['level', 'health']);
 console.log(data); // "{"level":19, "health":90}"
 ```
+
+## 手写 lodash.isEqual
+
+执行深比较来确定两者的值是否相等
+
+这个方法支持比较 arrays, array buffers, booleans, date objects, error objects, maps,
+numbers, Object objects, regexes, sets, strings, symbols,
+以及 typed arrays. Object 对象值比较自身的属性，不包括继承的和可枚举的属性。 不支持函数和 DOM 节点比较
+
+```js
+const myIsEqual = (obj1, obj2) => {
+  // 不为对象或数组时直接比较
+  if (typeof obj1 !== 'object' && typeof obj2 !== 'object') {
+    return obj1 === obj2;
+  }
+
+  // 当至少一个为null时直接比较
+  if (!obj1 || !obj2) {
+    return obj1 === obj2;
+  }
+
+  const keys1 = Object.keys(obj1);
+  const keys2 = Object.keys(obj2);
+  // 属性长度不一样直接返回
+  if (keys1.length !== keys2.length) {
+    return false;
+  }
+  for (let i = 0; i < keys1.length; i++) {
+    const key = keys1[i];
+    if (obj2.hasOwnProperty(key)) {
+      if (typeof obj1[key] === 'object') {
+        return myIsEqual(obj1[key], obj2[key]);
+      } else {
+        if (i === keys1.length - 1) {
+          return obj1[key] === obj2[key];
+        }
+      }
+    } else {
+      return false;
+    }
+  }
+  return false;
+};
+```
+
+## 手写 new
+
+<a target="_blank" href="https://juejin.cn/post/6968856664560648199">参考</a>
+1、创建一个空对象  
+2、使空对象的隐式原型指向其构造函数的显示原型  
+3、使用 call 改变 this 指向  
+4、如果无返回值或者返回一个非对象值(返回基础类型会被忽略)，则将 obj 返回作为新对象；如果返回值是一个新对象的话那么直接直接返回该对象。
+
+```js
+function myNew(Con, ...args) {
+  // 创建一个新的空对象
+  let obj = {};
+  // 将这个空对象的__proto__指向构造函数的原型
+  // obj.__proto__ = Con.prototype;
+  Object.setPrototypeOf(obj, Con.prototype);
+  // 将this指向创建的对象
+  let res = Con.apply(obj, args);
+  // 对构造函数返回值做判断，然后返回对应的值
+  return res instanceof Object ? res : obj;
+}
+
+/**
+ * Object.create创建对象
+ */
+let obj = Object.create(Object.prototype);
+// 等价于
+let obj = {};
+```
+
+## 手写 promise 静态方法
+
+```js
+Promise.myResolve = function(value) => {
+  if(value instanceof Promise|| !value) {
+    return value
+  }
+  return new Promise((resolve) => {
+    resolve(value)
+  })
+}
+
+Promise.myReject = function (value) {
+  return new Promise((_, reject) => reject(value));
+};
+
+Promise.myAll = function (value) {
+  if (!value)
+    throw "TypeError: undefined is not iterable (cannot read property Symbol(Symbol.iterator))";
+  return new Promise((re, rj) => {
+    let count = 0;
+    let result = [];
+    for (let i = 0; i < value.length; i++) {
+      Promise.resolve(value[i])
+        .then((res) => {
+          count++;
+          result[i] = res;
+          if (count === value.length) {
+            re(result);
+          }
+        })
+        .catch((error) => rj(error));
+    }
+  });
+};
+
+let p1 = new Promise((r) => r(2));
+
+let p2 = new Promise((r) => r(3));
+
+Promise.myAll([p1, p2]).then(console.log);
+
+Promise.prototype.finally = function (callback) {
+  return this.then(
+    (value) => {
+      this.constructor.resolve(callback()).then(() => value);
+    },
+    (err) => {
+      this.constructor.reject(callback()).then(() => {
+        throw err;
+      });
+    }
+  );
+};
+
+const promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    reject("1");
+  }, 2000);
+});
+promise
+  .then((res) => {
+    console.log(res);
+  })
+  .finally(() => {
+    console.log("执行了");
+  });
+
+
+
+```
+
+## 手写 Object.create
+
+```js
+function myCreate(proto) {
+  function F() {}
+  F.prototype = proto;
+  F.prototype.constructor = F;
+  return new F();
+}
+```
+
+## 手写 promise
+
+<a target="_blank" href="https://juejin.cn/post/6844903625769091079">参考</a>
+
+## 手写 map
+
+```js
+Array.prototype.myMap = function (fn, context) {
+  const arr = [...this];
+  const result = [];
+  for (let i = 0; i < arr.length; i++) {
+    result[i] = fn.call(context, arr[i], i, this);
+  }
+  return arr;
+};
+```
+
+## 手写手写 lodash 的 set 和 get 方法
+
+```js
+function get(obj, keysString) {
+  const keys = keysString.split('.');
+  let current = obj;
+  for (let index = 0; index < keys.length; index++) {
+    const element = keys[index];
+    if (typeof current !== 'object' && !(element in obj)) {
+      return undefined;
+    }
+    current = current[element];
+  }
+  return current;
+}
+let c = { name: { age: 3 } };
+let g = get(c, 'name.age');
+console.log('g', g);
+
+function set(obj, keysString, value) {
+  const keys = keysString.split('.');
+  for (let i = 0; i < keys.length; i++) {
+    const key = keys[i];
+    obj[key] = i === keys.length - 1 ? value : obj[key] || {};
+    obj = obj[key];
+  }
+  return obj;
+}
+
+let a = {};
+set(a, 'params.name.age', '18');
+
+console.log('a', a);
+```
