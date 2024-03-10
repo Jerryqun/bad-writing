@@ -82,6 +82,7 @@ Function.prototype.my_bind = function (context = window, ...args) {
   const fn = Symbol;
   context[fn] = this;
   const res = (...innerArgs) => {
+    // 变相实现了函数curry
     context[fn](...args, ...innerArgs);
   };
   delete context[fn];

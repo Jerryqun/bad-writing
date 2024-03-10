@@ -55,15 +55,14 @@ z-index: 0 会产生层叠上下文
 
 CSS3 中出现了很多新属性，其中一些属性对层叠上下文也产生了很大的影响。如下：
 
-父元素的 display 属性值为 flex|inline-flex，子元素 z-index 属性值不为 auto 的时候，子元素为层叠上下文元素；
-元素的 opacity 属性值不是 1；
-元素的 transform 属性值不是 none；
-元素 mix-blend-mode 属性值不是 normal`；
-元素的 filter 属性值不是 none；
-元素的 isolation 属性值是 isolate；
-will-change 指定的属性值为上面任意一个；
-元素的-webkit-overflow-scrolling 属性值设置为 touch。
-
+父元素的 display 属性值为 flex|inline-flex，子元素 z-index 属性值不为 auto 的时候，子元素为层叠上下文元素；  
+元素的 opacity 属性值不是 1；  
+元素的 transform 属性值不是 none；  
+元素 mix-blend-mode 属性值不是 normal`；  
+元素的 filter 属性值不是 none；  
+元素的 isolation 属性值是 isolate；  
+will-change 指定的属性值为上面任意一个；  
+元素的-webkit-overflow-scrolling 属性值设置为 touch;  
 CSS 绝对定位（absolute）、相对定位（relative）
 
 # z-index 生效条件

@@ -1,7 +1,7 @@
 ---
 toc: content
 group:
-  title: css动画
+  title: 前端动画
   order: 2
 title: 三角形
 ---

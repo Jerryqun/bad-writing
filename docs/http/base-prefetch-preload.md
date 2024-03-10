@@ -12,7 +12,7 @@ mobile: false
 
 <a href="https://juejin.cn/post/6893681741240909832" target="_blank">prefetch 和 preload</a>
 
-### prefetch
+### prefetch 预先加载
 
 prefetch 将首屏不需要的资源预先加载 prefetch 的配置与 preload 类似，但无需对 as 属性进行设置。
 
@@ -42,7 +42,7 @@ prefetch 将首屏不需要的资源预先加载 prefetch 的配置与 preload �
 </html>
 ```
 
-### preload
+### preload 提前加载
 
 将首屏需要的资源提高加载优先级。 link 必须设置 as 属性来声明资源的类型（font/image/style/script 等)，
 否则浏览器可能无法正确加载资源。 下面实例中浏览器会优先发送 img 请求再请求 script。

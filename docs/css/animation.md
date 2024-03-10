@@ -1,6 +1,6 @@
 ---
 toc: content
-group: css动画
+group: 前端动画
 order: 2
 title: 报警灯
 ---

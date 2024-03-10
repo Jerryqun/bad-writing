@@ -10,8 +10,6 @@ title: createPortal
 
 在以前， react 中所有的组件都会位于 #app 下，组件默认会按照既定层级嵌套渲染，而使用 Portals 提供了一种脱离 #app 的组件.因此 Portals 适合脱离文档流(out of flow) 的组件（让组件渲染到父组件以外），
 特别是 position: absolute 与 position: fixed 的组件。比如模态框，通知，警告，goTop 等
-import React from 'react';
-import ReactDOM, { createPortal } from 'react-dom';
 
 ```jsx
 const container = document.body;

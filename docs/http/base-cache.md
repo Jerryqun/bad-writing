@@ -26,12 +26,13 @@ web 缓存主要指的是两部分<br/>
 
 2、基于 cache-control（Expires 的替代品）
 Cache-control 这个字段在 http1.1 中被增加，Cache-control 完美解决了 Expires 本地时间和服务器时间不同步的问题。是当下的项目中实现强缓存的最常规方法。
-Cache-control 的使用方法很简单，只要在资源的响应头上写上需要缓存多久就好了，单位是秒
-max-age 决定客户端资源被缓存多久。
-s-maxage 决定代理服务器缓存的时长。
-no-cache 表示是强制进行协商缓存。
-no-store 是表示禁止任何缓存策略。
-public 表示资源即可以被浏览器缓存也可以被代理服务器缓存。
+
+Cache-control 的使用方法很简单，只要在资源的响应头上写上需要缓存多久就好了，单位是秒  
+max-age 决定客户端资源被缓存多久。  
+s-maxage 决定代理服务器缓存的时长。  
+**no-cache 表示是强制进行协商缓存**。  
+no-store 是表示禁止任何缓存策略。  
+public 表示资源即可以被浏览器缓存也可以被代理服务器缓存。  
 private 表示资源只能被浏览器缓存。
 
 命中强缓存的表现形式：Firefox 浏览器表现为一个灰色的 200 状态码。Chrome 浏览器状态码表现为 200 (from disk cache)或是 200 OK (from memory cache)

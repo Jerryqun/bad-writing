@@ -8,6 +8,8 @@ title: Lerna
 
 ## Lerna 多包管理工具
 
+<a target="_blank" href="https://lerna.js.org/docs/legacy-package-management">参考</a>
+
 Lerna 是一个工具，它优化了在单个仓库中维护多个 package 的工作流（这种仓库称为 monorepo）。在使用 Lerna 的 monorepo 中，你可以将一个大型项目分割成多个小的、可以独立版本管理和发布的 package。Lerna 管理这些 package 之间的依赖关系，并且能够执行如安装依赖、链接互相依赖的 package、版本控制和发布等任务。
 
 ### 固定/锁定模式
@@ -25,3 +27,14 @@ Lerna 是一个工具，它优化了在单个仓库中维护多个 package 的�
 对于那些由多个相对独立的 package 组成的 monorepo，独立模式可能更加合适。
 
 无论哪种模式，Lerna 都会处理 package 之间的依赖链接。例如，如果你的 monorepo 中有两个相互依赖的 package，当你在本地进行开发时，Lerna 可以确保它们链接到彼此的本地版本，而不是链接到 npm 上的远程版本。这使得开发和测试变得更加容易。
+
+```bash
+npm install lerna -g
+
+lerna init --independent  // 独立模式
+
+
+// 新建模块
+lerna create module-a
+lerna create module-b
+```
