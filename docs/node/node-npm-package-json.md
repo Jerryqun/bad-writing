@@ -12,6 +12,8 @@ package-lock.json 是在 npm(^5.x.x.x)后才有的
 
 package-lock.json 它会在 npm 更改 node_modules 目录树 或者 package.json 时自动生成的 ，它准确的描述了当前项目 npm 包的依赖树，并且在随后的安装中会根据 package-lock.json 来安装，保证是相同的一个依赖树，不考虑这个过程中是否有某个依赖有小版本的更新
 
+package-lock.json 会锁定整个依赖树的所有层级。
+
 它的产生就是来对整个依赖树进行版本固定的（锁死）
 
 当我们在一个项目中 npm install 时候，会自动生成一个 package-lock.json 文件，和 package.json 在同一级目录下。

@@ -49,7 +49,7 @@ WIP 树就是一个缓冲，它在 Reconciliation 完毕后一次性提交给浏
 
 ## 每一个 fiber 如何建立起关联的
 
-看过之前章节的朋友都知道对于每一个 element 都会对应一个 fiber ，每一个 fiber 是通过 return ， child ，sibling 三个属性建立起联系的。
+每一个 element 都会对应一个 fiber ，每一个 fiber 是通过 return ， child ，sibling 三个属性建立起联系的。
 
 return： 指向父级 Fiber 节点。  
 child： 指向子 Fiber 节点。  

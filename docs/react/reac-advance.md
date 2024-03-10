@@ -35,9 +35,12 @@ class App extends React.Component {
   };
   render() {
     console.log(this.state.number);
-    return <div onClick={this.handleClick}>点击</div>;
+    return <button onClick={this.handleClick}>点击 控制台查看结果</button>;
   }
 }
 
 export default App;
 ```
+
+上面 demo 打印 341  
+(flushSync 会提高优先级所以 4 先打印，2 和 4 会合并更新 所以只打印一次 4，最后打印 1)
