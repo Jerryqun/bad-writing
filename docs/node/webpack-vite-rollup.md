@@ -46,3 +46,12 @@ Rollup 和 Webpack 是两种常用的前端构建工具，它们有以下区别�
 配置方式：Rollup 的配置文件相对简单，可以通过 JavaScript 或 JSON 格式进行配置。而 Webpack 的配置文件更为复杂，采用 JavaScript 格式，可以编写更灵活和复杂的配置。
 
 总而言之，Rollup 更适合构建 JavaScript 库或模块，并且可以生成更小、更高效的输出文件。而 Webpack 更适合构建复杂的应用程序，并且具有更强大的功能和插件生态系统。选择使用哪个工具取决于您的项目需求和偏好。
+
+### esbuild
+
+esbuild 是一个非常快速的 JavaScript 打包器和压缩器，由 Evan Wallace 创建。其主要特点是使用 Go 语言编写，目的是通过利用 Go 的高性能特点来提高打包和构建过程的速度。esbuild 能够实现极快的代码转换和打包速度，相较于大多数使用 JavaScript 编写的打包器（如 webpack、Rollup、Parcel 基于 node）有着显著的性能优势。
+
+1、Vite 使用 esbuild 作为预打包工具（dependency pre-bundling），用于快速处理项目依赖的 ESM 模块。当你在项目中运行 vite 命令时，Vite 会检测你的 import 语句，并预先使用 esbuild 打包所有的第三方依赖到一起。这样做可以显著提升页面的加载速度，因为它避免了浏览器需要发送大量的 HTTP 请求来获取每个模块文件。
+
+2、 转换 TypeScript 和 JSX
+esbuild 也用于将 TypeScript 和 JSX 转换成纯 JavaScript。由于 esbuild 的转换速度非常快，它能够加快整个开发过程中的代码编译时间，提供更流畅的开发体验。

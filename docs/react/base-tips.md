@@ -167,8 +167,26 @@ if(!hook.current){
 
 ## Babel 解析 JSX 流程
 
-@babel/plugin-syntax-jsx 和 @babel/plugin-transform-react-jsx
-JSX 语法实现来源于这两个 babel 插件：
+1、解析（Parsing）：
+输入的 JSX 代码首先被解析器（如 @babel/parser）处理，它读取代码字符串并将其转换成一个抽象语法树（AST）。这个 AST 是一个深度嵌套的对象，代表了代码的结构和内容。
 
-@babel/plugin-syntax-jsx ： 使用这个插件，能够让 Babel 有效的解析 JSX 语法。
-@babel/plugin-transform-react-jsx ：这个插件内部调用了 @babel/plugin-syntax-jsx，可以把 React JSX 转化成 JS 能够识别的 createElement 格式。
+2、转换（Transforming）：
+接下来，Babel 将遍历 AST 并应用各种转换插件，这些插件可以操作和改变 AST 的结构。对于 JSX 代码，Babel 使用名为 @babel/plugin-transform-react-jsx 的插件，将 JSX 元素转换成 React 创建元素的调用表达式，通常是 React.createElement。
+
+例如， JSX 代码：
+
+```js
+const element = <h1>Hello, world!</h1>;
+```
+
+经过转换后的代码会变成：
+
+```js
+const element = React.createElement('h1', null, 'Hello, world!');
+```
+
+3、生成（Code Generation）：
+转换后的 AST 需要再次被转换回可执行的 JavaScript 代码。这一步骤由代码生成器（如 @babel/generator）完成，它遍历转换后的 AST 并生成新的代码字符串。
+
+4、输出：
+最后，生成的 JavaScript 代码字符串输出，替换原有的 JSX 代码。这段代码现在可以被浏览器解析或进一步被打包工具（如 Webpack）处理。
