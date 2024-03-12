@@ -1313,3 +1313,19 @@ function myFunction(a, b, c) {
 
 console.log(myFunction.length); // 输出：3
 ```
+
+## 加速访问全局对象 window
+
+```js
+window.a = 1;
+
+// 访问局部变量 window, 不需要向上遍历作用域链, 缩短查找时间, 同时在压缩代码时局部变量 window 可被压缩
+(function (window) {
+  alert(a);
+})(window);
+
+// 向上遍历到顶层作用域, 访问速度变慢, 全局变量 window 不能被压缩
+(function () {
+  alert(a);
+})();
+```

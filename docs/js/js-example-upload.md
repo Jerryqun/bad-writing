@@ -234,3 +234,85 @@ function resolvePost(req) {
 
 
 ```
+
+## 断点续传
+
+<a target="_blank" href="https://juejin.cn/post/6844904046436843527?searchId=20240312102713E48DA1188C5672261F8F#heading-17">参考</a>
+
+断点续传的原理在于前端/服务端需要记住已上传的切片，这样下次上传就可以跳过之前已上传的部分，有两种方案实现记忆的功能
+
+前端使用 localStorage 记录已上传的切片 hash
+服务端保存已上传的切片 hash，前端每次上传前向服务端获取已上传的切片
+
+第一种是前端的解决方案，第二种是服务端，而前端方案有一个缺陷，如果换了个浏览器就失去了记忆的效果，所以这里选后者
+
+无论是前端还是服务端，都必须要生成文件和切片的 hash，之前我们使用文件名 + 切片下标作为切片 hash，这样做文件名一旦修改就失去了效果，而事实上只要文件内容不变，hash 就不应该变化，所以正确的做法是根据文件内容生成 hash，所以我们修改一下 hash 的生成规则
+
+webpack 的产物 contenthash 也是基于这个思路实现的
+
+这里用到另一个库 spark-md5，它可以根据文件内容计算出文件的 hash 值
+另外考虑到如果上传一个超大文件，读取文件内容计算 hash 是非常耗费时间的，并且会引起 UI 的阻塞，导致页面假死状态，所以我们使用 web-worker 在 worker 线程计算 hash，这样用户仍可以在主界面正常的交互
+由于实例化 web-worker 时，参数是一个 js 文件路径且不能跨域，所以我们单独创建一个 hash.js 文件放在 public 目录下，另外在 worker 中也是不允许访问 dom 的，但它提供了 importScripts 函数用于导入外部脚本，通过它导入 spark-md5
+
+```js
+
+
+// /public/hash.js
+​
+// 导入脚本
+self.importScripts("/spark-md5.min.js");
+​
+// 生成文件 hash
+self.onmessage = e => {
+  const { fileChunkList } = e.data;
+  const spark = new self.SparkMD5.ArrayBuffer();
+  let percentage = 0;
+  let count = 0;
+  const loadNext = index => {
+    const reader = new FileReader();
+    reader.readAsArrayBuffer(fileChunkList[index].file);
+    reader.onload = e => {
+      count++;
+      spark.append(e.target.result);
+      if (count === fileChunkList.length) {
+        self.postMessage({
+          percentage: 100,
+          hash: spark.end()
+        });
+        self.close();
+      } else {
+        percentage += 100 / fileChunkList.length;
+        self.postMessage({
+          percentage
+        });
+        // calculate recursively
+        loadNext(count);
+      }
+    };
+  };
+  loadNext(0);
+};
+
+```
+
+## 文件秒传
+
+在实现断点续传前先简单介绍一下文件秒传
+所谓的文件秒传，即在服务端已经存在了上传的资源，所以当用户再次上传时会直接提示上传成功
+文件秒传需要依赖上一步生成的 hash，即在上传前，先计算出文件 hash，并把 hash 发送给服务端进行验证，由于 hash 的唯一性，所以一旦服务端能找到 hash 相同的文件，则直接返回上传成功的信息即可
+
+## 总结
+
+大文件上传
+
+前端上传大文件时使用 Blob.prototype.slice 将文件切片，并发上传多个切片，最后发送一个合并的请求通知服务端合并切片
+服务端接收切片并存储，收到合并请求后使用流将切片合并到最终文件
+原生 XMLHttpRequest 的 upload.onprogress 对切片上传进度的监听
+使用 Vue 计算属性根据每个切片的进度算出整个文件的上传进度
+
+断点续传
+
+使用 spark-md5 根据文件内容算出文件 hash
+通过 hash 可以判断服务端是否已经上传该文件，从而直接提示用户上传成功（秒传）
+通过 XMLHttpRequest 的 abort 方法暂停切片的上传
+上传前服务端返回已经上传的切片名，前端跳过这些切片的上传

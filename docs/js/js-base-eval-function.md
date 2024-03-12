@@ -32,6 +32,34 @@ var f = new Function('x', 'y', 'return x+y');
 f(3, 4); // 7
 ```
 
+## 区别
+
+```js
+var hello = 10;
+function createFunction1() {
+  var hello = 20;
+  return new Function('return hello;'); // 这里的 hello 指向全局作用域内的 hello
+}
+var f1 = createFunction1();
+console.log(f1()); // 10
+
+var world = 10;
+function createFunction2() {
+  var world = 20;
+  return eval('world;'); // 这里的 world 指向函数作用域内的 world
+}
+console.log(createFunction2()); // 20
+
+var world = 10;
+function createFunction2() {
+  var world = 20;
+  // https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval
+  // 使用间接调用 (0,eval) 或者 var geval = eval; 可以达到相同的效果
+  return window.eval('world;'); // 这里的 world 指向全局作用域内的 world
+}
+console.log(createFunction2()); // 10
+```
+
 ## eval5
 
 https://developers.weixin.qq.com/community/develop/article/doc/0008e04edb0a782baad9f463251813
