@@ -86,6 +86,49 @@ None 无论是否跨站都会发送 Cookie。
 
 当 sameSite 为 Lax 时，post、iframe、ajax、image 的跨站请求都不会发送 cookie。
 
+### sessionStorage
+
+`sessionStorage` 是 Web Storage API 的一部分，它提供了一种在浏览器会话期间存储键值对数据的机制。`sessionStorage` 对象存储的数据在页面会话期间一直存在，但只限于该页面的标签或窗口。当标签或窗口被关闭后，`sessionStorage` 中存储的数据就会被清除。
+
+### 主要特性
+
+- **会话级别生命周期**：`sessionStorage` 存储的数据仅在当前页面会话期间有效，关闭页面或浏览器会导致数据丢失。
+- **同源隔离**：`sessionStorage` 遵循同源策略，不同的源无法共享存储的数据。
+- **页面隔离**：不同的页面（即使是相同的源）拥有不同的 `sessionStorage`，除非它们在同一个浏览器窗口的同一个标签页中打开，例如通过 `<iframe>` 标签。
+- **容量限制**：`sessionStorage` 相对于 `localStorage` 有较大的存储容量限制（通常至少 5MB）。
+
+### 使用场景
+
+- **表单数据的临时保存**：在填写长表单时，可将数据存储在 `sessionStorage` 中，避免因刷新或错误导致数据丢失。
+- **页内状态管理**：存储页面的状态（如选项卡位置、滚动位置等），在用户回到页面时恢复这些状态。
+- **会话期间的数据传递**：在同一浏览器标签的不同页面之间传递数据，例如在单页应用程序(SPA)中。
+
+### 如何使用
+
+`sessionStorage` 可以通过简单的键值对 API 进行操作，包括 `setItem`、`getItem`、`removeItem` 和 `clear` 方法。
+
+```javascript
+// 存储数据
+sessionStorage.setItem('key', 'value');
+
+// 读取数据
+const value = sessionStorage.getItem('key'); // 返回 'value'
+
+// 移除单个数据项
+sessionStorage.removeItem('key');
+
+// 清除所有数据
+sessionStorage.clear();
+```
+
+### 注意事项
+
+- `sessionStorage` 仅能存储字符串类型的数据。如果你需要存储对象，可以使用 `JSON.stringify()` 在存储之前将对象转换为字符串，然后使用 `JSON.parse()` 在读取后将字符串转换回对象。
+- `sessionStorage` 是不可跨标签页或窗口共享的，这与 `localStorage` 不同，后者在同一浏览器的所有标签页和窗口中共享，只要它们来自相同的源。
+- 由于 `sessionStorage` 在浏览器端被存储和访问，不应该用它来存储敏感信息，以防止可能的 XSS 攻击。
+
+综上所述，`sessionStorage` 是一种方便的前端存储方式，用于在浏览器会话期间存储和管理数据。
+
 ### Cookie、sessionStorage、localStorage 的区别
 
 相同点
@@ -98,3 +141,29 @@ None 无论是否跨站都会发送 Cookie。
 
 ajax 请求的接口 set-Cookies 的时候如果是跨站
 必须开启 withCredentials: true 请求才会带上 cookie，不开启 set-Cookies 也会不生效<br/>
+
+## sessionid
+
+`sessionid` 或称会话标识（Session ID），是一个用于唯一标识用户会话（Session）的字符串。在 Web 应用程序中，由于 HTTP 协议本身是无状态的，服务器需要一种方式来区分和管理不同用户的交互状态。`sessionid` 就是用于这个目的的关键机制。
+
+当用户首次访问一个网站时，服务器会生成一个唯一的 `sessionid` 并将其发送给用户的浏览器，通常是以 cookie 的形式。这个 `sessionid` 随后会被浏览器存储，并在之后的每次请求中发送回服务器，这样服务器就能识别出请求是来自同一个用户，并维护该用户的状态信息。
+
+### 主要特性
+
+- **唯一性**：每个用户会话都有一个独特的 `sessionid`，确保用户之间的数据不会相互干扰。
+- **临时性**：`sessionid` 通常仅在用户的浏览器会话期间有效。用户关闭浏览器或长时间不活动后，服务器可以设置会话过期。
+- **安全性**：`sessionid` 需要被安全地生成和管理，以防止会话劫持和固定会话攻击等安全问题。通常通过 HTTPS 传输来提高安全性。
+
+### 使用场景
+
+- **用户登录**：`sessionid` 用于跟踪用户的登录状态，允许用户在浏览多个页面时保持登录状态。
+- **购物车功能**：在电子商务网站中，`sessionid` 可以用于跟踪用户添加到购物车的商品，直到结账或会话结束。
+- **用户偏好**：存储用户在应用中的临时设置或偏好，例如语言选择或主题设置。
+
+### 安全性注意事项
+
+- **cookie 属性**：设置 `sessionid` cookie 时，应使用 `Secure` 和 `HttpOnly` 属性。`Secure` 属性确保它只能通过 HTTPS 传输，而 `HttpOnly` 属性防止 JavaScript 访问这个 cookie，减少 XSS 攻击的风险。
+- **会话固定保护**：在用户登录后，应更新 `sessionid` 以防止会话固定攻击。
+- **过期时间**：设置合理的会话超时，以减少会话劫持的风险。
+
+`sessionid` 是一种服务器端的会话管理技术，对于构建交互式 Web 应用和维护用户状态非常重要，同时也需要妥善处理以保护用户的安全和隐私。

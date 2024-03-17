@@ -80,7 +80,7 @@ function 组件如果不用 forwardRef 包裹 ref 是传递不下去的，拿到
 3、直接打印
 
 4、new 后打印
-函数式组件有$$typeof 属性
+函数式组件有$$typeof 属性  
 类组件没有
 
 ## hooks 为什么要通常放在顶部，hooks 不能写在 if 条件语句中

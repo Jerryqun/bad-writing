@@ -129,3 +129,56 @@ v16.6：增加 React.memo() API，用于控制子组件渲染；增加 React.laz
 v16.8：全新 React-Hooks 支持，使函数组件也能做类组件的一切事情。
 
 v17： 事件绑定由 document 变成 container ，移除事件池等。
+
+## useDeferredValue
+
+`useDeferredValue` 是 React 18 中引入的一个新的钩子（Hook），它允许你推迟某些不那么紧急的值的更新。这样做可以让你在保持应用响应性的同时执行可能导致性能问题的重计算或渲染任务。它通常用于优化长列表、图表或其他复杂渲染的场景。
+
+### 使用场景
+
+想象你有一个输入框，用户的输入会立即显示在界面上，同时基于输入的内容，实时地对一组数据进行筛选并渲染。如果筛选操作很昂贵，它可能会导致输入的响应变慢。`useDeferredValue` 可以帮助你保留输入的即时响应性，同时对数据的渲染进行推迟。
+
+### 示例
+
+```js
+import React, { useState, useDeferredValue } from 'react';
+
+function MyComponent({ items }) {
+  // searchText 是一个用户输入的值
+  const [searchText, setSearchText] = useState('');
+
+  // 使用 useDeferredValue 来获取一个推迟更新的值
+  // deferredSearchText 将会在不阻塞渲染的情况下延迟更新
+  const deferredSearchText = useDeferredValue(searchText, { timeoutMs: 2000 });
+
+  // 根据 deferredSearchText 来筛选列表项
+  const filteredItems = items.filter((item) =>
+    item.includes(deferredSearchText),
+  );
+
+  return (
+    <>
+      <input
+        type="text"
+        value={searchText}
+        onChange={(e) => setSearchText(e.target.value)}
+      />
+      {filteredItems.map((item) => (
+        <div key={item}>{item}</div>
+      ))}
+    </>
+  );
+}
+```
+
+在这个例子中，尽管 `searchText` 随着用户的输入立即改变，但 `deferredSearchText` 可能会稍后更新。这意味着，筛选操作（可能很耗时）将会基于一个稍微“落后”的值来执行，这样就不会拖慢输入的即时反馈。`timeoutMs` 选项允许你指定一个时间（毫秒），控制 React 将在多长时间内尝试延迟更新`deferredSearchText`。
+
+### 工作原理
+
+内部上，`useDeferredValue` 使用 React 的并发特性来实现。React 会跟踪渲染的优先级，并基于当前的工作负载和浏览器的帧速率来智能地调整哪些更新应该被推迟。通过这种方式，即便有一些操作被延迟，用户界面依然能够保持流畅和响应性。
+
+使用 `useDeferredValue` 需要确保你的应用使用了 React 18 及其并发特性。同时，你应该配合使用 `React.startTransition`，它允许你告诉 React 哪些更新可以被推迟而不会影响用户体验。这对于管理用户触发的更新（如点击、输入等）非常有用。
+
+### 注意
+
+`useDeferredValue` 和并发特性一样，最好用于那些不需要立即更新的场景。对于需要立即反馈的交互或状态更新，你应该继续像往常一样直接设置状态。

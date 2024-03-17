@@ -922,25 +922,6 @@ arr = [];
 console.log('arr', arr, 'arr1', arr1); // arr [] arr1 (4) [1, 3, 4, 5]
 ```
 
-## 全局监听 promise 错误
-
-```js
-// 浏览器
-window.addEventListener('unhandledrejection', (event) => {
-  const {
-    error, // 错误对象
-    promise, // 出现异常的promise对象
-  } = event;
-  console.log(error, promise);
-  event.preventDefault();
-});
-
-// node
-process.on('unhandledRejection', (error, promise) => {
-  console.log(error, promise);
-});
-```
-
 ## 能否使用自闭合 script 标签引入脚本文件
 
 不能。自闭合标签来自于 XML 语法，而不是 HTML 语法。

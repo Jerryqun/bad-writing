@@ -46,6 +46,30 @@ Webpack 的构建过程中可能会因为各种原因导致内存溢出（OutOfM
 - 使用 `webpack-bundle-analyzer` 插件来查看每个 bundle 的大小，看是否有优化空间。
 - 利用 Node.js 的内存分析工具（如 `heapdump`）来分析内存使用情况，查找可能的内存泄漏。
 
+```bash
+npm install --save-dev webpack-bundle-analyzer
+在你的 webpack.config.js 配置文件中，引入 webpack-bundle-analyzer 插件，并将它添加到 plugins 数组中：
+
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
+module.exports = {
+  // ...其他配置
+  plugins: [
+    // 在 plugins 数组中添加 BundleAnalyzerPlugin
+    new BundleAnalyzerPlugin({
+      // 你可以在这里传递插件的选项
+      analyzerMode: 'server', // 默认模式为'server'，还可以设置为'static'或'disabled'
+      // analyzerHost: '127.0.0.1', // 如果需要指定服务器主机
+      // analyzerPort: 8888, // 如果需要指定服务器端口
+      // reportFilename: 'report.html', // 如果使用静态模式，可指定报告文件名
+      // openAnalyzer: true, // 在默认浏览器中自动打开报告
+      // ...更多选项
+    })
+  ]
+};
+
+```
+
 5. 优化项目结构
 
 - 检查代码中是否有大量的模块或循环依赖，这可能增加构建时的计算复杂度。

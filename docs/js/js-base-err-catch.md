@@ -127,7 +127,43 @@ try {
 } catch (e) { console.log('捕获到异常：', e); }
 
 
+```
 
+## 全局监听 promise 错误
 
+```js
+// 浏览器
+window.addEventListener('unhandledrejection', (event) => {
+  const {
+    error, // 错误对象
+    promise, // 出现异常的promise对象
+  } = event;
+  console.log(error, promise);
+  event.preventDefault();
+});
 
+// node
+process.on('unhandledRejection', (error, promise) => {
+  console.log(error, promise);
+});
+```
+
+## try catch 无法捕获异步任务 ，如何在 catch 里面捕获 promise 的 reject
+
+```js
+window.addEventListener('unhandledrejection', async function (err) {
+  console.log('unhandledrejection', err.reason);
+});
+
+async function a() {
+  try {
+    const result = await Promise.reject({ a: 1 });
+    // 如果是await 的状态是reject ，后面的代码不会执行，而且await 后面的错误会被catch到
+    console.log('result23:2323333 ', result);
+  } catch (e) {
+    console.log('e: ', e);
+  }
+}
+
+a();
 ```

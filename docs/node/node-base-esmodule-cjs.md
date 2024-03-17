@@ -80,6 +80,8 @@ CommonJS 加载的是一个对象（即 module.exports 属性），该对象只�
 
 ### AMD 和 CMD
 
+`解决cjs不能异步的问题`
+
 AMD 和 require.js AMD 规范采用异步方式加载模块<br/>
 CMD 和 sea.js CMD 是另一种 js 模块化方案，它与 AMD 很类似，不同点在于：AMD 推崇依赖前置、提前执行，CMD 推崇依赖就近、延迟执行。此规范其实是在 sea.js 推广过程中产生的。<br/>
 AMD 栗子（monaco）
@@ -90,7 +92,7 @@ g.alicdn.com/code/lib/monaco-editor/0.36.1/min/vs/editor/editor.main.nls.js
 
 ### UMD
 
-UMD 兼容 CJS AMD 使用 IIFI 规范 在前端和后端都适用
+UMD 兼容 CJS AMD 使用 IIFI 规范， 在前端和后端都适用，
 整体是一个自执行函数，先判断 module 和 export 是否可用，这是为了兼容 CommonJS 模块规范；
 之后判断 define 是否可用，这是为了兼容 AMD 模块规范；如果都不可用，就直接暴露在 global 下
 

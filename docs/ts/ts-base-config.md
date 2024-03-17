@@ -12,7 +12,7 @@ title: 基本config
 // 常用配置
 {
   /*
-      tsconfig.json是ts编译器的配置文件，ts可以根据它的信息来对待吗进行编译 可以再tsconfig中写注释
+      tsconfig.json是ts编译器的配置文件，ts可以根据它的信息来对代码进行编译 可以在tsconfig中写注释
       include : 用来指定哪些文件需要被编译
       exclude : 用来指定哪些文件不需要被编译 ：默认node_module
       extends : 用来指定继承的配置文件

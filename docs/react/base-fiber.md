@@ -54,3 +54,59 @@ WIP 树就是一个缓冲，它在 Reconciliation 完毕后一次性提交给浏
 return： 指向父级 Fiber 节点。  
 child： 指向子 Fiber 节点。  
 sibling：指向兄弟 fiber 节点。
+
+## fiber 属性
+
+React Fiber 架构中的 Fiber 节点构成了一个链表结构，这些节点代表了渲染树中的不同部分（如组件、DOM 节点等）。每个 Fiber 节点都有一系列的属性，它们用于追踪组件的状态、构建虚拟 DOM 以及管理渲染过程。以下是 Fiber 节点上一些重要的属性及其用途：
+
+### 核心属性
+
+- **type**: 指定该 Fiber 节点所对应的组件类型（例如，函数组件、类组件或 DOM 元素类型如 `'div'` 或 `'span'`）。
+
+- **key**: 唯一标志一个兄弟 Fiber 节点，用于在重渲染过程中识别节点。
+
+- **child**: 指向该节点的第一个子 Fiber 节点。
+
+- **sibling**: 指向该节点的下一个兄弟 Fiber 节点。
+
+- **return**: 指向该节点的父 Fiber 节点，有时也称作 `parent`。
+
+- **index**: 子 Fiber 在其同级兄弟中的位置索引。
+
+- **ref**: 用于引用实际 DOM 节点或类组件实例。
+
+- **pendingProps**: 即将被应用的新 props。
+
+- **memoizedProps**: 上一次渲染中使用的 props。
+
+- **stateNode**: 用于保存与该 Fiber 相关联的本地状态。对于类组件，它是组件实例本身。对于 DOM 元素，它是 DOM 节点。
+
+- **updateQueue**: 更新队列，用于存储该 Fiber 节点的状态更新和回调。
+
+### 更新相关属性
+
+- **effectTag**: 指示 Fiber 节点在提交阶段需要进行的操作（如插入、更新、删除等）。
+
+- **nextEffect**: 在提交阶段，Fiber 节点按照 `effectTag` 形成的单链表中的下一个节点。
+
+- **firstEffect**: 指向子树中第一个有副作用的子节点。
+
+- **lastEffect**: 指向子树中最后一个有副作用的子节点。
+
+### 调度优先级相关属性
+
+- **lanes**: 表示 Fiber 节点的优先级，React 使用它来确定何时处理更新。
+
+### 双缓冲（Double Buffering）相关属性
+
+- **alternate**: 指向备用的 Fiber 节点，React 使用双缓冲技术，交替使用两个 Fiber 树来进行更新。
+
+### 调试和性能追踪相关属性
+
+- **\_debugID**: 开发模式下用于调试的 ID。
+
+- **\_debugSource**: 包含了该 Fiber 节点对应源代码的位置信息。
+
+- **\_debugOwner**: 指向创建该 Fiber 节点的父组件 Fiber。
+
+这些属性的具体内容可能会随着 React 的版本更新而发生变化，这里提供的是一个大致的概览，用于理解 Fiber 节点如何在 React 的渲染和更新过程中进行工作。由于 React 团队会不断优化内部实现，最精准的信息应当直接参照 React 的源代码或官方发布的文档。
