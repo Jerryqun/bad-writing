@@ -2,14 +2,14 @@
   "name": "blog-cq",
   "version": "0.0.1",
   "description": "A static site based on dumi",
-  "scripts": {
-    "start": "npm run dev",
-    "dev": "dumi dev",
-    "build": "dumi build",
-    "prepare": "husky install && dumi setup"
-  },
-  "authors": [],
+  "repository": "https://github.com/Jerryqun/bad-writing.git",
   "license": "MIT",
+  "scripts": {
+    "build": "dumi build",
+    "dev": "dumi dev",
+    "prepare": "husky install && dumi setup",
+    "start": "npm run dev"
+  },
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
@@ -20,6 +20,9 @@
       "prettier --write --no-error-on-unmatched-pattern"
     ]
   },
+  "dependencies": {
+    "antd": "^5.13.3"
+  },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
@@ -28,8 +31,5 @@
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1"
   },
-  "repository": "https://github.com/Jerryqun/bad-writing.git",
-  "dependencies": {
-    "antd": "^5.13.3"
-  }
+  "authors": []
 }
