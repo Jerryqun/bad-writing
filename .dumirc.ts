@@ -1,7 +1,8 @@
 export default {
   // ...其它配置
   // outputPath: 'root',
-  base: './bad-writing/',
+  // base: './bad-writing/',
+  history: { type: 'hash' },
   publicPath: '/bad-writing/',
   themeConfig: {
     name: '编程小径',
