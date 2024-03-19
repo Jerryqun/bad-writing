@@ -44,6 +44,19 @@ const sleep = (ms) => new Promise((res) => setTimeout(() => res(ms), ms));
 });
 ```
 
+forEach 的回调函数中的 return 语句并不会像 map、filter 或 reduce 中那样有用。当你在 forEach 的回调中使用 return 时，它只会退出当前正在执行的迭代，并不会停止整个 forEach 循环或返回一个值。
+
+```js
+const array = [1, 2, 3, 4, 5];
+
+array.forEach((value, index) => {
+  if (value > 3) {
+    return; // 这里的 return 只会退出当前的迭代，不会停止 forEach
+  }
+  console.log(value); // 输出 1, 2, 3
+});
+```
+
 ## for 循环 和 for in 循环
 
 1、for in 循环数组吐出的是 index 循环对象吐出的是 key<br/>
@@ -119,3 +132,9 @@ for await (const item of [sleep(1000), sleep(2000), sleep(3000)]) {
 
 for、while、for in、for of、for await of 使用 await 都是生效的；<br/>
 而几乎有回调的遍历方法：forEach、map、filter、reduce、some、every、find 等，使用 await 都是不生效的；
+
+## 哪些循环方式能够直接终止整个循环
+
+1、传统的 for 循环
+2、for of
+3、es6 的 some

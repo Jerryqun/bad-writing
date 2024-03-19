@@ -3,7 +3,7 @@ nav: React
 group: 基础
 toc: content
 mobile: false
-title: tips
+title: 随笔
 ---
 
 ## react 中渲染 svg 以及改变 svg 的颜色

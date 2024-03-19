@@ -103,7 +103,13 @@ console.log(arrayLike);
 // {0: "java", 1: "script", 2: "jack", 3: "lily", length: 4}
 ```
 
-## 箭头函数
+## ES6 中箭头函数和普通函数的区别
+
+- 箭头函数是匿名函数，不能作为构造函数去使用 new 关键字 , 没有 prototype
+- 箭头函数没有伪类 argument,可以使用 ...args 代替
+- 箭头函数没有自己的 this，会将所在的上下文作为自己的 this
+- call()、apply()、bind()方法不能改变箭头函数中的 this 指向
+- 箭头函数不能做 generator 函数，不能使用 yeild 关键字
 
 ```js
 const shape = {
@@ -116,14 +122,6 @@ const shape = {
 
 shape.diameter(); // 20
 shape.perimeter(); // NaN
-
-/**
- *  对于箭头函数，this 关键字指向的是它当前周围作用域（简单来说是包含箭头函数的常规函数，如果没有常规函数的话就是全局对象），
-    这个行为和常规函数不同。这意味着当我们调用 perimeter 时，this 不是指向 shape 对象，而是它的周围作用域（在例子中是 window）
-    1、箭头函数不绑定 arguments，可以使用 ...args 代替
-    2、箭头函数没有 prototype 属性，没有constructor，不能进行 new 实例化，亦不能通过 call、apply 等绑定 this
-    3、箭头函数的this指向创建时父级的this
- */
 
 function a() {
   return () => {

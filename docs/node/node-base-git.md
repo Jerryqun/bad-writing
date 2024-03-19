@@ -3,7 +3,7 @@ nav: Node
 group: 基础
 toc: content
 mobile: false
-title: git
+title: Git
 ---
 
 ## “git pull”和“git fetch”之间有什么区别

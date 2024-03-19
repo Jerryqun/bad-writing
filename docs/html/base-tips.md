@@ -4,7 +4,7 @@ group:
   title: 基础
   order: 1
 toc: content
-title: tips
+title: 随笔
 mobile: false
 ---
 

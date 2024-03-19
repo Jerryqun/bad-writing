@@ -3,7 +3,7 @@ toc: content
 group:
   title: 基础概念
   order: 1
-title: tips
+title: 随笔
 ---
 
 # 两行换行出现点点点
