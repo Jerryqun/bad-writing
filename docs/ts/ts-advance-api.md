@@ -159,3 +159,26 @@ const person: Pick<IPerson, 'name' | 'age'> = {
   age: 18,
 };
 ```
+
+## ThisParameterType
+
+提取一个函数类型显式定义的 this 参数，如果没有显式定义的 this 参数，则返回 unknown 。
+
+this 参数只能叫 this，且必须在参数列表的第一个位置  
+this 必须是显式定义的  
+这个 this 参数在函数实际被调用的时候不存在，不需要显式作为参数传入，而是通过 call、apply 或者是 bind 等方法指定
+
+```js
+interface Foo {
+  x: number;
+}
+
+function fn(this: Foo, param: any) {}
+
+type Test = ThisParameterType<typeof fn>; // Foo
+const obj = {
+  x: 1,
+  fn: fn,
+};
+obj.fn({ a: 1 });
+```

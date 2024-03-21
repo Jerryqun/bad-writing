@@ -58,3 +58,35 @@ while (!now.done) {
   }
 }
 ```
+
+## 如何让 var [a, b] = {a: 1, b: 2} 解构赋值成功
+
+```js
+const obj = {
+  a: '1',
+  b: '2',
+};
+// const [a,b] = obj
+// VM326:6 Uncaught TypeError: obj is not iterable
+//     at <anonymous>:6:15
+```
+
+```js
+const obj = {
+  a: '1',
+  b: '2',
+};
+obj[Symbol.iterator] = function () {
+  let keys = Object.keys(this);
+  let index = 0;
+  return {
+    next: function () {
+      return {
+        done: index >= keys.length,
+        value: obj[keys[index++]],
+      };
+    },
+  };
+};
+const [a, b] = obj;
+```
