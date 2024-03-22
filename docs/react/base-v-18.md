@@ -60,6 +60,64 @@ ReactDOM.createRoot(root).render(<App />);
 useDeferredValue  
 useInsertionEffect
 
+7、renderToPipeableStream
+
+## renderToPipeableStream
+
+`renderToPipeableStream` 是 React 18 新引入的服务器端渲染（SSR）API，它允许你将 React 组件渲染成 Node.js 流（stream）。这种方式可以提高服务端渲染的性能，并提供一些新的功能来改善用户体验。
+
+以下是 `renderToPipeableStream` 的一些关键特性和优势：
+
+### 1. 流式渲染
+
+`renderToPipeableStream` 通过流的形式输出 HTML 字符串，这意味着服务器可以立即发送第一部分的 HTML 至客户端，而无需等待整个页面渲染完成。这可以显著减少首次内容绘制（First Contentful Paint，FCP）的时间，改善用户感知的加载速度。
+
+### 2. 选择性的流式传输
+
+此 API 使得你可以决定哪些部分的组件是以流的形式发送，哪些是等待所有内容都准备好后再发送。你可以选择性地实现流式传输，以优化关键内容的加载时间并提升用户体验。
+
+### 3. 提升并发性
+
+由于基于流式传输，即使在渲染大型组件树时，服务器也能保持更高的并发性，因为它可以处理多个请求而无需等待每个请求的完整输出。
+
+### 4. 构建中的渲染
+
+`renderToPipeableStream` 支持 Suspense，允许你在组件渲染前“暂停”渲染，并等待数据获取。这样，你可以先发送页面框架，然后在数据到达时填充内容。
+
+### 5. 错误和超时处理
+
+新 API 提供了错误处理和超时回调。例如，如果在渲染过程中发生错误，或者页面在给定的超时时间内未完成渲染，你可以发送一个备用页面或者其他错误处理逻辑。
+
+示例代码：
+
+```javascript
+import { renderToPipeableStream } from 'react-dom/server';
+import App from './App';
+
+// Incoming request handler
+const serverHandler = (req, res) => {
+  const stream = renderToPipeableStream(<App />, {
+    onAllReady() {
+      // 当所有组件都准备好时调用
+      res.statusCode = 200; // 设置HTTP状态码
+      stream.pipe(res); // 将渲染的组件流式传输到响应中
+    },
+    onError(error) {
+      // 渲染过程中发生错误时调用
+      console.error(error);
+      res.statusCode = 500;
+      res.send('Internal Server Error');
+    },
+  });
+};
+
+// ...
+```
+
+上面的代码示例展示了如何使用 `renderToPipeableStream` 来渲染 React 组件并流式传输响应。你可以通过 `onAllReady` 和 `onError` 回调来处理正常的流式传输和错误情况。
+
+需要注意的是，这个 API 可能需要相应的 Node.js 服务器设置和客户端逻辑来充分利用流式渲染和 Suspense 的优势。使用 `renderToPipeableStream` 是 React 服务器端渲染的未来方向，它为高性能和改善用户体验提供了更多可能性。
+
 ## useInsertionEffect
 
 useInsertionEffect 是在 React v18 新添加的 hooks ，它的用法和 useEffect 和 useLayoutEffect 一样。那么这个 hooks 用于什么呢?
