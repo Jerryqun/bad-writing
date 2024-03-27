@@ -966,6 +966,10 @@ window.__proto__.constructor === Window;
 
 ## window.isNaN 和 Number.isNaN 的区别
 
+### NaN 比较
+
+NaN 与任何值比较都返回 false，包括 NaN 自己。
+
 ### Number.isNaN
 
 判断传入值是否为 NaN 内部不会做任何转换

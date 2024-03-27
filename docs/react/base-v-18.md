@@ -7,6 +7,8 @@ title: React18 新特性
 
 ## React18 新特性
 
+<a target="_blank" href="https://fe.ecool.fun/topic/6f40b143-3941-44c6-ac90-9bf87795ee2c?orderBy=updateTime&order=desc&titleKey=react18">参考</a>
+
 1、组件返回 undefined 不再报错
 
 2、在 React 18 中，不论是在合成事件中，还是在宏任务中，都是会合并更新
@@ -59,8 +61,58 @@ ReactDOM.createRoot(root).render(<App />);
 6、新增一些 hook  
 useDeferredValue  
 useInsertionEffect
+useTransition
 
 7、renderToPipeableStream
+
+8、TS 类型定义上的变化
+如果有用到 children，需要在组件 props 的定义中写明它的类型，这在以往是可以忽略不写的
+
+```js
+interface MyButtonProps {
+  color: string;
+
+  children?: React.ReactNode;
+}
+```
+
+9、Transition  
+Transition 是 react18 引入的新概念，用来区分紧急和非紧急的更新。  
+紧急的更新，指的是一些直接的用户交互，如输入、点击等；  
+非紧急的更新，指的是 UI 界面从一个样子过渡到另一个样子；
+
+```js
+const { useCallback, useState, useTransition, Suspense } = React;
+
+let currentValue = '';
+function App() {
+  const [value, setValue] = useState('');
+  const [isPending, startTransition] = useTransition();
+
+  const handleChange = (e) => {
+    const newVal = e.target.value;
+    startTransition(() => setValue(newVal));
+    // setValue(newVal);
+  };
+
+  return (
+    <div>
+      <input onChange={handleChange} />
+      <div className={isPending ? 'loading' : ''}>
+        {Array(50000)
+          .fill('a')
+          .map((item, index) => {
+            return <div key={index}>{value}</div>;
+          })}
+      </div>
+    </div>
+  );
+}
+
+const rootElement = document.getElementById('root');
+
+ReactDOM.createRoot(rootElement).render(<App />);
+```
 
 ## renderToPipeableStream
 

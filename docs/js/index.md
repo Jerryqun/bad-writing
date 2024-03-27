@@ -162,3 +162,20 @@ let a = {
 
 a + 1 === 3; // true
 ```
+
+## [] == ! [] 为什么返回 true
+
+<a  target="_blank" src='https://fe.ecool.fun/articles/technology/429'>参考</a>
+
+```js
+
+[] == ![]
+
+[] == !true // 将空数组这个对象类型转换成布尔值
+
+[] == false // ! 运算符对 true 进行取反
+
+'' == false // 对 [] 进行 ToPrimitive 操作，返回一个空对象
+
+0 == 0 // 将等号两边都转换成数字类型
+```

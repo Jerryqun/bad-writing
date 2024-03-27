@@ -21,18 +21,30 @@ title: Fiber
 
 schedule、reconcile、commit
 
-schedule： 空闲调度 (调度这 fiber 节点执行 reconcile,requestIdleCallback)
+- schedule： 空闲调度 (调度这 fiber 节点执行 reconcile,requestIdleCallback)
 
-reconcile： vdom => fiberl （并且还会准备好要用的 dom 节点、确定好是增、删、还是改，通过 schdule 的调度，最终把整个 vdom 树转成了 fiber 链表）
+  对于大部分浏览器来说，每 1s 会有 60 帧，所以每一帧差不多是 16.6 ms，如果 Reconciliation 的 Render 阶段的更新时间过长，挤占了主线程其它任务的执行时间，就会导致页面卡顿。
 
-commit: 把 reconcile 产生的 fiber 链表一次性添加到 dom 中，因为 fiber 对应的节点提前创建好了、是增是删还是改也都知道了，所以，这一个阶段很快
+  将 re-render 时的 JS 计算拆分成更小粒度的任务，可以随时暂停、继续和丢弃执行的任务。
+
+  当 JS 计算的时间达到 16 毫秒之后使其暂停，把主线程让给 UI 绘制，防止出现渲染掉帧的问题。
+
+  在浏览器空闲的时候继续执行之前没执行完的小任务。
+
+  让我们回看一下回看上面的解决思路，React 给出的解决方案是将整次 Render 阶段的长任务拆分成多个小任务：
+  每个任务执行的时间控制在 5ms。
+  把每一帧 5ms 内未执行的任务分配到后面的帧中。
+  给任务划分优先级，同时进行时优先执行高优任务。
+
+- reconcile： vdom => fiberl （并且还会准备好要用的 dom 节点、确定好是增、删、还是改，通过 schdule 的调度，最终把整个 vdom 树转成了 fiber 链表）
+
+- commit: 把 reconcile 产生的 fiber 链表一次性添加到 dom 中，因为 fiber 对应的节点提前创建好了、是增是删还是改也都知道了，所以，这一个阶段很快
 
 整个 Fiber 的遍历是基于循环而非递归，可以随时中断
 
 ## 双缓冲的原理
 
-WIP 树就是一个缓冲，它在 Reconciliation 完毕后一次性提交给浏览器进行渲染。它可以减少内存分配和垃圾回收，WIP 的节点不完全是新的，比如某颗子树不需要变动，React 会克隆复用旧树中的子树。
-双缓存技术还有另外一个重要的场景就是异常的处理，比如当一个节点抛出异常，仍然可以继续沿用旧树的节点，避免整棵树挂掉。
+React 应用中最多同时存在两棵 Fiber 树。当前屏幕上显示内容对应的 Fiber 树叫做 Current Fiber，正在内存中构建的 Fiber 树叫做 workInProgress Fiber，他们通过 alternate 属性相互连接。当 workInProgress Fiber 树构建好了以后，只需要切换一下 current 指针的指向，这两棵树的身份就会完成互换。
 
 ## Diff 的瓶颈以及 React 的应对
 
