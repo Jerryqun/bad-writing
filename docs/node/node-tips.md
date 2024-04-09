@@ -200,6 +200,8 @@ function produce(base, recipe) {
 
 ## Immutable.js 与 Immer.js 的区别
 
+<a target="_blank" href="https://zhuanlan.zhihu.com/p/122187278">参考</a>
+
 1、对于 Immutable.js 来说，它通过构建一套原生 JS 无法支持的 Trie(Trie，又称为前缀树或字典树，是一种树形数据结构) 数据结构，最终实现了树节点的按需创建 <br/>
 
 immutable.js 不可变的状态，对 Immutable 对象的任何修改或添加删除操作都会返回一个新的 Immutable 对象。鉴于这个功能，所以可以把需要对比的 props 或者 state 数据变成 Immutable 对象，通过对比 Immutable 是否相等，来证明状态是否改变，从而确定是否更新组件。

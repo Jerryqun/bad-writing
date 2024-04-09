@@ -35,14 +35,14 @@ c.next(); // {value: undefined, done: true}
 for (let i of c) {
   console.log('i', i); // 1 2 3
 }
-// 不过这里要注意一个不同点，调用 next 的时候能得到 3 ，但是用 for 则会忽略最后的 return 语句。 也就是 for 循环会忽略 generator 中的 return 语句.
+// 不过这里要注意一个不同点，调用 next 的时候能得到 4 ，但是用 for 则会忽略最后的 return 语句。 也就是 for 循环会忽略 generator 中的 return 语句.
 ```
 
 ## Async、Await
 
-我最开始接触到 Async/Await 的时候把它当成了一个 promise 的语法糖，但是经过我们对 Generator 的理解后，明白了其实他就是 Generator 的一个语法糖：
-async 对应的是 \*，await 对应的是 yield，
-他只是自动帮我们进行了 Generator 的流程控制而已。
+async、await 是 co 库的官方实现。也可以看作自带启动器的 generator 函数的语法糖。不同的是，async、await 只支持 Promise 和原始类型的值，不支持 thunk 函数。
+
+co 函数库是一个 generator 函数的自启动执行器，使用条件是 generator 函数的 yield 命令后面，只能是 thunk 函数或 Promise 对象
 
 所以我们可以大约这么认为： async/await == generator + promise
 

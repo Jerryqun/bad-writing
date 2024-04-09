@@ -87,10 +87,9 @@ int m = i + j;
 
 ```js
 int[] m = new int[n]
-for(i=1; i<=n; ++i)
-{
-j = i;
-j++;
+for(i=1; i<=n; ++i) {
+  j = i;
+  j++;
 }
 ```
 

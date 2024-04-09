@@ -1,8 +1,8 @@
 ---
 title: dumi - 为组件研发而生的静态站点框架
 hero:
-  title: dumi
-  description: 为组件研发而生的静态站点框架
+  title: 编程小径
+  description:
   actions:
     - text: 立即上手
       link: /js
