@@ -1,5 +1,5 @@
 ---
-nav: 算法
+nav: 算法/工具
 group:
   title: 基础概念
   order: 2

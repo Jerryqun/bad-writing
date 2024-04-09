@@ -1,5 +1,5 @@
 ---
-nav: 算法
+nav: 算法/工具
 group:
   title: 排序
   order: 2
