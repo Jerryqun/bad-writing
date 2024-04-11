@@ -1,7 +1,7 @@
 ---
 nav: 算法/工具
 group:
-  title: 栈与队列
+  title: 数据结构
   order: 2
 toc: content
 mobile: false

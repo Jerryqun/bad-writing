@@ -5,6 +5,8 @@ toc: content
 title: js循环汇总
 ---
 
+从性能上看，for 循环遍历起来是最快的。
+
 ## forEach
 
 没有返回值<br/>

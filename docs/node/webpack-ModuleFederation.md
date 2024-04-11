@@ -14,12 +14,10 @@ Module Federation 基于 webpack 的远程容器特性。它允许将一个应�
 
 Module Federation 的主要优势包括：
 
-多个应用程序之间可以共享代码和模块，从而减少重复代码量。<br/>
-应用程序可以更加灵活地划分为更小的子应用程序，从而降低应用程序的复杂度。<br/>
-可以避免在应用程序之间传递大量数据，从而提高应用程序的性能和效率。<br/>
-可以支持应用程序的动态加载和升级，从而实现更好的版本管理和迭代。<br/>
-
-总之，Webpack 5 的模块联邦是一项重要的技术创新，可以帮助开发者更好地共享和复用代码、降低应用程序的复杂度，并提高应用程序的性能和效率。
+- 多个应用程序之间可以共享代码和模块，从而减少重复代码量。<br/>
+- 应用程序可以更加灵活地划分为更小的子应用程序，从而降低应用程序的复杂度。<br/>
+- 可以避免在应用程序之间传递大量数据，从而提高应用程序的性能和效率。<br/>
+- 可以支持应用程序的动态加载和升级，从而实现更好的版本管理和迭代。<br/>
 
 ## 使用实例
 
@@ -38,11 +36,22 @@ export default defineConfig({
     webpackConfig.plugins = [
       ...webpackConfig.plugins,
       new webpack.container.ModuleFederationPlugin({
-        name: 'app1',
-        filename: 'remoteEntry.js',
+        name: 'app1', // 远程应用的唯一名称
+        filename: 'remoteEntry.js', // 指定远程应用的入口文件名
         library: { type: 'var', name: 'app1' },
+        // 指定当前应用暴露哪些模块给远程应用使用。键是别名，值是相对于当前项目的文件路径
         exposes: {
           './Header': './src/components/hello-word', // 导出共享模块
+        },
+        // 定义如何在全局变量中暴露输出的模块。这对于加载远程模块时非常重要，因为它决定了如何在宿主环境中访问它们
+        library: { type: 'var', name: 'app_name' },
+        // 当时跨技术栈的时候一定要设置成这样 ，不然无法工作，比如vue里面用react 的webComponent 组件
+        // library: { type: 'umd', name: 'app1', umdNamedDefine: true },
+        // 指定哪些依赖（libraries）会被当前应用和远程共享。这可以防止重复加载同一个依赖库。你可以提供一个数组或一个对象来具体指定共享的模块和版本。
+        shared: ['react', 'react-dom'],
+        // 指定当前应用可以从哪些远程应用加载模块。键是远程应用的名称，值是加载远程模块的路径（通常包括URL）。
+        remotes: {
+          app2: 'app2@https://someurl.com/remoteEntry.js',
         },
       }),
     ];
