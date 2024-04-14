@@ -3,7 +3,7 @@ nav: Ts
 toc: content
 group: 进阶
 mobile: false
-title: 高阶api用法
+title: 高阶api
 ---
 
 ## 高阶 api 用法
@@ -181,4 +181,8 @@ const obj = {
   fn: fn,
 };
 obj.fn({ a: 1 });
+
+fn.call({ x: 1 }, { a: 1 });
+fn.bind({ x: 1 }, { a: 1 });
+fn.apply({ x: 1 }, [{ a: 1 }]);
 ```

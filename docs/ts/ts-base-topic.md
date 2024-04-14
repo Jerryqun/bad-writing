@@ -338,7 +338,7 @@ getProperty(x, 'm'); // Error: Argument of type '"m"' isn't assignable to '"a" |
 
 泛型约束增加了泛型的灵活性，允许函数和类与各种类型进行交互，同时保证这些类型具有必要的属性和方法。这样可以保证代码的安全性和正确性。
 
-### const 和 readonly 的区别
+## const 和 readonly 的区别
 
 ### const
 
