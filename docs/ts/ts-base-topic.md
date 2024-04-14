@@ -239,7 +239,22 @@ interface Point {
 const p1: Point = { x: 10, y: 20 };
 p1.x = 5; // Error: Cannot assign to 'x' because it is a read-only property.
 
+// 声明函数
+interface MyFunc {
+(x:number,y:number):number
+}
+let myAdd: MyFunc = function(x, y) {
+  return x + y;
+};
 
+//  Interface 声明数组
+
+interface StringArray {
+  [index: number]: string;
+}
+
+let myArray: StringArray;
+myArray = ["Bob", "Alice"];
 ```
 
 ## 如何为 TypeScript 的泛型添加约束
@@ -322,3 +337,17 @@ getProperty(x, 'm'); // Error: Argument of type '"m"' isn't assignable to '"a" |
 在这个例子中，`getProperty` 函数接受两个参数：对象 `obj` 和键 `key`。`K` 泛型参数被约束为必须是 `T`（`obj` 参数的类型）的键的集合中的成员。使用 `keyof T` 表达式，我们可以确保 `key` 参数只能是 `obj` 中存在的键。
 
 泛型约束增加了泛型的灵活性，允许函数和类与各种类型进行交互，同时保证这些类型具有必要的属性和方法。这样可以保证代码的安全性和正确性。
+
+### const 和 readonly 的区别
+
+### const
+
+- const 用于声明常量值。一旦被赋值后，其值将不能被重新赋值或修改。
+- 常量必须在声明时就被赋值，并且该值不可改变。
+- 常量通常用于存储不会发生变化的值，例如数学常数或固定的配置值。
+
+### readonly
+
+- readonly 关键字用于标记类的属性，表明该属性只能在类的构造函数或声明时被赋值，并且不能再次被修改。
+- readonly 属性可以在声明时或构造函数中被赋值，但之后不能再被修改。
+- readonly 属性通常用于表示对象的某些属性是只读的，防止外部代码修改这些属性的值。

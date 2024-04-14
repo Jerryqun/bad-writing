@@ -41,3 +41,37 @@ console.log(Gender.Male); // Output: 0
 console.log(Gender[1]); // Output: Female
 
 ```
+
+编译成 JavaScript 后:
+
+```js
+var Direction;
+(function (Direction) {
+  Direction[(Direction['Up'] = 0)] = 'Up';
+  Direction[(Direction['Down'] = 1)] = 'Down';
+  Direction[(Direction['Left'] = 2)] = 'Left';
+  Direction[(Direction['Right'] = 3)] = 'Right';
+})(Direction || (Direction = {}));
+
+var dir = Direction.Up;
+```
+
+## 常量枚举
+
+```js
+const enum Direction {
+  Up,
+  Down,
+  Left,
+  Right
+}
+
+let dir: Direction = Direction.Up;
+
+```
+
+编译成 JavaScript 后:
+
+```js
+var dir = 0; /* Up */
+```

@@ -3,10 +3,10 @@ nav: Ts
 toc: content
 group: 基础
 mobile: false
-title: 基本config
+title: tsconfig
 ---
 
-## 基本 config
+## tsconfig.json
 
 ```json
 // 常用配置
