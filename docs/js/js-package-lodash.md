@@ -7,6 +7,8 @@ title: lodash
 
 ## lodash
 
+为了tree shaking ，推荐使用lodash-es
+
 <a target="_blank" href="https://www.lodashjs.com/">官网</a>
 
 ```js

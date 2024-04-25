@@ -1314,3 +1314,12 @@ window.a = 1;
   alert(a);
 })();
 ```
+
+
+### kb转 KB，MB，GB,TB,PB 等形式
+```js
+function formatSizeUnits () {
+  
+}
+```
+
