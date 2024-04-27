@@ -71,29 +71,47 @@ https://juejin.cn/post/6898630134530752520
 
 ### Cookie
 
-1、Cookie 的作用域仅仅由 domain 和 path 决定，与协议和端口无关<br/>
+- Cookie 的作用域仅仅由 domain 和 path 决定，与协议和端口无关<br/>
 
-Domain 属性指定浏览器发出 HTTP 请求时，哪些域名要附带这个 Cookie。如果没有指定该属性，浏览器会默认将其设为当前 URL 的一级域名，比如 http://www.example.com 会设为 http://example.com，而且以后如果访问http://example.com的任何子域名，HTTP 请求也会带上这个 Cookie。如果服务器在 Set-Cookie 字段指定的域名，不属于当前域名，浏览器会拒绝这个 Cookie。
-Path 属性指定浏览器发出 HTTP 请求时，哪些路径要附带这个 Cookie。只要浏览器发现，Path 属性是 HTTP 请求路径的开头一部分，就会在头信息里面带上这个 Cookie。比如，PATH 属性是/，那么请求/docs 路径也会包含该 Cookie。当然，前提是域名必须一致。
+  Domain 属性指定浏览器发出 HTTP 请求时，哪些域名要附带这个 Cookie。如果没有指定该属性，浏览器会默认将其设为当前 URL 的一级域名，比如 http://www.example.com 会设为 http://example.com，而且以后如果访问http://example.com的任何子域名，HTTP 请求也会带上这个 Cookie。如果服务器在 Set-Cookie 字段指定的域名，不属于当前域名，浏览器会拒绝这个 Cookie。
 
-2、cookie 在不同端口号可以共享<br/>
-3、设置 httpOnly 使得 js 不能访问 cookie <br/>
-4、设置 Secure 使得只有 https 的请求才会带上 cookie<br/>
-5、SameSite 属性<br/>
-SameSite 是 HTTP 响应头 Set-Cookie 的属性之一。<br/>
-它允许声明该 Cookie 是否仅限于第一方或者同一站点上下文。<br/>
-SameSite 可以有下面三种值：<br/>
+  Path 属性指定浏览器发出 HTTP 请求时，哪些路径要附带这个 Cookie。只要浏览器发现，Path 属性是 HTTP 请求路径的开头一部分，就会在头信息里面带上这个 Cookie。比如，PATH 属性是/，那么请求/docs 路径也会包含该 Cookie。当然，前提是域名必须一致。
 
-6、Expires 属性指定一个具体的到期时间，到了指定时间以后，浏览器就不再保留这个 Cookie。它的值是 UTC 格式。如果不设置该属性，或者设为 null，Cookie 只在当前会话（session）有效，浏览器窗口一旦关闭，当前 Session 结束，该 Cookie 就会被删除。另外，浏览器根据本地时间，决定 Cookie 是否过期，由于本地时间是不精确的，所以没有办法保证 Cookie 一定会在服务器指定的时间过期。
-Max-Age 属性指定从现在开始 Cookie 存在的秒数，比如 60 _ 60 _ 24 \* 365（即一年）。过了这个时间以后，浏览器就不再保留这个 Cookie。
-如果同时指定了 Expires 和 Max-Age，那么 Max-Age 的值将优先生效。
-如果 Set-Cookie 字段没有指定 Expires 或 Max-Age 属性，那么这个 Cookie 就是 Session Cookie，即它只在本次对话存在，一旦用户关闭浏览器，浏览器就不会再保留这个 Cookie。
+- cookie 在不同端口号可以共享<br/>
+- 设置 httpOnly 使得 js 不能访问 cookie <br/>
+- 设置 Secure 使得只有 https 的请求才会带上 cookie<br/>
+- SameSite 属性<br/>
+  SameSite 是 HTTP 响应头 Set-Cookie 的属性之一。<br/>
+  它允许声明该 Cookie 是否仅限于第一方或者同一站点上下文。<br/>
+  SameSite 可以有下面三种值：<br/>
+
+- Expires 属性指定一个具体的到期时间，到了指定时间以后，浏览器就不再保留这个 Cookie。它的值是 UTC 格式。如果不设置该属性，或者设为 null，Cookie 只在当前会话（session）有效，浏览器窗口一旦关闭，当前 Session 结束，该 Cookie 就会被删除。另外，浏览器根据本地时间，决定 Cookie 是否过期，由于本地时间是不精确的，所以没有办法保证 Cookie 一定会在服务器指定的时间过期。
+
+- Max-Age 属性指定从现在开始 Cookie 存在的秒数，比如 60 _ 60 _ 24 \* 365（即一年）。过了这个时间以后，浏览器就不再保留这个 Cookie。如果同时指定了 Expires 和 Max-Age，那么 Max-Age 的值将优先生效。如果 Set-Cookie 字段没有指定 Expires 或 Max-Age 属性，那么这个 Cookie 就是 Session Cookie，即它只在本次对话存在，一旦用户关闭浏览器，浏览器就不会再保留这个 Cookie。
 
 Strict 仅允许一方请求携带 Cookie，即浏览器将只发送相同站点请求的 Cookie，即当前网页 URL 与请求目标 URL 完全一致。
 Lax 允许部分第三方请求携带 Cookie。
 None 无论是否跨站都会发送 Cookie。
 
-当 sameSite 为 Lax 时，post、iframe、ajax、image 的跨站请求都不会发送 cookie。
+### 前端对 cookie 的读写
+
+前端可以自己创建 cookie，如果服务端创建的 cookie 没加 HttpOnly，那恭喜你也可以修改他给的 cookie。
+
+调用 document.cookie 可以创建、修改 cookie，和 HTTP 一样，一次 document.cookie 能且只能操作一个 cookie。
+
+写
+
+```js
+document.cookie =
+  'username=jimu; domain=jimu.com; path=/blog; Expires=Wed, 21 Oct 2015 07:28:00 GMT; Secure; HttpOnly';
+```
+
+读
+
+```js
+console.log(document.cookie);
+// username=jimu; height=180; weight=80
+```
 
 ### sessionStorage
 
