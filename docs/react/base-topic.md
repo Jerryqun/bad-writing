@@ -8,9 +8,40 @@ title: 面试
 
 ## react-router 里的 Link 标签和 a 标签有什么区别
 
-1、如果 Link 上定义了 onClick 方法，则执行该 onclick 方法  
-2、click 的时候阻止 a 标签默认事件（这样子点击<a href="/abc">123</a>就不会跳转和刷新页面）  
-3、再取得跳转 href（即是 to），用 history（前端路由两种方式之一，history & hash）跳转，此时只是链接变了，并没有刷新页面
+React Router 的 `Link` 组件与传统的 HTML `<a>`（锚）标签有一些关键性的不同之处，尤其是在构建单页应用程序（SPA）时这些差异变得尤为重要。
+
+### HTML `<a>` 标签：
+
+- 当用户点击 `<a>` 标签时，浏览器会发起一个新的 HTTP 请求到指定的`href` URL，导致页面的重新加载。
+- `<a>` 标签的这个行为不适用于单页应用，因为你希望应用无需重新加载即可响应 URL 的变化。
+
+```html
+<a href="/about">About</a>
+```
+
+### React Router 的 `Link` 组件：
+
+- `Link` 组件是 React Router 的一部分，它在内部使用 `history` 对象来改变 URL，但不会引起页面刷新，从而实现无缝页面切换。
+- 当点击 `Link` 组件时，页面的 URL 会更新，并触发相应路由的渲染，但不会发生传统意义上的页面重载。
+- `Link` 组件是实现 SPA 中导航的首选方法，因为它保持了应用状态并使页面过渡看起来更流畅。
+
+```jsx
+import { Link } from 'react-router-dom';
+
+export default () => (
+  <div>
+    <Link to="/about">About</Link>
+  </div>
+);
+```
+
+使用 `Link`，React Router 可以处理路由的变化，并在不重新加载整个页面的情况下，仅更新 DOM 中需要变化的部分。这是通过 JavaScript 进行实现的，允许应用保持单页应用的性能优势和用户体验。
+
+总结一下，这就是为什么在 React 中使用 React Router 时应该使用 `Link` 而不是 `<a>`：
+
+- `Link` 组件避免不必要的页面刷新和 HTTP 请求，节省资源和时间。
+- `Link` 组件维护了应用的状态，用户不会在导航时丢失当前的应用状态。
+- `Link` 组件使 URL 的变化成为了一个流畅的过程，用户体验更佳。
 
 ## 说说 React Router 有几种模式
 

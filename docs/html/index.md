@@ -4,14 +4,28 @@ group:
   title: 基础
   order: 1
 toc: content
-title: 语义化
+title: HTML5 新特性
 mobile: false
 ---
 
-## html 语义化
+## HTML5 有哪些新特性
 
-如何理解 HTML 语义化？
+一、语义标签
 
-1、让人更容易读懂（增加代码可读性）。  
-2、让搜索引擎更容易读懂，有助于爬虫抓取更多的有效信息，爬虫依赖于标签来确定上下文和各个关键字的权重（SEO）。  
-3、在没有 CSS 样式下，页面也能呈现出很好地内容结构、代码结构。
+二、增强型表单
+
+三、视频和音频
+
+四、Canvas 绘图
+
+五、SVG 绘图
+
+六、拖拉 API
+
+七、WebWorker
+
+八、WebStorage
+
+九、WebSocket
+
+十、地理定位

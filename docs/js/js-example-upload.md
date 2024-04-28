@@ -5,9 +5,11 @@ toc: content
 title: 切片上传
 ---
 
+## 切片上传
+
 <a target="_blank" href="https://juejin.cn/post/7177045936298786872">参考</a>
 
-## 前端
+### 前端代码示例
 
 ```html
 <input type="file" id="input" />
@@ -122,7 +124,7 @@ merge(files.size, files.name)
 
 ```
 
-## 后端
+### 后端代码示例
 
 ```js
 //app.js
