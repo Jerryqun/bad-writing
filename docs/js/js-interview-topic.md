@@ -669,3 +669,22 @@ console.log('not new:', Person());
 ```
 
 3、类
+
+## 如何判断一个 js 对象是否存在循环引用
+
+```js
+const exitCircular = (obj, cache = new WeakSet()) => {
+  const values = Object.values(obj);
+  for (let i = 0; i < values.length; i++) {
+    if (cache.has(values[i])) {
+      return true;
+    }
+    if (typeof values[i] !== 'object' || values[i] === null) {
+      continue;
+    }
+    cache.add(values[i]);
+    return exitCircular(values[i], cache);
+  }
+  return false;
+};
+```

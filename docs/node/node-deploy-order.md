@@ -31,6 +31,19 @@ sb_release命令需要“ redhat-lsb-core”软件包才能执行。
 如果提示未找到命令
 yum install -y redhat-lsb即可
 
+echo
+显示文本：
+echo "Hello, world!"  此命令将输出字符串 "Hello, world!" 到终端。
+
+显示变量的值：
+USERNAME="Alice"
+echo "Welcome, $USERNAME!"
+
+
+输出命令的结果到文件中（重定向）：
+echo "Some text" > file.txt
+这会创建或覆盖 file.txt 文件，使其包含文本 "Some text"。
+
 
 
 
