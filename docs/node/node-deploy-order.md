@@ -44,6 +44,14 @@ echo "Welcome, $USERNAME!"
 echo "Some text" > file.txt
 这会创建或覆盖 file.txt 文件，使其包含文本 "Some text"。
 
+curl 用于传输数据，它支持多种协议，包括 HTTP、HTTPS、FTP 和 SFTP 等
+
+获取URL的内容
+curl https://www.baidu.com/
+
+将输出保存到文件中
+curl -o filename.html https://www.baidu.com/
+
 
 
 
