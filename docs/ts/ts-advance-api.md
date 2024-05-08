@@ -59,7 +59,7 @@ function test1(lzwme: string, idx: number) {
   };
 }
 
-type TestReturnType = ReturnType<typeof test>;
+type TestReturnType = ReturnType<typeof test1>;
 
 // type ReturnType<T extends (...args: any) => any> = T extends (
 //   ...args: any
@@ -71,10 +71,10 @@ type TestReturnType = ReturnType<typeof test>;
 ## Parameters
 
 ```ts
-type TestArgsType1 = Parameters<typeof test>;
+type TestArgsType1 = Parameters<typeof test1>;
 // TestArgsType => [lzwme: string, idx: number]
 
-type TestArgsType2 = Parameters<typeof test>[1];
+type TestArgsType2 = Parameters<typeof test1>[1];
 // TestArgsType => idx: number
 
 // type Parameters<T extends (...args: any) => any> = T extends (

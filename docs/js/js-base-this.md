@@ -157,3 +157,7 @@ fn2();
 
 首先，new 的方式优先级最高，接下来是 bind 这些函数，然后是 obj.foo() 这种调用方式，
 最后是 foo 这种调用方式，同时，箭头函数的 this 一旦被绑定，就不会再被任何方式所改变。
+
+## self、this 和 window 的区别
+
+window 是浏览器环境中的全局对象，this 的值取决于函数的调用方式，而 self 通常用于指代当前的全局作用域，尤其是在 Web Workers 中。在主线程的浏览器环境中，self 和 window 可以互换使用，但在 Web Workers 环境中，self 会指向 Worker 的全局环境，而 window 对象在 Worker 中是不可用的。
