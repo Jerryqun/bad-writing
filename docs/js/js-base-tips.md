@@ -1315,11 +1315,43 @@ window.a = 1;
 })();
 ```
 
+### kb 转 KB，MB，GB,TB,PB 等形式
 
-### kb转 KB，MB，GB,TB,PB 等形式
 ```js
-function formatSizeUnits () {
-  
-}
+function formatSizeUnits() {}
 ```
 
+### 如何判断一个 js 对象是否存在循环引用
+
+```js
+function existCircular(obj) {
+  let cache = new Set();
+  function helper(obj) {
+    let values = Object.values(obj);
+    for (let i = 0; i < values.length; i++) {
+      if (cache.has(values[i])) {
+        return true;
+      }
+
+      // 不是引用数据类型，直接跳过
+      if (typeof values[i] !== 'object' || values[i] === null) continue;
+      cache.add(values[i]);
+
+      let flag = helper(values[i]);
+      // 如果 flag 是 false, 那么继续遍历，如果是 true,说明已经存在环了， 直接 return true
+      if (flag) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  return helper(obj);
+}
+
+// 测试
+const person = { name: 'kalory', age: 18 };
+person.onwer = person;
+
+existCircular(person); // true
+```
