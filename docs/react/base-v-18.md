@@ -17,7 +17,7 @@ title: React18 新特性
 
 ```jsx
 import { flushSync } from 'react-dom';
-const App: React.FC = () => {
+const App = () => {
   const [count, setCount] = React.useState(0);
   console.log('count: ', count);
   return (
