@@ -31,7 +31,7 @@ export default () => {
 栗子 2
 
 ```jsx
-class Index extends React.Component<any, any> {
+class Index extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
