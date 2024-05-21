@@ -124,6 +124,7 @@ console.log('tsFiles: ', tsFiles);
 ```js
 const cwd = process.cwd(); //用于获取 node.js 流程的当前工作目录。 cwd /Users/cq/Desktop/node
 
+// __dirname与process.cwd()的区别
 // __dirname 表示当前被执行脚本文件所在的目录的绝对路径 ——脚本文件所在目录
 // process.cwd() 返回运行当前脚本的工作目录的路径 —— 脚本文件执行目录
 ```
