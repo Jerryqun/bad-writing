@@ -12,11 +12,29 @@ title: Webpack5Prox配置详解
 {
   "proxy": {
     "/api": {
-      "target": "http://localhost:3000", // 代理的目标 URL
-      "pathRewrite": { "^/api": "" }, // pathRewrite：重写请求路径的规则。 前面是匹配规则，后面是替换内容
-      "changeOrigin": true, // 修改 HTTP 请求头中的 Origin 字段
+      "target": "http://localhost:3000", // 目标服务器，所有匹配到的请求将会被代理到这个地址
+      "pathRewrite": { "^/api": "" }, // pathRewrite：重写请求路径的规则。 前面是匹配规则，后面是替换内容，将/api替换为空，即移除请求前缀
+      "changeOrigin": true, // 是否改变请求头中的host值，如果设置为true，那么请求头中的host将被设置为target
       "secure": false, // 如果代理的目标是 HTTPS 服务，将此选项设置为 false 将允许代理服务器接受无效的证书。
-      "logLevel": "debug" // 日志级别，可选项有'silent' | 'error' | 'warn' | 'info' | 'log' | 'debug'。
+      "logLevel": "debug", // 日志级别，可选项有'silent' | 'error' | 'warn' | 'info' | 'log' | 'debug'。
+      "context": ["/auth", "/api"], // 只有/auth和/api开头的请求才会被代理，可以是一个单独的字符串或字符串数组
+      "headers": {
+        "Connection": "keep-alive" // 为每一个代理请求添加自定义请求头
+      },
+      "cookiePathRewrite": "/", // 重写cookie路径
+      "cookieDomainRewrite": "localhost" ,// 重写cookie域名
+      "onProxyReq": function(proxyReq, req, res) { // 代理的请求事件处理，可以在这里添加请求头等
+        proxyReq.setHeader('X-Added', 'foobar');
+      },
+      "onProxyRes": function(proxyRes, req, res) { // 代理的响应事件处理，可以在这里修改响应头信息等
+        proxyRes.headers['X-Added'] = 'foobar';  // 添加新的响应头字段
+      },
+      "bypass": function(req, res, proxyOptions) { // 提供一个函数来绕过代理服务器发送请求，返回false则继续代理，返回其他路径则不代理
+        if (req.headers.accept.indexOf("html") !== -1) {
+          console.log("Skipping proxy for browser request.");
+          return "/index.html";
+        }
+      },
     }
   }
 }
@@ -58,24 +76,6 @@ Proxy 行为
     "/socket": {
       "target": "ws://localhost:3000",
       "ws": true
-    }
-  }
-}
-```
-
-## 高级配置（自定义代理规则）：
-
-如果内置代理的功能不足以满足需求，你可以提供一个自定义 bypass 函数，来实现更高级的控制。
-
-```json
-proxy: {
-  '/api': {
-  target: 'http://localhost:3000',
-  bypass: function(req, res, proxyOptions) {
-    if (req.headers.accept.indexOf('html') !== -1) {
-      console.log('Skipping proxy for browser request.');
-      return '/index.html';
-      }
     }
   }
 }
