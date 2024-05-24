@@ -114,3 +114,23 @@ console.log(a);
 console.log(b);
 console.log(a === b);
 ```
+
+```js
+class Single {
+    static instance: any
+    private constructor() { }
+    public static getInstance() {
+        if (Single.instance) {
+            return Single.instance
+        }
+        Single.instance = new Single()
+        return Single.instance
+    }
+    a() { }
+    b() { }
+}
+
+const a = Single.getInstance()
+const b = Single.getInstance()
+console.log(a === b) // true
+```

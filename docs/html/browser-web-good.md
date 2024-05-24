@@ -53,3 +53,11 @@ lighthouse https://www.baidu.com/ --view
   console.table(result);
 })();
 ```
+
+### 性能指标
+
+- FirstPaint（FP）
+- First Contentful Paint(FCP)  
+  第一次有内容的渲染
+- LCP  
+  第一次有意义的渲染

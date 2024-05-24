@@ -19,9 +19,14 @@ class ErrorBoundary extends React.Component {
     this.state = { hasError: false };
   }
 
+  static getDerivedStateFromError(error) {
+    // 更新 state 使下一次渲染能够显示降级后的 UI
+    return {
+      hasError: true,
+    };
+  }
+
   componentDidCatch(error, info) {
-    // Display fallback UI
-    this.setState({ hasError: true });
     // You can also log the error to an error reporting service
     logErrorToMyService(error, info);
   }
@@ -71,7 +76,7 @@ const ui = (
 
 遗憾的是，error boundaries 并不会捕捉这些错误：
 
-- 事件处理程序
+- 事件处理程序（dom 事件）
 - 异步代码 (e.g. setTimeout or requestAnimationFrame callbacks)
 - 服务端的渲染代码
 - error boundaries 自己抛出的错误
