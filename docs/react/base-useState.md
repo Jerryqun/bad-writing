@@ -6,6 +6,39 @@ mobile: false
 title: useState和setState
 ---
 
+## setState 和 useState 同步异步问题
+
+1、在正常的 react 的事件流里（合成事件、生命周期函数）
+setState 和 useState 是异步执行的（不会立即更新 state 的结果）
+多次执行 setState 和 useState，只会调用一次重新渲染 render,
+不同的是，setState 会进行 state 的合并，而 useState 则不会。
+(有时合并（对象形式 setState({}) => 通过 Object.assign 形式合并对象），有时不合并、而是覆盖（函数形式 setState((prevState,nextState)=>{})）)
+
+2、setTimeout 、原生事件中 setState 和 useState 是同步执行的 react18 之前 之后也是异步的
+
+3、setState 的“异步”并不是说内部由异步代码实现，其实本身执行的过程和代码都是同步的，只是合成事件和钩子函数的调用顺序在更新之前，
+导致在合成事件和钩子函数中没法立马拿到更新后的值，形式了所谓的“异步”，当然可以通过第二个参数 setState(partialState, callback) 中的 callback 拿到更新后的结果。
+
+看是否命中 batchUpdate 机制（判断 isBatchUpdate = true 走异步，没命中走同步）
+
+```js
+//开始 处于isBatchUpdate = true
+this.setState({});
+//结束
+isBatchUpdate = false;
+
+//开始 处于isBatchUpdate = true
+setTimeout(() => {
+  // 此时isBatchUpdate已经等于false，没有被命中
+  this.setState({});
+}, 200);
+//结束
+isBatchUpdate = false;
+```
+
+4、setState 的批量更新优化也是建立在“异步”（合成事件、钩子函数）之上的，在原生事件和 setTimeout 中不会批量更新，在“异步”中如果对同一个值进行多次 setState ， setState 的批量更新策略会对其进行覆盖，取最后一次的执行，
+如果是同时 setState 多个不同的值，在更新时会对其进行合并批量更新。
+
 ## useState 缓存计算结果
 
 ```jsx

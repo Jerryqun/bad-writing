@@ -6,6 +6,8 @@ mobile: false
 title: 基本配置
 ---
 
+## webpack 基本配置
+
 ```js
 // webpack.config.js 单个配置
 const path = require('path');
@@ -56,3 +58,12 @@ module.exports = [
  * 例如某个 Module 在 Compilation 实例 A 中完成解析、构建后，在其它 Compilation 中依然需要完整经历构建流程，无法直接复用结果。
  */
 ```
+
+## 前端为什么要进行打包和构建
+
+- 打包后代码体积小（tree-shaking，压缩，合并），加载更快
+- 编译高级语法（ts，es6，模块化，scss）
+- 兼容性和错误检查（polyfill，postcss，eslint）
+- 高效的开发环境
+- 统一的构建流程和产出标准
+- 前端工程化

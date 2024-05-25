@@ -8,6 +8,8 @@ title: Babel
 
 ## Babel
 
+<a target="_blank" href="https://www.babeljs.cn/">官网</a>
+
 <a target="_blank" href="https://juejin.cn/post/6844904008679686152">参考</a>
 
 Babel is a JavaScript compiler.
@@ -24,15 +26,17 @@ Babel 是一个工具链，主要用于将 ECMAScript 2015+ 版本的代码转�
 
 Polyfill 是一种 JavaScript 的 API 的 Polyfill，用来模拟实现一些 JavaScript 的新特性，使得这些新特性能够在旧的浏览器中运行
 
+Polyfill 是 core-js（不支持 generator 的转换） 和 regenerate 的集合
+
 ## babel-polyfill 和 babel-runtime 的区别
 
 <a target="_blank" href="https://juejin.cn/post/6844903869353295879?searchId=20230718094626F6E170D8E496316FE991">参考</a>
 
-1、babel-polyfill 污染全局变量，会影响其他库<br/>
-2、babel-runtime 不会污染全局变量，不会影响其他库<br/>
+1、babel-polyfill 污染全局变量，会影响其他库(栗子: window.xxx === xxx)<br/>
+2、babel-runtime 不会污染全局变量，不会影响其他库(重新定义名称 如\_promise = )<br/>
 3、产出第三方 lib 要用 babel-runtime<br/>
 
-在 Babel > 7.4.0 之前，通常我们会安装 babel-polyfill 或 @babel/polyfill 来处理实例方法和 ES+新增的内置函数，而 7.4.0 之后，当我们选择安装 @babel/polyfill 时，会收到警告 .<br/>
+在 Babel7.4.0 版本 之前，通常我们会安装 babel-polyfill 或 @babel/polyfill 来处理实例方法和 ES+新增的内置函数，而 7.4.0 之后，当我们选择安装 @babel/polyfill 时，会收到警告 .<br/>
 
 所以在针对 Babel >= 7.4.0 的情况，我们需要安装 core-js 替代 babel-polyfill<br/>
 

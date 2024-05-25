@@ -8,8 +8,6 @@ title: react合成事件
 
 ## React 合成事件
 
-解决跨平台，兼容性问题
-
 1、React16 事件绑定到 document 上  
 2、React17 事件绑定到 root 组件上，有利于多个 react 版本共存，例如微前端  
 3、所以原生事件的监听器响应总是比合成事件的监听器早  
@@ -93,7 +91,8 @@ export default App;
 
 1、将事件都代理到了根节点上，减少了事件监听器的创建，节省了内存，提高性能  
 2、磨平浏览器差异，开发者无需兼容多种浏览器写法。如想阻止事件传播时需要编写 event.stopPropagation() 或 event.cancelBubble = true，在 React 中只需编写 event.stopPropagation()即可  
-3、对开发者友好。只需在对应的节点上编写如 onClick、onClickCapture 等代码即可完成 click 事件在该节点上冒泡节点、捕获阶段的监听，统一了写法。
+3、对开发者友好，只需在对应的节点上编写如 onClick、onClickCapture 等代码即可完成 click 事件在该节点上冒泡节点、捕获阶段的监听，统一了写法。  
+4、方便事件的统一管理
 
 React 事件的命名采用小驼峰式（camelCase），而不是纯小写。以 click 事件为例，冒泡阶段用 onClick，捕获阶段用 onClickCapture。
 
@@ -110,22 +109,6 @@ React 事件的命名采用小驼峰式（camelCase），而不是纯小写。�
 在原生 scroll 里，scroll 是不存在冒泡阶段的，但是 React16 中模拟了 scroll 的冒泡阶段，React17 中将此特性去除，避免了当一个嵌套且可滚动的元素在其父元素触发事件时造成混乱。
 
 3、去除事件池
-
-## setState 和 useState 同步异步问题
-
-1、在正常的 react 的事件流里（合成事件、生命周期函数）
-setState 和 useState 是异步执行的（不会立即更新 state 的结果）
-多次执行 setState 和 useState，只会调用一次重新渲染 render,
-不同的是，setState 会进行 state 的合并，而 useState 则不会。
-(有时合并（对象形式 setState({}) => 通过 Object.assign 形式合并对象），有时不合并、而是覆盖（函数形式 setState((prevState,nextState)=>{})）)
-
-2、setTimeout 、原生事件中 setState 和 useState 是同步执行的 react18 之前 之后也是异步的
-
-3、setState 的“异步”并不是说内部由异步代码实现，其实本身执行的过程和代码都是同步的，只是合成事件和钩子函数的调用顺序在更新之前，
-导致在合成事件和钩子函数中没法立马拿到更新后的值，形式了所谓的“异步”，当然可以通过第二个参数 setState(partialState, callback) 中的 callback 拿到更新后的结果。
-
-4、setState 的批量更新优化也是建立在“异步”（合成事件、钩子函数）之上的，在原生事件和 setTimeout 中不会批量更新，在“异步”中如果对同一个值进行多次 setState ， setState 的批量更新策略会对其进行覆盖，取最后一次的执行，
-如果是同时 setState 多个不同的值，在更新时会对其进行合并批量更新。
 
 ## react 捕获事件案例
 

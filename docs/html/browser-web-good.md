@@ -61,3 +61,6 @@ lighthouse https://www.baidu.com/ --view
   第一次有内容的渲染
 - LCP  
   第一次有意义的渲染
+- DomContentLoaded(DCL)
+- Largest Contentful Paint(LCP)
+- Load(L)

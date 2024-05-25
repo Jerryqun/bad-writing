@@ -8,6 +8,8 @@ title: 安装
 
 ## 安装
 
+<a target='_blank' src="https://www.webpackjs.com/concepts/">中文官网</a>
+
 在 webpack 3 中，webpack 本身和它的 CLI 以前都是在同一个包中，但在第 4 版中，他们已经将两者分开来更好地管理它们
 
 ```bash
