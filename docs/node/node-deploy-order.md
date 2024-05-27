@@ -133,6 +133,7 @@ command + 空格  打开应用快捷搜索
 command + shift + 3   截图全屏
 command + shift + 4   截图所选区域
 Command + Option + c  复制选中文件的路径
+control + c 杀死当前终端命令
 
 ```
 
