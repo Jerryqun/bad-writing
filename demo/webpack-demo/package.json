@@ -11,7 +11,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "@babel/preset-react": "^7.24.6",
     "css-minimizer-webpack-plugin": "^7.0.0",
+    "dayjs": "^1.11.11",
     "less-loader": "^12.2.0",
     "mini-css-extract-plugin": "^2.9.0",
     "postcss": "^8.4.38",

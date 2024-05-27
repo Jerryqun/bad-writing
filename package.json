@@ -22,6 +22,7 @@
     ]
   },
   "dependencies": {
+    "@babel/preset-env": "^7.24.6",
     "antd": "^5.13.3"
   },
   "devDependencies": {

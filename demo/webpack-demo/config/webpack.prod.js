@@ -32,7 +32,7 @@ module.exports = merge(baseConfig, {
   ],
   // 压缩配置
   optimization: {
-    minimize: true,
+    minimize: false,
     minimizer: [
       new TerserPlugin(), //压缩js
       new CssMinimizerPlugin(), // 压缩css
@@ -48,6 +48,7 @@ module.exports = merge(baseConfig, {
           priority: 1, //配置抽离的权重，权重越高 越先抽离
           minSize: 0, //大小限制 达到这个权重才会进行差分
           minChunks: 1, // 最少复用过几次
+          test: /node_modules/,
         },
         // 公共模块
         commons: {

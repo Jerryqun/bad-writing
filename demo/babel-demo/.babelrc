@@ -10,7 +10,7 @@
   ],
   "plugins": [
     [
-      "@babel/plugin-transform-runtime",
+      "@babel/plugin-transform-runtime", // 按需引入
       {
         "absoluteRuntime": false,
         "corejs": 3,

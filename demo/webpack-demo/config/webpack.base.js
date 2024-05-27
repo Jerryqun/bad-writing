@@ -15,7 +15,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|ts)$/, // 用于声明该规则的过滤条件，只有路径名命中该正则的文件才会应用这条规则，示例中的 /\.js$/ 表示对所有 .js 后缀的文件生效
+        test: /\.(js|ts|tsx|jsx)$/, // 用于声明该规则的过滤条件，只有路径名命中该正则的文件才会应用这条规则，示例中的 /\.js$/ 表示对所有 .js 后缀的文件生效
         use: ['babel-loader'], //处理ts es6
         include: srcPath,
         exclude: '/node_modules/',
@@ -58,13 +58,13 @@ module.exports = {
       template: path.join(__dirname, '../public/index.html'),
       filename: 'index.html',
       inject: true, // 自动注入静态资源
-      chunks: ['index'], // 确保不会引入index1的js
+      chunks: ['index', 'commons', 'vendor'], // 确保不会引入index1的js
     }),
     new HtmlWebpackPlugin({
       template: path.join(__dirname, '../public/index1.html'),
       filename: 'index1.html', // 多入口的时候filename必须配置成不一样的
       inject: true, // 自动注入静态资源
-      chunks: ['index1'], // 确保不会引入index的js
+      chunks: ['index1', 'commons'], // 确保不会引入index的js
     }),
     new MiniCssExtractPlugin({
       filename: 'css/[name].[contenthash:8].css',

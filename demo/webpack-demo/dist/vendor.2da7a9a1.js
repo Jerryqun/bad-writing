@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebpack_demo=self.webpackChunkwebpack_demo||[]).push([[121],{148:(e,c,t)=>{const s=t.p+"images/03f95e92.png";const n=document.createElement("img");n.src=s,n.style.width="100px",n.style.height="100px",document.querySelector("body")?.appendChild(n)},944:()=>{console.log("index1")}}]);
