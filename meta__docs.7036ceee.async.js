@@ -10681,6 +10681,7 @@ command + \u7A7A\u683C  \u6253\u5F00\u5E94\u7528\u5FEB\u6377\u641C\u7D22
 command + shift + 3   \u622A\u56FE\u5168\u5C4F
 command + shift + 4   \u622A\u56FE\u6240\u9009\u533A\u57DF
 Command + Option + c  \u590D\u5236\u9009\u4E2D\u6587\u4EF6\u7684\u8DEF\u5F84
+control + c \u6740\u6B7B\u5F53\u524D\u7EC8\u7AEF\u547D\u4EE4
 
 `,paraId:16,tocIndex:5},{value:`\u5438\u8272
 control + c`,paraId:17,tocIndex:6},{value:`npm init \u521D\u59CB\u5316\u9879\u76EE
