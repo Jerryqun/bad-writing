@@ -9,9 +9,9 @@ module.exports = {
     index: path.join(srcPath, 'index'),
     index1: path.join(srcPath, 'index1'),
   },
-  cache: {
-    type: 'filesystem',
-  },
+  // cache: {
+  //   type: 'filesystem',
+  // },
   module: {
     rules: [
       {
@@ -71,7 +71,7 @@ module.exports = {
     }),
   ],
   resolve: {
-    extensions: ['.ts', '.js', '.json'],
+    extensions: ['.ts', '.js', '.json', '.tsx', '.jsx'],
     alias: {
       '@': path.resolve('src'),
     },

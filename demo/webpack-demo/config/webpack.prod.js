@@ -9,9 +9,11 @@ module.exports = merge(baseConfig, {
   output: {
     clean: true, // 每次构建前清除输出目录  webpack4需要配置clean-webpack-plugin来删除dist文件,webpack5内置了
     filename: '[name].[contenthash:8].js', // contenthash依据文件内容来，文件内容改变hash值才会改变
+    publicPath: 'http//:xxx.xxx', //修改所有静态url的前缀
   },
   module: {
     rules: [
+      // 可单独配置publicPath
       {
         test: /\.(png|jpg|jpeg|git)$/,
         parser: {
@@ -32,7 +34,7 @@ module.exports = merge(baseConfig, {
   ],
   // 压缩配置
   optimization: {
-    minimize: false,
+    minimize: true,
     minimizer: [
       new TerserPlugin(), //压缩js
       new CssMinimizerPlugin(), // 压缩css

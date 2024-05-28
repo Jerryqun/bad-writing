@@ -15,4 +15,7 @@ module.exports = merge(baseConfig, {
       'window.ENV': JSON.stringify('development'),
     }),
   ],
+  optimization: {
+    minimize: false,
+  },
 });
