@@ -50,10 +50,9 @@ export default App;
 5、ReactDOM.render 已被弃用。使用它会警告：在 React 17 模式下运行您的应用程序
 
 ```js
-
 import App from './App';
 
-const root = document.getElementById('root')!;
+const root = document.getElementById('root');
 
 ReactDOM.createRoot(root).render(<App />);
 ```
