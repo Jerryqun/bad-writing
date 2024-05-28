@@ -3,6 +3,7 @@ const baseConfig = require('./webpack.base.js');
 const webpack = require('webpack');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+// const ModuleConcatenationPlugin = require('webpack/lib/optimize/ModuleConcatenationPlugin.js'); //开启scope hosting webpack5默认开启
 
 module.exports = merge(baseConfig, {
   mode: 'production',
@@ -35,6 +36,7 @@ module.exports = merge(baseConfig, {
       resourceRegExp: /^\.\/locale$/,
       contextRegExp: /moment$/,
     }),
+    // new ModuleConcatenationPlugin(),
   ],
   // 压缩配置
   optimization: {
@@ -67,4 +69,7 @@ module.exports = merge(baseConfig, {
       },
     },
   },
+  // resolve: {
+  //   mainFields: ['jsnext:main', 'browser', 'main'],
+  // },
 });

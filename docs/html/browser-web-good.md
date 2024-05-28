@@ -8,7 +8,7 @@ title: web性能优化
 mobile: false
 ---
 
-## web 性能优化
+## web 性能优化工具
 
 <a target="_blank" href="https://juejin.cn/post/6965744691979485197">参考</a>
 
@@ -54,7 +54,7 @@ lighthouse https://www.baidu.com/ --view
 })();
 ```
 
-### 性能指标
+## 性能指标
 
 - FirstPaint（FP）
 - First Contentful Paint(FCP)  
