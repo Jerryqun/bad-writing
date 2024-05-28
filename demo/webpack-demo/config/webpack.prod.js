@@ -9,7 +9,7 @@ module.exports = merge(baseConfig, {
   output: {
     clean: true, // 每次构建前清除输出目录  webpack4需要配置clean-webpack-plugin来删除dist文件,webpack5内置了
     filename: '[name].[contenthash:8].js', // contenthash依据文件内容来，文件内容改变hash值才会改变
-    publicPath: 'http//:xxx.xxx', //修改所有静态url的前缀
+    // publicPath: 'http//:xxx.xxx', //修改所有静态url的前缀
   },
   module: {
     rules: [
@@ -31,6 +31,10 @@ module.exports = merge(baseConfig, {
     new webpack.DefinePlugin({
       'window.ENV': JSON.stringify('production'),
     }),
+    new webpack.IgnorePlugin({
+      resourceRegExp: /^\.\/locale$/,
+      contextRegExp: /moment$/,
+    }),
   ],
   // 压缩配置
   optimization: {
@@ -43,6 +47,7 @@ module.exports = merge(baseConfig, {
       // chunks: 'initial', //入口chunks，对于异步导入的文件不处理
       // chunks: 'async', //异步chunks，只对异步导入的文件做处理
       chunks: 'all', //全部处理
+
       cacheGroups: {
         // 第三方包
         vendor: {
