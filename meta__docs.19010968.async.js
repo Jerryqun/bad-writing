@@ -7128,7 +7128,31 @@ function getAge() {
 
 getAge(); // 21
 window.age; // 21
-`,paraId:1,tocIndex:0}]},80030:function(o,e,n){n.r(e),n.d(e,{texts:function(){return t}});const t=[{value:"\u5728\u8BB2\u5F31\u5F15\u7528\u4E4B\u524D\uFF0C\u6211\u4EEC\u5148\u6765\u8BF4\u4E0B\u5F3A\u5F15\u7528\u3002\u5F3A\u5F15\u7528\u5C31\u662F\u5C06\u5BF9\u8C61\u4FDD\u7559\u5728\u5185\u5B58\u4E2D\u7684\u5F15\u7528\u3002\u4F8B\u5982\uFF1A",paraId:0,tocIndex:1},{value:`let cat = { name: 'Kitty' };
+`,paraId:1,tocIndex:0},{value:"\u5168\u5C40\u53D8\u91CF\u5FC5\u987B\u5148\u58F0\u660E\u518D\u4F7F\u7528",paraId:2,tocIndex:1},{value:"\u7981\u6B62\u4F7F\u7528 with",paraId:2,tocIndex:1},{value:`// \u975E\u4E25\u683C\u6A21\u5F0F
+const obj = { a: 1, b: 2 };
+with (obj) {
+  console.log(a, b); // 1 2
+}
+
+// \u4E25\u683C\u6A21\u5F0F
+('use strict');
+const obj = { a: 1, b: 2 };
+with (obj) {
+  console.log(a, b); // Strict mode code may not include a with statement
+}
+`,paraId:3,tocIndex:1},{value:"\u521B\u5EFA eval \u4F5C\u7528\u57DF",paraId:4,tocIndex:1},{value:`'use strict';
+var a = 10;
+eval("var a =20;console.log('in eval',a)");
+console.log('a', a);
+
+// in eval 20
+// 10
+`,paraId:5,tocIndex:1},{value:"\u7981\u6B62 this \u6307\u5411 window",paraId:6,tocIndex:1},{value:`'use strict';
+function a() {
+  console.log('this', this); // undefined
+}
+a();
+`,paraId:7,tocIndex:1},{value:"\u51FD\u6570\u53C2\u6570\u4E0D\u80FD\u91CD\u590D",paraId:8,tocIndex:1}]},80030:function(o,e,n){n.r(e),n.d(e,{texts:function(){return t}});const t=[{value:"\u5728\u8BB2\u5F31\u5F15\u7528\u4E4B\u524D\uFF0C\u6211\u4EEC\u5148\u6765\u8BF4\u4E0B\u5F3A\u5F15\u7528\u3002\u5F3A\u5F15\u7528\u5C31\u662F\u5C06\u5BF9\u8C61\u4FDD\u7559\u5728\u5185\u5B58\u4E2D\u7684\u5F15\u7528\u3002\u4F8B\u5982\uFF1A",paraId:0,tocIndex:1},{value:`let cat = { name: 'Kitty' };
 const pets = [cat];
 
 cat = null;
@@ -8043,6 +8067,12 @@ console.timeEnd('times'); //  times: 2.551025390625 ms
   console.log(arg);
 }
 test('a', 'b', 'c', 'd'); //\xA0['a', 'b', 'c', 'd']
+
+function test1(a, b, c, d) {
+  var arg = [...arguments]; // Array.from(arguments)
+  console.log('arg', arg);
+}
+test1('a', 'b', 'c', 'd'); //\xA0['a', 'b', 'c', 'd']
 `,paraId:22,tocIndex:11},{value:"\u5728\u6761\u4EF6\u5224\u65AD\u65F6\uFF0C\u9664\u4E86 undefined\uFF0Cnull\uFF0C false\uFF0C NaN\uFF0C ''\uFF0C 0\uFF0C -0\uFF0C\u5176\u4ED6\u6240\u6709\u503C\u90FD\u8F6C\u4E3A true\uFF0C\u5305\u62EC\u6240\u6709\u5BF9\u8C61",paraId:23,tocIndex:12},{value:"\u6682\u65F6\u6027\u6B7B\u533A\u662F\u6D4F\u89C8\u5668\u7684 bug\uFF1A",paraId:24,tocIndex:13},{value:`
 \u68C0\u6D4B\u4E00\u4E2A\u672A\u88AB\u58F0\u660E\u7684\u53D8\u91CF\u7C7B\u578B\u65F6\uFF0C\u4E0D\u4F1A\u62A5\u9519\uFF0C\u4F1A\u8FD4\u56DE undefined \u5982\uFF1Aconsole.log(typeof a) //undefined `,paraId:24,tocIndex:13},{value:`
 \u800C\u76F4\u63A5\u4F7F\u7528\u4E00\u4E2A\u672A\u5B9A\u4E49\u7684\u53D8\u91CF\u65F6\u4F1A\u62A5\u9519\uFF1A ReferenceError: a is not defined`,paraId:24,tocIndex:13},{value:`let time = 0;
