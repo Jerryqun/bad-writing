@@ -34,3 +34,47 @@ function getAge() {
 getAge(); // 21
 window.age; // 21
 ```
+
+## 严格模式
+
+- 全局变量必须先声明再使用
+- 禁止使用 with
+
+```js
+// 非严格模式
+const obj = { a: 1, b: 2 };
+with (obj) {
+  console.log(a, b); // 1 2
+}
+
+// 严格模式
+('use strict');
+const obj = { a: 1, b: 2 };
+with (obj) {
+  console.log(a, b); // Strict mode code may not include a with statement
+}
+```
+
+- 创建 eval 作用域
+
+```js
+'use strict';
+var a = 10;
+eval("var a =20;console.log('in eval',a)");
+console.log('a', a);
+
+// in eval 20
+// 10
+```
+
+- 禁止 this 指向 window
+
+```js
+'use strict';
+function a() {
+  console.log('this', this); // undefined
+}
+a();
+```
+
+- 函数参数不能重复

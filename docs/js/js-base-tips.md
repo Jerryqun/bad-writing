@@ -877,6 +877,12 @@ function test(a, b, c, d) {
   console.log(arg);
 }
 test('a', 'b', 'c', 'd'); // ['a', 'b', 'c', 'd']
+
+function test1(a, b, c, d) {
+  var arg = [...arguments]; // Array.from(arguments)
+  console.log('arg', arg);
+}
+test1('a', 'b', 'c', 'd'); // ['a', 'b', 'c', 'd']
 ```
 
 ## 转 Boolean
