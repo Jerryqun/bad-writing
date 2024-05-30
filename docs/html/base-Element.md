@@ -12,8 +12,6 @@ mobile: false
 
 <a target="_blank" href="https://blog.csdn.net/zz_jesse/article/details/102815299">参考</a>
 
-### 美团面试题
-
 - DOM 是一棵树， 所有节点都是 Node
 - Node 是 Element 的基类
 - Element 是其他 html 元素的基类，如 HTMLDivElement
@@ -64,6 +62,13 @@ mobile: false
 查看 node 节点
 
 ```js
+const d = document.querySelector('div');
+console.log('children', d.children); // HTMLCollection(3) [img, img, img]
+console.log('childNodes', d.childNodes); // NodeList(7) [text, img, text, img, text, img, text]
+
+console.log('d.children', d.children instanceof HTMLCollection); // true;
+console.log('d.children', d.childNodes instanceof NodeList); // true
+
 document.getElementsByClassName('box')[0].childNodes.forEach((item) => {
   item.nodeType === 3 ? item.appendData('text node') : null;
 });
