@@ -17,4 +17,9 @@ height = 内容的高度
 box-sizing: border-box（IE 盒模型）
 width = border + padding + 内容的宽度
 height = border + padding + 内容的高度
+
+offsetHeight offsetWidth :  border + padding + content
+clientHeight clientWidth :  padding + content
+scrollHeight scrollWidth :  padding + 实际内容尺寸
+
 ```

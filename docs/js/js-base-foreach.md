@@ -5,6 +5,8 @@ toc: content
 title: js循环汇总
 ---
 
+# js 循环汇总
+
 从性能上看，for 循环遍历起来是最快的。
 
 ## forEach
@@ -118,7 +120,7 @@ const sleep = (time = 2000) =>
 
 for await (const item of [sleep(1000), sleep(2000), sleep(3000)]) {
   // Print out the results of the request
-  console.log(await item);
+  console.log(item);
 }
 ```
 
@@ -137,6 +139,6 @@ for、while、for in、for of、for await of 使用 await 都是生效的；<br/
 
 ## 哪些循环方式能够直接终止整个循环
 
-1、传统的 for 循环
-2、for of
+1、传统的 for 循环  
+2、for of  
 3、es6 的 some

@@ -14,6 +14,10 @@ mobile: false
 
 ### 美团面试题
 
+- DOM 是一棵树， 所有节点都是 Node
+- Node 是 Element 的基类
+- Element 是其他 html 元素的基类，如 HTMLDivElement
+
 请说出下面代码的显示结果，然后说下原因
 
 ```html
@@ -68,5 +72,5 @@ document.getElementsByClassName('box')[0].childNodes.forEach((item) => {
 ### 解决
 
 1、font-size:0  
-2、删除换行
+2、删除换行  
 3、图片设置 vertical-align: bottom;
