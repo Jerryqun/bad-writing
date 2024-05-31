@@ -5,10 +5,11 @@ const { srcPath, distPath } = require('./path');
 
 module.exports = {
   entry: path.join(srcPath, 'index'),
-  entry: {
-    index: path.join(srcPath, 'index'),
-    index1: path.join(srcPath, 'index1'),
-  },
+  // entry: {
+  //   //多入口
+  //   index: path.join(srcPath, 'index'),
+  //   index1: path.join(srcPath, 'index1'),
+  // },
   // cache: {
   //   type: 'filesystem',
   // },
