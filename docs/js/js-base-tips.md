@@ -192,10 +192,16 @@ getName(); // ReferenceError
 
 /**
  * parseInt
- *  遇到不是number类型的值时会立即中断 并且返回已解析的值
+ *  第一个参数遇到不是number类型的值时会立即中断 并且返回已解析的值
+ *  第一个参数是0x开头的 按照16进制
  */
 
 const num = parseInt('7*6', 10); // 7
+const num = parseInt('3', 2); // NaN 0 1 中没有3
+const num = parseInt('2', 3); // 0 1 2  命中2
+const num = parseInt('12', 3); // 1*3+2 = 5
+
+['1', '2', '3'].map(parseInt); //  [1, NaN, NaN]
 
 /**
  * Math.ceil()
