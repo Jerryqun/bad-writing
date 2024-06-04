@@ -153,6 +153,8 @@ sessionStorage.clear();
 
 ### 注意事项
 
+- sessionStorage 不能在多个窗口或标签页之间共享数据，但是当通过 window.open 或链接打开新页面时(不能是新窗口)，新页面会复制前一页的 sessionStorage。
+
 - `sessionStorage` 仅能存储字符串类型的数据。如果你需要存储对象，可以使用 `JSON.stringify()` 在存储之前将对象转换为字符串，然后使用 `JSON.parse()` 在读取后将字符串转换回对象。
 - `sessionStorage` 是不可跨标签页或窗口共享的，这与 `localStorage` 不同，后者在同一浏览器的所有标签页和窗口中共享，只要它们来自相同的源。
 - 由于 `sessionStorage` 在浏览器端被存储和访问，不应该用它来存储敏感信息，以防止可能的 XSS 攻击。
