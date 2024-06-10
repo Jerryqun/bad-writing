@@ -18,9 +18,9 @@ mobile: false
 
 ### 图片压缩
 
-1、有损压缩  
-2、无损压缩  
-3、webpack 压缩（ image-webpack-loader ）
+1、有损压缩（JPG）  
+2、无损压缩（PNG）  
+3、webpack 压缩（ image-webpack-loader，v4 和 v5 都一样使用，v5 的 production 环境也不会默认处理图片的压缩 ）
 
 ```bash
 npm install --save-dev image-webpack-loader
@@ -102,8 +102,75 @@ module.exports = {
 
 ### 图片预加载
 
-图片预加载，是指在一些需要展示大量图片的网站，将图片提前加载到本地缓存中，从而提升用户体验。
+1. 使用 HTML 请注意，as 属性是必需的，它指定被加载资源的类型
 
-常用的方式有两种，一种是隐藏在 css 的 background 的 url 属性里面，一种是通过 javascript 的 Image 对象设置实例对象的 src 属性实现图片的预加载。
+```html
+<link rel="preload" href="image.jpg" as="image" />
+```
+
+2. javascript 的 Image
+
+```js
+var img = new Image();
+img.onload = function () {
+  console.log('图片已加载');
+};
+img.src = 'path/to/your/image.jpg';
+```
+
+3. css
+
+```css
+#preload-container {
+  background-image: url('path/to/image.jpg');
+  display: none;
+}
+```
+
+4. 如果你在使用 Webpack，可以考虑使用 image-webpack-loader 等插件自动优化和预加载图片资源。
+   此外，结合使用 import()语法和 webpack 的 Prefetch/Preload 插件可以实现更高级的资源预加载策略，不过这通常用于模块或组件的预加载。
+
+5. 许多现代的前端框架和库（如 React、Vue 等）提供了自己的预加载解决方案或插件，可以集成进项目中以提供预加载功能。例如，react-image 库就提供了图片加载和预加载功能。
 
 ### 响应式图片加载
+
+```bash
+// picture
+<picture>
+  <source media="(min-width: 800px)" srcset="large.jpg" />
+  <source media="(min-width: 450px)" srcset="medium.jpg" />
+  <img src="small.jpg" alt="描述" />
+</picture>
+
+// css
+.bg-img {
+  background-image: url(small.jpg);
+}
+
+@media (min-width: 600px) {
+  .bg-img {
+    background-image: url(medium.jpg);
+  }
+}
+
+@media (min-width: 900px) {
+  .bg-img {
+    background-image: url(large.jpg);
+  }
+}
+
+// js
+if (window.innerWidth > 800) {
+  loadImage('large.jpg');
+} else {
+  loadImage('small.jpg');
+}
+
+function loadImage(src) {
+  const img = new Image();
+  img.src = src;
+  img.onload = () => document.body.appendChild(img);
+}
+
+
+```

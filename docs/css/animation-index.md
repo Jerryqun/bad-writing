@@ -36,6 +36,20 @@ animation 属性可以实现更复杂的动画效果，例如循环动画、无�
 通过指定过渡的属性、持续时间、动画方式（timing function）、延迟时间等来控制过渡效果。
 transition 属性适用于元素从一种状态平滑过渡到另一种状态，例如颜色、大小、位置等属性的变化。
 
+```css
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s;
+  -webkit-transition: width 2s; /* Safari */
+}
+
+div:hover {
+  width: 300px;
+}
+```
+
 ### transform（转换）
 
 属性用于对元素进行变形，例如平移、旋转、缩放、倾斜等。

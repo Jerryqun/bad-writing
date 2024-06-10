@@ -32,7 +32,7 @@ mobile: false
 </body>
 ```
 
-## scrollTo
+### scrollTo
 
 ```html
 <body style="height:2000px;">
@@ -45,7 +45,7 @@ mobile: false
 </body>
 ```
 
-## scrollBy(x,y)
+### scrollBy(x,y)
 
 方法滚动当前 window 中显示的文档，x 和 y 指定滚动的相对量
 只要把当前页面的滚动长度作为参数，逆向滚动，则可以实现回到顶部的效果
@@ -62,7 +62,7 @@ mobile: false
 </body>
 ```
 
-## scrollIntoView
+### scrollIntoView
 
 Element.scrollIntoView 方法滚动当前元素，进入浏览器的可见区域
 
