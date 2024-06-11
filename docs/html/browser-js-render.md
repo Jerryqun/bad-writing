@@ -4,7 +4,7 @@ group:
   title: 浏览器
   order: 1
 toc: content
-title: 浏览器加载资源之script
+title: script
 mobile: false
 ---
 

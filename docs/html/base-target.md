@@ -26,7 +26,7 @@ mobile: false
     <title>菜鸟教程(runoob.com)</title>
     <script>
       function openWin() {
-        myWindow = window.open('', '', 'width=200,height=100');
+        const myWindow = window.open('', '', 'width=200,height=100');
         myWindow.document.write('<p>这是我的窗口</p>');
         myWindow.focus();
         myWindow.opener.document.write('<p>这个是源窗口!</p>');

@@ -139,7 +139,7 @@ js 处理 10 万条数据没问题
 - 虚拟列表
   只渲染可视区域（react-virtualized） 兼容性问题
 
-  ## 用一个 div 模拟 textarea 的实现
+## 用一个 div 模拟 textarea 的实现
 
 给 div 添加 contenteditable=true 即可
 
