@@ -41,8 +41,35 @@ xhr.onreadystatechange = function () {
   }
 };
 
-xhr.send();
+xhr.send(null);
+
+const xhr = new XMLHttpRequest();
+xhr.open('POST', 'https://pmsaas-console.taobao.net',true); // 第三个参数true 表示异步 false表示同步 默认是异步
+xhr.onreadystatechange = function () {
+  if (xhr.readyState == 4 && xhr.status == 200) {
+    console.log(xhr.getResponseHeader('server'));
+    console.log(xhr.responseText);
+  } else {
+    console.log(xhr.statusText);
+  }
+};
+const params = {
+  name:'cq'
+}
+xhr.send(JSON.stringify(params));
+
+// xhr.readyState 状态码
+// 0 - UNSET 尚未调用open方法
+// 1 - OPENDED open方法已经被调用
+// 2 - send方法已被调用 
+// 3 - loading下载中
+// 4 - DONE完成
+
+// xhr.status http状态码
+
 ```
+
+
 
 ## fetch 用法
 
