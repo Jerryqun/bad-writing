@@ -211,3 +211,26 @@ wq 退出当前终端
 git log
 git cherry-pick commit_hash
 ```
+
+## .gitignore 文件不生效
+
+已缓存的文件：.gitignore 仅影响尚未跟踪的文件。如果一些文件已经被 Git 跟踪（即已经提交到了仓库），那么即使你后来在 .gitignore 文件中忽略它们，也不会有任何效果。要解决这个问题，你需要先从 Git 的跟踪列表中移除这些文件（但保留在本地），然后再提交更改。使用命令：
+
+```bash
+git rm --cached FILENAME（文件的名称）
+
+栗子
+git rm --cached abc.json
+
+```
+
+对于目录，请使用递归选项：
+
+```bash
+git rm --cached -r DIRECTORYNAME（文件夹的名称）
+
+栗子
+git rm --cached -r .dumi
+
+
+```
