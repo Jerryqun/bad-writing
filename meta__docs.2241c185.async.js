@@ -4507,7 +4507,32 @@ xhr.onreadystatechange = function () {
   }
 };
 
-xhr.send();
+xhr.send(null);
+
+const xhr = new XMLHttpRequest();
+xhr.open('POST', 'https://pmsaas-console.taobao.net',true); // \u7B2C\u4E09\u4E2A\u53C2\u6570true \u8868\u793A\u5F02\u6B65 false\u8868\u793A\u540C\u6B65 \u9ED8\u8BA4\u662F\u5F02\u6B65
+xhr.onreadystatechange = function () {
+  if (xhr.readyState == 4 && xhr.status == 200) {
+    console.log(xhr.getResponseHeader('server'));
+    console.log(xhr.responseText);
+  } else {
+    console.log(xhr.statusText);
+  }
+};
+const params = {
+  name:'cq'
+}
+xhr.send(JSON.stringify(params));
+
+// xhr.readyState \u72B6\u6001\u7801
+// 0 - UNSET \u5C1A\u672A\u8C03\u7528open\u65B9\u6CD5
+// 1 - OPENDED open\u65B9\u6CD5\u5DF2\u7ECF\u88AB\u8C03\u7528
+// 2 - send\u65B9\u6CD5\u5DF2\u88AB\u8C03\u7528 
+// 3 - loading\u4E0B\u8F7D\u4E2D
+// 4 - DONE\u5B8C\u6210
+
+// xhr.status http\u72B6\u6001\u7801
+
 `,paraId:8,tocIndex:1},{value:`// JSON \u6570\u636E get
 
 fetch('https://api.github.com/users/ruanyf')
