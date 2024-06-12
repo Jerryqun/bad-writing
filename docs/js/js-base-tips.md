@@ -1330,7 +1330,27 @@ window.a = 1;
 ### kb 转 KB，MB，GB,TB,PB 等形式
 
 ```js
-function formatSizeUnits() {}
+function convertBytes(bytes, decimals = 2) {
+  if (bytes === 0) return '0 Bytes';
+
+  const units = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+  let unitIndex = 0;
+
+  while (bytes >= 1024 && unitIndex < units.length - 1) {
+    bytes /= 1024;
+    unitIndex++;
+  }
+
+  return `${parseFloat(bytes.toFixed(decimals))} ${units[unitIndex]}`;
+}
+
+// 示例
+console.log(convertBytes(1024)); // 1.00 KB
+console.log(convertBytes(1234)); // 1.21 KB
+console.log(convertBytes(12345)); // 12.06 KB
+console.log(convertBytes(1234567)); // 1.18 MB
+console.log(convertBytes(123456789)); // 117.74 MB
+console.log(convertBytes(12345678901)); // 11.50 GB
 ```
 
 ### 如何判断一个 js 对象是否存在循环引用

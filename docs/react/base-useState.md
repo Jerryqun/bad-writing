@@ -81,3 +81,20 @@ export default () => {
 2、setState 有专门监听 state 变化的回调函数 callback，可以获取最新 state；但是在函数组件中，只能通过 useEffect 来执行 state 变化引起的副作用。
 
 3、setState 在底层处理逻辑上主要是和老 state 进行合并处理，而 useState 更倾向于重新赋值。
+
+## setState 函数做了哪些事情
+
+1. 合并状态更新（State Merging）  
+   当你调用 setState 时，你只需传入需要更新的状态部分而不是整个状态对象。React 会将你传递的状态更新合并到当前的状态中。这意味着你的状态对象中不受影响的部分将保持不变
+
+2. 调度更新（Scheduling Updates）  
+   在 setState 被调用后，React 将新的状态更新排入队列，并不是立即更新状态。React 可以决定何时执行实际更新，使得多个 setState 调用可以被批量处理，提高性能。
+
+3. 异步更新（Asynchronous Updates）  
+   由于 setState 是异步执行的，React 可以延迟状态更新，等到合适的时机将多个更新一次性进行。因此，你不能依赖于 setState 调用后立即反映在 this.state 上的更改。
+
+4. 触发渲染流程（Triggering Re-renders）  
+   更新状态后，React 会在适当的时间重新计算组件输出。这包括在 render 方法中调用表达式，并对比新旧虚拟 DOM（Virtual DOM）来确定是否需要对真实 DOM（Real DOM）进行实际的更改。
+
+5. 可选的回调函数  
+   setState 方法可以接受一个回调函数作为第二个参数。这个回调函数会在状态更新和组件重绘之后被执行。因为 setState 是异步的，所以如果你需要在状态更新完成后执行代码，你可以使用这个回调函数。
