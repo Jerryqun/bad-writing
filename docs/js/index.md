@@ -165,7 +165,7 @@ a + 1 === 3; // true
 
 ## [] == ! [] 为什么返回 true
 
-<a  target="_blank" src='https://fe.ecool.fun/articles/technology/429'>参考</a>
+<a  target="_blank" href='https://fe.ecool.fun/articles/technology/429'>参考</a>
 
 ```js
 
@@ -177,5 +177,15 @@ a + 1 === 3; // true
 
 '' == false // 对 [] 进行 ToPrimitive 操作，返回一个空对象
 
-0 == 0 // 将等号两边都转换成数字类型
+0 == 0 // 将等号两边都转换成数字类型 Number('') === Number(false)
 ```
+ToPrimitive 是 JavaScript 中用于将值转换为其对应的原始类型的抽象操作。
+
+ToPrimitive 的转换规则如下：  
+
+如果值已经是原始类型（如数字、字符串、布尔值），则不进行任何转换，直接返回该值。  
+如果值是对象类型，则调用它的 valueOf() 方法。如果返回结果是原始类型的值，则返回该值。  
+如果 valueOf() 方法返回的不是原始类型的值，则调用对象的 toString() 方法。如果返回结果是原始类型的值，则返回该值。  
+如果 toString() 方法返回的不是原始类型的值，则抛出一个 TypeError 的错误。    
+
+
