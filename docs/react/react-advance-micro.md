@@ -91,7 +91,7 @@ document.head.appendChild(scriptElement);
   qiankun 还可以利用微前端应用构建过程中的 CSS 处理工具（如 CSS Modules、PostCSS 等）来自动为样式类名添加特定的前缀或后缀。这样，即使多个应用使用了相同的类名，它们也不会产生冲突，因为经过处理后的类名是唯一的。
 - 使用 Shadow DOM 实现 CSS 样式隔离
 - 动态样式标签隔离
-  qiankun 在加载和卸载微前端应用时，会动态地添加和移除 <link> 或 <style> 标签。当一个微前端应用被激活时，qiankun 将该应用的样式文件插入到主应用的 DOM 中；当该微前端应用卸载时，同样会移除这些样式标签。这样可以确保只有当前活动的微前端应用的样式会被应用，从而实现了隔离。
+  qiankun 在加载和卸载微前端应用时，会动态地添加和移除 `<link>` 或 `<style>` 标签。当一个微前端应用被激活时，qiankun 将该应用的样式文件插入到主应用的 DOM 中；当该微前端应用卸载时，同样会移除这些样式标签。这样可以确保只有当前活动的微前端应用的样式会被应用，从而实现了隔离。
 
 ## 微前端通信
 
@@ -145,3 +145,85 @@ window.addEventListener('myEvent', (event) => {
 还可以利用浏览器提供的其他 API，如 Broadcast Channel API、Shared Web Workers 等，来实现跨应用或跨标签页的通信。
 
 选择哪种通信方式取决于微前端架构的特定需求、应用的规模和复杂度、还有你愿意引入的额外依赖。通常最好的实践是保持通信尽可能简单，避免不同应用间产生太多的直接依赖，这样可以确保微前端架构的核心优势——独立部署和开发。
+
+## 如何实现 JS 的沙箱环境的
+
+1. . 使用 iframe 创建沙箱环境
+
+```js
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <iframe src="http://127.0.0.1:8080/1.html" id="sandbox"></iframe>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
+
+// index.js
+console.log("index");
+function createSandbox(callback) {
+  const iframe = document.getElementById("sandbox");
+  if (!iframe) {
+    return console.error("沙箱iframe未找到");
+  }
+
+  // 确保iframe完全加载后再执行代码
+  iframe.onload = function () {
+    const iframeWindow = iframe.contentWindow;
+    console.log("iframeWindow: ", iframeWindow);
+
+    // 在沙箱环境中定义一些安全的全局变量或函数，如果需要的话
+    // iframeWindow.safeGlobalVar = {
+    //   /* 安全的数据或方法 */
+    //   a: 1,
+    // };
+
+    // 执行回调函数，传入沙箱的window对象，以便在其中执行代码
+    callback(iframeWindow);
+  };
+
+  // 重新加载iframe以确保环境清洁
+  //   iframe.src = "about:blank";
+}
+
+// 使用沙箱
+createSandbox(function (sandboxWindow) {
+  // 在沙箱环境中执行代码
+  sandboxWindow.eval('console.log("Hello from the sandbox!");');
+});
+
+```
+
+2. Web Workers 实现沙箱
+
+3. with + new Function 实现沙箱
+
+```js
+function createSandbox(code) {
+  // 创建一个空对象，用作沙箱环境中的全局对象
+  const sandbox = {};
+  // 使用with语句将代码的作用域设置为这个空对象
+  // 使用new Function创建一个新的函数，限制代码访问外部作用域，只能访问sandbox内的变量和函数
+  const script = new Function('sandbox', `with(sandbox) { ${code} }`);
+  // 执行这个函数，并传入sandbox作为参数
+  return function () {
+    script(sandbox);
+  };
+}
+
+// 使用沙箱环境
+const sandboxedScript = createSandbox(
+  'console.log("Hello from the sandbox!"); var x = 10;',
+);
+sandboxedScript(); // 输出: Hello from the sandbox!
+console.log(typeof x); // 输出: undefined，因为x是在沙箱内部定义的，外部访问不到
+```
