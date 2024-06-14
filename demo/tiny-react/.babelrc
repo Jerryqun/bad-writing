@@ -1,0 +1,24 @@
+{
+  "presets": [
+    [
+      "@babel/preset-react",
+      {
+        "useBuiltIns": "usage",
+        "corejs": 3,
+        "pragma": "TinyReact.createElement" // 告诉babel用TinyReact.createElement替换React.createElement
+      }
+    ]
+  ],
+  "plugins": [
+    // [
+    //   "@babel/plugin-transform-runtime",
+    //   {
+    //     "absoluteRuntime": false,
+    //     "corejs": 3,
+    //     "helpers": true,
+    //     "regenerator": true,
+    //     "useESModules": false
+    //   }
+    // ]
+  ]
+}
