@@ -143,7 +143,7 @@ class EEE extends React.Component {
   // 5
   // 获取更新前的快照，可以进一步理解为 获取更新前 DOM 的状态
   // getSnapshotBeforeUpdate 这个生命周期意义就是配合componentDidUpdate 一起使用，
-  // 计算形成一个 snapShot 传递给 componentDidUpdate 。保存一次更新前的信息。
+  // 计算形成一个 snapShot 传递给 componentDidUpdate的第三个参数 。保存一次更新前的信息。
   getSnapshotBeforeUpdate() {
     console.log('getSnapshotBeforeUpdate');
   }
