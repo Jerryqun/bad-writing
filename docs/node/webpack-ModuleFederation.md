@@ -38,7 +38,6 @@ export default defineConfig({
       new webpack.container.ModuleFederationPlugin({
         name: 'app1', // 远程应用的唯一名称
         filename: 'remoteEntry.js', // 指定远程应用的入口文件名
-        library: { type: 'var', name: 'app1' },
         // 指定当前应用暴露哪些模块给远程应用使用。键是别名，值是相对于当前项目的文件路径
         exposes: {
           './Header': './src/components/hello-word', // 导出共享模块
@@ -48,7 +47,12 @@ export default defineConfig({
         // 当时跨技术栈的时候一定要设置成这样 ，不然无法工作，比如vue里面用react 的webComponent 组件
         // library: { type: 'umd', name: 'app1', umdNamedDefine: true },
         // 指定哪些依赖（libraries）会被当前应用和远程共享。这可以防止重复加载同一个依赖库。你可以提供一个数组或一个对象来具体指定共享的模块和版本。
-        shared: ['react', 'react-dom'],
+        shared: ['react', 'react-dom'], // 共享的版本必须一致 不然会失效
+        // shared:{
+        //   react:{
+        //     singleton:true // 表示当有版本冲突时统一使用高版本
+        //   }
+        // },
         // 指定当前应用可以从哪些远程应用加载模块。键是远程应用的名称，值是加载远程模块的路径（通常包括URL）。
         remotes: {
           app2: 'app2@https://someurl.com/remoteEntry.js',
@@ -96,7 +100,7 @@ module.exports = {
     new ModuleFederationPlugin({
       name: 'app2',
       remotes: {
-        app1: 'app1@http://localhost:3000/remoteEntry.js',
+        app1: 'app1@http://localhost:3000/remoteEntry.js', // remotes对象app1是别名可以修改，@符号前的名称需要和导出时的name保持一致
       },
     }),
     new DefinePlugin({
