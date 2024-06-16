@@ -11532,7 +11532,6 @@ export default defineConfig({
       new webpack.container.ModuleFederationPlugin({
         name: 'app1', // \u8FDC\u7A0B\u5E94\u7528\u7684\u552F\u4E00\u540D\u79F0
         filename: 'remoteEntry.js', // \u6307\u5B9A\u8FDC\u7A0B\u5E94\u7528\u7684\u5165\u53E3\u6587\u4EF6\u540D
-        library: { type: 'var', name: 'app1' },
         // \u6307\u5B9A\u5F53\u524D\u5E94\u7528\u66B4\u9732\u54EA\u4E9B\u6A21\u5757\u7ED9\u8FDC\u7A0B\u5E94\u7528\u4F7F\u7528\u3002\u952E\u662F\u522B\u540D\uFF0C\u503C\u662F\u76F8\u5BF9\u4E8E\u5F53\u524D\u9879\u76EE\u7684\u6587\u4EF6\u8DEF\u5F84
         exposes: {
           './Header': './src/components/hello-word', // \u5BFC\u51FA\u5171\u4EAB\u6A21\u5757
@@ -11542,7 +11541,12 @@ export default defineConfig({
         // \u5F53\u65F6\u8DE8\u6280\u672F\u6808\u7684\u65F6\u5019\u4E00\u5B9A\u8981\u8BBE\u7F6E\u6210\u8FD9\u6837 \uFF0C\u4E0D\u7136\u65E0\u6CD5\u5DE5\u4F5C\uFF0C\u6BD4\u5982vue\u91CC\u9762\u7528react \u7684webComponent \u7EC4\u4EF6
         // library: { type: 'umd', name: 'app1', umdNamedDefine: true },
         // \u6307\u5B9A\u54EA\u4E9B\u4F9D\u8D56\uFF08libraries\uFF09\u4F1A\u88AB\u5F53\u524D\u5E94\u7528\u548C\u8FDC\u7A0B\u5171\u4EAB\u3002\u8FD9\u53EF\u4EE5\u9632\u6B62\u91CD\u590D\u52A0\u8F7D\u540C\u4E00\u4E2A\u4F9D\u8D56\u5E93\u3002\u4F60\u53EF\u4EE5\u63D0\u4F9B\u4E00\u4E2A\u6570\u7EC4\u6216\u4E00\u4E2A\u5BF9\u8C61\u6765\u5177\u4F53\u6307\u5B9A\u5171\u4EAB\u7684\u6A21\u5757\u548C\u7248\u672C\u3002
-        shared: ['react', 'react-dom'],
+        shared: ['react', 'react-dom'], // \u5171\u4EAB\u7684\u7248\u672C\u5FC5\u987B\u4E00\u81F4 \u4E0D\u7136\u4F1A\u5931\u6548
+        // shared:{
+        //   react:{
+        //     singleton:true // \u8868\u793A\u5F53\u6709\u7248\u672C\u51B2\u7A81\u65F6\u7EDF\u4E00\u4F7F\u7528\u9AD8\u7248\u672C
+        //   }
+        // },
         // \u6307\u5B9A\u5F53\u524D\u5E94\u7528\u53EF\u4EE5\u4ECE\u54EA\u4E9B\u8FDC\u7A0B\u5E94\u7528\u52A0\u8F7D\u6A21\u5757\u3002\u952E\u662F\u8FDC\u7A0B\u5E94\u7528\u7684\u540D\u79F0\uFF0C\u503C\u662F\u52A0\u8F7D\u8FDC\u7A0B\u6A21\u5757\u7684\u8DEF\u5F84\uFF08\u901A\u5E38\u5305\u62ECURL\uFF09\u3002
         remotes: {
           app2: 'app2@https://someurl.com/remoteEntry.js',
@@ -11580,7 +11584,7 @@ module.exports = {
     new ModuleFederationPlugin({
       name: 'app2',
       remotes: {
-        app1: 'app1@http://localhost:3000/remoteEntry.js',
+        app1: 'app1@http://localhost:3000/remoteEntry.js', // remotes\u5BF9\u8C61app1\u662F\u522B\u540D\u53EF\u4EE5\u4FEE\u6539\uFF0C@\u7B26\u53F7\u524D\u7684\u540D\u79F0\u9700\u8981\u548C\u5BFC\u51FA\u65F6\u7684name\u4FDD\u6301\u4E00\u81F4
       },
     }),
     new DefinePlugin({
