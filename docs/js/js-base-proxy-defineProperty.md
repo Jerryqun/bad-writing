@@ -10,6 +10,9 @@ title: Proxy 和Object.defineProperty()
 
 ## Proxy
 
+1. 非侵入的形式监听对象
+2. 可以直接监听数组的读写，如果是 Object.defineProperty 需要重写数组的方法
+
 Proxy 可以理解成，在目标对象之前架设一层“拦截”，外界对该对象的访问，都必须先通过这层拦截，因此提供了一种机制，可以对外界的访问进行过滤和改写 target 参数表示所要拦截的目标对象，handler 参数也是一个对象，用来定制拦截行为。
 
 ```js
@@ -34,9 +37,19 @@ const a = arrProxy([0, 1, 2, 3]);
 console.log(a);
 ```
 
-## Reflect
+## Reflect（静态类）
 
-Reflect 的所有属性和方法都是静态的。
+Reflect 的所有属性和方法都是静态的，统一提供一套用于操作对象的 api
+
+```js
+const obj = {
+  name: 'zcq',
+  age: 18,
+};
+// console.log('name' in obj); => Reflect.has('name')
+// console.log(delete obj.name); => Reflect.deleteProperty(obj,'name')
+// console.log(Object.keys(obj));=> Reflect.ownKeys(obj)
+```
 
 ES6 中操作对象而提供的新 API，若需要在 Proxy 内部调用对象的默认行为，建议使用 Reflect  
 1、只要 Proxy 对象具有的代理方法，Reflect 对象全部具有，以静态方法的形式存在  

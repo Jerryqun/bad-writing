@@ -65,3 +65,35 @@ console.log('1', a); // -> '1' 1
 然后后面就是常规执行代码了
  */
 ```
+
+## Generator 应用
+
+```js
+//发号器
+
+function* createIdMaker() {
+  let id = 1;
+  while (true) {
+    yield id++;
+  }
+}
+
+const idMaker = createIdMaker();
+idMaker.next().value;
+idMaker.next().value;
+idMaker.next().value;
+idMaker.next().value;
+
+// 使用generator 实现iterator方法
+
+const todo = {
+  life: ['吃饭', '睡觉'],
+  learn: ['语文', '数学'],
+  [Symbol.iterator]: function* () {
+    const all = [...this.learn, ...this.life];
+    for (const item of all) {
+      yield item;
+    }
+  },
+};
+```

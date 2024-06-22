@@ -37,6 +37,17 @@ function initEvents() {
 initEvents();
 
 function initEvents() {
+  for (var i = 1; i <= 3; i++) {
+    $('#btn' + i).click(
+      (function showNumber(i) {
+        alert(i); //1 2 3
+      })(i),
+    );
+  }
+}
+initEvents();
+
+function initEvents() {
   for (let i = 1; i <= 3; i++) {
     $('#btn' + i).click(function showNumber() {
       alert(i); //1 2 3

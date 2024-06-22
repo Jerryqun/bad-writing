@@ -164,7 +164,7 @@ npm info xxx 查看包的详细信息
 
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx nodemon --watch src server_build/bundle.js",
+    "start": "npx nodemon --watch src server_build/bundle.js",（nodemon 监听文件的变化自动执行）
     "build:server": "npx webpack build --config ./webpack.server.js --watch",
     "build:client": "npx webpack build --config ./webpack.client.js --watch",
     "dev": "npx npm-run-all --parallel build:server build:client start"

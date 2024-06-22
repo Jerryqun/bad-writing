@@ -301,6 +301,8 @@ console.log(test.length);
  * 可以使用BigInt
  */
 
+(Math.pow(2, 10) === 1024) === 2 ** 10;
+
 /**
  * repeat
  */
@@ -1237,7 +1239,7 @@ let i = 1;
 let a = ++i; // a = 2  i = 2
 
 let g = 1;
-let b = i++; // b = 1  i = 2
+let b = g++; // b = 1  i = 2
 ```
 
 ## window.setImmediate
