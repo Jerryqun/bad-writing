@@ -1,7 +1,7 @@
 ---
-nav: Ts
+nav: Js
 toc: content
-group: 进阶
+group: TS
 mobile: false
 title: as const
 ---

@@ -1,5 +1,5 @@
 ---
-nav: 算法/工具
+nav: 高阶技术
 group:
   title: 前端工具
   order: 2

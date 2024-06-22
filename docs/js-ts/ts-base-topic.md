@@ -1,7 +1,7 @@
 ---
-nav: Ts
+nav: Js
 toc: content
-group: 基础
+group: TS
 mobile: false
 title: 面试
 ---
