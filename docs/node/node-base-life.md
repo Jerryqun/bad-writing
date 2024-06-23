@@ -3,7 +3,7 @@ nav: Node
 group: 基础
 toc: content
 mobile: false
-title: 生命周期
+title: node生命周期
 ---
 
 ## 生命周期

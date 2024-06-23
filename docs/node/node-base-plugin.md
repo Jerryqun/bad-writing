@@ -3,14 +3,32 @@ nav: Node
 group: 基础
 toc: content
 mobile: false
-title: Node框架
+title: Node基础
 ---
+
+## 基础
+
+安装 ts-node 包直接使用 ts 执行 node 代码  
+ts-node ./test.ts
 
 ## 常见的 nodejs 框架
 
 - Koa：一个轻量的 Nodejs 框架，代码非常简洁。采用洋葱圈模型中间件，非常方便扩展功能，但是开发后端 API 需要进行再封装。
 
 - Express：Express 也是一个轻量框架，Express 和 Koa 的区别在于中间件机制。但总体差别不是很大，绝大多数 Nodejs 框架都是在 Koa 或者 Express 基础上封装的。
+
+```ts
+import express from 'express';
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('1122');
+});
+
+app.listen(8080, () => {
+  console.log('服务启动了');
+});
+```
 
 - Eggjs：基于 Koa 封装的框架，整合了数据库、路由、安全防护、日志记录、异常处理等中间件，可以用来快速开发 Rest 或者 Restful API 项目。
 
