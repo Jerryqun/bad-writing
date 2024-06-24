@@ -8,8 +8,28 @@ title: Node基础
 
 ## 基础
 
-安装 ts-node 包直接使用 ts 执行 node 代码  
+安装 ts-node 包直接执行 ts 写的 node 代码  
 ts-node ./test.ts
+
+全局变量
+
+```ts
+__filename; // 正在执行脚本文件的绝对路径
+__dirname; // 返回正在执行脚本所在的目录
+process; // 提供与当前进程互动的接口(运行目录，node环境、cpu架构、用户环境、系统平台)
+require; // 模块的加载
+module; // 模块导出
+exports; // 模块导出
+this; // 空对象
+(function () {
+  console.log(this === global); // true
+})();
+console.log(process.memoryUsage()); //内存
+console.log(process.cpuUsage()); // cpu
+console.log(process.version); // 版本  v16.17.0
+console.log(process.versions); // 版本 详细
+console.log(process.arch); // arm64
+```
 
 ## 常见的 nodejs 框架
 
