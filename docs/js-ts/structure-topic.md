@@ -5,7 +5,7 @@ group:
   order: 2
 toc: content
 mobile: false
-title: 题目
+title: 算法题
 ---
 
 ## “有效括号”问题

@@ -1,7 +1,7 @@
 ---
-nav: 高阶技术
+nav: Js
 group:
-  title: 基础概念
+  title: 数据结构
   order: 2
 toc: content
 mobile: false
