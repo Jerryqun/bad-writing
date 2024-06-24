@@ -233,7 +233,7 @@ const arr = [
   {
     id: 1,
     name: '部门A',
-    parentId: 0,
+    parentId: null,
   },
   {
     id: 2,
@@ -262,5 +262,16 @@ const arr = [
   },
 ];
 
-function Con
+const convert = (arr, parentId = null) => {
+  return arr
+    .filter((item) => item.parentId === parentId)
+    .map((d) => {
+      return {
+        ...d,
+        children: convert(arr, d.id),
+      };
+    });
+};
+
+console.log('arr', convert(arr));
 ```
