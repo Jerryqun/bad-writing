@@ -1,7 +1,7 @@
 ---
 toc: content
 group:
-  title: 常用属性
+  title: 属性片段
   order: 2
 title: vertical-align
 ---

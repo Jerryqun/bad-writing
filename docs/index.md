@@ -4,8 +4,8 @@ hero:
   title: 编程小径
   description:
   actions:
-    - text: 立即上手
-      link: /js
+    - text: 编程笔记
+      link: /js-ts
     - text: GitHub
       link: https://github.com/Jerryqun/bad-writing
     - text: PlayGround
