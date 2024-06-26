@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>前端学不动</title>
+</head>
+<body>
+  <fancy-components id="abc"></fancy-components>
+
+  <script>
+    const el = document.querySelector('fancy-components')
+    const arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+    customElements.define('fancy-components', class extends HTMLElement {
+      // 相当于 Vue 的 data
+      static observedAttributes = ['id']
+      // 也可以写成下面这样：
+      // static get observedAttributes () { return ['id'] }
+
+      attributeChangedCallback (name, oldValue, newValue) {
+        // 相当于 Vue 的 watch
+        if (oldValue === newValue) return
+
+        switch (name) {
+          case 'id':
+            console.log(`oldValue: ${oldValue}, newValue: ${newValue}`)
+        }
+      }
+    })
+
+    setInterval(() => el.id = arr[Math.round(Math.random() * 25)], 1000)
+  </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>前端学不动</title>
+  <style>
+    html, body { height: 100% }
+    body {
+      display: grid;
+      place-items: center
+    }
+  </style>
+</head>
+<body>
+  <input is="our-input" />
+
+  <script>
+    customElements.define('our-input', class extends HTMLInputElement {
+      constructor () {
+        super()
+
+        this.placeholder = '属于我们的输入框！'
+        this.disabled = true
+      }
+    }, { extends: 'input' })
+  </script>
+</body>
+</html>

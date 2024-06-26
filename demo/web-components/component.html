@@ -1,0 +1,20 @@
+<template>
+  <span>
+    <slot></slot>
+  </span>
+</template>
+<script>
+  const dom = document.currentScript.ownerDocument.querySelector('template').content;
+  customElements.define('my-span', class extends HTMLElement {
+    constructor() {
+      super()
+      console.log('this', this)
+      this.appendChild(dom)
+    }
+  })
+</script>
+<style>
+  span {
+    color: red;
+  }
+</style>

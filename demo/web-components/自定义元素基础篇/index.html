@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>前端学不动</title>
+</head>
+<body>
+  <script>
+    // 创建一个 <a-b-c> 的元素，名为 el
+    const el = document.createElement('a-b-c')
+
+    // 定义一个名为 <a-b-c> 的组件
+    customElements.define('a-b-c', class extends HTMLElement {})
+
+    // 获取 <a-b-c> 组件的构造函数
+    customElements.get('a-b-c')
+
+    // 升级我们之前创建的 el 元素
+    customElements.upgrade(el)
+
+    // 当 <a-b-c> 组件定义后
+    customElements.whenDefined('a-b-c').then(() => { /* 当 <a-b-c> 组件定义后的回掉函数 */ })
+  </script>
+</body>
+</html>
