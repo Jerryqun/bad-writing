@@ -2498,7 +2498,11 @@ offsetHeight offsetWidth :  border + padding + content
 clientHeight clientWidth :  padding + content
 scrollHeight scrollWidth :  padding + \u5B9E\u9645\u5185\u5BB9\u5C3A\u5BF8
 
-`,paraId:0,tocIndex:0}]},79980:function(o,e,n){n.r(e),n.d(e,{texts:function(){return a}});const a=[]},72308:function(o,e,n){n.r(e),n.d(e,{texts:function(){return a}});const a=[{value:`<!DOCTYPE html>
+`,paraId:0,tocIndex:0}]},79980:function(o,e,n){n.r(e),n.d(e,{texts:function(){return a}});const a=[{value:`.center {
+  display: grid;
+  place-items: center;
+}
+`,paraId:0,tocIndex:1}]},72308:function(o,e,n){n.r(e),n.d(e,{texts:function(){return a}});const a=[{value:`<!DOCTYPE html>
 <html lang="en">
   <head>
     <style>
@@ -11861,6 +11865,26 @@ console.log(process.cpuUsage()); // cpu
 console.log(process.version); // \u7248\u672C  v16.17.0
 console.log(process.versions); // \u7248\u672C \u8BE6\u7EC6
 console.log(process.arch); // arm64
+console.log(process.argv); // \u542F\u52A8\u53C2\u6570
+console.log(process.pid); // pid
+console.log(process.uptime()); //\u6587\u4EF6\u8FD0\u884C\u6267\u884C\u603B\u65F6\u95F4
+
+// \u4E8B\u4EF6
+process.on('exit', (code) => {
+  console.log('code: ', code); // \u4E0D\u80FD\u518D\u6267\u884C\u5F02\u6B65\u4EE3\u7801
+});
+process.on('beforeExit', (code) => {
+  console.log('code: ', code); // \u4E0D\u80FD\u518D\u6267\u884C\u5F02\u6B65\u4EE3\u7801
+});
+
+process.exit(); // \u76F4\u63A5\u4E3B\u52A8\u9000\u51FA \u540E\u9762\u4EE3\u7801\u4E0D\u4F1A\u6267\u884C
+
+// \u8F93\u5165\u8F93\u51FA
+process.stdin.pipe(process.stdout);
+
+// \u8BFB\u53D6\u6587\u4EF6\u5230\u63A7\u5236\u53F0
+const fs = require('fs');
+fs.createReadStream('test.txt').pipe(process.stdout);
 `,paraId:2,tocIndex:0},{value:"Koa\uFF1A\u4E00\u4E2A\u8F7B\u91CF\u7684 Nodejs \u6846\u67B6\uFF0C\u4EE3\u7801\u975E\u5E38\u7B80\u6D01\u3002\u91C7\u7528\u6D0B\u8471\u5708\u6A21\u578B\u4E2D\u95F4\u4EF6\uFF0C\u975E\u5E38\u65B9\u4FBF\u6269\u5C55\u529F\u80FD\uFF0C\u4F46\u662F\u5F00\u53D1\u540E\u7AEF API \u9700\u8981\u8FDB\u884C\u518D\u5C01\u88C5\u3002",paraId:3,tocIndex:1},{value:"Express\uFF1AExpress \u4E5F\u662F\u4E00\u4E2A\u8F7B\u91CF\u6846\u67B6\uFF0CExpress \u548C Koa \u7684\u533A\u522B\u5728\u4E8E\u4E2D\u95F4\u4EF6\u673A\u5236\u3002\u4F46\u603B\u4F53\u5DEE\u522B\u4E0D\u662F\u5F88\u5927\uFF0C\u7EDD\u5927\u591A\u6570 Nodejs \u6846\u67B6\u90FD\u662F\u5728 Koa \u6216\u8005 Express \u57FA\u7840\u4E0A\u5C01\u88C5\u7684\u3002",paraId:4,tocIndex:1},{value:`import express from 'express';
 const app = express();
 
