@@ -29,6 +29,26 @@ console.log(process.cpuUsage()); // cpu
 console.log(process.version); // 版本  v16.17.0
 console.log(process.versions); // 版本 详细
 console.log(process.arch); // arm64
+console.log(process.argv); // 启动参数
+console.log(process.pid); // pid
+console.log(process.uptime()); //文件运行执行总时间
+
+// 事件
+process.on('exit', (code) => {
+  console.log('code: ', code); // 不能再执行异步代码
+});
+process.on('beforeExit', (code) => {
+  console.log('code: ', code); // 不能再执行异步代码
+});
+
+process.exit(); // 直接主动退出 后面代码不会执行
+
+// 输入输出
+process.stdin.pipe(process.stdout);
+
+// 读取文件到控制台
+const fs = require('fs');
+fs.createReadStream('test.txt').pipe(process.stdout);
 ```
 
 ## 常见的 nodejs 框架

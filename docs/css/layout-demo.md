@@ -6,7 +6,7 @@ group:
 title: 常用布局
 ---
 
-# 结合 antd 常用宫格格布局
+## 结合 antd 常用宫格格布局
 
 ```tsx
 import React from 'react';
@@ -33,4 +33,13 @@ function Test() {
 }
 
 export default Test;
+```
+
+## 最简单的子元素垂直居中布局
+
+```css
+.center {
+  display: grid;
+  place-items: center;
+}
 ```
