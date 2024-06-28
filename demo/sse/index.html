@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+  const eventSource = new EventSource('http://localhost:8080/sse');
+  eventSource.onmessage = function (event) {
+    console.log('New message:', event.data);
+  };
+  eventSource.addEventListener('customEvent', function (event) {
+    console.log('Custom event received:', event.data);
+  });
+
+</script>
+
+</html>
