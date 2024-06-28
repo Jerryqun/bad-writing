@@ -14,7 +14,7 @@ mobile: false
 
 - DOM 是一棵树， 所有节点都是 Node
 - Node 是 Element 的基类
-- Element 是其他 html 元素的基类，如 HTMLDivElement
+- Element 是其他 html 元素的基类，包含 HTMLDivElement 和 SVGElement
 
 请说出下面代码的显示结果，然后说下原因
 

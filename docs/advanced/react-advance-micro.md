@@ -1,6 +1,6 @@
 ---
-nav: React
-group: 进阶
+nav: 高阶技术
+group: 微前端
 toc: content
 title: 微前端
 ---

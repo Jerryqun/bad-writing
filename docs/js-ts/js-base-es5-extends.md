@@ -226,4 +226,7 @@ class ColorPoint extends Point {
 var colorPoint = new ColorPoint('1', '2', 'red');
 
 console.log(colorPoint.toString()); // red 12
+
+ColorPoint.__proto__ === Point; // true
+Object.getPrototypeOf(B) === Point;
 ```
