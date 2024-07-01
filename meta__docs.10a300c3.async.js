@@ -813,7 +813,7 @@ dark \u6A21\u5F0F\u4E0B\u7684css
 </html>\`}
     />
   );
-};`}},entry:"index.jsx"},context:{},renderOpts:{compile:function(){var r=x()(a()().mark(function c(){var s,d=arguments;return a()().wrap(function(u){for(;;)switch(u.prev=u.next){case 0:return u.next=2,n.e(7335).then(n.bind(n,37335));case 2:return u.abrupt("return",(s=u.sent).default.apply(s,d));case 3:case"end":return u.stop()}},c)}));function b(){return r.apply(this,arguments)}return b}()}}}},55497:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},74406:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},43723:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},46785:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},31335:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},68643:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},51885:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},16299:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},28858:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},26169:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},7998:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},53816:function(o,e,n){n.r(e),n.d(e,{demos:function(){return y}});var t=n(15009),a=n.n(t),R=n(99289),x=n.n(R),g=n(62435),y={"docs-css-layout-demo-demo-0":{component:g.memo(g.lazy(x()(a()().mark(function r(){var b,c,s,d,p,u,m,l;return a()().wrap(function(P){for(;;)switch(P.prev=P.next){case 0:return l=function(){var h=new Array(20).fill("\u6D4B\u8BD5\u8D85\u51FA\u6D4B\u8BD5\u8D85\u51FA\u6D4B\u8BD5\u8D85\u51FA\u6D4B\u8BD5\u8D85\u51FA\u6D4B\u8BD5\u8D85\u51FA\u6D4B\u8BD5\u8D85\u51FA\u6D4B\u8BD5\u8D85\u51FA\u6D4B\u8BD5\u8D85\u51FA\u6D4B\u8BD5\u8D85\u51FA\u6D4B\u8BD5\u8D85\u51FA");return c.createElement("div",null,c.createElement(d,{gutter:[16,16]},h.map(function(w){return c.createElement(p,{className:m.col,span:4},c.createElement("div",{className:m["col-1"]},w))})))},P.next=3,Promise.resolve().then(n.t.bind(n,62435,19));case 3:return b=P.sent,c=b.default,P.next=7,Promise.resolve().then(n.bind(n,59705));case 7:return s=P.sent,d=s.Row,p=s.Col,P.next=12,Promise.resolve().then(n.bind(n,13229));case 12:return u=P.sent,m=u.default,P.abrupt("return",{default:l});case 15:case"end":return P.stop()}},r)})))),asset:{type:"BLOCK",id:"docs-css-layout-demo-demo-0",refAtomIds:[],dependencies:{"index.tsx":{type:"FILE",value:`import React from 'react';
+};`}},entry:"index.jsx"},context:{},renderOpts:{compile:function(){var r=x()(a()().mark(function c(){var s,d=arguments;return a()().wrap(function(u){for(;;)switch(u.prev=u.next){case 0:return u.next=2,n.e(7335).then(n.bind(n,37335));case 2:return u.abrupt("return",(s=u.sent).default.apply(s,d));case 3:case"end":return u.stop()}},c)}));function b(){return r.apply(this,arguments)}return b}()}}}},55497:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},74406:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},43723:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},46785:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},31335:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},68643:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},51885:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},16299:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},28858:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},26169:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},7998:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},53816:function(o,e,n){n.r(e),n.d(e,{demos:function(){return y}});var t=n(15009),a=n.n(t),R=n(99289),x=n.n(R),g=n(62435),y={"docs-css-layout-demo-demo-0":{component:g.memo(g.lazy(x()(a()().mark(function r(){var b,c,s,d,p,u,m,l;return a()().wrap(function(O){for(;;)switch(O.prev=O.next){case 0:return l=function(){var h=new Array(20).fill("\u6D4B\u8BD5\u8D85\u51FA\u6D4B\u8BD5\u8D85\u51FA\u6D4B\u8BD5\u8D85\u51FA\u6D4B\u8BD5\u8D85\u51FA\u6D4B\u8BD5\u8D85\u51FA\u6D4B\u8BD5\u8D85\u51FA\u6D4B\u8BD5\u8D85\u51FA\u6D4B\u8BD5\u8D85\u51FA\u6D4B\u8BD5\u8D85\u51FA\u6D4B\u8BD5\u8D85\u51FA");return c.createElement("div",null,c.createElement(d,{gutter:[16,16]},h.map(function(w){return c.createElement(p,{className:m.col,span:4},c.createElement("div",{className:m["col-1"]},w))})))},O.next=3,Promise.resolve().then(n.t.bind(n,62435,19));case 3:return b=O.sent,c=b.default,O.next=7,Promise.resolve().then(n.bind(n,59705));case 7:return s=O.sent,d=s.Row,p=s.Col,O.next=12,Promise.resolve().then(n.bind(n,13229));case 12:return u=O.sent,m=u.default,O.abrupt("return",{default:l});case 15:case"end":return O.stop()}},r)})))),asset:{type:"BLOCK",id:"docs-css-layout-demo-demo-0",refAtomIds:[],dependencies:{"index.tsx":{type:"FILE",value:`import React from 'react';
 import { Row, Col, Empty } from 'antd';
 import styles from './styles/layout.module.less';
 
@@ -836,7 +836,7 @@ function Test() {
   );
 }
 
-export default Test;`},react:{type:"NPM",value:"18.1.0"},antd:{type:"NPM",value:"5.17.3"},"./styles/layout.module.less":{type:"FILE",value:n(60741).Z}},entry:"index.tsx"},context:{react:n(62435),antd:n(59705),"./styles/layout.module.less":n(13229)},renderOpts:{compile:function(){var r=x()(a()().mark(function c(){var s,d=arguments;return a()().wrap(function(u){for(;;)switch(u.prev=u.next){case 0:return u.next=2,n.e(7335).then(n.bind(n,37335));case 2:return u.abrupt("return",(s=u.sent).default.apply(s,d));case 3:case"end":return u.stop()}},c)}));function b(){return r.apply(this,arguments)}return b}()}}}},22063:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},4568:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},24809:function(o,e,n){n.r(e),n.d(e,{demos:function(){return b}});var t=n(15009),a=n.n(t),R=n(49677),x=n.n(R),g=n(99289),y=n.n(g),r=n(62435),b={"docs-css-postcss-999-demo-0":{component:r.memo(r.lazy(y()(a()().mark(function c(){return a()().wrap(function(d){for(;;)switch(d.prev=d.next){case 0:return d.t0=x(),d.next=3,Promise.resolve().then(n.bind(n,72183));case 3:return d.t1=d.sent,(0,d.t0)(d.t1),d.abrupt("return",{default:function(){var u=new Array(9).fill(1);return r.createElement("div",null,u.map(function(m,l){return r.createElement("div",{className:"row"},new Array(l+1).fill(1).map(function(M,P){return r.createElement("div",{className:"item item-".concat(l,"-").concat(P)})}))}))}});case 6:case"end":return d.stop()}},c)})))),asset:{type:"BLOCK",id:"docs-css-postcss-999-demo-0",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:`import './styles/999.scss';
+export default Test;`},react:{type:"NPM",value:"18.1.0"},antd:{type:"NPM",value:"5.17.3"},"./styles/layout.module.less":{type:"FILE",value:n(60741).Z}},entry:"index.tsx"},context:{react:n(62435),antd:n(59705),"./styles/layout.module.less":n(13229)},renderOpts:{compile:function(){var r=x()(a()().mark(function c(){var s,d=arguments;return a()().wrap(function(u){for(;;)switch(u.prev=u.next){case 0:return u.next=2,n.e(7335).then(n.bind(n,37335));case 2:return u.abrupt("return",(s=u.sent).default.apply(s,d));case 3:case"end":return u.stop()}},c)}));function b(){return r.apply(this,arguments)}return b}()}}}},22063:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},4568:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},24809:function(o,e,n){n.r(e),n.d(e,{demos:function(){return b}});var t=n(15009),a=n.n(t),R=n(49677),x=n.n(R),g=n(99289),y=n.n(g),r=n(62435),b={"docs-css-postcss-999-demo-0":{component:r.memo(r.lazy(y()(a()().mark(function c(){return a()().wrap(function(d){for(;;)switch(d.prev=d.next){case 0:return d.t0=x(),d.next=3,Promise.resolve().then(n.bind(n,72183));case 3:return d.t1=d.sent,(0,d.t0)(d.t1),d.abrupt("return",{default:function(){var u=new Array(9).fill(1);return r.createElement("div",null,u.map(function(m,l){return r.createElement("div",{className:"row"},new Array(l+1).fill(1).map(function(S,O){return r.createElement("div",{className:"item item-".concat(l,"-").concat(O)})}))}))}});case 6:case"end":return d.stop()}},c)})))),asset:{type:"BLOCK",id:"docs-css-postcss-999-demo-0",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:`import './styles/999.scss';
 export default () => {
   let arr = new Array(9).fill(1);
   return (
@@ -855,7 +855,7 @@ export default () => {
 };`},"./styles/999.scss":{type:"FILE",value:n(32386).Z}},entry:"index.jsx"},context:{"./styles/999.scss":n(72183)},renderOpts:{compile:function(){var c=y()(a()().mark(function d(){var p,u=arguments;return a()().wrap(function(l){for(;;)switch(l.prev=l.next){case 0:return l.next=2,n.e(7335).then(n.bind(n,37335));case 2:return l.abrupt("return",(p=l.sent).default.apply(p,u));case 3:case"end":return l.stop()}},d)}));function s(){return c.apply(this,arguments)}return s}()}}}},98509:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},62357:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},84220:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},96613:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},50576:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},74407:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},42688:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},44783:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},76903:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},20808:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},44267:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},96090:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},85565:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},92766:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},50613:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},62136:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},5698:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},78875:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},26858:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},49585:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},28862:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},58266:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},21479:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},31550:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},83570:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},99255:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},91050:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},75665:function(o,e,n){n.r(e),n.d(e,{demos:function(){return y}});var t=n(15009),a=n.n(t),R=n(99289),x=n.n(R),g=n(62435),y={"docs-html-test-demo-0":{component:g.memo(g.lazy(x()(a()().mark(function r(){var b,c;return a()().wrap(function(d){for(;;)switch(d.prev=d.next){case 0:return d.next=2,Promise.resolve().then(n.bind(n,69005));case 2:return b=d.sent,c=b.default,d.abrupt("return",{default:function(){return g.createElement(c,null)}});case 5:case"end":return d.stop()}},r)})))),asset:{type:"BLOCK",id:"docs-html-test-demo-0",refAtomIds:[],dependencies:{"index.tsx":{type:"FILE",value:`import Test from '../../test/index.tsx';
 export default () => {
   return <Test />;
-};`},"../../test/index.tsx":{type:"FILE",value:n(64945).Z}},entry:"index.tsx"},context:{"../../test/index.tsx":n(69005)},renderOpts:{compile:function(){var r=x()(a()().mark(function c(){var s,d=arguments;return a()().wrap(function(u){for(;;)switch(u.prev=u.next){case 0:return u.next=2,n.e(7335).then(n.bind(n,37335));case 2:return u.abrupt("return",(s=u.sent).default.apply(s,d));case 3:case"end":return u.stop()}},c)}));function b(){return r.apply(this,arguments)}return b}()}}}},42836:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},8161:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},3733:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},27394:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},77493:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},65405:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},88547:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},67767:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},64436:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},60923:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},5198:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},1033:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},22316:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},11475:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},60269:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},49983:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},22954:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},15561:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},29957:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},51291:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},25432:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},31432:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},77473:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},87613:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},19111:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},93193:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},39053:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},39187:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},42189:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},75079:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},25457:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},37113:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},10047:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},28472:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},94041:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},57592:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},4605:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},82342:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},56306:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},80868:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},3637:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},91370:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},26872:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},70672:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},30184:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},25327:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},87981:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},75220:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},2120:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},73732:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},72921:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},6186:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},61412:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},24332:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},64823:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},53712:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},62239:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},26019:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},45717:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},37046:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},60606:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},84934:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},58385:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},58595:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},48152:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},42064:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},25718:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},28952:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},65637:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},71832:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},17586:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},4901:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},26344:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},38509:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},15308:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},12052:function(o,e,n){n.r(e),n.d(e,{demos:function(){return b}});var t=n(15009),a=n.n(t),R=n(5574),x=n.n(R),g=n(99289),y=n.n(g),r=n(62435),b={"docs-js-ts-js-example-upload-process-demo-0":{component:r.memo(r.lazy(y()(a()().mark(function c(){var s,d,p;return a()().wrap(function(m){for(;;)switch(m.prev=m.next){case 0:return m.next=2,Promise.resolve().then(n.t.bind(n,9669,23));case 2:return s=m.sent,d=s.default,p=function(M){var P=new FileReader;P.readAsText(M),P.onload=function(){var D=JSON.parse(P.result.toString());console.log(D)}},m.abrupt("return",{default:function(){var M=r.useRef({}),P=r.useState(0),D=x()(P,2),h=D[0],w=D[1],i=function(){var S=new FormData;S.append("userImg",M.current),S.append("userAge",20),d.post("http://121.4.49.147:7361/log/upload",S,{headers:{"Content-Type":"multipart/form-data"},onUploadProgress:function(f){var O=f.total,I=f.loaded;w((I/O*100).toFixed(2))}})};return r.createElement("div",null,r.createElement("input",{type:"file",onChange:function(S){M.current=S.target.files[0]}}),r.createElement("br",null),r.createElement("br",null),"\u8FDB\u5EA6\u5C55\u793A: ",h,"%",r.createElement("br",null),r.createElement("br",null),r.createElement("button",{onClick:i},"\u63D0\u4EA4"))}});case 6:case"end":return m.stop()}},c)})))),asset:{type:"BLOCK",id:"docs-js-ts-js-example-upload-process-demo-0",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:`import axios from 'axios';
+};`},"../../test/index.tsx":{type:"FILE",value:n(64945).Z}},entry:"index.tsx"},context:{"../../test/index.tsx":n(69005)},renderOpts:{compile:function(){var r=x()(a()().mark(function c(){var s,d=arguments;return a()().wrap(function(u){for(;;)switch(u.prev=u.next){case 0:return u.next=2,n.e(7335).then(n.bind(n,37335));case 2:return u.abrupt("return",(s=u.sent).default.apply(s,d));case 3:case"end":return u.stop()}},c)}));function b(){return r.apply(this,arguments)}return b}()}}}},42836:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},8161:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},3733:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},27394:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},77493:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},65405:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},88547:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},67767:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},64436:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},60923:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},5198:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},1033:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},22316:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},11475:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},60269:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},49983:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},22954:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},15561:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},29957:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},51291:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},25432:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},31432:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},77473:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},87613:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},19111:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},93193:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},39053:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},39187:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},42189:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},75079:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},25457:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},37113:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},10047:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},28472:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},94041:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},57592:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},4605:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},82342:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},56306:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},80868:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},3637:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},91370:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},26872:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},70672:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},30184:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},25327:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},87981:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},75220:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},2120:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},73732:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},72921:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},6186:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},61412:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},24332:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},64823:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},53712:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},62239:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},26019:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},45717:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},37046:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},60606:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},84934:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},58385:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},58595:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},48152:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},42064:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},25718:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},28952:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},65637:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},71832:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},17586:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},4901:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},26344:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},38509:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},15308:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},12052:function(o,e,n){n.r(e),n.d(e,{demos:function(){return b}});var t=n(15009),a=n.n(t),R=n(5574),x=n.n(R),g=n(99289),y=n.n(g),r=n(62435),b={"docs-js-ts-js-example-upload-process-demo-0":{component:r.memo(r.lazy(y()(a()().mark(function c(){var s,d,p;return a()().wrap(function(m){for(;;)switch(m.prev=m.next){case 0:return m.next=2,Promise.resolve().then(n.t.bind(n,9669,23));case 2:return s=m.sent,d=s.default,p=function(S){var O=new FileReader;O.readAsText(S),O.onload=function(){var M=JSON.parse(O.result.toString());console.log(M)}},m.abrupt("return",{default:function(){var S=r.useRef({}),O=r.useState(0),M=x()(O,2),h=M[0],w=M[1],i=function(){var P=new FormData;P.append("userImg",S.current),P.append("userAge",20),d.post("http://121.4.49.147:7361/log/upload",P,{headers:{"Content-Type":"multipart/form-data"},onUploadProgress:function(f){var C=f.total,I=f.loaded;w((I/C*100).toFixed(2))}})};return r.createElement("div",null,r.createElement("input",{type:"file",onChange:function(P){S.current=P.target.files[0]}}),r.createElement("br",null),r.createElement("br",null),"\u8FDB\u5EA6\u5C55\u793A: ",h,"%",r.createElement("br",null),r.createElement("br",null),r.createElement("button",{onClick:i},"\u63D0\u4EA4"))}});case 6:case"end":return m.stop()}},c)})))),asset:{type:"BLOCK",id:"docs-js-ts-js-example-upload-process-demo-0",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:`import axios from 'axios';
 
 // \u6587\u4EF6\u6D41\u8F6C\u5BF9\u8C61
 const fileToObj = (file) => {
@@ -900,7 +900,7 @@ export default () => {
       <button onClick={upload}>\u63D0\u4EA4</button>
     </div>
   );
-};`},axios:{type:"NPM",value:"0.18.1"}},entry:"index.jsx"},context:{axios:n(9669)},renderOpts:{compile:function(){var c=y()(a()().mark(function d(){var p,u=arguments;return a()().wrap(function(l){for(;;)switch(l.prev=l.next){case 0:return l.next=2,n.e(7335).then(n.bind(n,37335));case 2:return l.abrupt("return",(p=l.sent).default.apply(p,u));case 3:case"end":return l.stop()}},d)}));function s(){return c.apply(this,arguments)}return s}()}}}},79481:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},54814:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},50281:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},74770:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},25708:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},293:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},15419:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},31424:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},71330:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},45693:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},42953:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},86864:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},67078:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},61419:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},29793:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},8742:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},22223:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},70197:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},94395:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},21178:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},84604:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},50816:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},76:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},73422:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},21120:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},98662:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},47485:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},9132:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},85692:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},55629:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},70007:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},14478:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},48371:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},7888:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},24090:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},43145:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},11532:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},72115:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},87697:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},38918:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},46282:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},71337:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},55592:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},43304:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},20060:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},10732:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},48179:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},66593:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},23882:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},95832:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},37686:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},58624:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},13908:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},21681:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},98016:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},54509:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},5222:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},83720:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},58383:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},76619:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},39772:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},81934:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},8072:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},7520:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},46915:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},79531:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},44337:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},64640:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},61391:function(o,e,n){n.r(e),n.d(e,{demos:function(){return w}});var t=n(15009),a=n.n(t),R=n(5574),x=n.n(R),g=n(12444),y=n.n(g),r=n(72004),b=n.n(r),c=n(25098),s=n.n(c),d=n(31996),p=n.n(d),u=n(26037),m=n.n(u),l=n(9783),M=n.n(l),P=n(99289),D=n.n(P),h=n(62435),w={"docs-react-base-performance-demo-0":{component:h.memo(h.lazy(D()(a()().mark(function i(){var T;return a()().wrap(function(E){for(;;)switch(E.prev=E.next){case 0:return T=function(f){p()(I,f);var O=m()(I);function I(){var C;y()(this,I);for(var v=arguments.length,A=new Array(v),U=0;U<v;U++)A[U]=arguments[U];return C=O.call.apply(O,[this].concat(A)),M()(s()(C),"state",{name:"alien",age:18,obj:{number:1}}),M()(s()(C),"changeObjNumber",function(){var L=C.state.obj;L.number++,C.setState({obj:L})}),C}return b()(I,[{key:"render",value:function(){var v=this;return console.log("\u7EC4\u4EF6\u6E32\u67D3"),h.createElement("div",null,h.createElement("div",null," \u7EC4\u4EF6\u672C\u8EAB\u6539\u53D8state "),h.createElement("button",{onClick:function(){return v.setState({name:"alien"})}},"state\u76F8\u540C\u60C5\u51B5"),h.createElement("button",{onClick:function(){return v.setState({age:v.state.age+1})}},"state\u4E0D\u540C\u60C5\u51B5"),h.createElement("button",{onClick:this.changeObjNumber},"state\u4E3A\u5F15\u7528\u6570\u636E\u7C7B\u578B\u65F6\u5019"),h.createElement("div",null,"hello,my name is alien,let us learn React!"))}}]),I}(h.PureComponent),E.abrupt("return",{default:function(){var O=h.useState(0),I=x()(O,2),C=I[0],v=I[1],A=h.useState(0),U=x()(A,2),L=U[0],K=U[1];return h.createElement("div",null,h.createElement("div",null," \u7236\u7EC4\u4EF6\u6539\u53D8props "),h.createElement("button",{onClick:function(){return v(C+1)}},"\u6539\u53D8numberA"),h.createElement("button",{onClick:function(){return K(L+1)}},"\u6539\u53D8numberB"),h.createElement(T,{number:C}))}});case 2:case"end":return E.stop()}},i)})))),asset:{type:"BLOCK",id:"docs-react-base-performance-demo-0",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:`/* \u7EAF\u7EC4\u4EF6\u672C\u8EAB */
+};`},axios:{type:"NPM",value:"0.18.1"}},entry:"index.jsx"},context:{axios:n(9669)},renderOpts:{compile:function(){var c=y()(a()().mark(function d(){var p,u=arguments;return a()().wrap(function(l){for(;;)switch(l.prev=l.next){case 0:return l.next=2,n.e(7335).then(n.bind(n,37335));case 2:return l.abrupt("return",(p=l.sent).default.apply(p,u));case 3:case"end":return l.stop()}},d)}));function s(){return c.apply(this,arguments)}return s}()}}}},79481:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},54814:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},50281:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},74770:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},25708:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},293:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},15419:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},31424:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},71330:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},45693:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},42953:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},86864:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},67078:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},61419:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},29793:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},8742:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},22223:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},70197:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},94395:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},21178:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},84604:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},50816:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},76:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},73422:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},21120:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},98662:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},47485:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},9132:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},85692:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},55629:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},70007:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},14478:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},48371:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},7888:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},24090:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},43145:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},11532:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},72115:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},87697:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},38918:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},46282:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},71337:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},55592:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},43304:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},20060:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},10732:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},48179:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},66593:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},23882:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},95832:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},37686:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},58624:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},13908:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},21681:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},98016:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},54509:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},5222:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},83720:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},58383:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},76619:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},39772:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},81934:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},8072:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},7520:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},46915:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},79531:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},44337:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},64640:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},61391:function(o,e,n){n.r(e),n.d(e,{demos:function(){return w}});var t=n(15009),a=n.n(t),R=n(5574),x=n.n(R),g=n(12444),y=n.n(g),r=n(72004),b=n.n(r),c=n(25098),s=n.n(c),d=n(31996),p=n.n(d),u=n(26037),m=n.n(u),l=n(9783),S=n.n(l),O=n(99289),M=n.n(O),h=n(62435),w={"docs-react-base-performance-demo-0":{component:h.memo(h.lazy(M()(a()().mark(function i(){var T;return a()().wrap(function(E){for(;;)switch(E.prev=E.next){case 0:return T=function(f){p()(I,f);var C=m()(I);function I(){var D;y()(this,I);for(var v=arguments.length,_=new Array(v),N=0;N<v;N++)_[N]=arguments[N];return D=C.call.apply(C,[this].concat(_)),S()(s()(D),"state",{name:"alien",age:18,obj:{number:1}}),S()(s()(D),"changeObjNumber",function(){var L=D.state.obj;L.number++,D.setState({obj:L})}),D}return b()(I,[{key:"render",value:function(){var v=this;return console.log("\u7EC4\u4EF6\u6E32\u67D3"),h.createElement("div",null,h.createElement("div",null," \u7EC4\u4EF6\u672C\u8EAB\u6539\u53D8state "),h.createElement("button",{onClick:function(){return v.setState({name:"alien"})}},"state\u76F8\u540C\u60C5\u51B5"),h.createElement("button",{onClick:function(){return v.setState({age:v.state.age+1})}},"state\u4E0D\u540C\u60C5\u51B5"),h.createElement("button",{onClick:this.changeObjNumber},"state\u4E3A\u5F15\u7528\u6570\u636E\u7C7B\u578B\u65F6\u5019"),h.createElement("div",null,"hello,my name is alien,let us learn React!"))}}]),I}(h.PureComponent),E.abrupt("return",{default:function(){var C=h.useState(0),I=x()(C,2),D=I[0],v=I[1],_=h.useState(0),N=x()(_,2),L=N[0],K=N[1];return h.createElement("div",null,h.createElement("div",null," \u7236\u7EC4\u4EF6\u6539\u53D8props "),h.createElement("button",{onClick:function(){return v(D+1)}},"\u6539\u53D8numberA"),h.createElement("button",{onClick:function(){return K(L+1)}},"\u6539\u53D8numberB"),h.createElement(T,{number:D}))}});case 2:case"end":return E.stop()}},i)})))),asset:{type:"BLOCK",id:"docs-react-base-performance-demo-0",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:`/* \u7EAF\u7EC4\u4EF6\u672C\u8EAB */
 class Children extends React.PureComponent {
   state = {
     name: 'alien',
@@ -943,7 +943,7 @@ export default function Home() {
       <Children number={numberA} />
     </div>
   );
-}`}},entry:"index.jsx"},context:{},renderOpts:{compile:function(){var i=D()(a()().mark(function S(){var E,f=arguments;return a()().wrap(function(I){for(;;)switch(I.prev=I.next){case 0:return I.next=2,n.e(7335).then(n.bind(n,37335));case 2:return I.abrupt("return",(E=I.sent).default.apply(E,f));case 3:case"end":return I.stop()}},S)}));function T(){return i.apply(this,arguments)}return T}()}}}},84005:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},64671:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},74378:function(o,e,n){n.r(e),n.d(e,{demos:function(){return T}});var t=n(97857),a=n.n(t),R=n(5574),x=n.n(R),g=n(15009),y=n.n(g),r=n(25098),b=n.n(r),c=n(9783),s=n.n(c),d=n(12444),p=n.n(d),u=n(72004),m=n.n(u),l=n(31996),M=n.n(l),P=n(26037),D=n.n(P),h=n(99289),w=n.n(h),i=n(62435),T={"docs-react-base-context-demo-0":{component:i.memo(i.lazy(w()(y()().mark(function S(){var E,f,O,I,C,v,A;return y()().wrap(function(L){for(;;)switch(L.prev=L.next){case 0:return v=function(N){return f.createElement("div",null,f.createElement(C,null),f.createElement(I,null))},I=function(N){return f.createElement(O.Consumer,null,function(_){return f.createElement("p",null,"link's theme is ",_)})},L.next=4,Promise.resolve().then(n.t.bind(n,62435,19));case 4:return E=L.sent,f=E.default,O=f.createContext("light"),C=function(K){M()(_,K);var N=D()(_);function _(){return p()(this,_),N.apply(this,arguments)}return m()(_,[{key:"render",value:function(){var j=this.context;return f.createElement("div",null,f.createElement("p",null,"button's theme is ",j))}}]),_}(f.Component),C.contextType=O,A=function(K){M()(_,K);var N=D()(_);function _(B){var j;return p()(this,_),j=N.call(this,B),s()(b()(j),"changeTheme",function(){j.setState({theme:j.state.theme==="light"?"dark":"light"})}),j.state={theme:"light"},j}return m()(_,[{key:"render",value:function(){return f.createElement(O.Provider,{value:this.state.theme},f.createElement(v,null),f.createElement("hr",null),f.createElement("button",{onClick:this.changeTheme},"change theme"))}}]),_}(f.Component),L.abrupt("return",{default:A});case 11:case"end":return L.stop()}},S)})))),asset:{type:"BLOCK",id:"docs-react-base-context-demo-0",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:`import React from 'react';
+}`}},entry:"index.jsx"},context:{},renderOpts:{compile:function(){var i=M()(a()().mark(function P(){var E,f=arguments;return a()().wrap(function(I){for(;;)switch(I.prev=I.next){case 0:return I.next=2,n.e(7335).then(n.bind(n,37335));case 2:return I.abrupt("return",(E=I.sent).default.apply(E,f));case 3:case"end":return I.stop()}},P)}));function T(){return i.apply(this,arguments)}return T}()}}}},7441:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},84005:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},64671:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},74378:function(o,e,n){n.r(e),n.d(e,{demos:function(){return T}});var t=n(97857),a=n.n(t),R=n(5574),x=n.n(R),g=n(15009),y=n.n(g),r=n(25098),b=n.n(r),c=n(9783),s=n.n(c),d=n(12444),p=n.n(d),u=n(72004),m=n.n(u),l=n(31996),S=n.n(l),O=n(26037),M=n.n(O),h=n(99289),w=n.n(h),i=n(62435),T={"docs-react-base-context-demo-0":{component:i.memo(i.lazy(w()(y()().mark(function P(){var E,f,C,I,D,v,_;return y()().wrap(function(L){for(;;)switch(L.prev=L.next){case 0:return v=function(W){return f.createElement("div",null,f.createElement(D,null),f.createElement(I,null))},I=function(W){return f.createElement(C.Consumer,null,function(A){return f.createElement("p",null,"link's theme is ",A)})},L.next=4,Promise.resolve().then(n.t.bind(n,62435,19));case 4:return E=L.sent,f=E.default,C=f.createContext("light"),D=function(K){S()(A,K);var W=M()(A);function A(){return p()(this,A),W.apply(this,arguments)}return m()(A,[{key:"render",value:function(){var j=this.context;return f.createElement("div",null,f.createElement("p",null,"button's theme is ",j))}}]),A}(f.Component),D.contextType=C,_=function(K){S()(A,K);var W=M()(A);function A(B){var j;return p()(this,A),j=W.call(this,B),s()(b()(j),"changeTheme",function(){j.setState({theme:j.state.theme==="light"?"dark":"light"})}),j.state={theme:"light"},j}return m()(A,[{key:"render",value:function(){return f.createElement(C.Provider,{value:this.state.theme},f.createElement(v,null),f.createElement("hr",null),f.createElement("button",{onClick:this.changeTheme},"change theme"))}}]),A}(f.Component),L.abrupt("return",{default:_});case 11:case"end":return L.stop()}},P)})))),asset:{type:"BLOCK",id:"docs-react-base-context-demo-0",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:`import React from 'react';
 
 // \u521B\u5EFA Context \u586B\u5165\u9ED8\u8BA4\u503C\uFF08\u4EFB\u4F55\u4E00\u4E2A js \u53D8\u91CF\uFF09
 const ThemeContext = React.createContext('light');
@@ -1008,7 +1008,7 @@ class App extends React.Component {
   };
 }
 
-export default App;`},react:{type:"NPM",value:"18.1.0"}},entry:"index.jsx"},context:{react:n(62435)},renderOpts:{compile:function(){var S=w()(y()().mark(function f(){var O,I=arguments;return y()().wrap(function(v){for(;;)switch(v.prev=v.next){case 0:return v.next=2,n.e(7335).then(n.bind(n,37335));case 2:return v.abrupt("return",(O=v.sent).default.apply(O,I));case 3:case"end":return v.stop()}},f)}));function E(){return S.apply(this,arguments)}return E}()}},"docs-react-base-context-demo-1":{component:i.memo(i.lazy(w()(y()().mark(function S(){var E,f,O,I,C,v,A,U,L,K,N,_;return y()().wrap(function(j){for(;;)switch(j.prev=j.next){case 0:return N=function(k){var W=k.label,J=k.name,H=k.onChange,z=i.useContext(E),$=z.type,V=z.color;return i.createElement("div",{className:"checkbox",onClick:H},i.createElement("label",{htmlFor:"name"}," ",W," "),i.createElement("input",{type:"checkbox",id:J,value:$,name:J,checked:$===J,style:{color:V}}))},K=function(k){return i.createElement(E.Consumer,null,function(W){var J=W.border,H=W.color;return i.createElement("div",{className:"context_box",style:{border:J,color:H}},k.children)})},L=function(k){var W=i.useContext(E),J=W.color,H=W.border,z=k.label,$=k.placeholder;return i.createElement("div",null,i.createElement("label",{style:{color:J}},z),i.createElement("input",{className:"input",placeholder:$,style:{border:H}}))},E=i.createContext(null),j.next=6,Promise.resolve().then(n.bind(n,77022));case 6:return f=j.sent,O=f.HomeOutlined,I=f.SettingFilled,C=f.SyncOutlined,v=f.SmileOutlined,A=f.LoadingOutlined,U={dark:{color:"#1890ff",background:"#1890ff",border:"1px solid blue",type:"dark"},light:{color:"#fc4838",background:"#fc4838",border:"1px solid pink",type:"light"}},_=function(){var k=i.useContext(E),W=k.border,J=k.setTheme,H=k.color,z=k.background;return i.createElement("div",{className:"context_app",style:{border:W,color:H}},i.createElement("div",{className:"context_change_theme"},i.createElement("span",null," \u9009\u62E9\u4E3B\u9898\uFF1A "),i.createElement(N,{label:"light",name:"light",onChange:function(){return J(U.light)}}),i.createElement(N,{label:"dark",name:"dark",onChange:function(){return J(U.dark)}})),i.createElement("div",{className:"box_content"},i.createElement(K,null,i.createElement(L,{label:"\u59D3\u540D\uFF1A",placeholder:"\u8BF7\u8F93\u5165\u59D3\u540D"}),i.createElement(L,{label:"age\uFF1A",placeholder:"\u8BF7\u8F93\u5165\u5E74\u9F84"}),i.createElement("button",{className:"searchbtn",style:{color:H}},"\u786E\u5B9A"),i.createElement("button",{className:"concellbtn",style:{color:H}},"\u53D6\u6D88")),i.createElement(K,null,i.createElement(O,{twoToneColor:H}),i.createElement(I,{twoToneColor:H}),i.createElement(v,{twoToneColor:H}),i.createElement(C,{spin:!0,twoToneColor:H}),i.createElement(v,{twoToneColor:H,rotate:180}),i.createElement(A,{twoToneColor:H})),i.createElement(K,null,i.createElement("div",{className:"person_des",style:{color:"#fff",background:z}},"I am alien ",i.createElement("br",null),"let us learn React!"))))},j.abrupt("return",{default:function(){var k=i.useState(U.dark),W=x()(k,2),J=W[0],H=W[1];return i.createElement(E.Provider,{value:a()(a()({},J),{},{setTheme:H})},i.createElement(_,null))}});case 15:case"end":return j.stop()}},S)})))),asset:{type:"BLOCK",id:"docs-react-base-context-demo-1",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:`const ThemeContext = React.createContext(null); // \u4E3B\u9898\u989C\u8272Context
+export default App;`},react:{type:"NPM",value:"18.1.0"}},entry:"index.jsx"},context:{react:n(62435)},renderOpts:{compile:function(){var P=w()(y()().mark(function f(){var C,I=arguments;return y()().wrap(function(v){for(;;)switch(v.prev=v.next){case 0:return v.next=2,n.e(7335).then(n.bind(n,37335));case 2:return v.abrupt("return",(C=v.sent).default.apply(C,I));case 3:case"end":return v.stop()}},f)}));function E(){return P.apply(this,arguments)}return E}()}},"docs-react-base-context-demo-1":{component:i.memo(i.lazy(w()(y()().mark(function P(){var E,f,C,I,D,v,_,N,L,K,W,A;return y()().wrap(function(j){for(;;)switch(j.prev=j.next){case 0:return W=function(k){var U=k.label,J=k.name,H=k.onChange,z=i.useContext(E),V=z.type,G=z.color;return i.createElement("div",{className:"checkbox",onClick:H},i.createElement("label",{htmlFor:"name"}," ",U," "),i.createElement("input",{type:"checkbox",id:J,value:V,name:J,checked:V===J,style:{color:G}}))},K=function(k){return i.createElement(E.Consumer,null,function(U){var J=U.border,H=U.color;return i.createElement("div",{className:"context_box",style:{border:J,color:H}},k.children)})},L=function(k){var U=i.useContext(E),J=U.color,H=U.border,z=k.label,V=k.placeholder;return i.createElement("div",null,i.createElement("label",{style:{color:J}},z),i.createElement("input",{className:"input",placeholder:V,style:{border:H}}))},E=i.createContext(null),j.next=6,Promise.resolve().then(n.bind(n,77022));case 6:return f=j.sent,C=f.HomeOutlined,I=f.SettingFilled,D=f.SyncOutlined,v=f.SmileOutlined,_=f.LoadingOutlined,N={dark:{color:"#1890ff",background:"#1890ff",border:"1px solid blue",type:"dark"},light:{color:"#fc4838",background:"#fc4838",border:"1px solid pink",type:"light"}},A=function(){var k=i.useContext(E),U=k.border,J=k.setTheme,H=k.color,z=k.background;return i.createElement("div",{className:"context_app",style:{border:U,color:H}},i.createElement("div",{className:"context_change_theme"},i.createElement("span",null," \u9009\u62E9\u4E3B\u9898\uFF1A "),i.createElement(W,{label:"light",name:"light",onChange:function(){return J(N.light)}}),i.createElement(W,{label:"dark",name:"dark",onChange:function(){return J(N.dark)}})),i.createElement("div",{className:"box_content"},i.createElement(K,null,i.createElement(L,{label:"\u59D3\u540D\uFF1A",placeholder:"\u8BF7\u8F93\u5165\u59D3\u540D"}),i.createElement(L,{label:"age\uFF1A",placeholder:"\u8BF7\u8F93\u5165\u5E74\u9F84"}),i.createElement("button",{className:"searchbtn",style:{color:H}},"\u786E\u5B9A"),i.createElement("button",{className:"concellbtn",style:{color:H}},"\u53D6\u6D88")),i.createElement(K,null,i.createElement(C,{twoToneColor:H}),i.createElement(I,{twoToneColor:H}),i.createElement(v,{twoToneColor:H}),i.createElement(D,{spin:!0,twoToneColor:H}),i.createElement(v,{twoToneColor:H,rotate:180}),i.createElement(_,{twoToneColor:H})),i.createElement(K,null,i.createElement("div",{className:"person_des",style:{color:"#fff",background:z}},"I am alien ",i.createElement("br",null),"let us learn React!"))))},j.abrupt("return",{default:function(){var k=i.useState(N.dark),U=x()(k,2),J=U[0],H=U[1];return i.createElement(E.Provider,{value:a()(a()({},J),{},{setTheme:H})},i.createElement(A,null))}});case 15:case"end":return j.stop()}},P)})))),asset:{type:"BLOCK",id:"docs-react-base-context-demo-1",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:`const ThemeContext = React.createContext(null); // \u4E3B\u9898\u989C\u8272Context
 import {
   HomeOutlined,
   SettingFilled,
@@ -1136,7 +1136,7 @@ export default function () {
       <App />
     </ThemeContext.Provider>
   );
-}`},"@ant-design/icons":{type:"NPM",value:"5.3.7"}},entry:"index.jsx"},context:{"@ant-design/icons":n(77022)},renderOpts:{compile:function(){var S=w()(y()().mark(function f(){var O,I=arguments;return y()().wrap(function(v){for(;;)switch(v.prev=v.next){case 0:return v.next=2,n.e(7335).then(n.bind(n,37335));case 2:return v.abrupt("return",(O=v.sent).default.apply(O,I));case 3:case"end":return v.stop()}},f)}));function E(){return S.apply(this,arguments)}return E}()}}}},14304:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},65603:function(o,e,n){n.r(e),n.d(e,{demos:function(){return M}});var t=n(5574),a=n.n(t),R=n(15009),x=n.n(R),g=n(12444),y=n.n(g),r=n(72004),b=n.n(r),c=n(31996),s=n.n(c),d=n(26037),p=n.n(d),u=n(99289),m=n.n(u),l=n(62435),M={"docs-react-base-create-portal-demo-0":{component:l.memo(l.lazy(m()(x()().mark(function P(){var D,h,w,i,T,S;return x()().wrap(function(f){for(;;)switch(f.prev=f.next){case 0:return D=document.body,h='<div><div id="root"></div><div id="another-root"></div><div id="another-container"></div></div>',D.insertAdjacentHTML("beforeend",h),f.next=5,Promise.resolve().then(n.t.bind(n,61254,19));case 5:return w=f.sent,i=w.default,T=function(O){s()(C,O);var I=p()(C);function C(){return y()(this,C),I.apply(this,arguments)}return b()(C,[{key:"render",value:function(){return l.createElement("div",{onClick:function(){alert("\u6211\u7238\u5E94\u8BE5\u77E5\u9053\u6211\u88AB\u70B9\u51FB\u4E86")}},"\u6211\u662F\u4F20\u9001\u95E8\u91CC\u51FA\u6765\u7684Portal")}}]),C}(l.Component),S=function(O){s()(C,O);var I=p()(C);function C(){return y()(this,C),I.apply(this,arguments)}return b()(C,[{key:"render",value:function(){return l.createElement("div",{onClick:function(){alert("\u662F\u4E0D\u662F\u4ECE\u4F20\u9001\u95E8\u91CC\u51FA\u6765\u5462\uFF1F \u6211\u5988\u5E94\u8BE5\u77E5\u9053\u6211\u88AB\u70B9\u51FB\u4E86")}},"\u662F\u4E0D\u662F\u4ECE\u4F20\u9001\u95E8\u91CC\u51FA\u6765\u5462\uFF1F not Portal")}}]),C}(l.Component),f.abrupt("return",{default:function(){return l.createElement("div",null,l.createElement("h1",null,"\u7236\u7EC4\u4EF6"),l.createElement("div",{onClick:function(){alert("YES  Dispaly")}}),"XXXX XXXX",l.createElement("div",{onClick:function(){alert("No display")}},l.createElement(S,null)))}});case 10:case"end":return f.stop()}},P)})))),asset:{type:"BLOCK",id:"docs-react-base-create-portal-demo-0",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:`const container = document.body;
+}`},"@ant-design/icons":{type:"NPM",value:"5.3.7"}},entry:"index.jsx"},context:{"@ant-design/icons":n(77022)},renderOpts:{compile:function(){var P=w()(y()().mark(function f(){var C,I=arguments;return y()().wrap(function(v){for(;;)switch(v.prev=v.next){case 0:return v.next=2,n.e(7335).then(n.bind(n,37335));case 2:return v.abrupt("return",(C=v.sent).default.apply(C,I));case 3:case"end":return v.stop()}},f)}));function E(){return P.apply(this,arguments)}return E}()}}}},14304:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},65603:function(o,e,n){n.r(e),n.d(e,{demos:function(){return S}});var t=n(5574),a=n.n(t),R=n(15009),x=n.n(R),g=n(12444),y=n.n(g),r=n(72004),b=n.n(r),c=n(31996),s=n.n(c),d=n(26037),p=n.n(d),u=n(99289),m=n.n(u),l=n(62435),S={"docs-react-base-create-portal-demo-0":{component:l.memo(l.lazy(m()(x()().mark(function O(){var M,h,w,i,T,P;return x()().wrap(function(f){for(;;)switch(f.prev=f.next){case 0:return M=document.body,h='<div><div id="root"></div><div id="another-root"></div><div id="another-container"></div></div>',M.insertAdjacentHTML("beforeend",h),f.next=5,Promise.resolve().then(n.t.bind(n,61254,19));case 5:return w=f.sent,i=w.default,T=function(C){s()(D,C);var I=p()(D);function D(){return y()(this,D),I.apply(this,arguments)}return b()(D,[{key:"render",value:function(){return l.createElement("div",{onClick:function(){alert("\u6211\u7238\u5E94\u8BE5\u77E5\u9053\u6211\u88AB\u70B9\u51FB\u4E86")}},"\u6211\u662F\u4F20\u9001\u95E8\u91CC\u51FA\u6765\u7684Portal")}}]),D}(l.Component),P=function(C){s()(D,C);var I=p()(D);function D(){return y()(this,D),I.apply(this,arguments)}return b()(D,[{key:"render",value:function(){return l.createElement("div",{onClick:function(){alert("\u662F\u4E0D\u662F\u4ECE\u4F20\u9001\u95E8\u91CC\u51FA\u6765\u5462\uFF1F \u6211\u5988\u5E94\u8BE5\u77E5\u9053\u6211\u88AB\u70B9\u51FB\u4E86")}},"\u662F\u4E0D\u662F\u4ECE\u4F20\u9001\u95E8\u91CC\u51FA\u6765\u5462\uFF1F not Portal")}}]),D}(l.Component),f.abrupt("return",{default:function(){return l.createElement("div",null,l.createElement("h1",null,"\u7236\u7EC4\u4EF6"),l.createElement("div",{onClick:function(){alert("YES  Dispaly")}}),"XXXX XXXX",l.createElement("div",{onClick:function(){alert("No display")}},l.createElement(P,null)))}});case 10:case"end":return f.stop()}},O)})))),asset:{type:"BLOCK",id:"docs-react-base-create-portal-demo-0",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:`const container = document.body;
 const htmlString =
   '<div><div id="root"></div><div id="another-root"></div><div id="another-container"></div></div>';
 container.insertAdjacentHTML('beforeend', htmlString);
@@ -1194,7 +1194,7 @@ export default () => {
       </div>
     </div>
   );
-};`},"react-dom":{type:"NPM",value:"18.1.0"}},entry:"index.jsx"},context:{"react-dom":n(61254)},renderOpts:{compile:function(){var P=m()(x()().mark(function h(){var w,i=arguments;return x()().wrap(function(S){for(;;)switch(S.prev=S.next){case 0:return S.next=2,n.e(7335).then(n.bind(n,37335));case 2:return S.abrupt("return",(w=S.sent).default.apply(w,i));case 3:case"end":return S.stop()}},h)}));function D(){return P.apply(this,arguments)}return D}()}},"docs-react-base-create-portal-demo-1":{component:l.memo(l.lazy(m()(x()().mark(function P(){var D,h,w,i,T,S,E,f;return x()().wrap(function(I){for(;;)switch(I.prev=I.next){case 0:return I.next=2,Promise.resolve().then(n.t.bind(n,62435,19));case 2:return D=I.sent,h=D.useState,w=D.useRef,i=D.useLayoutEffect,I.next=8,Promise.resolve().then(n.t.bind(n,61254,19));case 8:return T=I.sent,S=T.default,E=function(v){var A=h(function(){return document.createElement("div")}),U=a()(A,1),L=U[0],K=w(),N=w(!1);return N.current=N.current||v.active,i(function(){if(v.active)K.current.appendChild(L);else try{K.current.removeChild(L)}catch(_){}},[v.active]),l.createElement(l.Fragment,null,l.createElement("div",{id:"232",ref:K}),N.current&&S.createPortal(v.children,L))},f=function(){return console.log("render"),l.createElement("div",null,l.createElement("input",null))},I.abrupt("return",{default:function(){var v=h(!1),A=a()(v,2),U=A[0],L=A[1];return l.createElement("div",{className:"wrap-01"},l.createElement(E,{active:U},l.createElement(f,null)),l.createElement("button",{onClick:function(){return L(!U)}},"\u70B9\u51FB"))}});case 13:case"end":return I.stop()}},P)})))),asset:{type:"BLOCK",id:"docs-react-base-create-portal-demo-1",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:`import { useState, useRef, useLayoutEffect } from 'react';
+};`},"react-dom":{type:"NPM",value:"18.1.0"}},entry:"index.jsx"},context:{"react-dom":n(61254)},renderOpts:{compile:function(){var O=m()(x()().mark(function h(){var w,i=arguments;return x()().wrap(function(P){for(;;)switch(P.prev=P.next){case 0:return P.next=2,n.e(7335).then(n.bind(n,37335));case 2:return P.abrupt("return",(w=P.sent).default.apply(w,i));case 3:case"end":return P.stop()}},h)}));function M(){return O.apply(this,arguments)}return M}()}},"docs-react-base-create-portal-demo-1":{component:l.memo(l.lazy(m()(x()().mark(function O(){var M,h,w,i,T,P,E,f;return x()().wrap(function(I){for(;;)switch(I.prev=I.next){case 0:return I.next=2,Promise.resolve().then(n.t.bind(n,62435,19));case 2:return M=I.sent,h=M.useState,w=M.useRef,i=M.useLayoutEffect,I.next=8,Promise.resolve().then(n.t.bind(n,61254,19));case 8:return T=I.sent,P=T.default,E=function(v){var _=h(function(){return document.createElement("div")}),N=a()(_,1),L=N[0],K=w(),W=w(!1);return W.current=W.current||v.active,i(function(){if(v.active)K.current.appendChild(L);else try{K.current.removeChild(L)}catch(A){}},[v.active]),l.createElement(l.Fragment,null,l.createElement("div",{id:"232",ref:K}),W.current&&P.createPortal(v.children,L))},f=function(){return console.log("render"),l.createElement("div",null,l.createElement("input",null))},I.abrupt("return",{default:function(){var v=h(!1),_=a()(v,2),N=_[0],L=_[1];return l.createElement("div",{className:"wrap-01"},l.createElement(E,{active:N},l.createElement(f,null)),l.createElement("button",{onClick:function(){return L(!N)}},"\u70B9\u51FB"))}});case 13:case"end":return I.stop()}},O)})))),asset:{type:"BLOCK",id:"docs-react-base-create-portal-demo-1",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:`import { useState, useRef, useLayoutEffect } from 'react';
 import ReactDOM from 'react-dom';
 const App = (props) => {
   const [targetElement] = useState(() => document.createElement('div'));
@@ -1239,7 +1239,7 @@ export default () => {
       <button onClick={() => setActive(!active)}>\u70B9\u51FB</button>
     </div>
   );
-};`},react:{type:"NPM",value:"18.1.0"},"react-dom":{type:"NPM",value:"18.1.0"}},entry:"index.jsx"},context:{react:n(62435),"react-dom":n(61254)},renderOpts:{compile:function(){var P=m()(x()().mark(function h(){var w,i=arguments;return x()().wrap(function(S){for(;;)switch(S.prev=S.next){case 0:return S.next=2,n.e(7335).then(n.bind(n,37335));case 2:return S.abrupt("return",(w=S.sent).default.apply(w,i));case 3:case"end":return S.stop()}},h)}));function D(){return P.apply(this,arguments)}return D}()}}}},57878:function(o,e,n){n.r(e),n.d(e,{demos:function(){return y}});var t=n(15009),a=n.n(t),R=n(99289),x=n.n(R),g=n(62435),y={"docs-react-base-event-demo-0":{component:g.memo(g.lazy(x()(a()().mark(function r(){return a()().wrap(function(c){for(;;)switch(c.prev=c.next){case 0:return c.abrupt("return",{default:function(){var d=function(){console.log("\u6A21\u62DF\u5192\u6CE1\u9636\u6BB5\u6267\u884C")},p=function(){console.log("\u6A21\u62DF\u6355\u83B7\u9636\u6BB5\u6267\u884C")};return g.createElement("div",null,g.createElement("button",{onClick:d,onClickCapture:p},"\u70B9\u51FB"))}});case 1:case"end":return c.stop()}},r)})))),asset:{type:"BLOCK",id:"docs-react-base-event-demo-0",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:`export default function Index() {
+};`},react:{type:"NPM",value:"18.1.0"},"react-dom":{type:"NPM",value:"18.1.0"}},entry:"index.jsx"},context:{react:n(62435),"react-dom":n(61254)},renderOpts:{compile:function(){var O=m()(x()().mark(function h(){var w,i=arguments;return x()().wrap(function(P){for(;;)switch(P.prev=P.next){case 0:return P.next=2,n.e(7335).then(n.bind(n,37335));case 2:return P.abrupt("return",(w=P.sent).default.apply(w,i));case 3:case"end":return P.stop()}},h)}));function M(){return O.apply(this,arguments)}return M}()}}}},57878:function(o,e,n){n.r(e),n.d(e,{demos:function(){return y}});var t=n(15009),a=n.n(t),R=n(99289),x=n.n(R),g=n(62435),y={"docs-react-base-event-demo-0":{component:g.memo(g.lazy(x()(a()().mark(function r(){return a()().wrap(function(c){for(;;)switch(c.prev=c.next){case 0:return c.abrupt("return",{default:function(){var d=function(){console.log("\u6A21\u62DF\u5192\u6CE1\u9636\u6BB5\u6267\u884C")},p=function(){console.log("\u6A21\u62DF\u6355\u83B7\u9636\u6BB5\u6267\u884C")};return g.createElement("div",null,g.createElement("button",{onClick:d,onClickCapture:p},"\u70B9\u51FB"))}});case 1:case"end":return c.stop()}},r)})))),asset:{type:"BLOCK",id:"docs-react-base-event-demo-0",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:`export default function Index() {
   const handleClick = () => {
     console.log('\u6A21\u62DF\u5192\u6CE1\u9636\u6BB5\u6267\u884C');
   };
@@ -1277,7 +1277,7 @@ export default () => {
       </button>
     </div>
   );
-}`}},entry:"index.jsx"},context:{},renderOpts:{compile:function(){var r=x()(a()().mark(function c(){var s,d=arguments;return a()().wrap(function(u){for(;;)switch(u.prev=u.next){case 0:return u.next=2,n.e(7335).then(n.bind(n,37335));case 2:return u.abrupt("return",(s=u.sent).default.apply(s,d));case 3:case"end":return u.stop()}},c)}));function b(){return r.apply(this,arguments)}return b}()}}}},95372:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},3378:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},76700:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},83626:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},15042:function(o,e,n){n.r(e),n.d(e,{demos:function(){return w}});var t=n(12444),a=n.n(t),R=n(72004),x=n.n(R),g=n(25098),y=n.n(g),r=n(31996),b=n.n(r),c=n(26037),s=n.n(c),d=n(9783),p=n.n(d),u=n(15009),m=n.n(u),l=n(5574),M=n.n(l),P=n(99289),D=n.n(P),h=n(62435),w={"docs-react-base-hooks-update-demo-0":{component:h.memo(h.lazy(D()(m()().mark(function i(){var T,S,E;return m()().wrap(function(O){for(;;)switch(O.prev=O.next){case 0:return O.next=2,Promise.resolve().then(n.t.bind(n,62435,19));case 2:return T=O.sent,S=T.useState,E=T.useEffect,O.abrupt("return",{default:function(){var C=S([4]),v=M()(C,2),A=v[0],U=v[1];return E(function(){var L=A;L.push(1),L.push(2),console.log(L),U(L)},[]),h.createElement("div",null,A.length)}});case 6:case"end":return O.stop()}},i)})))),asset:{type:"BLOCK",id:"docs-react-base-hooks-update-demo-0",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:`import { useState, useEffect } from 'react';
+}`}},entry:"index.jsx"},context:{},renderOpts:{compile:function(){var r=x()(a()().mark(function c(){var s,d=arguments;return a()().wrap(function(u){for(;;)switch(u.prev=u.next){case 0:return u.next=2,n.e(7335).then(n.bind(n,37335));case 2:return u.abrupt("return",(s=u.sent).default.apply(s,d));case 3:case"end":return u.stop()}},c)}));function b(){return r.apply(this,arguments)}return b}()}}}},95372:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},3378:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},76700:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},83626:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},15042:function(o,e,n){n.r(e),n.d(e,{demos:function(){return w}});var t=n(12444),a=n.n(t),R=n(72004),x=n.n(R),g=n(25098),y=n.n(g),r=n(31996),b=n.n(r),c=n(26037),s=n.n(c),d=n(9783),p=n.n(d),u=n(15009),m=n.n(u),l=n(5574),S=n.n(l),O=n(99289),M=n.n(O),h=n(62435),w={"docs-react-base-hooks-update-demo-0":{component:h.memo(h.lazy(M()(m()().mark(function i(){var T,P,E;return m()().wrap(function(C){for(;;)switch(C.prev=C.next){case 0:return C.next=2,Promise.resolve().then(n.t.bind(n,62435,19));case 2:return T=C.sent,P=T.useState,E=T.useEffect,C.abrupt("return",{default:function(){var D=P([4]),v=S()(D,2),_=v[0],N=v[1];return E(function(){var L=_;L.push(1),L.push(2),console.log(L),N(L)},[]),h.createElement("div",null,_.length)}});case 6:case"end":return C.stop()}},i)})))),asset:{type:"BLOCK",id:"docs-react-base-hooks-update-demo-0",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:`import { useState, useEffect } from 'react';
 export default () => {
   const [obj, setObj] = useState([4]);
   useEffect(() => {
@@ -1292,7 +1292,7 @@ export default () => {
     setObj(c);
   }, []);
   return <div>{obj.length}</div>;
-};`},react:{type:"NPM",value:"18.1.0"}},entry:"index.jsx"},context:{react:n(62435)},renderOpts:{compile:function(){var i=D()(m()().mark(function S(){var E,f=arguments;return m()().wrap(function(I){for(;;)switch(I.prev=I.next){case 0:return I.next=2,n.e(7335).then(n.bind(n,37335));case 2:return I.abrupt("return",(E=I.sent).default.apply(E,f));case 3:case"end":return I.stop()}},S)}));function T(){return i.apply(this,arguments)}return T}()}},"docs-react-base-hooks-update-demo-1":{component:h.memo(h.lazy(D()(m()().mark(function i(){var T;return m()().wrap(function(E){for(;;)switch(E.prev=E.next){case 0:return T=function(f){b()(I,f);var O=s()(I);function I(C){var v;return a()(this,I),v=O.call(this,C),p()(y()(v),"handleClick",function(){for(var A=0;A<5;A++)setTimeout(function(){v.setState({number:v.state.number+1}),console.log(v.state.number)},1e3)}),v.state={number:0},v}return x()(I,[{key:"render",value:function(){return console.log("number",this.state.number),h.createElement("div",null,this.state.number,h.createElement("button",{onClick:this.handleClick}," num++"))}}]),I}(h.Component),E.abrupt("return",{default:T});case 2:case"end":return E.stop()}},i)})))),asset:{type:"BLOCK",id:"docs-react-base-hooks-update-demo-1",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:`class Index extends React.Component {
+};`},react:{type:"NPM",value:"18.1.0"}},entry:"index.jsx"},context:{react:n(62435)},renderOpts:{compile:function(){var i=M()(m()().mark(function P(){var E,f=arguments;return m()().wrap(function(I){for(;;)switch(I.prev=I.next){case 0:return I.next=2,n.e(7335).then(n.bind(n,37335));case 2:return I.abrupt("return",(E=I.sent).default.apply(E,f));case 3:case"end":return I.stop()}},P)}));function T(){return i.apply(this,arguments)}return T}()}},"docs-react-base-hooks-update-demo-1":{component:h.memo(h.lazy(M()(m()().mark(function i(){var T;return m()().wrap(function(E){for(;;)switch(E.prev=E.next){case 0:return T=function(f){b()(I,f);var C=s()(I);function I(D){var v;return a()(this,I),v=C.call(this,D),p()(y()(v),"handleClick",function(){for(var _=0;_<5;_++)setTimeout(function(){v.setState({number:v.state.number+1}),console.log(v.state.number)},1e3)}),v.state={number:0},v}return x()(I,[{key:"render",value:function(){return console.log("number",this.state.number),h.createElement("div",null,this.state.number,h.createElement("button",{onClick:this.handleClick}," num++"))}}]),I}(h.Component),E.abrupt("return",{default:T});case 2:case"end":return E.stop()}},i)})))),asset:{type:"BLOCK",id:"docs-react-base-hooks-update-demo-1",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:`class Index extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -1319,7 +1319,7 @@ export default () => {
     );
   }
 }
-export default Index;`}},entry:"index.jsx"},context:{},renderOpts:{compile:function(){var i=D()(m()().mark(function S(){var E,f=arguments;return m()().wrap(function(I){for(;;)switch(I.prev=I.next){case 0:return I.next=2,n.e(7335).then(n.bind(n,37335));case 2:return I.abrupt("return",(E=I.sent).default.apply(E,f));case 3:case"end":return I.stop()}},S)}));function T(){return i.apply(this,arguments)}return T}()}},"docs-react-base-hooks-update-demo-2":{component:h.memo(h.lazy(D()(m()().mark(function i(){var T;return m()().wrap(function(E){for(;;)switch(E.prev=E.next){case 0:return T=function(){var O=h.useState(0),I=M()(O,2),C=I[0],v=I[1],A=function(){for(var L=0;L<5;L++)setTimeout(function(){v(C+1),console.log(C)},1e3)};return console.log("num: ",C),h.createElement("button",{onClick:A},C)},E.abrupt("return",{default:T});case 2:case"end":return E.stop()}},i)})))),asset:{type:"BLOCK",id:"docs-react-base-hooks-update-demo-2",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:`function Index() {
+export default Index;`}},entry:"index.jsx"},context:{},renderOpts:{compile:function(){var i=M()(m()().mark(function P(){var E,f=arguments;return m()().wrap(function(I){for(;;)switch(I.prev=I.next){case 0:return I.next=2,n.e(7335).then(n.bind(n,37335));case 2:return I.abrupt("return",(E=I.sent).default.apply(E,f));case 3:case"end":return I.stop()}},P)}));function T(){return i.apply(this,arguments)}return T}()}},"docs-react-base-hooks-update-demo-2":{component:h.memo(h.lazy(M()(m()().mark(function i(){var T;return m()().wrap(function(E){for(;;)switch(E.prev=E.next){case 0:return T=function(){var C=h.useState(0),I=S()(C,2),D=I[0],v=I[1],_=function(){for(var L=0;L<5;L++)setTimeout(function(){v(D+1),console.log(D)},1e3)};return console.log("num: ",D),h.createElement("button",{onClick:_},D)},E.abrupt("return",{default:T});case 2:case"end":return E.stop()}},i)})))),asset:{type:"BLOCK",id:"docs-react-base-hooks-update-demo-2",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:`function Index() {
   const [num, setNumber] = React.useState(0);
   const handleClick = () => {
     for (let i = 0; i < 5; i++) {
@@ -1333,7 +1333,7 @@ export default Index;`}},entry:"index.jsx"},context:{},renderOpts:{compile:funct
 
   return <button onClick={handleClick}>{num}</button>;
 }
-export default Index;`}},entry:"index.jsx"},context:{},renderOpts:{compile:function(){var i=D()(m()().mark(function S(){var E,f=arguments;return m()().wrap(function(I){for(;;)switch(I.prev=I.next){case 0:return I.next=2,n.e(7335).then(n.bind(n,37335));case 2:return I.abrupt("return",(E=I.sent).default.apply(E,f));case 3:case"end":return I.stop()}},S)}));function T(){return i.apply(this,arguments)}return T}()}}}},49388:function(o,e,n){n.r(e),n.d(e,{demos:function(){return y}});var t=n(15009),a=n.n(t),R=n(99289),x=n.n(R),g=n(62435),y={"docs-react-base-jsx-demo-0":{component:g.memo(g.lazy(x()(a()().mark(function r(){var b;return a()().wrap(function(s){for(;;)switch(s.prev=s.next){case 0:return b=function(){var p=g.createElement("div",{className:"original"},"Original Text"),u=g.cloneElement(p,{className:"cloned",style:{color:"red"}},"Cloned Text");return g.createElement("div",null,p,u)},s.abrupt("return",{default:b});case 2:case"end":return s.stop()}},r)})))),asset:{type:"BLOCK",id:"docs-react-base-jsx-demo-0",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:`const MyComponent = () => {
+export default Index;`}},entry:"index.jsx"},context:{},renderOpts:{compile:function(){var i=M()(m()().mark(function P(){var E,f=arguments;return m()().wrap(function(I){for(;;)switch(I.prev=I.next){case 0:return I.next=2,n.e(7335).then(n.bind(n,37335));case 2:return I.abrupt("return",(E=I.sent).default.apply(E,f));case 3:case"end":return I.stop()}},P)}));function T(){return i.apply(this,arguments)}return T}()}}}},49388:function(o,e,n){n.r(e),n.d(e,{demos:function(){return y}});var t=n(15009),a=n.n(t),R=n(99289),x=n.n(R),g=n(62435),y={"docs-react-base-jsx-demo-0":{component:g.memo(g.lazy(x()(a()().mark(function r(){var b;return a()().wrap(function(s){for(;;)switch(s.prev=s.next){case 0:return b=function(){var p=g.createElement("div",{className:"original"},"Original Text"),u=g.cloneElement(p,{className:"cloned",style:{color:"red"}},"Cloned Text");return g.createElement("div",null,p,u)},s.abrupt("return",{default:b});case 2:case"end":return s.stop()}},r)})))),asset:{type:"BLOCK",id:"docs-react-base-jsx-demo-0",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:`const MyComponent = () => {
   const original = <div className="original">Original Text</div>;
 
   // \u514B\u9686\u5143\u7D20\uFF0C\u5E76\u6DFB\u52A0\u65B0\u7684 props \u548C children
@@ -1389,7 +1389,7 @@ export default Father;
 // --------Son useLayoutEffect-------
 // --------Father useLayoutEffect-------
 // --------Son useEffect-------
-// --------Father useEffect-------`}},entry:"index.jsx"},context:{},renderOpts:{compile:function(){var c=y()(x()().mark(function d(){var p,u=arguments;return x()().wrap(function(l){for(;;)switch(l.prev=l.next){case 0:return l.next=2,n.e(7335).then(n.bind(n,37335));case 2:return l.abrupt("return",(p=l.sent).default.apply(p,u));case 3:case"end":return l.stop()}},d)}));function s(){return c.apply(this,arguments)}return s}()}},"docs-react-base-use-effect-demo-1":{component:r.memo(r.lazy(y()(x()().mark(function c(){var s;return x()().wrap(function(p){for(;;)switch(p.prev=p.next){case 0:return s=function(m){var l=r.useState(0),M=a()(l,2),P=M[0],D=M[1];return r.useEffect(function(){return console.log("\u7EC4\u4EF6\u6302\u8F7D\u5B8C\u6210\uFF1AcomponentDidMount"),function(){console.log("\u7EC4\u4EF6\u9500\u6BC1\uFF1AcomponentWillUnmount")}},[]),r.useEffect(function(){console.log("props\u53D8\u5316\uFF1AcomponentWillReceiveProps")},[m]),r.useEffect(function(){console.log(" \u7EC4\u4EF6\u66F4\u65B0\u5B8C\u6210\uFF1AcomponentDidUpdate ")}),r.createElement("div",null,r.createElement("div",null," props : ",m.number," "),r.createElement("div",null," states : ",P," "),r.createElement("button",{onClick:function(){return D(function(w){return w+1})}},"\u6539\u53D8state"))},p.abrupt("return",{default:function(){var m=r.useState(0),l=a()(m,2),M=l[0],P=l[1],D=r.useState(!0),h=a()(D,2),w=h[0],i=h[1];return r.createElement("div",null,w&&r.createElement(s,{number:M}),r.createElement("button",{onClick:function(){return P(function(S){return S+1})}},"\u6539\u53D8props")," ",r.createElement("br",null),r.createElement("button",{onClick:function(){return i(!1)}},"\u5378\u8F7D\u7EC4\u4EF6"))}});case 2:case"end":return p.stop()}},c)})))),asset:{type:"BLOCK",id:"docs-react-base-use-effect-demo-1",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:`function FunctionLifecycle(props) {
+// --------Father useEffect-------`}},entry:"index.jsx"},context:{},renderOpts:{compile:function(){var c=y()(x()().mark(function d(){var p,u=arguments;return x()().wrap(function(l){for(;;)switch(l.prev=l.next){case 0:return l.next=2,n.e(7335).then(n.bind(n,37335));case 2:return l.abrupt("return",(p=l.sent).default.apply(p,u));case 3:case"end":return l.stop()}},d)}));function s(){return c.apply(this,arguments)}return s}()}},"docs-react-base-use-effect-demo-1":{component:r.memo(r.lazy(y()(x()().mark(function c(){var s;return x()().wrap(function(p){for(;;)switch(p.prev=p.next){case 0:return s=function(m){var l=r.useState(0),S=a()(l,2),O=S[0],M=S[1];return r.useEffect(function(){return console.log("\u7EC4\u4EF6\u6302\u8F7D\u5B8C\u6210\uFF1AcomponentDidMount"),function(){console.log("\u7EC4\u4EF6\u9500\u6BC1\uFF1AcomponentWillUnmount")}},[]),r.useEffect(function(){console.log("props\u53D8\u5316\uFF1AcomponentWillReceiveProps")},[m]),r.useEffect(function(){console.log(" \u7EC4\u4EF6\u66F4\u65B0\u5B8C\u6210\uFF1AcomponentDidUpdate ")}),r.createElement("div",null,r.createElement("div",null," props : ",m.number," "),r.createElement("div",null," states : ",O," "),r.createElement("button",{onClick:function(){return M(function(w){return w+1})}},"\u6539\u53D8state"))},p.abrupt("return",{default:function(){var m=r.useState(0),l=a()(m,2),S=l[0],O=l[1],M=r.useState(!0),h=a()(M,2),w=h[0],i=h[1];return r.createElement("div",null,w&&r.createElement(s,{number:S}),r.createElement("button",{onClick:function(){return O(function(P){return P+1})}},"\u6539\u53D8props")," ",r.createElement("br",null),r.createElement("button",{onClick:function(){return i(!1)}},"\u5378\u8F7D\u7EC4\u4EF6"))}});case 2:case"end":return p.stop()}},c)})))),asset:{type:"BLOCK",id:"docs-react-base-use-effect-demo-1",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:`function FunctionLifecycle(props) {
   const [num, setNum] = React.useState(0);
   React.useEffect(() => {
     /* \u8BF7\u6C42\u6570\u636E \uFF0C \u4E8B\u4EF6\u76D1\u542C \uFF0C \u64CD\u7EB5dom  \uFF0C \u589E\u52A0\u5B9A\u65F6\u5668 \uFF0C \u5EF6\u65F6\u5668 */
@@ -1427,7 +1427,7 @@ export default () => {
       <button onClick={() => setRender(false)}>\u5378\u8F7D\u7EC4\u4EF6</button>
     </div>
   );
-};`}},entry:"index.jsx"},context:{},renderOpts:{compile:function(){var c=y()(x()().mark(function d(){var p,u=arguments;return x()().wrap(function(l){for(;;)switch(l.prev=l.next){case 0:return l.next=2,n.e(7335).then(n.bind(n,37335));case 2:return l.abrupt("return",(p=l.sent).default.apply(p,u));case 3:case"end":return l.stop()}},d)}));function s(){return c.apply(this,arguments)}return s}()}}}},76396:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},83385:function(o,e,n){n.r(e),n.d(e,{demos:function(){return b}});var t=n(15009),a=n.n(t),R=n(5574),x=n.n(R),g=n(99289),y=n.n(g),r=n(62435),b={"docs-react-base-use-state-demo-0":{component:r.memo(r.lazy(y()(a()().mark(function c(){var s,d;return a()().wrap(function(u){for(;;)switch(u.prev=u.next){case 0:return u.next=2,Promise.resolve().then(n.bind(n,59705));case 2:return s=u.sent,d=s.Button,u.abrupt("return",{default:function(){var l=r.useState(Math.random()),M=x()(l,2),P=M[0],D=M[1];console.log("s",P);var h=r.useState(function(){return console.log("\u5F00\u59CB\u6267\u884C"),"\u53EA\u8981\u6267\u884C\u4E00\u6B21\u7684\u521D\u59CB\u503C"}),w=x()(h,2),i=w[0],T=w[1];return r.createElement("div",null,r.createElement(d,{onClick:function(){D(Math.random())}},"\u5237\u65B0"),r.createElement(d,null,i))}});case 5:case"end":return u.stop()}},c)})))),asset:{type:"BLOCK",id:"docs-react-base-use-state-demo-0",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:`import { Button } from 'antd';
+};`}},entry:"index.jsx"},context:{},renderOpts:{compile:function(){var c=y()(x()().mark(function d(){var p,u=arguments;return x()().wrap(function(l){for(;;)switch(l.prev=l.next){case 0:return l.next=2,n.e(7335).then(n.bind(n,37335));case 2:return l.abrupt("return",(p=l.sent).default.apply(p,u));case 3:case"end":return l.stop()}},d)}));function s(){return c.apply(this,arguments)}return s}()}}}},76396:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},83385:function(o,e,n){n.r(e),n.d(e,{demos:function(){return b}});var t=n(15009),a=n.n(t),R=n(5574),x=n.n(R),g=n(99289),y=n.n(g),r=n(62435),b={"docs-react-base-use-state-demo-0":{component:r.memo(r.lazy(y()(a()().mark(function c(){var s,d;return a()().wrap(function(u){for(;;)switch(u.prev=u.next){case 0:return u.next=2,Promise.resolve().then(n.bind(n,59705));case 2:return s=u.sent,d=s.Button,u.abrupt("return",{default:function(){var l=r.useState(Math.random()),S=x()(l,2),O=S[0],M=S[1];console.log("s",O);var h=r.useState(function(){return console.log("\u5F00\u59CB\u6267\u884C"),"\u53EA\u8981\u6267\u884C\u4E00\u6B21\u7684\u521D\u59CB\u503C"}),w=x()(h,2),i=w[0],T=w[1];return r.createElement("div",null,r.createElement(d,{onClick:function(){M(Math.random())}},"\u5237\u65B0"),r.createElement(d,null,i))}});case 5:case"end":return u.stop()}},c)})))),asset:{type:"BLOCK",id:"docs-react-base-use-state-demo-0",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:`import { Button } from 'antd';
 export default () => {
   const [s, setS] = React.useState(Math.random());
   console.log('s', s);
@@ -1448,7 +1448,7 @@ export default () => {
       <Button>{state}</Button>
     </div>
   );
-};`},antd:{type:"NPM",value:"5.17.3"}},entry:"index.jsx"},context:{antd:n(59705)},renderOpts:{compile:function(){var c=y()(a()().mark(function d(){var p,u=arguments;return a()().wrap(function(l){for(;;)switch(l.prev=l.next){case 0:return l.next=2,n.e(7335).then(n.bind(n,37335));case 2:return l.abrupt("return",(p=l.sent).default.apply(p,u));case 3:case"end":return l.stop()}},d)}));function s(){return c.apply(this,arguments)}return s}()}}}},64474:function(o,e,n){n.r(e),n.d(e,{demos:function(){return b}});var t=n(15009),a=n.n(t),R=n(5574),x=n.n(R),g=n(99289),y=n.n(g),r=n(62435),b={"docs-react-base-v-18-demo-0":{component:r.memo(r.lazy(y()(a()().mark(function c(){var s,d,p;return a()().wrap(function(m){for(;;)switch(m.prev=m.next){case 0:return m.next=2,Promise.resolve().then(n.t.bind(n,61254,19));case 2:return s=m.sent,d=s.flushSync,p=function(){var M=r.useState(0),P=x()(M,2),D=P[0],h=P[1];return console.log("count: ",D),r.createElement("div",{onClick:function(){d(function(){h(function(i){return i+1}),h(function(i){return i+1})}),d(function(){h(function(i){return i+2})})}},r.createElement("button",null,"count\uFF1A ",D))},m.abrupt("return",{default:p});case 6:case"end":return m.stop()}},c)})))),asset:{type:"BLOCK",id:"docs-react-base-v-18-demo-0",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:`import { flushSync } from 'react-dom';
+};`},antd:{type:"NPM",value:"5.17.3"}},entry:"index.jsx"},context:{antd:n(59705)},renderOpts:{compile:function(){var c=y()(a()().mark(function d(){var p,u=arguments;return a()().wrap(function(l){for(;;)switch(l.prev=l.next){case 0:return l.next=2,n.e(7335).then(n.bind(n,37335));case 2:return l.abrupt("return",(p=l.sent).default.apply(p,u));case 3:case"end":return l.stop()}},d)}));function s(){return c.apply(this,arguments)}return s}()}}}},64474:function(o,e,n){n.r(e),n.d(e,{demos:function(){return b}});var t=n(15009),a=n.n(t),R=n(5574),x=n.n(R),g=n(99289),y=n.n(g),r=n(62435),b={"docs-react-base-v-18-demo-0":{component:r.memo(r.lazy(y()(a()().mark(function c(){var s,d,p;return a()().wrap(function(m){for(;;)switch(m.prev=m.next){case 0:return m.next=2,Promise.resolve().then(n.t.bind(n,61254,19));case 2:return s=m.sent,d=s.flushSync,p=function(){var S=r.useState(0),O=x()(S,2),M=O[0],h=O[1];return console.log("count: ",M),r.createElement("div",{onClick:function(){d(function(){h(function(i){return i+1}),h(function(i){return i+1})}),d(function(){h(function(i){return i+2})})}},r.createElement("button",null,"count\uFF1A ",M))},m.abrupt("return",{default:p});case 6:case"end":return m.stop()}},c)})))),asset:{type:"BLOCK",id:"docs-react-base-v-18-demo-0",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:`import { flushSync } from 'react-dom';
 const App = () => {
   const [count, setCount] = React.useState(0);
   console.log('count: ', count);
@@ -1471,7 +1471,7 @@ const App = () => {
   );
 };
 
-export default App;`},"react-dom":{type:"NPM",value:"18.1.0"}},entry:"index.jsx"},context:{"react-dom":n(61254)},renderOpts:{compile:function(){var c=y()(a()().mark(function d(){var p,u=arguments;return a()().wrap(function(l){for(;;)switch(l.prev=l.next){case 0:return l.next=2,n.e(7335).then(n.bind(n,37335));case 2:return l.abrupt("return",(p=l.sent).default.apply(p,u));case 3:case"end":return l.stop()}},d)}));function s(){return c.apply(this,arguments)}return s}()}}}},10369:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},96033:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},88209:function(o,e,n){n.r(e),n.d(e,{demos:function(){return b}});var t=n(15009),a=n.n(t),R=n(5574),x=n.n(R),g=n(99289),y=n.n(g),r=n(62435),b={"docs-react-hooks-use-timeout-demo-0":{component:r.memo(r.lazy(y()(a()().mark(function c(){var s,d;return a()().wrap(function(u){for(;;)switch(u.prev=u.next){case 0:return d=function(){var l=r.useState(1),M=x()(l,2),P=M[0],D=M[1],h=function(){return D(P+1)};return setTimeout(function(){D(P+1)},3e3),r.createElement("div",null," ",P," ")},s=function(l,M){var P=r.useRef();r.useEffect(function(){P.current=l},[l]),r.useEffect(function(){M!==null&&setTimeout(function(){P.current()},M)},[M])},u.abrupt("return",{default:d});case 3:case"end":return u.stop()}},c)})))),asset:{type:"BLOCK",id:"docs-react-hooks-use-timeout-demo-0",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:`function useTimeout(callback, delay) {
+export default App;`},"react-dom":{type:"NPM",value:"18.1.0"}},entry:"index.jsx"},context:{"react-dom":n(61254)},renderOpts:{compile:function(){var c=y()(a()().mark(function d(){var p,u=arguments;return a()().wrap(function(l){for(;;)switch(l.prev=l.next){case 0:return l.next=2,n.e(7335).then(n.bind(n,37335));case 2:return l.abrupt("return",(p=l.sent).default.apply(p,u));case 3:case"end":return l.stop()}},d)}));function s(){return c.apply(this,arguments)}return s}()}}}},10369:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},96033:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},88209:function(o,e,n){n.r(e),n.d(e,{demos:function(){return b}});var t=n(15009),a=n.n(t),R=n(5574),x=n.n(R),g=n(99289),y=n.n(g),r=n(62435),b={"docs-react-hooks-use-timeout-demo-0":{component:r.memo(r.lazy(y()(a()().mark(function c(){var s,d;return a()().wrap(function(u){for(;;)switch(u.prev=u.next){case 0:return d=function(){var l=r.useState(1),S=x()(l,2),O=S[0],M=S[1],h=function(){return M(O+1)};return setTimeout(function(){M(O+1)},3e3),r.createElement("div",null," ",O," ")},s=function(l,S){var O=r.useRef();r.useEffect(function(){O.current=l},[l]),r.useEffect(function(){S!==null&&setTimeout(function(){O.current()},S)},[S])},u.abrupt("return",{default:d});case 3:case"end":return u.stop()}},c)})))),asset:{type:"BLOCK",id:"docs-react-hooks-use-timeout-demo-0",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:`function useTimeout(callback, delay) {
   const ref = React.useRef();
   React.useEffect(() => {
     ref.current = callback;
@@ -1495,7 +1495,7 @@ function App() {
   return <div> {state} </div>;
 }
 
-export default App;`}},entry:"index.jsx"},context:{},renderOpts:{compile:function(){var c=y()(a()().mark(function d(){var p,u=arguments;return a()().wrap(function(l){for(;;)switch(l.prev=l.next){case 0:return l.next=2,n.e(7335).then(n.bind(n,37335));case 2:return l.abrupt("return",(p=l.sent).default.apply(p,u));case 3:case"end":return l.stop()}},d)}));function s(){return c.apply(this,arguments)}return s}()}},"docs-react-hooks-use-timeout-demo-1":{component:r.memo(r.lazy(y()(a()().mark(function c(){var s,d;return a()().wrap(function(u){for(;;)switch(u.prev=u.next){case 0:return d=function(){var l=r.useState(0),M=x()(l,2),P=M[0],D=M[1],h=r.useState(0),w=x()(h,2),i=w[0],T=w[1];return r.useEffect(function(){setTimeout(function(){T(function(S){return S+1})},3e3),D(5)},[]),r.createElement("div",null,"Count: ",P,r.createElement("br",null),"setTimeout Count: ",i)},s=function(l,M){var P=r.useRef();r.useEffect(function(){P.current=l},[l]),r.useEffect(function(){M!==null&&setTimeout(function(){P.current()},M)},[M])},u.abrupt("return",{default:d});case 3:case"end":return u.stop()}},c)})))),asset:{type:"BLOCK",id:"docs-react-hooks-use-timeout-demo-1",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:`function useTimeout(callback, delay) {
+export default App;`}},entry:"index.jsx"},context:{},renderOpts:{compile:function(){var c=y()(a()().mark(function d(){var p,u=arguments;return a()().wrap(function(l){for(;;)switch(l.prev=l.next){case 0:return l.next=2,n.e(7335).then(n.bind(n,37335));case 2:return l.abrupt("return",(p=l.sent).default.apply(p,u));case 3:case"end":return l.stop()}},d)}));function s(){return c.apply(this,arguments)}return s}()}},"docs-react-hooks-use-timeout-demo-1":{component:r.memo(r.lazy(y()(a()().mark(function c(){var s,d;return a()().wrap(function(u){for(;;)switch(u.prev=u.next){case 0:return d=function(){var l=r.useState(0),S=x()(l,2),O=S[0],M=S[1],h=r.useState(0),w=x()(h,2),i=w[0],T=w[1];return r.useEffect(function(){setTimeout(function(){T(function(P){return P+1})},3e3),M(5)},[]),r.createElement("div",null,"Count: ",O,r.createElement("br",null),"setTimeout Count: ",i)},s=function(l,S){var O=r.useRef();r.useEffect(function(){O.current=l},[l]),r.useEffect(function(){S!==null&&setTimeout(function(){O.current()},S)},[S])},u.abrupt("return",{default:d});case 3:case"end":return u.stop()}},c)})))),asset:{type:"BLOCK",id:"docs-react-hooks-use-timeout-demo-1",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:`function useTimeout(callback, delay) {
   const ref = React.useRef();
   React.useEffect(() => {
     ref.current = callback;
@@ -1532,7 +1532,7 @@ function App() {
     </div>
   );
 }
-export default App;`}},entry:"index.jsx"},context:{},renderOpts:{compile:function(){var c=y()(a()().mark(function d(){var p,u=arguments;return a()().wrap(function(l){for(;;)switch(l.prev=l.next){case 0:return l.next=2,n.e(7335).then(n.bind(n,37335));case 2:return l.abrupt("return",(p=l.sent).default.apply(p,u));case 3:case"end":return l.stop()}},d)}));function s(){return c.apply(this,arguments)}return s}()}}}},66910:function(o,e,n){n.r(e),n.d(e,{demos:function(){return T}});var t=n(15009),a=n.n(t),R=n(12444),x=n.n(R),g=n(72004),y=n.n(g),r=n(25098),b=n.n(r),c=n(31996),s=n.n(c),d=n(26037),p=n.n(d),u=n(9783),m=n.n(u),l=n(97857),M=n.n(l),P=n(19632),D=n.n(P),h=n(99289),w=n.n(h),i=n(62435),T={"docs-react-demo-0":{component:i.memo(i.lazy(w()(a()().mark(function S(){var E,f,O,I,C,v,A,U;return a()().wrap(function(K){for(;;)switch(K.prev=K.next){case 0:return E=function(_){var B=_.getState;return function(j){return function(F){console.log("===================================="),console.log(F.type+"\u6267\u884C\u4E86!");var k=B();console.log("prev state",k);var W=j(F),J=B();return console.log("next state",J),console.log("===================================="),W}}},f=function(_){var B=_.dispatch,j=_.getState;return function(F){return function(k){return typeof k=="function"?k(B,j):F(k)}}},O=function(){for(var _=arguments.length,B=new Array(_),j=0;j<_;j++)B[j]=arguments[j];return function(F){return function(k){var W=F(k),J=W.dispatch,H={getState:W.getState,dispatch:function(V){for(var X=arguments.length,Y=new Array(X>1?X-1:0),G=1;G<X;G++)Y[G-1]=arguments[G];return J.apply(void 0,[V].concat(Y))}},z=B.map(function($){return $(H)});return J=I.apply(void 0,D()(z))(W.dispatch),M()(M()({},W),{},{dispatch:J})}}},I=function(){for(var _=arguments.length,B=new Array(_),j=0;j<_;j++)B[j]=arguments[j];return B.length===0?function(F){return F}:B.length===1?B[0]:B.reduce(function(F,k){return function(){return F(k.apply(void 0,arguments))}})},C=function(){},v=function N(_,B){if(B)return B(N)(_);var j={},F=[],k=function(){return j},W=function(z){return typeof z=="function"?j=_(j,z()):j=_(j,z),F.forEach(function($){$()}),z},J=function(z){return typeof z=="function"&&F.push(z),function(){F=F.filter(function($){return $!==z})}};return W({type:Math.random()}),{getState:k,dispatch:W,subscribe:J}},A=function(){var _=arguments.length>0&&arguments[0]!==void 0?arguments[0]:{count:1},B=arguments.length>1?arguments[1]:void 0;switch(B.type){case"ADD":return{count:_.count+1};case"MINUS":return{count:_.count-1};default:return{count:0}}},U=v(A,O(f,E)),K.abrupt("return",{default:function(N){s()(B,N);var _=p()(B);function B(){var j;x()(this,B);for(var F=arguments.length,k=new Array(F),W=0;W<F;W++)k[W]=arguments[W];return j=_.call.apply(_,[this].concat(k)),m()(b()(j),"add",function(){U.dispatch({type:"ADD"})}),m()(b()(j),"minus",function(){U.dispatch({type:"MINUS"})}),j}return y()(B,[{key:"componentDidMount",value:function(){var F=this;U.subscribe(function(){F.forceUpdate()})}},{key:"render",value:function(){return i.createElement("div",null,i.createElement("h3",null,"ReduxPage"),i.createElement("p",null,JSON.stringify(U.getState())),i.createElement("button",{onClick:this.add},"+"),i.createElement("button",{onClick:this.minus},"-"))}}]),B}(i.Component)});case 9:case"end":return K.stop()}},S)})))),asset:{type:"BLOCK",id:"docs-react-demo-0",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:`// \u4E2D\u95F4\u4EF6logger, \u63A5\u6536getState\u3001dispatch
+export default App;`}},entry:"index.jsx"},context:{},renderOpts:{compile:function(){var c=y()(a()().mark(function d(){var p,u=arguments;return a()().wrap(function(l){for(;;)switch(l.prev=l.next){case 0:return l.next=2,n.e(7335).then(n.bind(n,37335));case 2:return l.abrupt("return",(p=l.sent).default.apply(p,u));case 3:case"end":return l.stop()}},d)}));function s(){return c.apply(this,arguments)}return s}()}}}},66910:function(o,e,n){n.r(e),n.d(e,{demos:function(){return T}});var t=n(15009),a=n.n(t),R=n(12444),x=n.n(R),g=n(72004),y=n.n(g),r=n(25098),b=n.n(r),c=n(31996),s=n.n(c),d=n(26037),p=n.n(d),u=n(9783),m=n.n(u),l=n(97857),S=n.n(l),O=n(19632),M=n.n(O),h=n(99289),w=n.n(h),i=n(62435),T={"docs-react-demo-0":{component:i.memo(i.lazy(w()(a()().mark(function P(){var E,f,C,I,D,v,_,N;return a()().wrap(function(K){for(;;)switch(K.prev=K.next){case 0:return E=function(A){var B=A.getState;return function(j){return function(F){console.log("===================================="),console.log(F.type+"\u6267\u884C\u4E86!");var k=B();console.log("prev state",k);var U=j(F),J=B();return console.log("next state",J),console.log("===================================="),U}}},f=function(A){var B=A.dispatch,j=A.getState;return function(F){return function(k){return typeof k=="function"?k(B,j):F(k)}}},C=function(){for(var A=arguments.length,B=new Array(A),j=0;j<A;j++)B[j]=arguments[j];return function(F){return function(k){var U=F(k),J=U.dispatch,H={getState:U.getState,dispatch:function(G){for(var X=arguments.length,Y=new Array(X>1?X-1:0),$=1;$<X;$++)Y[$-1]=arguments[$];return J.apply(void 0,[G].concat(Y))}},z=B.map(function(V){return V(H)});return J=I.apply(void 0,M()(z))(U.dispatch),S()(S()({},U),{},{dispatch:J})}}},I=function(){for(var A=arguments.length,B=new Array(A),j=0;j<A;j++)B[j]=arguments[j];return B.length===0?function(F){return F}:B.length===1?B[0]:B.reduce(function(F,k){return function(){return F(k.apply(void 0,arguments))}})},D=function(){},v=function W(A,B){if(B)return B(W)(A);var j={},F=[],k=function(){return j},U=function(z){return typeof z=="function"?j=A(j,z()):j=A(j,z),F.forEach(function(V){V()}),z},J=function(z){return typeof z=="function"&&F.push(z),function(){F=F.filter(function(V){return V!==z})}};return U({type:Math.random()}),{getState:k,dispatch:U,subscribe:J}},_=function(){var A=arguments.length>0&&arguments[0]!==void 0?arguments[0]:{count:1},B=arguments.length>1?arguments[1]:void 0;switch(B.type){case"ADD":return{count:A.count+1};case"MINUS":return{count:A.count-1};default:return{count:0}}},N=v(_,C(f,E)),K.abrupt("return",{default:function(W){s()(B,W);var A=p()(B);function B(){var j;x()(this,B);for(var F=arguments.length,k=new Array(F),U=0;U<F;U++)k[U]=arguments[U];return j=A.call.apply(A,[this].concat(k)),m()(b()(j),"add",function(){N.dispatch({type:"ADD"})}),m()(b()(j),"minus",function(){N.dispatch({type:"MINUS"})}),j}return y()(B,[{key:"componentDidMount",value:function(){var F=this;N.subscribe(function(){F.forceUpdate()})}},{key:"render",value:function(){return i.createElement("div",null,i.createElement("h3",null,"ReduxPage"),i.createElement("p",null,JSON.stringify(N.getState())),i.createElement("button",{onClick:this.add},"+"),i.createElement("button",{onClick:this.minus},"-"))}}]),B}(i.Component)});case 9:case"end":return K.stop()}},P)})))),asset:{type:"BLOCK",id:"docs-react-demo-0",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:`// \u4E2D\u95F4\u4EF6logger, \u63A5\u6536getState\u3001dispatch
 const logger = ({ getState }) => {
   return (next) => (action) => {
     console.log('====================================');
@@ -1671,7 +1671,7 @@ export default class ReduxPage extends React.Component {
       </div>
     );
   }
-}`}},entry:"index.jsx"},context:{},renderOpts:{compile:function(){var S=w()(a()().mark(function f(){var O,I=arguments;return a()().wrap(function(v){for(;;)switch(v.prev=v.next){case 0:return v.next=2,n.e(7335).then(n.bind(n,37335));case 2:return v.abrupt("return",(O=v.sent).default.apply(O,I));case 3:case"end":return v.stop()}},f)}));function E(){return S.apply(this,arguments)}return E}()}}}},10182:function(o,e,n){n.r(e),n.d(e,{demos:function(){return D}});var t=n(15009),a=n.n(t),R=n(12444),x=n.n(R),g=n(72004),y=n.n(g),r=n(25098),b=n.n(r),c=n(31996),s=n.n(c),d=n(26037),p=n.n(d),u=n(9783),m=n.n(u),l=n(99289),M=n.n(l),P=n(62435),D={"docs-react-reac-advance-demo-0":{component:P.memo(P.lazy(M()(a()().mark(function h(){var w,i,T;return a()().wrap(function(E){for(;;)switch(E.prev=E.next){case 0:return E.next=2,Promise.resolve().then(n.t.bind(n,61254,19));case 2:return w=E.sent,i=w.default,T=function(f){s()(I,f);var O=p()(I);function I(C){var v;return x()(this,I),v=O.call(this,C),m()(b()(v),"handleClick",function(){v.setState({number:2}),setTimeout(function(){v.setState({number:1})}),v.setState({number:2}),i.flushSync(function(){v.setState({number:3})}),v.setState({number:4})}),v.state={number:0},v}return y()(I,[{key:"render",value:function(){return console.log(this.state.number),P.createElement("button",{onClick:this.handleClick},"\u70B9\u51FB \u63A7\u5236\u53F0\u67E5\u770B\u7ED3\u679C")}}]),I}(P.Component),E.abrupt("return",{default:T});case 6:case"end":return E.stop()}},h)})))),asset:{type:"BLOCK",id:"docs-react-reac-advance-demo-0",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:`import ReactDOM from 'react-dom';
+}`}},entry:"index.jsx"},context:{},renderOpts:{compile:function(){var P=w()(a()().mark(function f(){var C,I=arguments;return a()().wrap(function(v){for(;;)switch(v.prev=v.next){case 0:return v.next=2,n.e(7335).then(n.bind(n,37335));case 2:return v.abrupt("return",(C=v.sent).default.apply(C,I));case 3:case"end":return v.stop()}},f)}));function E(){return P.apply(this,arguments)}return E}()}}}},10182:function(o,e,n){n.r(e),n.d(e,{demos:function(){return M}});var t=n(15009),a=n.n(t),R=n(12444),x=n.n(R),g=n(72004),y=n.n(g),r=n(25098),b=n.n(r),c=n(31996),s=n.n(c),d=n(26037),p=n.n(d),u=n(9783),m=n.n(u),l=n(99289),S=n.n(l),O=n(62435),M={"docs-react-reac-advance-demo-0":{component:O.memo(O.lazy(S()(a()().mark(function h(){var w,i,T;return a()().wrap(function(E){for(;;)switch(E.prev=E.next){case 0:return E.next=2,Promise.resolve().then(n.t.bind(n,61254,19));case 2:return w=E.sent,i=w.default,T=function(f){s()(I,f);var C=p()(I);function I(D){var v;return x()(this,I),v=C.call(this,D),m()(b()(v),"handleClick",function(){v.setState({number:2}),setTimeout(function(){v.setState({number:1})}),v.setState({number:2}),i.flushSync(function(){v.setState({number:3})}),v.setState({number:4})}),v.state={number:0},v}return y()(I,[{key:"render",value:function(){return console.log(this.state.number),O.createElement("button",{onClick:this.handleClick},"\u70B9\u51FB \u63A7\u5236\u53F0\u67E5\u770B\u7ED3\u679C")}}]),I}(O.Component),E.abrupt("return",{default:T});case 6:case"end":return E.stop()}},h)})))),asset:{type:"BLOCK",id:"docs-react-reac-advance-demo-0",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:`import ReactDOM from 'react-dom';
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -1698,7 +1698,7 @@ class App extends React.Component {
   }
 }
 
-export default App;`},"react-dom":{type:"NPM",value:"18.1.0"}},entry:"index.jsx"},context:{"react-dom":n(61254)},renderOpts:{compile:function(){var h=M()(a()().mark(function i(){var T,S=arguments;return a()().wrap(function(f){for(;;)switch(f.prev=f.next){case 0:return f.next=2,n.e(7335).then(n.bind(n,37335));case 2:return f.abrupt("return",(T=f.sent).default.apply(T,S));case 3:case"end":return f.stop()}},i)}));function w(){return h.apply(this,arguments)}return w}()}}}},74955:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},3021:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},4834:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},85401:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},61262:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},57737:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},69005:function(o,e,n){n.r(e);var t=n(86074),a=(0,t.jsx)("div",{className:"12",children:"12s"},1);e.default=function(){console.log("c",a)}},41440:function(o,e,n){n.r(e)},29518:function(o,e,n){n.r(e)},13229:function(o,e,n){n.r(e),e.default={col:"EPcieVLqfsW84RgEkVIq","col-1":"snpy6HWXXG80p4DGo52i"}},72183:function(o,e,n){n.r(e)},85544:function(o,e,n){n.r(e),n.d(e,{texts:function(){return t}});const t=[{value:"\u5FAE\u524D\u7AEF\u67B6\u6784\u5177\u5907\u4EE5\u4E0B\u51E0\u4E2A\u6838\u5FC3\u4EF7\u503C\uFF1A",paraId:0,tocIndex:0},{value:`\u6280\u672F\u6808\u65E0\u5173
+export default App;`},"react-dom":{type:"NPM",value:"18.1.0"}},entry:"index.jsx"},context:{"react-dom":n(61254)},renderOpts:{compile:function(){var h=S()(a()().mark(function i(){var T,P=arguments;return a()().wrap(function(f){for(;;)switch(f.prev=f.next){case 0:return f.next=2,n.e(7335).then(n.bind(n,37335));case 2:return f.abrupt("return",(T=f.sent).default.apply(T,P));case 3:case"end":return f.stop()}},i)}));function w(){return h.apply(this,arguments)}return w}()}}}},74955:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},3021:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},4834:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},85401:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},61262:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},57737:function(o,e,n){n.r(e),n.d(e,{demos:function(){return a}});var t=n(62435),a={}},69005:function(o,e,n){n.r(e);var t=n(86074),a=(0,t.jsx)("div",{className:"12",children:"12s"},1);e.default=function(){console.log("c",a)}},41440:function(o,e,n){n.r(e)},29518:function(o,e,n){n.r(e)},13229:function(o,e,n){n.r(e),e.default={col:"EPcieVLqfsW84RgEkVIq","col-1":"snpy6HWXXG80p4DGo52i"}},72183:function(o,e,n){n.r(e)},85544:function(o,e,n){n.r(e),n.d(e,{texts:function(){return t}});const t=[{value:"\u5FAE\u524D\u7AEF\u67B6\u6784\u5177\u5907\u4EE5\u4E0B\u51E0\u4E2A\u6838\u5FC3\u4EF7\u503C\uFF1A",paraId:0,tocIndex:0},{value:`\u6280\u672F\u6808\u65E0\u5173
 \u4E3B\u6846\u67B6\u4E0D\u9650\u5236\u63A5\u5165\u5E94\u7528\u7684\u6280\u672F\u6808\uFF0C\u5FAE\u5E94\u7528\u5177\u5907\u5B8C\u5168\u81EA\u4E3B\u6743`,paraId:1,tocIndex:0},{value:"\u72EC\u7ACB\u5F00\u53D1\u3001\u72EC\u7ACB\u90E8\u7F72",paraId:1,tocIndex:0},{value:`
 \u5FAE\u5E94\u7528\u4ED3\u5E93\u72EC\u7ACB\uFF0C\u524D\u540E\u7AEF\u53EF\u72EC\u7ACB\u5F00\u53D1\uFF0C\u90E8\u7F72\u5B8C\u6210\u540E\u4E3B\u6846\u67B6\u81EA\u52A8\u5B8C\u6210\u540C\u6B65\u66F4\u65B0`,paraId:1,tocIndex:0},{value:"\u589E\u91CF\u5347\u7EA7",paraId:1,tocIndex:0},{value:`
 \u5728\u9762\u5BF9\u5404\u79CD\u590D\u6742\u573A\u666F\u65F6\uFF0C\u6211\u4EEC\u901A\u5E38\u5F88\u96BE\u5BF9\u4E00\u4E2A\u5DF2\u7ECF\u5B58\u5728\u7684\u7CFB\u7EDF\u505A\u5168\u91CF\u7684\u6280\u672F\u6808\u5347\u7EA7\u6216\u91CD\u6784\uFF0C\u800C\u5FAE\u524D\u7AEF\u662F\u4E00\u79CD\u975E\u5E38\u597D\u7684\u5B9E\u65BD\u6E10\u8FDB\u5F0F\u91CD\u6784\u7684\u624B\u6BB5\u548C\u7B56\u7565`,paraId:1,tocIndex:0},{value:"\u72EC\u7ACB\u8FD0\u884C\u65F6",paraId:1,tocIndex:0},{value:`
@@ -13552,7 +13552,852 @@ export default function () {
   const callback = React.useCallback(function handerCallback() {}, []);
   return <Index callback={callback} />;
 }
-`,paraId:25,tocIndex:3},{value:"\u6E32\u67D3 demo",paraId:26,tocIndex:3}]},6361:function(o,e,n){n.r(e),n.d(e,{texts:function(){return t}});const t=[{value:`/* \u4EBA\u7C7B */
+`,paraId:25,tocIndex:3},{value:"\u6E32\u67D3 demo",paraId:26,tocIndex:3}]},55723:function(o,e,n){n.r(e),n.d(e,{texts:function(){return t}});const t=[{value:"\u4F7F\u7528 React \u5C31\u4E00\u5B9A\u4F1A\u5199 JSX\uFF0CJSX \u5230\u5E95\u662F\u4EC0\u4E48\u5462\uFF1F\u5B83\u662F\u4E00\u79CD JavaScript \u8BED\u6CD5\u7684\u6269\u5C55\uFF0CReact \u4F7F\u7528\u5B83\u6765\u63CF\u8FF0\u7528\u6237\u754C\u9762\u957F\u6210\u4EC0\u4E48\u6837\u5B50\u3002\u867D\u7136\u5B83\u770B\u8D77\u6765\u975E\u5E38\u50CF HTML\uFF0C\u4F46\u5B83\u786E\u5B9E\u662F JavaScript \u3002\u5728 React \u4EE3\u7801\u6267\u884C\u4E4B\u524D\uFF0CBabel \u4F1A\u5BF9\u5C06 JSX \u7F16\u8BD1\u4E3A React API.",paraId:0,tocIndex:1},{value:`<div className="container">
+  <h3>Hello React</h3>
+  <p>React is great </p>
+</div>
+`,paraId:1,tocIndex:1},{value:`React.createElement(
+  "div",
+  {
+    className: "container"
+  },
+  React.createElement("h3", null, "Hello React"),
+  React.createElement("p", null, "React is great")
+);
+`,paraId:2,tocIndex:1},{value:"\u4ECE\u4E24\u79CD\u8BED\u6CD5\u5BF9\u6BD4\u6765\u770B\uFF0CJSX \u8BED\u6CD5\u7684\u51FA\u73B0\u662F\u4E3A\u4E86\u8BA9 React \u5F00\u53D1\u4EBA\u5458\u7F16\u5199\u7528\u6237\u754C\u9762\u4EE3\u7801\u66F4\u52A0\u8F7B\u677E\u3002",paraId:3,tocIndex:1},{value:"Babel REPL",paraId:4,tocIndex:1},{value:"\u5728\u73B0\u4EE3 web \u5E94\u7528\u7A0B\u5E8F\u4E2D\u4F7F\u7528 JavaScript \u64CD\u4F5C DOM \u662F\u5FC5\u4E0D\u53EF\u5C11\u7684\uFF0C\u4F46\u9057\u61BE\u7684\u662F\u5B83\u6BD4\u5176\u4ED6\u5927\u591A\u6570 JavaScript \u64CD\u4F5C\u8981\u6162\u7684\u591A\u3002",paraId:5,tocIndex:2},{value:"\u5927\u591A\u6570 JavaScript \u6846\u67B6\u5BF9\u4E8E DOM \u7684\u66F4\u65B0\u8FDC\u8FDC\u8D85\u8FC7\u5176\u5FC5\u987B\u8FDB\u884C\u7684\u66F4\u65B0\uFF0C\u4ECE\u800C\u4F7F\u5F97\u8FD9\u79CD\u7F13\u6162\u64CD\u4F5C\u53D8\u5F97\u66F4\u7CDF\u3002",paraId:6,tocIndex:2},{value:"\u4F8B\u5982\u5047\u8BBE\u4F60\u6709\u5305\u542B\u5341\u4E2A\u9879\u76EE\u7684\u5217\u8868\uFF0C\u4F60\u4EC5\u4EC5\u66F4\u6539\u4E86\u5217\u8868\u4E2D\u7684\u7B2C\u4E00\u9879\uFF0C\u5927\u591A\u6570 JavaScript \u6846\u67B6\u4F1A\u91CD\u5EFA\u6574\u4E2A\u5217\u8868\uFF0C\u8FD9\u6BD4\u5FC5\u8981\u7684\u5DE5\u4F5C\u8981\u591A\u5341\u500D\u3002",paraId:7,tocIndex:2},{value:"\u66F4\u65B0\u6548\u7387\u4F4E\u4E0B\u5DF2\u7ECF\u6210\u4E3A\u4E25\u91CD\u95EE\u9898\uFF0C\u4E3A\u4E86\u89E3\u51B3\u8FD9\u4E2A\u95EE\u9898\uFF0CReact \u666E\u53CA\u4E86\u4E00\u79CD\u53EB\u505A Virtual DOM \u7684\u4E1C\u897F\uFF0CVirtual DOM \u51FA\u73B0\u7684\u76EE\u7684\u5C31\u662F\u4E3A\u4E86\u63D0\u9AD8 JavaScript \u64CD\u4F5C DOM \u5BF9\u8C61\u7684\u6548\u7387\u3002",paraId:8,tocIndex:2},{value:"\u5728 React \u4E2D\uFF0C\u6BCF\u4E2A DOM \u5BF9\u8C61\u90FD\u6709\u4E00\u4E2A\u5BF9\u5E94\u7684 Virtual DOM \u5BF9\u8C61\uFF0C\u5B83\u662F DOM \u5BF9\u8C61\u7684 JavaScript \u5BF9\u8C61\u8868\u73B0\u5F62\u5F0F\uFF0C\u5176\u5B9E\u5C31\u662F\u4F7F\u7528 JavaScript \u5BF9\u8C61\u6765\u63CF\u8FF0 DOM \u5BF9\u8C61\u4FE1\u606F\uFF0C\u6BD4\u5982 DOM \u5BF9\u8C61\u7684\u7C7B\u578B\u662F\u4EC0\u4E48\uFF0C\u5B83\u8EAB\u4E0A\u6709\u54EA\u4E9B\u5C5E\u6027\uFF0C\u5B83\u62E5\u6709\u54EA\u4E9B\u5B50\u5143\u7D20\u3002",paraId:9,tocIndex:3},{value:"\u53EF\u4EE5\u628A Virtual DOM \u5BF9\u8C61\u7406\u89E3\u4E3A DOM \u5BF9\u8C61\u7684\u526F\u672C\uFF0C\u4F46\u662F\u5B83\u4E0D\u80FD\u76F4\u63A5\u663E\u793A\u5728\u5C4F\u5E55\u4E0A\u3002",paraId:10,tocIndex:3},{value:`<div className="container">
+  <h3>Hello React</h3>
+  <p>React is great </p>
+</div>
+`,paraId:11,tocIndex:3},{value:`{
+  type: "div",
+  props: { className: "container" },
+  children: [
+    {
+      type: "h3",
+      props: null,
+      children: [
+        {
+          type: "text",
+          props: {
+            textContent: "Hello React"
+          }
+        }
+      ]
+    },
+    {
+      type: "p",
+      props: null,
+      children: [
+        {
+          type: "text",
+          props: {
+            textContent: "React is great"
+          }
+        }
+      ]
+    }
+  ]
+}
+`,paraId:12,tocIndex:3},{value:"\u7CBE\u51C6\u627E\u51FA\u53D1\u751F\u53D8\u5316\u7684 DOM \u5BF9\u8C61\uFF0C\u53EA\u66F4\u65B0\u53D1\u751F\u53D8\u5316\u7684\u90E8\u5206\u3002",paraId:13,tocIndex:4},{value:"\u5728 React \u7B2C\u4E00\u6B21\u521B\u5EFA DOM \u5BF9\u8C61\u540E\uFF0C\u4F1A\u4E3A\u6BCF\u4E2A DOM \u5BF9\u8C61\u521B\u5EFA\u5176\u5BF9\u5E94\u7684 Virtual DOM \u5BF9\u8C61\uFF0C\u5728 DOM \u5BF9\u8C61\u53D1\u751F\u66F4\u65B0\u4E4B\u524D\uFF0CReact \u4F1A\u5148\u66F4\u65B0\u6240\u6709\u7684 Virtual DOM \u5BF9\u8C61\uFF0C\u7136\u540E React \u4F1A\u5C06\u66F4\u65B0\u540E\u7684 Virtual DOM \u548C \u66F4\u65B0\u524D\u7684 Virtual DOM \u8FDB\u884C\u6BD4\u8F83\uFF0C\u4ECE\u800C\u627E\u51FA\u53D1\u751F\u53D8\u5316\u7684\u90E8\u5206\uFF0CReact \u4F1A\u5C06\u53D1\u751F\u53D8\u5316\u7684\u90E8\u5206\u66F4\u65B0\u5230\u771F\u5B9E\u7684 DOM \u5BF9\u8C61\u4E2D\uFF0CReact \u4EC5\u66F4\u65B0\u5FC5\u8981\u66F4\u65B0\u7684\u90E8\u5206\u3002",paraId:14,tocIndex:4},{value:"Virtual DOM \u5BF9\u8C61\u7684\u66F4\u65B0\u548C\u6BD4\u8F83\u4EC5\u53D1\u751F\u5728\u5185\u5B58\u4E2D\uFF0C\u4E0D\u4F1A\u5728\u89C6\u56FE\u4E2D\u6E32\u67D3\u4EFB\u4F55\u5185\u5BB9\uFF0C\u6240\u4EE5\u8FD9\u4E00\u90E8\u5206\u7684\u6027\u80FD\u635F\u8017\u6210\u672C\u662F\u5FAE\u4E0D\u8DB3\u9053\u7684\u3002",paraId:15,tocIndex:4},{value:`<div id="container">
+	<p>Hello React</p>
+</div>
+`,paraId:16,tocIndex:4},{value:`<div id="container">
+	<p>Hello Angular</p>
+</div>
+`,paraId:17,tocIndex:4},{value:`const before = {
+  type: "div",
+  props: { id: "container" },
+  children: [
+    {
+      type: "p",
+      props: null,
+      children: [
+        { type: "text", props: { textContent: "Hello React" } }
+      ]
+    }
+  ]
+}
+`,paraId:18,tocIndex:4},{value:`const after = {
+  type: "div",
+  props: { id: "container" },
+  children: [
+    {
+      type: "p",
+      props: null,
+      children: [
+        { type: "text", props: { textContent: "Hello Angular" } }
+      ]
+    }
+  ]
+}
+`,paraId:19,tocIndex:4},{value:"\u5728 React \u4EE3\u7801\u6267\u884C\u524D\uFF0CJSX \u4F1A\u88AB Babel \u8F6C\u6362\u4E3A React.createElement \u65B9\u6CD5\u7684\u8C03\u7528\uFF0C\u5728\u8C03\u7528 createElement \u65B9\u6CD5\u65F6\u4F1A\u4F20\u5165\u5143\u7D20\u7684\u7C7B\u578B\uFF0C\u5143\u7D20\u7684\u5C5E\u6027\uFF0C\u4EE5\u53CA\u5143\u7D20\u7684\u5B50\u5143\u7D20\uFF0CcreateElement \u65B9\u6CD5\u7684\u8FD4\u56DE\u503C\u4E3A\u6784\u5EFA\u597D\u7684 Virtual DOM \u5BF9\u8C61\u3002",paraId:20,tocIndex:5},{value:`{
+  type: "div",
+  props: null,
+  children: [{type: "text", props: {textContent: "Hello"}}]
+}
+`,paraId:21,tocIndex:5},{value:`/**
+ * \u521B\u5EFA Virtual DOM
+ * @param {string} type \u7C7B\u578B
+ * @param {object | null} props \u5C5E\u6027
+ * @param  {createElement[]} children \u5B50\u5143\u7D20
+ * @return {object} Virtual DOM
+ */
+function createElement (type, props, ...children) {
+	return {
+    type,
+    props,
+    children
+  }
+}
+`,paraId:22,tocIndex:5},{value:"\u4ECE createElement \u65B9\u6CD5\u7684\u7B2C\u4E09\u4E2A\u53C2\u6570\u5F00\u59CB\u5C31\u90FD\u662F\u5B50\u5143\u7D20\u4E86\uFF0C\u5728\u5B9A\u4E49 createElement \u65B9\u6CD5\u65F6\uFF0C\u901A\u8FC7 ",paraId:23,tocIndex:5},{value:"...children",paraId:23,tocIndex:5},{value:" \u5C06\u6240\u6709\u7684\u5B50\u5143\u7D20\u653E\u7F6E\u5230 children \u6570\u7EC4\u4E2D\u3002",paraId:23,tocIndex:5},{value:`const virtualDOM = (
+  <div className="container">
+    <h1>\u4F60\u597D Tiny React</h1>
+    <h2>(\u7F16\u7801\u5FC5\u6740\u6280)</h2>
+    <div>
+      \u5D4C\u59571 <div>\u5D4C\u5957 1.1</div>
+    </div>
+    <h3>(\u89C2\u5BDF: \u8FD9\u4E2A\u5C06\u4F1A\u88AB\u6539\u53D8)</h3>
+    {2 == 1 && <div>\u5982\u679C2\u548C1\u76F8\u7B49\u6E32\u67D3\u5F53\u524D\u5185\u5BB9</div>}
+    {2 == 2 && <div>2</div>}
+    <span>\u8FD9\u662F\u4E00\u6BB5\u5185\u5BB9</span>
+    <button onClick={() => alert("\u4F60\u597D")}>\u70B9\u51FB\u6211</button>
+    <h3>\u8FD9\u4E2A\u5C06\u4F1A\u88AB\u5220\u9664</h3>
+    2, 3
+  </div>
+)
+console.log(virtualDOM)
+`,paraId:24,tocIndex:5},{value:"\u901A\u8FC7\u4EE5\u4E0A\u4EE3\u7801\u6D4B\u8BD5\uFF0C\u53D1\u73B0\u8FD4\u56DE\u7684 Virtual DOM \u5B58\u5728\u4E00\u4E9B\u95EE\u9898\uFF0C\u7B2C\u4E00\u4E2A\u95EE\u9898\u662F\u6587\u672C\u8282\u70B9\u88AB\u76F4\u63A5\u653E\u5165\u5230\u4E86\u6570\u7EC4\u4E2D",paraId:25,tocIndex:5},{value:"\u800C\u6211\u4EEC\u671F\u671B\u662F\u6587\u672C\u8282\u70B9\u5E94\u8BE5\u662F\u8FD9\u6837\u7684",paraId:26,tocIndex:5},{value:`children: [
+  {
+    type: "text",
+    props: {
+      textContent: "React is great"
+    }
+  }
+]
+`,paraId:27,tocIndex:5},{value:"\u901A\u8FC7\u4EE5\u4E0B\u4EE3\u7801\u5BF9 Virtual DOM \u8FDB\u884C\u6539\u9020\uFF0C\u91CD\u65B0\u6784\u5EFA Virtual DOM\u3002",paraId:28,tocIndex:5},{value:`// \u5C06\u539F\u6709 children \u62F7\u8D1D\u4E00\u4EFD \u4E0D\u8981\u5728\u539F\u6709\u6570\u7EC4\u4E0A\u8FDB\u884C\u64CD\u4F5C
+const childElements = [].concat(...children).map((child) => {
+  // \u5224\u65AD child \u662F\u5426\u662F\u5BF9\u8C61\u7C7B\u578B
+  if (child instanceof Object) {
+    // \u5982\u679C\u662F \u4EC0\u4E48\u90FD\u4E0D\u9700\u8981\u505A \u76F4\u63A5\u8FD4\u56DE\u5373\u53EF
+    return child;
+  } else {
+    // \u5982\u679C\u4E0D\u662F\u5BF9\u8C61\u5C31\u662F\u6587\u672C \u624B\u52A8\u8C03\u7528 createElement \u65B9\u6CD5\u5C06\u6587\u672C\u8F6C\u6362\u4E3A Virtual DOM
+    return createElement('text', { textContent: child });
+  }
+});
+return {
+  type,
+  props,
+  children: childElements,
+};
+`,paraId:29,tocIndex:5},{value:"\u901A\u8FC7\u89C2\u5BDF\u8FD4\u56DE\u7684 Virtual DOM\uFF0C\u6587\u672C\u8282\u70B9\u5DF2\u7ECF\u88AB\u8F6C\u5316\u6210\u4E86\u5BF9\u8C61\u7C7B\u578B\u7684 Virtual DOM\uFF0C\u4F46\u662F\u5E03\u5C14\u503C\u4E5F\u88AB\u5F53\u505A\u6587\u672C\u8282\u70B9\u88AB\u8F6C\u5316\u4E86\uFF0C\u5728 JSX \u4E2D\uFF0C\u5982\u679C Virtual DOM \u88AB\u8F6C\u5316\u4E3A\u4E86\u5E03\u5C14\u503C\u6216\u8005 null\uFF0C\u662F\u4E0D\u5E94\u8BE5\u88AB\u66F4\u65B0\u5230\u771F\u5B9E DOM \u4E2D\u7684\uFF0C\u6240\u4EE5\u63A5\u4E0B\u6765\u8981\u505A\u7684\u4E8B\u60C5\u5C31\u662F\u6E05\u9664 Virtual DOM \u4E2D\u7684\u5E03\u5C14\u503C\u548C null\u3002",paraId:30,tocIndex:5},{value:`// \u7531\u4E8E map \u65B9\u6CD5\u65E0\u6CD5\u4ECE\u6570\u636E\u4E2D\u5228\u9664\u5143\u7D20, \u6240\u4EE5\u6B64\u5904\u5C06 map \u65B9\u6CD5\u66F4\u6539\u4E3A reduce \u65B9\u6CD5
+const childElements = [].concat(...children).reduce((result, child) => {
+  // \u5224\u65AD\u5B50\u5143\u7D20\u7C7B\u578B \u5228\u9664 null true false
+  if (child != null && child != false && child != true) {
+    if (child instanceof Object) {
+      result.push(child)
+    } else {
+      result.push(createElement("text", { textContent: child }))
+    }
+  }
+  // \u5C06\u9700\u8981\u4FDD\u7559\u7684 Virtual DOM \u653E\u5165 result \u6570\u7EC4
+  return result
+}, [])
+`,paraId:31,tocIndex:5},{value:"\u5728 React \u7EC4\u4EF6\u4E2D\uFF0C\u53EF\u4EE5\u901A\u8FC7 props.children \u83B7\u53D6\u5B50\u5143\u7D20\uFF0C\u6240\u4EE5\u8FD8\u9700\u8981\u5C06\u5B50\u5143\u7D20\u5B58\u50A8\u5728 props \u5BF9\u8C61\u4E2D\u3002",paraId:32,tocIndex:5},{value:`return {
+  type,
+  props: Object.assign({ children: childElements }, props),
+  children: childElements,
+};
+`,paraId:33,tocIndex:5},{value:"\u901A\u8FC7\u8C03\u7528 render \u65B9\u6CD5\u53EF\u4EE5\u5C06 Virtual DOM \u5BF9\u8C61\u66F4\u65B0\u4E3A\u771F\u5B9E DOM \u5BF9\u8C61\u3002",paraId:34,tocIndex:6},{value:"\u5728\u66F4\u65B0\u4E4B\u524D\u9700\u8981\u786E\u5B9A\u662F\u5426\u5B58\u5728\u65E7\u7684 Virtual DOM\uFF0C\u5982\u679C\u5B58\u5728\u9700\u8981\u6BD4\u5BF9\u5DEE\u5F02\uFF0C\u5982\u679C\u4E0D\u5B58\u5728\u53EF\u4EE5\u76F4\u63A5\u5C06 Virtual DOM \u8F6C\u6362\u4E3A DOM \u5BF9\u8C61\u3002",paraId:35,tocIndex:6},{value:"\u76EE\u524D\u5148\u53EA\u8003\u8651\u4E0D\u5B58\u5728\u65E7\u7684 Virtual DOM \u7684\u60C5\u51B5\uFF0C\u5C31\u662F\u8BF4\u5148\u76F4\u63A5\u5C06 Virtual DOM \u5BF9\u8C61\u66F4\u65B0\u4E3A\u771F\u5B9E DOM \u5BF9\u8C61\u3002",paraId:36,tocIndex:6},{value:`// render.js
+export default function render(virtualDOM, container, oldDOM = container.firstChild) {
+  // \u5728 diff \u65B9\u6CD5\u5185\u90E8\u5224\u65AD\u662F\u5426\u9700\u8981\u5BF9\u6BD4 \u5BF9\u6BD4\u4E5F\u597D \u4E0D\u5BF9\u6BD4\u4E5F\u597D \u90FD\u5728 diff \u65B9\u6CD5\u4E2D\u8FDB\u884C\u64CD\u4F5C
+  diff(virtualDOM, container, oldDOM)
+}
+`,paraId:37,tocIndex:6},{value:`// diff.js
+import mountElement from "./mountElement"
+
+export default function diff(virtualDOM, container, oldDOM) {
+  // \u5224\u65AD oldDOM \u662F\u5426\u5B58\u5728
+  if (!oldDOM) {
+    // \u5982\u679C\u4E0D\u5B58\u5728 \u4E0D\u9700\u8981\u5BF9\u6BD4 \u76F4\u63A5\u5C06 Virtual DOM \u8F6C\u6362\u4E3A\u771F\u5B9E DOM
+    mountElement(virtualDOM, container)
+  }
+}
+`,paraId:38,tocIndex:6},{value:"\u5728\u8FDB\u884C virtual DOM \u8F6C\u6362\u4E4B\u524D\u8FD8\u9700\u8981\u786E\u5B9A Virtual DOM \u7684\u7C7B Component VS Native Element\u3002",paraId:39,tocIndex:6},{value:"\u7C7B\u578B\u4E0D\u540C\u9700\u8981\u505A\u4E0D\u540C\u7684\u5904\u7406 \u5982\u679C\u662F Native Element \u76F4\u63A5\u8F6C\u6362\u3002",paraId:40,tocIndex:6},{value:"\u5982\u679C\u662F\u7EC4\u4EF6 \u8FD8\u9700\u8981\u5F97\u5230\u7EC4\u4EF6\u5B9E\u4F8B\u5BF9\u8C61 \u901A\u8FC7\u7EC4\u4EF6\u5B9E\u4F8B\u5BF9\u8C61\u83B7\u53D6\u7EC4\u4EF6\u8FD4\u56DE\u7684 virtual DOM \u7136\u540E\u518D\u8FDB\u884C\u8F6C\u6362\u3002",paraId:41,tocIndex:6},{value:"\u76EE\u524D\u5148\u53EA\u8003\u8651 Native Element \u7684\u60C5\u51B5\u3002",paraId:42,tocIndex:6},{value:`// mountElement.js
+import mountNativeElement from "./mountNativeElement"
+
+export default function mountElement(virtualDOM, container) {
+  // \u901A\u8FC7\u8C03\u7528 mountNativeElement \u65B9\u6CD5\u8F6C\u6362 Native Element
+  mountNativeElement(virtualDOM, container)
+}
+`,paraId:43,tocIndex:6},{value:`// mountNativeElement.js
+import createDOMElement from "./createDOMElement"
+
+export default function mountNativeElement(virtualDOM, container) {
+  const newElement = createDOMElement(virtualDOM)
+  container.appendChild(newElement)
+}
+`,paraId:44,tocIndex:6},{value:`// createDOMElement.js
+import mountElement from "./mountElement"
+import updateElementNode from "./updateElementNode"
+
+export default function createDOMElement(virtualDOM) {
+  let newElement = null
+  if (virtualDOM.type === "text") {
+    // \u521B\u5EFA\u6587\u672C\u8282\u70B9
+    newElement = document.createTextNode(virtualDOM.props.textContent)
+  } else {
+    // \u521B\u5EFA\u5143\u7D20\u8282\u70B9
+    newElement = document.createElement(virtualDOM.type)
+    // \u66F4\u65B0\u5143\u7D20\u5C5E\u6027
+    updateElementNode(newElement, virtualDOM)
+  }
+  // \u9012\u5F52\u6E32\u67D3\u5B50\u8282\u70B9
+  virtualDOM.children.forEach(child => {
+    // \u56E0\u4E3A\u4E0D\u786E\u5B9A\u5B50\u5143\u7D20\u662F NativeElement \u8FD8\u662F Component \u6240\u4EE5\u8C03\u7528 mountElement \u65B9\u6CD5\u8FDB\u884C\u786E\u5B9A
+    mountElement(child, newElement)
+  })
+  return newElement
+}
+
+`,paraId:45,tocIndex:6},{value:`// createDOMElement.js
+// \u770B\u770B\u8282\u70B9\u7C7B\u578B\u662F\u6587\u672C\u7C7B\u578B\u8FD8\u662F\u5143\u7D20\u7C7B\u578B
+if (virtualDOM.type === "text") {
+  // \u521B\u5EFA\u6587\u672C\u8282\u70B9 \u8BBE\u7F6E\u8282\u70B9\u5185\u5BB9
+  newElement = document.createTextNode(virtualDOM.props.textContent)
+} else {
+  // \u6839\u636E Virtual DOM type \u5C5E\u6027\u503C\u521B\u5EFA DOM \u5143\u7D20
+  newElement = document.createElement(virtualDOM.type)
+  // \u4E3A\u5143\u7D20\u8BBE\u7F6E\u5C5E\u6027
+  updateElementNode(newElement, virtualDOM)
+}
+`,paraId:46,tocIndex:7},{value:`export default function updateElementNode(element, virtualDOM) {
+  // \u83B7\u53D6\u8981\u89E3\u6790\u7684 VirtualDOM \u5BF9\u8C61\u4E2D\u7684\u5C5E\u6027\u5BF9\u8C61
+  const newProps = virtualDOM.props
+  // \u5C06\u5C5E\u6027\u5BF9\u8C61\u4E2D\u7684\u5C5E\u6027\u540D\u79F0\u653E\u5230\u4E00\u4E2A\u6570\u7EC4\u4E2D\u5E76\u5FAA\u73AF\u6570\u7EC4
+  Object.keys(newProps).forEach(propName => {
+    const newPropsValue = newProps[propName]
+    // \u8003\u8651\u5C5E\u6027\u540D\u79F0\u662F\u5426\u4EE5 on \u5F00\u5934 \u5982\u679C\u662F\u5C31\u8868\u793A\u662F\u4E2A\u4E8B\u4EF6\u5C5E\u6027 onClick -> click
+    if (propName.slice(0, 2) === "on") {
+      const eventName = propName.toLowerCase().slice(2)
+      element.addEventListener(eventName, newPropsValue)
+      // \u5982\u679C\u5C5E\u6027\u540D\u79F0\u662F value \u6216\u8005 checked \u9700\u8981\u901A\u8FC7 [] \u7684\u5F62\u5F0F\u6DFB\u52A0
+    } else if (propName === "value" || propName === "checked") {
+      element[propName] = newPropsValue
+      // \u5228\u9664 children \u56E0\u4E3A\u5B83\u662F\u5B50\u5143\u7D20 \u4E0D\u662F\u5C5E\u6027
+    } else if (propName !== "children") {
+      // className \u5C5E\u6027\u5355\u72EC\u5904\u7406 \u4E0D\u76F4\u63A5\u5728\u5143\u7D20\u4E0A\u6DFB\u52A0 class \u5C5E\u6027\u662F\u56E0\u4E3A class \u662F JavaScript \u4E2D\u7684\u5173\u952E\u5B57
+      if (propName === "className") {
+        element.setAttribute("class", newPropsValue)
+      } else {
+        // \u666E\u901A\u5C5E\u6027
+        element.setAttribute(propName, newPropsValue)
+      }
+    }
+  })
+}
+`,paraId:47,tocIndex:7},{value:"\u5728\u6E32\u67D3\u7EC4\u4EF6\u4E4B\u524D\u9996\u5148\u8981\u660E\u786E\u7684\u662F\uFF0C\u7EC4\u4EF6\u7684 Virtual DOM \u7C7B\u578B\u503C\u4E3A\u51FD\u6570\uFF0C\u51FD\u6570\u7EC4\u4EF6\u548C\u7C7B\u7EC4\u4EF6\u90FD\u662F\u8FD9\u6837\u7684\u3002",paraId:48,tocIndex:9},{value:`// \u539F\u59CB\u7EC4\u4EF6
+const Heart = () => <span>&hearts;</span>
+`,paraId:49,tocIndex:9},{value:`<Heart />
+`,paraId:50,tocIndex:9},{value:`// \u7EC4\u4EF6\u7684 Virtual DOM
+{
+  type: f function() {},
+  props: {}
+  children: []
+}
+`,paraId:51,tocIndex:9},{value:"\u5728\u6E32\u67D3\u7EC4\u4EF6\u65F6\uFF0C\u8981\u5148\u5C06 Component \u4E0E Native Element \u533A\u5206\u5F00\uFF0C\u5982\u679C\u662F Native Element \u53EF\u4EE5\u76F4\u63A5\u5F00\u59CB\u6E32\u67D3\uFF0C\u5982\u679C\u662F\u7EC4\u4EF6\uFF0C\u7279\u522B\u5904\u7406\u3002",paraId:52,tocIndex:9},{value:`// mountElement.js
+export default function mountElement(virtualDOM, container) {
+  // \u65E0\u8BBA\u662F\u7C7B\u7EC4\u4EF6\u8FD8\u662F\u51FD\u6570\u7EC4\u4EF6 \u5176\u5B9E\u672C\u8D28\u4E0A\u90FD\u662F\u51FD\u6570
+  // \u5982\u679C Virtual DOM \u7684 type \u5C5E\u6027\u503C\u4E3A\u51FD\u6570 \u5C31\u8BF4\u660E\u5F53\u524D\u8FD9\u4E2A Virtual DOM \u4E3A\u7EC4\u4EF6
+  if (isFunction(virtualDOM)) {
+    // \u5982\u679C\u662F\u7EC4\u4EF6 \u8C03\u7528 mountComponent \u65B9\u6CD5\u8FDB\u884C\u7EC4\u4EF6\u6E32\u67D3
+    mountComponent(virtualDOM, container)
+  } else {
+    mountNativeElement(virtualDOM, container)
+  }
+}
+
+// Virtual DOM \u662F\u5426\u4E3A\u51FD\u6570\u7C7B\u578B
+export function isFunction(virtualDOM) {
+  return virtualDOM && typeof virtualDOM.type === "function"
+}
+`,paraId:53,tocIndex:9},{value:"\u5728 mountComponent \u65B9\u6CD5\u4E2D\u518D\u8FDB\u884C\u51FD\u6570\u7EC4\u4EF6\u548C\u7C7B\u578B\u7684\u533A\u5206\uFF0C\u7136\u540E\u518D\u5206\u522B\u8FDB\u884C\u5904\u7406\u3002",paraId:54,tocIndex:9},{value:`// mountComponent.js
+import mountNativeElement from "./mountNativeElement"
+
+export default function mountComponent(virtualDOM, container) {
+  // \u5B58\u653E\u7EC4\u4EF6\u8C03\u7528\u540E\u8FD4\u56DE\u7684 Virtual DOM \u7684\u5BB9\u5668
+  let nextVirtualDOM = null
+  // \u533A\u5206\u51FD\u6570\u578B\u7EC4\u4EF6\u548C\u7C7B\u7EC4\u4EF6
+  if (isFunctionalComponent(virtualDOM)) {
+    // \u51FD\u6570\u7EC4\u4EF6 \u8C03\u7528 buildFunctionalComponent \u65B9\u6CD5\u5904\u7406\u51FD\u6570\u7EC4\u4EF6
+    nextVirtualDOM = buildFunctionalComponent(virtualDOM)
+  } else {
+    // \u7C7B\u7EC4\u4EF6
+  }
+  // \u5224\u65AD\u5F97\u5230\u7684 Virtual Dom \u662F\u5426\u662F\u7EC4\u4EF6
+  if (isFunction(nextVirtualDOM)) {
+    // \u5982\u679C\u662F\u7EC4\u4EF6 \u7EE7\u7EED\u8C03\u7528 mountComponent \u89E3\u5256\u7EC4\u4EF6
+    mountComponent(nextVirtualDOM, container)
+  } else {
+    // \u5982\u679C\u662F Navtive Element \u5C31\u53BB\u6E32\u67D3
+    mountNativeElement(nextVirtualDOM, container)
+  }
+}
+
+// Virtual DOM \u662F\u5426\u4E3A\u51FD\u6570\u578B\u7EC4\u4EF6
+// \u6761\u4EF6\u6709\u4E24\u4E2A: 1. Virtual DOM \u7684 type \u5C5E\u6027\u503C\u4E3A\u51FD\u6570 2. \u51FD\u6570\u7684\u539F\u578B\u5BF9\u8C61\u4E2D\u4E0D\u80FD\u6709render\u65B9\u6CD5
+// \u53EA\u6709\u7C7B\u7EC4\u4EF6\u7684\u539F\u578B\u5BF9\u8C61\u4E2D\u6709render\u65B9\u6CD5
+export function isFunctionalComponent(virtualDOM) {
+  const type = virtualDOM && virtualDOM.type
+  return (
+    type && isFunction(virtualDOM) && !(type.prototype && type.prototype.render)
+  )
+}
+
+// \u51FD\u6570\u7EC4\u4EF6\u5904\u7406
+function buildFunctionalComponent(virtualDOM) {
+  // \u901A\u8FC7 Virtual DOM \u4E2D\u7684 type \u5C5E\u6027\u83B7\u53D6\u5230\u7EC4\u4EF6\u51FD\u6570\u5E76\u8C03\u7528
+  // \u8C03\u7528\u7EC4\u4EF6\u51FD\u6570\u65F6\u5C06 Virtual DOM \u5BF9\u8C61\u4E2D\u7684 props \u5C5E\u6027\u4F20\u9012\u7ED9\u7EC4\u4EF6\u51FD\u6570 \u8FD9\u6837\u5728\u7EC4\u4EF6\u4E2D\u5C31\u53EF\u4EE5\u901A\u8FC7 props \u5C5E\u6027\u83B7\u53D6\u6570\u636E\u4E86
+  // \u7EC4\u4EF6\u8FD4\u56DE\u8981\u6E32\u67D3\u7684 Virtual DOM
+  return virtualDOM && virtualDOM.type(virtualDOM.props || {})
+}
+`,paraId:55,tocIndex:9},{value:"\u7C7B\u7EC4\u4EF6\u672C\u8EAB\u4E5F\u662F Virtual DOM\uFF0C\u53EF\u4EE5\u901A\u8FC7 Virtual DOM \u4E2D\u7684 type \u5C5E\u6027\u503C\u786E\u5B9A\u5F53\u524D\u8981\u6E32\u67D3\u7684\u7EC4\u4EF6\u662F\u7C7B\u7EC4\u4EF6\u8FD8\u662F\u51FD\u6570\u7EC4\u4EF6\u3002",paraId:56,tocIndex:10},{value:"\u5728\u786E\u5B9A\u5F53\u524D\u8981\u6E32\u67D3\u7684\u7EC4\u4EF6\u4E3A\u7C7B\u7EC4\u4EF6\u4EE5\u540E\uFF0C\u9700\u8981\u5B9E\u4F8B\u5316\u7C7B\u7EC4\u4EF6\u5F97\u5230\u7C7B\u7EC4\u4EF6\u5B9E\u4F8B\u5BF9\u8C61\uFF0C\u901A\u8FC7\u7C7B\u7EC4\u4EF6\u5B9E\u4F8B\u5BF9\u8C61\u8C03\u7528\u7C7B\u7EC4\u4EF6\u4E2D\u7684 render \u65B9\u6CD5\uFF0C\u83B7\u53D6\u7EC4\u4EF6\u8981\u6E32\u67D3\u7684 Virtual DOM\u3002",paraId:57,tocIndex:10},{value:"\u7C7B\u7EC4\u4EF6\u9700\u8981\u7EE7\u627F Component \u7236\u7C7B\uFF0C\u5B50\u7C7B\u9700\u8981\u901A\u8FC7 super \u65B9\u6CD5\u5C06\u81EA\u8EAB\u7684 props \u5C5E\u6027\u4F20\u9012\u7ED9 Component \u7236\u7C7B\uFF0C\u7236\u7C7B\u4F1A\u5C06 props \u5C5E\u6027\u6302\u8F7D\u4E3A\u7236\u7C7B\u5C5E\u6027\uFF0C\u5B50\u7C7B\u7EE7\u627F\u4E86\u7236\u7C7B\uFF0C\u81EA\u5DF1\u672C\u8EAB\u4E5F\u5C31\u81EA\u7136\u62E5\u6709 props \u5C5E\u6027\u4E86\u3002\u8FD9\u6837\u505A\u7684\u597D\u5904\u662F\u5F53 props \u53D1\u751F\u66F4\u65B0\u540E\uFF0C\u7236\u7C7B\u53EF\u4EE5\u6839\u636E\u66F4\u65B0\u540E\u7684 props \u5E2E\u52A9\u5B50\u7C7B\u66F4\u65B0\u89C6\u56FE\u3002",paraId:58,tocIndex:10},{value:"\u5047\u8BBE\u4EE5\u4E0B\u4EE3\u7801\u5C31\u662F\u6211\u4EEC\u8981\u6E32\u67D3\u7684\u7C7B\u7EC4\u4EF6\uFF1A",paraId:59,tocIndex:10},{value:`class Alert extends TinyReact.Component {
+  constructor(props) {
+    // \u5C06 props \u4F20\u9012\u7ED9\u7236\u7C7B \u5B50\u7C7B\u7EE7\u627F\u7236\u7C7B\u7684 props \u5B50\u7C7B\u81EA\u7136\u5C31\u6709 props \u6570\u636E\u4E86
+    // \u5426\u5219 props \u4EC5\u4EC5\u662F constructor \u51FD\u6570\u7684\u53C2\u6570\u800C\u5DF2
+    // \u5C06 props \u4F20\u9012\u7ED9\u7236\u7C7B\u7684\u597D\u5904\u662F \u5F53 props \u53D1\u751F\u66F4\u6539\u65F6 \u7236\u7C7B\u53EF\u4EE5\u5E2E\u52A9\u66F4\u65B0 props \u66F4\u65B0\u7EC4\u4EF6\u89C6\u56FE
+    super(props)
+    this.state = {
+      title: "default title"
+    }
+  }
+  render() {
+    return (
+      <div>
+        <h2>{this.state.title}</h2>
+        <p>{this.props.message}</p>
+      </div>
+    )
+  }
+}
+
+TinyReact.render(<Alert message="Hello React" />, root)
+`,paraId:60,tocIndex:10},{value:`// Component.js \u7236\u7C7B Component \u5B9E\u73B0
+export default class Component {
+  constructor(props) {
+    this.props = props
+  }
+}
+`,paraId:61,tocIndex:10},{value:"\u5728 mountComponent \u65B9\u6CD5\u4E2D\u901A\u8FC7\u8C03\u7528 buildStatefulComponent \u65B9\u6CD5\u5F97\u5230\u7C7B\u7EC4\u4EF6\u8981\u6E32\u67D3\u7684 Virtual DOM",paraId:62,tocIndex:10},{value:`// mountComponent.js
+export default function mountComponent(virtualDOM, container) {
+  let nextVirtualDOM = null
+  // \u533A\u5206\u51FD\u6570\u578B\u7EC4\u4EF6\u548C\u7C7B\u7EC4\u4EF6
+  if (isFunctionalComponent(virtualDOM)) {
+    // \u51FD\u6570\u7EC4\u4EF6
+    nextVirtualDOM = buildFunctionalComponent(virtualDOM)
+  } else {
+    // \u7C7B\u7EC4\u4EF6
+    nextVirtualDOM = buildStatefulComponent(virtualDOM)
+  }
+  // \u5224\u65AD\u5F97\u5230\u7684 Virtual Dom \u662F\u5426\u662F\u7EC4\u4EF6
+  if (isFunction(nextVirtualDOM)) {
+    mountComponent(nextVirtualDOM, container)
+  } else {
+    mountNativeElement(nextVirtualDOM, container)
+  }
+}
+
+// \u5904\u7406\u7C7B\u7EC4\u4EF6
+function buildStatefulComponent(virtualDOM) {
+  // \u5B9E\u4F8B\u5316\u7C7B\u7EC4\u4EF6 \u5F97\u5230\u7C7B\u7EC4\u4EF6\u5B9E\u4F8B\u5BF9\u8C61 \u5E76\u5C06 props \u5C5E\u6027\u4F20\u9012\u8FDB\u7C7B\u7EC4\u4EF6
+  const component = new virtualDOM.type(virtualDOM.props)
+  // \u8C03\u7528\u7C7B\u7EC4\u4EF6\u4E2D\u7684render\u65B9\u6CD5\u5F97\u5230\u8981\u6E32\u67D3\u7684 Virtual DOM
+  const nextVirtualDOM = component.render()
+  // \u8FD4\u56DE\u8981\u6E32\u67D3\u7684 Virtual DOM
+  return nextVirtualDOM
+}
+`,paraId:63,tocIndex:10},{value:"\u5728\u8FDB\u884C Virtual DOM \u6BD4\u5BF9\u65F6\uFF0C\u9700\u8981\u7528\u5230\u66F4\u65B0\u540E\u7684 Virtual DOM \u548C\u66F4\u65B0\u524D\u7684 Virtual DOM\uFF0C\u66F4\u65B0\u540E\u7684 Virtual DOM \u76EE\u524D\u6211\u4EEC\u53EF\u4EE5\u901A\u8FC7 render \u65B9\u6CD5\u8FDB\u884C\u4F20\u9012\uFF0C\u73B0\u5728\u7684\u95EE\u9898\u662F\u66F4\u65B0\u524D\u7684 Virtual DOM \u8981\u5982\u4F55\u83B7\u53D6\u5462\uFF1F",paraId:64,tocIndex:11},{value:"\u5BF9\u4E8E\u66F4\u65B0\u524D\u7684 Virtual DOM\uFF0C\u5BF9\u5E94\u7684\u5176\u5B9E\u5C31\u662F\u5DF2\u7ECF\u5728\u9875\u9762\u4E2D\u663E\u793A\u7684\u771F\u5B9E DOM \u5BF9\u8C61\u3002\u65E2\u7136\u662F\u8FD9\u6837\uFF0C\u90A3\u4E48\u6211\u4EEC\u5728\u521B\u5EFA\u771F\u5B9E DOM \u5BF9\u8C61\u65F6\uFF0C\u5C31\u53EF\u4EE5\u5C06 Virtual DOM \u6DFB\u52A0\u5230\u771F\u5B9E DOM \u5BF9\u8C61\u7684\u5C5E\u6027\u4E2D\u3002\u5728\u8FDB\u884C Virtual DOM \u5BF9\u6BD4\u4E4B\u524D\uFF0C\u5C31\u53EF\u4EE5\u901A\u8FC7\u771F\u5B9E DOM \u5BF9\u8C61\u83B7\u53D6\u5176\u5BF9\u5E94\u7684 Virtual DOM \u5BF9\u8C61\u4E86\uFF0C\u5176\u5B9E\u5C31\u662F\u901A\u8FC7 render \u65B9\u6CD5\u7684\u7B2C\u4E09\u4E2A\u53C2\u6570\u83B7\u53D6\u7684\uFF0Ccontainer.firstChild\u3002",paraId:65,tocIndex:11},{value:"\u5728\u521B\u5EFA\u771F\u5B9E DOM \u5BF9\u8C61\u65F6\u4E3A\u5176\u6DFB\u52A0\u5BF9\u5E94\u7684 Virtual DOM \u5BF9\u8C61",paraId:66,tocIndex:11},{value:`// mountElement.js
+import mountElement from "./mountElement"
+
+export default function mountNativeElement(virtualDOM, container) {
+ // \u5C06 Virtual DOM \u6302\u8F7D\u5230\u771F\u5B9E DOM \u5BF9\u8C61\u7684\u5C5E\u6027\u4E2D \u65B9\u4FBF\u5728\u5BF9\u6BD4\u65F6\u83B7\u53D6\u5176 Virtual DOM
+ newElement._virtualDOM = virtualDOM
+}
+`,paraId:67,tocIndex:11},{value:"Virtual DOM \u7C7B\u578B\u76F8\u540C\uFF0C\u5982\u679C\u662F\u5143\u7D20\u8282\u70B9\uFF0C\u5C31\u5BF9\u6BD4\u5143\u7D20\u8282\u70B9\u5C5E\u6027\u662F\u5426\u53D1\u751F\u53D8\u5316\uFF0C\u5982\u679C\u662F\u6587\u672C\u8282\u70B9\u5C31\u5BF9\u6BD4\u6587\u672C\u8282\u70B9\u5185\u5BB9\u662F\u5426\u53D1\u751F\u53D8\u5316",paraId:68,tocIndex:12},{value:"\u8981\u5B9E\u73B0\u5BF9\u6BD4\uFF0C\u9700\u8981\u5148\u4ECE\u5DF2\u5B58\u5728 DOM \u5BF9\u8C61\u4E2D\u83B7\u53D6\u5176\u5BF9\u5E94\u7684 Virtual DOM \u5BF9\u8C61\u3002",paraId:69,tocIndex:12},{value:`// diff.js
+// \u83B7\u53D6\u672A\u66F4\u65B0\u524D\u7684 Virtual DOM
+const oldVirtualDOM = oldDOM && oldDOM._virtualDOM
+`,paraId:70,tocIndex:12},{value:"\u5224\u65AD oldVirtualDOM \u662F\u5426\u5B58\u5728\uFF0C \u5982\u679C\u5B58\u5728\u5219\u7EE7\u7EED\u5224\u65AD\u8981\u5BF9\u6BD4\u7684 Virtual DOM \u7C7B\u578B\u662F\u5426\u76F8\u540C\uFF0C\u5982\u679C\u7C7B\u578B\u76F8\u540C\u5224\u65AD\u8282\u70B9\u7C7B\u578B\u662F\u5426\u662F\u6587\u672C\uFF0C\u5982\u679C\u662F\u6587\u672C\u8282\u70B9\u5BF9\u6BD4\uFF0C\u5C31\u8C03\u7528 updateTextNode \u65B9\u6CD5\uFF0C\u5982\u679C\u662F\u5143\u7D20\u8282\u70B9\u5BF9\u6BD4\u5C31\u8C03\u7528 setAttributeForElement \u65B9\u6CD5",paraId:71,tocIndex:12},{value:`// diff.js
+else if (oldVirtualDOM && virtualDOM.type === oldVirtualDOM.type) {
+  if (virtualDOM.type === "text") {
+    // \u6587\u672C\u8282\u70B9 \u5BF9\u6BD4\u6587\u672C\u5185\u5BB9\u662F\u5426\u53D1\u751F\u53D8\u5316
+    updateTextNode(virtualDOM, oldVirtualDOM, oldDOM)
+  } else {
+    // \u5143\u7D20\u8282\u70B9 \u5BF9\u6BD4\u5143\u7D20\u5C5E\u6027\u662F\u5426\u53D1\u751F\u53D8\u5316
+    setAttributeForElement(oldDOM, virtualDOM, oldVirtualDOM)
+  }
+`,paraId:72,tocIndex:12},{value:"updateTextNode \u65B9\u6CD5\u7528\u4E8E\u5BF9\u6BD4\u6587\u672C\u8282\u70B9\u5185\u5BB9\u662F\u5426\u53D1\u751F\u53D8\u5316\uFF0C\u5982\u679C\u53D1\u751F\u53D8\u5316\u5219\u66F4\u65B0\u771F\u5B9E DOM \u5BF9\u8C61\u4E2D\u7684\u5185\u5BB9\uFF0C\u65E2\u7136\u771F\u5B9E DOM \u5BF9\u8C61\u53D1\u751F\u4E86\u53D8\u5316\uFF0C\u8FD8\u8981\u5C06\u6700\u65B0\u7684 Virtual DOM \u540C\u6B65\u7ED9\u771F\u5B9E DOM \u5BF9\u8C61\u3002",paraId:73,tocIndex:12},{value:`function updateTextNode(virtualDOM, oldVirtualDOM, oldDOM) {
+  // \u5982\u679C\u6587\u672C\u8282\u70B9\u5185\u5BB9\u4E0D\u540C
+  if (virtualDOM.props.textContent !== oldVirtualDOM.props.textContent) {
+    // \u66F4\u65B0\u771F\u5B9E DOM \u5BF9\u8C61\u4E2D\u7684\u5185\u5BB9
+    oldDOM.textContent = virtualDOM.props.textContent
+  }
+  // \u540C\u6B65\u771F\u5B9E DOM \u5BF9\u5E94\u7684 Virtual DOM
+  oldDOM._virtualDOM = virtualDOM
+}
+`,paraId:74,tocIndex:12},{value:"setAttributeForElement \u65B9\u6CD5\u7528\u4E8E\u8BBE\u7F6E/\u66F4\u65B0\u5143\u7D20\u8282\u70B9\u5C5E\u6027",paraId:75,tocIndex:12},{value:"\u601D\u8DEF\u662F\u5148\u5206\u522B\u83B7\u53D6\u66F4\u65B0\u540E\u7684\u548C\u66F4\u65B0\u524D\u7684 Virtual DOM \u4E2D\u7684 props \u5C5E\u6027\uFF0C\u5FAA\u73AF\u65B0 Virtual DOM \u4E2D\u7684 props \u5C5E\u6027\uFF0C\u901A\u8FC7\u5BF9\u6BD4\u770B\u4E00\u4E0B\u65B0 Virtual DOM \u4E2D\u7684\u5C5E\u6027\u503C\u662F\u5426\u53D1\u751F\u4E86\u53D8\u5316\uFF0C\u5982\u679C\u53D1\u751F\u53D8\u5316 \u9700\u8981\u5C06\u53D8\u5316\u7684\u503C\u66F4\u65B0\u5230\u771F\u5B9E DOM \u5BF9\u8C61\u4E2D",paraId:76,tocIndex:12},{value:"\u518D\u5FAA\u73AF\u672A\u66F4\u65B0\u524D\u7684 Virtual DOM \u5BF9\u8C61\uFF0C\u901A\u8FC7\u5BF9\u6BD4\u770B\u770B\u65B0\u7684 Virtual DOM \u4E2D\u662F\u5426\u6709\u88AB\u5220\u9664\u7684\u5C5E\u6027\uFF0C\u5982\u679C\u5B58\u5728\u5220\u9664\u7684\u5C5E\u6027 \u9700\u8981\u5C06 DOM \u5BF9\u8C61\u4E2D\u5BF9\u5E94\u7684\u5C5E\u6027\u4E5F\u5220\u9664\u6389",paraId:77,tocIndex:12},{value:`// updateNodeElement.js
+export default function updateNodeElement(
+  newElement,
+  virtualDOM,
+  oldVirtualDOM = {}
+) {
+  // \u83B7\u53D6\u8282\u70B9\u5BF9\u5E94\u7684\u5C5E\u6027\u5BF9\u8C61
+  const newProps = virtualDOM.props || {}
+  const oldProps = oldVirtualDOM.props || {}
+  Object.keys(newProps).forEach(propName => {
+    // \u83B7\u53D6\u5C5E\u6027\u503C
+    const newPropsValue = newProps[propName]
+    const oldPropsValue = oldProps[propName]
+    if (newPropsValue !== oldPropsValue) {
+      // \u5224\u65AD\u5C5E\u6027\u662F\u5426\u662F\u5426\u4E8B\u4EF6\u5C5E\u6027 onClick -> click
+      if (propName.slice(0, 2) === "on") {
+        // \u4E8B\u4EF6\u540D\u79F0
+        const eventName = propName.toLowerCase().slice(2)
+        // \u4E3A\u5143\u7D20\u6DFB\u52A0\u4E8B\u4EF6
+        newElement.addEventListener(eventName, newPropsValue)
+        // \u5220\u9664\u539F\u6709\u7684\u4E8B\u4EF6\u7684\u4E8B\u4EF6\u5904\u7406\u51FD\u6570
+        if (oldPropsValue) {
+          newElement.removeEventListener(eventName, oldPropsValue)
+        }
+      } else if (propName === "value" || propName === "checked") {
+        newElement[propName] = newPropsValue
+      } else if (propName !== "children") {
+        if (propName === "className") {
+          newElement.setAttribute("class", newPropsValue)
+        } else {
+          newElement.setAttribute(propName, newPropsValue)
+        }
+      }
+    }
+  })
+  // \u5224\u65AD\u5C5E\u6027\u88AB\u5220\u9664\u7684\u60C5\u51B5
+  Object.keys(oldProps).forEach(propName => {
+    const newPropsValue = newProps[propName]
+    const oldPropsValue = oldProps[propName]
+    if (!newPropsValue) {
+      // \u5C5E\u6027\u88AB\u5220\u9664\u4E86
+      if (propName.slice(0, 2) === "on") {
+        const eventName = propName.toLowerCase().slice(2)
+        newElement.removeEventListener(eventName, oldPropsValue)
+      } else if (propName !== "children") {
+        newElement.removeAttribute(propName)
+      }
+    }
+  })
+}
+`,paraId:78,tocIndex:12},{value:"\u4EE5\u4E0A\u5BF9\u6BD4\u7684\u4EC5\u4EC5\u662F\u6700\u4E0A\u5C42\u5143\u7D20\uFF0C\u4E0A\u5C42\u5143\u7D20\u5BF9\u6BD4\u5B8C\u6210\u4EE5\u540E\u8FD8\u9700\u8981\u9012\u5F52\u5BF9\u6BD4\u5B50\u5143\u7D20",paraId:79,tocIndex:12},{value:`else if (oldVirtualDOM && virtualDOM.type === oldVirtualDOM.type) {
+    // \u9012\u5F52\u5BF9\u6BD4 Virtual DOM \u7684\u5B50\u5143\u7D20
+    virtualDOM.children.forEach((child, i) => {
+      diff(child, oldDOM, oldDOM.childNodes[i])
+    })
+  }
+`,paraId:80,tocIndex:12},{value:"\u5F53\u5BF9\u6BD4\u7684\u5143\u7D20\u8282\u70B9\u7C7B\u578B\u4E0D\u540C\u65F6\uFF0C\u5C31\u4E0D\u9700\u8981\u7EE7\u7EED\u5BF9\u6BD4\u4E86\uFF0C\u76F4\u63A5\u4F7F\u7528\u65B0\u7684 Virtual DOM \u521B\u5EFA DOM \u5BF9\u8C61\uFF0C\u7528\u65B0\u7684 DOM \u5BF9\u8C61\u76F4\u63A5\u66FF\u6362\u65E7\u7684 DOM \u5BF9\u8C61\u3002\u5F53\u524D\u8FD9\u79CD\u60C5\u51B5\u8981\u5C06\u7EC4\u4EF6\u5228\u9664\uFF0C\u7EC4\u4EF6\u8981\u88AB\u5355\u72EC\u5904\u7406\u3002",paraId:81,tocIndex:13},{value:`// diff.js
+else if (
+  // \u5982\u679C Virtual DOM \u7C7B\u578B\u4E0D\u4E00\u6837
+  virtualDOM.type !== oldVirtualDOM.type &&
+  // \u5E76\u4E14 Virtual DOM \u4E0D\u662F\u7EC4\u4EF6 \u56E0\u4E3A\u7EC4\u4EF6\u8981\u5355\u72EC\u8FDB\u884C\u5904\u7406
+  typeof virtualDOM.type !== "function"
+) {
+  // \u6839\u636E Virtual DOM \u521B\u5EFA\u771F\u5B9E DOM \u5143\u7D20
+  const newDOMElement = createDOMElement(virtualDOM)
+  // \u7528\u521B\u5EFA\u51FA\u6765\u7684\u771F\u5B9E DOM \u5143\u7D20 \u66FF\u6362\u65E7\u7684 DOM \u5143\u7D20
+  oldDOM.parentNode.replaceChild(newDOMElement, oldDOM)
+}
+`,paraId:82,tocIndex:13},{value:"\u5220\u9664\u8282\u70B9\u53D1\u751F\u5728\u8282\u70B9\u66F4\u65B0\u4EE5\u540E\u5E76\u4E14\u53D1\u751F\u5728\u540C\u4E00\u4E2A\u7236\u8282\u70B9\u4E0B\u7684\u6240\u6709\u5B50\u8282\u70B9\u8EAB\u4E0A\u3002",paraId:83,tocIndex:14},{value:"\u5728\u8282\u70B9\u66F4\u65B0\u5B8C\u6210\u4EE5\u540E\uFF0C\u5982\u679C\u65E7\u8282\u70B9\u5BF9\u8C61\u7684\u6570\u91CF\u591A\u4E8E\u65B0 VirtualDOM \u8282\u70B9\u7684\u6570\u91CF\uFF0C\u5C31\u8BF4\u660E\u6709\u8282\u70B9\u9700\u8981\u88AB\u5220\u9664\u3002",paraId:84,tocIndex:14},{value:`// \u83B7\u53D6\u5C31\u8282\u70B9\u7684\u6570\u91CF
+let oldChildNodes = oldDOM.childNodes
+// \u5982\u679C\u65E7\u8282\u70B9\u7684\u6570\u91CF\u591A\u4E8E\u8981\u6E32\u67D3\u7684\u65B0\u8282\u70B9\u7684\u957F\u5EA6
+if (oldChildNodes.length > virtualDOM.children.length) {
+  for (
+    let i = oldChildNodes.length - 1;
+    i > virtualDOM.children.length - 1;
+    i--
+  ) {
+    oldDOM.removeChild(oldChildNodes[i])
+  }
+}
+`,paraId:85,tocIndex:14},{value:"\u4EE5\u4E0B\u4EE3\u7801\u662F\u8981\u66F4\u65B0\u72B6\u6001\u7684\u7C7B\u7EC4\u4EF6\uFF0C\u5728\u7C7B\u7EC4\u4EF6\u7684 state \u5BF9\u8C61\u4E2D\u6709\u9ED8\u8BA4\u7684 title \u72B6\u6001\uFF0C\u70B9\u51FB change title \u6309\u94AE\u8C03\u7528 handleChange \u65B9\u6CD5\uFF0C\u5728 handleChange \u65B9\u6CD5\u4E2D\u8C03\u7528 this.setState \u65B9\u6CD5\u66F4\u6539 title \u7684\u72B6\u6001\u503C\u3002",paraId:86,tocIndex:15},{value:`class Alert extends TinyReact.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      title: "default title"
+    }
+    // \u66F4\u6539 handleChange \u65B9\u6CD5\u4E2D\u7684 this \u6307\u5411 \u8BA9 this \u6307\u5411\u7C7B\u5B9E\u4F8B\u5BF9\u8C61
+    this.handleChange = this.handleChange.bind(this)
+  }
+  handleChange() {
+    // \u8C03\u7528\u7236\u7C7B\u4E2D\u7684 setState \u65B9\u6CD5\u66F4\u6539\u72B6\u6001
+    this.setState({
+      title: "changed title"
+    })
+  }
+  render() {
+    return (
+      <div>
+        <h2>{this.state.title}</h2>
+        <p>{this.props.message}</p>
+        <button onClick={this.handleChange}>change title</button>
+      </div>
+    )
+  }
+}
+`,paraId:87,tocIndex:15},{value:"setState \u65B9\u6CD5\u662F\u5B9A\u4E49\u5728\u7236\u7C7B Component \u4E2D\u7684\uFF0C\u8BE5\u65B9\u6CD5\u7684\u4F5C\u7528\u662F\u66F4\u6539\u5B50\u7C7B\u7684 state\uFF0C\u4EA7\u751F\u4E00\u4E2A\u5168\u65B0\u7684 state \u5BF9\u8C61\u3002",paraId:88,tocIndex:15},{value:`// Component.js
+export default class Component {
+  constructor(props) {
+    this.props = props
+  }
+  setState (state) {
+    // setState \u65B9\u6CD5\u88AB\u5B50\u7C7B\u8C03\u7528 \u6B64\u5904this\u6307\u5411\u5B50\u7C7B\u5B9E\u4F8B\u5BF9\u8C61
+    // \u6240\u4EE5\u6539\u53D8\u7684\u662F\u5B50\u7C7B\u7684 state \u5BF9\u8C61
+    this.state = Object.assign({}, this.state, state)
+  }
+}
+`,paraId:89,tocIndex:15},{value:"\u73B0\u5728\u5B50\u7C7B\u5DF2\u7ECF\u53EF\u4EE5\u8C03\u7528\u7236\u7C7B\u7684 setState \u65B9\u6CD5\u66F4\u6539\u72B6\u6001\u503C\u4E86\uFF0C\u5F53\u7EC4\u4EF6\u7684 state \u5BF9\u8C61\u53D1\u751F\u66F4\u6539\u65F6\uFF0C\u8981\u8C03\u7528 render \u65B9\u6CD5\u66F4\u65B0\u7EC4\u4EF6\u89C6\u56FE\u3002",paraId:90,tocIndex:15},{value:"\u5728\u66F4\u65B0\u7EC4\u4EF6\u4E4B\u524D\uFF0C\u8981\u4F7F\u7528\u66F4\u65B0\u7684 Virtual DOM \u5BF9\u8C61\u548C\u672A\u66F4\u65B0\u7684 Virtual DOM \u8FDB\u884C\u5BF9\u6BD4\u627E\u51FA\u66F4\u65B0\u7684\u90E8\u5206\uFF0C\u8FBE\u5230 DOM \u6700\u5C0F\u5316\u64CD\u4F5C\u7684\u76EE\u7684\u3002",paraId:91,tocIndex:15},{value:"\u5728 setState \u65B9\u6CD5\u4E2D\u53EF\u4EE5\u901A\u8FC7\u8C03\u7528 this.render \u65B9\u6CD5\u83B7\u53D6\u66F4\u65B0\u540E\u7684 Virtual DOM\uFF0C\u7531\u4E8E setState \u65B9\u6CD5\u88AB\u5B50\u7C7B\u8C03\u7528\uFF0Cthis \u6307\u5411\u5B50\u7C7B\uFF0C\u6240\u4EE5\u6B64\u5904\u8C03\u7528\u7684\u662F\u5B50\u7C7B\u7684 render \u65B9\u6CD5\u3002",paraId:92,tocIndex:15},{value:`// Component.js
+setState(state) {
+  // setState \u65B9\u6CD5\u88AB\u5B50\u7C7B\u8C03\u7528 \u6B64\u5904this\u6307\u5411\u5B50\u7C7B
+  // \u6240\u4EE5\u6539\u53D8\u7684\u662F\u5B50\u7C7B\u7684 state
+  this.state = Object.assign({}, this.state, state)
+  // \u901A\u8FC7\u8C03\u7528 render \u65B9\u6CD5\u83B7\u53D6\u6700\u65B0\u7684 Virtual DOM
+  let virtualDOM = this.render()
+}
+`,paraId:93,tocIndex:15},{value:"\u8981\u5B9E\u73B0\u5BF9\u6BD4\uFF0C\u8FD8\u9700\u8981\u83B7\u53D6\u672A\u66F4\u65B0\u524D\u7684 Virtual DOM\uFF0C\u6309\u7167\u4E4B\u524D\u7684\u7ECF\u9A8C\uFF0C\u6211\u4EEC\u53EF\u4EE5\u4ECE DOM \u5BF9\u8C61\u4E2D\u83B7\u53D6\u5176\u5BF9\u5E94\u7684 Virtual DOM \u5BF9\u8C61\uFF0C\u672A\u66F4\u65B0\u524D\u7684 DOM \u5BF9\u8C61\u5B9E\u9645\u4E0A\u5C31\u662F\u73B0\u5728\u5728\u9875\u9762\u4E2D\u663E\u793A\u7684 DOM \u5BF9\u8C61\uFF0C\u6211\u4EEC\u53EA\u8981\u80FD\u83B7\u53D6\u5230\u8FD9\u4E2A DOM \u5BF9\u8C61\u5C31\u53EF\u4EE5\u83B7\u53D6\u5230\u5176\u5BF9\u5E94\u7684 Virtual DOM \u5BF9\u8C61\u4E86\u3002",paraId:94,tocIndex:15},{value:"\u9875\u9762\u4E2D\u7684 DOM \u5BF9\u8C61\u8981\u600E\u6837\u83B7\u53D6\u5462\uFF1F\u9875\u9762\u4E2D\u7684 DOM \u5BF9\u8C61\u662F\u901A\u8FC7 mountNativeElement \u65B9\u6CD5\u6302\u8F7D\u5230\u9875\u9762\u4E2D\u7684\uFF0C\u6240\u4EE5\u6211\u4EEC\u53EA\u9700\u8981\u5728\u8FD9\u4E2A\u65B9\u6CD5\u4E2D\u8C03\u7528 Component \u7C7B\u4E2D\u7684\u65B9\u6CD5\u5C31\u53EF\u4EE5\u5C06 DOM \u5BF9\u8C61\u4FDD\u5B58\u5728 Component \u7C7B\u4E2D\u4E86\u3002\u5728\u5B50\u7C7B\u8C03\u7528 setState \u65B9\u6CD5\u7684\u65F6\u5019\uFF0C\u5728 setState \u65B9\u6CD5\u4E2D\u518D\u8C03\u7528\u53E6\u4E00\u4E2A\u83B7\u53D6 DOM \u5BF9\u8C61\u7684\u65B9\u6CD5\u5C31\u53EF\u4EE5\u83B7\u53D6\u5230\u4E4B\u524D\u4FDD\u5B58\u7684 DOM \u5BF9\u8C61\u4E86\u3002",paraId:95,tocIndex:15},{value:`// Component.js
+// \u4FDD\u5B58 DOM \u5BF9\u8C61\u7684\u65B9\u6CD5
+setDOM(dom) {
+  this._dom = dom
+}
+// \u83B7\u53D6 DOM \u5BF9\u8C61\u7684\u65B9\u6CD5
+getDOM() {
+  return this._dom
+}
+`,paraId:96,tocIndex:15},{value:"\u63A5\u4E0B\u6765\u6211\u4EEC\u8981\u7814\u7A76\u4E00\u4E0B\u5728 mountNativeElement \u65B9\u6CD5\u4E2D\u5982\u4F55\u624D\u80FD\u8C03\u7528\u5230 setDOM \u65B9\u6CD5\uFF0C\u8981\u8C03\u7528 setDOM \u65B9\u6CD5\uFF0C\u5FC5\u987B\u8981\u5F97\u5230\u7C7B\u7684\u5B9E\u4F8B\u5BF9\u8C61\uFF0C\u6240\u4EE5\u76EE\u524D\u7684\u95EE\u9898\u5C31\u662F\u5982\u4F55\u5728 mountNativeElement \u65B9\u6CD5\u4E2D\u5F97\u5230\u7C7B\u7684\u5B9E\u4F8B\u5BF9\u8C61\uFF0C\u8FD9\u4E2A\u7C7B\u6307\u7684\u4E0D\u662F Component \u7C7B\uFF0C\u56E0\u4E3A\u6211\u4EEC\u5728\u4EE3\u7801\u4E2D\u5E76\u4E0D\u662F\u76F4\u63A5\u5B9E\u4F8B\u5316\u7684 Component \u7C7B\uFF0C\u800C\u662F\u5B9E\u4F8B\u5316\u7684\u5B83\u7684\u5B50\u7C7B\uFF0C\u7531\u4E8E\u5B50\u7C7B\u7EE7\u627F\u4E86\u7236\u7C7B\uFF0C\u6240\u4EE5\u5728\u5B50\u7C7B\u7684\u5B9E\u4F8B\u5BF9\u8C61\u4E2D\u4E5F\u662F\u53EF\u4EE5\u8C03\u7528\u5230 setDOM \u65B9\u6CD5\u7684\u3002",paraId:97,tocIndex:15},{value:"mountNativeElement \u65B9\u6CD5\u63A5\u6536\u6700\u65B0\u7684 Virtual DOM \u5BF9\u8C61\uFF0C\u5982\u679C\u8FD9\u4E2A Virtual DOM \u5BF9\u8C61\u662F\u7C7B\u7EC4\u4EF6\u4EA7\u751F\u7684\uFF0C\u5728\u4EA7\u751F\u8FD9\u4E2A Virtual DOM \u5BF9\u8C61\u65F6\u4E00\u5B9A\u4F1A\u5148\u5F97\u5230\u8FD9\u4E2A\u7C7B\u7684\u5B9E\u4F8B\u5BF9\u8C61\uFF0C\u7136\u540E\u518D\u8C03\u7528\u5B9E\u4F8B\u5BF9\u8C61\u4E0B\u9762\u7684 render \u65B9\u6CD5\u8FDB\u884C\u83B7\u53D6\u3002\u6211\u4EEC\u53EF\u4EE5\u5728\u90A3\u4E2A\u65F6\u5019\u5C06\u7C7B\u7EC4\u4EF6\u5B9E\u4F8B\u5BF9\u8C61\u6DFB\u52A0\u5230 Virtual DOM \u5BF9\u8C61\u7684\u5C5E\u6027\u4E2D\uFF0C\u800C\u8FD9\u4E2A Virtual DOM \u5BF9\u8C61\u6700\u7EC8\u4F1A\u4F20\u9012\u7ED9 mountNativeElement \u65B9\u6CD5\uFF0C\u8FD9\u6837\u6211\u4EEC\u5C31\u53EF\u4EE5\u5728 mountNativeElement \u65B9\u6CD5\u4E2D\u83B7\u53D6\u5230\u7EC4\u4EF6\u7684\u5B9E\u4F8B\u5BF9\u8C61\u4E86\uFF0C\u65E2\u7136\u7C7B\u7EC4\u4EF6\u7684\u5B9E\u4F8B\u5BF9\u8C61\u83B7\u53D6\u5230\u4E86\uFF0C\u6211\u4EEC\u5C31\u53EF\u4EE5\u8C03\u7528 setDOM \u65B9\u6CD5\u4E86\u3002",paraId:98,tocIndex:15},{value:"\u5728 buildClassComponent \u65B9\u6CD5\u4E2D\u4E3A Virtual DOM \u5BF9\u8C61\u6DFB\u52A0 component \u5C5E\u6027\uFF0C \u503C\u4E3A\u7C7B\u7EC4\u4EF6\u7684\u5B9E\u4F8B\u5BF9\u8C61\u3002",paraId:99,tocIndex:15},{value:`function buildClassComponent(virtualDOM) {
+  const component = new virtualDOM.type(virtualDOM.props)
+  const nextVirtualDOM = component.render()
+  nextVirtualDOM.component = component
+  return nextVirtualDOM
+}
+`,paraId:100,tocIndex:15},{value:"\u5728 mountNativeElement \u65B9\u6CD5\u4E2D\u83B7\u53D6\u7EC4\u4EF6\u5B9E\u4F8B\u5BF9\u8C61\uFF0C\u901A\u8FC7\u5B9E\u4F8B\u8C03\u7528\u8C03\u7528 setDOM \u65B9\u6CD5\u4FDD\u5B58 DOM \u5BF9\u8C61\uFF0C\u65B9\u4FBF\u5728\u5BF9\u6BD4\u65F6\u901A\u8FC7\u5B83\u83B7\u53D6\u5B83\u7684 Virtual DOM \u5BF9\u8C61",paraId:101,tocIndex:15},{value:`export default function mountNativeElement(virtualDOM, container) {
+  // \u83B7\u53D6\u7EC4\u4EF6\u5B9E\u4F8B\u5BF9\u8C61
+  const component = virtualDOM.component
+  // \u5982\u679C\u7EC4\u4EF6\u5B9E\u4F8B\u5BF9\u8C61\u5B58\u5728
+  if (component) {
+    // \u4FDD\u5B58 DOM \u5BF9\u8C61
+    component.setDOM(newElement)
+  }
+}
+`,paraId:102,tocIndex:15},{value:"\u63A5\u4E0B\u6765\u5728 setState \u65B9\u6CD5\u4E2D\u5C31\u53EF\u4EE5\u8C03\u7528 getDOM \u65B9\u6CD5\u83B7\u53D6 DOM \u5BF9\u8C61\u4E86",paraId:103,tocIndex:15},{value:`setState(state) {
+  this.state = Object.assign({}, this.state, state)
+  let virtualDOM = this.render()
+  // \u83B7\u53D6\u9875\u9762\u4E2D\u6B63\u5728\u663E\u793A\u7684 DOM \u5BF9\u8C61 \u901A\u8FC7\u5B83\u53EF\u4EE5\u83B7\u53D6\u5176\u5BF9\u8C61\u7684 Virtual DOM \u5BF9\u8C61
+  let oldDOM = this.getDOM()
+}
+`,paraId:104,tocIndex:15},{value:"\u73B0\u5728\u66F4\u65B0\u524D\u7684 Virtual DOM \u5BF9\u8C61\u548C\u66F4\u65B0\u540E\u7684 Virtual DOM \u5BF9\u8C61\u5C31\u90FD\u5DF2\u7ECF\u83B7\u53D6\u5230\u4E86\uFF0C\u63A5\u4E0B\u6765\u8FD8\u8981\u83B7\u53D6\u5230\u771F\u5B9E DOM \u5BF9\u8C61\u7236\u7EA7\u5BB9\u5668\u5BF9\u8C61\uFF0C\u56E0\u4E3A\u5728\u8C03\u7528 diff \u65B9\u6CD5\u8FDB\u884C\u5BF9\u6BD4\u7684\u65F6\u5019\u9700\u8981\u7528\u5230",paraId:105,tocIndex:15},{value:`setState(state) {
+  this.state = Object.assign({}, this.state, state)
+  let virtualDOM = this.render()
+  let oldDOM = this.getDOM()
+  // \u83B7\u53D6\u771F\u5B9E DOM \u5BF9\u8C61\u7236\u7EA7\u5BB9\u5668\u5BF9\u8C61
+  let container = oldDOM.parentNode
+}
+`,paraId:106,tocIndex:15},{value:"\u63A5\u4E0B\u6765\u5C31\u53EF\u4EE5\u8C03\u7528 diff \u65B9\u6CD5\u8FDB\u884C\u6BD4\u5BF9\u4E86\uFF0C\u6BD4\u5BF9\u540E\u4F1A\u6309\u7167\u6211\u4EEC\u4E4B\u524D\u5199\u597D\u7684\u903B\u8F91\u8FDB\u884C DOM \u5BF9\u8C61\u66F4\u65B0\uFF0C\u6211\u4EEC\u5C31\u53EF\u4EE5\u5728\u9875\u9762\u4E2D\u770B\u5230\u6548\u679C\u4E86",paraId:107,tocIndex:15},{value:`setState(state) {
+    this.state = Object.assign({}, this.state, state)
+    let virtualDOM = this.render()
+    let oldDOM = this.getDOM()
+    let container = oldDOM.parentNode
+    // \u6BD4\u5BF9
+    diff(virtualDOM, container, oldDOM)
+  }
+`,paraId:108,tocIndex:15},{value:"\u5728 diff \u65B9\u6CD5\u4E2D\u5224\u65AD\u8981\u66F4\u65B0\u7684 Virtual DOM \u662F\u5426\u662F\u7EC4\u4EF6\u3002",paraId:109,tocIndex:16},{value:"\u5982\u679C\u662F\u7EC4\u4EF6\u518D\u5224\u65AD\u8981\u66F4\u65B0\u7684\u7EC4\u4EF6\u548C\u672A\u66F4\u65B0\u524D\u7684\u7EC4\u4EF6\u662F\u5426\u662F\u540C\u4E00\u4E2A\u7EC4\u4EF6\uFF0C\u5982\u679C\u4E0D\u662F\u540C\u4E00\u4E2A\u7EC4\u4EF6\u5C31\u4E0D\u9700\u8981\u505A\u7EC4\u4EF6\u66F4\u65B0\u64CD\u4F5C\uFF0C\u76F4\u63A5\u8C03\u7528 mountElement \u65B9\u6CD5\u5C06\u7EC4\u4EF6\u8FD4\u56DE\u7684 Virtual DOM \u6DFB\u52A0\u5230\u9875\u9762\u4E2D\u3002",paraId:110,tocIndex:16},{value:"\u5982\u679C\u662F\u540C\u4E00\u4E2A\u7EC4\u4EF6\uFF0C\u5C31\u6267\u884C\u66F4\u65B0\u7EC4\u4EF6\u64CD\u4F5C\uFF0C\u5176\u5B9E\u5C31\u662F\u5C06\u6700\u65B0\u7684 props \u4F20\u9012\u5230\u7EC4\u4EF6\u4E2D\uFF0C\u518D\u8C03\u7528\u7EC4\u4EF6\u7684 render \u65B9\u6CD5\u83B7\u53D6\u7EC4\u4EF6\u8FD4\u56DE\u7684\u6700\u65B0\u7684 Virtual DOM \u5BF9\u8C61\uFF0C\u518D\u5C06 Virtual DOM \u5BF9\u8C61\u4F20\u9012\u7ED9 diff \u65B9\u6CD5\uFF0C\u8BA9 diff \u65B9\u6CD5\u627E\u51FA\u5DEE\u5F02\uFF0C\u4ECE\u800C\u5C06\u5DEE\u5F02\u66F4\u65B0\u5230\u771F\u5B9E DOM \u5BF9\u8C61\u4E2D\u3002",paraId:111,tocIndex:16},{value:"\u5728\u66F4\u65B0\u7EC4\u4EF6\u7684\u8FC7\u7A0B\u4E2D\u8FD8\u8981\u5728\u4E0D\u540C\u9636\u6BB5\u8C03\u7528\u5176\u4E0D\u540C\u7684\u7EC4\u4EF6\u751F\u547D\u5468\u671F\u51FD\u6570\u3002",paraId:112,tocIndex:16},{value:"\u5728 diff \u65B9\u6CD5\u4E2D\u5224\u65AD\u8981\u66F4\u65B0\u7684 Virtual DOM \u662F\u5426\u662F\u7EC4\u4EF6\uFF0C\u5982\u679C\u662F\u7EC4\u4EF6\u53C8\u5206\u4E3A\u591A\u79CD\u60C5\u51B5\uFF0C\u65B0\u589E diffComponent \u65B9\u6CD5\u8FDB\u884C\u5904\u7406",paraId:113,tocIndex:16},{value:`else if (typeof virtualDOM.type === "function") {
+  // \u8981\u66F4\u65B0\u7684\u662F\u7EC4\u4EF6
+  // 1) \u7EC4\u4EF6\u672C\u8EAB\u7684 virtualDOM \u5BF9\u8C61 \u901A\u8FC7\u5B83\u53EF\u4EE5\u83B7\u53D6\u5230\u7EC4\u4EF6\u6700\u65B0\u7684 props
+  // 2) \u8981\u66F4\u65B0\u7684\u7EC4\u4EF6\u7684\u5B9E\u4F8B\u5BF9\u8C61 \u901A\u8FC7\u5B83\u53EF\u4EE5\u8C03\u7528\u7EC4\u4EF6\u7684\u751F\u547D\u5468\u671F\u51FD\u6570 \u53EF\u4EE5\u66F4\u65B0\u7EC4\u4EF6\u7684 props \u5C5E\u6027 \u53EF\u4EE5\u83B7\u53D6\u5230\u7EC4\u4EF6\u8FD4\u56DE\u7684\u6700\u65B0\u7684 Virtual DOM
+  // 3) \u8981\u66F4\u65B0\u7684 DOM \u8C61 \u5728\u66F4\u65B0\u7EC4\u4EF6\u65F6 \u9700\u8981\u5728\u5DF2\u6709DOM\u5BF9\u8C61\u7684\u8EAB\u4E0A\u8FDB\u884C\u4FEE\u6539 \u5B9E\u73B0DOM\u6700\u5C0F\u5316\u64CD\u4F5C \u83B7\u53D6\u65E7\u7684 Virtual DOM \u5BF9\u8C61
+  // 4) \u5982\u679C\u8981\u66F4\u65B0\u7684\u7EC4\u4EF6\u548C\u65E7\u7EC4\u4EF6\u4E0D\u662F\u540C\u4E00\u4E2A\u7EC4\u4EF6 \u8981\u76F4\u63A5\u5C06\u7EC4\u4EF6\u8FD4\u56DE\u7684 Virtual DOM \u663E\u793A\u5728\u9875\u9762\u4E2D \u6B64\u65F6\u9700\u8981 container \u505A\u4E3A\u7236\u7EA7\u5BB9\u5668
+  diffComponent(virtualDOM, oldComponent, oldDOM, container)
+}
+`,paraId:114,tocIndex:16},{value:"\u5728 diffComponent \u65B9\u6CD5\u4E2D\u5224\u65AD\u8981\u66F4\u65B0\u7684\u7EC4\u4EF6\u662F\u672A\u66F4\u65B0\u524D\u7684\u7EC4\u4EF6\u662F\u5426\u662F\u540C\u4E00\u4E2A\u7EC4\u4EF6",paraId:115,tocIndex:16},{value:`// diffComponent.js
+export default function diffComponent(virtualDOM, oldComponent, oldDOM, container) {
+  // \u5224\u65AD\u8981\u66F4\u65B0\u7684\u7EC4\u4EF6\u548C\u672A\u66F4\u65B0\u7684\u7EC4\u4EF6\u662F\u5426\u662F\u540C\u4E00\u4E2A\u7EC4\u4EF6 \u53EA\u9700\u8981\u786E\u5B9A\u4E24\u8005\u4F7F\u7528\u7684\u662F\u5426\u662F\u540C\u4E00\u4E2A\u6784\u9020\u51FD\u6570\u5C31\u53EF\u4EE5\u4E86
+  if (isSameComponent(virtualDOM, oldComponent)) {
+    // \u5C5E\u540C\u4E00\u4E2A\u7EC4\u4EF6 \u505A\u7EC4\u4EF6\u66F4\u65B0
+  } else {
+    // \u4E0D\u662F\u540C\u4E00\u4E2A\u7EC4\u4EF6 \u76F4\u63A5\u5C06\u7EC4\u4EF6\u5185\u5BB9\u663E\u793A\u5728\u9875\u9762\u4E2D
+  }
+}
+// virtualDOM.type \u66F4\u65B0\u540E\u7684\u7EC4\u4EF6\u6784\u9020\u51FD\u6570
+// oldComponent.constructor \u672A\u66F4\u65B0\u524D\u7684\u7EC4\u4EF6\u6784\u9020\u51FD\u6570
+// \u4E24\u8005\u7B49\u4EF7\u5C31\u8868\u793A\u662F\u540C\u4E00\u7EC4\u4EF6
+function isSameComponent(virtualDOM, oldComponent) {
+  return oldComponent && virtualDOM.type === oldComponent.constructor
+}
+`,paraId:116,tocIndex:16},{value:"\u5982\u679C\u4E0D\u662F\u540C\u4E00\u4E2A\u7EC4\u4EF6\u7684\u8BDD\uFF0C\u5C31\u4E0D\u9700\u8981\u6267\u884C\u66F4\u65B0\u7EC4\u4EF6\u7684\u64CD\u4F5C\uFF0C\u76F4\u63A5\u5C06\u7EC4\u4EF6\u5185\u5BB9\u663E\u793A\u5728\u9875\u9762\u4E2D\uFF0C\u66FF\u6362\u539F\u6709\u5185\u5BB9",paraId:117,tocIndex:16},{value:`// diffComponent.js
+else {
+  // \u4E0D\u662F\u540C\u4E00\u4E2A\u7EC4\u4EF6 \u76F4\u63A5\u5C06\u7EC4\u4EF6\u5185\u5BB9\u663E\u793A\u5728\u9875\u9762\u4E2D
+  // \u8FD9\u91CC\u4E3A mountElement \u65B9\u6CD5\u65B0\u589E\u4E86\u4E00\u4E2A\u53C2\u6570 oldDOM
+  // \u4F5C\u7528\u662F\u5728\u5C06 DOM \u5BF9\u8C61\u63D2\u5165\u5230\u9875\u9762\u524D \u5C06\u9875\u9762\u4E2D\u5DF2\u5B58\u5728\u7684 DOM \u5BF9\u8C61\u5220\u9664 \u5426\u5219\u65E0\u8BBA\u662F\u65E7DOM\u5BF9\u8C61\u8FD8\u662F\u65B0DOM\u5BF9\u8C61\u90FD\u4F1A\u663E\u793A\u5728\u9875\u9762\u4E2D
+  mountElement(virtualDOM, container, oldDOM)
+}
+`,paraId:118,tocIndex:16},{value:"\u5728 mountNativeElement \u65B9\u6CD5\u4E2D\u5220\u9664\u539F\u6709\u7684\u65E7 DOM \u5BF9\u8C61",paraId:119,tocIndex:16},{value:`// mountNavtiveElement.js
+export default function mountNativeElement(virtualDOM, container, oldDOM) {
+  // \u5982\u679C\u65E7\u7684DOM\u5BF9\u8C61\u5B58\u5728 \u5220\u9664
+  if (oldDOM) {
+    unmount(oldDOM);
+  }
+}
+`,paraId:120,tocIndex:16},{value:`// unmount.js
+export default function unmount(node) {
+  node.remove()
+}
+`,paraId:121,tocIndex:16},{value:"\u5982\u679C\u662F\u540C\u4E00\u4E2A\u7EC4\u4EF6\u7684\u8BDD\uFF0C\u9700\u8981\u6267\u884C\u7EC4\u4EF6\u66F4\u65B0\u64CD\u4F5C\uFF0C\u9700\u8981\u8C03\u7528\u7EC4\u4EF6\u751F\u547D\u5468\u671F\u51FD\u6570",paraId:122,tocIndex:16},{value:"\u5148\u5728 Component \u7C7B\u4E2D\u6DFB\u52A0\u751F\u547D\u5468\u671F\u51FD\u6570\uFF0C\u5B50\u7C7B\u8981\u4F7F\u7528\u7684\u8BDD\u76F4\u63A5\u8986\u76D6\u5C31\u53EF\u4EE5",paraId:123,tocIndex:16},{value:`// Component.js
+export default class Component {
+  // \u751F\u547D\u5468\u671F\u51FD\u6570
+  componentWillMount() {}
+  componentDidMount() {}
+  componentWillReceiveProps(nextProps) {}
+  shouldComponentUpdate(nextProps, nextState) {
+    return nextProps != this.props || nextState != this.state
+  }
+  componentWillUpdate(nextProps, nextState) {}
+  componentDidUpdate(prevProps, preState) {}
+  componentWillUnmount() {}
+}
+`,paraId:124,tocIndex:16},{value:"\u65B0\u5EFA updateComponent \u65B9\u6CD5\u7528\u4E8E\u66F4\u65B0\u7EC4\u4EF6\u64CD\u4F5C\uFF0C\u5E76\u5728 if \u6210\u7ACB\u540E\u8C03\u7528",paraId:125,tocIndex:16},{value:`// diffComponent.js
+if (isSameComponent(virtualDOM, oldComponent)) {
+  // \u5C5E\u540C\u4E00\u4E2A\u7EC4\u4EF6 \u505A\u7EC4\u4EF6\u66F4\u65B0
+  updateComponent(virtualDOM, oldComponent, oldDOM, container)
+}
+`,paraId:126,tocIndex:16},{value:"\u5728 updateComponent \u65B9\u6CD5\u4E2D\u8C03\u7528\u7EC4\u4EF6\u7684\u751F\u547D\u5468\u671F\u51FD\u6570\uFF0C\u66F4\u65B0\u7EC4\u4EF6\u83B7\u53D6\u6700\u65B0 Virtual DOM\uFF0C\u6700\u7EC8\u8C03\u7528 diff \u65B9\u6CD5\u8FDB\u884C\u66F4\u65B0",paraId:127,tocIndex:16},{value:`import diff from "./diff"
+
+export default function updateComponent(
+  virtualDOM,
+  oldComponent,
+  oldDOM,
+  container
+) {
+  // \u751F\u547D\u5468\u671F\u51FD\u6570
+  oldComponent.componentWillReceiveProps(virtualDOM.props)
+  if (
+    // \u8C03\u7528 shouldComponentUpdate \u751F\u547D\u5468\u671F\u51FD\u6570\u5224\u65AD\u662F\u5426\u8981\u6267\u884C\u66F4\u65B0\u64CD\u4F5C
+    oldComponent.shouldComponentUpdate(virtualDOM.props)
+  ) {
+    // \u5C06\u672A\u66F4\u65B0\u7684 props \u4FDD\u5B58\u4E00\u4EFD
+    let prevProps = oldComponent.props
+    // \u751F\u547D\u5468\u671F\u51FD\u6570
+    oldComponent.componentWillUpdate(virtualDOM.props)
+    // \u66F4\u65B0\u7EC4\u4EF6\u7684 props \u5C5E\u6027 updateProps \u65B9\u6CD5\u5B9A\u4E49\u5728 Component \u7C7B\u578B
+    oldComponent.updateProps(virtualDOM.props)
+    // \u56E0\u4E3A\u7EC4\u4EF6\u7684 props \u5DF2\u7ECF\u66F4\u65B0 \u6240\u4EE5\u8C03\u7528 render \u65B9\u6CD5\u83B7\u53D6\u6700\u65B0\u7684 Virtual DOM
+    const nextVirtualDOM = oldComponent.render()
+    // \u5C06\u7EC4\u4EF6\u5B9E\u4F8B\u5BF9\u8C61\u6302\u8F7D\u5230 Virtual DOM \u8EAB\u4E0A
+    nextVirtualDOM.component = oldComponent
+    // \u8C03\u7528diff\u65B9\u6CD5\u66F4\u65B0\u89C6\u56FE
+    diff(nextVirtualDOM, container, oldDOM)
+    // \u751F\u547D\u5468\u671F\u51FD\u6570
+    oldComponent.componentDidUpdate(prevProps)
+  }
+}
+`,paraId:128,tocIndex:16},{value:`// Component.js
+export default class Component {
+  updateProps(props) {
+    this.props = props
+  }
+}
+`,paraId:129,tocIndex:16},{value:"\u4E3A\u8282\u70B9\u6DFB\u52A0 ref \u5C5E\u6027\u53EF\u4EE5\u83B7\u53D6\u5230\u8FD9\u4E2A\u8282\u70B9\u7684 DOM \u5BF9\u8C61\uFF0C\u6BD4\u5982\u5728 DemoRef \u7C7B\u4E2D\uFF0C\u4E3A input \u5143\u7D20\u6DFB\u52A0\u4E86 ref \u5C5E\u6027\uFF0C\u76EE\u7684\u662F\u83B7\u53D6 input DOM \u5143\u7D20\u5BF9\u8C61\uFF0C\u5728\u70B9\u51FB\u6309\u94AE\u65F6\u83B7\u53D6\u7528\u6237\u5728\u6587\u672C\u6846\u4E2D\u8F93\u5165\u7684\u5185\u5BB9",paraId:130,tocIndex:17},{value:`class DemoRef extends TinyReact.Component {
+  handle() {
+    let value = this.input.value
+    console.log(value)
+  }
+  render() {
+    return (
+      <div>
+        <input type="text" ref={input => (this.input = input)} />
+        <button onClick={this.handle.bind(this)}>\u6309\u94AE</button>
+      </div>
+    )
+  }
+}
+`,paraId:131,tocIndex:17},{value:"\u5B9E\u73B0\u601D\u8DEF\u662F\u5728\u521B\u5EFA\u8282\u70B9\u65F6\u5224\u65AD\u5176 Virtual DOM \u5BF9\u8C61\u4E2D\u662F\u5426\u6709 ref \u5C5E\u6027\uFF0C\u5982\u679C\u6709\u5C31\u8C03\u7528 ref \u5C5E\u6027\u4E2D\u6240\u5B58\u50A8\u7684\u65B9\u6CD5\u5E76\u4E14\u5C06\u521B\u5EFA\u51FA\u6765\u7684 DOM \u5BF9\u8C61\u4F5C\u4E3A\u53C2\u6570\u4F20\u9012\u7ED9 ref \u65B9\u6CD5\uFF0C\u8FD9\u6837\u5728\u6E32\u67D3\u7EC4\u4EF6\u8282\u70B9\u7684\u65F6\u5019\u5C31\u53EF\u4EE5\u62FF\u5230\u5143\u7D20\u5BF9\u8C61\u5E76\u5C06\u5143\u7D20\u5BF9\u8C61\u5B58\u50A8\u4E3A\u7EC4\u4EF6\u5C5E\u6027\u4E86\u3002",paraId:132,tocIndex:17},{value:`// createDOMElement.js
+if (virtualDOM.props && virtualDOM.props.ref) {
+  virtualDOM.props.ref(newElement)
+}
+`,paraId:133,tocIndex:17},{value:"\u5728\u7C7B\u7EC4\u4EF6\u7684\u8EAB\u4E0A\u4E5F\u53EF\u4EE5\u6DFB\u52A0 ref \u5C5E\u6027\uFF0C\u76EE\u7684\u662F\u83B7\u53D6\u7EC4\u4EF6\u7684\u5B9E\u4F8B\u5BF9\u8C61\uFF0C\u6BD4\u5982\u4E0B\u5217\u4EE3\u7801\u4E2D\uFF0C\u5728 DemoRef \u7EC4\u4EF6\u4E2D\u6E32\u67D3\u4E86 Alert \u7EC4\u4EF6\uFF0C\u5728 Alert \u7EC4\u4EF6\u4E2D\u6DFB\u52A0\u4E86 ref \u5C5E\u6027\uFF0C\u76EE\u7684\u662F\u5728 DemoRef \u7EC4\u4EF6\u4E2D\u83B7\u53D6 Alert \u7EC4\u4EF6\u5B9E\u4F8B\u5BF9\u8C61\u3002",paraId:134,tocIndex:17},{value:`class DemoRef extends TinyReact.Component {
+  handle() {
+    let value = this.input.value
+    console.log(value)
+    console.log(this.alert)
+  }
+  componentDidMount() {
+    console.log("componentDidMount")
+  }
+  render() {
+    return (
+      <div>
+        <input type="text" ref={input => (this.input = input)} />
+        <button onClick={this.handle.bind(this)}>\u6309\u94AE</button>
+        <Alert ref={alert => (this.alert = alert)} />
+      </div>
+    )
+  }
+}
+`,paraId:135,tocIndex:17},{value:"\u5B9E\u73B0\u601D\u8DEF\u662F\u5728 mountComponent \u65B9\u6CD5\u4E2D\uFF0C\u5982\u679C\u5224\u65AD\u4E86\u5F53\u524D\u5904\u7406\u7684\u662F\u7C7B\u7EC4\u4EF6\uFF0C\u5C31\u901A\u8FC7\u7C7B\u7EC4\u4EF6\u8FD4\u56DE\u7684 Virtual DOM \u5BF9\u8C61\u4E2D\u83B7\u53D6\u7EC4\u4EF6\u5B9E\u4F8B\u5BF9\u8C61\uFF0C\u5224\u65AD\u7EC4\u4EF6\u5B9E\u4F8B\u5BF9\u8C61\u4E2D\u7684 props \u5C5E\u6027\u4E2D\u662F\u5426\u5B58\u5728 ref \u5C5E\u6027\uFF0C\u5982\u679C\u5B58\u5728\u5C31\u8C03\u7528 ref \u65B9\u6CD5\u5E76\u4E14\u5C06\u7EC4\u4EF6\u5B9E\u4F8B\u5BF9\u8C61\u4F20\u9012\u7ED9 ref \u65B9\u6CD5\u3002",paraId:136,tocIndex:17},{value:`// mountComponent.js
+let component = null
+  if (isFunctionalComponent(virtualDOM)) {}
+	else {
+    // \u7C7B\u7EC4\u4EF6
+    nextVirtualDOM = buildStatefulComponent(virtualDOM)
+    // \u83B7\u53D6\u7EC4\u4EF6\u5B9E\u4F8B\u5BF9\u8C61
+    component = nextVirtualDOM.component
+  }
+	// \u5982\u679C\u7EC4\u4EF6\u5B9E\u4F8B\u5BF9\u8C61\u5B58\u5728\u7684\u8BDD
+	if (component) {
+   	// \u5224\u65AD\u7EC4\u4EF6\u5B9E\u4F8B\u5BF9\u8C61\u8EAB\u4E0A\u662F\u5426\u6709 props \u5C5E\u6027 props \u5C5E\u6027\u4E2D\u662F\u5426\u6709 ref \u5C5E\u6027
+    if (component.props && component.props.ref) {
+      // \u8C03\u7528 ref \u65B9\u6CD5\u5E76\u4F20\u9012\u7EC4\u4EF6\u5B9E\u4F8B\u5BF9\u8C61
+      component.props.ref(component)
+    }
+  }
+
+`,paraId:137,tocIndex:17},{value:"\u4EE3\u7801\u8D70\u5230\u8FD9\uFF0C\u987A\u4FBF\u5904\u7406\u4E00\u4E0B\u7EC4\u4EF6\u6302\u8F7D\u5B8C\u6210\u7684\u751F\u547D\u5468\u671F\u51FD\u6570",paraId:138,tocIndex:17},{value:`// \u5982\u679C\u7EC4\u4EF6\u5B9E\u4F8B\u5BF9\u8C61\u5B58\u5728\u7684\u8BDD
+if (component) {
+  component.componentDidMount()
+}
+`,paraId:139,tocIndex:17},{value:"\u5728 React \u4E2D\uFF0C\u6E32\u67D3\u5217\u8868\u6570\u636E\u65F6\u901A\u5E38\u4F1A\u5728\u88AB\u6E32\u67D3\u7684\u5217\u8868\u5143\u7D20\u4E0A\u6DFB\u52A0 key \u5C5E\u6027\uFF0Ckey \u5C5E\u6027\u5C31\u662F\u6570\u636E\u7684\u552F\u4E00\u6807\u8BC6\uFF0C\u5E2E\u52A9 React \u8BC6\u522B\u54EA\u4E9B\u6570\u636E\u88AB\u4FEE\u6539\u6216\u8005\u5220\u9664\u4E86\uFF0C\u4ECE\u800C\u8FBE\u5230 DOM \u6700\u5C0F\u5316\u64CD\u4F5C\u7684\u76EE\u7684\u3002",paraId:140,tocIndex:18},{value:"key \u5C5E\u6027\u4E0D\u9700\u8981\u5168\u5C40\u552F\u4E00\uFF0C\u4F46\u662F\u5728\u540C\u4E00\u4E2A\u7236\u8282\u70B9\u4E0B\u7684\u5144\u5F1F\u8282\u70B9\u4E4B\u95F4\u5FC5\u987B\u662F\u552F\u4E00\u7684\u3002",paraId:141,tocIndex:18},{value:"\u4E5F\u5C31\u662F\u8BF4\uFF0C\u5728\u6BD4\u5BF9\u540C\u4E00\u4E2A\u7236\u8282\u70B9\u4E0B\u7C7B\u578B\u76F8\u540C\u7684\u5B50\u8282\u70B9\u65F6\u9700\u8981\u7528\u5230 key \u5C5E\u6027\u3002",paraId:142,tocIndex:18},{value:"\u5B9E\u73B0\u601D\u8DEF\u662F\u5728\u4E24\u4E2A\u5143\u7D20\u8FDB\u884C\u6BD4\u5BF9\u65F6\uFF0C\u5982\u679C\u7C7B\u578B\u76F8\u540C\uFF0C\u5C31\u5FAA\u73AF\u65E7\u7684 DOM \u5BF9\u8C61\u7684\u5B50\u5143\u7D20\uFF0C\u67E5\u770B\u5176\u8EAB\u4E0A\u662F\u5426\u6709 key \u5C5E\u6027\uFF0C\u5982\u679C\u6709\u5C31\u5C06\u8FD9\u4E2A\u5B50\u5143\u7D20\u7684 DOM \u5BF9\u8C61\u5B58\u50A8\u5728\u4E00\u4E2A JavaScript \u5BF9\u8C61\u4E2D\uFF0C\u63A5\u7740\u5FAA\u73AF\u8981\u6E32\u67D3\u7684 Virtual DOM \u5BF9\u8C61\u7684\u5B50\u5143\u7D20\uFF0C\u5728\u5FAA\u73AF\u8FC7\u7A0B\u4E2D\u83B7\u53D6\u5230\u8FD9\u4E2A\u5B50\u5143\u7D20\u7684 key \u5C5E\u6027\uFF0C\u7136\u540E\u4F7F\u7528\u8FD9\u4E2A key \u5C5E\u6027\u5230 JavaScript \u5BF9\u8C61\u4E2D\u67E5\u627E DOM \u5BF9\u8C61\uFF0C\u5982\u679C\u80FD\u591F\u627E\u5230\u5C31\u8BF4\u660E\u8FD9\u4E2A\u5143\u7D20\u662F\u5DF2\u7ECF\u5B58\u5728\u7684\uFF0C\u662F\u4E0D\u9700\u8981\u91CD\u65B0\u6E32\u67D3\u7684\u3002\u5982\u679C\u901A\u8FC7 key \u5C5E\u6027\u627E\u4E0D\u5230\u8FD9\u4E2A\u5143\u7D20\uFF0C\u5C31\u8BF4\u660E\u8FD9\u4E2A\u5143\u7D20\u662F\u65B0\u589E\u7684\u662F\u9700\u8981\u6E32\u67D3\u7684\u3002",paraId:143,tocIndex:19},{value:`// diff.js
+else if (oldVirtualDOM && virtualDOM.type === oldVirtualDOM.type) {
+  // \u5C06\u62E5\u6709key\u5C5E\u6027\u7684\u5143\u7D20\u653E\u5165 keyedElements \u5BF9\u8C61\u4E2D
+  let keyedElements = {}
+  for (let i = 0, len = oldDOM.childNodes.length; i < len; i++) {
+    let domElement = oldDOM.childNodes[i]
+    if (domElement.nodeType === 1) {
+      let key = domElement.getAttribute("key")
+      if (key) {
+        keyedElements[key] = domElement
+      }
+    }
+  }
+}
+`,paraId:144,tocIndex:19},{value:`// diff.js
+// \u770B\u4E00\u770B\u662F\u5426\u6709\u627E\u5230\u4E86\u62E5\u6709 key \u5C5E\u6027\u7684\u5143\u7D20
+let hasNoKey = Object.keys(keyedElements).length === 0
+
+// \u5982\u679C\u6CA1\u6709\u627E\u5230\u62E5\u6709 key \u5C5E\u6027\u7684\u5143\u7D20 \u5C31\u6309\u7167\u7D22\u5F15\u8FDB\u884C\u6BD4\u8F83
+if (hasNoKey) {
+  // \u9012\u5F52\u5BF9\u6BD4 Virtual DOM \u7684\u5B50\u5143\u7D20
+  virtualDOM.children.forEach((child, i) => {
+    diff(child, oldDOM, oldDOM.childNodes[i])
+  })
+} else {
+  // \u4F7F\u7528key\u5C5E\u6027\u8FDB\u884C\u5143\u7D20\u6BD4\u8F83
+  virtualDOM.children.forEach((child, i) => {
+    // \u83B7\u53D6\u8981\u8FDB\u884C\u6BD4\u5BF9\u7684\u5143\u7D20\u7684 key \u5C5E\u6027
+    let key = child.props.key
+    // \u5982\u679C key \u5C5E\u6027\u5B58\u5728
+    if (key) {
+      // \u5230\u5DF2\u5B58\u5728\u7684 DOM \u5143\u7D20\u5BF9\u8C61\u4E2D\u67E5\u627E\u5BF9\u5E94\u7684 DOM \u5143\u7D20
+      let domElement = keyedElements[key]
+      // \u5982\u679C\u627E\u5230\u5143\u7D20\u5C31\u8BF4\u660E\u8BE5\u5143\u7D20\u5DF2\u7ECF\u5B58\u5728 \u4E0D\u9700\u8981\u91CD\u65B0\u6E32\u67D3
+      if (domElement) {
+        // \u867D\u7136 DOM \u5143\u7D20\u4E0D\u9700\u8981\u91CD\u65B0\u6E32\u67D3 \u4F46\u662F\u4E0D\u80FD\u786E\u5B9A\u5143\u7D20\u7684\u4F4D\u7F6E\u5C31\u4E00\u5B9A\u6CA1\u6709\u53D1\u751F\u53D8\u5316
+        // \u6240\u4EE5\u8FD8\u8981\u67E5\u770B\u4E00\u4E0B\u5143\u7D20\u7684\u4F4D\u7F6E
+        // \u770B\u4E00\u4E0B oldDOM \u5BF9\u5E94\u7684(i)\u5B50\u5143\u7D20\u548C domElement \u662F\u5426\u662F\u540C\u4E00\u4E2A\u5143\u7D20 \u5982\u679C\u4E0D\u662F\u5C31\u8BF4\u660E\u5143\u7D20\u4F4D\u7F6E\u53D1\u751F\u4E86\u53D8\u5316
+        if (oldDOM.childNodes[i] && oldDOM.childNodes[i] !== domElement) {
+          // \u5143\u7D20\u4F4D\u7F6E\u53D1\u751F\u4E86\u53D8\u5316
+          // \u5C06 domElement \u63D2\u5165\u5230\u5F53\u524D\u5143\u7D20\u4F4D\u7F6E\u7684\u524D\u9762 oldDOM.childNodes[i] \u5C31\u662F\u5F53\u524D\u4F4D\u7F6E
+          // domElement \u5C31\u88AB\u653E\u5165\u4E86\u5F53\u524D\u4F4D\u7F6E
+          oldDOM.insertBefore(domElement, oldDOM.childNodes[i])
+        }
+      } else {
+        mountElement(child, oldDOM, oldDOM.childNodes[i])
+      }
+    }
+  })
+}
+`,paraId:145,tocIndex:19},{value:`// mountNativeElement.js
+if (oldDOM) {
+  container.insertBefore(newElement, oldDOM)
+} else {
+  // \u5C06\u8F6C\u6362\u4E4B\u540E\u7684DOM\u5BF9\u8C61\u653E\u7F6E\u5728\u9875\u9762\u4E2D
+  container.appendChild(newElement)
+}
+`,paraId:146,tocIndex:19},{value:"\u5728\u6BD4\u5BF9\u8282\u70B9\u7684\u8FC7\u7A0B\u4E2D\uFF0C\u5982\u679C\u65E7\u8282\u70B9\u7684\u6570\u91CF\u591A\u4E8E\u8981\u6E32\u67D3\u7684\u65B0\u8282\u70B9\u7684\u6570\u91CF\u5C31\u8BF4\u660E\u6709\u8282\u70B9\u88AB\u5220\u9664\u4E86\uFF0C\u7EE7\u7EED\u5224\u65AD keyedElements \u5BF9\u8C61\u4E2D\u662F\u5426\u6709\u5143\u7D20\uFF0C\u5982\u679C\u6CA1\u6709\u5C31\u4F7F\u7528\u7D22\u5F15\u65B9\u5F0F\u5220\u9664\uFF0C\u5982\u679C\u6709\u5C31\u8981\u4F7F\u7528 key \u5C5E\u6027\u6BD4\u5BF9\u7684\u65B9\u5F0F\u8FDB\u884C\u5220\u9664\u3002",paraId:147,tocIndex:20},{value:"\u5B9E\u73B0\u601D\u8DEF\u662F\u5FAA\u73AF\u65E7\u8282\u70B9\uFF0C\u5728\u5FAA\u73AF\u65E7\u8282\u70B9\u7684\u8FC7\u7A0B\u4E2D\u83B7\u53D6\u65E7\u8282\u70B9\u5BF9\u5E94\u7684 key \u5C5E\u6027\uFF0C\u7136\u540E\u6839\u636E key \u5C5E\u6027\u5728\u65B0\u8282\u70B9\u4E2D\u67E5\u627E\u8FD9\u4E2A\u65E7\u8282\u70B9\uFF0C\u5982\u679C\u627E\u5230\u5C31\u8BF4\u660E\u8FD9\u4E2A\u8282\u70B9\u6CA1\u6709\u88AB\u5220\u9664\uFF0C\u5982\u679C\u6CA1\u6709\u627E\u5230\uFF0C\u5C31\u8BF4\u660E\u8282\u70B9\u88AB\u5220\u9664\u4E86\uFF0C\u8C03\u7528\u5378\u8F7D\u8282\u70B9\u7684\u65B9\u6CD5\u5378\u8F7D\u8282\u70B9\u5373\u53EF\u3002",paraId:148,tocIndex:20},{value:`// \u83B7\u53D6\u5C31\u8282\u70B9\u7684\u6570\u91CF
+let oldChildNodes = oldDOM.childNodes
+// \u5982\u679C\u65E7\u8282\u70B9\u7684\u6570\u91CF\u591A\u4E8E\u8981\u6E32\u67D3\u7684\u65B0\u8282\u70B9\u7684\u957F\u5EA6
+if (oldChildNodes.length > virtualDOM.children.length) {
+  if (hasNoKey) {
+    for (
+      let i = oldChildNodes.length - 1;
+      i >= virtualDOM.children.length;
+      i--
+    ) {
+      oldDOM.removeChild(oldChildNodes[i])
+    }
+  } else {
+    for (let i = 0; i < oldChildNodes.length; i++) {
+      let oldChild = oldChildNodes[i]
+      let oldChildKey = oldChild._virtualDOM.props.key
+      let found = false
+      for (let n = 0; n < virtualDOM.children.length; n++) {
+        if (oldChildKey === virtualDOM.children[n].props.key) {
+          found = true
+          break
+        }
+      }
+      if (!found) {
+        unmount(oldChild)
+        i--
+      }
+    }
+  }
+}
+`,paraId:149,tocIndex:20},{value:"\u5378\u8F7D\u8282\u70B9\u5E76\u4E0D\u662F\u8BF4\u5C06\u8282\u70B9\u76F4\u63A5\u5220\u9664\u5C31\u53EF\u4EE5\u4E86\uFF0C\u8FD8\u9700\u8981\u8003\u8651\u4EE5\u4E0B\u51E0\u79CD\u60C5\u51B5",paraId:150,tocIndex:20},{value:"\u5982\u679C\u8981\u5220\u9664\u7684\u8282\u70B9\u662F\u6587\u672C\u8282\u70B9\u7684\u8BDD\u53EF\u4EE5\u76F4\u63A5\u5220\u9664",paraId:151,tocIndex:20},{value:"\u5982\u679C\u8981\u5220\u9664\u7684\u8282\u70B9\u7531\u7EC4\u4EF6\u751F\u6210\uFF0C\u9700\u8981\u8C03\u7528\u7EC4\u4EF6\u5378\u8F7D\u751F\u547D\u5468\u671F\u51FD\u6570",paraId:151,tocIndex:20},{value:"\u5982\u679C\u8981\u5220\u9664\u7684\u8282\u70B9\u4E2D\u5305\u542B\u4E86\u5176\u4ED6\u7EC4\u4EF6\u751F\u6210\u7684\u8282\u70B9\uFF0C\u9700\u8981\u8C03\u7528\u5176\u4ED6\u7EC4\u4EF6\u7684\u5378\u8F7D\u751F\u547D\u5468\u671F\u51FD\u6570",paraId:151,tocIndex:20},{value:"\u5982\u679C\u8981\u5220\u9664\u7684\u8282\u70B9\u8EAB\u4E0A\u6709 ref \u5C5E\u6027\uFF0C\u8FD8\u9700\u8981\u5220\u9664\u901A\u8FC7 ref \u5C5E\u6027\u4F20\u9012\u7ED9\u7EC4\u4EF6\u7684 DOM \u8282\u70B9\u5BF9\u8C61",paraId:151,tocIndex:20},{value:"\u5982\u679C\u8981\u5220\u9664\u7684\u8282\u70B9\u8EAB\u4E0A\u6709\u4E8B\u4EF6\uFF0C\u9700\u8981\u5220\u9664\u4E8B\u4EF6\u5BF9\u5E94\u7684\u4E8B\u4EF6\u5904\u7406\u51FD\u6570",paraId:151,tocIndex:20},{value:`export default function unmount(dom) {
+  // \u83B7\u53D6\u8282\u70B9\u5BF9\u5E94\u7684 virtualDOM \u5BF9\u8C61
+  const virtualDOM = dom._virtualDOM
+  // \u5982\u679C\u8981\u5220\u9664\u7684\u8282\u70B9\u65F6\u6587\u672C
+  if (virtualDOM.type === "text") {
+    // \u76F4\u63A5\u5220\u9664\u8282\u70B9
+    dom.remove()
+    // \u963B\u6B62\u7A0B\u5E8F\u5411\u4E0B\u8FD0\u884C
+    return
+  }
+  // \u67E5\u770B\u8282\u70B9\u662F\u5426\u7531\u7EC4\u4EF6\u751F\u6210
+  let component = virtualDOM.component
+  // \u5982\u679C\u7531\u7EC4\u4EF6\u751F\u6210
+  if (component) {
+    // \u8C03\u7528\u7EC4\u4EF6\u5378\u8F7D\u751F\u547D\u5468\u671F\u51FD\u6570
+    component.componentWillUnmount()
+  }
+
+  // \u5982\u679C\u8282\u70B9\u5177\u6709 ref \u5C5E\u6027 \u901A\u8FC7\u518D\u6B21\u8C03\u7528 ref \u65B9\u6CD5 \u5C06\u4F20\u9012\u7ED9\u7EC4\u4EF6\u7684DOM\u5BF9\u8C61\u5220\u9664
+  if (virtualDOM.props && virtualDOM.props.ref) {
+    virtualDOM.props.ref(null)
+  }
+
+  // \u4E8B\u4EF6\u5904\u7406
+  Object.keys(virtualDOM.props).forEach(propName => {
+    if (propName.slice(0, 2) === "on") {
+      const eventName = propName.toLowerCase().slice(2)
+      const eventHandler = virtualDOM.props[propName]
+      dom.removeEventListener(eventName, eventHandler)
+    }
+  })
+
+  // \u9012\u5F52\u5220\u9664\u5B50\u8282\u70B9
+  if (dom.childNodes.length > 0) {
+    for (let i = 0; i < dom.childNodes.length; i++) {
+      unmount(dom.childNodes[i])
+      i--
+    }
+  }
+
+  dom.remove()
+}
+
+`,paraId:152,tocIndex:20}]},6361:function(o,e,n){n.r(e),n.d(e,{texts:function(){return t}});const t=[{value:`/* \u4EBA\u7C7B */
 class Person extends React.Component {
   constructor(props) {
     super(props);
