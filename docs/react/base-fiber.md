@@ -21,7 +21,9 @@ title: Fiber
 
 schedule、reconcile、commit
 
-- schedule： 空闲调度 (调度这 fiber 节点执行 reconcile,requestIdleCallback)
+- reconcile： vdom => fiberl （并且还会准备好要用的 dom 节点、确定好是增、删、还是改，通过 schdule 的调度，最终把整个 vdom 树转成了 fiber 链表）
+
+- schedule： 空闲调度 (调度这 fiber 节点执行 reconcile,react 实现了类似 requestIdleCallback 的调度机制)
 
   对于大部分浏览器来说，每 1s 会有 60 帧，所以每一帧差不多是 16.6 ms，如果 Reconciliation 的 Render 阶段的更新时间过长，挤占了主线程其它任务的执行时间，就会导致页面卡顿。
 
@@ -35,8 +37,6 @@ schedule、reconcile、commit
   每个任务执行的时间控制在 5ms。
   把每一帧 5ms 内未执行的任务分配到后面的帧中。
   给任务划分优先级，同时进行时优先执行高优任务。
-
-- reconcile： vdom => fiberl （并且还会准备好要用的 dom 节点、确定好是增、删、还是改，通过 schdule 的调度，最终把整个 vdom 树转成了 fiber 链表）
 
 - commit: 把 reconcile 产生的 fiber 链表一次性添加到 dom 中，因为 fiber 对应的节点提前创建好了、是增是删还是改也都知道了，所以，这一个阶段很快
 
@@ -91,11 +91,15 @@ React Fiber 架构中的 Fiber 节点构成了一个链表结构，这些节点�
 
 - **memoizedProps**: 上一次渲染中使用的 props。
 
-- **stateNode**: 用于保存与该 Fiber 相关联的本地状态。对于类组件，它是组件实例本身。对于 DOM 元素，它是 DOM 节点。
+- **stateNode**: 用于保存与该 Fiber 相关联的本地状态。对于类组件，它是组件实例本身。对于 DOM 元素，它是 DOM 节点。如果是函数组件 stateNode 为空 因为函数组件没有实例
 
 - **updateQueue**: 更新队列，用于存储该 Fiber 节点的状态更新和回调。
 
-### 更新相关属性
+- **tag**: 标记不同的组件类型 只详情请查看源码的 WorkTag
+
+- **alternate**: 双缓冲
+
+### 更新相关属性 （最新版本的 react18 中 已经删除下面所有属性）
 
 - **effectTag**: 指示 Fiber 节点在提交阶段需要进行的操作（如插入、更新、删除等）。
 
@@ -109,7 +113,7 @@ React Fiber 架构中的 Fiber 节点构成了一个链表结构，这些节点�
 
 - **lanes**: 表示 Fiber 节点的优先级，React 使用它来确定何时处理更新。
 
-### 双缓冲（Double Buffering）相关属性
+### 双缓冲相关属性
 
 - **alternate**: 指向备用的 Fiber 节点，React 使用双缓冲技术，交替使用两个 Fiber 树来进行更新。
 
