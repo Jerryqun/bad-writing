@@ -10583,6 +10583,67 @@ while (stack.length) {
 
 // \u6808\u7A7A
 stack; // []
+
+class Stack {
+  constructor() {
+    // \u5B58\u50A8\u6808\u7684\u6570\u636E
+    this.data = {};
+    // \u8BB0\u5F55\u6808\u7684\u6570\u636E\u4E2A\u6570\uFF08\u76F8\u5F53\u4E8E\u6570\u7EC4\u7684 length\uFF09
+    this.count = 0;
+  }
+  // push() \u5165\u6808\u65B9\u6CD5
+  push(item) {
+    // \u65B9\u5F0F1\uFF1A\u6570\u7EC4\u65B9\u6CD5 push \u6DFB\u52A0
+    // this.data.push(item)
+    // \u65B9\u5F0F2\uFF1A\u5229\u7528\u6570\u7EC4\u957F\u5EA6
+    // this.data[this.data.length] = item
+    // \u65B9\u5F0F3\uFF1A\u8BA1\u6570\u65B9\u5F0F
+    this.data[this.count] = item;
+    // \u5165\u6808\u540E\uFF0Ccount \u81EA\u589E
+    this.count++;
+  }
+  // pop() \u51FA\u6808\u65B9\u6CD5
+  pop() {
+    // \u51FA\u6808\u7684\u524D\u63D0\u662F\u6808\u4E2D\u5B58\u5728\u5143\u7D20\uFF0C\u5E94\u5148\u884C\u68C0\u6D4B
+    if (this.isEmpty()) {
+      console.log('\u6808\u4E3A\u7A7A\uFF01');
+      return;
+    }
+    // \u79FB\u9664\u6808\u9876\u6570\u636E
+    // \u65B9\u5F0F1\uFF1A\u6570\u7EC4\u65B9\u6CD5 pop \u79FB\u9664
+    // return this.data.pop()
+    // \u65B9\u5F0F2\uFF1A\u8BA1\u6570\u65B9\u5F0F
+    const temp = this.data[this.count - 1];
+    delete this.data[--this.count];
+    return temp;
+  }
+  // isEmpty() \u68C0\u6D4B\u6808\u662F\u5426\u4E3A\u7A7A
+  isEmpty() {
+    return this.count === 0;
+  }
+  // top() \u7528\u4E8E\u83B7\u53D6\u6808\u9876\u503C
+  top() {
+    if (this.isEmpty()) {
+      console.log('\u6808\u4E3A\u7A7A\uFF01');
+      return;
+    }
+    return this.data[this.count - 1];
+  }
+  // size() \u83B7\u53D6\u5143\u7D20\u4E2A\u6570
+  size() {
+    return this.count;
+  }
+  // clear() \u6E05\u7A7A\u6808
+  clear() {
+    this.data = [];
+    this.count = 0;
+  }
+}
+
+const s = new Stack();
+s.push('a');
+s.push('b');
+s.push('c');
 `,paraId:1,tocIndex:0},{value:"\u961F\u5217\u662F\u4E00\u79CD\u9075\u5FAA\u5148\u8FDB\u5148\u51FA\uFF08FIFO, First In First Out\uFF09\u539F\u5219\u7684\u6570\u636E\u7ED3\u6784",paraId:2,tocIndex:1},{value:`const queue = [];
 queue.push('\u5C0F\u518C\u4E00\u59D0');
 queue.push('\u5C0F\u518C\u4E8C\u59D0');
