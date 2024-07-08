@@ -96,7 +96,7 @@ s.push('b');
 s.push('c');
 ```
 
-### 包含 min 函数的栈 要求时间复杂度为 O(1)
+### leetCode 真题 包含 min 函数的栈 要求时间复杂度为 O(1)
 
 ```js
 class minStack {
@@ -107,13 +107,44 @@ class minStack {
     this.stackBCount = 0;
   }
   push(item) {
-    if (this.stackBCount === 0 || item) {
-      this.stackB[++this.stackBCount] = item;
+    if (this.stackBCount === 0 || item <= this.min()) {
+      this.stackB[this.stackBCount++] = item;
     }
-    this.stackA[++this.stackACount] = item;
+    this.stackA[this.stackACount++] = item;
   }
-  min() {}
+  min() {
+    return this.stackB[this.stackBCount - 1];
+  }
+  top() {
+    if (this.isEmpty()) {
+      return;
+    }
+    return this.stackA[this.stackACount - 1];
+  }
+  pop() {
+    if (this.isEmpty()) {
+      return;
+    }
+    const temp = this.stackA[this.stackACount - 1];
+    if (temp === this.min()) {
+      delete this.stackB[--this.stackBCount];
+    }
+    delete this.stackA[--this.stackACount];
+    return temp;
+  }
+  isEmpty() {
+    return this.stackACount === 0;
+  }
 }
+
+const stack = new minStack();
+stack.push(1);
+stack.push(2);
+stack.push(3);
+stack.push(0);
+
+const a = stack.min();
+console.log('a: ', a);
 ```
 
 ## 队列 ——只用 push 和 shift 完成增删的“数组”
