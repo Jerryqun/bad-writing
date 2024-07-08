@@ -96,6 +96,26 @@ s.push('b');
 s.push('c');
 ```
 
+### 包含 min 函数的栈 要求时间复杂度为 O(1)
+
+```js
+class minStack {
+  constructor() {
+    this.stackA = [];
+    this.stackACount = 0;
+    this.stackB = [];
+    this.stackBCount = 0;
+  }
+  push(item) {
+    if (this.stackBCount === 0 || item) {
+      this.stackB[++this.stackBCount] = item;
+    }
+    this.stackA[++this.stackACount] = item;
+  }
+  min() {}
+}
+```
+
 ## 队列 ——只用 push 和 shift 完成增删的“数组”
 
 队列是一种遵循先进先出（FIFO, First In First Out）原则的数据结构
