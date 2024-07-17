@@ -193,3 +193,18 @@ label
 ## Mac 系统解除谷歌浏览器的跨域限制
 
 <a target='_blank' href='https://blog.csdn.net/qq_41541368/article/details/104035074'>参考</a>
+
+## img 和 background-image 区别是啥
+
+1. 加载时机  
+   img 比 background-image 先加载，因为 img 属于 DOM 元素，而渲染过程会先解析 DOM 树，再解析 CSS 文件
+
+2. 图像渲染  
+   img 即使不手动设置宽高，也会按照图片的原有宽高渲染出来,而 background 背景图依托于 DOM 元素，不能撑开元素，若不给 div 设置宽高，图片就不会渲染
+3. SEO  
+   在 SEO 优化层面，img 标签会比 background 背景图片更有优势
+4. 语义化  
+   因为 img 是 HTML 标签，语义明确
+5. 图片保存  
+   img 元素默认可以鼠标右键保存图片。但 background-image 不行。
+   img 标签渲染的图片，可以用鼠标轻松拖动到桌面实现下载
