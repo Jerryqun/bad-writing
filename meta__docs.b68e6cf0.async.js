@@ -6530,10 +6530,10 @@ console.log(result); // \u8F93\u51FA 2
 `,paraId:10,tocIndex:2}]},60693:function(o,e,n){n.r(e),n.d(e,{texts:function(){return t}});const t=[{value:"\u5982\u679C\u8FD9\u4E2A\u5165\u53C2\u7684\u7C7B\u578B\u662F\u5F15\u7528\u7C7B\u578B\uFF0C\u90A3\u4E48 fill \u5728\u586B\u5145\u5751\u4F4D\u65F6\u586B\u5145\u7684\u5176\u5B9E\u5C31\u662F\u5165\u53C2\u7684\u5F15\u7528",paraId:0,tocIndex:0},{value:"\u5176\u5B9E\u8FD9 7 \u4E2A\u6570\u7EC4\u5BF9\u5E94\u4E86\u540C\u4E00\u4E2A\u5F15\u7528\u3001\u6307\u5411\u7684\u662F\u540C\u4E00\u5757\u5185\u5B58\u7A7A\u95F4\uFF0C\u5B83\u4EEC\u672C\u8D28\u4E0A\u662F\u540C\u4E00\u4E2A\u6570\u7EC4\u3002\u56E0\u6B64\u5F53\u4F60\u4FEE\u6539\u7B2C 0 \u884C\u7B2C 0 \u4E2A\u5143\u7D20\u7684\u503C\u65F6\uFF0C\u7B2C 1-6 \u884C\u7684\u7B2C 0 \u4E2A\u5143\u7D20\u7684\u503C\u4E5F\u90FD\u4F1A\u8DDF\u7740\u53D1\u751F\u6539\u53D8\u3002",paraId:1,tocIndex:0},{value:`const arr = new Array(7).fill([]);
 
 arr[0][0] = 1;
-`,paraId:2,tocIndex:0}]},42941:function(o,e,n){n.r(e),n.d(e,{texts:function(){return t}});const t=[{value:"\u4ECE\u6267\u884C\u6548\u7387\u770B(\u5FEB\u5230\u6162)",paraId:0,tocIndex:0},{value:`
-forEach => for => for in`,paraId:0,tocIndex:0},{value:"\u6CA1\u6709\u8FD4\u56DE\u503C",paraId:1,tocIndex:1},{value:`
-\u4E0D\u80FD\u6539\u53D8 item \u672C\u8EAB`,paraId:1,tocIndex:1},{value:`
-\u5982\u679C\u662F\u5F15\u7528\u7C7B\u578B \u53EF\u4EE5\u6539\u53D8\u5176\u5C5E\u6027(item \u901A\u8FC7\u5F15\u7528\u7C7B\u578B\uFF0C\u6307\u5411\u4E86\u539F\u6765 list \u91CC\u9762\u7684\u6BCF\u4E00\u9879\u3002)`,paraId:1,tocIndex:1},{value:`const list = [
+`,paraId:2,tocIndex:0}]},42941:function(o,e,n){n.r(e),n.d(e,{texts:function(){return t}});const t=[{value:"js \u6548\u7387\u6267\u884C\u68C0\u6D4B\u7F51\u7AD9 ",paraId:0,tocIndex:0},{value:"https://jsperf.com/",paraId:0,tocIndex:0},{value:"\u4ECE\u6267\u884C\u6548\u7387\u770B(\u5FEB\u5230\u6162)",paraId:1,tocIndex:0},{value:`
+forEach => for => for in`,paraId:1,tocIndex:0},{value:"\u6CA1\u6709\u8FD4\u56DE\u503C",paraId:2,tocIndex:1},{value:`
+\u4E0D\u80FD\u6539\u53D8 item \u672C\u8EAB`,paraId:2,tocIndex:1},{value:`
+\u5982\u679C\u662F\u5F15\u7528\u7C7B\u578B \u53EF\u4EE5\u6539\u53D8\u5176\u5C5E\u6027(item \u901A\u8FC7\u5F15\u7528\u7C7B\u578B\uFF0C\u6307\u5411\u4E86\u539F\u6765 list \u91CC\u9762\u7684\u6BCF\u4E00\u9879\u3002)`,paraId:2,tocIndex:1},{value:`const list = [
   { name: 'a', count: 1 },
   2,
   function fn() {
@@ -6563,7 +6563,7 @@ const sleep = (ms) => new Promise((res) => setTimeout(() => res(ms), ms));
 [sleep(1000), sleep(2000), sleep(3000)].forEach((item) => {
   item.then((res) => console.log(res));
 });
-`,paraId:2,tocIndex:1},{value:"forEach \u7684\u56DE\u8C03\u51FD\u6570\u4E2D\u7684 return \u8BED\u53E5\u5E76\u4E0D\u4F1A\u50CF map\u3001filter \u6216 reduce \u4E2D\u90A3\u6837\u6709\u7528\u3002\u5F53\u4F60\u5728 forEach \u7684\u56DE\u8C03\u4E2D\u4F7F\u7528 return \u65F6\uFF0C\u5B83\u53EA\u4F1A\u9000\u51FA\u5F53\u524D\u6B63\u5728\u6267\u884C\u7684\u8FED\u4EE3\uFF0C\u5E76\u4E0D\u4F1A\u505C\u6B62\u6574\u4E2A forEach \u5FAA\u73AF\u6216\u8FD4\u56DE\u4E00\u4E2A\u503C\u3002",paraId:3,tocIndex:1},{value:`const array = [1, 2, 3, 4, 5];
+`,paraId:3,tocIndex:1},{value:"forEach \u7684\u56DE\u8C03\u51FD\u6570\u4E2D\u7684 return \u8BED\u53E5\u5E76\u4E0D\u4F1A\u50CF map\u3001filter \u6216 reduce \u4E2D\u90A3\u6837\u6709\u7528\u3002\u5F53\u4F60\u5728 forEach \u7684\u56DE\u8C03\u4E2D\u4F7F\u7528 return \u65F6\uFF0C\u5B83\u53EA\u4F1A\u9000\u51FA\u5F53\u524D\u6B63\u5728\u6267\u884C\u7684\u8FED\u4EE3\uFF0C\u5E76\u4E0D\u4F1A\u505C\u6B62\u6574\u4E2A forEach \u5FAA\u73AF\u6216\u8FD4\u56DE\u4E00\u4E2A\u503C\u3002",paraId:4,tocIndex:1},{value:`const array = [1, 2, 3, 4, 5];
 
 array.forEach((value, index) => {
   if (value > 3) {
@@ -6571,13 +6571,13 @@ array.forEach((value, index) => {
   }
   console.log(value); // \u8F93\u51FA 1, 2, 3
 });
-`,paraId:4,tocIndex:1},{value:"1\u3001for in \u5FAA\u73AF\u6570\u7EC4\u5410\u51FA\u7684\u662F index \u5FAA\u73AF\u5BF9\u8C61\u5410\u51FA\u7684\u662F key",paraId:5,tocIndex:2},{value:`
-2\u3001for \u5FAA\u73AF\u4E2D break \u4F1A\u8DF3\u51FA\u6574\u4E2A\u5FAA\u73AF\uFF0Ccontinue \u4F1A\u8DF3\u51FA\u5F53\u524D\u6B21\u5FAA\u73AF\uFF08continue \u540E\u9762\u7684\u4EE3\u7801\u4E0D\u4F1A\u6267\u884C\uFF09`,paraId:5,tocIndex:2},{value:`
-3\u3001for in \u5FAA\u73AF\u4F1A\u904D\u5386\u539F\u578B\u94FE\u4E0A\u7684\u5C5E\u6027`,paraId:5,tocIndex:2},{value:`
-4\u3001for in \u5FAA\u73AF\u65F6\u6570\u5B57\u5C5E\u6027\u4F18\u5148`,paraId:5,tocIndex:2},{value:`
-5\u3001for in \u65E0\u6CD5\u904D\u5386 symbol \u5C5E\u6027 \uFF0C\u83B7\u53D6 symbol \u7528 Object.getOwnPropertySymbols(obj)`,paraId:5,tocIndex:2},{value:`
+`,paraId:5,tocIndex:1},{value:"1\u3001for in \u5FAA\u73AF\u6570\u7EC4\u5410\u51FA\u7684\u662F index \u5FAA\u73AF\u5BF9\u8C61\u5410\u51FA\u7684\u662F key",paraId:6,tocIndex:2},{value:`
+2\u3001for \u5FAA\u73AF\u4E2D break \u4F1A\u8DF3\u51FA\u6574\u4E2A\u5FAA\u73AF\uFF0Ccontinue \u4F1A\u8DF3\u51FA\u5F53\u524D\u6B21\u5FAA\u73AF\uFF08continue \u540E\u9762\u7684\u4EE3\u7801\u4E0D\u4F1A\u6267\u884C\uFF09`,paraId:6,tocIndex:2},{value:`
+3\u3001for in \u5FAA\u73AF\u4F1A\u904D\u5386\u539F\u578B\u94FE\u4E0A\u7684\u5C5E\u6027`,paraId:6,tocIndex:2},{value:`
+4\u3001for in \u5FAA\u73AF\u65F6\u6570\u5B57\u5C5E\u6027\u4F18\u5148`,paraId:6,tocIndex:2},{value:`
+5\u3001for in \u65E0\u6CD5\u904D\u5386 symbol \u5C5E\u6027 \uFF0C\u83B7\u53D6 symbol \u7528 Object.getOwnPropertySymbols(obj)`,paraId:6,tocIndex:2},{value:`
 6\u3001for \u5FAA\u73AF\u91CC\u53EF\u4EE5\u6539\u53D8\u6BCF\u4E00\u9879\u7684\u503C
-7\u3001for \u5FAA\u73AF \u548C for of \u5FAA\u73AF\u4E2D\u53EF\u4EE5\u4F7F\u7528 await`,paraId:5,tocIndex:2},{value:`let obj = {
+7\u3001for \u5FAA\u73AF \u548C for of \u5FAA\u73AF\u4E2D\u53EF\u4EE5\u4F7F\u7528 await`,paraId:6,tocIndex:2},{value:`let obj = {
   name: 'poetry',
   age: 22,
   [Symbol('aa')]: 100,
@@ -6606,10 +6606,10 @@ for (let i = 0; i < list.length; i++) {
 }
 
 console.log(list); // [4,4,4,4,4,4,4]
-`,paraId:6,tocIndex:2},{value:"\u8FD4\u56DE\u6BCF\u4E00\u9879",paraId:7,tocIndex:3},{value:`
-\u53EA\u80FD\u5FAA\u73AF iterable \u7C7B\u578B \u4E0D\u80FD\u5FAA\u73AF\u666E\u901A\u7684 object \u5BF9\u8C61`,paraId:7,tocIndex:3},{value:`
-\u6539\u53D8 item \u4E0E forEach \u4E00\u81F4`,paraId:7,tocIndex:3},{value:`
-\u53EF\u4EE5\u7528 await`,paraId:7,tocIndex:3},{value:`const sleep = (time = 2000) =>
+`,paraId:7,tocIndex:2},{value:"\u8FD4\u56DE\u6BCF\u4E00\u9879",paraId:8,tocIndex:3},{value:`
+\u53EA\u80FD\u5FAA\u73AF iterable \u7C7B\u578B \u4E0D\u80FD\u5FAA\u73AF\u666E\u901A\u7684 object \u5BF9\u8C61`,paraId:8,tocIndex:3},{value:`
+\u6539\u53D8 item \u4E0E forEach \u4E00\u81F4`,paraId:8,tocIndex:3},{value:`
+\u53EF\u4EE5\u7528 await`,paraId:8,tocIndex:3},{value:`const sleep = (time = 2000) =>
   new Promise((reslove) => {
     setTimeout(() => {
       reslove(time);
@@ -6620,10 +6620,10 @@ for await (const item of [sleep(1000), sleep(2000), sleep(3000)]) {
   // Print out the results of the request
   console.log(item);
 }
-`,paraId:8,tocIndex:3},{value:"1.for-in \u53EA\u662F\u83B7\u53D6\u6570\u7EC4\u7684\u7D22\u5F15\u6216\u8005\u5BF9\u8C61\u7684 key\uFF1B\u800C for-of \u4F1A\u83B7\u53D6\u6570\u7EC4\u7684\u503C",paraId:9,tocIndex:4},{value:"2.for-in \u4F1A\u904D\u5386\u5BF9\u8C61\u7684\u6574\u4E2A\u539F\u578B\u94FE\uFF0C\u6027\u80FD\u5DEE\uFF1B\u800C for-of \u53EA\u904D\u5386\u5F53\u524D\u5BF9\u8C61\uFF0C\u4E0D\u4F1A\u904D\u5386\u539F\u578B\u94FE ",paraId:10,tocIndex:4},{value:"3.\u5BF9\u4E8E\u6570\u7EC4\u7684\u904D\u5386\uFF0Cfor-in \u4F1A\u8FD4\u56DE\u6570\u7EC4\u4E2D\u6240\u6709\u53EF\u679A\u4E3E\u7684\u5C5E\u6027(\u5305\u62EC\u539F\u578B\u94FE\u4E0A\u53EF\u679A\u4E3E\u7684\u5C5E\u6027)\uFF1Bfor-of \u53EA\u8FD4\u56DE\u6570\u7EC4\u7684\u4E0B\u6807\u5BF9\u5E94\u7684\u5C5E\u6027\u503C",paraId:11,tocIndex:4},{value:"4.for-of \u9002\u7528\u904D\u5386\u6570\u7EC4\uFF0F\u5B57\u7B26\u4E32/map/set \u7B49\u6709\u8FED\u4EE3\u5668 Iterator \u5BF9\u8C61\u7684\u96C6\u5408\uFF0C\u4F46\u662F\u4E0D\u80FD\u904D\u5386\u666E\u901A\u5BF9\u8C61\uFF08obj is not iterable\uFF09",paraId:12,tocIndex:4},{value:"for\u3001while\u3001for in\u3001for of\u3001for await of \u4F7F\u7528 await \u90FD\u662F\u751F\u6548\u7684\uFF1B",paraId:13,tocIndex:4},{value:`
-\u800C\u51E0\u4E4E\u6709\u56DE\u8C03\u7684\u904D\u5386\u65B9\u6CD5\uFF1AforEach\u3001map\u3001filter\u3001reduce\u3001some\u3001every\u3001find \u7B49\uFF0C\u4F7F\u7528 await \u90FD\u662F\u4E0D\u751F\u6548\u7684\uFF1B`,paraId:13,tocIndex:4},{value:"1\u3001\u4F20\u7EDF\u7684 for \u5FAA\u73AF",paraId:14,tocIndex:5},{value:`
-2\u3001for of`,paraId:14,tocIndex:5},{value:`
-3\u3001es6 \u7684 some`,paraId:14,tocIndex:5}]},2427:function(o,e,n){n.r(e),n.d(e,{texts:function(){return t}});const t=[{value:`/**
+`,paraId:9,tocIndex:3},{value:"1.for-in \u53EA\u662F\u83B7\u53D6\u6570\u7EC4\u7684\u7D22\u5F15\u6216\u8005\u5BF9\u8C61\u7684 key\uFF1B\u800C for-of \u4F1A\u83B7\u53D6\u6570\u7EC4\u7684\u503C",paraId:10,tocIndex:4},{value:"2.for-in \u4F1A\u904D\u5386\u5BF9\u8C61\u7684\u6574\u4E2A\u539F\u578B\u94FE\uFF0C\u6027\u80FD\u5DEE\uFF1B\u800C for-of \u53EA\u904D\u5386\u5F53\u524D\u5BF9\u8C61\uFF0C\u4E0D\u4F1A\u904D\u5386\u539F\u578B\u94FE ",paraId:11,tocIndex:4},{value:"3.\u5BF9\u4E8E\u6570\u7EC4\u7684\u904D\u5386\uFF0Cfor-in \u4F1A\u8FD4\u56DE\u6570\u7EC4\u4E2D\u6240\u6709\u53EF\u679A\u4E3E\u7684\u5C5E\u6027(\u5305\u62EC\u539F\u578B\u94FE\u4E0A\u53EF\u679A\u4E3E\u7684\u5C5E\u6027)\uFF1Bfor-of \u53EA\u8FD4\u56DE\u6570\u7EC4\u7684\u4E0B\u6807\u5BF9\u5E94\u7684\u5C5E\u6027\u503C",paraId:12,tocIndex:4},{value:"4.for-of \u9002\u7528\u904D\u5386\u6570\u7EC4\uFF0F\u5B57\u7B26\u4E32/map/set \u7B49\u6709\u8FED\u4EE3\u5668 Iterator \u5BF9\u8C61\u7684\u96C6\u5408\uFF0C\u4F46\u662F\u4E0D\u80FD\u904D\u5386\u666E\u901A\u5BF9\u8C61\uFF08obj is not iterable\uFF09",paraId:13,tocIndex:4},{value:"for\u3001while\u3001for in\u3001for of\u3001for await of \u4F7F\u7528 await \u90FD\u662F\u751F\u6548\u7684\uFF1B",paraId:14,tocIndex:4},{value:`
+\u800C\u51E0\u4E4E\u6709\u56DE\u8C03\u7684\u904D\u5386\u65B9\u6CD5\uFF1AforEach\u3001map\u3001filter\u3001reduce\u3001some\u3001every\u3001find \u7B49\uFF0C\u4F7F\u7528 await \u90FD\u662F\u4E0D\u751F\u6548\u7684\uFF1B`,paraId:14,tocIndex:4},{value:"1\u3001\u4F20\u7EDF\u7684 for \u5FAA\u73AF",paraId:15,tocIndex:5},{value:`
+2\u3001for of`,paraId:15,tocIndex:5},{value:`
+3\u3001es6 \u7684 some`,paraId:15,tocIndex:5}]},2427:function(o,e,n){n.r(e),n.d(e,{texts:function(){return t}});const t=[{value:`/**
  * Object.freeze()
  * \u53EA\u80FD\u51BB\u7ED3\u4E00\u5C42\uFF0C\u5BF9\u4E8E\u5D4C\u5957\u7C7B\u578B\u65E0\u6CD5\u51BB\u7ED3
  */
