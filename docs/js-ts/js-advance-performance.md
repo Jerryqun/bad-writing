@@ -103,3 +103,5 @@ foo();
 ```
 
 ### 4、直接使用属性而不是通过方法返回属性值
+
+### 5、createDocumentFragment
