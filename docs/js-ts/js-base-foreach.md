@@ -7,7 +7,8 @@ title: js循环汇总
 
 # js 循环汇总
 
-从性能上看，for 循环遍历起来是最快的。
+从执行效率看(快到慢)  
+forEach => for => for in
 
 ## forEach
 

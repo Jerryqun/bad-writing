@@ -64,3 +64,8 @@ lighthouse https://www.baidu.com/ --view
 - DomContentLoaded(DCL)
 - Largest Contentful Paint(LCP)
 - Load(L)
+<!--
+
+## 如何精准的测试 js 代码性能
+
+使用 benchmark.js 的 https://jsperf.com -->
