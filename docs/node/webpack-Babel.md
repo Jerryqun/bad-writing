@@ -28,13 +28,30 @@ Polyfill 是一种 JavaScript 的 API 的 Polyfill，用来模拟实现一些 Ja
 
 Polyfill 是 core-js（不支持 generator 的转换） 和 regenerate 的集合
 
-## babel-polyfill 和 babel-runtime 的区别
+## babel-polyfill 和 babel-runtime、babel-plugin-transform-runtime 的区别
 
 <a target="_blank" href="https://juejin.cn/post/6844903869353295879?searchId=20230718094626F6E170D8E496316FE991">参考</a>
 
 1、babel-polyfill 污染全局变量，会影响其他库(栗子: window.xxx === xxx)<br/>
+全部加载不会按需引入体积非常大
+
 2、babel-runtime 不会污染全局变量，不会影响其他库(重新定义名称 如\_promise = )<br/>
-3、产出第三方 lib 要用 babel-runtime<br/>
+按需加载 但是需要全部手动引入
+
+3、babel-plugin-transform-runtime 装了就不需要装 babel-runtime 了，因为前者依赖后者。 总的来说，babel-plugin-transform-runtime 就是可以在我们使用新 API 时 自动 import babel-runtime 里面的 polyfill，具体插件做了以下三件事情：
+
+当我们使用 async/await 时，自动引入 babel-runtime/regenerator  
+当我们使用 ES6 的静态事件或内置对象时，自动引入 babel-runtime/core-js  
+移除内联 babel helpers 并替换使用 babel-runtime/helpers 来替换
+
+4、babel-plugin-transform-runtime 优点：
+
+不会污染全局变量  
+多次使用只会打包一次  
+依赖统一按需引入,无重复引入,无多余引入  
+避免 babel 编译的工具函数在每个模块里重复出现，减小库和工具包的体积
+
+5、产出第三方 lib 要用 babel-runtime<br/>
 
 在 Babel7.4.0 版本 之前，通常我们会安装 babel-polyfill 或 @babel/polyfill 来处理实例方法和 ES+新增的内置函数，而 7.4.0 之后，当我们选择安装 @babel/polyfill 时，会收到警告 .<br/>
 

@@ -35,6 +35,8 @@ Vite 本地启动时会创建一个 WebSocket 连接，同时去监听本地的�
 
 Rollup 和 Webpack 是两种常用的前端构建工具，它们有以下区别：
 
+Rollup 不支持 HMR（Hot Module Replacement 热更新）
+
 构建目标：Rollup 主要用于构建 JavaScript 库或模块，它将代码打包成更小、更高效的输出。而 Webpack 更适用于构建复杂的应用程序，它可以处理各种资源（如 JavaScript、CSS、图片等）并将它们打包成一个或多个输出文件。
 
 打包方式：Rollup 采用模块的静态分析和 Tree Shaking 技术，可以将未使用的代码从输出中删除，从而生成更小的包。而 Webpack 采用模块的动态分析和代码拆分技术，可以按需加载模块，提供更好的运行时性能。
