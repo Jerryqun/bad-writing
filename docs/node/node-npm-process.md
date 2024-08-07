@@ -8,9 +8,27 @@ title: npm模块安装机制
 
 ## npm 模块安装机制
 
-1、发出 npm install 命令后查询 node_modules 目录之中是否已经存在指定模块,若存在，不再重新安装,若不存在 npm 向 registry 查询模块压缩包的网址<br/>
-2、下载压缩包，存放在根目录下的.npm 目录里<br/>
-3、解压压缩包到当前项目的 node_modules 目录<br/>
+<img src='../file/npm.png'>
+
+npm install 执行之后，首先会检查和获取 npm 的配置，这里的优先级为：
+
+项目级的.npmrc 文件 > 用户级的 .npmrc 文件 > 全局级的 .npmrc > npm 内置的 .npmrc 文件
+
+然后检查项目中是否有 package-lock.json 文件
+
+如果有，检查 package-lock.json 和 package.json 声明的依赖是否一致：
+
+一致。直接使用 package-lock.json 中的信息,从网络或者缓存中加载依赖。
+不一致。根据上述流程中的不同版本进行处理。
+如果没有，那么会根据 package.json 递归构建依赖树，然后就会根据构建好的依赖去下载完整的依赖资源，在下载的时候，会检查有没有相关的资源缓存：
+
+存在。直接解压到 node_modules 文件中。
+不存在。从 npm 远端仓库下载包，校验包的完整性，同时添加到缓存中，解压到 node_modules 中。
+最后，生成 package-lock.json 文件。
+
+其实，在我们实际的项目开发中，使用 npm 作为团队的最佳实践: 同一个项目团队，应该保持 npm 版本的一致性。
+
+从上面的安装流程，不知道大家注意到了一点没有，在实际的项目开发中，如果每次都去安装对应依赖时，如果相关的依赖包体积过大或者是依赖于网络，无疑会增加安装的时间成本。那么，缓存在这里的就是一个解决问题的好办法。
 
 ## devDependencies 和 dependencies 的区别
 
