@@ -234,3 +234,28 @@ git rm --cached -r .dumi
 
 
 ```
+
+## git 如何弃掉当前的改动
+
+如果你还没有暂存改动（即改动在工作目录中）：
+
+```bash
+放弃单个文件
+   git checkout -- <文件名>
+放弃工作目录中所有文件的改动：
+   git checkout -- .
+```
+
+如果你已经暂存了改动（使用 git add 之后）
+
+```bash
+首先，需要解压暂存区：
+   git reset HEAD <文件名>
+然后放弃工作目录中的改动：
+   git checkout -- <文件名>
+
+如果你想同时取消所有暂存的改动并放弃工作目录中的改动：
+   git reset HEAD .
+   git checkout -- .
+
+```
