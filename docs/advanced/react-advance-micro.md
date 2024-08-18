@@ -148,6 +148,8 @@ window.addEventListener('myEvent', (event) => {
 
 ## 如何实现 JS 的沙箱环境的
 
+<a href="https://juejin.cn/post/7346865556328644623">参考</a>
+
 1. . 使用 iframe 创建沙箱环境
 
 ```js
