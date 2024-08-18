@@ -91,7 +91,6 @@ git merge
 
 其实是一种非破坏性的操作，对现有分支不会以任何方式被更改，但是会导致历史记录相对复杂
 
-rebase
 rebase 会将整个分支移动到另一个分支上，有效地整合了所有分支上的提交
 
 主要的好处是历史记录更加清晰，是在原有提交的基础上将差异内容反映进去，消除了 git merge 所需的不必要的合并提交
@@ -160,7 +159,8 @@ git config user.email
 
 ## git 回退到某个 commit 方法
 
-<a target="_blank" href="https://www.jianshu.com/p/f860bf857456">参考</a>
+<a target="_blank" href="https://www.jianshu.com/p/f860bf857456">参考</a>  
+注意: 如果多人开发 另一人电脑上已经 pull 了 他拉取后再推会把 reset 的提交记录带上来
 
 ```bash
 git log
