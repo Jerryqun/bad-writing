@@ -23,7 +23,8 @@
   },
   "dependencies": {
     "@babel/preset-env": "^7.24.6",
-    "antd": "^5.13.3"
+    "antd": "^5.13.3",
+    "l": "^0.6.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",

@@ -230,3 +230,122 @@ console.log(colorPoint.toString()); // red 12
 ColorPoint.__proto__ === Point; // true
 Object.getPrototypeOf(B) === Point;
 ```
+
+## es5 中的类和 es6 中的 class 有什么区别
+
+ES5 和 ES6 中的类有几个关键的区别。下面是它们之间的一些主要差异：
+
+### 1. 语法
+
+- **ES5** 使用构造函数和原型链来创建类：
+
+  ```javascript
+  function Person(name) {
+    this.name = name;
+  }
+
+  Person.prototype.sayHello = function () {
+    console.log('Hello, ' + this.name);
+  };
+  ```
+
+- **ES6** 引入了 `class` 关键字，让类的定义更简洁和直观：
+
+  ```javascript
+  class Person {
+    constructor(name) {
+      this.name = name;
+    }
+
+    sayHello() {
+      console.log('Hello, ' + this.name);
+    }
+  }
+  ```
+
+### 2. 继承
+
+- **ES5** 通过构造函数和原型链实现继承：
+
+  ```javascript
+  function Employee(name, job) {
+    Person.call(this, name);
+    this.job = job;
+  }
+
+  Employee.prototype = Object.create(Person.prototype);
+  Employee.prototype.constructor = Employee;
+  ```
+
+- **ES6** 使用 `extends` 关键字来简化继承：
+  ```javascript
+  class Employee extends Person {
+    constructor(name, job) {
+      super(name); // 调用父类构造函数
+      this.job = job;
+    }
+  }
+  ```
+
+### 3. 静态方法
+
+- **ES5** 需要直接将方法添加到构造函数上：
+
+  ```javascript
+  Person.saySomething = function () {
+    console.log('I am a person.');
+  };
+  ```
+
+- **ES6** 使用 `static` 关键字定义静态方法：
+  ```javascript
+  class Person {
+    static saySomething() {
+      console.log('I am a person.');
+    }
+  }
+  ```
+
+### 4. Getter 和 Setter
+
+- **ES5** 使用原型创建 getter 和 setter：
+
+  ```javascript
+  function Person(name) {
+    this._name = name;
+  }
+
+  Object.defineProperty(Person.prototype, 'name', {
+    get: function () {
+      return this._name;
+    },
+    set: function (value) {
+      this._name = value;
+    },
+  });
+  ```
+
+- **ES6** 直接在类中使用：
+
+  ```javascript
+  class Person {
+    constructor(name) {
+      this._name = name;
+    }
+
+    get name() {
+      return this._name;
+    }
+
+    set name(value) {
+      this._name = value;
+    }
+  }
+  ```
+
+### 5. 作用域
+
+- **ES5** 中，`this` 的值取决于函数的调用方式，可能会导致混淆。
+- **ES6** 中的箭头函数可以避免 `this` 的问题，适合用作类方法，保持 `this` 的上下文。
+
+总的来说，ES6 引入的类语法更清晰、更易于理解，同时也引入了许多便捷的特性，使得面向对象编程更加直观和高效。
