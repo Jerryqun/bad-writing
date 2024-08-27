@@ -18,7 +18,7 @@ title: css in js
 ## 缺点
 
 1、增加项目复杂性  
-2、可阅读性变弱
+2、可阅读性变弱  
 3、配合 postcss-px-to-viewport 坐移动端适配的时候，styled 中的 px 不能转换为 vw
 
 ## 库
