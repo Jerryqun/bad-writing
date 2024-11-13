@@ -52,6 +52,8 @@ Number('1a'); //NaN
 Number(-0x11); //-17
 Number('0X11'); //17
 
+typeof NaN; // 'number'
+
 var obj = {
   value: 1,
   valueOf() {

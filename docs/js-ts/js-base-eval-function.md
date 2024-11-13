@@ -5,7 +5,7 @@ toc: content
 title: eval()和 Function()
 ---
 
-## eval()和 Function()
+## eval()和 new Function()
 
 <a target="_blank" href="https://www.jianshu.com/p/db7ec7b51933">参考</a>
 
@@ -82,4 +82,51 @@ import { Interpreter } from 'eval5';
 const interpreter = new Interpreter(window); // 传入全局对象，例如在浏览器中可以是 window
 const result = interpreter.evaluate('1 + 1'); // 解释并执行字符串中的 JS 代码
 console.log(result); // 输出 2
+```
+
+## 怎么在 react 技术栈的低代码平台中，实现组件的脚本注入？ 使用 new Function
+
+```js
+import React, { useState, useEffect } from 'react';
+
+function CustomComponent() {
+  const [value, setValue] = useState(0);
+  const [customScript, setCustomScript] = useState('');
+
+  // 用于执行用户脚本的函数
+  const executeUserScript = (script, props, state) => {
+    try {
+      const scriptFn = new Function('props', 'state', script);
+      return scriptFn(props, state);
+    } catch (error) {
+      console.error('Script execution error:', error);
+    }
+  };
+
+  // 在组件初始化或更新时执行
+  useEffect(() => {
+    if (customScript) {
+      executeUserScript(
+        customScript,
+        { shouldIncrease: true },
+        { value, setValue },
+      );
+    }
+  }, [customScript, value]);
+
+  // 输入框让用户输入自定义脚本
+  return (
+    <div>
+      <textarea
+        value={customScript}
+        onChange={(e) => setCustomScript(e.target.value)}
+        placeholder="Enter your JavaScript code here"
+      />
+      <p>Value: {value}</p>
+      <button onClick={() => setValue(value + 1)}>Increase Value</button>
+    </div>
+  );
+}
+
+export default CustomComponent;
 ```

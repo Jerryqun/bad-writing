@@ -22,6 +22,33 @@ mobile: false
 优点是比较简单，易于理解。
 缺点是这种方式由于需要不断的建立 http 连接，严重浪费了服务器端和客户端的资源。当用户增加时，服务器端的压力就会变大，这是很不合理的。
 
+### 短轮询实例
+
+```js
+function pollServer() {
+  fetch('/long-polling-endpoint')
+    .then((response) => response.json())
+    .then((data) => {
+      console.log('Received data:', data);
+      pollServer(); // 继续轮询
+    });
+}
+
+pollServer();
+// node
+const express = require('express');
+const app = express();
+
+app.get('/long-polling-endpoint', (req, res) => {
+  // 模拟延迟
+  setTimeout(() => {
+    res.json({ message: 'Hello Client' });
+  }, 1000);
+});
+
+app.listen(3000, () => console.log('Server is running on port 3000'));
+```
+
 ### 长轮询
 
 基本思路:
@@ -43,6 +70,36 @@ WebSocket 是 Html5 定义的一个新协议，与传统的 http 协议不同，
 SSE（Server-Sent Events）是一种允许服务器向客户端单向发送数据推送的技术，其中客户端初始化连接，并保持打开状态以接收来自服务器的更新。这种方法特别适用于实现一些像股票价格更新、新闻订阅、实时通知等需要服务器实时推送信息的应用场景。
 
 SSE 只支持文本数据，而 WebSocket 支持文本和二进制数据。SSE 在一些浏览器需要一个 polyfill 来工作，而 WebSocket 则基本上在所有现代浏览器上都有原生支持。SSE 仅适用于服务器到客户端的单项数据流，对于需要全双工通信的场景，WebSocket 是更好的选择。
+
+### SSE 实例
+
+```js
+const eventSource = new EventSource('http://yourserver.com/sse');
+
+eventSource.onmessage = (event) => {
+  console.log('Message from server:', event.data);
+};
+
+eventSource.onerror = (error) => {
+  console.error('Error:', error);
+};
+
+// node
+const express = require('express');
+const app = express();
+
+app.get('/sse', (req, res) => {
+  res.setHeader('Content-Type', 'text/event-stream');
+  res.setHeader('Cache-Control', 'no-cache');
+  res.setHeader('Connection', 'keep-alive');
+
+  setInterval(() => {
+    res.write(`data: ${JSON.stringify({ message: 'Hello Client' })}\n\n`);
+  }, 1000);
+});
+
+app.listen(3000, () => console.log('Server is running on port 3000'));
+```
 
 ## TCP 如何保证数据包的顺序、可靠传输
 

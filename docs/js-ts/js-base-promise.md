@@ -500,3 +500,35 @@ console.log('start');
 'timer2'
  */
 ```
+
+## Promise 值穿透
+
+在 JavaScript 中，Promise 是一种用于处理异步操作的对象。当我们提到“Promise 值穿透”，通常是指 Promise 链式调用中的值传递或链式执行的过程。在这个过程中，Promise 的返回值会传递给下一个 .then() 方法。
+
+```js
+const promise1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve(1); // 初始值
+  }, 1000);
+});
+
+promise1
+  .then((result) => {
+    console.log(result); // 输出 1
+    return result + 1; // 返回 2
+  })
+  .then((result) => {
+    console.log(result); // 输出 2
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(result + 1); // 返回 3
+      }, 1000);
+    });
+  })
+  .then((result) => {
+    console.log(result); // 输出 3
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+```

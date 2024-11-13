@@ -164,7 +164,7 @@ onmouseleave
 
 ## js 中==、===和 Object.is()的区别
 
-- == ：等于，两边值类型不同的时候，先进行类型转换，再比较(只要值相等)；
+- == ：等于，两边值类型不同的时候，先进行类型转换，再比较(只要值相等便两者相等)；
   判断的类型是否是 String 和 Number，是的话，把 String 类型转换成 Number，再进行比较
   判断其中一方是否是 Boolean，是的话就把 Boolean 转换成 Number，再进行比较
   如果其中一方为 Object，且另一方为 String、Number 或者 Symbol，会将 Object 转换成字符串，再进行比较
@@ -703,4 +703,14 @@ const exitCircular = (obj, cache = new WeakSet()) => {
   }
   return false;
 };
+```
+
+## ['1', '2', '3'].map(parseInt) 的输出值是什么
+
+[1, NaN, NaN]
+
+```js
+parseInt('1', 0); // 1
+parseInt('2', 1); // NaN
+parseInt('3', 2); // NaN
 ```

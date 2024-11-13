@@ -543,3 +543,58 @@ set(a, 'params.name.age', '18');
 
 console.log('a', a);
 ```
+
+## 编程题：实现一个对象的 flatten 方法，如下：
+
+```js
+// flatten(obj){} 结果返回如下
+
+// {
+//   'a.b': 1,
+//   'a.c': 2,
+//   'a.d.e': 5,
+//   'b[0]': 1,
+//   'b[1]': 3,
+//   'b[2].a': 2,
+//   'b[2].b': 3
+//    c: 3
+// }
+function isNumber(value) {
+  return typeof value === 'number' && !isNaN(value);
+}
+function flatten(params) {
+  const result = {};
+  function convert(value, prop) {
+    if (Object(value) !== value) {
+      result[prop] = value;
+    } else if (Array.isArray(value)) {
+      value.forEach((item, index) => {
+        convert(item, `${prop}[${index}]`);
+      });
+    } else {
+      for (key in value) {
+        if (value.hasOwnProperty(key)) {
+          convert(value[key], prop ? `${prop}.${key}` : key);
+        }
+      }
+    }
+  }
+  convert(params, '');
+  return result;
+}
+
+const obj = {
+  a: {
+    b: 1,
+    c: 2,
+    d: {
+      e: 5,
+    },
+  },
+  b: [1, 3, { a: 2, b: 3 }],
+  c: 3,
+};
+
+var a = flatten(obj);
+console.log('a', a);
+```
