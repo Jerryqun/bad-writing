@@ -97,3 +97,45 @@ const todo = {
   },
 };
 ```
+
+## 手写 Async、Await 的实现
+
+```js
+function delay(ms) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve();
+    }, ms);
+  });
+}
+
+function* generator() {
+  console.log('start');
+  yield delay(1000);
+  console.log('after 1 second');
+  yield delay(2000);
+  console.log('after 2 more seconds');
+}
+
+function async(generatorFunc) {
+  const iterator = generatorFunc();
+
+  function handle(iteratorResult) {
+    if (iteratorResult.done) {
+      return Promise.resolve(iteratorResult.value);
+    }
+
+    return Promise.resolve(iteratorResult.value).then((res) => {
+      return handle(iterator.next(res));
+    });
+  }
+
+  return handle(iterator.next());
+}
+
+async(function () {
+  return generator();
+}).then(() => {
+  console.log('all done');
+});
+```

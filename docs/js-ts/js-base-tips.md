@@ -1357,7 +1357,10 @@ console.log(convertBytes(12345678901)); // 11.50 GB
 
 ### 如何判断一个 js 对象是否存在循环引用
 
+使用 WeakSet 或者 Set
+
 ```js
+// 使用set
 function existCircular(obj) {
   let cache = new Set();
   function helper(obj) {
@@ -1388,4 +1391,39 @@ const person = { name: 'kalory', age: 18 };
 person.onwer = person;
 
 existCircular(person); // true
+// 使用WeakSet
+const exitCircular = (obj, cache = new WeakSet()) => {
+  const values = Object.values(obj);
+  for (let i = 0; i < values.length; i++) {
+    if (cache.has(values[i])) {
+      return true;
+    }
+    if (typeof values[i] !== 'object' || values[i] === null) {
+      continue;
+    }
+    cache.add(values[i]);
+    return exitCircular(values[i], cache);
+  }
+  return false;
+};
+```
+
+使用 JSON 序列化
+
+```js
+function isCircular(obj) {
+  try {
+    JSON.stringify(obj);
+    return false;
+  } catch (e) {
+    return true;
+  }
+}
+
+// 测试循环引用
+const a = {};
+const b = { a };
+a.b = b;
+
+console.log(isCircular(a)); // 输出：true
 ```

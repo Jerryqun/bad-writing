@@ -15,6 +15,8 @@ CommonJs 是单个值导出，本质上导出的就是 exports 属性。<br/>
 CommonJS 是可以动态加载的，对每一个加载都存在缓存，可以有效的解决循环引用问题。<br/>
 CommonJS 模块同步加载并执行模块文件。<br/>
 
+浏览器本身不直接支持 CommonJS 规范。CommonJS 主要是为服务器端（如 Node.js）设计的模块规范，通常用于服务器环境中处理模块的加载和管理。
+
 ## es module 总结
 
 ES6 Module 静态的，不能放在块级作用域内，代码发生在编译时。<br/>

@@ -1,0 +1,9 @@
+.gradient-text {
+  font-size: 48px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff7f50, #1e90ff);
+  /* 定义渐变颜色 */
+  -webkit-background-clip: text;
+  color: transparent;
+  /* 隐藏原始文本颜色 */
+}

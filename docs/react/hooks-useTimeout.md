@@ -41,37 +41,16 @@ export default App;
 
 ### hooks 的闭包缺陷
 
-count 发生了变化，但是 3s 后 setTimout 的 count 却还是 0
-
-使用 useTimeout 可解决
+setTimeout 中 count 的值没有拿到最新值 最后变成了 1 而不是 6
 
 ```jsx
-function useTimeout(callback, delay) {
-  const ref = React.useRef();
-  React.useEffect(() => {
-    ref.current = callback;
-  }, [callback]);
-
-  React.useEffect(() => {
-    if (delay !== null) {
-      setTimeout(() => {
-        ref.current();
-      }, delay);
-    }
-  }, [delay]);
-}
-
+import { useState, useEffect } from 'react';
 function App() {
   const [count, setCount] = React.useState(0);
-  const [countTimeout, setCountTimeout] = React.useState(0);
-  // useTimeout(() => {
-  //   setCountTimeout(count);
-  // }, 3000);
+
   React.useEffect(() => {
     setTimeout(() => {
-      setCountTimeout((currentCount) => {
-        return currentCount + 1;
-      });
+      setCount(count + 1);
     }, 3000);
     setCount(5);
   }, []);
@@ -79,7 +58,6 @@ function App() {
     <div>
       Count: {count}
       <br />
-      setTimeout Count: {countTimeout}
     </div>
   );
 }
@@ -102,6 +80,48 @@ const Demo = () => {
 };
 
 export default Demo;
+```
+
+### 利用闭包缓存的是对象的引用来解决闭包问题
+
+```js
+function App() {
+  // return <Demo1 />
+  return <Demo2 />;
+}
+
+function Demo2() {
+  const [obj, setObj] = useState({ name: 'chechengyi' });
+
+  useEffect(() => {
+    setInterval(() => {
+      console.log(obj);
+    }, 2000);
+  }, []);
+
+  function handClick() {
+    setObj((prevState) => {
+      var nowObj = Object.assign(prevState, {
+        name: 'baobao',
+        age: 24,
+      });
+      console.log(nowObj == prevState);
+      return nowObj;
+    });
+  }
+  return (
+    <div>
+      <div>
+        <span>
+          name: {obj.name} | age: {obj.age}
+        </span>
+        <div>
+          <button onClick={handClick}>click!</button>
+        </div>
+      </div>
+    </div>
+  );
+}
 ```
 
 ## useTimeout 函数

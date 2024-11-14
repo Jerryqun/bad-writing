@@ -77,3 +77,54 @@ observer.observe(targetNode, config);
 ```
 
 `MutationObserver` 是一个强大的工具，但由于其对性能的影响，建议仅在必要时使用，并尽量减少监视的范围和频率。如果观察范围很广或变动频繁，会增加浏览器的工作负载，可能导致性能问题。因此，在使用时需要权衡功能和性能，确保以最优化的方式使用 `MutationObserver`。
+
+### MutationObserver 可用于禁止别人移除水印
+
+```js
+// 目标节点
+const targetNode = document.body;
+
+// 创建 MutationObserver 实例
+const observer = new MutationObserver((mutationsList) => {
+  mutationsList.forEach((mutation) => {
+    // 检查是否有子节点被删除
+    if (mutation.removedNodes.length > 0) {
+      // 检查被删除的节点是否为水印
+      // 如果是，则重新插入水印元素
+      // targetNode.appendChild(watermarkElement);
+    }
+  });
+});
+
+// 配置 MutationObserver
+const config = { childList: true, subtree: true };
+
+// 开始观察目标节点
+observer.observe(targetNode, config);
+```
+
+### 防止 DOM 被隐藏
+
+```js
+// 目标节点（假设水印元素是一个特定的节点）
+const watermarkElement = document.querySelector('.watermark');
+
+// 创建 MutationObserver 实例
+const observer = new MutationObserver((mutationsList) => {
+  mutationsList.forEach((mutation) => {
+    if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
+      // 检查水印的 display 属性是否被设置为 none
+      if (getComputedStyle(watermarkElement).display === 'none') {
+        // 如果水印被隐藏，重新显示水印
+        watermarkElement.style.display = 'block';
+      }
+    }
+  });
+});
+
+// 配置 MutationObserver
+const config = { attributes: true, subtree: true, attributeFilter: ['style'] };
+
+// 开始观察目标节点
+observer.observe(document.body, config);
+```

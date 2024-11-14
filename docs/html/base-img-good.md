@@ -142,7 +142,16 @@ img.src = 'path/to/your/image.jpg';
   <img src="small.jpg" alt="描述" />
 </picture>
 
-// css
+// img
+<img src="banner-small.jpg"
+     srcset="banner-medium.jpg 600w,
+             banner-large.jpg 1200w"
+     sizes="(min-width: 1200px) 100vw,
+            (min-width: 600px) 50vw,
+            100vw"
+     alt="Banner Image">
+
+// css 媒体查询
 .bg-img {
   background-image: url(small.jpg);
 }
@@ -158,6 +167,16 @@ img.src = 'path/to/your/image.jpg';
     background-image: url(large.jpg);
   }
 }
+
+// css image-set
+.banner {
+    background-image: image-set(
+        url('banner-small.jpg') 1x,
+        url('banner-medium.jpg') 2x,
+        url('banner-large.jpg') 3x
+    );
+}
+根据设备的像素比自动选择合适的图像，提升图像清晰度和加载性能。
 
 // js
 if (window.innerWidth > 800) {
