@@ -7,15 +7,14 @@ title: 错误捕获
 
 ## 错误捕获
 
+| 异常类型                                      | 同步方法 | 异步方法 | 资源加载 | Promise | async/await |
+| --------------------------------------------- | -------- | -------- | -------- | ------- | ----------- |
+| try/catch                                     | √        |          |          |         | √           |
+| window.onerror                                | √        | √        |
+| window.addEventListener('error')              | √        | √        | √        |
+| window.addEventListener('unhandledrejection') |          |          |          | √       |             |
+
 ```js
-
-// 异常类型	              同步方法	        异步方法	        资源加载	        Promise	      async/await
-// try/catch			          √                                                                 √
-// window.onerror			      √               √
-// error	                  √               √                   √
-// unhandledrejection		                                                      √               √
-
-
 /**
  * try-catch 只能捕获到同步的运行时错误，对异步错误和语法却无能为力，捕获不到。
  */

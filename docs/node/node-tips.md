@@ -26,6 +26,41 @@ Node v13.2.0 对应 Npm v6.13.1。
 }
 ```
 
+## cross-env
+
+cross-env 用于在不同操作系统上统一设置环境变量。
+
+```js
+npm install cross-env --save-dev
+
+"scripts": {
+  "start": "cross-env NODE_ENV=development webpack serve",
+  "build": "cross-env NODE_ENV=production webpack"
+}
+```
+
+## dotenv
+
+为了更方便地管理环境变量，特别是在开发环境中，可以使用 dotenv 插件将 .env 文件中的变量加载到 process.env 中。
+
+```js
+npm install dotenv --save
+
+const path = require('path');
+const webpack = require('webpack');
+require('dotenv').config();
+
+module.exports = {
+  // 其他配置
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+      'process.env.API_URL': JSON.stringify(process.env.API_URL),
+    })
+  ]
+};
+```
+
 ## fs 读写 json 文件
 
 ```js

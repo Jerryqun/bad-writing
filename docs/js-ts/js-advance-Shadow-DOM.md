@@ -2,10 +2,10 @@
 nav: Js
 group: 进阶
 toc: content
-title: shadow DOM
+title: Shadow DOM
 ---
 
-## shadow DOM
+## Shadow DOM
 
 Shadow DOM 是 Web 组件规范的一部分，它允许开发者将一个隐藏的、独立的 DOM 附加到一个元素上。这个独立的 DOM 称为 "阴影 DOM"（Shadow DOM），它可以包含元素、样式和脚本，但这些内容不会影响主文档（Light DOM）的内容，同时也不会受到主文档的影响。
 
