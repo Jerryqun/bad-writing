@@ -695,3 +695,28 @@ parseInt('1', 0); // 1
 parseInt('2', 1); // NaN
 parseInt('3', 2); // NaN
 ```
+
+## 写一个返回数据类型的函数，要求自定义的类实例化的对象返回定义的类名
+
+正则表达式 /\[object\s(.+)\]/ 解释
+/.../ 是正则表达式的定界符。  
+ \[object\s 部分：  
+ \[object 匹配字符串 [object。方括号是一个特殊字符，所以用反斜杠转义。
+\s 匹配一个空格字符（包括空格、制表符等）。
+(.+) 部分：
+() 是捕获组，表示我们要捕获的内容。
+.+ 表示匹配一个或多个任意字符（除了换行符）。
+\] 匹配字符串中的 ] 字符，同样需要转义。
+"\$1"  
+ \$1 表示第一个捕获组的内容。在这个正则表达式中，捕获组就是 (.+)，也就是 [object 和 ] 之间的内容。
+
+```js
+const myType = (params) => {
+  const toString = Object.prototype.toString;
+  let type = toString.call(params).replace(/\[object\s(.+)\]/, '$1');
+  if (type === 'Object') {
+    type = params.constructor.name;
+  }
+  return params instanceof Element ? 'Element' : type;
+};
+```

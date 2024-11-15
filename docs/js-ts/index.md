@@ -6,31 +6,19 @@ mobile: false
 title: 类型转换
 ---
 
-## 装箱拆箱
+## 类型转换
 
-```js
-//装箱：把原始类型值转为对应的包装对象
-let num = 1234.236;
-//数值包装成 Number 对象
-new Number(num);
+数据类型之间的转换可以分为下面三种：
 
-let str = 'Hello';
-//字符串包装成 String 对象
-new String(str);
-
-//拆箱：包装对象转为对应的原始类型值表现形式
-//将 new Number 拆箱成 1234.236
-new Number(num).valueOf(); // 1234.236
-
-//将 new String 拆箱成 Hello
-new String(num).valueOf();
-```
-
-## 强制类型转换
+原始数据类型之间的转换。  
+原始数据类型转换为对象。  
+对象转换为原始数据类型。
 
 强制类型转换方式包括 Number()、parseInt()、parseFloat()、toString()、String()、Boolean()，这几种方法都比较类似
 
-## Number() 方法的强制转换规则
+### 强制转换规则
+
+#### Number
 
 - 如果是布尔值，true 和 false 分别被转换为 1 和 0；
 - 如果是数字，返回自身；
@@ -91,17 +79,30 @@ console.log(obj + 1); // 输出5
  */
 ```
 
-## == 的隐式类型转换规则
+#### Boolean()
 
-- 如果类型相同，无须进行类型转换；<br/>
-- 如果其中一个操作值是 null 或者 undefined，那么另一个操作符必须为 null 或者 undefined，才会返回 true，否则都返回 false；
-- 如果其中一个是 Symbol 类型，那么返回 false；
-- 两个操作值如果为 string 和 number 类型，那么就会将字符串转换为 number；
-- 如果一个操作值是 boolean，那么转换成 number；
-- 如果一个操作值为 object 且另一方为 string、number 或者 symbol，
-  就会把 object 转为原始类型再进行判断（调用 object 的 valueOf/toString 方法进行转换）。
+调用 Boolean()函数进行转换。在将非布尔值类型转换为布尔值类型时，有一个总结：
 
-## 对象转原始类型
+false：布尔值 false  
+undefined：未定义的值  
+null：空值  
+0：数字 0  
+-0：负零  
+NaN：非数字值  
+''：空字符串  
+除了以上七个值外，其他值（包括对象、数组、函数等）在转换为布尔值时都会返回 true。这种规则使得 JS 中的大多数值被视为真值（truthy）
+
+```js
+console.log(Boolean()); // false
+console.log(Boolean('Ywis')); // tru
+console.log(Boolean(123)); // true
+console.log(Boolean(NaN)); // false
+console.log(Boolean(undefined)); // false
+console.log(Boolean(null)); // false
+console.log(Boolean(true)); // true
+```
+
+### 对象转原始类型(ToPrimitive)
 
 对象转原始类型，会调用内置的[ToPrimitive]函数，对于该函数而言，其逻辑如下：
 
@@ -190,3 +191,50 @@ ToPrimitive 的转换规则如下：
 如果值是对象类型，则调用它的 valueOf() 方法。如果返回结果是原始类型的值，则返回该值。  
 如果 valueOf() 方法返回的不是原始类型的值，则调用对象的 toString() 方法。如果返回结果是原始类型的值，则返回该值。  
 如果 toString() 方法返回的不是原始类型的值，则抛出一个 TypeError 的错误。
+
+## == 的隐式类型转换规则
+
+- 如果类型相同，无须进行类型转换；<br/>
+- 如果其中一个操作值是 null 或者 undefined，那么另一个操作符必须为 null 或者 undefined，才会返回 true，否则都返回 false；
+- 如果其中一个是 Symbol 类型，那么返回 false；
+- 两个操作值如果为 string 和 number 类型，那么就会将字符串转换为 number；
+- 如果一个操作值是 boolean，那么转换成 number；
+- 如果一个操作值为 object 且另一方为 string、number 或者 symbol，
+  就会把 object 转为原始类型再进行判断（调用 object 的 valueOf/toString 方法进行转换）。
+
+  ## 装箱拆箱
+
+```js
+//装箱：把原始类型值转为对应的包装对象
+let num = 1234.236;
+//数值包装成 Number 对象
+new Number(num);
+
+let str = 'Hello';
+//字符串包装成 String 对象
+new String(str);
+
+//拆箱：包装对象转为对应的原始类型值表现形式
+//将 new Number 拆箱成 1234.236
+new Number(num).valueOf(); // 1234.236
+
+//将 new String 拆箱成 Hello
+new String(num).valueOf();
+```
+
+## 自动转换成数值
+
+除了+有可能把运算子转为字符串，其他运算符都会把运算子自动转成数值
+
+```js
+'5' - '2'; // 3
+'5' * '2'; // 10
+true - 1; // 0
+false - 1; // -1
+'1' - 1; // 0
+'5' * []; // 0
+false / '5'; // 0
+'abc' - 1; // NaN
+null + 1; // 1
+undefined + 1; // NaN
+```

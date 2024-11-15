@@ -229,7 +229,7 @@ c instanceof a; // true
  * 手写instanceof
  */
 
-function myinstanceof(target, constructor) {
+function myInstanceOf(target, constructor) {
   // 由于instance要检测的是某对象，需要有一个前置判断条件
   // 基本数据类型直接返回false
   // if(typeof left !== 'object' || left === null) return false;
@@ -238,9 +238,20 @@ function myinstanceof(target, constructor) {
   if (constructor.prototype === target.__proto__) {
     return true;
   } else {
-    return myinstanceof(target.__proto__, constructor);
+    return myInstanceOf(target.__proto__, constructor);
   }
 }
+
+const myInstanceOf = (l, r) => {
+  while (l !== null) {
+    if (l.__proto__ === r.prototype) {
+      return true;
+    } else {
+      l = l.__proto__;
+    }
+  }
+  return false;
+};
 ```
 
 ## 手写 JSON.parse

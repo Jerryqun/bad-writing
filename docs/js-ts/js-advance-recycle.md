@@ -7,7 +7,7 @@ title: GC
 
 ## GC 垃圾回收
 
-GC 工作时应用时停止的  
+GC 工作时应用是停止的  
 频繁的过长的 GC 会导致应用假死  
 用户使用过程中干到卡顿
 
@@ -51,7 +51,7 @@ function func() {
 }
 ```
 
-### 标记清除
+### 标记清除 （JavaScript 最常用的垃圾收回机制）
 
 2012 年起，所有现代浏览器都使用了标记清除法
 
@@ -86,3 +86,69 @@ V8 的垃圾回收机制也是基于标记清除算法，不过对其做了一�
 
 32 位操作系统  
 800 兆
+
+## 什么是内存泄漏
+
+不再用到的内存，没有及时释放，就叫做内存泄漏（memory leak）。  
+有些语言（比如 C 语言）必须手动释放内存，程序员负责内存管理。
+
+## 常见内存泄露情况
+
+1. 意外的全局变量
+
+```js
+function foo(arg) {
+  bar = 'this is a hidden global variable';
+}
+```
+
+2. 另一种意外的全局变量可能由 this 创建：
+
+```js
+function foo() {
+  this.variable = 'potential accidental global';
+}
+// foo 调用自己，this 指向了全局对象（window）
+foo();
+```
+
+上述使用严格模式，可以避免意外的全局变量
+
+3. 定时器也常会造成内存泄露
+
+   如果 id 为 Node 的元素从 DOM 中移除，该定时器仍会存在，同时，因为回调函数中包含对 someResource 的引用，定时器外面的 someResource 也不会被释放
+
+```js
+var someResource = getData();
+setInterval(function() {
+    var node = document.getElementById('Node');
+    if(node) {
+        // 处理 node 和 someResource
+        node.innerHTML = JSON.stringify(someResource));
+    }
+}, 1000);
+```
+
+4. 包括我们之前所说的闭包，维持函数内局部变量，使其得不到释放
+
+```js
+function bindEvent() {
+  var obj = document.createElement('XXX');
+  var unused = function () {
+    console.log(obj, '闭包内引用obj obj不会被释放');
+  };
+  obj = null; // 解决方法
+}
+```
+
+5. 没有清理对 DOM 元素的引用同样造成内存泄露
+
+```js
+const refA = document.getElementById('refA');
+document.body.removeChild(refA); // dom删除了
+console.log(refA, 'refA'); // 但是还存在引用能console出整个div 没有被回收
+refA = null;
+console.log(refA, 'refA'); // 解除引用
+```
+
+6. 括使用事件监听 addEventListener 监听的时候，在不监听的情况下使用 removeEventListener 取消对事件监听
