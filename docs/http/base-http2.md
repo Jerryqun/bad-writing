@@ -10,7 +10,7 @@ mobile: false
 
 # http2.0 多路复用
 
-<a href="https://juejin.cn/post/6844903796225785870" target="_blank">原文</a>
+<a href="https://juejin.cn/post/6844903796225785870" target="_blank">参考</a>
 
 超文本传输协议 HTTP 的 2.0 版本的协议在 2015 年的时候已经发布了。相比于前面的 HTTP 1.1 版本。它多出了下面三个主要的新特性。
 

@@ -9,7 +9,7 @@ hero:
     - text: GitHub
       link: https://github.com/Jerryqun/bad-writing
     - text: PlayGround
-      link: http://112.74.190.11:9999/#/~demos/docs-playground
+      link: https://pmsaas.taobao.com/play-ground#/
 features:
   # - title: 更好的编译性能
   #   emoji: 🚀

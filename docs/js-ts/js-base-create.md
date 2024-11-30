@@ -12,8 +12,8 @@ Object.create()
 //创建一个新对象，使用现有的对象来提供新创建的对象的__proto__
 
 var a = {num:2};
-var b = Object.create(a);
-undefined
+var b = Object.create(a); // b => undefined
+
 b.__proto__ === a  // true
 
 

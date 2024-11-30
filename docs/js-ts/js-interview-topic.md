@@ -69,6 +69,17 @@ const throttle = (fn, timer) => {
 window.addEventListener('scroll', throttle(lazyload, 200));
 ```
 
+### getBoundingClientRect
+
+getBoundingClientRect 返回的 DOMRect 对象包含以下属性：
+
+left: 元素左边相对于视口左侧的距离。  
+top: 元素上边相对于视口顶部的距离。  
+right: 元素右边相对于视口左侧的距离。  
+bottom: 元素下边相对于视口顶部的距离。  
+width: 元素的宽度（right - left）。  
+height: 元素的高度（bottom - top）。
+
 ### IntersectionObserver
 
 基本用法
@@ -222,6 +233,12 @@ Number([]) 等于 0
 ## 点击一个 input 依次触发的事件
 
 onmouseenter -> onmousedown -> onfocus -> onclick
+
+mousedown/mouseup -- 鼠标任意键按下/松起。
+
+mouseenter/mouseleave -- 鼠标进入/离开元素，不会冒泡。
+
+mouseover/mouseout -- 鼠标进入/离开元素，会冒泡，进入/离开子元素时也会触发。
 
 ## 如何实现 if (a===1 && a===2 && a===3)
 
@@ -639,8 +656,25 @@ replace() trimRight trimLeft trim padStart padEnd toUpperCase toLowerCase
 
 4、查
 indexOf includes lastIndexOf find endsWith startWith
-5、转换
-split
+
+5、转换 split
+
+该方法有两个参数：
+
+separator：必需。字符串或正则表达式，从该参数指定的地方分割 string。
+limit：可选。该参数可指定返回的数组的最大长度。如果设置了该参数，返回的子串不会多于这个参数指定的数组。如果没有设置该参数，整个字符串都会被分割，不考虑它的长度。
+
+其实在将字符串分割成数组时，可以同时拆分多个分割符，使用正则表达式即可实现：
+
+```js
+let str = 'abcdef';
+str.split('c'); // 输出结果：["ab", "def"]
+str.split('', 4); // 输出结果：['a', 'b', 'c', 'd']
+
+const list = 'apples,bananas;cherries';
+const fruits = list.split(/[,;]/);
+console.log(fruits); // 输出结果：["apples", "bananas", "cherries"]
+```
 
 ## 如何确保你的构造函数只能被 new 调用，而不能被普通调用？
 

@@ -1008,11 +1008,13 @@ window.isNaN('1212'); // false
 
 ## slice 和 splice 区别
 
+slice：ArrayObject.slice(start,end) start-开始截取的下标 ，end-结束截取的下标(截取出来后不包含 end)，不修改原数组
+
+splice：通过删除或替换现有元素或者原地添加新的元素来修改数组，并以数组形式返回被修改的内容。此方法会改变原数组。
+
 ```js
 /**
- * ArrayObject.slice(start,end)   start-开始截取的下标  end-结束截取的下标(截取出来后不包含end)
- * 返回新数组 不改变原数据
- * ArrayObject.slice(Array)   删除Array中的值
+slice
  */
 var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
 var citrus = fruits.slice(1, 3);
@@ -1027,7 +1029,6 @@ console.log(citrus); //["Lemon"]
 
 /**
  * splice
- * 通过删除或替换现有元素或者原地添加新的元素来修改数组，并以数组形式返回被修改的内容。此方法会改变原数组。
  */
 
 const months = ["Jan", "March", "April", "June"];
@@ -1141,18 +1142,21 @@ function test() {
 
 ## replace
 
+str.replace(regexp|substr, newSubStr|function)
+
 <a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace#%E8%AF%AD%E6%B3%95">参考</a>
 
 ```js
-str.replace(regexp|substr, newSubStr|function)
+// 全局替换
+let str = 'Mr Blue has a blue house and a blue car';
+str.replace(/blue/gi, 'red'); // 输出结果：'Mr red has a red house and a red car'
 
 // function:  一个用来创建新子字符串的函数，该函数的返回值将替换掉第一个参数匹配到的结果
 //   function(target,index){
 //    return ...
 //   }
 
-
-"a124".replace("a", function (c) {
+'a124'.replace('a', function (c) {
   return 0;
 }); // '0124'
 
@@ -1163,8 +1167,8 @@ str.replace(regexp|substr, newSubStr|function)
  */
 function html2Escape(sHtml) {
   return sHtml.replace(/[<>&"]/g, function (c) {
-    console.log("c", c);
-    return { "<": "&lt;", ">": "&gt;", "&": "&amp;", '"': "&quot;" }[c];
+    console.log('c', c);
+    return { '<': '&lt;', '>': '&gt;', '&': '&amp;', '"': '&quot;' }[c];
   });
 }
 
@@ -1174,12 +1178,11 @@ function html2Escape(sHtml) {
  * @returns
  */
 function escape2Html(str) {
-  var arrEntities = { lt: "<", gt: ">", nbsp: " ", amp: "&", quot: '"' };
+  var arrEntities = { lt: '<', gt: '>', nbsp: ' ', amp: '&', quot: '"' };
   return str.replace(/&(lt|gt|nbsp|amp|quot);/gi, function (all, t) {
     return arrEntities[t];
   });
 }
-
 ```
 
 ## reduce
@@ -1426,4 +1429,20 @@ const b = { a };
 a.b = b;
 
 console.log(isCircular(a)); // 输出：true
+```
+
+## JavaScript 和 BOM、DOM 、ECMAScript、Nodejs 之间是什么关系
+
+JavaScript 是一种编程语言，实现了 ECMAScript 标准。BOM 和 DOM 是浏览器提供的 API，用于与浏览器交互并操作文档。Node.js 是一个独立的运行时环境，使 JavaScript 可以在服务器端运行，并提供了一组用于构建网络应用程序的 API。
+
+## fill
+
+如果这个入参的类型是引用类型，那么 fill 在填充坑位时填充的其实就是入参的引用  
+其实这 7 个数组对应了同一个引用、指向的是同一块内存空间，它们本质上是同一个数组。因此当你修改第 0 行第 0 个元素的值时，第 1-6 行的第 0 个元素的值也都会跟着发生改变。
+
+```js
+const arr = new Array(7).fill([]);
+
+arr[0][0] = 1;
+console.log('arr', arr.toString()); //1,1,1,1,1,1,1
 ```

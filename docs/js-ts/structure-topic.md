@@ -226,6 +226,33 @@ console.log(knapsack(values, weights, W)); // 应该输出最大价值
 
 这个过程会一直进行，直到我们计算出所有物品和背包容量的组合。在 dp 表的最后一个元素 dp[n][W]中存储的将是最大的价值，这也是函数返回的结果。
 
+## 不定长二维数组的全排列
+
+比如 [['A','B'], ['a','b'], [1, 2]]，输出 ['Aa1','Aa2','Ab1','Ab2','Ba1','Ba2','Bb1','Bb2']
+
+```js
+/**
+ * 动态规划，下一次的结果，依赖上一次的结果
+ * @param {array} arr
+ */
+function permutate(arr) {
+  // 第一次的结果就是二维数组的第0项
+  let res = arr[0].slice();
+
+  for (let i = 1; i < arr.length; i++) {
+    const pre = res.slice();
+    res = [];
+    pre.forEach((item) => {
+      arr[i].forEach((curr) => {
+        res.push(item + curr);
+      });
+    });
+  }
+  console.log(res);
+  return res;
+}
+```
+
 ## 写一个数组转树的 convert
 
 ```js
@@ -274,4 +301,173 @@ const convert = (arr, parentId = null) => {
 };
 
 console.log('arr', convert(arr));
+```
+
+## 两个字符串对比, 得出结论都做了什么操作, 比如插入或者删除
+
+功能说明
+初始化 DP 表:
+
+创建一个二维数组 dp，用来记录从 str1 中的前缀变换到 str2 中的前缀所需的操作数。
+边界初始化：dp[i][0] 表示从 str1 的前 i 个字符转化到空字符串（只需进行 i 次删除），dp[0][j] 表示从空字符串转化到 str2 的前 j 个字符（只需进行 j 次插入）。
+动态规划填充表:
+
+如果两个字符相同，则承袭上一个状态的值。
+如果不同，则选择三种操作中的最小值：删除、插入或替换。
+回溯查找操作:
+
+从 DP 表的右下角开始回溯，逐步判断做出了哪些操作，并记录在 operations 数组中。
+输出结果:
+
+返回编辑距离和操作步骤。我们最终将操作顺序反转，以便按照从开始到结束的顺序输出。
+
+```js
+function computeEditDistance(str1, str2) {
+  const m = str1.length;
+  const n = str2.length;
+
+  // 创建一个二维数组来记录编辑距离
+  const dp = Array(m + 1)
+    .fill(null)
+    .map(() => Array(n + 1).fill(0));
+
+  // 初始化边界条件
+  for (let i = 0; i <= m; i++) {
+    dp[i][0] = i; // 删除操作
+  }
+  for (let j = 0; j <= n; j++) {
+    dp[0][j] = j; // 插入操作
+  }
+
+  // 填充 DP 表
+  for (let i = 1; i <= m; i++) {
+    for (let j = 1; j <= n; j++) {
+      if (str1[i - 1] === str2[j - 1]) {
+        dp[i][j] = dp[i - 1][j - 1]; // 字符相同，不需要额外操作
+      } else {
+        dp[i][j] = Math.min(
+          dp[i - 1][j] + 1, // 删除
+          dp[i][j - 1] + 1, // 插入
+          dp[i - 1][j - 1] + 1, // 替换
+        );
+      }
+    }
+  }
+
+  // 回溯找到操作路径
+  let i = m,
+    j = n;
+  const operations = [];
+
+  while (i > 0 || j > 0) {
+    if (i === 0) {
+      operations.push(`插入 "${str2[j - 1]}"`);
+      j--;
+    } else if (j === 0) {
+      operations.push(`删除 "${str1[i - 1]}"`);
+      i--;
+    } else if (str1[i - 1] === str2[j - 1]) {
+      i--;
+      j--;
+    } else {
+      const minOp = Math.min(dp[i - 1][j], dp[i][j - 1], dp[i - 1][j - 1]);
+      if (minOp === dp[i - 1][j]) {
+        operations.push(`删除 "${str1[i - 1]}"`);
+        i--;
+      } else if (minOp === dp[i][j - 1]) {
+        operations.push(`插入 "${str2[j - 1]}"`);
+        j--;
+      } else {
+        operations.push(`替换 "${str1[i - 1]}" 为 "${str2[j - 1]}"`);
+        i--;
+        j--;
+      }
+    }
+  }
+
+  // 编辑距离
+  const editDistance = dp[m][n];
+
+  return {
+    editDistance,
+    operations: operations.reverse(), // 反转操作顺序
+  };
+}
+
+// 示例
+const str1 = 'kitten';
+const str2 = 'sitting';
+const result = computeEditDistance(str1, str2);
+
+console.log('编辑距离:', result.editDistance);
+console.log('操作:', result.operations);
+```
+
+给定两个单词 word1 和 word2 ，返回使得 word1 和 word2 相同所需的最小步数。  
+每步 可以删除任意一个字符串中的一个字符。  
+示例 1：
+
+输入: word1 = "sea", word2 = "eat" 输出: 2 解释: 第一步将 "sea" 变为 "ea" ，第二步将 "eat "变为 "ea"
+
+示例 2:
+
+输入： word1 = "leetcode", word2 = "etco" 输出： 4
+
+提示：
+
+1 <= word1.length, word2.length <= 500
+word1 和 word2 只包含小写英文字母
+
+```js
+/**
+ * @param {string} word1
+ * @param {string} word2
+ * @return {number}
+ */
+var minDistance = function (word1, word2) {
+  let len1 = word1.length,
+    len2 = word2.length;
+
+  let dp = Array(len1 + 1)
+    .fill()
+    .map(() => Array(len2 + 1).fill(Infinity));
+
+  for (let i = 0; i <= len1; i++) {
+    dp[i][0] = i;
+  }
+
+  for (let j = 0; j <= len2; j++) {
+    dp[0][j] = j;
+  }
+
+  for (let i = 1; i <= len1; i++) {
+    for (let j = 1; j <= len2; j++) {
+      if (word1[i - 1] === word2[j - 1]) {
+        dp[i][j] = dp[i - 1][j - 1];
+      } else {
+        dp[i][j] = Math.min(
+          dp[i - 1][j] + 1,
+          dp[i][j - 1] + 1,
+          dp[i - 1][j - 1] + 2,
+        );
+      }
+    }
+  }
+
+  return dp[len1][len2];
+};
+```
+
+## 写一个递归 找出数组的维度
+
+```js
+function getArrayDepth(arr) {
+  if (!Array.isArray(arr)) return 0;
+  let depth = 1;
+  arr.forEach((item) => {
+    let currentDept = getArrayDepth(item);
+    depth = Math.max(depth, currentDept + 1);
+  });
+  return depth;
+}
 ```

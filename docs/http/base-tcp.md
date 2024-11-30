@@ -10,7 +10,7 @@ mobile: false
 
 # tcp 三次握手四次挥手
 
-<a href="https://github.com/jawil/blog/issues/14" target="_blank">原文</a>
+<a href="https://github.com/jawil/blog/issues/14" target="_blank">参考</a>
 
 ## 三次握手
 

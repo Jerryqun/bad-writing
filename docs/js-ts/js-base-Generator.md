@@ -38,6 +38,41 @@ for (let i of c) {
 // 不过这里要注意一个不同点，调用 next 的时候能得到 4 ，但是用 for 则会忽略最后的 return 语句。 也就是 for 循环会忽略 generator 中的 return 语句.
 ```
 
+Generator 可嵌套
+
+```js
+function* gen1() {
+  yield 1;
+  yield* gen2();
+  yield 4;
+}
+function* gen2() {
+  yield 2;
+  yield 3;
+}
+var g = gen1();
+console.log(g.next());
+console.log(g.next());
+console.log(g.next());
+console.log(g.next());
+// 结果
+// { value: 1, done: false }
+// { value: 2, done: false }
+// { value: 3, done: false }
+// { value: 4, done: false }
+// {value: undefined, done: true}
+```
+
+## generator 生成器原理
+
+其实，在生成器内部，如果遇到 yield 关键字，那么 V8 引擎将返回关键字后面的内容给外部，并暂停该生成器函数的执行。生成器暂停执行后，外部的代码便开始执行，外部代码如果想要恢复生成器的执行，可以使用 result.next 方法。
+
+那 V8 是怎么实现生成器函数的暂停执行和恢复执行的呢？
+
+它用到的就是协程，协程是—种比线程更加轻量级的存在。我们可以把协程看成是跑在线程上的任务，一个线程上可以存在多个协程，但是在线程上同时只能执行一个协程。比如，当前执行的是 A 协程，要启动 B 协程，那么 A 协程就需要将主线程的控制权交给 B 协程，这就体现在 A 协程暂停执行，B 协程恢复执行; 同样，也可以从 B 协程中启动 A 协程。通常，如果从 A 协程启动 B 协程，我们就把 A 协程称为 B 协程的父协程。
+
+正如一个进程可以拥有多个线程一样，一个线程也可以拥有多个协程。每一时刻，该线程只能执行其中某一个协程。最重要的是，协程不是被操作系统内核所管理，而完全是由程序所控制（也就是在用户态执行）。这样带来的好处就是性能得到了很大的提升，不会像线程切换那样消耗资源。
+
 ## Async、Await
 
 async、await 是 co 库的官方实现。也可以看作自带启动器的 generator 函数的语法糖。不同的是，async、await 只支持 Promise 和原始类型的值，不支持 thunk 函数。

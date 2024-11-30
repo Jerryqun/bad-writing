@@ -10,7 +10,7 @@ mobile: false
 
 # http1.0-keep-alive
 
-<a href="https://lotabout.me/2019/Things-about-keepalive/" target="_blank">原文</a>
+<a href="https://lotabout.me/2019/Things-about-keepalive/" target="_blank">参考</a>
 
 HTTP keep-alive 也称为 HTTP 长连接。它通过重用一个 TCP 连接来发送/接收多个 HTTP 请求，来减少创建/关闭多个 TCP 连接的开销
 

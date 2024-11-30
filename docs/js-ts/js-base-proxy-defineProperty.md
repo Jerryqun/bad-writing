@@ -6,7 +6,7 @@ mobile: false
 title: Proxy 和Object.defineProperty()
 ---
 
-<a href="https://juejin.cn/post/7069397770766909476" target="_blank">原文链接</a>
+<a href="https://juejin.cn/post/7069397770766909476" target="_blank">参考链接</a>
 
 ## Proxy
 

@@ -10,7 +10,7 @@ title: js循环汇总
 js 效率执行检测网站 https://jsperf.com/
 
 从执行效率看(快到慢)  
-forEach => for => for in
+for-len > for > for-of > forEach > map > for-in
 
 ## forEach
 

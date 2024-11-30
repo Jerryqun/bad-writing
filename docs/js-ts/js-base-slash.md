@@ -3,8 +3,41 @@ nav: Js
 toc: content
 group: 基础概念
 mobile: false
-title: 反斜杠
+title: js正则
 ---
+
+## 常用正则
+
+要提取字符串 a{a.b}aa{a.c}aa {a.d}aaaa 中大括号 {} 内的内容
+
+```js
+const dd = 'a{a.b}aa{a.c}aa {a.d}aaaa';
+const reg = /\{.*?\}/gi;
+const match = dd.match(reg);
+console.log('mat1ch', match);
+
+// \{ 和 \}：这是转义字符，用于匹配字面上的大括号 { 和 }。
+// (.*?)：这是一个捕获组，.*? 匹配任意字符（除了换行符）0次或多次，? 表示非贪婪匹配，即尽可能少地匹配字符。
+// g：这个修饰符表示全局匹配，允许循环查找所有的匹配。
+```
+
+/^[a-zA-Z]+$/ 匹配只包含大小写字母的字符串
+
+`+` 表示“一个或多个”
+`*` 表示“零个或多个”
+两者区别
+
+```js
+const regexStar = /a*/; // 使用 *，可以匹配零个或多个 'a'
+console.log(regexStar.test('')); // true（匹配空字符串）
+console.log(regexStar.test('a')); // true（匹配一个 'a'）
+console.log(regexStar.test('aa')); // true（匹配两个 'a'）
+
+const regexPlus = /a+/; // 使用 +，可以匹配一个或多个 'a'
+console.log(regexPlus.test('')); // false（不匹配空字符串）
+console.log(regexPlus.test('a')); // true（匹配一个 'a'）
+console.log(regexPlus.test('aa')); // true（匹配两个 'a'）
+```
 
 ## js 中的反斜杠
 

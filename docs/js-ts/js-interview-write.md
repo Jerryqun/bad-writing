@@ -393,7 +393,7 @@ const myIsEqual = (obj1, obj2) => {
 
 ## 手写 new
 
-<a target="_blank" href="https://juejin.cn/post/6968856664560648199">参考</a>
+<a target="_blank" href="https://juejin.cn/post/6968856664560648199">参考</a>  
 1、创建一个空对象  
 2、使空对象的隐式原型指向其构造函数的显示原型  
 3、使用 call 改变 this 指向  

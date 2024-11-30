@@ -7,7 +7,7 @@ title: ES5继承
 
 ## ES5 继承
 
-<a target="_blank" href="https://juejin.cn/post/6844903889553063949">原文</a>
+<a target="_blank" href="https://juejin.cn/post/6844903889553063949">参考</a>
 
 ### 原型链继承
 
@@ -126,7 +126,7 @@ function createEnhanceObj(obj) {
 
 ### 寄生组合式继承
 
-es6 里面 extends 源码使用的就是这种方式
+`es6 里面 extends 源码使用的就是这种方式`
 
 ```js
 function inheritPrototype(Parent, Child) {
@@ -231,9 +231,11 @@ ColorPoint.__proto__ === Point; // true
 Object.getPrototypeOf(B) === Point;
 ```
 
-## es5 中的类和 es6 中的 class 有什么区别
+## es5 中的的构造函数和 es6 中的 class 有什么区别
 
 ES5 和 ES6 中的类有几个关键的区别。下面是它们之间的一些主要差异：
+
+class 语法实际上是构造函数的语法糖
 
 ### 1. 语法
 
