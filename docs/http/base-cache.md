@@ -82,10 +82,14 @@ https://juejin.cn/post/6898630134530752520
 - cookie 在不同端口号可以共享<br/>
 - 设置 httpOnly 使得 js 不能访问 cookie <br/>
 - 设置 Secure 使得只有 https 的请求才会带上 cookie<br/>
-- SameSite 属性<br/>
-  SameSite 是 HTTP 响应头 Set-Cookie 的属性之一。<br/>
+- SameSite 是 HTTP 响应头 Set-Cookie 的属性之一。<br/>
   它允许声明该 Cookie 是否仅限于第一方或者同一站点上下文。<br/>
   SameSite 可以有下面三种值：<br/>
+  Lax：这是默认值。如果设置为 Lax，Cookie 在同站请求（例如，用户从同一网站上的一个页跳转到另一个页时）中会被发送。但在跨站请求（例如，用户点击从其他网站的链接）中，Cookie 将不会被发送，除了某些安全场景（如 GET 请求）。
+
+  Strict：如果设置为 Strict，Cookie 只会在同一站点的请求中被发送。在任何跨站请求中（不论是链接、表单提交或 AJAX 请求），Cookie 都不会被发送。这提供了更高的安全性，但会影响用户体验，因为用户从外部链接进入时无法保持登录状态。
+
+  None：如果设置为 None，Cookie 会在所有上下文中被发送，无论是同站请求还是跨站请求。但是，使用 None 时，必须同时将 Secure 属性设置为 true，这意味着该 Cookie 只能通过 HTTPS 连接传输。
 
 - Expires 属性指定一个具体的到期时间，到了指定时间以后，浏览器就不再保留这个 Cookie。它的值是 UTC 格式。如果不设置该属性，或者设为 null，Cookie 只在当前会话（session）有效，浏览器窗口一旦关闭，当前 Session 结束，该 Cookie 就会被删除。另外，浏览器根据本地时间，决定 Cookie 是否过期，由于本地时间是不精确的，所以没有办法保证 Cookie 一定会在服务器指定的时间过期。
 
