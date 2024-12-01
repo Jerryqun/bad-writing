@@ -8,6 +8,27 @@ title: Webpack5Prox配置详解
 
 # Webpack5Prox 配置详解
 
+## 原理：
+
+proxy 工作原理实质上是利用 http-proxy-middleware 这个 http 代理中间件，实现请求转发给其他服务器
+
+```js
+const express = require('express');
+const proxy = require('http-proxy-middleware');
+
+const app = express();
+
+app.use(
+  '/api',
+  proxy({ target: 'http://www.example.org', changeOrigin: true }),
+);
+app.listen(3000);
+
+// http://localhost:3000/api/foo/bar -> http://www.example.org/api/foo/bar
+```
+
+## proxy 配置详解
+
 ```json
 {
   "proxy": {

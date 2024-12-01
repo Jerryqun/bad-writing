@@ -98,11 +98,11 @@ function jsonp({ url, params, cb }) {
 
 默认情况下是跨域是不会携带 cookie 的，例如：a.com 网站请求 b.com 的接口，这个时候不会把 a.com 这个域名下的 cookie 携带上。如果需要携带，则需要做一下配置
 
-前端配置
-XMLHttpRequest 发请求需要设置 withCredentials=true
+前端配置  
+XMLHttpRequest 发请求需要设置 withCredentials=true  
 fetch 发请求需要设置 credentials = include
 
-服务端配置
+服务端配置  
 Access-Control-Allow-Credentials: true
 
 Access-Control-Allow-Origin: [特定域名] // 不可以是\*

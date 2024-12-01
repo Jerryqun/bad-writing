@@ -180,8 +180,10 @@ function createSandbox(callback) {
 
   // 确保iframe完全加载后再执行代码
   iframe.onload = function () {
+    // 通过 contentWindow 访问 iframe 的 Window 对象
     const iframeWindow = iframe.contentWindow;
     console.log("iframeWindow: ", iframeWindow);
+       context.getImageData(0, 0, img.width, img.height);
 
     // 在沙箱环境中定义一些安全的全局变量或函数，如果需要的话
     // iframeWindow.safeGlobalVar = {

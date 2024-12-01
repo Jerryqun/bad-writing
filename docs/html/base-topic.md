@@ -208,3 +208,36 @@ label
 5. 图片保存  
    img 元素默认可以鼠标右键保存图片。但 background-image 不行。
    img 标签渲染的图片，可以用鼠标轻松拖动到桌面实现下载
+
+## 怎么解决 canvas 中获取跨域图片数据的问题？
+
+在一张图片添加相关文字，然后转化为 base64 数据，上传至服务器。当代码上线写完部署到测试环境，控制台报出如下错误：  
+`Uncaught (in promise) DOMException: Failed to execute 'toDataURL' on 'HTMLCanvasElement': Tainted canvases may not be exported`
+这是因为页面在请求图片时产生跨域情况，canvas 认为该图片数据为污染的数据，是不安全的数据，无法导出 base64 数据。  
+当请求跨域图片数据，而未满足跨域请求资源的条件时。如果 canvas 使用未经跨域允许的图片的原始数据，这些是不可信的数据，可能会暴露页面的数据。
+
+```js
+// page origin is https://a.com
+
+const canvas = document.createElement('canvas');
+const context = canvas.getContext('2d');
+
+const img = new Image();
+img.crossOrigin = 'anonymous';
+img.onload = function () {
+  context.drawImage(this, 0, 0);
+  context.getImageData(0, 0, img.width, img.height);
+};
+img.src = 'https://b.com/a.png';
+```
+
+另外，跨域图片能正常裁剪（图片未转化成 base64），应该满足三个条件：
+
+img 元素中设置 crossorigin 属性
+图片允许跨域，设置响应头 Access-Control-Allow-Origin
+使用 js 方式请求图片资源, 需要避免使用缓存，设置 url 后加上时间戳，或者 http 头设置 Cache-Control 为 no-cache
+主要原因是：
+
+如果使用跨域的资源画到 canvas 中，并且资源没有使用 CORS 去请求，canvas 会被认为是被污染了, canvas 可以正常展示，但是没办法使用 toDataURL()或者 toBlob()导出数据，见 Allowing cross-origin use of images and canvas。 所以通过在 img 标签上设置 crossorigin，启用 CORS，属性值为 anonymous，在 CORS 请求时不会发送认证信息,见 HTML attribute: crossorigin。
+在启用 CORS 请求跨域资源时，资源必须允许跨域，才能正常返回，最简单的方式设置响应头 Access-Control-Allow-Origin
+图片已经通过 img 标签加载过，浏览器默认会缓存下来，下次使用 js 方式再去请求，直接返回缓存的图片，如果缓存中的图片不是通过 CORS 请求或者响应头中不存在 Access-Control-Allow-Origin，都会导致报错。
