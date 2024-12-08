@@ -8,6 +8,8 @@ title: nth-child
 
 # nth-child
 
+p:nth-child(2) 选择属于其（p 的父元素）父元素的第二个子元素
+
 nth-child(an+b) n 从 0 开始 b 从 1 开始<br />
 nth-of-type(n) n 从 1 开始 正序<br />
 nth-last-of-type(n) n 从 1 开始 倒序<br />

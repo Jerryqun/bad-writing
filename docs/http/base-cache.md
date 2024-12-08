@@ -75,13 +75,14 @@ https://juejin.cn/post/6898630134530752520
 
 - Cookie 的作用域仅仅由 domain 和 path 决定，与协议和端口无关<br/>
 
-  Domain 属性指定浏览器发出 HTTP 请求时，哪些域名要附带这个 Cookie。如果没有指定该属性，浏览器会默认将其设为当前 URL 的一级域名，比如 http://www.example.com 会设为 http://example.com，而且以后如果访问http://example.com的任何子域名，HTTP 请求也会带上这个 Cookie。如果服务器在 Set-Cookie 字段指定的域名，不属于当前域名，浏览器会拒绝这个 Cookie。
+  Domain 属性指定浏览器发出 HTTP 请求时，哪些域名要附带这个 Cookie。如果没有指定该属性，浏览器会默认将其设为当前 URL 的一级域名，比如 `http://www.example.com` 会设为 `http://example.com`，而且以后如果访问`http://example.com`的任何子域名，HTTP 请求也会带上这个 Cookie。如果服务器在 Set-Cookie 字段指定的域名，不属于当前域名，浏览器会拒绝这个 Cookie。
 
   Path 属性指定浏览器发出 HTTP 请求时，哪些路径要附带这个 Cookie。只要浏览器发现，Path 属性是 HTTP 请求路径的开头一部分，就会在头信息里面带上这个 Cookie。比如，PATH 属性是/，那么请求/docs 路径也会包含该 Cookie。当然，前提是域名必须一致。
 
 - cookie 在不同端口号可以共享<br/>
 - 设置 httpOnly 使得 js 不能访问 cookie <br/>
 - 设置 Secure 使得只有 https 的请求才会带上 cookie<br/>
+  secure 选项只是限定了在安全情况下才可以传输给服务端，但并不代表你不能看到这个 cookie
 - SameSite 是 HTTP 响应头 Set-Cookie 的属性之一。<br/>
   它允许声明该 Cookie 是否仅限于第一方或者同一站点上下文。<br/>
   SameSite 可以有下面三种值：<br/>
@@ -91,13 +92,15 @@ https://juejin.cn/post/6898630134530752520
 
   None：如果设置为 None，Cookie 会在所有上下文中被发送，无论是同站请求还是跨站请求。但是，使用 None 时，必须同时将 Secure 属性设置为 true，这意味着该 Cookie 只能通过 HTTPS 连接传输。
 
-- Expires 属性指定一个具体的到期时间，到了指定时间以后，浏览器就不再保留这个 Cookie。它的值是 UTC 格式。如果不设置该属性，或者设为 null，Cookie 只在当前会话（session）有效，浏览器窗口一旦关闭，当前 Session 结束，该 Cookie 就会被删除。另外，浏览器根据本地时间，决定 Cookie 是否过期，由于本地时间是不精确的，所以没有办法保证 Cookie 一定会在服务器指定的时间过期。
+- Expires 属性指定一个具体的到期时间，到了指定时间以后，浏览器就不再保留这个 Cookie。它的值是 UTC 格式（示例：Wed, 01 Jan 2025 00:00:00 GMT）。如果不设置该属性，或者设为 null，Cookie 只在当前会话（session）有效，浏览器窗口一旦关闭，当前 Session 结束，该 Cookie 就会被删除。另外，浏览器根据本地时间，决定 Cookie 是否过期，由于本地时间是不精确的，所以没有办法保证 Cookie 一定会在服务器指定的时间过期。
 
-- Max-Age 属性指定从现在开始 Cookie 存在的秒数，比如 60 _ 60 _ 24 \* 365（即一年）。过了这个时间以后，浏览器就不再保留这个 Cookie。如果同时指定了 Expires 和 Max-Age，那么 Max-Age 的值将优先生效。如果 Set-Cookie 字段没有指定 Expires 或 Max-Age 属性，那么这个 Cookie 就是 Session Cookie，即它只在本次对话存在，一旦用户关闭浏览器，浏览器就不会再保留这个 Cookie。
+- Max-Age 属性指定从现在开始 Cookie 存在的秒数，比如 `60 *60 *24 * 365`（即一年）。过了这个时间以后，浏览器就不再保留这个 Cookie。如果同时指定了 Expires 和 Max-Age，那么 Max-Age 的值将优先生效。如果 Set-Cookie 字段没有指定 Expires 或 Max-Age 属性，那么这个 Cookie 就是 Session Cookie，即它只在本次对话存在，一旦用户关闭浏览器，浏览器就不会再保留这个 Cookie。
 
-Strict 仅允许一方请求携带 Cookie，即浏览器将只发送相同站点请求的 Cookie，即当前网页 URL 与请求目标 URL 完全一致。
-Lax 允许部分第三方请求携带 Cookie。
-None 无论是否跨站都会发送 Cookie。
+cookie 的有效时间设置为 0 会怎么样?  
+Cookie 过期时间设置为 0，表示跟随系统默认，其销毁与 Session 销毁时间相同，会在浏览器关闭后删除
+
+会话 cookie 一般不存储在硬盘上而是保存在内存里  
+如果设置了过期时间，浏览器就会把 cookie 保存到硬盘上
 
 ### 前端对 cookie 的读写
 
@@ -141,7 +144,7 @@ console.log(document.cookie);
 
 `sessionStorage` 可以通过简单的键值对 API 进行操作，包括 `setItem`、`getItem`、`removeItem` 和 `clear` 方法。
 
-```javascript
+```js
 // 存储数据
 sessionStorage.setItem('key', 'value');
 
@@ -214,3 +217,45 @@ ajax 请求的接口 set-Cookies 的时候如果是跨站
 
 - 强制刷新：ctrl+f5/command+shift+f5  
   强制缓存失效、协商缓存失效
+
+## 如何实现可过期的 localStorage 数据
+
+示例代码
+
+```js
+function setItemWithExpiry(key, value, ttl) {
+  const now = new Date();
+  const item = {
+    value: value,
+    expiry: now.getTime() + ttl, // ttl 是过期时间（以毫秒为单位）
+  };
+  localStorage.setItem(key, JSON.stringify(item));
+}
+
+function getItemWithExpiry(key) {
+  const itemStr = localStorage.getItem(key);
+
+  // 如果不存在数据，则直接返回 null
+  if (!itemStr) {
+    return null;
+  }
+
+  const item = JSON.parse(itemStr);
+  const now = new Date();
+
+  // 检查是否过期
+  if (now.getTime() > item.expiry) {
+    // 数据过期，删除数据
+    localStorage.removeItem(key);
+    return null;
+  }
+
+  return item.value;
+}
+
+// 存储数据，过期时间为 5 分钟（300000 毫秒）
+setItemWithExpiry('myKey', 'myValue', 300000);
+
+const value = getItemWithExpiry('myKey');
+console.log(value); // 如果未过期则输出 'myValue'，否则输出 null
+```

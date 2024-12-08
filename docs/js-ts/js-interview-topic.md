@@ -754,3 +754,7 @@ const myType = (params) => {
   return params instanceof Element ? 'Element' : type;
 };
 ```
+
+## 序列化 和反序列化
+
+在 JavaScript 中，序列化是将一个 JavaScript 对象或值转换为字符串的过程。序列化的主要用途是在网络传输中发送数据，或者将数据保存到本地存储、文件等地方。通常使用 JSON.stringify() 方法来完成序列化，反过来的过程叫做反序列化，即将 JSON 字符串转换回 JavaScript 对象，这通常使用 JSON.parse() 方法实现

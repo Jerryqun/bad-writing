@@ -5,6 +5,26 @@ toc: content
 title: WebWorker实践案例
 ---
 
+## WebWorker
+
+Web Worker 是 HTML5 标准的一部分，这一规范定义了一套 API，允许我们在 js 主线程之外开辟新的 Worker 线程，并将一段 js 脚本运行其中，它赋予了开发者利用 js 操作多线程的能力。
+
+## 监听错误信息
+
+web worker 提供两个事件监听错误，error 和 messageerror。这两个事件的区别是:  
+error： 当 worker 内部出现错误时触发  
+messageerror： 当 message 事件接收到无法被反序列化的参数时触发
+
+## 关闭 worker 线程
+
+worker 线程的关闭在主线程和 worker 线程都能进行操作，但对 worker 线程的影响略有不同。
+
+无论是在主线程关闭 worker，还是在 worker 线程内部关闭 worker，worker 线程当前的 Event Loop 中的任务会继续执行。至于 worker 线程下一个 Event Loop 中的任务，则会被直接忽略，不会继续执行。
+
+区别是，在主线程手动关闭 worker，主线程与 worker 线程之间的连接都会被立刻停止，即使 worker 线程当前的 Event Loop 中仍有待执行的任务继续调用 postMessage() 方法，但主线程不会再接收到消息。
+
+在 worker 线程内部关闭 worker，不会直接断开与主线程的连接，而是等 worker 线程当前的 Event Loop 所有任务执行完，再关闭。也就是说，在当前 Event Loop 中继续调用 postMessage() 方法，主线程还是能通过监听 message 事件收到消息的。
+
 ## WebWorker 实践案例
 
 Web Worker 并不意味着 JavaScript 语言本身就支持了多线程，对于 JavaScript 语言本身它仍是运行在单线程上的， Web Worker 只是浏览器（宿主环境）提供的一个能力／API。
@@ -33,13 +53,14 @@ Web Worker 并不意味着 JavaScript 语言本身就支持了多线程，对于
 function createWorker(f) {
   var blob = new Blob(['(' + f.toString() + ')()']);
   var url = window.URL.createObjectURL(blob);
-  var worker = new Worker(url);
+  var worker = new Worker(url, { type: 'module' }); // // 指定 worker.js 的类型
+
   return worker;
 }
 
 const worker = createWorker(function () {
   // 加载pako
-  importScripts('https://g.alicdn.com/code/lib/pako/1.0.11/pako.min.js');
+  importScripts('https://g.alicdn.com/code/lib/pako/1.0.11/pako.min.js'); // 通过此方法加载的js文件不受同源策略约束
   onmessage = function (e) {
     const { text } = e.data;
     function gzip(str) {
@@ -60,3 +81,108 @@ worker.onmessage = (e) => {
 
 worker.postMessage({ text });
 ```
+
+## SharedWorker
+
+SharedWorker 实现多页面数据共享
+
+index 页面的 add 按钮，每点击一次，向 sharedWorker 发送一次 add 数据，页面 count 增加 1
+
+```js
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <title>index page</title>
+    </head>
+    <body>
+        <p>index page: </p>
+        count: <span id="container">0</span>
+        <button id="add">add</button>
+        <br>
+        <iframe src="./iframe.html"></iframe>
+    </body>
+    <script type="text/javascript">
+        if (!!window.SharedWorker) {
+            const container = document.getElementById('container');
+            const add = document.getElementById('add');
+
+            const myWorker = new SharedWorker('./sharedWorker.js');
+
+            myWorker.port.start();
+
+            myWorker.port.addEventListener('message', msg => {
+                container.innerText = msg.data;
+            });
+
+            add.addEventListener('click', () => {
+                myWorker.port.postMessage('add');
+            });
+        }
+    </script>
+</html>
+```
+
+iframe 页面的 reduce 按钮，每点击一次，向 sharedWorker 发送一次 reduce 数据，页面 count 减少 1
+
+```js
+// iframe.html
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <title>iframe page</title>
+    </head>
+    <body>
+        <p>iframe page: </p>
+        count: <span id="container">0</span>
+        <button id="reduce">reduce</button>
+    </body>
+    <script type="text/javascript">
+        if (!!window.SharedWorker) {
+            const container = document.getElementById('container');
+            const reduce = document.getElementById('reduce');
+
+            const myWorker = new SharedWorker('./sharedWorker.js');
+
+            myWorker.port.start();
+
+            myWorker.port.addEventListener('message', msg => {
+                container.innerText = msg.data;
+            })
+
+            reduce.addEventListener('click', () => {
+                myWorker.port.postMessage('reduce');
+            });
+        }
+    </script>
+</html>
+```
+
+sharedWorker 在接收到数据后，根据数据类型处理 num 计数，然后返回给每个已连接的主线程。
+
+```js
+// sharedWorker.js
+
+let num = 0;
+const workerList = [];
+
+self.addEventListener('connect', (e) => {
+  const port = e.ports[0];
+  port.addEventListener('message', (e) => {
+    num += e.data === 'add' ? 1 : -1;
+    workerList.forEach((port) => {
+      // 遍历所有已连接的part，发送消息
+      port.postMessage(num);
+    });
+  });
+  port.start();
+  workerList.push(port); // 存储已连接的part
+  port.postMessage(num); // 初始化
+});
+```
+
+## sharedWorker 调试
+
+在 sharedWorker 线程里使用 console 打印信息，不会出现在主线程的的控制台中。如果你想调试 sharedWorker，需要在 Chrome 浏览器输入 chrome://inspect/ ，这里能看到所有正在运行的 sharedWorker，然后开启一个独立的 dev-tool 面板。

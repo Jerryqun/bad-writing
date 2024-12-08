@@ -11,7 +11,7 @@ Service Worker 是一种在 Web 应用程序、浏览器和网络之间作为代
 
 其中最具创新性的特点在于，Service Worker 可以拦截和处理网络请求，包括资源的缓存或替代。这意味着开发者可以控制应用在离线状态下的表现，例如，即使在无网络的环境中，用户仍可以访问之前缓存的内容。通过这种方式，Service Worker 解决了传统 Web 技术无法直接访问或控制网络请求与缓存的问题，极大地提高了 Web 应用的性能和用户体验。
 
-### 一、SERVICE WORKER 的工作原理
+### 一、Service Worker 的工作原理
 
 Service Worker 的工作机制基于事件驱动。它在注册后会安装到浏览器中，并开始接管控制页面的能力。在第一次访问网站时，Service Worker 会被激活并执行安装事件，在这个过程中，通常会进行资源的缓存。之后，它进入激活状态，准备拦截页面的网络请求。
 
@@ -19,7 +19,7 @@ Service Worker 的工作机制基于事件驱动。它在注册后会安装到�
 
 其次，在安装过程中，Service Worker 通常会执行预缓存的操作，开发者可以通过编写 Service Worker 脚本，精确地指定哪些资源需要被缓存。这些资源可能包括静态文件（如 HTML、CSS、JavaScript 文件）、图片等。一旦缓存完成，即便设备处于离线状态，这些资源也可以被即时访问。
 
-### 二、SERVICE WORKER 的应用场景
+### 二、Service Worker 的应用场景
 
 Service Worker 的出现极大地扩展了 Web 应用的能力，使其能够在多种场景下提供更好的用户体验。
 
@@ -27,7 +27,7 @@ Service Worker 的出现极大地扩展了 Web 应用的能力，使其能够在
 
 再如，消息推送。Service Worker 能够在后台运行，即使 Web 应用没有打开，也能接收到来自服务器的消息，并显示推送通知。这对于提高用户参与度和保持应用活跃度非常有帮助。
 
-### 三、SERVICE WORKER 的生命周期
+### 三、Service Worker 的生命周期
 
 理解 Service Worker 的生命周期对于高效利用其功能至关重要。生命周期主要包括注册、安装、激活和更新几个阶段。
 
@@ -122,7 +122,7 @@ self.addEventListener('fetch', (event) => {
 });
 ```
 
-### 四、SERVICE WORKER 的限制和挑战
+### 四、Service Worker 的限制和挑战
 
 尽管 Service Worker 带来了诸多好处，但它也有自己的限制和挑战。首先，它只能被 HTTPS 协议的站点使用，这一安全要求确保了中间人攻击无法劫持 Service Worker。其次，兼容性问题也是一个挑战，一些老旧的浏览器可能不支持 Service Worker，限制了其普遍应用。
 
