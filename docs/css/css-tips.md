@@ -6,7 +6,7 @@ group:
 title: 随笔
 ---
 
-# 两行换行出现点点点
+## 两行换行出现点点点
 
 ```css
 overflow: hidden;
