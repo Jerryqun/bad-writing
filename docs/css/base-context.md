@@ -65,6 +65,8 @@ will-change 指定的属性值为上面任意一个；
 元素的-webkit-overflow-scrolling 属性值设置为 touch;  
 CSS 绝对定位（absolute）、相对定位（relative）
 
-# z-index 生效条件
+# z-index 属性在什么情况下会失效？
 
-position: relative/absolute/fixed
+- 父元素 position 为 relative 时，子元素的 z-index 失效。解决：父元素 position 改为 absolute 或 static；
+- 元素没有设置 position 属性为非 static 属性。解决：设置该元素的 position 属性为 relative，absolute 或是 fixed 中的一种；
+- 元素在设置 z-index 的同时还设置了 float 浮动。解决：float 去除，改为 display：inline-block；
