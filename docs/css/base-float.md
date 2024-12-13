@@ -40,3 +40,5 @@ title: 浮动
 .clearfix{ zoom: 1; /_IE6_/ } .clearfix:after{ content: "."; height: 0; clear:
 both; display: block; visibility: hidden; }
 ```
+
+浮动元素可以使用 margin，但是不能使用 margin: 0 auto;

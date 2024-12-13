@@ -182,6 +182,20 @@ label
 2、canvas 图像单位是像素  
 3、不支持事件处理器，只能给最外层添加事件
 
+### canvas 性能为何会比 html/css 好？
+
+1. canvas> 允许直接进行像素级别的绘图操作。它通过 JavaScript 提供了一个可以直接操作像素的 API，这使得绘制复杂图形和动画的性能更高，因为可以避开 DOM 和 CSS 渲染的开销。
+2. 无 DOM 更新开销
+3. GPU 加速
+
+## canvas 在标签上设置宽高，与在 style 中设置宽高有什么区别
+
+canvas 标签的 width 和 height 是画布实际宽度和高度，绘制的图形都是在这个上面。
+
+而 style 的 width 和 height 是 canvas 在浏览器中被渲染的高度和宽度。
+
+如果 canvas 的 width 和 height 没指定或值不正确，就被设置成默认值。
+
 ## title 与 h1 的区别、b 与 strong 的区别、i 与 em 的区别
 
 1、strong 标签有语义，是起到加重语气的效果，而 b 标签是没有的，b 标签只是一个简单加粗标签。b 标签之间的字符都设为粗体，strong 标签加强字符的语气都是通过粗体来实现的，而搜索引擎更侧重 strong 标签。
@@ -241,3 +255,9 @@ img 元素中设置 crossorigin 属性
 如果使用跨域的资源画到 canvas 中，并且资源没有使用 CORS 去请求，canvas 会被认为是被污染了, canvas 可以正常展示，但是没办法使用 toDataURL()或者 toBlob()导出数据，见 Allowing cross-origin use of images and canvas。 所以通过在 img 标签上设置 crossorigin，启用 CORS，属性值为 anonymous，在 CORS 请求时不会发送认证信息,见 HTML attribute: crossorigin。
 在启用 CORS 请求跨域资源时，资源必须允许跨域，才能正常返回，最简单的方式设置响应头 Access-Control-Allow-Origin
 图片已经通过 img 标签加载过，浏览器默认会缓存下来，下次使用 js 方式再去请求，直接返回缓存的图片，如果缓存中的图片不是通过 CORS 请求或者响应头中不存在 Access-Control-Allow-Origin，都会导致报错。
+
+## crossorigin 属性的取值和作用
+
+anonymous 请求不会包含凭证（如 Cookies 和 HTTP 认证信息）。这是默认的 CORS 策略，适用于大多数情况，特别是公共资源。
+
+use-credentials 请求会包含凭证（如 Cookies 和 HTTP 认证信息），用于需要身份验证的资源。要求服务器在响应头中包含 Access-Control-Allow-Credentials: true。

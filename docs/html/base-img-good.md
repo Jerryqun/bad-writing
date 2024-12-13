@@ -142,7 +142,7 @@ img.src = 'path/to/your/image.jpg';
   <img src="small.jpg" alt="描述" />
 </picture>
 
-// img
+// img  表示浏览器宽度达到  600px 则加载 banner-medium.jpg ，达到 1200px 则加载 banner-large.jpg。
 <img src="banner-small.jpg"
      srcset="banner-medium.jpg 600w,
              banner-large.jpg 1200w"

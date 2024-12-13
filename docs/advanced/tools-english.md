@@ -8,4 +8,5 @@ mobile: false
 title: 单词记忆
 ---
 
-composite 合成的
+composite 合成的  
+inherit 继承

@@ -14,9 +14,11 @@ title: BFC
 
 块盒（block box）
 当元素的 CSS 属性 display 为 block，list-item 或 table 时，它是块级元素 block-level；
+块级元素即使设置了宽度，仍然是独占一行。块级元素在设置宽度的情况下，是通过自定义 margin-right 来自动填满一行，这个时候你设置 margin-right 是无效的；块级元素在没有设置宽度的时候，margin-right 会生效
 
 行内盒（inline box）
 当元素的 CSS 属性 display 的计算值为 inline，inline-block 或 inline-table 时，称它为行内级元素；
+inline 元素的 margin 和 padding 属性，水平方向的 padding-left、padding-right、margin-left、margin-right 都产生边距效果；但竖直方向的 padding-top、padding-bottom、margin-top、margin-bottom 不会产生边距效果。
 
 ## 三个定位方案
 
