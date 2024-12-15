@@ -9,4 +9,5 @@ title: 单词记忆
 ---
 
 composite 合成的  
-inherit 继承
+inherit 继承  
+anonymous 匿名的

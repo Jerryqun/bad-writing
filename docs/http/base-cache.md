@@ -126,6 +126,15 @@ console.log(document.cookie);
 
 `sessionStorage` 是 Web Storage API 的一部分，它提供了一种在浏览器会话期间存储键值对数据的机制。`sessionStorage` 对象存储的数据在页面会话期间一直存在，但只限于该页面的标签或窗口。当标签或窗口被关闭后，`sessionStorage` 中存储的数据就会被清除。
 
+sessionStorage 不通浏览器窗口不能共享
+
+在不确定是否存在 key 的情况下，可以使用 hasOwnProperty() 进行检查;
+
+```js
+localStorage.hasOwnProperty('userName'); // true
+sessionStorage.hasOwnProperty('userName'); // false
+```
+
 ### 主要特性
 
 - **会话级别生命周期**：`sessionStorage` 存储的数据仅在当前页面会话期间有效，关闭页面或浏览器会导致数据丢失。
@@ -258,4 +267,103 @@ setItemWithExpiry('myKey', 'myValue', 300000);
 
 const value = getItemWithExpiry('myKey');
 console.log(value); // 如果未过期则输出 'myValue'，否则输出 null
+```
+
+## 监听 Storage 变化
+
+1. 监听同源非同一个页面
+
+直接在其他页面添加监听事件即可。
+
+eg：同域下的 A、B 两个页面，A 修改了 localStorage，B 页面可以监听到 storage 事件。
+
+```js
+window.addEventListener('storage', (e) => {
+  // 监听 username 值变化
+  if (e.key === 'username') {
+    console.log('username 旧值：' + e.oldValue + '，新值：' + e.newValue);
+  }
+});
+```
+
+当两次 setItem 更新的值一样时，监听方法是不会触发的；  
+storage 事件只能监听到 localStorage 的变化。
+
+2. 监听同一个页面
+
+```js
+(() => {
+  const originalSetItem = localStorage.setItem;
+  // 重写 setItem 函数
+  localStorage.setItem = function (key, val) {
+    let event = new Event('setItemEvent');
+    event.key = key;
+    event.newValue = val;
+    window.dispatchEvent(event);
+    originalSetItem.apply(this, arguments);
+  };
+})();
+
+window.addEventListener('setItemEvent', function (e) {
+  // 监听 username 值变化
+  if (e.key === 'username') {
+    const oldValue = localStorage.getItem(e.key);
+    console.log('username 旧值：' + oldValue + '，新值：' + e.newValue);
+  }
+});
+```
+
+## 存储容量
+
+```js
+let str = '0123456789';
+let temp = '';
+// 先生成一个 10KB 的字符串
+while (str.length !== 10240) {
+  str = str + '0123456789';
+}
+// 清空
+localStorage.clear();
+// 计算总量
+const computedTotal = () => {
+  return new Promise((resolve) => {
+    // 往 localStorage 中累积存储 10KB
+    const timer = setInterval(() => {
+      try {
+        localStorage.setItem('temp', temp);
+      } catch (e) {
+        // 报错说明超出最大存储
+        resolve(temp.length / 1024);
+        clearInterval(timer);
+        // 统计完记得清空
+        localStorage.clear();
+      }
+      temp += str;
+    }, 0);
+  });
+};
+// 计算使用量
+const computedUse = () => {
+  let cache = 0;
+  for (let key in localStorage) {
+    if (localStorage.hasOwnProperty(key)) {
+      cache += localStorage.getItem(key).length;
+    }
+  }
+  return (cache / 1024).toFixed(2);
+};
+
+(async () => {
+  const total = await computedTotal();
+  let use = '0123456789';
+  for (let i = 0; i < 1000; i++) {
+    use += '0123456789';
+  }
+  localStorage.setItem('use', use);
+  const useCache = computedUse();
+
+  console.log(`最大容量${total}KB`);
+  console.log(`已用${useCache}KB`);
+  console.log(`剩余可用容量${total - useCache}KB`);
+})();
 ```
