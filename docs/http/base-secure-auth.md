@@ -34,11 +34,11 @@ JSON Web Token (JWT) 是一个开放标准，定义了一种传递 JSON 信息�
 
 ### “虚假”的单点登录（主域名相同）
 
-简单的，如果业务系统都在同一主域名下，比如 wenku.baidu.com tieba.baidu.com，就好办了。可以直接把 cookie domain 设置为主域名 baidu.com，百度也就是这么干的。
+简单的，如果业务系统都在同一主域名下，比如 wenku.baidu.com、tieba.baidu.com，就好办了。可以直接把 cookie domain 设置为主域名 baidu.com，百度也就是这么干的。
 
 ### “真实”的单点登录（主域名不同）
 
-比如滴滴这么潮的公司，同时拥有 didichuxing.com xiaojukeji.com didiglobal.com 等域名，种 cookie 是完全绕不开的。
+比如滴滴这么潮的公司，同时拥有 didichuxing.com 、xiaojukeji.com 、didiglobal.com 等域名，种 cookie 是完全绕不开的。
 
 这要能实现「一次登录，全线通用」，才是真正的单点登录。
 

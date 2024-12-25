@@ -10,6 +10,21 @@ mobile: false
 
 ## Webkit 渲染引擎流程
 
+浏览器是渐进式渲染，即边解析边渲染。通俗的说就是，这一行代码解析完，就可以在浏览器的页面渲染展示出来。因为浏览器的解析和渲染由两个不同线程来完成，所以可以实现边解析边渲染。
+
+```html
+<h1>1</h1>
+<script>
+  debugger;
+</script>
+<h1>2</h1>
+<script>
+  debugger;
+</script>
+<h1>3</h1>
+<!-- 先解析渲染出1，再debugger;再解析渲染出2，再debugger;最后解析渲染出3 -->
+```
+
 1、处理 HTML 并构建 DOM 树  
 2、处理 CSS 构建 CSS 规则树(CSSOM)  
 3、DOM Tree 和 CSSOM Tree 合成一棵渲染树 Render Tree。  

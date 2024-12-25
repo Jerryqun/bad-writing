@@ -115,3 +115,9 @@ Access-Control-Allow-Origin: [特定域名] // 不可以是\*
 sameSite: 'none';
 secure: true;
 ```
+
+## 同源政策主要限制了三个方面：
+
+- 当前域下的 js 脚本不能够访问其他域下的 cookie、localStorage 和 indexDB。
+- 当前域下的 js 脚本不能够操作访问操作其他域下的 DOM。
+- 当前域下 ajax 无法发送跨域请求。
