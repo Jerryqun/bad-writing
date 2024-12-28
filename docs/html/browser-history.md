@@ -27,6 +27,7 @@ history.replaceState()：替换当前的历史堆栈条目。
 history.back()：与用户点击后退按钮相同的效果。  
 history.forward()：与用户点击前进按钮相同的效果。  
 history.go()：加载历史堆栈中的某个具体页面。
+history.scrollRestoration： 是用来保留滚动位置的，有两个值 auto、manual，默认是 auto，也就是会自动定位到上次滚动位置，设置为 manual 就不会了。
 
 ## 手写 useHistory
 

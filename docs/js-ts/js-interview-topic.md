@@ -626,6 +626,22 @@ arr.join;
 
 Array.of() 将一组值转换为数组
 
+## 手写 unshift
+
+```js
+Array.prototype.myUnshift = function () {
+  const params = arguments;
+  for (let i = params.length - 1; i >= 0; i--) {
+    this.splice(0, 0, params[i]);
+  }
+  return this.length;
+};
+const a = [1, 2, 4];
+a.myUnshift(4, 5);
+// a.unshift(4, 5);
+console.log('a', a);
+```
+
 ## 操作字符串的常用方法
 
 1、添加

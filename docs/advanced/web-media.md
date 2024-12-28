@@ -14,6 +14,8 @@ title: web 媒体技术
 
 WebRTC 广泛应用于视频会议、在线教育、实时聊天应用等领域，使得网络通信更加便捷、高效。由于其开源的特性，许多平台和服务都在其基础上进行了功能扩展和集成。
 
+阿里云 npm 包 ： https://www.npmjs.com/package/aliyun-rts-sdk
+
 ## WebGL
 
 WebGL（全写 Web Graphics Library）是一种 3D 绘图标准，并允许用户与之交互。这种绘图技术标准允许把 JavaScript 和 OpenGL ES 2.0 结合在一起，通过增加 OpenGL ES 2.0 的一个 JavaScript 绑定，WebGL 可以为 HTML5 Canvas 提供硬件 3D 加速渲染，这样 Web 开发人员就可以借助系统显卡来在浏览器里更流畅地展示 3D 场景和模型了，还能创建复杂的导航和数据视觉化。

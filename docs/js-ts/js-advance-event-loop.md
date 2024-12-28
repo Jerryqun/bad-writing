@@ -103,7 +103,7 @@ const config = { childList: true, subtree: true };
 observer.observe(targetNode, config);
 ```
 
-### 防止 DOM 被隐藏
+### MutationObserver 防止 DOM 被隐藏
 
 ```js
 // 目标节点（假设水印元素是一个特定的节点）
