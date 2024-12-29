@@ -216,3 +216,40 @@ var Person = (function () {
 webpack 中的 UglifyJS 依旧还是会将宽松模式认为是有副作用的，而 rollup 有程序流程分析的功能，可以更好的判断代码是否真正产生副作用，所以它会认为宽松模式没有副作用。
 
 (副作用大致理解为：一个函数会、或者可能会对函数外部变量产生影响的行为。)
+
+## @babel/standalone
+
+@babel/standalone 是 Babel 的一个独立运行版本，它允许你在浏览器中直接使用 Babel 的功能，而无需构建工具或 Node.js 环境。它通常用于以下场景：
+
+客户端开发与调试：在开发过程中，你可以直接在 HTML 文件中引入 Babel，快速测试 ES6+ 代码，而不需要设置复杂的构建流程。
+
+在线代码编辑器：一些在线代码编辑器（比如 JSFiddle、CodePen 等）可以使用 @babel/standalone 来即时转换输入的现代 JavaScript 代码，并运行它。
+
+```HTML
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Babel Standalone Example</title>
+    <script src="https://g.alicdn.com/code/lib/react/18.2.0/umd/react.development.js"></script>
+    <script src="https://g.alicdn.com/code/lib/react-dom/18.2.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+</head>
+
+<body>
+    <script type="text/babel">
+        const Greeting = () => {
+            return <h1>Hello, Worl21d!</h1>;
+        };
+
+        ReactDOM.render(<Greeting />, document.getElementById('root'));
+    </script>
+    <div id="root"></div>
+</body>
+
+</html>
+```
