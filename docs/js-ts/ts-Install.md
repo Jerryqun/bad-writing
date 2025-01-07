@@ -46,20 +46,6 @@ console.log(Gender[1]); // Output: Female
 
 ```
 
-编译成 JavaScript 后:
-
-```js
-var Direction;
-(function (Direction) {
-  Direction[(Direction['Up'] = 0)] = 'Up';
-  Direction[(Direction['Down'] = 1)] = 'Down';
-  Direction[(Direction['Left'] = 2)] = 'Left';
-  Direction[(Direction['Right'] = 3)] = 'Right';
-})(Direction || (Direction = {}));
-
-var dir = Direction.Up;
-```
-
 ## 常量枚举
 
 ```js
@@ -78,4 +64,102 @@ let dir: Direction = Direction.Up;
 
 ```js
 var dir = 0; /* Up */
+```
+
+## 元组
+
+元组在 TypeScript 中提供了一种灵活的方式来处理具有不同类型的固定长度的数据结构。
+
+```js
+type Point = [number, number];
+let point: Point = [10, 20]; // 正确
+let anotherPoint: Point = [10]; // 错误：缺少一个元素
+
+let mixedTuple: [number, ...string[]] = [1, "hello", "world"];
+
+```
+
+## 联合类型
+
+```js
+let id: number | string;
+id = 123; // 正确
+id = 'abc'; // 正确
+```
+
+## 类型断言
+
+```js
+let someValue: any = "Hello World";
+let strLength1: number = (<string>someValue).length; // 尖括号形式
+let strLength2: number = (someValue as string).length; // as形式
+```
+
+## 泛型
+
+在 TypeScript 中，泛型（Generics）是指在定义函数、接口或类的时候，不预先指定具体类型，而是在使用的时候再指定类型的一种特性。泛型中的 T 就像一个占位符或者说一个变量，在使用的时候可以把定义的类型像参数一样传入，它可以原封不动地输出。泛型在成员之间提供有意义的约束，这些成员可以是函数参数、函数返回值、类的实例成员、类的方法等。
+
+## TypeScript 中的交叉类型
+
+```js
+// 定义一个泛型函数，接受一个数组和一个值，然后返回值在数组中的索引
+function findIndex<T>(array: T[], value: T): number {
+  return array.indexOf(value);
+}
+```
+
+需要注意的是，如果合并的接口类型中具有同名属性，且类型不同，则合并后类型为 never。
+
+```js
+interface ClassA {
+  name: string;
+  age: number;
+}
+
+interface ClassB {
+  name: string;
+  phone: number;
+}
+
+type Class = ClassA & ClassB;
+
+let info: Class = {
+  name: 'zhangsan',
+  age: 18,
+  phone: 15738755555,
+};
+```
+
+## TypeScript 中的映射类型
+
+```js
+type Keys = 'a' | 'b' | 'c';
+type MappedType = { [P in Keys]: boolean };
+```
+
+## TypeScript 中的条件类型
+
+```js
+type Message<T> = T extends string ? string : number;
+
+let msg1: Message<string> = "Hello"; // 正确，类型为string
+let msg2: Message<number> = 123; // 正确，类型为number
+```
+
+## TypeScript 中的类型保护
+
+```js
+function isString(value: any): value is string {
+    return typeof value === 'string';
+}
+
+function processValue(value: any) {
+    if (isString(value)) {
+        // 在这里，TypeScript知道value是string类型
+        console.log(value.toUpperCase());
+    } else {
+        // 处理其他类型
+        console.log(value);
+    }
+}
 ```
