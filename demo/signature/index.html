@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    JavaScript签名板
+  </title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.1.7/dist/signature_pad.umd.min.js">
+  </script>
+</head>
+
+<body>
+  <div class="signature-container">
+    <canvas id="signature-pad" width="600" height="400">
+    </canvas>
+    <div class="controls">
+      <button id="undo">
+        撤销
+      </button>
+      <button id="redo">
+        重做
+      </button>
+      <button id="clear">
+        清除
+      </button>
+      <button id="save-png">
+        导出png格式
+      </button>
+      <button id="save-jpeg">
+        导出jpeg格式
+      </button>
+    </div>
+  </div>
+  <script src="./script.js">
+  </script>
+</body>
+
+</html>
