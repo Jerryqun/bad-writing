@@ -7341,7 +7341,26 @@ class AddStrategy implements CalculatorStrategy {
     return a + b;
   }
 }
-`,paraId:0}]},66250:function(r,e,n){n.r(e),n.d(e,{texts:function(){return a}});var t=n(56082);const a=[{value:"\u4F7F\u7528 JSON.stringify/parse \u7684\u65B9\u6CD5\u8FDB\u884C\u6DF1\u62F7\u8D1D\u9047\u5230 undefined\u3001function\u3001symbol \u4F1A\u5728\u8F6C\u6362\u8FC7\u7A0B\u4E2D\u88AB\u5FFD\u7565",paraId:0,tocIndex:0},{value:`/**
+`,paraId:0,tocIndex:0},{value:"demo",paraId:1,tocIndex:0},{value:`interface Person {
+  name: string;
+  age?: number; // \u53EF\u9009\u5C5E\u6027
+  greet(): void; // \u65B9\u6CD5\u7B7E\u540D
+}
+
+class Student implements Person {
+  name: string;
+  age: number;
+
+  constructor(name: string, age: number) {
+    this.name = name;
+    this.age = age;
+  }
+
+  greet(): void {
+    console.log('Hello, my name is ' + this.name);
+  }
+}
+`,paraId:2,tocIndex:0}]},66250:function(r,e,n){n.r(e),n.d(e,{texts:function(){return a}});var t=n(56082);const a=[{value:"\u4F7F\u7528 JSON.stringify/parse \u7684\u65B9\u6CD5\u8FDB\u884C\u6DF1\u62F7\u8D1D\u9047\u5230 undefined\u3001function\u3001symbol \u4F1A\u5728\u8F6C\u6362\u8FC7\u7A0B\u4E2D\u88AB\u5FFD\u7565",paraId:0,tocIndex:0},{value:`/**
  * JSON\u53EA\u652F\u6301object,array,string,number,true,false,null\u8FD9\u51E0\u79CD\u6570\u636E\u6216\u8005\u503C\uFF0C
  * \u5176\u4ED6\u7684\u6BD4\u5982\u51FD\u6570\uFF0Cundefined\uFF0CDate\uFF0CRegExp\u7B49\u6570\u636E\u7C7B\u578B\u90FD\u4E0D\u652F\u6301\uFF0C\u5BF9\u4E8E\u5B83\u4E0D\u652F\u6301\u7684\u6570\u636E\u90FD\u4F1A\u76F4\u63A5\u5FFD\u7565\u8BE5\u5C5E\u6027\u3002
  * \u4F1A\u629B\u5F03\u5BF9\u8C61\u7684constructor, \u6240\u6709\u7684\u6784\u9020\u51FD\u6570\u4F1A\u6307\u5411Object
@@ -12592,16 +12611,7 @@ console.log(Gender.Male); // Output: 0
 //We can also access an enum value by it's number value.
 console.log(Gender[1]); // Output: Female
 
-`,paraId:4,tocIndex:2},{value:"\u7F16\u8BD1\u6210 JavaScript \u540E:",paraId:5,tocIndex:2},{value:`var Direction;
-(function (Direction) {
-  Direction[(Direction['Up'] = 0)] = 'Up';
-  Direction[(Direction['Down'] = 1)] = 'Down';
-  Direction[(Direction['Left'] = 2)] = 'Left';
-  Direction[(Direction['Right'] = 3)] = 'Right';
-})(Direction || (Direction = {}));
-
-var dir = Direction.Up;
-`,paraId:6,tocIndex:2},{value:`const enum Direction {
+`,paraId:4,tocIndex:2},{value:`const enum Direction {
   Up,
   Down,
   Left,
@@ -12610,8 +12620,60 @@ var dir = Direction.Up;
 
 let dir: Direction = Direction.Up;
 
-`,paraId:7,tocIndex:3},{value:"\u7F16\u8BD1\u6210 JavaScript \u540E:",paraId:8,tocIndex:3},{value:`var dir = 0; /* Up */
-`,paraId:9,tocIndex:3}]},51355:function(r,e,n){n.r(e),n.d(e,{texts:function(){return a}});var t=n(15272);const a=[{value:`/**
+`,paraId:5,tocIndex:3},{value:"\u7F16\u8BD1\u6210 JavaScript \u540E:",paraId:6,tocIndex:3},{value:`var dir = 0; /* Up */
+`,paraId:7,tocIndex:3},{value:"\u5143\u7EC4\u5728 TypeScript \u4E2D\u63D0\u4F9B\u4E86\u4E00\u79CD\u7075\u6D3B\u7684\u65B9\u5F0F\u6765\u5904\u7406\u5177\u6709\u4E0D\u540C\u7C7B\u578B\u7684\u56FA\u5B9A\u957F\u5EA6\u7684\u6570\u636E\u7ED3\u6784\u3002",paraId:8,tocIndex:4},{value:`type Point = [number, number];
+let point: Point = [10, 20]; // \u6B63\u786E
+let anotherPoint: Point = [10]; // \u9519\u8BEF\uFF1A\u7F3A\u5C11\u4E00\u4E2A\u5143\u7D20
+
+let mixedTuple: [number, ...string[]] = [1, "hello", "world"];
+
+`,paraId:9,tocIndex:4},{value:`let id: number | string;
+id = 123; // \u6B63\u786E
+id = 'abc'; // \u6B63\u786E
+`,paraId:10,tocIndex:5},{value:`let someValue: any = "Hello World";
+let strLength1: number = (<string>someValue).length; // \u5C16\u62EC\u53F7\u5F62\u5F0F
+let strLength2: number = (someValue as string).length; // as\u5F62\u5F0F
+`,paraId:11,tocIndex:6},{value:"\u5728 TypeScript \u4E2D\uFF0C\u6CDB\u578B\uFF08Generics\uFF09\u662F\u6307\u5728\u5B9A\u4E49\u51FD\u6570\u3001\u63A5\u53E3\u6216\u7C7B\u7684\u65F6\u5019\uFF0C\u4E0D\u9884\u5148\u6307\u5B9A\u5177\u4F53\u7C7B\u578B\uFF0C\u800C\u662F\u5728\u4F7F\u7528\u7684\u65F6\u5019\u518D\u6307\u5B9A\u7C7B\u578B\u7684\u4E00\u79CD\u7279\u6027\u3002\u6CDB\u578B\u4E2D\u7684 T \u5C31\u50CF\u4E00\u4E2A\u5360\u4F4D\u7B26\u6216\u8005\u8BF4\u4E00\u4E2A\u53D8\u91CF\uFF0C\u5728\u4F7F\u7528\u7684\u65F6\u5019\u53EF\u4EE5\u628A\u5B9A\u4E49\u7684\u7C7B\u578B\u50CF\u53C2\u6570\u4E00\u6837\u4F20\u5165\uFF0C\u5B83\u53EF\u4EE5\u539F\u5C01\u4E0D\u52A8\u5730\u8F93\u51FA\u3002\u6CDB\u578B\u5728\u6210\u5458\u4E4B\u95F4\u63D0\u4F9B\u6709\u610F\u4E49\u7684\u7EA6\u675F\uFF0C\u8FD9\u4E9B\u6210\u5458\u53EF\u4EE5\u662F\u51FD\u6570\u53C2\u6570\u3001\u51FD\u6570\u8FD4\u56DE\u503C\u3001\u7C7B\u7684\u5B9E\u4F8B\u6210\u5458\u3001\u7C7B\u7684\u65B9\u6CD5\u7B49\u3002",paraId:12,tocIndex:7},{value:`// \u5B9A\u4E49\u4E00\u4E2A\u6CDB\u578B\u51FD\u6570\uFF0C\u63A5\u53D7\u4E00\u4E2A\u6570\u7EC4\u548C\u4E00\u4E2A\u503C\uFF0C\u7136\u540E\u8FD4\u56DE\u503C\u5728\u6570\u7EC4\u4E2D\u7684\u7D22\u5F15
+function findIndex<T>(array: T[], value: T): number {
+  return array.indexOf(value);
+}
+`,paraId:13,tocIndex:8},{value:"\u9700\u8981\u6CE8\u610F\u7684\u662F\uFF0C\u5982\u679C\u5408\u5E76\u7684\u63A5\u53E3\u7C7B\u578B\u4E2D\u5177\u6709\u540C\u540D\u5C5E\u6027\uFF0C\u4E14\u7C7B\u578B\u4E0D\u540C\uFF0C\u5219\u5408\u5E76\u540E\u7C7B\u578B\u4E3A never\u3002",paraId:14,tocIndex:8},{value:`interface ClassA {
+  name: string;
+  age: number;
+}
+
+interface ClassB {
+  name: string;
+  phone: number;
+}
+
+type Class = ClassA & ClassB;
+
+let info: Class = {
+  name: 'zhangsan',
+  age: 18,
+  phone: 15738755555,
+};
+`,paraId:15,tocIndex:8},{value:`type Keys = 'a' | 'b' | 'c';
+type MappedType = { [P in Keys]: boolean };
+`,paraId:16,tocIndex:9},{value:`type Message<T> = T extends string ? string : number;
+
+let msg1: Message<string> = "Hello"; // \u6B63\u786E\uFF0C\u7C7B\u578B\u4E3Astring
+let msg2: Message<number> = 123; // \u6B63\u786E\uFF0C\u7C7B\u578B\u4E3Anumber
+`,paraId:17,tocIndex:10},{value:`function isString(value: any): value is string {
+    return typeof value === 'string';
+}
+
+function processValue(value: any) {
+    if (isString(value)) {
+        // \u5728\u8FD9\u91CC\uFF0CTypeScript\u77E5\u9053value\u662Fstring\u7C7B\u578B
+        console.log(value.toUpperCase());
+    } else {
+        // \u5904\u7406\u5176\u4ED6\u7C7B\u578B
+        console.log(value);
+    }
+}
+`,paraId:18,tocIndex:11}]},51355:function(r,e,n){n.r(e),n.d(e,{texts:function(){return a}});var t=n(15272);const a=[{value:`/**
  * Record
  * Record<Keys\uFF0C Type>
  * \u6784\u9020\u4E00\u4E2A\u5BF9\u8C61\u7C7B\u578B\uFF0CKeys \u8868\u793A\u5BF9\u8C61\u7684\u5C5E\u6027\u952E \u3001Type \u8868\u793A\u5BF9\u8C61\u7684\u5C5E\u6027\u503C\uFF0C\u7528\u4E8E\u5C06\u4E00\u79CD\u7C7B\u578B\u5C5E\u6027\u6620\u5C04\u5230\u53E6\u4E00\u79CD\u7C7B\u578B
