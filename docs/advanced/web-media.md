@@ -39,7 +39,8 @@ Canvas 和 WebGL 都是用于在 Web 浏览器中绘制图形和动画的技术�
 
 渲染方式：
 
-Canvas：Canvas 使用 2D 渲染上下文（2D context）来绘制图形和图像。它基于像素的绘图系统，通过 JavaScript 脚本控制渲染过程。  
+Canvas：Canvas 使用 2D 渲染上下文（2D context）来绘制图形和图像。它基于像素的绘图系统，通过 JavaScript 脚本控制渲染过程。
+
 WebGL：WebGL（Web Graphics Library）是基于 OpenGL ES 标准的 JavaScript API，它可以利用 GPU 进行硬件加速的 3D 图形渲染。WebGL 使用着色器（shaders）编程，允许更复杂和高性能的图形渲染。
 功能和复杂性：
 
