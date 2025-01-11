@@ -46,6 +46,27 @@ console.log(Gender[1]); // Output: Female
 
 ```
 
+ts 获取枚举的值作为一个新的类型
+
+```js
+// 定义一个枚举
+enum Color {
+    Red = "RED",
+    Green = "GREEN",
+    Blue = "BLUE"
+}
+
+// 提取枚举的值作为新的类型
+type ColorValues = typeof Color[keyof typeof Color];
+
+// 使用这个类型
+const myColor: ColorValues = Color.Red; // 正确
+// const myInvalidColor: ColorValues = "YELLOW"; // 错误，因为 "YELLOW" 不是枚举 Color 的值
+
+```
+
+使用 typeof Color 获取枚举的类型，然后用 keyof 获取该类型的所有键（即 Red、Green 和 Blue）。
+
 ## 常量枚举
 
 ```js
