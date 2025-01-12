@@ -1,7 +1,7 @@
 ---
 toc: content
 group:
-  title: 属性片段
+  title: 属性
   order: 2
 title: vertical-align
 ---
@@ -18,7 +18,7 @@ bottom：使元素底部与所在行的底部对齐<br />
 
 （1）关键字： 如 top, middle, baseline(默认值), bottom, super, sub, text-bottom, text-top<br />
 （2）长度值： 如 10px，-10px(均为相对于 baseline 偏移)<br />
-（3）百分比值： 如 10%，根据 line-heightt 作为基数进行计算(重要)后的值。<br />
+（3）百分比值： 如 10%，根据 line-height 作为基数进行计算(重要)后的值。<br />
 
 ```html
 <!DOCTYPE html>

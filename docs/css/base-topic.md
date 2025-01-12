@@ -8,17 +8,17 @@ title: 面试题
 
 ## css 加载会造成页面渲染阻塞吗?
 
-DOM 和 CSSOM 通常是并行构建的,所以 CSS 加载不会阻塞 DOM 的解析。
+DOM 和 CSSOM 通常是并行构建的,所以 `CSS 加载不会阻塞 DOM 的解析`。
 
 然而,由于 Render Tree 是依赖于 DOM Tree 和 CSSOM Tree 的,
 所以他必须等待到 CSSOM Tree 构建完成,也就是 CSS 资源加载完成(或者 CSS 资源加载失败)后,才能开始渲染。
 
-因此,CSS 加载会阻塞 Dom 的渲染。
+因此,`CSS 加载会阻塞 Dom 的渲染`。
 
 由于 JavaScript 是可操纵 DOM 和 css 样式的,如果在修改这些元素属性同时渲染界面（即 JavaScript 线程和 UI 线程同时运行）,那么渲染线程前后获得的元素数据就可能不一致了。
-因此为了防止渲染出现不可预期的结果,浏览器设置 GUI 渲染线程与 JavaScript 引擎为互斥的关系。因此,样式表会在后面的 js 执行前先加载执行完毕,所以 css 会阻塞后面 js 的执行
+因此为了防止渲染出现不可预期的结果,浏览器设置 `GUI 渲染线程与 JavaScript 引擎为互斥的关系`。因此,样式表会在后面的 js 执行前先加载执行完毕,所以 `css 会阻塞后面 js 的执行`
 
-CSS 会阻塞 JS 执行，但不会阻塞 JS 文件的下载
+`CSS 会阻塞 JS 执行，但不会阻塞 JS 文件的下载`
 
 ## 为什么 CSS 选择器是从右向左匹配的
 
@@ -30,7 +30,7 @@ CSS 中更多的选择器是不会匹配的，所以在考虑性能问题时，�
 2. 字体大小（font-size）
 3. 字体样式（font-style）
 4. 字体粗细（font-weight）
-5. 行高（line-heightt）
+5. 行高（line-height）
 6. 颜色（color）
 7. 文本对齐（text-align）
 8. 字符间距（letter-spacing）
@@ -51,7 +51,7 @@ https://juejin.cn/post/7084220221505929230
 像素: 组成图像的最小单元  
 分辨率：屏幕分辨率是指纵横向上的像素点数 (单位 px)  
 逻辑像素：css 像素  
-pc 端 1css 像素 = 1 物理像素  
+pc 端 1css 像素 = 1 物理像素(苹果电脑的 Retina 屏 devicePixelRatio = 2，也就是说 1css 像素 = 2 物理像素)  
 设备像素比 DPR(devicePixelRatio) ：物理像素/逻辑像素(CSS 像素)
 
 我们可以采用伪元素+transform 的方式解决该问题
@@ -87,9 +87,9 @@ pc 端 1css 像素 = 1 物理像素
 ## 页面导入样式时，使用 link 和@import 有什么区别
 
 1、link 属于 HTML 标签，而@import 是 css 提供的；<br/>
-2、页面被加载时，link 会同时被加载，而@import 引用的 css 会等到页面被加载完再加载；<br/>
+2、页面被加载时，link 会同时被加载，而`@import 引用的 css 会等到页面被加载完再加载；`<br/>
 3、@import 只在 IE5 以上才能识别，而 link 是 XHTML 标签，无兼容问题；<br/>
-4、link 方式的样式的权重高于@import 的权重。
+4、`link 方式的样式的权重高于@import 的权重`。
 
 ## 为什么有时候⽤ translate 来改变位置⽽不是定位？
 
@@ -109,7 +109,7 @@ transform 使浏览器为元素创建⼀个 GPU 图层，这使得动画元素�
 
 如果没有人为取改变根元素字体大小的话，默认是 1rem = 16px；根元素默认的字体大小是 16px
 
-em： 如果自身元素是没有设置字体大小的，那么就会根据其父元素的字体大小作为参照去计算，如果元素本身已经设置了字体，那么就会基于自身的字体大小进行计算 ，1em = font-size 的值
+em： 如果自身元素是没有设置字体大小的，那么就会根据其父元素的字体大小作为参照去计算，`如果元素本身已经设置了字体，那么就会基于自身的字体大小进行计算` ，1em = font-size 的值
 
 ## iconfont 是什么？有什么优缺点
 
@@ -133,21 +133,7 @@ em： 如果自身元素是没有设置字体大小的，那么就会根据其�
 
 当元素祖先的 transform, perspective 或 filter 属性非 none 时，容器由视口改为该祖先。
 
-filter
-CSS3 filter(滤镜) 属性
-
-将图片转为黑白
-
-```css
-img {
--webkit-filter: grayscale(100%); /_ Chrome, Safari, Opera _/
-filter: grayscale(100%);
-}
-```
-
-perspective
-perspective 属性定义 3D 元素距视图的距离，以像素计。该属性允许您改变 3D 元素查看 3D 元素的视图。
-当为元素定义 perspective 属性时，其子元素会获得透视效果，而不是元素本身。
+demo
 
 ```html
 <!DOCTYPE html>
@@ -178,20 +164,23 @@ perspective 属性定义 3D 元素距视图的距离，以像素计。该属性�
 </html>
 ```
 
-## z-index 属性在什么情况下会失效
+filter
+CSS3 filter(滤镜) 属性
 
-通常 z-index 的使用是在有两个重叠的标签，在一定的情况下控制其中一个在另一个的上方或者下方出现。z-index 值越大就越是在上层。z-index 元素的 position 属性需要是 relative，absolute 或是 fixed。
+将图片转为黑白
 
-z-index 属性在下列情况下会失效：
+```css
+img {
+-webkit-filter: grayscale(100%); /_ Chrome, Safari, Opera _/
+filter: grayscale(100%);
+}
+```
 
-1、父元素 position 为 relative 时，子元素的 z-index 失效。
-解决：父元素 position 改为 absolute 或 static；
+perspective  
+perspective 属性定义 3D 元素距视图的距离，以像素计。该属性允许您改变 3D 元素查看 3D 元素的视图。
+当为元素定义 perspective 属性时，其子元素会获得透视效果，而不是元素本身。
 
-2、元素没有设置 position 属性，或是 static 属性。解决：设置该元素的 position 属性为 relative，absolute 或是 fixed 中的一种；
-
-3、素在设置 z-index 的同时还设置了 float 浮动。解决：float 去除，改为 display：inline-block；
-
-## 如何解决＜ a ＞标签点击后 hover 事件失效的问题
+## 如何解决 a 标签点击后 hover 事件失效的问题
 
 改变 a 标签 css 属性的排列顺序，只需要记住 LoVe HAte 原则就可以了：
 

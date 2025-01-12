@@ -1,7 +1,7 @@
 ---
 toc: content
 group:
-  title: 属性片段
+  title: 属性
   order: 2
 title: nth-child
 ---
@@ -9,8 +9,7 @@ title: nth-child
 # nth-child
 
 p:nth-child(2) :选择属于其（p 的父元素）父元素的第二个子元素  
-p:nth-child(2) :选择属于其（p 的父元素）父元素的第二个子元素  
-element:first-child :选择属于父元素 element 的第一个子元素。 等同 :nth-child(1)
+`element:first-child :选择属于父元素 element 的第一个子元素。 等同 :nth-child(1)`
 
 nth-child(an+b) n 从 0 开始 b 从 1 开始<br />
 nth-of-type(n) n 从 1 开始 正序<br />

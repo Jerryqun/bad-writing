@@ -1,7 +1,7 @@
 ---
 toc: content
 group:
-  title: 属性片段
+  title: 属性
   order: 2
 title: border-collapse
 ---

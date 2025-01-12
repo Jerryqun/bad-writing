@@ -38,7 +38,7 @@ p {
   --Header-Color: pink;
   --header-height: 68px;
   --content-padding: 10px 20px;
-  --base-line-heightt: 1.4;
+  --base-line-height: 1.4;
   --margin-top: calc(100px - 80px);
 }
 ```

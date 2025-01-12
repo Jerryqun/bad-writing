@@ -77,9 +77,8 @@ Chrome 浏览器默认字体大小是 16px，每个浏览器默认字体大小�
 
 ## 浏览器如何判断是否支持 webp 格式图片
 
-- 1、宽高判断法。通过创建 image 对象，将其 src 属性设置为 webp 格式的图片，然后在 onload 事件中获取图片的宽高，
-- 如果能够获取，则说明浏览器支持 webp 格式图片。如果不能获取或者触发了 onerror 函数，那么就说明浏览器不支持 webp 格 式的图片
-  \*/
+- 宽高判断法。通过创建 image 对象，将其 src 属性设置为 webp 格式的图片，然后在 onload 事件中获取图片的宽高，
+  如果能够获取，则说明浏览器支持 webp 格式图片。如果不能获取或者触发了 onerror 函数，那么就说明浏览器不支持 webp 格 式的图片
 
 ```js
 const acceptWebp = (URL) => {
@@ -100,13 +99,14 @@ const acceptWebp = (URL) => {
 await acceptWebp('https://interview.poetries.top/logo.png');
 ```
 
-- 2、canvas 判断方法。我们可以动态的创建一个 canvas 对象，通过 canvas 的 toDataURL 将设置为 webp 格式，
-- 然后判断 返回值中是否含有 image/webp 字段，如果包含则说明支持 WebP，反之则不支持
+- canvas 判断方法。我们可以动态的创建一个 canvas 对象，通过 canvas 的 toDataURL 将设置为 webp 格式，
+  然后判断 返回值中是否含有 image/webp 字段，如果包含则说明支持 WebP，反之则不支持
 
 ## 网站置灰
 
 ```css
 CSS 滤镜 -webkit-filter
+
 blur 模糊-webkit-filter:blur(2px);
 brightness 亮度-webkit-filter:brightness(25%);
 contrast 对比度-webkit-filter: contrast(50%);
@@ -149,26 +149,6 @@ html { filter: grayscale(.95); -webkit-filter: grayscale(.95);
   -ms-overflow-style: none;
 }
 ```
-
-# 隐藏元素的方法
-
-1、opacity:0：本质上是将元素的透明度将为 0，就看起来隐藏了，但是依然占据空间且可以交互
-
-2、visibility:hidden: 与上一个方法类似的效果，占据空间，但是不可以交互了
-
-3、overflow:hidden: 这个只隐藏元素溢出的部分，但是占据空间且不可交互
-
-4、display:none: 这个是彻底隐藏了元素，元素从文档流中消失，既不占据空间也不交互，也不影响布局
-
-5、z-index:-9999: 原理是将层级放到底部，这样就被覆盖了，看起来隐藏了
-
-6、transform: scale(0,0): 平面变换，将元素缩放为 0，但是依然占据空间，但不可交互
-
-# 隐藏元素方法对事件的影响
-
-1、设置元素 opacity:0 之后，也可以触发点击事件<br/>
-2、visibility:hidden 的元素无法触发其点击事件<br/>
-3、dispaly:none 元素不占据空间<br/>
 
 # Attr 属性
 
