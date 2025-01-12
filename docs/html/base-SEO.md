@@ -10,6 +10,8 @@ mobile: false
 
 ## SEO
 
+如何提高 seo
+
 1、合理的 title、description、keywords
 
 搜索引擎对着这项的权重逐个减小，title 值强调重点即可，重要关键词出现不要超过 2 次，而且要靠前，不同页面 title 要有所不同；description 把页面内容高度概括，长度合适，不可过分堆砌关键词，不同页面 description 有所不同；keywords 列举出重要关键词即可

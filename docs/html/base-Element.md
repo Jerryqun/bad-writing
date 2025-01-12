@@ -8,9 +8,16 @@ title: Element 和 Node 的关系
 mobile: false
 ---
 
-## Element 和 Node 的关系
+## Element 元素 和 Node 节点 的关系
 
 <a target="_blank" href="https://blog.csdn.net/zz_jesse/article/details/102815299">参考</a>
+
+Node 节点包括  
+Element Node：表示文档中的 HTML 或 XML 元素（如 `<div>, <p>, <a>` 等）。  
+Text Node：表示元素中的文本内容。  
+Comment Node：表示注释。  
+Document Node：表示整个文档。  
+属性节点：通常不作为 DOM 节点直接处理，但在某些情况下也可视为节点的类型。
 
 - DOM 是一棵树， 所有节点都是 Node
 - Node 是 Element 的基类

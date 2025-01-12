@@ -70,6 +70,26 @@ Element.scrollIntoView 方法滚动当前元素，进入浏览器的可见区域
 
 使用该方法的原理与使用锚点的原理类似，在页面最上方设置目标元素，当页面滚动时，目标元素被滚动到页面区域以外，点击回到顶部按钮，使目标元素重新回到原来位置，则达到预期效果
 
+element.scrollIntoView(options);
+
+behavior:
+类型：String
+描述：定义滚动行为。可选值包括：  
+"auto": 默认值，立即滚动到元素。  
+"smooth": 平滑滚动到元素。
+
+block:
+类型：String  
+描述：定义元素在垂直方向上的对齐。可选值包括：  
+"start": 元素的顶部与视口的顶部对齐。  
+"center": 元素的中心与视口的中心对齐。  
+"end": 元素的底部与视口的底部对齐。  
+"nearest": 将元素滚动到最接近的边界（顶部或底部），具体取决于元素当前的位置和视口的大小。
+
+inline:
+类型：String  
+描述：定义元素在水平方向上的对齐。可选值和含义与 block 类似。
+
 ```html
 <body style="height:2000px;">
   <div id="target"></div>
