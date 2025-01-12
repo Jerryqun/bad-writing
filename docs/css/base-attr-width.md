@@ -24,7 +24,7 @@ title: width:100%
 <br/>
 
 当元素被设置了 postion: fixed 的时候，是一直基于 body 的，其宽度就是 body 的宽度
-补充一点：不论 box-sizing 设置为 border-box 还是 content-box,width 继承的都是‘父’级元素的内容区的宽度
+补充一点：`不论 box-sizing 设置为 border-box 还是 content-box,width 继承的都是‘父’级元素的内容区的宽度`
 <br/>
 
 当 padding、margin 取值为百分比时，百分比的值是以父元素的 width 为参考
