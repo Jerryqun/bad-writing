@@ -10,5 +10,5 @@ title: 单词记忆
 
 composite 合成的  
 inherit 继承  
-anonymous 匿名的
+anonymous 匿名的  
 vendors 供应商

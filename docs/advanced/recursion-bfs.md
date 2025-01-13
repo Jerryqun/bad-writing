@@ -8,7 +8,7 @@ mobile: false
 title: bfs
 ---
 
-## BFS 广度优先搜搜
+## BFS 广度优先搜索
 
 ```js
 // 与队列相关  先进先出

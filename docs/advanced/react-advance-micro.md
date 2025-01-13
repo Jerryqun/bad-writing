@@ -36,7 +36,7 @@ title: 微前端
 
 获取到微应用 JS 的文本字符串后，需要具备手动执行 JS 文本的能力。在 Web 应用中执行 JS 文本字符串的方式有如下几种：
 
-- 通过 Script 标签加载内嵌的 JS 文本
+- `通过 Script 标签加载内嵌的 JS 文本`
 - 通过 eval 执行 JS 文本
 - 通过 Function 执行 JS 文本
 
@@ -84,7 +84,7 @@ document.head.appendChild(scriptElement);
 
 ## css 隔离
 
-如果要彻底实现 CSS 的隔离，最好的方式是实现 Renderer 进程中浏览上下文的隔离，例如之前讲解的 iframe 隔离，它可以天然实现 CSS 隔离。但是如果微应用和主应用在同一个 DOM 环境中，那么仍然有几种思路可以避免 CSS 样式污染：
+如果要彻底实现 CSS 的隔离，`最好的方式是实现 Renderer 进程中浏览上下文的隔离`，例如之前讲解的 iframe 隔离，它可以天然实现 CSS 隔离。但是如果微应用和主应用在同一个 DOM 环境中，那么仍然有几种思路可以避免 CSS 样式污染：
 
 - 对微应用的每一个 CSS 样式和对应的元素进行特殊处理，从而保证样式唯一性，例如 Vue 的 Scoped CSS
 - 对微应用的所有 CSS 样式添加一个特殊的选择器规则，从而限定其影响范围
@@ -150,7 +150,7 @@ window.addEventListener('myEvent', (event) => {
 
 <a href="https://juejin.cn/post/7346865556328644623">参考</a>
 
-1. . 使用 iframe 创建沙箱环境
+1. 使用 iframe 创建沙箱环境
 
 ```js
 <!DOCTYPE html>
