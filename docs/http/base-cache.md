@@ -139,21 +139,21 @@ localStorage.hasOwnProperty('userName'); // true
 sessionStorage.hasOwnProperty('userName'); // false
 ```
 
-### 主要特性
+#### sessionStorage 主要特性
 
 - **会话级别生命周期**：`sessionStorage` 存储的数据仅在当前页面会话期间有效，关闭页面或浏览器会导致数据丢失。
 - **同源隔离**：`sessionStorage` 遵循同源策略，不同的源无法共享存储的数据。
 - **页面隔离**：不同的页面（即使是相同的源）拥有不同的 `sessionStorage`，除非它们在同一个浏览器窗口的同一个标签页中打开，例如通过 `<iframe>` 标签。
 - **容量限制**：`sessionStorage` 相对于 `cookie` 有较大的存储容量限制（通常至少 5MB）。
 
-### 使用场景
+#### sessionStorage 使用场景
 
 - **表单数据的临时保存**：在填写长表单时，可将数据存储在 `sessionStorage` 中，避免因刷新或错误导致数据丢失。
 - **页内状态管理**：存储页面的状态（如选项卡位置、滚动位置等），在用户回到页面时恢复这些状态。
 - **会话期间的数据传递**：在同一浏览器标签的不同页面之间传递数据，例如在单页应用程序(SPA)中。
 - **记住滚动条**：列表页的滚动条位置是保存在 `sessionStorage` 中的，当用户刷新页面时，滚动条会自动返回到上次的位置。
 
-### 如何使用
+#### sessionStorage 如何使用
 
 `sessionStorage` 可以通过简单的键值对 API 进行操作，包括 `setItem`、`getItem`、`removeItem` 和 `clear` 方法。
 
@@ -171,7 +171,7 @@ sessionStorage.removeItem('key');
 sessionStorage.clear();
 ```
 
-### 注意事项
+#### sessionStorage 注意事项
 
 - sessionStorage 不能在多个窗口或标签页之间共享数据，但是当通过 window.open 或链接打开新页面时(不能是新窗口)，新页面会复制前一页的 sessionStorage。
 
@@ -187,12 +187,14 @@ sessionStorage.clear();
 都存在客户端
 
 不同点<br/>
-1、cookie 数据存储不能大于 4k sessionStorage 和 localStorage 最大可 5M(存储数据的大小) <br/>
-2、cookie 可以设置过期时间 sessionStorage 是当前会话关闭时消失 localStorage 永远不会消失，除非手动删除(生命周期)<br/>
+1、cookie 数据存储不能大于 `4k`, sessionStorage 和 localStorage 最大可 `5M`(存储数据的大小) <br/>
+2、cookie 可以设置过期时间 ,sessionStorage 是当前会话关闭时消失 ,localStorage 永远不会消失，除非手动删除(生命周期)<br/>
 3、cookie 会自动带在请求头里面送往服务器<br/>
 
-ajax 请求的接口 set-Cookies 的时候如果是跨站
+ajax 请求的接口 set-Cookies 的时候如果是跨站  
 必须开启 withCredentials: true 请求才会带上 cookie，不开启 set-Cookies 也会不生效<br/>
+
+在 Axios 中，withCredentials 的默认值是 false。这意味着在跨域请求时，默认情况下不会发送 cookies 或 HTTP 授权头等凭据
 
 ## sessionid
 
@@ -226,9 +228,9 @@ ajax 请求的接口 set-Cookies 的时候如果是跨站
   强制缓存生效、协商缓存生效
 
 - 手动刷新：F5, 点击刷新按钮，点击右侧菜单  
-  强制缓存失效、协商缓存生效
+  `强制缓存失效、协商缓存生效`
 
-- 强制刷新：ctrl+f5/command+shift+f5  
+- 强制刷新：ctrl+f5/command+shift+f5 （mac 电脑：Command + Shift + R ）  
   强制缓存失效、协商缓存失效
 
 ## 如何实现可过期的 localStorage 数据
@@ -291,9 +293,9 @@ window.addEventListener('storage', (e) => {
 ```
 
 当两次 setItem 更新的值一样时，监听方法是不会触发的；  
-storage 事件只能监听到 localStorage 的变化。
+`storage 事件只能监听到 localStorage 的变化`。
 
-2. 监听同一个页面
+2. 监听同一个页面 (通过重写 setItem)
 
 ```js
 (() => {
@@ -317,7 +319,7 @@ window.addEventListener('setItemEvent', function (e) {
 });
 ```
 
-## 存储容量
+## 计算存储容量
 
 ```js
 let str = '0123456789';

@@ -10,8 +10,6 @@ mobile: false
 
 ## 如何解决资源代理时 https 域名不能访问 http 资源
 
-https://github.dev/Jerryqun/golden-house
-
 错误提示：
 Mixed Content: The page at https://xxx was loaded over HTTPS
 
@@ -44,7 +42,7 @@ xhr.onreadystatechange = function () {
 xhr.send(null);
 
 const xhr = new XMLHttpRequest();
-xhr.open('POST', 'https://pmsaas-console.taobao.net',true); // 第三个参数true 表示异步 false表示同步 默认是异步
+xhr.open('POST', 'https://pmsaas-console.taobao.net', true); // 第三个参数true 表示异步 false表示同步 默认是异步
 xhr.onreadystatechange = function () {
   if (xhr.readyState == 4 && xhr.status == 200) {
     console.log(xhr.getResponseHeader('server'));
@@ -54,22 +52,19 @@ xhr.onreadystatechange = function () {
   }
 };
 const params = {
-  name:'cq'
-}
+  name: 'cq',
+};
 xhr.send(JSON.stringify(params));
 
 // xhr.readyState 状态码
 // 0 - UNSET 尚未调用open方法
 // 1 - OPENDED open方法已经被调用
-// 2 - send方法已被调用 
+// 2 - send方法已被调用
 // 3 - loading下载中
 // 4 - DONE完成
 
 // xhr.status http状态码
-
 ```
-
-
 
 ## fetch 用法
 
@@ -98,7 +93,7 @@ fetch('https://...', {
 ## 域名、二级域名、同站、同域概念
 
 同源：协议（protocol）、主机名（host）和端口（port）相同，则为同源； <br/>
-同站：有效顶级域名（Effective Top-Level-Domain，eTLD）和二级域名相同，则为同站。<br/>
+同站：`有效顶级域名（Effective Top-Level-Domain，eTLD）和二级域名相同，则为同站`。<br/>
 
 例如 github.io 是一个有效顶级域名，如果将 .io 视为有效顶级域名，那么 https://ziyi2.github.io 和 https://xxholly32.github.io 将被浏览器视为同站
 

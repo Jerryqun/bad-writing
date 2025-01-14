@@ -12,7 +12,7 @@ mobile: false
 
 ## 一、简单请求
 
-method 属于以下三种之一: GET | HEAD | POST<br/>
+method 属于以下三种之一: `GET | HEAD | POST`<br/>
 HTTP 的头信息不超出以下几种字段：<br/>
 
 ```bash
@@ -29,15 +29,15 @@ Content-Type：只限于三个值 application/x-www-form-urlencoded、multipart/
 2、Access-Control-Allow-Credentials
 该字段可选。它的值是一个布尔值，表示是否允许发送 Cookie。默认情况下，Cookie 不包括在 CORS 请求之中。设为 true，即表示服务器明确许可，Cookie 可以包含在请求中，一起发给服务器。这个值也只能设为 true，如果服务器不要浏览器发送 Cookie，删除该字段即可。
 
-axios withCredentials 默认为 false
-当前端开启 withCredentials 为 true 时 后端必须设置
+axios withCredentials 默认为 false  
+当前端开启 withCredentials 为 true 时 后端必须设置  
 this.header('Access-Control-Allow-Credentials', 'true');
 
 如果要发送 Cookie，Access-Control-Allow-Origin 就不能设为星号，必须指定明确的、与请求网页一致的域名。同时，Cookie 依然遵循同源政策，只有用服务器域名设置的 Cookie 才会上传，其他域名的 Cookie 并不会上传，且（跨源）原网页代码中的 document.cookie 也无法读取服务器域名下的 Cookie。
 
 ## 二、复杂请求
 
-"预检"请求的头信息包括两个特殊字段。
+"预检"请求的头信息包括两个特殊字段。  
 1、Access-Control-Request-Method
 该字段是必须的，用来列出浏览器的 CORS 请求会用到哪些 HTTP 方法
 
@@ -52,7 +52,7 @@ this.header("Access-Control-Allow-Headers", "appId, appKey");
 2、Access-Control-Allow-Headers
 如果浏览器请求包括 Access-Control-Request-Headers 字段，则 Access-Control-Allow-Headers 字段是必需的。它也是一个逗号分隔的字符串，表明服务器支持的所有头信息字段，不限于浏览器在"预检"中请求的字段
 
-3、Access-Control-Max-Age
+3、`Access-Control-Max-Age`
 该字段可选，用来指定本次预检请求的有效期，单位为秒。上面结果中，有效期是 20 天（1728000 秒），即允许缓存该条回应 1728000 秒（即 20 天），在此期间，不用发出另一条预检请求。
 
 ## 三、写一个 JSONP 跨域
