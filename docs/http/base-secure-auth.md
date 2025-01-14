@@ -21,11 +21,21 @@ mobile: false
 - 服务端查 sessionId 校验 session
 - 成功后正常做业务处理，返回结果
 
-session 的维护给服务端造成很大困扰，我们必须找地方存放它，又要考虑分布式的问题，甚至要单独为了它启用一套 Redis 集群。
+`session 的维护给服务端造成很大困扰`，我们必须找地方存放它，又要考虑分布式的问题，甚至要单独为了它启用一套 Redis 集群。
+
+Session 的存储方式
+
+1. Redis（推荐）：内存型数据库，以 key-value 的形式存，正合 sessionId-sessionData 的场景；且访问快
+2. 直接放到变量里。一旦服务重启就没了
+3. 数据库：普通数据库。性能不高
+
+### node.js 下的 session 处理
+
+使用 npm 包 express-session
 
 ## JWT （成熟的编码方案）
 
-JSON Web Token (JWT) 是一个开放标准，定义了一种传递 JSON 信息的方式。这些信息通过数字签名确保可信
+JSON Web Token (JWT) 是一个开放标准，定义了一种传递 JSON 信息的方式。这些信息通过数字签名确保可信  
 它是一种成熟的 token 字符串生成方案，包含了我们前面提到的数据、签名
 
 ## 单点登录

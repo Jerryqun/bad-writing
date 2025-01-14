@@ -12,7 +12,7 @@ mobile: false
 
 不严谨的 content-type 导致的 XSS 漏洞，想象一下 JSONP 就是你请求 http://youdomain.com?callback=douniwan, 然后返回 douniwan({ data })，那假如请求 http://youdomain.com?callback=<script>alert(1)</script> 不就返回 <script>alert(1)</script>({ data })了吗，如果没有严格定义好 Content-Type（ Content-Type: application/json ），再加上没有过滤 callback 参数，直接当 html 解析了，就是一个赤裸裸的 XSS 了。
 
-解决方法：严格定义 Content-Type: application/json，然后严格过滤 callback 后的参数并且限制长度（进行字符转义，例如<换成&lt，>换成&gt）等，这样返回的脚本内容会变成文本格式，脚本将不会执行。
+解决方法：严格定义 `Content-Type: application/json`，然后严格过滤 callback 后的参数并且限制长度（进行字符转义，例如<换成&lt，>换成&gt）等，这样返回的脚本内容会变成文本格式，脚本将不会执行。
 
 ## 1、反射型 xss
 

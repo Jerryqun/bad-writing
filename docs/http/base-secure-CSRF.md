@@ -25,9 +25,9 @@ CSRF（Cross-site request forgery）跨站请求伪造：攻击者诱导受害�
 
 ## 制定防护策略
 
-- 阻止不明外域的访问
+- 阻止不明外域的访问  
   同源检测  
   Samesite Cookie
-- 提交时要求附加本域才能获取的信息
+- 提交时要求附加本域才能获取的信息  
   CSRF Token  
   双重 Cookie 验证

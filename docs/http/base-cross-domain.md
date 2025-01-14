@@ -121,3 +121,24 @@ secure: true;
 - 当前域下的 js 脚本不能够访问其他域下的 cookie、localStorage 和 indexDB。
 - 当前域下的 js 脚本不能够操作访问操作其他域下的 DOM。
 - 当前域下 ajax 无法发送跨域请求。
+
+## document.domain + iframe 跨域
+
+此方案仅限主域相同，子域不同的跨域应用场景。实现原理：两个页面都通过 js 强制设置 document.domain 为基础主域，就实现了同域。
+
+1）父窗口：(www.domain.com/a.html)
+
+```html
+<iframe id="iframe" src="http://child.domain.com/b.html"></iframe>
+<script>
+  document.domain = 'domain.com';
+  var user = 'admin';
+</script>
+```
+
+2）子窗口：(child.domain.com/a.html)
+
+```js
+document.domain = 'domain.com'; // 获取父窗口中变量
+console.log('get js data from parent ---> ' + window.parent.user);
+```

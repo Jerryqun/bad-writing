@@ -185,4 +185,4 @@ self.addEventListener('connect', (e) => {
 
 ## sharedWorker 调试
 
-在 sharedWorker 线程里使用 console 打印信息，不会出现在主线程的的控制台中。如果你想调试 sharedWorker，需要在 Chrome 浏览器输入 chrome://inspect/ ，这里能看到所有正在运行的 sharedWorker，然后开启一个独立的 dev-tool 面板。
+在 sharedWorker 线程里使用 console 打印信息，不会出现在主线程的的控制台中。如果你想调试 sharedWorker，需要在 Chrome 浏览器输入 `chrome://inspect/ `，这里能看到所有正在运行的 sharedWorker，然后开启一个独立的 dev-tool 面板。
