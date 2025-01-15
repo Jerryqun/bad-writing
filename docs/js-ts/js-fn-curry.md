@@ -57,7 +57,7 @@ const pipe =
 
 具名函数表达式是函数表达式的一种形式，其中函数有一个名字。
 
-函数有一个名字（namedFunction），该名称仅在函数内部可用，用于递归调用或调试
+`函数有一个名字（namedFunction），该名称仅在函数内部可用，用于递归调用或调试`
 
 ```js
 const myFunction = function namedFunction() {

@@ -11,9 +11,9 @@ dom 事件流：
 事件发生时会在元素节点之间按照特定的顺序传播，这个传播过程就叫做 DOM 事件流。
 注意 ⚠️：JS 代码只能执行捕获或者冒泡其中一个阶段，要么是捕获要么是冒泡
 
-冒泡：target => body => html => document
-捕获：document => html => body => target
-事件委托就是利用了冒泡，页面中的事件流也分为三个阶段：事件捕获 => target => 事件冒泡
+冒泡：target => body => html => document  
+捕获：document => html => body => target  
+事件委托就是利用了冒泡，页面中的事件流也分为三个阶段：`事件捕获 => target => 事件冒泡`
 
 首先，事件流处于捕获阶段，从外到内触发 dom 绑定的捕获事件，对同一个 DOM，通过 addEventListener 绑定的捕获函数会按绑定的顺序触发。
 然后，事件进入到目标阶段，这个阶段不区分捕获和冒泡事件，所有事件按照绑定的顺序触发。
@@ -25,8 +25,8 @@ ontouchstart -> ontouchmove -> ontouchend -> onclick
 
 ## e.target 和 e.currentTarget 有什么区别？
 
-e.target：触发事件的元素  
-e.currentTarget：绑定事件的元素
+`e.target：触发事件的元素 `
+`e.currentTarget：绑定事件的元素`
 
 ## 不会冒泡的事件有哪些
 
@@ -80,12 +80,11 @@ scroll：当元素滚动时触发。这个事件在某些浏览器中可能会�
 
 ## JS 中怎么阻止事件冒泡和默认事件
 
-event.stopPropagation()方法
-
+event.stopPropagation()方法  
 这是阻止事件的冒泡方法，不让事件向 document 上蔓延，但是默认事件任然会执行，当你掉用这个方法的时候，如果点击一个连接，这个连接仍然会被打开
 
 event.preventDefault()方法  
 这是阻止默认事件的方法，比如在 a 标签的绑定事件上调用此方法，链接则不会被打开，但是会发生冒泡，冒泡会传递到上一层的父元素；
 
 return false  
-这个方法比较暴力，他会同事阻止事件冒泡也会阻止默认事件；写上此代码，连接不会被打开，事件也不会传递到上一层的父元素；可以理解为 return false 就等于同时调用了 event.stopPropagation()和 event.preventDefault()
+这个方法比较暴力，他会同事阻止事件冒泡也会阻止默认事件；写上此代码，连接不会被打开，事件也不会传递到上一层的父元素；可以理解为 `return false 就等于同时调用了 event.stopPropagation()和 event.preventDefault()`
