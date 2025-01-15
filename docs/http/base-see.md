@@ -4,7 +4,7 @@ group:
   title: 网络知识
   order: 1
 toc: content
-title: see
+title: SSE
 mobile: false
 ---
 
@@ -17,7 +17,7 @@ SSE 全称为 Server-sent events , 是一种基于 HTTP 协议的通信技术，
 ## SSE 技术原理
 
 前文说到，SSE 本质是一个基于 http 协议的通信技术。
-因此想要使用  SSE  技术构建需要服务器实时推送信息到客户端的连接，只需要将传统的  http 响应头的 contentType 设置为 text/event-stream 。
+因此想要使用  SSE  技术构建需要服务器实时推送信息到客户端的连接，只需要将传统的  http 响应头的 `contentType 设置为 text/event-stream `。
 并且为了保证客户端展示的是最新数据，需要将  Cache-Control 设置为 no-cache 。
 在此基础上，SSE  本质是一个 TCP 连接，因此为了保证 SSE 的持续开启，需要将  Connection 设置为 keep-alive 。
 

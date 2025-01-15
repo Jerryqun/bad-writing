@@ -22,7 +22,7 @@ mobile: false
 Restful 是一种新的 api 设计方法
 
 - 传统的 api 设计：把每一个 url 当做一个功能
-- Restful 设计：把每一个 url 当做一个唯一的资源
+- Restful 设计：`把每一个 url 当做一个唯一的资源`
 
 ```base
 1、尽量不要用url参数
@@ -66,7 +66,7 @@ Set-Cookie：
 
 ### 返回头缓存相关
 
-Cache-Control:
-max-age=31536000 缓存时间
-no-cache 表示是强制进行协商缓存
+Cache-Control:  
+max-age=31536000 缓存时间  
+no-cache 表示是强制进行协商缓存  
 no-store 是表示禁止任何缓存策略

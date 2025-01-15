@@ -241,7 +241,7 @@ function resolvePost(req) {
 
 <a target="_blank" href="https://juejin.cn/post/6844904046436843527?searchId=20240312102713E48DA1188C5672261F8F#heading-17">参考</a>
 
-断点续传的原理在于前端/服务端需要记住已上传的切片，这样下次上传就可以跳过之前已上传的部分，有两种方案实现记忆的功能
+`断点续传的原理在于前端/服务端需要记住已上传的切片`，这样下次上传就可以跳过之前已上传的部分，有两种方案实现记忆的功能
 
 前端使用 localStorage 记录已上传的切片 hash
 服务端保存已上传的切片 hash，前端每次上传前向服务端获取已上传的切片
@@ -252,8 +252,8 @@ function resolvePost(req) {
 
 webpack 的产物 contenthash 也是基于这个思路实现的
 
-这里用到另一个库 spark-md5，它可以根据文件内容计算出文件的 hash 值
-另外考虑到如果上传一个超大文件，读取文件内容计算 hash 是非常耗费时间的，并且会引起 UI 的阻塞，导致页面假死状态，所以我们使用 web-worker 在 worker 线程计算 hash，这样用户仍可以在主界面正常的交互
+这里用到另一个库 `spark-md5`，`它可以根据文件内容计算出文件的 hash 值`  
+另外考虑到如果上传一个超大文件，读取文件内容计算 hash 是非常耗费时间的，并且会引起 UI 的阻塞，导致页面假死状态，所以我们使用 web-worker 在 worker 线程计算 hash，这样用户仍可以在主界面正常的交互  
 由于实例化 web-worker 时，参数是一个 js 文件路径且不能跨域，所以我们单独创建一个 hash.js 文件放在 public 目录下，另外在 worker 中也是不允许访问 dom 的，但它提供了 importScripts 函数用于导入外部脚本，通过它导入 spark-md5
 
 ```js
@@ -307,14 +307,14 @@ self.onmessage = e => {
 
 大文件上传
 
-前端上传大文件时使用 Blob.prototype.slice 将文件切片，并发上传多个切片，最后发送一个合并的请求通知服务端合并切片
-服务端接收切片并存储，收到合并请求后使用流将切片合并到最终文件
-原生 XMLHttpRequest 的 upload.onprogress 对切片上传进度的监听
+前端上传大文件时使用 `Blob.prototype.slice `将文件切片，并发上传多个切片，最后发送一个合并的请求通知服务端合并切片  
+服务端接收切片并存储，收到合并请求后使用流将切片合并到最终文件  
+原生 XMLHttpRequest 的 upload.onprogress 对切片上传进度的监听  
 使用 Vue 计算属性根据每个切片的进度算出整个文件的上传进度
 
 断点续传
 
-使用 spark-md5 根据文件内容算出文件 hash
-通过 hash 可以判断服务端是否已经上传该文件，从而直接提示用户上传成功（秒传）
-通过 XMLHttpRequest 的 abort 方法暂停切片的上传
+使用 spark-md5 根据文件内容算出文件 hash  
+通过 hash 可以判断服务端是否已经上传该文件，从而直接提示用户上传成功（秒传）  
+通过 XMLHttpRequest 的 abort 方法暂停切片的上传  
 上传前服务端返回已经上传的切片名，前端跳过这些切片的上传

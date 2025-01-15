@@ -19,7 +19,7 @@ title: 动态生成海报
 将 html 作为 svg 的外联元素，利用 svg 的 API 导出为图片
 
 方案三：使用 NodeJS 调用浏览器方法  
-在后端生成海报，比如可以使用 nodeJS，通过 puppter 等库，调用浏览器的 page 对象，基于 page.screenshots 截图并保存到磁盘。
+在后端生成海报，比如可以使用 nodeJS，通过 puppter 等库，调用浏览器的 page 对象，`基于 page.screenshots 截图并保存到磁盘`。
 
 ## 方案一 demo
 
