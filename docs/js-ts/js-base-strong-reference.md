@@ -44,4 +44,4 @@ console.log(pets); // WeakMap{}
 
 因此这里的关键区就别在于，`强引用可以防止对象进行垃圾回收，而弱引用则不会`。
 
-默认情况下，JavaScript 对其所有引用使用强引用，使用弱引用的唯一方法是使用 WeakMap 或 WeakSet。
+默认情况下，JavaScript 对其所有引用使用强引用，`使用弱引用的唯一方法是使用 WeakMap 或 WeakSet`。

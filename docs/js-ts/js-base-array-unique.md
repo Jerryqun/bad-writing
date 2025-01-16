@@ -87,7 +87,7 @@ const unique = (arr) => {
 // reduce
 const unique = (arr) => {
   return arr.reduce((prev, cur) => {
-    prev.includes(cur) ? prev : [...prev, cur];
+    return prev.includes(cur) ? prev : [...prev, cur];
   }, []);
 };
 ```

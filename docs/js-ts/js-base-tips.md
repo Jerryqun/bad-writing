@@ -893,10 +893,6 @@ function test1(a, b, c, d) {
 test1('a', 'b', 'c', 'd'); // ['a', 'b', 'c', 'd']
 ```
 
-## 转 Boolean
-
-在条件判断时，除了 undefined，null， false， NaN， ''， 0， -0，其他所有值都转为 true，包括所有对象
-
 ## 暂时性死区
 
 暂时性死区是浏览器的 bug：<br/>
@@ -921,6 +917,16 @@ const poll = function () {
 };
 poll();
 ```
+
+## setTimeout 产生延迟的原因
+
+事件循环机制：JavaScript 是单线程的，事件循环机制意味着如果主线程正在处理其他任务（如处理 DOM、网络请求、其他定时器等），setTimeout 的回调函数可能会被推迟执行。
+
+计时器精度：setTimeout 的延迟时间不是绝对的。根据 HTML5 规范，延迟时间会被视为一个最小值，而不是一个准确的值。这意味着浏览器可能会将实际的延迟时间延长到这个值或更长，而不是严格遵循你传入的时间。
+
+系统性能：在高负载的系统或者低性能的设备上，JavaScript 引擎的执行可能会受到影响，从而导致延迟增加。
+
+低频率的定时器：大多数浏览器在窗口不活动时会降低定时器的频率。例如，在一个标签页没有被激活的情况下，setTimeout 的精度可能会受到影响。
 
 ## 数组置空
 
@@ -966,7 +972,7 @@ console.log('arr', arr, 'arr1', arr1); // arr [] arr1 (4) [1, 3, 4, 5]
 
 ## window 和 Window 的区别
 
-window 是 Window 的实例对象
+`window 是 Window 的实例对象`
 
 ```js
 window.__proto__.constructor === Window;
@@ -1257,9 +1263,9 @@ let b = g++; // b = 1  i = 2
 
 该特性是非标准的，所以说、请尽量不要在生产环境中使用它！
 
-语法：
-var immediateID = setImmediate(func, [param1, param2, ...]);
-var immediateID = setImmediate(func);
+语法：  
+var immediateID = setImmediate(func, [param1, param2, ...]);  
+var immediateID = setImmediate(func);  
 window.clearImmediate 方法可以用来取消通过 setImmediate 设置的将要执行的语句, 就像 window.clearTimeout 对应于 window.setTimeout 一样.
 
 因为其兼容性不好，所以会用 setTimeout(fn, 0) 来代替，常用来： 处理 繁重任务（数组操作等等）以避免 js 执行阻塞 ui 的更新
@@ -1332,7 +1338,7 @@ window.a = 1;
 })();
 ```
 
-### kb 转 KB，MB，GB,TB,PB 等形式
+## b 转 KB，MB，GB,TB,PB 等形式
 
 ```js
 function convertBytes(bytes, decimals = 2) {
@@ -1358,7 +1364,7 @@ console.log(convertBytes(123456789)); // 117.74 MB
 console.log(convertBytes(12345678901)); // 11.50 GB
 ```
 
-### 如何判断一个 js 对象是否存在循环引用
+## 如何判断一个 js 对象是否存在循环引用
 
 使用 WeakSet 或者 Set
 
