@@ -7,7 +7,7 @@ title: 原型原型链
 
 ## 原型原型链
 
-JavaScript 中一切引用类型都是对象，对象就是属性的集合
+JavaScript 中一切引用类型都是对象，对象就是属性的集合  
 Array 类型、Function 类型、Object 类型、Date 类型、RegExp 类型等都是引用类型
 
 ### 原型
@@ -25,9 +25,9 @@ const obj = {};
 const arr = [];
 const fn = function () {};
 
-console.log('obj.__proto__', obj.__proto__); // Object;
-console.log('arr.__proto__', arr.__proto__); // Array;
-console.log('fn.__proto__', fn.__proto__); //Function;
+console.log('obj.__proto__', obj.__proto__ === Object.prototype); // true;
+console.log('arr.__proto__', arr.__proto__ === Array.prototype); // true;
+console.log('fn.__proto__', fn.__proto__ === Function.prototype); //true;
 
 const P = new fn();
 
@@ -78,10 +78,10 @@ obj.toString();
 1. 使用 Object.create(null)
 
 ```js
-   const obj = Object.create(null);
-   obj.**proto** = { hack: '污染原型的属性' };
-   console.log(obj); // => {}
-   console.log(obj.hack); // => undefined
+const obj = Object.create(null);
+obj.__proto__ = { hack: '污染原型的属性' };
+console.log(obj); // => {}
+console.log(obj.hack); // => undefined
 ```
 
 2. 使用 Object.freeze(obj) 冻结指定对象，使之不能被修改属性，成为不可扩展对象：
