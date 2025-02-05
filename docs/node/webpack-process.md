@@ -34,7 +34,7 @@ Webpack 默认情况下只能解析 JavaScript 文件，对于其他类型的文
 
 写入文件系统(emitAssets)：在确定好输出内容后，根据配置确定输出的路径和文件名，把文件内容写入到文件系统
 
-## webpack 中 module chunk bundle 区别
+## webpack 中 module、chunk、bundle 区别
 
 1、moudle 各个源码文件，webpack 中一切皆模块<br/>
 2、chunk 多模块合并成的，如 entry 中定义的、import()动态导入的、splitChunks 拆分的<br/>
