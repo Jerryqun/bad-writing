@@ -173,7 +173,7 @@ while (queue.length) {
 queue; // []
 ```
 
-## 用两个栈实现一个队列
+### 用两个栈实现一个队列
 
 ```ts
 class Queue {
