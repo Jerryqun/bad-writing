@@ -12,6 +12,10 @@ title: 栈与队列
 
 栈是一种遵循后进先出（LIFO, Last In First Out）原则的数据结构
 
+栈和数组不是一个东西 ，没有可比性  
+栈是逻辑结构，是理论模型，不管如何实现，不受任何语言的控制  
+数组是物理结构，是真实的功能实现，与编程语言有关系，操作数组的 api 会因为编程语言的不同而不同
+
 ```js
 // 初始状态，栈空
 const stack = [];
@@ -167,6 +171,43 @@ while (queue.length) {
 
 // 队空
 queue; // []
+```
+
+## 用两个栈实现一个队列
+
+```ts
+class Queue {
+  private stack1: number[] = [];
+  private stack2: number[] = [];
+
+  add(params: number): void {
+    this.stack1.push(params);
+  }
+
+  delete(): number | null {
+    while (this.stack1.length) {
+      let pop = this.stack1.pop();
+      if (pop != null) {
+        this.stack2.push(pop);
+      }
+    }
+
+    let res = this.stack2.pop();
+
+    while (this.stack2.length) {
+      let pop = this.stack2.pop();
+      if (pop != null) {
+        this.stack1.push(pop);
+      }
+    }
+
+    return res || null;
+  }
+
+  get length(): number {
+    return this.stack1.length;
+  }
+}
 ```
 
 ## 数组
