@@ -10,6 +10,12 @@ title: 链表
 
 ## 链表
 
+数组需要一段连续的内存空间 ，而链表是零散的  
+`链表、数组、map是有序结构`  
+`对象、set是无序结构`  
+对象和 map 的核心区别是是否有序  
+数组和 set 的核心区别是是否有序
+
 链表结构
 
 ```json
@@ -78,4 +84,77 @@ node1.next = node3;
 
 // 删除逻辑开始
 node1.next = node3.next;
+```
+
+## 依据数组创建单项列表
+
+```js
+type ListNode = {
+  value: number,
+  next?: ListNode,
+};
+
+const createLinkList = (arr: number[]): ListNode | null => {
+  if (arr.length === 0) {
+    return null;
+  }
+  let cur: ListNode = {
+    value: arr[arr.length - 1],
+  };
+  if (arr.length === 1) {
+    return cur;
+  }
+  for (let i = arr.length - 2; i >= 0; i--) {
+    cur = {
+      value: arr[i],
+      next: cur,
+    };
+  }
+  return cur;
+};
+
+console.log('---', createLinkList([1, 2, 3, 4]));
+```
+
+## 反转链表
+
+```js
+// 反转链表的函数
+type LinkListNode = {
+  value: number,
+  next?: LinkListNode,
+};
+
+const createLinkList = (arr: number[]): LinkListNode | undefined => {
+  if (arr.length === 0) {
+    return undefined;
+  }
+  let cur: LinkListNode = {
+    value: arr[arr.length - 1],
+  };
+  if (arr.length === 1) {
+    return cur;
+  }
+  for (let i = arr.length - 2; i >= 0; i--) {
+    cur = {
+      value: arr[i],
+      next: cur,
+    };
+  }
+  return cur;
+};
+const tree = createLinkList([1, 2, 3, 4]);
+function reverseLinkedList(head: LinkListNode | undefined) {
+  let previous = undefined; // 上一个节点
+  let current = head; //当前节点
+
+  while (current) {
+    let next = current.next; // 保存下一个节点
+    current.next = previous; // 反转当前节点的指针
+    previous = current; // 移动前驱指针
+    current = next; // 移动到下一个节点
+  }
+  return previous; // 返回新的头节点
+}
+console.log('reverseLinkedList', reverseLinkedList(tree));
 ```
