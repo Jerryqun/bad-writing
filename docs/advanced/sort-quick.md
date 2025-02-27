@@ -38,3 +38,77 @@ const quicksort = (arr) => {
 const result = quicksort([85, 24, 63, 45, 17, 31, 96, 50]);
 console.log('result', result);
 ```
+
+## 二分查找
+
+针对有序数组
+
+循环方法
+
+```js
+function binarySearch(arr: number[], target: number) {
+  let l = arr.length;
+  if (l === 0) {
+    return -1;
+  }
+  let startIndex = 0;
+  let endIndex = l - 1;
+  while (startIndex <= endIndex) {
+    const midIndex = Math.floor((startIndex + endIndex) / 2);
+    const mid = arr[midIndex];
+    if (target < mid) {
+      endIndex = midIndex - 1;
+    }
+    if (target > mid) {
+      startIndex = midIndex + 1;
+    }
+    if (target === mid) {
+      return midIndex;
+    }
+  }
+  return -1;
+}
+
+const a = binarySearch([1, 2, 3, 4], 4);
+console.log('a', a);
+```
+
+递归方法
+
+```js
+function binarySearch(
+  arr: number[],
+  target: number,
+  startIndex?: number,
+  endIndex?: number,
+) {
+  let l = arr.length;
+  if (l === 0) {
+    return -1;
+  }
+  if (startIndex === null) {
+    startIndex = 0;
+  }
+  if (endIndex === null) {
+    endIndex = arr.length;
+  }
+  if (endIndex > startIndex) {
+    return -1;
+  }
+  const midIndex = Math.floor((startIndex + endIndex) / 2);
+  const mid = arr[midIndex];
+  if (target < mid) {
+    return binarySearch(arr, target, startIndex, midIndex - 1);
+  }
+  if (target > mid) {
+    return binarySearch(arr, target, midIndex + 1, endIndex);
+  }
+  if (target === mid) {
+    return midIndex;
+  }
+  return -1;
+}
+
+const a = binarySearch([1, 2, 3, 4], 4);
+console.log('a', a);
+```

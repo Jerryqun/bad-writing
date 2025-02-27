@@ -210,6 +210,83 @@ class Queue {
 }
 ```
 
+### 用链表实现一个队列
+
+链表实现的队列比数组实现的队列性能要好  
+数组和链表实现 add 方法:都是时间复杂度是 O(1),空间复杂度为 O(N)  
+数组和链表实现 delete 方法: 链表时间复杂度是 O(1)、空间复杂度为 O(N)，数组的空间复杂度为 O(N)、`时间复杂度为 O(N)`
+
+```js
+type LinkNodeList = {
+  value: number;
+  next: LinkNodeList | null;
+};
+
+class MyQueue {
+  private head: LinkNodeList | null = null;
+  private tail: LinkNodeList | null = null;
+  private len: number = 0;
+  add(n: number) {
+    const newNode: LinkNodeList = {
+      value: n,
+      next: null,
+    };
+    if (this.head === null) {
+      this.head = newNode;
+    }
+    const tail = this.tail;
+    if (tail) {
+      tail.next = newNode;
+    }
+    this.tail = newNode;
+    this.len++;
+  }
+
+  delete(): number | null {
+    const head = this.head;
+    if (head === null) {
+      return null;
+    }
+    if (this.len <= 0) {
+      return null;
+    }
+    this.head = head.next;
+    this.len--;
+    return head.value;
+  }
+  get length(): number {
+    return this.len;
+  }
+}
+
+const q = new MyQueue()
+q.add(100)
+q.add(200)
+q.delete()
+q.delete()
+
+console.log('len',q.length)
+// 性能测试
+console.time('queue')
+for(var i = 0;i<100000;i++){
+  q.add(i)
+}
+for(var i = 0;i<100000;i++){
+  q.delete()
+}
+console.timeEnd('queue')
+
+console.time('arr')
+let arr = []
+for(var i = 0;i<100000;i++){
+  arr.push(i)
+}
+for(var i = 0;i<100000;i++){
+  arr.unshift()
+}
+console.timeEnd('arr')
+```
+
 ## 数组
 
 JS 数组未必是真正的数组
@@ -222,3 +299,5 @@ const arr = [1,2,3,4]
 
 const arr = ['haha', 1, {a:1}]  
 它对应的就是一段非连续的内存。此时，JS 数组不再具有数组的特征，其底层使用哈希映射分配内存空间，是由对象链表来实现的。
+
+数组实现队列可能有性能问题
