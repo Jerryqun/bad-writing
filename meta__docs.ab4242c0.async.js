@@ -1934,7 +1934,7 @@ console.log('test', test);
 
 const result = quicksort([85, 24, 63, 45, 17, 31, 96, 50]);
 console.log('result', result);
-`,paraId:1,tocIndex:0},{value:"\u9488\u5BF9\u6709\u5E8F\u6570\u7EC4",paraId:2,tocIndex:1},{value:"\u5FAA\u73AF\u65B9\u6CD5",paraId:3,tocIndex:1},{value:`function binarySearch(arr: number[], target: number) {
+`,paraId:1,tocIndex:0},{value:"\u9488\u5BF9\u6709\u5E8F\u6570\u7EC4",paraId:2,tocIndex:1},{value:"\u51E1\u6709\u5E8F\u5FC5\u4E8C\u5206",paraId:3,tocIndex:1},{value:"\u51E1\u4E8C\u5206\u3001\u65F6\u95F4\u590D\u6742\u5EA6\u5FC5\u5305\u542B O(log(n))",paraId:3,tocIndex:1},{value:"\u4F18\u5316\u5D4C\u5957\u5FAA\u73AF \u53EF\u4EE5\u8003\u8651\u7528\u53CC\u6307\u9488",paraId:3,tocIndex:1},{value:"\u5FAA\u73AF\u65B9\u6CD5",paraId:4,tocIndex:1},{value:`function binarySearch(arr: number[], target: number) {
   let l = arr.length;
   if (l === 0) {
     return -1;
@@ -1959,7 +1959,7 @@ console.log('result', result);
 
 const a = binarySearch([1, 2, 3, 4], 4);
 console.log('a', a);
-`,paraId:4,tocIndex:1},{value:"\u9012\u5F52\u65B9\u6CD5",paraId:5,tocIndex:1},{value:`function binarySearch(
+`,paraId:5,tocIndex:1},{value:"\u9012\u5F52\u65B9\u6CD5",paraId:6,tocIndex:1},{value:`function binarySearch(
   arr: number[],
   target: number,
   startIndex?: number,
@@ -1994,7 +1994,7 @@ console.log('a', a);
 
 const a = binarySearch([1, 2, 3, 4], 4);
 console.log('a', a);
-`,paraId:6,tocIndex:1}]},90974:function(r,e,n){n.r(e),n.d(e,{texts:function(){return a}});var t=n(15456);const a=[{value:"\u6570\u7EC4\u9700\u8981\u4E00\u6BB5\u8FDE\u7EED\u7684\u5185\u5B58\u7A7A\u95F4 \uFF0C\u800C\u94FE\u8868\u662F\u96F6\u6563\u7684",paraId:0,tocIndex:0},{value:"\u94FE\u8868\u3001\u6570\u7EC4\u3001map\u662F\u6709\u5E8F\u7ED3\u6784",paraId:0,tocIndex:0},{value:"\u5BF9\u8C61\u3001set\u662F\u65E0\u5E8F\u7ED3\u6784",paraId:0,tocIndex:0},{value:`
+`,paraId:7,tocIndex:1}]},90974:function(r,e,n){n.r(e),n.d(e,{texts:function(){return a}});var t=n(15456);const a=[{value:"\u6570\u7EC4\u9700\u8981\u4E00\u6BB5\u8FDE\u7EED\u7684\u5185\u5B58\u7A7A\u95F4 \uFF0C\u800C\u94FE\u8868\u662F\u96F6\u6563\u7684",paraId:0,tocIndex:0},{value:"\u94FE\u8868\u3001\u6570\u7EC4\u3001map\u662F\u6709\u5E8F\u7ED3\u6784",paraId:0,tocIndex:0},{value:"\u5BF9\u8C61\u3001set\u662F\u65E0\u5E8F\u7ED3\u6784",paraId:0,tocIndex:0},{value:`
 \u5BF9\u8C61\u548C map \u7684\u6838\u5FC3\u533A\u522B\u662F\u662F\u5426\u6709\u5E8F`,paraId:0,tocIndex:0},{value:`
 \u6570\u7EC4\u548C set \u7684\u6838\u5FC3\u533A\u522B\u662F\u662F\u5426\u6709\u5E8F`,paraId:0,tocIndex:0},{value:"\u94FE\u8868\u7ED3\u6784",paraId:1,tocIndex:0},{value:`{
     // \u6570\u636E\u57DF
