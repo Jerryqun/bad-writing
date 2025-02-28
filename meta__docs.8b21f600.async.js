@@ -2795,11 +2795,11 @@ const preOrder = (root) => {
   },
 };
 
-const preOrder = (root) => {
+const centerOrder = (root) => {
   if (!root) return;
-  preOrder(root.left);
+  centerOrder(root.left);
   console.log(root.val);
-  preOrder(root.right);
+  centerOrder(root.right);
 };
 `,paraId:4,tocIndex:4},{value:`const root = {
   val: 'A',
@@ -2826,7 +2826,39 @@ const preOrder = (root) => {
   preOrder(root.right);
   console.log(root.val);
 };
-`,paraId:5,tocIndex:5}]},47787:function(r,e,n){n.r(e),n.d(e,{texts:function(){return a}});var t=n(4811);const a=[{value:"\u5355\u5143\u6D4B\u8BD5",paraId:0,tocIndex:0},{value:`
+`,paraId:5,tocIndex:5},{value:"\u5982\u679C BST \u4E0D\u5E73\u8861 \uFF0C\u90A3\u53C8\u53D8\u6210\u94FE\u8868\u4E86",paraId:6,tocIndex:6},{value:`
+\u5982\u679C\u662F BBST(\u5E73\u8861\u513F\u8336\u641C\u7D22\u6811)\uFF0C \u65F6\u95F4\u590D\u6742\u5EA6\u4E2D O(logn) \u5C31\u662F\u7B49\u4E8E\u6811\u7684\u9AD8\u5EA6`,paraId:6,tocIndex:6},{value:"\u662F\u4E8C\u53C9\u6811",paraId:7,tocIndex:6},{value:"\u5DE6\u8FB9\u7684\u8282\u70B9\u6BD4\u6839\u8282\u70B9\u5C0F\u6216\u7B49\u4E8E",paraId:7,tocIndex:6},{value:"\u53F3\u8FB9\u7684\u8282\u70B9\u6BD4\u6839\u8282\u70B9\u5927\u6216\u7B49\u4E8E",paraId:7,tocIndex:6},{value:"\u53EF\u4EE5\u7528\u4E8C\u5206\u67E5\u627E",paraId:7,tocIndex:6},{value:"BST \u4E2D\u4E2D\u5E8F\u904D\u5386\u4ECE\u5C0F\u5230\u5927\u6392\u5217",paraId:7,tocIndex:6},{value:"\u5BFB\u627E BST \u4E2D\u7684\u7B2C k \u5C0F\u503C (\u5229\u7528\u7B2C 5 \u70B9)",paraId:8,tocIndex:6},{value:`function getKthValue(root, k) {
+  const centerOrder = (root, res = []) => {
+    if (!root) return;
+    centerOrder(root.left, res);
+    res.push(root.val);
+    centerOrder(root.right, res);
+    return res;
+  };
+  return centerOrder(root)[k - 1] || null;
+}
+
+const root = {
+  val: 'A',
+  left: {
+    val: 'B',
+    left: {
+      val: 'D',
+    },
+    right: {
+      val: 'E',
+    },
+  },
+  right: {
+    val: 'C',
+    right: {
+      val: 'F',
+    },
+  },
+};
+const a = getKthValue(root, 2);
+console.log('a---', a);
+`,paraId:9,tocIndex:6}]},47787:function(r,e,n){n.r(e),n.d(e,{texts:function(){return a}});var t=n(4811);const a=[{value:"\u5355\u5143\u6D4B\u8BD5",paraId:0,tocIndex:0},{value:`
 \u4ECE\u7A0B\u5E8F\u89D2\u5EA6\u51FA\u53D1\uFF0C\u5BF9\u5E94\u7528\u7A0B\u5E8F\u6700\u5C0F\u90E8\u5206\uFF08\u51FD\u6570\u3001\u7EC4\u4EF6\uFF09\u8FDB\u884C\u6D4B\u8BD5\u7684\u8FC7\u7A0B`,paraId:0,tocIndex:0},{value:"\u96C6\u6210\u6D4B\u8BD5",paraId:1,tocIndex:0},{value:`
 \u4ECE\u7528\u6237\u89D2\u5EA6\u51FA\u53D1\uFF0C\u5BF9\u5E94\u7528\u4E2D\u591A\u4E2A\u6A21\u5757\u7EC4\u7EC7\u5230\u4E00\u8D77\u8FDB\u884C\u6D4B\u8BD5`,paraId:1,tocIndex:0},{value:"\u5FEB\u7167\u6D4B\u8BD5",paraId:2,tocIndex:0},{value:`
 \u5FEB\u7167\u6D4B\u8BD5\u7C7B\u4F3C\u4E8E\u627E\u4E0D\u540C\u6E38\u620F\uFF0C\u4E3B\u8981\u7528\u4E8E ui \u6D4B\u8BD5`,paraId:2,tocIndex:0},{value:"\u7AEF\u5230\u7AEF\u6D4B\u8BD5",paraId:3,tocIndex:0},{value:`
