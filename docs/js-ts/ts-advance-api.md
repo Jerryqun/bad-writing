@@ -130,6 +130,11 @@ const todo: TodoPreview = {
 type TodoInfo = Omit<Todo, 'completed' | 'title'>;
 ```
 
+## Omit 和 Exclude 的区别
+
+1. Exclude：用于处理联合类型，排除某些类型（通常是值类型）以产生一个新的联合类型。它关注的是类型的值，而不是对象的属性。
+2. Omit：用于处理对象类型，从对象中排除掉指定的属性，生成一个新的对象类型。它关注的是类型的属性，而非值。
+
 ## Partical
 
 把索引类型的所有属性变成可选
