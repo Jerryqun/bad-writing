@@ -1682,7 +1682,7 @@ class App extends React.Component {
   }
 }
 
-export default App;`},"react-dom":{type:"NPM",value:"18.3.1"}},entry:"index.jsx"},context:{"react-dom":t||(t=n.t(j,2))},renderOpts:{compile:function(){var m=l()(o()().mark(function D(){var L,M=arguments;return o()().wrap(function(v){for(;;)switch(v.prev=v.next){case 0:return v.next=2,n.e(7335).then(n.bind(n,37335));case 2:return v.abrupt("return",(L=v.sent).default.apply(L,M));case 3:case"end":return v.stop()}},D)}));function A(){return m.apply(this,arguments)}return A}()}}}},44740:function(r,e,n){n.r(e),n.d(e,{demos:function(){return o}});var t=n(67294),a=n(72770),o={}},97344:function(r,e,n){n.r(e),n.d(e,{demos:function(){return o}});var t=n(67294),a=n(83998),o={}},9339:function(r,e,n){n.r(e),n.d(e,{demos:function(){return o}});var t=n(67294),a=n(60323),o={}},32476:function(r,e,n){n.r(e),n.d(e,{demos:function(){return o}});var t=n(67294),a=n(61700),o={}},87835:function(r,e,n){n.r(e),n.d(e,{demos:function(){return o}});var t=n(67294),a=n(27214),o={}},38273:function(r,e,n){n.r(e),n.d(e,{demos:function(){return o}});var t=n(67294),a=n(24679),o={}},41440:function(r,e,n){n.r(e)},34499:function(r,e,n){n.r(e)},29518:function(r,e,n){n.r(e)},13229:function(r,e,n){n.r(e),e.default={col:"EPcieVLqfsW84RgEkVIq","col-1":"snpy6HWXXG80p4DGo52i"}},72183:function(r,e,n){n.r(e)},29345:function(r,e,n){n.r(e),n.d(e,{texts:function(){return a}});var t=n(4865);const a=[{value:"\u5FAE\u524D\u7AEF\u67B6\u6784\u5177\u5907\u4EE5\u4E0B\u51E0\u4E2A\u6838\u5FC3\u4EF7\u503C\uFF1A",paraId:0,tocIndex:0},{value:`\u6280\u672F\u6808\u65E0\u5173
+export default App;`},"react-dom":{type:"NPM",value:"18.3.1"}},entry:"index.jsx"},context:{"react-dom":t||(t=n.t(j,2))},renderOpts:{compile:function(){var m=l()(o()().mark(function D(){var L,M=arguments;return o()().wrap(function(v){for(;;)switch(v.prev=v.next){case 0:return v.next=2,n.e(7335).then(n.bind(n,37335));case 2:return v.abrupt("return",(L=v.sent).default.apply(L,M));case 3:case"end":return v.stop()}},D)}));function A(){return m.apply(this,arguments)}return A}()}}}},44740:function(r,e,n){n.r(e),n.d(e,{demos:function(){return o}});var t=n(67294),a=n(72770),o={}},97344:function(r,e,n){n.r(e),n.d(e,{demos:function(){return o}});var t=n(67294),a=n(83998),o={}},9339:function(r,e,n){n.r(e),n.d(e,{demos:function(){return o}});var t=n(67294),a=n(60323),o={}},60190:function(r,e,n){n.r(e),n.d(e,{demos:function(){return o}});var t=n(67294),a=n(96752),o={}},32476:function(r,e,n){n.r(e),n.d(e,{demos:function(){return o}});var t=n(67294),a=n(61700),o={}},87835:function(r,e,n){n.r(e),n.d(e,{demos:function(){return o}});var t=n(67294),a=n(27214),o={}},38273:function(r,e,n){n.r(e),n.d(e,{demos:function(){return o}});var t=n(67294),a=n(24679),o={}},41440:function(r,e,n){n.r(e)},34499:function(r,e,n){n.r(e)},29518:function(r,e,n){n.r(e)},13229:function(r,e,n){n.r(e),e.default={col:"EPcieVLqfsW84RgEkVIq","col-1":"snpy6HWXXG80p4DGo52i"}},72183:function(r,e,n){n.r(e)},29345:function(r,e,n){n.r(e),n.d(e,{texts:function(){return a}});var t=n(4865);const a=[{value:"\u5FAE\u524D\u7AEF\u67B6\u6784\u5177\u5907\u4EE5\u4E0B\u51E0\u4E2A\u6838\u5FC3\u4EF7\u503C\uFF1A",paraId:0,tocIndex:0},{value:`\u6280\u672F\u6808\u65E0\u5173
 \u4E3B\u6846\u67B6\u4E0D\u9650\u5236\u63A5\u5165\u5E94\u7528\u7684\u6280\u672F\u6808\uFF0C\u5FAE\u5E94\u7528\u5177\u5907\u5B8C\u5168\u81EA\u4E3B\u6743`,paraId:1,tocIndex:0},{value:"\u72EC\u7ACB\u5F00\u53D1\u3001\u72EC\u7ACB\u90E8\u7F72",paraId:1,tocIndex:0},{value:`
 \u5FAE\u5E94\u7528\u4ED3\u5E93\u72EC\u7ACB\uFF0C\u524D\u540E\u7AEF\u53EF\u72EC\u7ACB\u5F00\u53D1\uFF0C\u90E8\u7F72\u5B8C\u6210\u540E\u4E3B\u6846\u67B6\u81EA\u52A8\u5B8C\u6210\u540C\u6B65\u66F4\u65B0`,paraId:1,tocIndex:0},{value:"\u589E\u91CF\u5347\u7EA7",paraId:1,tocIndex:0},{value:`
 \u5728\u9762\u5BF9\u5404\u79CD\u590D\u6742\u573A\u666F\u65F6\uFF0C\u6211\u4EEC\u901A\u5E38\u5F88\u96BE\u5BF9\u4E00\u4E2A\u5DF2\u7ECF\u5B58\u5728\u7684\u7CFB\u7EDF\u505A\u5168\u91CF\u7684\u6280\u672F\u6808\u5347\u7EA7\u6216\u91CD\u6784\uFF0C\u800C\u5FAE\u524D\u7AEF\u662F\u4E00\u79CD\u975E\u5E38\u597D\u7684\u5B9E\u65BD\u6E10\u8FDB\u5F0F\u91CD\u6784\u7684\u624B\u6BB5\u548C\u7B56\u7565`,paraId:1,tocIndex:0},{value:"\u72EC\u7ACB\u8FD0\u884C\u65F6",paraId:1,tocIndex:0},{value:`
@@ -17991,7 +17991,179 @@ export default function App() {
 2\u3001Droppable \u7528\u4E8E\u5305\u88C5\u63A5\u6536\u62D6\u62FD\u5143\u7D20\u7684\u7EC4\u4EF6\uFF0C\u4F7F\u7EC4\u4EF6\u80FD\u591F\u653E\u7F6E`,paraId:1,tocIndex:0},{value:`
 3\u3001Draggable \u7528\u4E8E\u5305\u88C5\u4F60\u9700\u8981\u62D6\u52A8\u7684\u7EC4\u4EF6\uFF0C\u4F7F\u7EC4\u4EF6\u80FD\u591F\u88AB\u62D6\u62FD`,paraId:1,tocIndex:0},{value:`
 4\u3001Sensors \u7528\u4E8E\u68C0\u6D4B\u4E0D\u540C\u7684\u8F93\u5165\u65B9\u6CD5\uFF0C\u4EE5\u542F\u52A8\u62D6\u52A8\u64CD\u4F5C\u3001\u54CD\u5E94\u79FB\u52A8\u4EE5\u53CA\u7ED3\u675F\u6216\u53D6\u6D88\u64CD\u4F5C\uFF0C\u5185\u7F6E\u4F20`,paraId:1,tocIndex:0},{value:"\u5982\u679C\u60F3\u8981\u5B98\u7F51 demo \u7684\u4EE3\u7801\u9700\u8981\u4E0B\u8F7D\u6E90\u7801",paraId:2,tocIndex:0},{value:`
-\u5728\u6E90\u7801 stories \u6587\u4EF6\u5939\u4E0B\u5BFB\u627E`,paraId:2,tocIndex:0}]},59300:function(r,e,n){n.r(e),n.d(e,{texts:function(){return a}});var t=n(61700);const a=[{value:"\u53C2\u8003",paraId:0,tocIndex:0},{value:`import React from 'react';
+\u5728\u6E90\u7801 stories \u6587\u4EF6\u5939\u4E0B\u5BFB\u627E`,paraId:2,tocIndex:0}]},28960:function(r,e,n){n.r(e),n.d(e,{texts:function(){return a}});var t=n(96752);const a=[{value:`import { EditOutlined, ExportOutlined, PlusOutlined } from "@ant-design/icons"
+import NiceModal, { useModal } from "@ebay/nice-modal-react"
+import { Button, DatePicker, Drawer, Form, Input, message, Space, Table } from "antd"
+import React, { useState } from "react"
+
+interface DataItem {
+  id: string
+  name: string
+  email: string
+  createdAt: string
+}
+
+const CrudDrawer = NiceModal.create(({ record }: { record?: DataItem }) => {
+  const modal = useModal()
+  const [form] = Form.useForm()
+
+  React.useEffect(() => {
+    form.setFieldsValue(record || {})
+  }, [record])
+
+  const handleSubmit = async () => {
+    try {
+      const values = await form.validateFields()
+      modal.resolve(values)
+      modal.hide()
+    } catch (error) {
+      console.error("\u8868\u5355\u9A8C\u8BC1\u5931\u8D25:", error)
+    }
+  }
+
+  return (
+    <Drawer
+      title={record ? "\u7F16\u8F91\u8BB0\u5F55" : "\u65B0\u5EFA\u8BB0\u5F55"}
+      open={modal.visible}
+      onClose={modal.hide}
+      width={600}
+      footer={
+        <Space style={{ float: "right" }}>
+          <Button onClick={modal.hide}>\u53D6\u6D88</Button>
+          <Button type="primary" onClick={handleSubmit}>
+            \u63D0\u4EA4
+          </Button>
+        </Space>
+      }
+      destroyOnClose
+    >
+      <Form form={form} layout="vertical">
+        <Form.Item name="name" label="\u59D3\u540D" rules={[{ required: true, message: "\u8BF7\u8F93\u5165\u59D3\u540D" }]}>
+          <Input placeholder="\u5F20\u4E09" />
+        </Form.Item>
+        <Form.Item
+          name="email"
+          label="\u90AE\u7BB1"
+          rules={[
+            { required: true, message: "\u8BF7\u8F93\u5165\u90AE\u7BB1" },
+            { type: "email", message: "\u90AE\u7BB1\u683C\u5F0F\u4E0D\u6B63\u786E" }
+          ]}
+        >
+          <Input placeholder="example@domain.com" />
+        </Form.Item>
+      </Form>
+    </Drawer>
+  )
+})
+
+// \u5BFC\u51FADrawer\u7EC4\u4EF6
+const ExportDrawer = NiceModal.create(() => {
+  const modal = useModal()
+  const [form] = Form.useForm()
+
+  const handleExport = async () => {
+    try {
+      const values = await form.validateFields()
+      message.info(\`\u6B63\u5728\u5BFC\u51FA: \${JSON.stringify(values)}\`)
+      modal.hide()
+    } catch (error) {
+      console.error("\u5BFC\u51FA\u53C2\u6570\u9519\u8BEF:", error)
+    }
+  }
+
+  return (
+    <Drawer
+      title="\u5BFC\u51FA\u6570\u636E"
+      open={modal.visible}
+      onClose={modal.hide}
+      width={500}
+      footer={
+        <Space style={{ float: "right" }}>
+          <Button onClick={modal.hide}>\u53D6\u6D88</Button>
+          <Button type="primary" onClick={handleExport}>
+            \u5BFC\u51FA
+          </Button>
+        </Space>
+      }
+    >
+      <Form form={form} layout="vertical">
+        <Form.Item name="dateRange" label="\u65E5\u671F\u8303\u56F4" rules={[{ required: true, message: "\u8BF7\u9009\u62E9\u65E5\u671F\u8303\u56F4" }]}>
+          <DatePicker.RangePicker showTime />
+        </Form.Item>
+        <Form.Item name="format" label="\u5BFC\u51FA\u683C\u5F0F" initialValue="excel">
+          <Input />
+        </Form.Item>
+      </Form>
+    </Drawer>
+  )
+})
+
+const DemoPage = () => {
+  const [data, setData] = useState<DataItem[]>([
+    { id: "1", name: "\u5F20\u4E09", email: "zhangsan@example.com", createdAt: "2023-01-01" }
+  ])
+
+  const handleSubmit = (values: DataItem, id?: string) => {
+    setData((prev) => {
+      if (id) {
+        return prev.map((item) => (item.id === id ? { ...item, ...values } : item))
+      }
+      return [
+        ...prev,
+        {
+          ...values,
+          id: Date.now().toString(),
+          createdAt: new Date().toISOString()
+        }
+      ]
+    })
+    message.success(id ? "\u4FEE\u6539\u6210\u529F" : "\u65B0\u589E\u6210\u529F")
+  }
+
+  const columns = [
+    { title: "\u59D3\u540D", dataIndex: "name" },
+    { title: "\u90AE\u7BB1", dataIndex: "email" },
+    { title: "\u521B\u5EFA\u65F6\u95F4", dataIndex: "createdAt" },
+    {
+      title: "\u64CD\u4F5C",
+      render: (_: any, record: DataItem) => (
+        <Button
+          type="link"
+          icon={<EditOutlined />}
+          onClick={() =>
+            NiceModal.show(CrudDrawer, { record }).then((values: any) => values && handleSubmit(values, record.id))
+          }
+        />
+      )
+    }
+  ]
+
+  return (
+    <NiceModal.Provider>
+      <div style={{ padding: 24 }}>
+        <Space style={{ marginBottom: 16 }}>
+          <Button
+            type="primary"
+            icon={<PlusOutlined />}
+            onClick={() => NiceModal.show(CrudDrawer).then((values: any) => values && handleSubmit(values))}
+          >
+            \u65B0\u5EFA
+          </Button>
+
+          <Button icon={<ExportOutlined />} onClick={() => NiceModal.show(ExportDrawer)}>
+            \u5BFC\u51FA
+          </Button>
+        </Space>
+
+        <Table columns={columns} dataSource={data} rowKey="id" bordered pagination={false} />
+      </div>
+    </NiceModal.Provider>
+  )
+}
+
+export default DemoPage
+
+`,paraId:0,tocIndex:0},{value:"\u6587\u6863",paraId:1,tocIndex:1}]},59300:function(r,e,n){n.r(e),n.d(e,{texts:function(){return a}});var t=n(61700);const a=[{value:"\u53C2\u8003",paraId:0,tocIndex:0},{value:`import React from 'react';
 import ReactDOM from 'react-dom';
 import * as ReactIs from 'react-is';
 
