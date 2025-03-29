@@ -17580,7 +17580,12 @@ class Index extends React.Component {
 }
 
 export default Index;
-`,paraId:10,tocIndex:5}]},71784:function(r,e,n){n.r(e),n.d(e,{texts:function(){return a}});var t=n(51840);const a=[{value:`1\u3001\u5728\u6B63\u5E38\u7684 react \u7684\u4E8B\u4EF6\u6D41\u91CC\uFF08\u5408\u6210\u4E8B\u4EF6\u3001\u751F\u547D\u5468\u671F\u51FD\u6570\uFF09
+`,paraId:10,tocIndex:5},{value:"\u4EC5\u5F53 data.a \u53D8\u5316\u65F6\u624D\u66F4\u65B0\u5F15\u7528",paraId:11,tocIndex:5},{value:`const parent = () => {
+  const [data, setData] = useState({});
+  const memoizedData = useMemo(() => ({ ...data }), [data.a]); // \u4EC5\u5F53 data.a \u53D8\u5316\u65F6\u624D\u66F4\u65B0\u5F15\u7528
+  return <Child data={memoizedData} />;
+};
+`,paraId:12,tocIndex:5}]},71784:function(r,e,n){n.r(e),n.d(e,{texts:function(){return a}});var t=n(51840);const a=[{value:`1\u3001\u5728\u6B63\u5E38\u7684 react \u7684\u4E8B\u4EF6\u6D41\u91CC\uFF08\u5408\u6210\u4E8B\u4EF6\u3001\u751F\u547D\u5468\u671F\u51FD\u6570\uFF09
 setState \u548C useState \u662F\u5F02\u6B65\u6267\u884C\u7684\uFF08\u4E0D\u4F1A\u7ACB\u5373\u66F4\u65B0 state \u7684\u7ED3\u679C\uFF09
 \u591A\u6B21\u6267\u884C setState \u548C useState\uFF0C\u53EA\u4F1A\u8C03\u7528\u4E00\u6B21\u91CD\u65B0\u6E32\u67D3 render,
 \u4E0D\u540C\u7684\u662F\uFF0CsetState \u4F1A\u8FDB\u884C state \u7684\u5408\u5E76\uFF0C\u800C useState \u5219\u4E0D\u4F1A\u3002
