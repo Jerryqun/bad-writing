@@ -774,3 +774,50 @@ const myType = (params) => {
 ## 序列化 和反序列化
 
 在 JavaScript 中，序列化是将一个 JavaScript 对象或值转换为字符串的过程。序列化的主要用途是在网络传输中发送数据，或者将数据保存到本地存储、文件等地方。通常使用 JSON.stringify() 方法来完成序列化，反过来的过程叫做反序列化，即将 JSON 字符串转换回 JavaScript 对象，这通常使用 JSON.parse() 方法实现
+
+## setTimeout 和 setInterval 误差
+
+在 JavaScript 中，setTimeout 和 setInterval 可能会出现时间误差（drift），尤其是在长时间运行或者系统负载较高的情况下。这种误差源于事件循环的机制：当浏览器忙于处理其他任务时，计时器事件可能会延迟。为了减少这种误差，可以考虑以下优化方案：
+
+1. 使用 requestAnimationFrame：
+
+```js
+function step() {
+  console.log('render---');
+  // 你的逻辑
+  window.requestAnimationFrame(step);
+}
+window.requestAnimationFrame(step);
+```
+
+2. 保持计算时间间隔的一致性：
+   在 setTimeout 或 setInterval 的回调中使用实际的时间戳来计算下一个时间点，而不是仅依赖设定的间隔。
+
+```js
+const expectedInterval = 1000; // 期望的间隔时间，单位为毫秒
+
+let lastTimestamp = Date.now();
+
+function accurateInterval() {
+  const now = Date.now();
+  const drift = now - lastTimestamp - expectedInterval;
+
+  // 更新 lastTimestamp 为现在
+  lastTimestamp = now;
+
+  // 在这里执行任务
+  console.log('Interval task is executed.');
+
+  // 根据误差进行调整
+  setTimeout(accurateInterval, expectedInterval - drift);
+}
+
+setTimeout(accurateInterval, expectedInterval);
+```
+
+3. 使用 Web Workers：
+4. 减少代码阻塞
+   尽可能优化和避免阻塞主线程的代码，比如减少 DOM 操作和复杂计算，同时谨慎使用同步 API。
+
+5. 监控和调整系统负载：
+   观察和分析系统负载状况，避免在浏览器任务繁忙的时候执行高频定时器任务

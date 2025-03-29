@@ -178,3 +178,47 @@ function MyComponent() {
   );
 }
 ```
+
+## 在 React 中如何实现代码分割？有哪些常见方式？
+
+1. React.lazy + Suspense（官方推荐）
+
+```js
+const LazyComponent = React.lazy(() => import('./LazyComponent'));
+function App() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <LazyComponent />
+    </Suspense>
+  );
+}
+```
+
+2. import() 动态导入（适用于路由懒加载）
+
+```js
+import { lazy } from 'react';
+const LazyPage = lazy(() => import('./pages/LazyPage'));
+```
+
+3. React Loadable（第三方库，适用于更复杂的场景）
+
+```js
+import Loadable from 'react-loadable';
+const LoadableComponent = Loadable({
+  loader: () => import('./MyComponent'),
+  loading: () => <div>Loading...</div>,
+});
+```
+
+4. Webpack import() + optimization.splitChunks（适用于手动分割多个模块）
+
+```js
+module.exports = {
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+  },
+};
+```
