@@ -122,12 +122,13 @@ targetOrigin 指定哪些窗口可以接收消息，作为安全措施。它是�
   适用于 SPA
 - 服务端渲染 ssr
   终极方案, react 的 next.js
-- App 预取  
-  h5 在 app webview 中
+- App 预取
+  h5 在 app webview 中，如用户访问列表页时候，app 预加载文章首屏内容
 - 分页
 - 图片懒加载  
   先展示文本 `提前设置好图片的尺寸不然会触发重排`
 - hybrid （file 协议读取文件）
+- 配合骨架屏
 
 ## 后端返回 10w 数据 如何处理
 
@@ -139,7 +140,7 @@ js 处理 10 万条数据没问题
 
 - 后端解决
 - node 中间层
-- 虚拟列表
+- 虚拟列表（只渲染可视区域的 dom）
   只渲染可视区域（react-virtualized） 兼容性问题
 
 ## 用一个 div 模拟 textarea 的实现

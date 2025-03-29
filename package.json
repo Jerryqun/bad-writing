@@ -22,9 +22,10 @@
     ]
   },
   "dependencies": {
+    "@ant-design/icons": "^6.0.0",
     "@babel/preset-env": "^7.24.6",
     "antd": "^5.13.3",
-    "l": "^0.6.0"
+    "axios": "^1.8.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
