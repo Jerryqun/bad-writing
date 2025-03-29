@@ -134,3 +134,13 @@ class Index extends React.Component {
 
 export default Index;
 ```
+
+仅当 data.a 变化时才更新引用
+
+```js
+const parent = () => {
+  const [data, setData] = useState({});
+  const memoizedData = useMemo(() => ({ ...data }), [data.a]); // 仅当 data.a 变化时才更新引用
+  return <Child data={memoizedData} />;
+};
+```
