@@ -80,3 +80,4 @@ const ui = (
 - 异步代码 (e.g. setTimeout or requestAnimationFrame callbacks)
 - 服务端的渲染代码
 - error boundaries 自己抛出的错误
+- 开发环境直接抛出错误，生成环境生效
