@@ -651,6 +651,14 @@ const str = '123';
 str.concat('32');
 ```
 
+concat 传入数组会解构第一层;
+
+```js
+let arr = [];
+arr.concat([1, 2, 3, [4]]);
+console.log('arr: ', arr); // [1, 2, 3, [4]]
+```
+
 2、substring 和 substr 的区别是什么
 参数不同：substring() 方法接受两个参数，分别表示起始位置和结束位置（不包括结束位置对应的字符），而 substr() 方法接受两个参数，第一个参数表示起始位置，第二个参数表示要截取的字符个数。
 
