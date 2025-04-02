@@ -34,10 +34,11 @@ let cat = { name: 'Kitty' };
 pets.set(cat, 'Kitty');
 console.log(pets); // WeakMap {{…} => 'Kitty'}
 cat = null;
-```
 
 // 等待垃圾回收后
 console.log(pets); // WeakMap{}
+```
+
 通过利用 WeakMap 及其附带的弱引用，我们可以看到两种类型的引用之间的差异。虽然对原始 cat 对象的强引用仍然存在，但 cat 对象仍然存在于 WeakMap 中，我们可以毫无问题地访问它。
 
 但是，当我们通过将 cat 变量重新赋值 null 来覆盖对原始 cat 对象的引用时，由于内存中对原始对象的唯一引用是来自我们创建的 WeakMap 的弱引用，所以它不会阻止垃圾回收的发生。这意味着当 JavaScript 引擎再次运行垃圾回收过程时，cat 对象将从内存和我们分配给它的 WeakMap 中删除。
