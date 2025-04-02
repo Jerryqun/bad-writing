@@ -184,3 +184,7 @@ const curriedAdd = curry(add);
 const addFive = curriedAdd(5);
 console.log(addFive(3)); // 输出 8
 ```
+
+## 闭包是内存泄漏吗？
+
+严格来说闭包不是内存泄漏，只有不符合预期的泄漏才是内存泄漏，闭包是已知的内存泄漏。闭包的数据是不可被垃圾回收的
