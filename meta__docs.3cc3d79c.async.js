@@ -8006,7 +8006,7 @@ service.fetchData(); // \u8F93\u51FA: Data fetched
 console.log(service.fetchStatus); // \u8F93\u51FA: Fetching status...
 service.fetchStatus = 'Complete'; // \u8F93\u51FA: Status set to Complete
 `,paraId:7,tocIndex:0},{value:"\u4E8C\u3001\u5168\u65B0\u7684\u6570\u636E\u7C7B\u578B\u548C\u6570\u636E\u7ED3\u6784",paraId:8,tocIndex:0},{value:`
-Symbol Set Map WeakSet WeakMap`,paraId:8,tocIndex:0},{value:"sSet",paraId:9,tocIndex:0},{value:`
+Symbol Set Map WeakSet WeakMap`,paraId:8,tocIndex:0},{value:"Set",paraId:9,tocIndex:0},{value:`
 \u6210\u5458\u4E0D\u80FD\u91CD\u590D`,paraId:9,tocIndex:0},{value:`
 \u53EA\u6709\u5065\u503C\uFF0C\u6CA1\u6709\u5065\u540D\uFF0C\u6709\u70B9\u7C7B\u4F3C\u6570\u7EC4`,paraId:9,tocIndex:0},{value:`
 \u53EF\u4EE5\u904D\u5386\uFF0C\u65B9\u6CD5\u6709 add, delete,has`,paraId:9,tocIndex:0},{value:"weakSet",paraId:10,tocIndex:0},{value:`
