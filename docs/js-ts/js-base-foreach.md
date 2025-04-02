@@ -145,3 +145,8 @@ for、while、for in、for of、for await of 使用 await 都是生效的；<br/
 1、传统的 for 循环  
 2、for of  
 3、es6 的 some
+
+## for 和 forEach 哪个快
+
+for 更快  
+因为 forEach 每次都要创建一个函数来调用，而 for 不用创建函数 ，函数需要独立的作用域，需要额外的开销

@@ -5,13 +5,15 @@ toc: content
 title: Event-loop
 ---
 
-## Event-loop （基于 queue、先进先出）
+## Event-loop-浏览器 （基于 queue、先进先出）
 
 微任务执行早于宏任务
 
 微任务是在下一轮 dom 渲染之前执行，宏任务是下一轮 dom 渲染之后执行
 
 宏任务 =》 微任务=》dom 渲染 =》宏任务
+
+setTimeout(fn,1000) fn 函数打入宏任务队列的时机是 1s 后而不是 setTimeout(fn,1000) 的执行时机
 
 ### 宏任务
 
