@@ -59,7 +59,7 @@ service.fetchStatus = 'Complete'; // 输出: Status set to Complete
 二、全新的数据类型和数据结构<br/>
 Symbol Set Map WeakSet WeakMap
 
-- sSet<br/>
+- Set<br/>
   成员不能重复<br/>
   只有健值，没有健名，有点类似数组<br/>
   可以遍历，方法有 add, delete,has<br/>
