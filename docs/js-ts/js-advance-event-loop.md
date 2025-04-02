@@ -5,7 +5,13 @@ toc: content
 title: Event-loop
 ---
 
-## Event-loop
+## Event-loop （基于 queue、先进先出）
+
+微任务执行早于宏任务
+
+微任务是在下一轮 dom 渲染之前执行，宏任务是下一轮 dom 渲染之后执行
+
+宏任务 =》 微任务=》dom 渲染 =》宏任务
 
 ### 宏任务
 
