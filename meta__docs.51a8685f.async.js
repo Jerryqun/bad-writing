@@ -6625,7 +6625,29 @@ const y = new BigNumber(0.1);
 const dividedBy = x.dividedBy(y);
 console.log('mod: ', dividedBy.toString()); // 3
 `,paraId:10,tocIndex:1},{value:"\u5C06\u6D6E\u70B9\u6570\u8F6C\u6362\u4E3A\u6574\u6570\u8BA1\u7B97",paraId:11,tocIndex:1},{value:`let result = (0.1 * 100 + 0.2 * 100) / 100; // 0.3
-`,paraId:12,tocIndex:1}]},48743:function(r,e,n){n.r(e),n.d(e,{texts:function(){return a}});var t=n(97403);const a=[{value:"JSBridge",paraId:0,tocIndex:0},{value:"Native \u7AEF\u548C Web \u7AEF\u7684\u53CC\u5411\u901A\u4FE1\uFF0C\u8FD9\u5C31\u662F JSBridge",paraId:1,tocIndex:0}]},10047:function(r,e,n){n.r(e),n.d(e,{texts:function(){return a}});var t=n(58287);const a=[{value:`console.time();
+`,paraId:12,tocIndex:1}]},48743:function(r,e,n){n.r(e),n.d(e,{texts:function(){return a}});var t=n(97403);const a=[{value:"js \u65E0\u6CD5\u76F4\u63A5\u8C03\u7528 native API\u3001\u9700\u8981\u901A\u8FC7\u4E00\u4E9B\u7279\u5B9A\u7684\u683C\u5F0F\u6765\u8C03\u7528 \u4F8B\u5982\u5FAE\u4FE1\u7684 JSSDK\u3002\u9875\u9762 js \u8C03\u7528\u5FAE\u4FE1 app \u7684\u5E95\u5C42\u80FD\u529B\u3002",paraId:0,tocIndex:0},{value:"JSBridge",paraId:1,tocIndex:0},{value:"Native \u7AEF\u548C Web \u7AEF\u7684\u53CC\u5411\u901A\u4FE1\uFF0C\u8FD9\u5C31\u662F JSBridge\uFF0C\u5BF9 app \u80FD\u529B\u7684\u5C01\u88C5",paraId:2,tocIndex:0},{value:`\u6CE8\u518C\u5168\u5C40 api(\u540C\u6B65)
+window.getVersion = () => {return 1.0}`,paraId:3,tocIndex:1},{value:`URL scheme(\u9002\u5408\u540C\u6B65\u548C\u5F02\u6B65\u573A\u666F)
+\uFF08chrome://dino/ \uFF09`,paraId:3,tocIndex:1},{value:`const sdk = {
+  invoke: (url, data, onSuccess, onError) => {
+    const iframe = document.createElement('iframe');
+    iframe.style.visibility = hidden;
+    iframe.onload = () => {
+      const content = iframe.contentWindow.document.body.innerHTML;
+      onSuccess(JSON.stringify(content));
+      iframe.remove();
+    };
+    iframe.onerror = () => {
+      onError();
+    };
+    iframe.scr = \`app-name://\${url}?data=\${JSON.stringify(data)}\`;
+    document.querySelector('body').appendChild(iframe);
+  },
+  // \u6BD4\u5982\u626B\u4E00\u626B
+  scan: () => {},
+  fn1: () => {},
+  fn2: () => {},
+};
+`,paraId:4,tocIndex:1}]},10047:function(r,e,n){n.r(e),n.d(e,{texts:function(){return a}});var t=n(58287);const a=[{value:`console.time();
 let str = '';
 for (let i = 0; i < 100000; i++) {
   str += i;
@@ -15135,7 +15157,7 @@ const server = net.createServer((socket) => {
 server.listen(1337, '127.0.0.1');
 `,paraId:39,tocIndex:16},{value:"\u5728\u66F4\u590D\u6742\u7684\u573A\u666F\u4E2D\uFF0C\u7279\u522B\u662F\u5728\u5FAE\u670D\u52A1\u67B6\u6784\u4E2D\uFF0C\u53EF\u4EE5\u4F7F\u7528\u6D88\u606F\u961F\u5217\u6216\u6D88\u606F\u4E2D\u95F4\u4EF6\uFF08\u5982 RabbitMQ, Kafka, Redis pub/sub\uFF09\u6765\u8FDB\u884C\u4E0D\u540C\u670D\u52A1\u6216\u8FDB\u7A0B\u95F4\u7684\u901A\u4FE1\u3002",paraId:40,tocIndex:17},{value:"\u8FDB\u7A0B\u53EF\u4EE5\u901A\u8FC7\u8BBF\u95EE\u5171\u4EAB\u8D44\u6E90\u6765\u8FDB\u884C\u901A\u4FE1\uFF0C\u6BD4\u5982\u6587\u4EF6\u7CFB\u7EDF\uFF08\u901A\u8FC7\u8BFB\u5199\u6587\u4EF6\u6765\u4EA4\u6362\u6570\u636E\uFF09\uFF0C\u6216\u8005\u6570\u636E\u5E93\u3002",paraId:41,tocIndex:18},{value:"\u8FD9\u4E9B\u65B9\u6CD5\u9002\u7528\u4E8E\u4E0D\u540C\u7684\u573A\u666F\u548C\u9700\u6C42\u3002\u5BF9\u4E8E\u7B80\u5355\u7684\u7236\u5B50\u8FDB\u7A0B\u901A\u4FE1\uFF0C",paraId:42,tocIndex:18},{value:"child_process",paraId:42,tocIndex:18},{value:" \u7684 ",paraId:42,tocIndex:18},{value:"fork",paraId:42,tocIndex:18},{value:" \u548C IPC \u662F\u4E00\u4E2A\u5F88\u597D\u7684\u9009\u62E9\u3002\u5BF9\u4E8E\u66F4\u5927\u89C4\u6A21\u7684\u5206\u5E03\u5F0F\u7CFB\u7EDF\uFF0C\u53EF\u80FD\u9700\u8981\u4F7F\u7528\u5230\u7F51\u7EDC\u5957\u63A5\u5B57\u6216\u8005\u6D88\u606F\u961F\u5217\u3002\u5728\u9009\u62E9\u9002\u5408\u7684\u901A\u4FE1\u65B9\u5F0F\u65F6\uFF0C\u9700\u8981\u8003\u8651\u5230\u7CFB\u7EDF\u7684\u590D\u6742\u5EA6\u3001\u6027\u80FD\u8981\u6C42\u4EE5\u53CA\u53EF\u7EF4\u62A4\u6027\u3002",paraId:42,tocIndex:18},{value:"1\u3001\u5F53\u6587\u4EF6\u5939\u4E2D\u4F7F\u7528/\u548C./\u65F6\u662F\u6709\u533A\u522B\u7684",paraId:43,tocIndex:19},{value:`
 /\u8868\u793A\u6839\u76EE\u5F55\uFF0C./\u8868\u793A\u5F53\u524D\u76EE\u5F55`,paraId:43,tocIndex:19},{value:"2\u3001\u5F53\u5728\u6587\u4EF6\u4E2D\u4F7F\u7528/\u548C./\u65F6\uFF0C\u5982\u679C\u6B64\u65F6\u6587\u4EF6\u5728\u6839\u76EE\u5F55 ",paraId:44,tocIndex:19},{value:`
-/\u548C./\u8868\u793A\u7684\u6587\u4EF6\u8DEF\u5F84\u4E00\u6837`,paraId:44,tocIndex:19},{value:"webpack \u6253\u5305\u65F6 publicPath \u6307\u5B9A\u7684\u662F\u6240\u6709\u9759\u6001\u8D44\u6E90\u7684\u8DEF\u5F84\uFF0C\u800C\u4E0D\u662F\u5355\u6307 index.html \u91CC\u9762\u9759\u6001\u8D44\u6E90\u7684\u8DEF\u5F84",paraId:45,tocIndex:19}]},81856:function(r,e,n){n.r(e),n.d(e,{texts:function(){return a}});var t=n(9987);const a=[{value:"\u53C2\u8003",paraId:0,tocIndex:0},{value:`
+/\u548C./\u8868\u793A\u7684\u6587\u4EF6\u8DEF\u5F84\u4E00\u6837`,paraId:44,tocIndex:19},{value:"webpack \u6253\u5305\u65F6 publicPath \u6307\u5B9A\u7684\u662F\u6240\u6709\u9759\u6001\u8D44\u6E90\u7684\u8DEF\u5F84\uFF0C\u800C\u4E0D\u662F\u5355\u6307 index.html \u91CC\u9762\u9759\u6001\u8D44\u6E90\u7684\u8DEF\u5F84",paraId:45,tocIndex:19},{value:"\u5F00\u542F\u5B50\u8FDB\u7A0B child_process.fork \u548C cluster.fork",paraId:46,tocIndex:20},{value:"\u4F7F\u7528 send \u548C on \u8FDB\u884C\u901A\u8BAF",paraId:46,tocIndex:20}]},81856:function(r,e,n){n.r(e),n.d(e,{texts:function(){return a}});var t=n(9987);const a=[{value:"\u53C2\u8003",paraId:0,tocIndex:0},{value:`
 1\u3001\u53BB package.json \u7684 script \u4E2D\u627E\u5230\u5BF9\u5E94\u7684\u547D\u4EE4\u5E76\u6267\u884C`,paraId:0,tocIndex:0},{value:`
 2\u3001\u76F4\u63A5\u6267\u884C xxx \u4F1A\u62A5\u9519\uFF0C\u56E0\u4E3A\u64CD\u4F5C\u7CFB\u7EDF\u4E2D\u6CA1\u6709\u5B58\u5728 xxx \u8FD9\u4E00\u6761\u6307\u4EE4`,paraId:0,tocIndex:0},{value:`
 3\u3001\u8FD0\u884C npm run xxx \u7684\u65F6\u5019\uFF0Cnpm \u4F1A\u5148\u5728\u5F53\u524D\u76EE\u5F55\u7684 node_modules/.bin \u67E5\u627E\u8981\u6267\u884C\u7684\u7A0B\u5E8F\uFF0C\u5982\u679C\u627E\u5230\u5219\u8FD0\u884C\uFF1B
