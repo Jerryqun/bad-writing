@@ -353,3 +353,8 @@ server.listen(1337, '127.0.0.1');
 /和./表示的文件路径一样<br/>
 
 webpack 打包时 publicPath 指定的是所有静态资源的路径，而不是单指 index.html 里面静态资源的路径
+
+## node 如何开启子进程
+
+- 开启子进程 child_process.fork 和 cluster.fork
+- 使用 send 和 on 进行通讯
