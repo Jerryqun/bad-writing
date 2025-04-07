@@ -66,3 +66,11 @@ export default {
   },
 };
 ```
+
+## vue2 vue3 react 三者 diff 算法有何区别
+
+### diff 算法介绍
+
+1. diff 算法很早就有
+2. diff 算法 应用广泛、如 github 的 pull request 中的代码 diff
+3. 如果要严格 diff 两颗树，时间复杂度是 O(n^3),不可用
