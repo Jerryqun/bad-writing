@@ -18421,11 +18421,26 @@ type IProps = { name: string; age: number; };
  */
 const jsx = <div>hello</div>;
 const ele = React.createElement('div', null, 'hello');
-`,paraId:8,tocIndex:4}]},75373:function(r,e,n){n.r(e),n.d(e,{texts:function(){return a}});var t=n(99920);const a=[{value:"errorCaptured \u76D1\u542C\u4E0B\u7EA7\u7EC4\u4EF6\u9519\u8BEF\uFF0C\u8FD4\u56DE false \u7EC4\u7EC7\u5411\u4E0A\u4F20\u64AD",paraId:0,tocIndex:0},{value:"errorHandler \u76D1\u542C\u5168\u5C40 vue \u7EC4\u4EF6\u9519\u8BEF",paraId:0,tocIndex:0},{value:"window.onerror \u76D1\u542C\u5176\u4ED6 js \u9519\u8BEF\uFF0C\u5982\u5F02\u6B65",paraId:0,tocIndex:0},{value:`beforeCreate
-\u521B\u5EFA\u4E00\u4E2A\u7A7A\u767D\u7684 vue \u5B9E\u4F8B \uFF0Cdata\u3001method \u5C1A\u672A\u88AB\u521D\u59CB\u5316\uFF0C\u4E0D\u53EF\u4F7F\u7528`,paraId:1,tocIndex:1},{value:`created
-vue \u5B9E\u4F8B\u521D\u59CB\u5316\u5B8C\u6210\uFF0C\u5B8C\u6210\u54CD\u5E94\u5F0F\u7ED1\u5B9A\u3002\uFF0Cdata\u3001method \u5DF2\u88AB\u521D\u59CB\u5316\uFF0C\u53EF\u4F7F\u7528\uFF0C\u4F46\u662F\u5C1A\u672A\u5F00\u59CB\u6E32\u67D3\u6A21\u677F`,paraId:1,tocIndex:1},{value:`beforeMount
-\u7F16\u8F91\u6A21\u677F\uFF0C\u8C03\u7528 render \u751F\u6210 vdom\uFF0C\u4F46\u662F\u8FD8\u662F\u6CA1\u5F00\u59CB\u6E32\u67D3 dom`,paraId:1,tocIndex:1},{value:`mounted
-\u5B8C\u6210 dom \u6E32\u67D3\uFF0C\u7EC4\u4EF6\u521B\u5EFA\u5B8C\u6210\uFF0C\u5F00\u59CB\u7531\u521B\u5EFA\u9636\u6BB5\u8FDB\u5165\u8FD0\u884C\u9636\u6BB5`,paraId:1,tocIndex:1}]},32386:function(r,e){e.Z=`// \u5B9A\u4E49\u53D8\u91CF
+`,paraId:8,tocIndex:4}]},75373:function(r,e,n){n.r(e),n.d(e,{texts:function(){return a}});var t=n(99920);const a=[{value:"errorCaptured \u76D1\u542C\u4E0B\u7EA7\u7EC4\u4EF6\u9519\u8BEF\uFF0C\u8FD4\u56DE false \u7EC4\u7EC7\u5411\u4E0A\u4F20\u64AD",paraId:0,tocIndex:0},{value:"errorHandler \u76D1\u542C\u5168\u5C40 vue \u7EC4\u4EF6\u9519\u8BEF",paraId:0,tocIndex:0},{value:"window.onerror \u76D1\u542C\u5176\u4ED6 js \u9519\u8BEF\uFF0C\u5982\u5F02\u6B65",paraId:0,tocIndex:0},{value:"beforeCreate",paraId:1,tocIndex:1},{value:`
+\u521B\u5EFA\u4E00\u4E2A\u7A7A\u767D\u7684 vue \u5B9E\u4F8B \uFF0Cdata\u3001method \u5C1A\u672A\u88AB\u521D\u59CB\u5316\uFF0C\u4E0D\u53EF\u4F7F\u7528`,paraId:1,tocIndex:1},{value:"created",paraId:1,tocIndex:1},{value:`
+vue \u5B9E\u4F8B\u521D\u59CB\u5316\u5B8C\u6210\uFF0C\u5B8C\u6210\u54CD\u5E94\u5F0F\u7ED1\u5B9A\u3002\uFF0Cdata\u3001method \u5DF2\u88AB\u521D\u59CB\u5316\uFF0C\u53EF\u4F7F\u7528\uFF0C\u4F46\u662F\u5C1A\u672A\u5F00\u59CB\u6E32\u67D3\u6A21\u677F`,paraId:1,tocIndex:1},{value:"beforeMount",paraId:1,tocIndex:1},{value:`
+\u7F16\u8F91\u6A21\u677F\uFF0C\u8C03\u7528 render \u751F\u6210 vdom\uFF0C\u4F46\u662F\u8FD8\u662F\u6CA1\u5F00\u59CB\u6E32\u67D3 dom`,paraId:1,tocIndex:1},{value:"mounted",paraId:1,tocIndex:1},{value:`
+\u5B8C\u6210 dom \u6E32\u67D3\uFF0C\u7EC4\u4EF6\u521B\u5EFA\u5B8C\u6210\uFF0C\u5F00\u59CB\u7531\u521B\u5EFA\u9636\u6BB5\u8FDB\u5165\u8FD0\u884C\u9636\u6BB5`,paraId:1,tocIndex:1},{value:"beforeUpdate",paraId:1,tocIndex:1},{value:`
+data \u53D1\u751F\u4E86\u53D8\u5316\uFF0C\u51C6\u5907\u66F4\u65B0 dom\uFF08\u4F46\u662F\u5C1A\u672A\u66F4\u65B0 dom\uFF09`,paraId:1,tocIndex:1},{value:"updated",paraId:1,tocIndex:1},{value:`
+data \u53D1\u751F\u53D8\u5316\uFF0C\u800C\u4E14 dom \u66F4\u65B0\u5B8C\u6210 \uFF08\u4E0D\u8981\u5728 updated \u4E2D\u4FEE\u6539 data\uFF0C\u53EF\u80FD\u4F1A\u5BFC\u81F4\u6B7B\u5FAA\u73AF\uFF09`,paraId:1,tocIndex:1},{value:"beforeUnmount",paraId:1,tocIndex:1},{value:`
+\u7EC4\u4EF6\u8FDB\u5165\u9500\u6BC1\u9636\u6BB5\uFF08\u5C1A\u672A\u9500\u6BC1\uFF0C\u53EF\u6B63\u5E38\u4F7F\u7528\uFF09\uFF0C\u53EF\u79FB\u9664\u3001\u89E3\u7ED1\u4E00\u4E9B\u5168\u5C40\u4E8B\u4EF6\u3001\u81EA\u5B9A\u4E49\u4E8B\u4EF6\u3002`,paraId:1,tocIndex:1},{value:"unmounted",paraId:1,tocIndex:1},{value:`
+\u7EC4\u4EF6\u88AB\u9500\u6BC1\u4E86\uFF0C\u6240\u6709\u7684\u5B50\u7EC4\u4EF6\u4E5F\u88AB\u9500\u6BC1\u4E86`,paraId:1,tocIndex:1},{value:"\u88AB keep-alive \u5305\u88F9 \u7684\u7EC4\u4EF6 created \u751F\u547D\u5468\u671F\u53EA\u4F1A\u6267\u884C\u4E00\u6B21\u3002",paraId:2,tocIndex:2},{value:`<keep-alive >
+  <A>
+</keep-alive >
+`,paraId:3,tocIndex:2},{value:"mounted \u548C updated \u7684\u65F6\u5019\u4E0D\u80FD\u4FDD\u8BC1\u5B50\u7EC4\u4EF6\u5168\u90E8\u6302\u8F7D\u5B8C\u6210",paraId:4,tocIndex:3},{value:"\u9002\u7528$nextTick \u6E32\u67D3\uFF08\u64CD\u4F5C\uFF09 dom",paraId:4,tocIndex:3},{value:"created",paraId:5,tocIndex:4},{value:`mounted\uFF08\u63A8\u8350\uFF09
+created \u548C mounted \u95F4\u9694\u65F6\u95F4\u5F88\u5C0F`,paraId:5,tocIndex:4},{value:"\u7528 setupo \u4EE3\u66FF\u4E86 beforeCreate \u548C created",paraId:6,tocIndex:5},{value:"\u9002\u7528 hooks \u51FD\u6570\u7684\u5F62\u5F0F\uFF0C\u5982 mounted \u6539\u4E3A onMounted()",paraId:6,tocIndex:5},{value:`import { onUpdated, onMounted } from 'vue';
+export default {
+  setup() {
+    onMounted(() => {}),
+    onUpdated(() => {}),
+  },
+};
+`,paraId:7,tocIndex:5}]},32386:function(r,e){e.Z=`// \u5B9A\u4E49\u53D8\u91CF
 $cell-padding: 10px;
 
 .row + .row {
