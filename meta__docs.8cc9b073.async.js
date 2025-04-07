@@ -18421,7 +18421,11 @@ type IProps = { name: string; age: number; };
  */
 const jsx = <div>hello</div>;
 const ele = React.createElement('div', null, 'hello');
-`,paraId:8,tocIndex:4}]},75373:function(r,e,n){n.r(e),n.d(e,{texts:function(){return a}});var t=n(99920);const a=[{value:"errorCaptured \u76D1\u542C\u4E0B\u7EA7\u7EC4\u4EF6\u9519\u8BEF\uFF0C\u8FD4\u56DE false \u7EC4\u7EC7\u5411\u4E0A\u4F20\u64AD",paraId:0,tocIndex:0},{value:"errorHandler \u76D1\u542C\u5168\u5C40 vue \u7EC4\u4EF6\u9519\u8BEF",paraId:0,tocIndex:0},{value:"window.onerror \u76D1\u542C\u5176\u4ED6 js \u9519\u8BEF\uFF0C\u5982\u5F02\u6B65",paraId:0,tocIndex:0}]},32386:function(r,e){e.Z=`// \u5B9A\u4E49\u53D8\u91CF
+`,paraId:8,tocIndex:4}]},75373:function(r,e,n){n.r(e),n.d(e,{texts:function(){return a}});var t=n(99920);const a=[{value:"errorCaptured \u76D1\u542C\u4E0B\u7EA7\u7EC4\u4EF6\u9519\u8BEF\uFF0C\u8FD4\u56DE false \u7EC4\u7EC7\u5411\u4E0A\u4F20\u64AD",paraId:0,tocIndex:0},{value:"errorHandler \u76D1\u542C\u5168\u5C40 vue \u7EC4\u4EF6\u9519\u8BEF",paraId:0,tocIndex:0},{value:"window.onerror \u76D1\u542C\u5176\u4ED6 js \u9519\u8BEF\uFF0C\u5982\u5F02\u6B65",paraId:0,tocIndex:0},{value:`beforeCreate
+\u521B\u5EFA\u4E00\u4E2A\u7A7A\u767D\u7684 vue \u5B9E\u4F8B \uFF0Cdata\u3001method \u5C1A\u672A\u88AB\u521D\u59CB\u5316\uFF0C\u4E0D\u53EF\u4F7F\u7528`,paraId:1,tocIndex:1},{value:`created
+vue \u5B9E\u4F8B\u521D\u59CB\u5316\u5B8C\u6210\uFF0C\u5B8C\u6210\u54CD\u5E94\u5F0F\u7ED1\u5B9A\u3002\uFF0Cdata\u3001method \u5DF2\u88AB\u521D\u59CB\u5316\uFF0C\u53EF\u4F7F\u7528\uFF0C\u4F46\u662F\u5C1A\u672A\u5F00\u59CB\u6E32\u67D3\u6A21\u677F`,paraId:1,tocIndex:1},{value:`beforeMount
+\u7F16\u8F91\u6A21\u677F\uFF0C\u8C03\u7528 render \u751F\u6210 vdom\uFF0C\u4F46\u662F\u8FD8\u662F\u6CA1\u5F00\u59CB\u6E32\u67D3 dom`,paraId:1,tocIndex:1},{value:`mounted
+\u5B8C\u6210 dom \u6E32\u67D3\uFF0C\u7EC4\u4EF6\u521B\u5EFA\u5B8C\u6210\uFF0C\u5F00\u59CB\u7531\u521B\u5EFA\u9636\u6BB5\u8FDB\u5165\u8FD0\u884C\u9636\u6BB5`,paraId:1,tocIndex:1}]},32386:function(r,e){e.Z=`// \u5B9A\u4E49\u53D8\u91CF
 $cell-padding: 10px;
 
 .row + .row {
