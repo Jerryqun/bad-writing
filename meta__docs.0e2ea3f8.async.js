@@ -11776,7 +11776,7 @@ multiply3(2);
 `,paraId:2,tocIndex:1},{value:"\u5B9E\u73B0\u539F\u7406",paraId:3,tocIndex:2},{value:"\u62FF\u5230\u6240\u6709\u7684\u56FE\u7247 dom \u3002",paraId:4,tocIndex:2},{value:`
 \u904D\u5386\u6BCF\u4E2A\u56FE\u7247\u5224\u65AD\u5F53\u524D\u56FE\u7247\u662F\u5426\u5230\u4E86\u53EF\u89C6\u533A\u8303\u56F4\u5185\u3002`,paraId:4,tocIndex:2},{value:`
 \u5982\u679C\u5230\u4E86\u5C31\u8BBE\u7F6E\u56FE\u7247\u7684 src \u5C5E\u6027\u3002`,paraId:4,tocIndex:2},{value:`
-\u7ED1\u5B9A window \u7684 scroll \u4E8B\u4EF6\uFF0C\u5BF9\u5176\u8FDB\u884C\u4E8B\u4EF6\u76D1\u542C\u3002`,paraId:4,tocIndex:2},{value:`function lazyload() {
+\u7ED1\u5B9A window \u7684 scroll \u4E8B\u4EF6\uFF0C\u5BF9\u5176\u8FDB\u884C\u4E8B\u4EF6\u76D1\u542C\u3002`,paraId:4,tocIndex:2},{value:`function lazyLoad() {
   let viewHeight =
     window.innerHeight ||
     document.documentElement.clientHeight ||
@@ -11789,11 +11789,11 @@ multiply3(2);
     let rect = item.getBoundingClientRect();
     if (rect.bottom >= 0 && rect.top < viewHeight) {
       item.src = item.dataset.src;
-      item.removeAttribute('data-src');
+      item.removeAttribute('data-src'); // \u4F18\u5316 \u4E0B\u6B21\u83B7\u53D6\u7684\u65F6\u5019\u6392\u9664\u6389
     }
   });
 }
-window.addEventListener('scroll', lazyload);
+window.addEventListener('scroll', lazyLoad);
 `,paraId:5,tocIndex:2},{value:"\u4F7F\u7528 throttle \u6539\u8FDB",paraId:6,tocIndex:2},{value:`const throttle = (fn, timer) => {
   let pre = 0,
     t = null;
@@ -11810,7 +11810,9 @@ window.addEventListener('scroll', lazyload);
     }
   };
 };
-window.addEventListener('scroll', throttle(lazyload, 200));
+window.addEventListener('scroll', throttle(lazyLoad, 200));
+
+// throttle \u57FA\u4E8Elodash(_.throttle)
 `,paraId:7,tocIndex:2},{value:"getBoundingClientRect \u8FD4\u56DE\u7684 DOMRect \u5BF9\u8C61\u5305\u542B\u4EE5\u4E0B\u5C5E\u6027\uFF1A",paraId:8,tocIndex:3},{value:"left: \u5143\u7D20\u5DE6\u8FB9\u76F8\u5BF9\u4E8E\u89C6\u53E3\u5DE6\u4FA7\u7684\u8DDD\u79BB\u3002",paraId:9,tocIndex:3},{value:`
 top: \u5143\u7D20\u4E0A\u8FB9\u76F8\u5BF9\u4E8E\u89C6\u53E3\u9876\u90E8\u7684\u8DDD\u79BB\u3002`,paraId:9,tocIndex:3},{value:`
 right: \u5143\u7D20\u53F3\u8FB9\u76F8\u5BF9\u4E8E\u89C6\u53E3\u5DE6\u4FA7\u7684\u8DDD\u79BB\u3002`,paraId:9,tocIndex:3},{value:`
