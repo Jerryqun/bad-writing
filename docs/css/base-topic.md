@@ -42,6 +42,7 @@ CSS 中更多的选择器是不会匹配的，所以在考虑性能问题时，�
 14. 表格布局（table-layout）
 15. 边框折叠（border-collapse）
 16. 内容区域的背景色（background-color）
+17. cursor：鼠标指针的样式。
 
 ## 移动端 1px 解决方案
 
