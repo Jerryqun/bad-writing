@@ -176,3 +176,9 @@ Vue2、Vue3 和 React 在虚拟 DOM 的 Diff 算法实现上有一些关键区�
 - **React**：适合需要复杂交互和高优先级调度的场景（如动画或高频更新），但需手动优化 Diff 流程。
 
 了解这些差异有助于根据项目需求选择框架，并针对性地优化 Diff 性能。
+
+## Vue router 三种路由模式
+
+1. hash
+2. history
+3. memoryHistory （没有路由变化，前进后退也不可用）
