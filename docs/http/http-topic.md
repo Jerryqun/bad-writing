@@ -335,6 +335,6 @@ GET 和 POST 是 HTTP 协议中两种最基本的请求方法，它们在许多�
 
 ## ajax 、fetch、axios 区别
 
-1. ajax 异步请求统称
-2. 一个浏览器自带的 api
-3. 第三方 npm 包， 基于 XMLHttpRequest 的封装
+1. ajax: 异步请求统称
+2. fetch: 一个浏览器自带的 api
+3. axios: 第三方 npm 包， 基于 XMLHttpRequest 的封装
