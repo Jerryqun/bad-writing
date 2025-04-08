@@ -1,8 +1,8 @@
 ---
 nav: Vue
-group: 面试
+group: 基础
 toc: content
-title: vue 错误捕获
+title: 面试
 ---
 
 ## vue 错误捕获
@@ -35,9 +35,9 @@ title: vue 错误捕获
 被 keep-alive 包裹 的组件 created 生命周期只会执行一次。
 
 ```html
-<keep-alive >
-  <A>
-</keep-alive >
+<keep-alive>
+  <ComponentA />
+</keep-alive>
 ```
 
 ## VUE 什么时候操作 dom 比较合适
