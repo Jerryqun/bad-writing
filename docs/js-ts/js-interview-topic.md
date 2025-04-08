@@ -17,7 +17,7 @@ title: 面试题
 <img src="./example.jpg" loading="lazy" />
 ```
 
-### js 实现 基于 getBoundingClientRect 手动计算
+### js 实现 (基于 getBoundingClientRect 手动计算)
 
 实现原理
 
@@ -27,7 +27,7 @@ title: 面试题
 绑定 window 的 scroll 事件，对其进行事件监听。<br/>
 
 ```js
-function lazyload() {
+function lazyLoad() {
   let viewHeight =
     window.innerHeight ||
     document.documentElement.clientHeight ||
@@ -40,11 +40,11 @@ function lazyload() {
     let rect = item.getBoundingClientRect();
     if (rect.bottom >= 0 && rect.top < viewHeight) {
       item.src = item.dataset.src;
-      item.removeAttribute('data-src');
+      item.removeAttribute('data-src'); // 优化 下次获取的时候排除掉
     }
   });
 }
-window.addEventListener('scroll', lazyload);
+window.addEventListener('scroll', lazyLoad);
 ```
 
 使用 throttle 改进
@@ -66,7 +66,9 @@ const throttle = (fn, timer) => {
     }
   };
 };
-window.addEventListener('scroll', throttle(lazyload, 200));
+window.addEventListener('scroll', throttle(lazyLoad, 200));
+
+// throttle 基于lodash(_.throttle)
 ```
 
 ### getBoundingClientRect
@@ -79,6 +81,8 @@ right: 元素右边相对于视口左侧的距离。
 bottom: 元素下边相对于视口顶部的距离。  
 width: 元素的宽度（right - left）。  
 height: 元素的高度（bottom - top）。
+
+![alt text](../../img/image2.png)
 
 ### IntersectionObserver
 
