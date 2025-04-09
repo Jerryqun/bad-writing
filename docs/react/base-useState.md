@@ -103,7 +103,7 @@ export default () => {
 ## setState 是宏任务还是微任务
 
 1. setState 同步的时候不讨论是宏任务还是微任务
-2. setState 异步情况 (本身是同步，不是真正的异步，指示让 react 做成了异步的样子)
+2. setState 异步情况 (本身是同步，不是真正的异步，只是让 react 做成了异步的样子)
 
 ```js
 componentDidMount(){
