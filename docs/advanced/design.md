@@ -58,4 +58,4 @@ const schema = {
 ## 设计一个“用户-角色-权限”的模型和功能
 
 RBAC(用户-角色-权限)  
-![alt text](../../img/image1.png)
+![alt text](../../img/rbac.png)

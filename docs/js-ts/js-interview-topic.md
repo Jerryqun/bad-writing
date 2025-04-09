@@ -82,7 +82,7 @@ bottom: 元素下边相对于视口顶部的距离。
 width: 元素的宽度（right - left）。  
 height: 元素的高度（bottom - top）。
 
-![alt text](../../img/image2.png)
+![alt text](../../img/getBoundingClientRect.png)
 
 ### IntersectionObserver
 
