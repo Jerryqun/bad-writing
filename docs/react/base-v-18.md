@@ -11,7 +11,7 @@ title: React18 新特性
 
 1、组件返回 undefined 不再报错
 
-2、在 React 18 中，不论是在合成事件中，还是在宏任务中，都是会合并更新
+2、`在 React 18 中，不论是在合成事件中，还是在宏任务中，都是会合并更新 `
 如果想破坏合并更新请使用 flushSync
 注意：flushSync 函数内部的多个 setState 仍然为批量更新
 
