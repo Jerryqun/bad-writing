@@ -375,6 +375,80 @@ const convert = (arr: ITreeNode[]): ITreeNode | null => {
 console.log('arr', convert(arr));
 ```
 
+## 写一个树转数组 convert
+
+```js
+const tree = {
+    "id": 1,
+    "name": "部门A",
+    "parentId": null,
+    "children": [
+        {
+            "id": 2,
+            "name": "部门B",
+            "parentId": 1,
+            "children": [
+                {
+                    "id": 4,
+                    "name": "部门D",
+                    "parentId": 2
+                },
+                {
+                    "id": 5,
+                    "name": "部门E",
+                    "parentId": 2
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "部门C",
+            "parentId": 1,
+            "children": [
+                {
+                    "id": 6,
+                    "name": "部门F",
+                    "parentId": 3
+                }
+            ]
+        }
+    ]
+}
+
+interface ITreeNode {
+    id: number,
+    name: string,
+    parentId: number | null,
+    children?: ITreeNode[]
+}
+
+const convert = (tree: ITreeNode): ITreeNode[] => {
+    let arr: ITreeNode[] = [];
+    const mapT = new Map<ITreeNode, ITreeNode>()
+
+    let queue = []
+    queue.unshift(tree)
+    while (queue.length > 0) {
+        let curNode = queue.pop()
+        if (curNode == null) break;
+
+        const { id, name, children = [] } = curNode;
+        const parentNode = mapT.get(curNode)
+        const parentId = parentNode?.id || null
+        arr.push({
+            parentId, id, name
+        })
+        children.forEach(child => {
+            mapT.set(child, curNode)
+            queue.unshift(child)
+        })
+    }
+    return arr
+};
+
+console.log('arr', convert(tree));
+```
+
 ## 两个字符串对比, 得出结论都做了什么操作, 比如插入或者删除
 
 功能说明
