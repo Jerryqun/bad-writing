@@ -106,6 +106,12 @@ cookie 的有效时间设置为 0 会怎么样?
 `会话 cookie 一般不存储在硬盘上而是保存在内存里 `
 `如果设置了过期时间，浏览器就会把 cookie 保存到硬盘上`
 
+### 什么是第三方Cookie
+如果你访问 news.com，页面内嵌了一个来自 facebook.com 的“点赞”按钮，那么 facebook.com 设置的Cookie就是第三方Cookie。
+
+第三方Cookie：由当前网页中嵌入的第三方资源（如广告脚本、社交媒体按钮、分析工具等）设置的Cookie，域名与当前网站不同（例如 ad-tracker.com）。
+
+
 ### 前端对 cookie 的读写
 
 前端可以自己创建 cookie，如果服务端创建的 cookie 没加 HttpOnly，那恭喜你也可以修改他给的 cookie。

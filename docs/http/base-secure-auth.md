@@ -26,8 +26,8 @@ mobile: false
 Session 的存储方式
 
 1. Redis（推荐）：内存型数据库，以 key-value 的形式存，正合 sessionId-sessionData 的场景；且访问快
-2. 直接放到变量里。一旦服务重启就没了
-3. 数据库：普通数据库。性能不高
+2. 直接放到变量里：一旦服务重启就没了
+3. 数据库：普通数据库：性能不高
 
 ### node.js 下的 session 处理
 
