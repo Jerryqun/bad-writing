@@ -17,6 +17,71 @@ title: react合成事件
 onChange 事件，会绑定 [blur，change ，focus ，keydown，keyup] 多个事件，React  
 通过 registrationNameDependencies 来记录合成事件和原生事件的映射关系：
 
+````js
+export const registrationNameDependencies = {
+  onClick: ['click'],
+  onMouseEnter: ['mouseout', 'mouseover'],
+  onChange: [
+    'change',
+    'click',
+    'focusin',
+    'focusout',
+    'input',
+    'keydown',
+    'keyup',
+    'selectionchange',
+  ],
+  // ...
+};
+
+/**一次渲染 */
+
+function App() {
+  const [count, setCount] = React.useState(0);
+
+  const [flag, setFlag] = React.useState(false);
+
+  function handleClick() {
+    setCount((c) => c + 1); // Does not re-render yet
+
+    setFlag((f) => !f); // Does not re-render yet
+
+    // React will only re-render once at the end (that's batching!)
+  }
+  console.log('render');
+
+  return (
+    <div>
+      <div>
+        {count}|{flag.toString()}
+      </div>
+      <button onClick={handleClick}>Next</button>
+    </div>
+  );
+}
+
+/** react18之前两次渲染，react18之后一次渲染 */
+>>>>>>>
+
+---
+nav: React
+group: 基础
+toc: content
+mobile: false
+title: react合成事件
+---
+
+## React 合成事件
+
+1、React16 事件绑定到 document 上
+2、React17 事件绑定到 root 组件上，有利于多个 react 版本共存，例如微前端
+3、所以原生事件的监听器响应总是比合成事件的监听器早
+4、阻止原生事件的冒泡后，会阻止合成事件的监听器执行
+5、Promise，setTimeout，native event handlers（原生事件）中，react18 之前不会进行合并更新，react18 之后一样也会进行合并更新
+6、合成事件与原生事件不是一一映射的关系。比如 onMouseEnter 合成事件映射原生 mouseout、mouseover 事件。
+onChange 事件，会绑定 [blur，change ，focus ，keydown，keyup] 多个事件，React
+通过 registrationNameDependencies 来记录合成事件和原生事件的映射关系：
+
 ```js
 export const registrationNameDependencies = {
   onClick: ['click'],
@@ -60,7 +125,100 @@ function App() {
   );
 }
 
-/** react18之前两次宣传，react18之后一次次宣传 */
+/** react18之前两次渲染，react18之后一次渲染 */
+function App() {
+  const [count, setCount] = React.useState(0);
+
+  const [flag, setFlag] = React.useState(false);
+
+  function handleClick() {
+    setTimeout(() => {
+      setCount((c) => c + 1);
+      setFlag((f) => !f);
+    }, 1000);
+  }
+  console.log('render');
+
+  return (
+    <div>
+      <div>
+        {count}|{flag.toString()}
+      </div>
+      <button onClick={handleClick}>Next</button>
+    </div>
+  );
+}
+
+export default App;
+````
+
+## 为什么 react 会自己实现一套事件机制
+
+---
+
+nav: React
+group: 基础
+toc: content
+mobile: false
+title: react 合成事件
+
+---
+
+## React 合成事件
+
+1、React16 事件绑定到 document 上  
+2、React17 事件绑定到 root 组件上，有利于多个 react 版本共存，例如微前端  
+3、所以原生事件的监听器响应总是比合成事件的监听器早  
+4、阻止原生事件的冒泡后，会阻止合成事件的监听器执行  
+5、Promise，setTimeout，native event handlers（原生事件）中，react18 之前不会进行合并更新，react18 之后一样也会进行合并更新  
+6、合成事件与原生事件不是一一映射的关系。比如 onMouseEnter 合成事件映射原生 mouseout、mouseover 事件。  
+onChange 事件，会绑定 [blur，change ，focus ，keydown，keyup] 多个事件，React  
+通过 registrationNameDependencies 来记录合成事件和原生事件的映射关系：
+
+```js
+export const registrationNameDependencies = {
+  onClick: ['click'],
+  onMouseEnter: ['mouseout', 'mouseover'],
+  onChange: [
+    'change',
+    'click',
+    'focusin',
+    'focusout',
+    'input',
+    'keydown',
+    'keyup',
+    'selectionchange',
+  ],
+  // ...
+};
+
+/**一次渲染 */
+
+function App() {
+  const [count, setCount] = React.useState(0);
+
+  const [flag, setFlag] = React.useState(false);
+
+  function handleClick() {
+    setCount((c) => c + 1); // Does not re-render yet
+
+    setFlag((f) => !f); // Does not re-render yet
+
+    // React will only re-render once at the end (that's batching!)
+  }
+  console.log('render');
+
+  return (
+    <div>
+      <div>
+        {count}|{flag.toString()}
+      </div>
+      <button onClick={handleClick}>Next</button>
+    </div>
+  );
+}
+
+/** react18之前两次渲染，react18之后一次渲染 */
 function App() {
   const [count, setCount] = React.useState(0);
 
@@ -87,7 +245,7 @@ function App() {
 export default App;
 ```
 
-## 问什么 react 会自己实现一套事件机制
+## 为什么 react 会自己实现一套事件机制
 
 1、将事件都代理到了根节点上，减少了事件监听器的创建，节省了内存，提高性能  
 2、磨平浏览器差异，开发者无需兼容多种浏览器写法。如想阻止事件传播时需要编写 event.stopPropagation() 或 event.cancelBubble = true，在 React 中只需编写 event.stopPropagation()即可  
