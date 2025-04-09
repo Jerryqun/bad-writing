@@ -9135,7 +9135,22 @@ Promise.resolve()
   .then(() => console.log('4'));
 
 // 1234
-`,paraId:13,tocIndex:11}]},80872:function(r,e,n){n.r(e),n.d(e,{texts:function(){return a}});var t=n(8656);const a=[{value:"JavaScript \u4E2D\u4E00\u5207\u5F15\u7528\u7C7B\u578B\u90FD\u662F\u5BF9\u8C61\uFF0C\u5BF9\u8C61\u5C31\u662F\u5C5E\u6027\u7684\u96C6\u5408",paraId:0,tocIndex:0},{value:`
+`,paraId:13,tocIndex:11},{value:"\u76F8\u5F53\u4E8E\u591A\u51FA\u4E00\u4E2A promise \u5B9E\u4F8B",paraId:14,tocIndex:12},{value:"\u4E5F\u4F1A\u9075\u5FAA\u4EA4\u66FF\u6267\u884C",paraId:14,tocIndex:12},{value:"\u4F46\u662F\u548C\u76F4\u63A5\u58F0\u660E\u4E00\u4E2A promise \u5B9E\u4F8B\uFF0C\u7ED3\u679C\u6709\u4E9B\u5DEE\u5F02\uFF08\u6162\u4E24\u62CD,\u540E\u7EED\u518D\u8FDB\u884C\u4EA4\u66FF\u6267\u884C\uFF09",paraId:14,tocIndex:12},{value:`Promise.resolve()
+  .then(() => {
+    console.log('1');
+    return Promise.resolve(5);
+  })
+  .then(() => console.log('3'))
+  .then(() => console.log('6'));
+
+Promise.resolve()
+  .then(() => console.log('2'))
+  .then(() => console.log('4'))
+  .then(() => console.log('7'))
+  .then(() => console.log('8'));
+
+// 1247386
+`,paraId:15,tocIndex:12}]},80872:function(r,e,n){n.r(e),n.d(e,{texts:function(){return a}});var t=n(8656);const a=[{value:"JavaScript \u4E2D\u4E00\u5207\u5F15\u7528\u7C7B\u578B\u90FD\u662F\u5BF9\u8C61\uFF0C\u5BF9\u8C61\u5C31\u662F\u5C5E\u6027\u7684\u96C6\u5408",paraId:0,tocIndex:0},{value:`
 Array \u7C7B\u578B\u3001Function \u7C7B\u578B\u3001Object \u7C7B\u578B\u3001Date \u7C7B\u578B\u3001RegExp \u7C7B\u578B\u7B49\u90FD\u662F\u5F15\u7528\u7C7B\u578B`,paraId:0,tocIndex:0},{value:"\u6BCF\u4E00\u4E2A\u5BF9\u8C61\u4ECE\u88AB\u521B\u5EFA\u5F00\u59CB\u5C31\u548C\u53E6\u4E00\u4E2A\u5BF9\u8C61\u5173\u8054\uFF0C\u4ECE\u53E6\u4E00\u4E2A\u5BF9\u8C61\u4E0A\u7EE7\u627F\u5176\u5C5E\u6027\uFF0C\u8FD9\u4E2A\u53E6\u4E00\u4E2A\u5BF9\u8C61\u5C31\u662F\u539F\u578B",paraId:1,tocIndex:1},{value:"\u9690\u5F0F\u539F\u578B\uFF08",paraId:2,tocIndex:1},{value:"__proto__",paraId:2,tocIndex:1},{value:"\uFF09 \u5BF9\u8C61\u4E0A\u7684\u5C5E\u6027",paraId:2,tocIndex:1},{value:`
 \u663E\u793A\u539F\u578B\uFF08prototype\uFF09 \u6784\u9020\u51FD\u6570\u4E0A\u7684\u5C5E\u6027`,paraId:2,tocIndex:1},{value:`
 \u663E\u793A\u5F0F\u539F\u578B\u4E0A\u7684 constructor \u7B49\u4E8E\u6784\u9020\u51FD\u6570`,paraId:2,tocIndex:1},{value:"__proto__",paraId:3,tocIndex:1},{value:" \u662F\u975E\u6807\u51C6\u5C5E\u6027\uFF0C\u5982\u679C\u8981\u8BBF\u95EE\u4E00\u4E2A\u5BF9\u8C61\u7684\u539F\u578B\uFF0C\u5EFA\u8BAE\u4F7F\u7528 ES6 \u65B0\u589E\u7684 Reflect.getPrototypeOf \u6216\u8005 Object.getPrototypeOf() \u65B9\u6CD5\uFF0C\u800C\u4E0D\u662F\u76F4\u63A5 ",paraId:3,tocIndex:1},{value:"obj.__proto__",paraId:3,tocIndex:1},{value:"\uFF0C\u56E0\u4E3A\u975E\u6807\u51C6\u5C5E\u6027\u610F\u5473\u7740\u672A\u6765\u53EF\u80FD\u76F4\u63A5\u4F1A\u4FEE\u6539\u6216\u8005\u79FB\u9664\u8BE5\u5C5E\u6027\u3002\u540C\u7406\uFF0C\u5F53\u6539\u53D8\u4E00\u4E2A\u5BF9\u8C61\u7684\u539F\u578B\u65F6\uFF0C\u6700\u597D\u4E5F\u4F7F\u7528 ES6 \u63D0\u4F9B\u7684 Reflect.setPrototypeOf \u6216 Object.setPrototypeOf\u3002",paraId:3,tocIndex:1},{value:`const obj = {};
