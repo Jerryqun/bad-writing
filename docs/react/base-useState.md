@@ -99,3 +99,18 @@ export default () => {
 
 5. 可选的回调函数  
    setState 方法可以接受一个回调函数作为第二个参数。这个回调函数会在状态更新和组件重绘之后被执行。因为 setState 是异步的，所以如果你需要在状态更新完成后执行代码，你可以使用这个回调函数。
+
+## setState 是宏任务还是微任务
+
+1. setState 同步的时候不讨论是宏任务还是微任务
+2. setState 异步情况 (本身是同步，不是真正的异步，指示让 react 做成了异步的样子)
+
+```js
+componentDidMount(){
+  console.log('start');
+  Promise.resolve().then(() => console.log('then'))
+  this.setState({val:1},() => {console.log(val)})
+  console.log('end');
+}
+// start end 1  then
+```
