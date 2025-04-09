@@ -10,7 +10,7 @@ title: 设计
 
 ## 设计一个 H5 编辑器的数据模型和核心功能
 
-![alt text](../../img/image.png)
+![alt text](../../img/drag.png)
 
 1. 模型参考 vnode
 2. 考虑排序，不要用对象，要用数组，对象的属性是无序的
