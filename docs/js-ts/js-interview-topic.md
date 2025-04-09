@@ -842,3 +842,34 @@ setTimeout(accurateInterval, expectedInterval);
 
 5. 监控和调整系统负载：
    观察和分析系统负载状况，避免在浏览器任务繁忙的时候执行高频定时器任务
+
+## js 连续赋值
+
+```js
+let a = (b = 2);
+// 相当于 b =2 ; a= b 从左往右 （倒序）
+// a.x 属性赋值比直接赋值优先级要高
+a.x = 100;
+// 拆解
+// 1  a.x =undefined
+// 2  a.x = 100
+```
+
+题目
+`属性赋值比直接赋值优先级要高`
+
+```js
+let a = { n: 1 };
+let b = a;
+a.x = a = { n: 2 };
+
+console.log(a.x);
+console.log(b.x);
+
+//解析
+// let a = { n: 1 };
+// let b = a;
+// a.x  = undefined
+// a = { n: 2 }
+// 结果   undefined  |  { n: 2 }
+```
