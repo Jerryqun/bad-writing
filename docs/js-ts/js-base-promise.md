@@ -532,3 +532,16 @@ promise1
     console.error(error);
   });
 ```
+
+## Promise 的 then 方法交替执行
+
+```js
+Promise.resolve()
+  .then(() => console.log('1'))
+  .then(() => console.log('3'));
+Promise.resolve()
+  .then(() => console.log('2'))
+  .then(() => console.log('4'));
+
+// 1234
+```
