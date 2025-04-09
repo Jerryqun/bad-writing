@@ -545,3 +545,27 @@ Promise.resolve()
 
 // 1234
 ```
+
+## promise 的 then 中返回 promise 实例
+
+1. 相当于多出一个 promise 实例
+2. 也会遵循交替执行
+3. 但是和直接声明一个 promise 实例，结果有些差异（慢两拍,后续再进行交替执行）
+
+```js
+Promise.resolve()
+  .then(() => {
+    console.log('1');
+    return Promise.resolve(5);
+  })
+  .then(() => console.log('3'))
+  .then(() => console.log('6'));
+
+Promise.resolve()
+  .then(() => console.log('2'))
+  .then(() => console.log('4'))
+  .then(() => console.log('7'))
+  .then(() => console.log('8'));
+
+// 1247386
+```
