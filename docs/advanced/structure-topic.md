@@ -424,6 +424,7 @@ interface ITreeNode {
 
 const convert = (tree: ITreeNode): ITreeNode[] => {
     let arr: ITreeNode[] = [];
+    // 存储父节点
     const mapT = new Map<ITreeNode, ITreeNode>()
 
     let queue = []
@@ -438,6 +439,7 @@ const convert = (tree: ITreeNode): ITreeNode[] => {
         arr.push({
             parentId, id, name
         })
+        // 子节点入队
         children.forEach(child => {
             mapT.set(child, curNode)
             queue.unshift(child)
