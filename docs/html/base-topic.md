@@ -266,3 +266,27 @@ img.src = 'https://b.com/a.png';
 anonymous 请求不会包含凭证（如 Cookies 和 HTTP 认证信息）。这是默认的 CORS 策略，适用于大多数情况，特别是公共资源。
 
 use-credentials 请求会包含凭证（如 Cookies 和 HTTP 认证信息），用于需要身份验证的资源。要求服务器在响应头中包含 Access-Control-Allow-Credentials: true。
+
+## 移动端H5点击有300ms延迟，该如何解决
+历时问题，新硬件已解决  
+背景：double tap to zoom 双击放大，300ms 延迟
+
+解决库：fastclick
+
+fastclick 简单用法：
+```js
+import FastClick from 'fastclick';
+FastClick.attach(document.body);
+```
+
+fastclick原理：
+1、FastClick 是一个 JavaScript 库，用于解决移动端浏览器中的 300ms 点击延迟问题。这个问题通常发生在触摸设备上，特别是在 iOS 设备上。  
+2、FastClick 的原理是通过检测到用户的触摸事件，并在事件处理函数中立即执行相应的操作，而不是等待 300ms 的延迟。  
+3、FastClick 会在页面加载时自动初始化，并且可以通过 FastClick.attach() 方法来手动初始化。  
+
+现代浏览器的改进：设置了device-width就不会出现300ms延迟了
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+
+
