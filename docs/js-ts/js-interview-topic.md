@@ -752,6 +752,9 @@ console.log('not new:', Person());
 
 [1, NaN, NaN]
 
+parseInt(str,radix)， radix 默认等于 10  
+radix = > (2-36)， 0 当不存在 10 处理
+
 ```js
 parseInt('1', 0); // 1
 parseInt('2', 1); // NaN
