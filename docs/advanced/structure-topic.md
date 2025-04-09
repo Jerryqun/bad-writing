@@ -255,6 +255,8 @@ function permutate(arr) {
 
 ## 写一个数组转树的 convert
 
+方法一：递归
+
 ```js
 const arr = [
   {
@@ -298,6 +300,76 @@ const convert = (arr, parentId = null) => {
         children: convert(arr, d.id),
       };
     });
+};
+
+console.log('arr', convert(arr));
+```
+
+方法二：循环
+
+```js
+const arr = [
+    {
+        id: 1,
+        name: '部门A',
+        parentId: null,
+    },
+    {
+        id: 2,
+        name: '部门B',
+        parentId: 1,
+    },
+    {
+        id: 3,
+        name: '部门C',
+        parentId: 1,
+    },
+    {
+        id: 4,
+        name: '部门D',
+        parentId: 2,
+    },
+    {
+        id: 5,
+        name: '部门E',
+        parentId: 2,
+    },
+    {
+        id: 6,
+        name: '部门F',
+        parentId: 3,
+    },
+];
+
+interface ITreeNode {
+    id: number,
+    name: string,
+    parentId: number | null,
+    children?: ITreeNode[]
+}
+
+const convert = (arr: ITreeNode[]): ITreeNode | null => {
+    let root = null
+    let nodes = new Map<number,ITreeNode>()
+    arr.forEach(item => {
+        const { id, name, parentId } = item
+        const itemNode = { id, name,parentId }
+        nodes.set(id, itemNode)
+
+        let parentNode = nodes.get(parentId  as number)
+        console.log('parentNode', parentNode)
+        if (parentNode) {
+            if (!parentNode.children) {
+                parentNode.children = []
+                parentNode.children.push(itemNode)
+            } else {
+                parentNode.children.push(itemNode)
+            }
+        }
+        if (parentId === null) root = itemNode
+
+    })
+    return root
 };
 
 console.log('arr', convert(arr));
