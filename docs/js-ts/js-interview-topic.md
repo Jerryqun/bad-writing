@@ -978,3 +978,168 @@ console.log(b.x);
 // a = { n: 2 }
 // 结果   undefined  |  { n: 2 }
 ```
+
+## [typeof null, null instanceof Object]
+
+答案 ["object", false]
+
+typeof null 的结果是 "object"，它是 ECMAScript 的 bug，其实应该是 "null"。但这个 bug 由来已久，在 JavaScript 中已经存在了将近二十年，也许永远不会修复，因为这牵扯到太多的 Web 系统，修复它会产生更多的 bug，令许多系统无法正常工作。而 instanceof 运算符是用来测试一个对象在其原型链构造函数上是否具有 prototype 属性，null 值并不是以 Object 原型创建出来的，所以 null instanceof Object 返回 false。
+
+## 愤怒的 reduce
+
+如果数组为空并且没有提供 initialValue， 会抛出 TypeError 。如果数组仅有一个元素（无论位置如何）并且没有提供 initialValue， 或者有提供 initialValue 但是数组为空，那么此唯一值将被返回并且 callback 不会被执行。
+
+```js
+[[3, 2, 1].reduce(Math.pow), [].reduce(Math.pow)];
+
+// A. an error
+// B. [9, 0]
+// C. [9, NaN]
+// D. [9, undefined]
+```
+
+## 该死的优先级
+
+```js
+var val = 'smtg';
+console.log('Value is ' + (val === 'smtg') ? 'Something' : 'Nothing');
+
+// A. Value is Something
+// B. Value is Nothing
+// C. NaN
+// D. other
+```
+
+答案是 D。实际上输出 "Something"，因为 + 的优先级比条件运算符 condition ? val1 : val2 的优先级高。
+
+## 死循环陷阱
+
+```js
+var END = Math.pow(2, 53);
+var START = END - 100;
+var count = 0;
+for (var i = START; i <= END; i++) {
+  count++;
+}
+console.log(count);
+
+// A. 0
+// B. 100
+// C. 101
+// D. other
+```
+
+答案是 D。在 JavaScript 中，2^53 是最大的值，没有比这更大的值了。所以 2^53 + 1 == 2^53，所以这个循环无法终止
+
+## 字符串陷阱
+
+```js
+function showCase(value) {
+  switch (value) {
+    case 'A':
+      console.log('Case A');
+      break;
+    case 'B':
+      console.log('Case B');
+      break;
+    case undefined:
+      console.log('undefined');
+      break;
+    default:
+      console.log('Do not know!');
+  }
+}
+showCase(new String('A'));
+
+// A. Case A
+// B. Case B
+// C. Do not know!
+// D. undefined
+```
+
+答案是 C。在 switch 内部使用严格相等 === 进行判断，并且 new String("A") 返回的是一个对象，而 String("A") 则是直接返回字符串 "A"
+
+```js
+function showCase(value) {
+  switch (value) {
+    case 'A':
+      console.log('Case A');
+      break;
+    case 'B':
+      console.log('Case B');
+      break;
+    case undefined:
+      console.log('undefined');
+      break;
+    default:
+      console.log('Do not know!');
+  }
+}
+showCase(String('A'));
+
+// A. Case A
+// B. Case B
+// C. Do not know!
+// D. undefined
+```
+
+答案显然是 A。与上面唯一不同的是没有使用 new 关键字，所以直接返回字符串，实际上，typeof string("A") === "string" 的结果是 true
+
+## 数组原型是数组
+
+Object.prototype.toString.call(Array.prototype) === '[object Array]' // true
+
+## 一言难尽的强制转换
+
+```js
+var a = [0];
+if ([0]) {
+  console.log(a == true);
+} else {
+  console.log('wut');
+}
+
+// A. true
+// B. false
+// C. "wut"
+// D. other
+```
+
+当 [0] 需要被强制转成 Boolean 的时候会被认为是 true。所以进入第一个 if 语句，而 a == true 的转换规则在 ES5 规范的第 11.9.3 节中已经定义过，你可以自己详细探索下。
+
+规范指出，== 相等中，如果有一个操作数是布尔类型，会先把他转成数字，所以比较变成了 [0] == 1；同时规范指出如果其他类型和数字比较，会尝试把这个类型转成数字再进行宽松比较，而对象（数组也是对象）会先调用它的 toString() 方法，此时 [0] 会变成 "0"，然后将字符串 "0" 转成数字 0，而 0 == 1 的结果显然是 false。
+
+## 过滤器魔法
+
+```js
+var ary = [0, 1, 2];
+ary[10] = 10;
+ary.filter(function (x) {
+  console.log('执行了'); // 执行4次
+  return x === undefined;
+});
+
+// A. [undefined x 7]
+// B. [0, 1, 2, 10]
+// C. []
+// D. [undefined]
+```
+
+filter 为数组中的每个元素调用一次 callback 函数，并利用所有使得 callback 返回 true 或 等价于 true 的值 的元素创建一个新数组。callback 只会在已经赋值的索引上被调用，对于那些已经被删除或者从未被赋值的索引不会被调用。那些没有通过 callback 测试的元素会被跳过，不会被包含在新数组中。
+
+```js
+var ary = Array(3);
+ary[0] = 2;
+ary.map(function (elem) {
+  console.log('执行了'); // 执行1次
+  return '1';
+});
+
+// A. [2, 1, 1]
+// B. ["1", "1", "1"]
+// C. [2, "1", "1"]
+// D. other
+```
+
+答案是 D。实际上结果是 ["1", undefined x 2]，因为规范写得很清楚：
+map 方法会给原数组中的每个元素都按顺序调用一次 callback 函数。callback 每次执行后的返回值组合起来形成一个新数组。 callback 函数只会在有值的索引上被调用；那些从来没被赋过值或者使用 delete 删除的索引则不会被调用。
