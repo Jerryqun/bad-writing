@@ -1143,3 +1143,52 @@ ary.map(function (elem) {
 
 答案是 D。实际上结果是 ["1", undefined x 2]，因为规范写得很清楚：
 map 方法会给原数组中的每个元素都按顺序调用一次 callback 函数。callback 每次执行后的返回值组合起来形成一个新数组。 callback 函数只会在有值的索引上被调用；那些从来没被赋过值或者使用 delete 删除的索引则不会被调用。
+
+## 统统算我的
+
+```js
+function sidEffecting(ary) {
+  ary[0] = ary[2];
+}
+
+function bar(a, b, c) {
+  c = 10;
+  sidEffecting(arguments);
+  return a + b + c;
+}
+
+bar(1, 1, 1);
+
+// A. 3
+// B. 12
+// C. error
+// D. other
+```
+
+答案是 D。实际上结果是 21。在 JavaScript 中，参数变量和 arguments 是双向绑定的。改变参数变量，arguments 中的值会立即改变；而改变 arguments 中的值，参数变量也会对应改变。
+
+## 最小的正值
+
+```js
+Number.MIN_VALUE > 0;
+
+// A. false
+// B. true
+// C. error
+// D. other
+```
+
+答案是 B。看规范描述吧 MIN_VALUE 属性是 JavaScript 里最接近 0 的正值，而不是最小的负值。
+
+## 谨记优先级
+
+```js
+[1 < 2 < 3, 3 < 2 < 1];
+
+// A. [true, true]
+// B. [true, false]
+// C. error
+// D. other
+```
+
+答案是 A。<和>的优先级都是从左到右，所以 1 < 2 < 3 会先比较 1 < 2，这会得到 true，但是 < 要求比较的两边都是数字，所以会发生隐式强制转换，将 true 转换成 1，所以最后就变成了比较 1 < 3，结果显然为 true。同理可以分析后者
