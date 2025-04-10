@@ -843,6 +843,111 @@ setTimeout(accurateInterval, expectedInterval);
 5. 监控和调整系统负载：
    观察和分析系统负载状况，避免在浏览器任务繁忙的时候执行高频定时器任务
 
+## 验证 setTimeout 递归产生的时差
+
+```js
+let time = 0;
+let nowTime = +new Date();
+let timer;
+const poll = function () {
+  timer = setTimeout(() => {
+    const lastTime = nowTime;
+    nowTime = +new Date();
+    console.log('递归setTimeout(fn,0)产生时间差：', nowTime - lastTime);
+    poll();
+  }, 0);
+  time++;
+  if (time === 20) clearTimeout(timer);
+};
+poll();
+```
+
+## 封装一个减少误差的 setTimeout
+
+```ts
+type CallbackFunction = () => void;
+
+interface CorrectedSetTimeoutOptions {
+  interval: number;
+  callback: CallbackFunction;
+}
+
+class CorrectedSetTimeout {
+  private start: number;
+  private expected: number;
+  private interval: number;
+  private callback: CallbackFunction;
+  private timerId: number | null = null;
+  private rafId: number | null = null;
+
+  constructor({ interval, callback }: CorrectedSetTimeoutOptions) {
+    this.start = new Date().getTime();
+    this.expected = this.start + interval;
+    this.interval = interval;
+    this.callback = callback;
+
+    this.run = this.run.bind(this);
+    this.correctedTimeout = this.correctedTimeout.bind(this);
+    this.clear = this.clear.bind(this);
+
+    this.rafId = requestAnimationFrame(this.run);
+    this.timerId = setTimeout(
+      this.correctedTimeout,
+      interval,
+    ) as unknown as number;
+  }
+
+  private run() {
+    if (this.rafId !== null) {
+      this.rafId = requestAnimationFrame(this.run);
+    }
+  }
+
+  private correctedTimeout() {
+    if (this.rafId !== null) {
+      cancelAnimationFrame(this.rafId);
+      this.rafId = null;
+    }
+    this.callback();
+
+    // Calculating the drift
+    const drift = new Date().getTime() - this.expected;
+    if (drift > 0) {
+      // If there is a drift, recalculate the next expected time
+      this.expected += this.interval;
+      this.timerId = setTimeout(
+        this.correctedTimeout,
+        this.interval - drift,
+      ) as unknown as number;
+    }
+  }
+
+  public clear() {
+    if (this.timerId !== null) {
+      clearTimeout(this.timerId);
+      this.timerId = null;
+    }
+    if (this.rafId !== null) {
+      cancelAnimationFrame(this.rafId);
+      this.rafId = null;
+    }
+  }
+}
+
+export default CorrectedSetTimeout;
+
+// 使用示例
+// const correctedTimeout = new CorrectedSetTimeout({
+//   interval: 1000, // 1秒间隔
+//   callback: () => {
+//     console.log('1秒后执行了');
+//   },
+// });
+
+// 取消定时器的示例
+// correctedTimeout.clear();
+```
+
 ## js 连续赋值
 
 ```js

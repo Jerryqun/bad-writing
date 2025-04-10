@@ -899,25 +899,6 @@ test1('a', 'b', 'c', 'd'); // ['a', 'b', 'c', 'd']
 检测一个未被声明的变量类型时，不会报错，会返回 undefined 如：console.log(typeof a) //undefined <br/>
 而直接使用一个未定义的变量时会报错： ReferenceError: a is not defined<br/>
 
-## 验证 setTimeout 递归产生的时差
-
-```js
-let time = 0;
-let nowTime = +new Date();
-let timer;
-const poll = function () {
-  timer = setTimeout(() => {
-    const lastTime = nowTime;
-    nowTime = +new Date();
-    console.log('递归setTimeout(fn,0)产生时间差：', nowTime - lastTime);
-    poll();
-  }, 0);
-  time++;
-  if (time === 20) clearTimeout(timer);
-};
-poll();
-```
-
 ## 数组置空
 
 ```js

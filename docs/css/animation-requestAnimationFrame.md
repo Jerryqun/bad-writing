@@ -7,8 +7,7 @@ title: requestAnimationFrame
 
 ## requestAnimationFrame
 
-<a href="https://juejin.cn/post/7190728064458817591" target="_blank">参考</a>
-
+<a href="https://juejin.cn/post/7190728064458817591" target="_blank">参考</a>  
 window.requestAnimationFrame() 告诉浏览器——你希望执行一个动画，并且要求浏览器在下次重绘之前调用指定的回调函数更新动画。该方法需要传入一个回调函数作为参数，该回调函数会在浏览器下一次重绘之前执行
 
 它不属于宏任务也不属于微任务，因为它是独立于主线程之外的任务，不归主线程管
@@ -154,3 +153,47 @@ requestAnimationFrame 能够做到，精准严格的卡住显示器刷新的时�
 所以，上述内容验证了：一项新技术新的技术方案的提出，一定是为了解决相关的问题的。
 所以，window.requestAnimationFrame 这个 api 就是解决了定时器不精准的问题的。
 这就是其产生的原因
+
+### requestAnimationFrame 执行顺序
+
+```js
+console.log('Script start');
+
+setTimeout(() => {
+  console.log('setTimeout');
+}, 0);
+
+Promise.resolve().then(() => {
+  console.log('Promise');
+});
+
+requestAnimationFrame(() => {
+  console.log('requestAnimationFrame');
+});
+
+console.log('Script end');
+```
+
+输出  
+Script start  
+Script end  
+Promise  
+requestAnimationFrame  
+setTimeout
+
+说明  
+初始同步代码被最先运行，结果是 Script start 和 Script end。  
+Promise 是一个微任务，它在当前宏任务完成后立即执行。  
+requestAnimationFrame 在内存中的下一轮渲染周期中执行。（微任务之后）  
+setTimeout 是一个宏任务，它排在事件队列并在下一轮事件循环时执行。
+
+### requestAnimationFrame 清除
+
+使用 requestAnimationFrame 时和 setTimeout 一样需要清除
+
+```js
+const rafId = requestAnimationFrame(() => {
+  console.log('requestAnimationFrame');
+});
+cancelAnimationFrame(rafId);
+```

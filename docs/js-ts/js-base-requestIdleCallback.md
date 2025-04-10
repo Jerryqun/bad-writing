@@ -20,4 +20,4 @@ requestAnimationFrame： 每次渲染完都会执行，搞优先级
 
 requestIdleCallback： 空闲时候执行，低优先级
 
-在高性能电脑空闲的时候表现可能一样，都是宏任务
+在高性能电脑空闲的时候表现可能一样。
