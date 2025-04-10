@@ -140,29 +140,26 @@ UDP 多用于直播、游戏<br/>
 
 ## HTTP1.0，HTTP1.1 的区别
 
-1、缓存处理：多了 Entity tag，If-Unmodified-Since, If-Match, If-None-Match Cache-Control 等缓存信息（HTTTP1.0 If-Modified-Since,Expires,Exprires 的值为服务端返回的数据到期时间。当再次请求时的请求时间小于返回的此时间，则直接使用缓存数据。但由于服务端时间和客户端时间可能有误差，这也将导致缓存命中的误差）
-
-Cache-Control 值
-private：客户端可以缓存
-public：客户端和代理服务器都可以缓存
-max-age=t：缓存内容将在 t 秒后失效
-no-cache：需要使用协商缓存来验证缓存数据
-no-store：所有内容都不会缓存
-
-2、带宽优化及网络连接的使用
-
-3、错误通知的管理
-
-4、Host 头处理
-
-5、长连接： `HTTP1.1 中默认开启 Connection： keep-alive`，一定程度上弥补了 HTTP1.0 每次请求都要创建连接的缺点。
+1. 缓存处理：多了 Entity tag，If-Unmodified-Since, If-Match, If-None-Match Cache-Control 等缓存信息（HTTTP1.0 If-Modified-Since,Expires,Exprires 的值为服务端返回的数据到期时间。当再次请求时的请求时间小于返回的此时间，则直接使用缓存数据。但由于服务端时间和客户端时间可能有误差，这也将导致缓存命中的误差）  
+   Cache-Control 值:  
+   private：客户端可以缓存  
+   public：客户端和代理服务器都可以缓存  
+   max-age=t：缓存内容将在 t 秒后失效  
+   no-cache：需要使用协商缓存来验证缓存数据  
+   no-store：所有内容都不会缓存
+2. 带宽优化及网络连接的使用
+3. 错误通知的管理
+4. Host 头处理
+5. 长连接： `HTTP1.1 中默认开启 Connection： keep-alive`，一定程度上弥补了 HTTP1.0 每次请求都要创建连接的缺点。
+6. 断点续传 状态码 206
+7. 支持新的方法 PUT DELETE 、可用于 restful api
 
 ## 相对于 HTTP1.1，HTTP2 的优化
 
-1、HTTP2 支持二进制传送（实现方便且健壮），HTTP1.x 是字符串传送<br/>
-2、HTTP2 支持`多路复用`<br/>
-3、HTTP2 采用 HPACK 压缩算法压缩头部，减小了传输的体积<br/>
-4、HTTP2 支持服务端推送 WebSocket<br/>
+1. HTTP2 支持二进制传送（实现方便且健壮），HTTP1.x 是字符串传送<br/>
+2. HTTP2 支持`多路复用`<br/>
+3. HTTP2 采用 HPACK 压缩算法压缩 header，减小了传输的体积<br/>
+4. HTTP2 支持服务端推送 WebSocket<br/>
 
 ## 说下 websocket 的连接原理
 
