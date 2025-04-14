@@ -71,7 +71,7 @@ max-age=31536000 缓存时间
 no-cache 表示是强制进行协商缓存  
 no-store 是表示禁止任何缓存策略
 
-## Cache-Control: no-cache存在于请求头还是返回头
+## Cache-Control: no-cache存在于请求头还是返回头？
 
 Cache-Control: no-cache 可以既出现在请求头中，也可以出现在响应头中，但它们的作用有所不同。
 
