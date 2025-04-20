@@ -13,7 +13,7 @@ title: adoptNode
 
 这是 `document.adoptNode()` 方法的基本语法：
 
-```javascript
+```js
 var adoptedNode = document.adoptNode(externalNode);
 ```
 
@@ -21,7 +21,7 @@ var adoptedNode = document.adoptNode(externalNode);
 
 下面是一段示例代码，演示了如何使用 `document.adoptNode()`：
 
-```javascript
+```js
 // 假设我们有两个文档：doc1 和 doc2
 var doc1 = document;
 var doc2 = document.implementation.createHTMLDocument('New Document');

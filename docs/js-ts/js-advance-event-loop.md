@@ -57,7 +57,7 @@ document.querySelector('body').style.backgroundColor = 'red';
 
 下面是一个简单的 `MutationObserver` 示例：
 
-```javascript
+```js
 // 创建一个回调函数
 const callback = function (mutationsList, observer) {
   for (const mutation of mutationsList) {

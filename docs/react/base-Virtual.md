@@ -213,7 +213,7 @@ children: [
 
 通过以下代码对 Virtual DOM 进行改造，重新构建 Virtual DOM。
 
-```javascript
+```js
 // 将原有 children 拷贝一份 不要在原有数组上进行操作
 const childElements = [].concat(...children).map((child) => {
   // 判断 child 是否是对象类型
@@ -254,7 +254,7 @@ const childElements = [].concat(...children).reduce((result, child) => {
 
 在 React 组件中，可以通过 props.children 获取子元素，所以还需要将子元素存储在 props 对象中。
 
-```javascript
+```js
 return {
   type,
   props: Object.assign({ children: childElements }, props),
@@ -932,7 +932,7 @@ else {
 
 在 mountNativeElement 方法中删除原有的旧 DOM 对象
 
-```javascript
+```js
 // mountNavtiveElement.js
 export default function mountNativeElement(virtualDOM, container, oldDOM) {
   // 如果旧的DOM对象存在 删除
