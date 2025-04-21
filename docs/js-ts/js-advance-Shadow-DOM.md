@@ -31,7 +31,7 @@ JavaScript 代码可以针对 Shadow DOM 中的元素进行操作，而不会影
 
 要创建 Shadow DOM，你可以使用主 DOM 中元素的 `attachShadow` 方法，并传入一个配置对象，通常包含 `{ mode: 'open' }` 或 `{ mode: 'closed' }`。`'open'` 模式允许外部 JavaScript 通过 `element.shadowRoot` 属性访问 Shadow DOM，而 `'closed'` 模式则不允许。
 
-```javascript
+```js
 let hostElement = document.querySelector('#host');
 let shadowRoot = hostElement.attachShadow({ mode: 'open' });
 

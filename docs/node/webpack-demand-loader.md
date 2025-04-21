@@ -26,13 +26,13 @@ Webpack、Rollup、Parcel 等现代构建工具支持摇树优化。通过配置
 
 举个例子，不使用插件时，你可能会这样全量导入 Ant Design 的 Button 组件：
 
-```javascript
+```js
 import { Button } from 'antd';
 ```
 
 使用 `babel-plugin-import` 后，上述导入会在编译时自动转换为：
 
-```javascript
+```js
 import Button from 'antd/lib/button';
 ```
 
@@ -61,7 +61,7 @@ import Button from 'antd/lib/button';
 
 然后，在你的代码中这样导入组件：
 
-```javascript
+```js
 import { Button } from 'antd';
 ```
 

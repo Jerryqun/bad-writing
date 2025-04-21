@@ -252,7 +252,7 @@ immutable.js 不可变的状态，对 Immutable 对象的任何修改或添加�
 
 Node.js 的 `child_process` 模块允许你创建子进程并与之通信。通过 `fork` 方法，你可以创建一个新的 Node.js 进程并使用 IPC 进行通信：
 
-```javascript
+```js
 // parent.js
 const { fork } = require('child_process');
 
@@ -267,7 +267,7 @@ child.on('message', (message) => {
 });
 ```
 
-```javascript
+```js
 // child.js
 process.on('message', (message) => {
   console.log('来自父进程的消息:', message);
@@ -280,7 +280,7 @@ process.on('message', (message) => {
 
 Node.js 的 `cluster` 模块允许你创建共享同一服务器端口的子进程。这些子进程（称为工作进程）可以通过主进程进行通信：
 
-```javascript
+```js
 // cluster.js
 const cluster = require('cluster');
 const http = require('http');
@@ -323,7 +323,7 @@ if (cluster.isMaster) {
 
 你可以通过网络套接字来实现不同 Node.js 进程间的通信，进程可以是运行在同一台机器上的或者是运行在不同机器上的。这通常使用 `net`（TCP）或 `dgram`（UDP）模块来实现：
 
-```javascript
+```js
 // TCP 服务器
 const net = require('net');
 const server = net.createServer((socket) => {

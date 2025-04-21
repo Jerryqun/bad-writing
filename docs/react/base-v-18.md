@@ -141,7 +141,7 @@ ReactDOM.createRoot(rootElement).render(<App />);
 
 示例代码：
 
-```javascript
+```js
 import { renderToPipeableStream } from 'react-dom/server';
 import App from './App';
 

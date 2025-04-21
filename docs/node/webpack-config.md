@@ -78,7 +78,7 @@ module.exports = [
 
 当你将某个模块设为 `externals`，Webpack 会在打包的模块中保留 `require()` 或 `import` 语句，但是不会将它们打包进输出文件中，而是期望这些外部依赖在运行环境中已经存在。
 
-```javascript
+```js
 // webpack.config.js
 module.exports = {
   // ...
@@ -94,7 +94,7 @@ module.exports = {
 
 一个典型的用例是在使用 moment.js 时忽略其所有本地化文件，因为它们会占用很大的空间，而大多数应用可能只需要少数或根本不需要这些本地化文件。
 
-```javascript
+```js
 // webpack.config.js
 const webpack = require('webpack');
 

@@ -22,7 +22,7 @@ title: DllPlugin
 
 首先，创建一个 webpack 配置文件专门用于构建 DLL：
 
-```javascript
+```js
 // webpack.dll.config.js
 const path = require('path');
 const webpack = require('webpack');
@@ -47,7 +47,7 @@ module.exports = {
 
 接着，将这些预先打包好的 DLL 文件包含到主应用的 webpack 配置中：
 
-```javascript
+```js
 // webpack.config.js
 const path = require('path');
 const webpack = require('webpack');

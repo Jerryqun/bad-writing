@@ -101,7 +101,7 @@ document.head.appendChild(scriptElement);
 
 浏览器原生支持自定义事件，你可以在一个微前端应用中派发事件，并在另一个应用中监听这些事件。这种方式简单且不需要额外的库或框架。
 
-```javascript
+```js
 // 应用 A 发送事件
 const event = new CustomEvent('myEvent', { detail: { some: 'data' } });
 window.dispatchEvent(event);

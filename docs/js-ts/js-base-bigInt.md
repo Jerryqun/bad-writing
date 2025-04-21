@@ -13,19 +13,19 @@ title: BigInt
 
 1. 通过在整数后面加上 `n` 后缀来直接创建：
 
-```javascript
+```js
 const bigInt1 = 1234567890123456789012345678901234567890n;
 ```
 
 2. 使用 `BigInt()` 构造函数：
 
-```javascript
+```js
 const bigInt2 = BigInt('1234567890123456789012345678901234567890');
 ```
 
 `BigInt` 类型的数值可以进行基本的算术运算，如加法、减法、乘法和除法。然而，由于 `BigInt` 是一种不同的数据类型，你不能将其与 `Number` 类型的值直接混合使用；你必须将 `Number` 值转换为 `BigInt`，或者相反。
 
-```javascript
+```js
 const bigInt1 = 10n;
 const bigInt2 = 20n;
 

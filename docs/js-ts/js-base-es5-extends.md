@@ -241,7 +241,7 @@ class 语法实际上是构造函数的语法糖
 
 - **ES5** 使用构造函数和原型链来创建类：
 
-  ```javascript
+  ```js
   function Person(name) {
     this.name = name;
   }
@@ -253,7 +253,7 @@ class 语法实际上是构造函数的语法糖
 
 - **ES6** 引入了 `class` 关键字，让类的定义更简洁和直观：
 
-  ```javascript
+  ```js
   class Person {
     constructor(name) {
       this.name = name;
@@ -269,7 +269,7 @@ class 语法实际上是构造函数的语法糖
 
 - **ES5** 通过构造函数和原型链实现继承：
 
-  ```javascript
+  ```js
   function Employee(name, job) {
     Person.call(this, name);
     this.job = job;
@@ -280,7 +280,7 @@ class 语法实际上是构造函数的语法糖
   ```
 
 - **ES6** 使用 `extends` 关键字来简化继承：
-  ```javascript
+  ```js
   class Employee extends Person {
     constructor(name, job) {
       super(name); // 调用父类构造函数
@@ -293,14 +293,14 @@ class 语法实际上是构造函数的语法糖
 
 - **ES5** 需要直接将方法添加到构造函数上：
 
-  ```javascript
+  ```js
   Person.saySomething = function () {
     console.log('I am a person.');
   };
   ```
 
 - **ES6** 使用 `static` 关键字定义静态方法：
-  ```javascript
+  ```js
   class Person {
     static saySomething() {
       console.log('I am a person.');
@@ -312,7 +312,7 @@ class 语法实际上是构造函数的语法糖
 
 - **ES5** 使用原型创建 getter 和 setter：
 
-  ```javascript
+  ```js
   function Person(name) {
     this._name = name;
   }
@@ -329,7 +329,7 @@ class 语法实际上是构造函数的语法糖
 
 - **ES6** 直接在类中使用：
 
-  ```javascript
+  ```js
   class Person {
     constructor(name) {
       this._name = name;
