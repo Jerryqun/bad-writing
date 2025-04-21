@@ -136,6 +136,7 @@ Command + Option + c  复制选中文件的路径
 control + c 杀死当前终端命令
 command + shift + r 强制刷新浏览器
 
+
 ```
 
 ## sketch 常用命令
