@@ -139,6 +139,19 @@ command + shift + r 强制刷新浏览器
 
 ```
 
+## macOS 如何安装 brew
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+如果您使用的是 Apple Silicon 芯片（如 M1、M2），Homebrew 将安装在 /opt/homebrew 下。有时您需要将它添加到您的 shell 配置文件中，比如 .zshrc 或 .bash_profile：
+
+```bash
+export PATH="/opt/homebrew/bin:$PATH"
+
+```
+
 ## sketch 常用命令
 
 吸色

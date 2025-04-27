@@ -56,7 +56,14 @@ app.listen(3000);
           return "/index.html";
         }
       },
-    }
+    },
+  // 匹配任何不为根路径的请求
+    "/": {
+        target: 'http://your_backend_server',
+        changeOrigin: true,
+        pathRewrite: (path) => {
+          return path === '/' ? '/do-not-proxy' : path;
+        }
   }
 }
 ```
