@@ -39,4 +39,12 @@ lerna create module-a
 lerna create module-b
 ```
 
-在 lerna 项目中 ，package.json 里面的包可以互相引用， 比如 module-a 中 package.json 中 dependencies 装了 dayjs，则 module-b 中也可以用 dayjs，在最外层使用 npm i，会吧子包里面的 package.json 中的包都装上。
+在 lerna 项目中 ，package.json 里面的包可以互相引用， 比如 module-a 中 package.json 中 dependencies 装了 dayjs，则 module-b 中也可以用 dayjs，在最外层使用 npm i，会把子包里面的 package.json 中的包都装上。
+
+如果去除最外层 package.json 中的 workspaces ，多包管理的特点将消失。
+
+```bash
+  "workspaces": [
+    "packages/*"
+  ],
+```
