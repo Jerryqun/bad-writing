@@ -135,6 +135,7 @@ command + shift + 4   截图所选区域
 Command + Option + c  复制选中文件的路径
 control + c 杀死当前终端命令
 command + shift + r 强制刷新浏览器
+cd .. 回到上一层目录
 
 
 ```
