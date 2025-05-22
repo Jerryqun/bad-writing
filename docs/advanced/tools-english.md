@@ -14,3 +14,6 @@ anonymous 匿名的
 vendors 供应商
 inspect 检查
 feedback 反馈
+partial 部分的
+Exclude 排除
+Extract 提炼
