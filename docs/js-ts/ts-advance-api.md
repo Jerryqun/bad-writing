@@ -82,6 +82,15 @@ type TestArgsType2 = Parameters<typeof test1>[1];
 // ) => any
 //   ? P
 //   : never;
+
+function greet(name: string, age: number) {
+  console.log(`Hello, ${name}! You are ${age} years old.`);
+}
+
+type GreetParams = Parameters<typeof greet>;
+const a: GreetParams = ['3232', 1];
+// 等价于：
+// type GreetParams = [string, number]
 ```
 
 ## Exclude
@@ -190,4 +199,43 @@ obj.fn({ a: 1 });
 fn.call({ x: 1 }, { a: 1 });
 fn.bind({ x: 1 }, { a: 1 });
 fn.apply({ x: 1 }, [{ a: 1 }]);
+```
+
+## ThisParameterType
+
+```ts
+class User {
+  name: string;
+  constructor(name: string) {
+    this.name = name;
+  }
+}
+
+type UserInstance = InstanceType<typeof User>;
+
+// 等价于：
+// type UserInstance = User
+// {name:string}
+```
+
+## ConstructorParameters
+
+```ts
+class User1 {
+  constructor(public name: string, public age: number) {}
+}
+
+type UserConstructorParams = ConstructorParameters<typeof User1>;
+// 等价于：
+// type UserConstructorParams = [string, number]
+```
+
+## Awaited
+
+获取 Promise 类型 T 的解析值类型。
+
+```ts
+type PromiseResult = Awaited<Promise<string>>;
+// 等价于：
+// type PromiseResult = string
 ```
