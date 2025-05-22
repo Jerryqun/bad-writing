@@ -22,6 +22,8 @@ less/sass/stylus/postcss - 内置支持（需要单独安装所对应的编译�
 
 ### Vite 为什么启动非常快<br/>
 
+[参考](https://juejin.cn/post/7486170504271069210)
+
 开发环境使用 Es6 Module，无需打包，非常快<br/>
 生产环境使用 rollup，并不会快很多<br/>
 
