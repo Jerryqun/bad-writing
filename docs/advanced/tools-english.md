@@ -12,3 +12,5 @@ composite 合成的
 inherit 继承  
 anonymous 匿名的  
 vendors 供应商
+inspect 检查
+feedback 反馈

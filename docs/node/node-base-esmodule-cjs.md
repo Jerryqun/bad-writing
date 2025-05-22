@@ -138,7 +138,7 @@ https://g.alicdn.com/code/lib/monaco-editor/0.36.1/min/vs/editor/editor.main.nls
 
 ### UMD
 
-UMD 兼容 CJS AMD 使用 IIFI 规范， 在前端和后端都适用，
+UMD 兼容 CJS、 AMD， 使用 IIFI 规范， 在前端和后端都适用，
 整体是一个自执行函数，先判断 module 和 export 是否可用，这是为了兼容 CommonJS 模块规范；
 之后判断 define 是否可用，这是为了兼容 AMD 模块规范；如果都不可用，就直接暴露在 global 下
 
@@ -156,6 +156,8 @@ React UMD 栗子
   // 业务代码...
 });
 ```
+
+`打包成umd格式时peerDependencies里面的包不会打进去，需单独引用`
 
 ## module.exports 与 exports 的区别
 
