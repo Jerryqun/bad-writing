@@ -17,3 +17,5 @@ feedback 反馈
 partial 部分的
 Exclude 排除
 Extract 提炼
+Usage 用法
+classic 金典的
