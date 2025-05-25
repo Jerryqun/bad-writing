@@ -245,3 +245,9 @@ ln -s /path/to/script.js zcq
 ```bash
 sudo ln -s ./zcq zcq1
 ```
+
+## hosts 文件修改
+
+推荐使用可视化工具 SwitchHosts
+
+配置时不需要带端口，如果域名对应的 ip 有端口，那域名访问的时候带上端口，用无痕浏览器打开。
