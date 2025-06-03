@@ -1405,8 +1405,14 @@ JavaScript 是一种编程语言，实现了 ECMAScript 标准。BOM 和 DOM 是
 其实这 7 个数组对应了同一个引用、指向的是同一块内存空间，它们本质上是同一个数组。因此当你修改第 0 行第 0 个元素的值时，第 1-6 行的第 0 个元素的值也都会跟着发生改变。
 
 ```js
-const arr = new Array(7).fill([]);
-
-arr[0][0] = 1;
-console.log('arr', arr.toString()); //1,1,1,1,1,1,1
+// 假设后端返回的用户信息是键值对数组
+const userArray = [
+  ['name', 'Tom'],
+  ['age', 28],
+  ['email', 'tom@example.com'],
+];
+// 使用Object.fromEntries()将键值对数组转为对象
+const userObject = Object.fromEntries(userArray);
+console.log(userObject);
+// {name: 'Tom', age: 28, email: 'tom@example.com'}
 ```
