@@ -97,6 +97,8 @@ rebase 会将整个分支移动到另一个分支上，有效地整合了所有�
 
 ## git stash
 
+git stash 是 Git 中的一个非常有用的命令，用于临时保存当前工作目录的修改（未提交的变化），让你可以切换到其他分支或处理其他任务，而不需要在当前分支上提交不完整或不需要的更改。
+
 ```bash
 
 git stash 本地存储
@@ -267,3 +269,51 @@ git merge master 和 git merge origin master 之间的区别在于合并的分�
 git merge master：这是将本地的 master 分支合并到当前分支。假设你在另一个分支（比如 feature-branch）上，执行 git merge master 会将你本地 master 分支的最新更改合并到 feature-branch。注意，这里的 master 分支是指你机器上本地版本的 master 分支，而不是远程仓库的最新版本。
 
 git merge origin master：这是将远程仓库中的 master 分支合并到当前分支。origin 是默认指向远程仓库的别名。执行 git merge origin master 时，合并的是从远程仓库拉取的 master 分支，而不是本地的 master 分支。
+
+## git status
+
+git status 是 Git 中用来检查当前 Git 仓库状态的命令。它提供了有关你的工作目录和暂存区的信息，并告诉你哪些文件已经被修改、哪些文件被添加到暂存区、哪些文件还没有被跟踪等等。
+
+## 如果有 git 仓库需要迁移，应该怎么操作？
+
+1. 检查当前仓库状态  
+   确保本地仓库的所有更改已提交并同步到当前远程仓库。
+
+```bash
+git status
+git remote -v
+```
+
+2. 克隆或进入现有仓库
+
+```bash
+git clone <当前远程仓库地址>
+cd <仓库名>
+```
+
+3. 添加新的远程地址
+   为新的目标仓库设置一个新的远程名称，例如 new-origin：
+
+```bash
+git remote add new-origin <新仓库地址>
+```
+
+4. 推送到新的仓库
+
+推送所有分支
+
+```bash
+git push new-origin --all
+```
+
+推送所有标签：
+
+```bash
+git push new-origin --tags
+```
+
+5. 删除旧远程（可选）
+
+```bash
+   git remote remove origin
+```
