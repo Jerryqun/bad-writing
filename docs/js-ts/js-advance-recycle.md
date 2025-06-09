@@ -124,7 +124,9 @@ function func() {
 清除已经死亡的对象  
 将 To 空间作为新的 From 空间，并将 From 空间作为新的 To 空间，完成垃圾回收
 
-## v8
+## 说说你对 V8 引擎的了解
+
+V8 引擎是 Google 开发的一个开源 JavaScript 引擎，广泛应用于 Chrome 浏览器和 Node.js。它主要负责将 JavaScript 代码转换为高效的机器代码，以便快速执行。
 
 64 位操作系统  
 内存限制为 1.5 个 g
