@@ -20,3 +20,5 @@ Extract 提炼
 Usage 用法
 classic 金典的
 prompts 提示
+quotes 引号
+semicolon 分号
