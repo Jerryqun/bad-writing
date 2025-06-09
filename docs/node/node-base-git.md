@@ -317,3 +317,11 @@ git push new-origin --tags
 ```bash
    git remote remove origin
 ```
+
+## git commit 描述提交规范
+
+Conventional Commits
+
+https://www.conventionalcommits.org/en/v1.0.0/
+
+https://fe.ecool.fun/topic/68359582-654f-43c0-9fd9-bd15784db6a6?orderBy=default&order=desc&tagId=29&exerciseCate=0&ignoreMaster=0&difficulty=
