@@ -10,26 +10,26 @@ title: npx与npm的区别
 
 https://juejin.cn/post/6844903945664462855
 
-### 1 一个永久存在，一个临时安装，用完后删除
+### 1、 一个永久存在，一个临时安装，用完后删除
 
 例子：用创建一个 react 项目的对比
 
-npm 创建
-npm install -g create-react-app
+npm 创建  
+npm install -g create-react-app  
 create-react-app test-app
 
-npx 创建
+npx 创建  
 npx create-react-app test-app
 
 npm 他会在本地全局性的安装 create-react-app，这个包会存储在 node 目录下面去。以后创建 react 项目直接执行 create-react-app 命令就可以了。
 
 npx 命令他会把 create-react-app 安装包临时安装上，等项目初始化完成以后，他就删除掉。
 
-### 2 npx 会帮你执行依赖包里的二进制文件。
+### 2、 npx 会帮你执行依赖包里的二进制文件。
 
-例子：执行 webpack 里面的文件
-npm 执行
-npm i -D webpack ./node_modules/.bin/webpack -v
+例子：执行 webpack 里面的文件  
+npm 执行  
+npm i -D webpack ./node_modules/.bin/webpack -v  
 结果是：6.9.0
 
 或者执行
