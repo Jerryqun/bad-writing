@@ -46,7 +46,12 @@ XSS 攻击防范
 
 ## 4、 使用 DOMPurify.sanitize 避免 xss 攻击
 
+用 DOMPurify.sanitize 避免 xss 攻击
+
 ```js
+// npm install dompurify
+
+import DOMPurify from 'dompurify';
 const sanitizedInput = DOMPurify.sanitize(userInput);
 document.body.innerHTML = sanitizedInput; // 安全使用
 
