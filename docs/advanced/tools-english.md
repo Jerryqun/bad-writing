@@ -22,3 +22,4 @@ classic 金典的
 prompts 提示
 quotes 引号
 semicolon 分号
+conventional 常规的

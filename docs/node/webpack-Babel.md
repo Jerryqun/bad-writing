@@ -253,3 +253,50 @@ webpack 中的 UglifyJS 依旧还是会将宽松模式认为是有副作用的�
 
 </html>
 ```
+
+## "swc-loader"和 babel-loader 的区别
+
+`swc-loader` 和 `babel-loader` 都是用于将现代 JavaScript 代码转译为浏览器兼容代码的工具，通常在使用 Webpack 的项目中使用。尽管它们的主要目标相似，但它们有一些重要的区别：
+
+### 1. 基本原理
+
+- **Babel**：
+
+  - Babel 是一个广泛使用的 JavaScript 转译器，它将现代 JavaScript（ES6+）代码转换为兼容的 JavaScript 代码（例如 ES5）。
+  - Babel 使用解析器（如 Babel Parser）将代码解析为抽象语法树（AST），然后根据设定的插件或预设转换 AST，最后生成新的代码。
+  - 由于其灵活性和丰富的插件生态，Babel 用户能够对代码的转译过程进行精细控制。
+
+- **SWC**：
+  - SWC（Speedy Web Compiler）是一个使用 Rust 编写的编译器，旨在提供更高的性能。
+  - SWC 也将现代 JavaScript 代码转译为兼容的 JavaScript，但它的速度通常比 Babel 更快，因为 SWC 使用的是 Rust 语言的高效性。
+  - SWC 设计之初就考虑了速度和内存使用的优化，因此在性能上相较于 Babel 更具优势。
+
+### 2. 性能
+
+- **性能**：
+  - `swc-loader`：由于它是用 Rust 编写的，通常能在构建速度上显著优于 Babel，特别是在较大的代码库中。
+  - `babel-loader`：虽然 Babel 的性能在不断提高时，它的速度通常比 SWC 更慢，尤其是在处理大型应用程序时。
+
+### 3. 配置和生态系统
+
+- **生态系统**：
+  - `babel-loader`：Babel 拥有更成熟的生态系统，有大量的插件和预设可以选择，用户的灵活性更高。它支持很多功能（例如 TypeScript、React 等）并有良好的社区支持。
+  - `swc-loader`：SWC 的生态相对较新，支持的插件和预设数量可能比 Babel 少，但它正在快速发展。SWC 有一些内置的选项(例如支持 TypeScript 和 JSX)，通常能够满足大部分基本需求。
+
+### 4. 兼容性
+
+- **兼容性**：
+  - 两者都可以与现代框架（如 React、Vue 等）一起使用，可以转换 JSX 和 TypeScript，但是 SWC 在某些特殊情况下的运行效果可能不如 Babel 因为其生态系统相对较小。
+
+### 5. 教程和学习曲线
+
+- **学习曲线**：
+  - `babel-loader`：由于 Babel 在社区中的普及和文档丰富，学习资源更为广泛。
+  - `swc-loader`：SWC 的社区和文档在不断扩展，虽然当前的资源不如 Babel 丰富，但也不是很难学会。
+
+### 总结
+
+- 如果你在意构建速度，且愿意尝试较新的技术，`swc-loader` 是一个不错的选择。
+- 如果你需要丰富的插件支持和更无缝的生态集成，特别是与 Babel 相关的项目，`babel-loader` 可能是更好的选择。
+
+选择哪个工具主要取决于你的项目需求、对性能的要求以及你的团队对新工具的适应能力。

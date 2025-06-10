@@ -120,7 +120,7 @@ React Hooks 必须置于组件顶层的主要原因是确保 Hooks 在每次组�
 
 ## 为什么 React 元素有一个 $$typeof 属性
 
-目的是为了防止 XSS 攻击。因为 Synbol 无法被序列化，所以 React 可以通过有没有 $$typeof 属性来断出当前的 element 对象是从数据库来的还是自己生成的。
+目的是为了防止 XSS 攻击。因为 Symbol 无法被序列化，所以 React 可以通过有没有 $$typeof 属性来断出当前的 element 对象是从数据库来的还是自己生成的。
 
 如果没有 $$typeof 这个属性，react 会拒绝处理该元素。
 

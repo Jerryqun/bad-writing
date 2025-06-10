@@ -239,3 +239,19 @@ type PromiseResult = Awaited<Promise<string>>;
 // 等价于：
 // type PromiseResult = string
 ```
+
+## `Required<T>`
+
+将类型 T 的所有属性变为必选属性
+
+```ts
+type RequiredSELF<T> = { [P in keyof T]-?: T[P] };
+```
+
+## `Readonly<T>`
+
+将类型 T 的所有属性变为只读属性
+
+```ts
+type ReadonlySelf<T> = { readonly [P in keyof T]: T[P] };
+```
