@@ -30,6 +30,8 @@ document.addEventListener('contextmenu', (e) => e.preventDefault());
 3. Ctrl+Shift+C
    Ctrl+Shift+I
 
+   mac 电脑 ： option + command +I/J
+
 上面这两个快捷键也可以打开控制台，还有一个快捷键 Ctrl+U 可以打开源码页面，这里我们也可以一起把它给拦截掉。
 
 ```js
