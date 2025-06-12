@@ -24,4 +24,5 @@ quotes 引号
 semicolon 分号  
 conventional 常规的
 deploy 部署  
-feature 特征
+feature 特征  
+neutral 中性, 中立
