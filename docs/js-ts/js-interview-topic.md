@@ -1217,3 +1217,31 @@ function fn({ x = 0 } = {}) {
 fn(undefined); // 0（正常）
 fn({ x: undefined }); // 0（预期应为 undefined）
 ```
+
+## 直接在目标对象上调用 hasOwnProperty 方法并不安全
+
+ts 警告 Do not access Object.prototype method 'hasOwnProperty' from target object
+
+因为目标对象可能会被修改或是一个某种不具备该方法的对象。这可能会导致以下几种问题：
+
+对象原型被篡改：如果我们的目标对象是一个用户定义的对象，可能会重写 hasOwnProperty 方法，导致意外的行为。
+
+继承自标准对象的实例：某些对象的实例可能没有 hasOwnProperty 方法，因为它们不是从 Object 继承的，或被代理等。
+
+无法调用方法：如果使用了一些库或框架，它们可能在对象上创建了同名的方法，直接调用会导致不可预测的结果。
+
+```js
+const obj = {
+  hasOwnProperty: function () {
+    return false; // 重新定义hasOwnProperty方法
+  },
+  a: 1,
+};
+
+// 使用直接调用可能导致意外结果
+console.log(obj.hasOwnProperty('a')); // 输出: false
+
+// 安全调用
+console.log(Object.prototype.hasOwnProperty.call(obj, 'a')); // 输出: true
+
+```
