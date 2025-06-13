@@ -1,10 +1,10 @@
-name: Push to gh-pages
-
+name: Push to gh-pages # 工作流名称
+# 触发条件
 on:
-  push:
+  push: # 当代码被推送时触发
     branches:
-      - main # default branch
-
+      - main # default branch   # 只在这些分支上触发
+# 作业定义
 jobs:
   deploy:
     runs-on: ubuntu-latest
