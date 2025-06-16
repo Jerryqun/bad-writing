@@ -27,3 +27,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           # 文档目录，如果是 react 模板需要修改为 docs-dist
           publish_dir: ./dist
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          registry-url: 'https://registry.npmmirror.com'  # 使用淘宝镜像
