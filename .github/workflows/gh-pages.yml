@@ -17,7 +17,7 @@ jobs:
           # 如果配置 themeConfig.lastUpdated 为 false，则不需要添加该参数以加快检出速度
           fetch-depth: 0
       - name: Install dependencies
-        run: npm install
+        run: yarn install
       - name: Build with dumi
         # 文档编译命令，如果是 react 模板需要修改为 npm run docs:build
         run: npm run build
@@ -27,7 +27,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           # 文档目录，如果是 react 模板需要修改为 docs-dist
           publish_dir: ./dist
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          registry-url: 'https://registry.npmmirror.com'  # 使用淘宝镜像
+      # - name: Set up Node.js
+      #   uses: actions/setup-node@v3
+      #   with:
+      #     registry-url: 'https://registry.npmmirror.com'  # 使用淘宝镜像

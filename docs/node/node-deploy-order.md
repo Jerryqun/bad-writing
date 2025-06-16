@@ -153,6 +153,8 @@ export PATH="/opt/homebrew/bin:$PATH"
 
 ```
 
+一般安装完后会有提示命令，按提示命令 进行环境变量的配置。
+
 ## sketch 常用命令
 
 吸色
