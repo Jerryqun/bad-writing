@@ -25,4 +25,6 @@ semicolon 分号
 conventional 常规的
 deploy 部署  
 feature 特征  
-neutral 中性, 中立
+neutral 中性, 中立  
+phase  阶段  
+generate  产生
