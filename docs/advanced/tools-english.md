@@ -28,3 +28,4 @@ feature 特征
 neutral 中性, 中立  
 phase  阶段  
 generate  产生
+prepare 准备  
