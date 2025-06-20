@@ -52,8 +52,12 @@ git clone git@github.com:Jerryqun/react-antd-admin.git
 <a href="https://www.runoob.com/git/git-remote.html" target="_blank">参考</a>
 
 ```bash
-显示所有远程仓库：
 git remote -v
+显示所有远程仓库： 会出现origin 和target 两个
+origin：默认远程名称：在大多数情况下，当您克隆一个 Git 仓库时，Git 会自动将其远程名称设置为 origin。这是一个约定的名称，用于表示默认的远程仓库。
+
+target：自定义远程名称：target 是一个您自己定义的远程仓库名称。它不是 Git 的约定名称，您可以根据需要设置。
+
 
 设置远程仓库地址
 git remote set-url origin git@github.com:Jerryqun/react-antd-admin.git
