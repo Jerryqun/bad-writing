@@ -45,6 +45,11 @@ npm install /path/to/your-package.tgz
    }
    ```
 
+   `/ 是绝对路径`  
+   `./ 是相对路径`  
+    如项目中，根目录有lib文件夹，文件夹下面有tgz文件，package.json中引用为    
+    "your-package-name": "file:./lib/your-package.tgz"
+
    或者使用 URL：
 
    ```json
