@@ -4,13 +4,16 @@ hero:
   title: 编程小径
   description:
   actions:
-    - text: 编程笔记
+    - text: 编程笔记 
       link: /js-ts
     - text: GitHub
       link: https://github.com/Jerryqun/bad-writing
     - text: PlayGround
       link: https://pmsaas.taobao.com/play-ground#/
-features:
+
+
+
+# features: 
   # - title: 更好的编译性能
   #   emoji: 🚀
   #   description: 通过结合使用 <a href="https://umijs.org/blog/mfsu-faster-than-vite" target="_blank" rel="noreferrer">Umi 4 MFSU</a>、esbuild、SWC、持久缓存等方案，带来比 dumi 1.x 更快的编译速度
@@ -31,8 +34,9 @@ features:
   #   description: 提供与全新的 NPM 包研发工具 <a href="https://github.com/umijs/father" target="_blank" rel="noreferrer">father 4</a> 集成的脚手架，为开发者提供一站式的研发体验
 ---
 
-<!-- ## 联系作者
+<!-- ## 联系作者 -->
 
 <div style="align-items: center;text-align: center">
-  <img data-type="dingtalk" src="../img/IMG_4689.JPG" width="200" />
-</div> -->
+  面试不是知识竞赛，而是解决方案设计能力的展示
+  <!-- <img data-type="dingtalk" src="../img/IMG_4689.JPG" width="200" /> -->
+</div>
