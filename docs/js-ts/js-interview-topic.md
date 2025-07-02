@@ -1245,3 +1245,42 @@ console.log(obj.hasOwnProperty('a')); // 输出: false
 console.log(Object.prototype.hasOwnProperty.call(obj, 'a')); // 输出: true
 
 ```
+
+## event.target 与event.currentTarget区别
+
+- event.target：表示事件触发的具体元素。
+- event.currentTarget：表示当前正在处理事件的元素，即事件监听器绑定的元素。
+```js
+
+<div id="parent">
+  Parent
+  <button id="child">Click Me!</button>
+</div>
+
+const parent = document.getElementById('parent');
+
+parent.addEventListener('click', function(event) {
+  console.log('Current Target: ', event.currentTarget); // 这里会输出父元素
+  console.log('Target: ', event.target);               // 这里会输出具体被点击的元素，比如按钮
+});
+
+```
+
+## 输出什么?
+
+```js
+const user = {
+	email: "my@email.com",
+	updateEmail: email => {
+		this.email = email
+	}
+}
+
+user.updateEmail("new@email.com")
+console.log(user.email)
+```
+
+updateEmail 函数是一个箭头函数，它没有和 user 对象绑定。这就意味着 this 关键字不会引用到 user 对象，但是会引用到全局对象。 user 对象内部的 email 的值不会更新。当打印 user.email 的时候， 原始值 my@email.com 被返回。
+
+
+

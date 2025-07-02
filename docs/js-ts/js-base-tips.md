@@ -1416,3 +1416,7 @@ const userObject = Object.fromEntries(userArray);
 console.log(userObject);
 // {name: 'Tom', age: 28, email: 'tom@example.com'}
 ```
+
+## Object.fromEntries
+
+Object.fromEntries 用于将二维数组转换为对象

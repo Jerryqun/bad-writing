@@ -10,7 +10,7 @@ title: jsx
 
 什么是 jsx
 
-jsx 是一种 JavaScript 的语法扩展，用来描述用户界面
+jsx 是一种 JavaScript 的语法扩展，用来描述用户界面，  
 在 react 代码执行之前，babel 会将 jsx 编译为 react 的 api
 
 ## Babel 解析 JSX 流程
