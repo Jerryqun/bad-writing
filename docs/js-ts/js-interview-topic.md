@@ -1282,5 +1282,34 @@ console.log(user.email)
 
 updateEmail 函数是一个箭头函数，它没有和 user 对象绑定。这就意味着 this 关键字不会引用到 user 对象，但是会引用到全局对象。 user 对象内部的 email 的值不会更新。当打印 user.email 的时候， 原始值 my@email.com 被返回。
 
+## 输出什么?
+
+
+```js
+const user = {
+	email: "e@mail.com",
+	password: "12345"
+}
+
+const updateUser = ({ email, password }) => {
+	if (email) {
+		Object.assign(user, { email })
+	}
+
+	if (password) {
+		user.password = password
+	}
+
+	return user
+}
+
+const updatedUser = updateUser({ email: "new@email.com" })
+
+console.log(updatedUser === user) // true
+```
+
+updateUser 函数更新user的 email 和 password 属性的值， 如果它们的值传入函数， 函数返回的就是 user 对象。 updateUser 函数的返回值是 user 对象，意味着updatedUser的值与 user 指向的是同一个 user 对象。updatedUser === user 为 true.
+
+
 
 
