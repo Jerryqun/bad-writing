@@ -779,4 +779,46 @@ console.log(obj.hasOwnProperty('a')); // \u8F93\u51FA: false
 // \u5B89\u5168\u8C03\u7528
 console.log(Object.prototype.hasOwnProperty.call(obj, 'a')); // \u8F93\u51FA: true
 
-`,paraId:148,tocIndex:52}]}}]);
+`,paraId:148,tocIndex:52},{value:"event.target\uFF1A\u8868\u793A\u4E8B\u4EF6\u89E6\u53D1\u7684\u5177\u4F53\u5143\u7D20\u3002",paraId:149,tocIndex:53},{value:"event.currentTarget\uFF1A\u8868\u793A\u5F53\u524D\u6B63\u5728\u5904\u7406\u4E8B\u4EF6\u7684\u5143\u7D20\uFF0C\u5373\u4E8B\u4EF6\u76D1\u542C\u5668\u7ED1\u5B9A\u7684\u5143\u7D20\u3002",paraId:149,tocIndex:53},{value:`
+<div id="parent">
+  Parent
+  <button id="child">Click Me!</button>
+</div>
+
+const parent = document.getElementById('parent');
+
+parent.addEventListener('click', function(event) {
+  console.log('Current Target: ', event.currentTarget); // \u8FD9\u91CC\u4F1A\u8F93\u51FA\u7236\u5143\u7D20
+  console.log('Target: ', event.target);               // \u8FD9\u91CC\u4F1A\u8F93\u51FA\u5177\u4F53\u88AB\u70B9\u51FB\u7684\u5143\u7D20\uFF0C\u6BD4\u5982\u6309\u94AE
+});
+
+`,paraId:150,tocIndex:53},{value:`const user = {
+	email: "my@email.com",
+	updateEmail: email => {
+		this.email = email
+	}
+}
+
+user.updateEmail("new@email.com")
+console.log(user.email)
+`,paraId:151,tocIndex:54},{value:"updateEmail \u51FD\u6570\u662F\u4E00\u4E2A\u7BAD\u5934\u51FD\u6570\uFF0C\u5B83\u6CA1\u6709\u548C user \u5BF9\u8C61\u7ED1\u5B9A\u3002\u8FD9\u5C31\u610F\u5473\u7740 this \u5173\u952E\u5B57\u4E0D\u4F1A\u5F15\u7528\u5230 user \u5BF9\u8C61\uFF0C\u4F46\u662F\u4F1A\u5F15\u7528\u5230\u5168\u5C40\u5BF9\u8C61\u3002 user \u5BF9\u8C61\u5185\u90E8\u7684 email \u7684\u503C\u4E0D\u4F1A\u66F4\u65B0\u3002\u5F53\u6253\u5370 user.email \u7684\u65F6\u5019\uFF0C \u539F\u59CB\u503C ",paraId:152,tocIndex:54},{value:"my@email.com",paraId:152,tocIndex:54},{value:" \u88AB\u8FD4\u56DE\u3002",paraId:152,tocIndex:54},{value:`const user = {
+	email: "e@mail.com",
+	password: "12345"
+}
+
+const updateUser = ({ email, password }) => {
+	if (email) {
+		Object.assign(user, { email })
+	}
+
+	if (password) {
+		user.password = password
+	}
+
+	return user
+}
+
+const updatedUser = updateUser({ email: "new@email.com" })
+
+console.log(updatedUser === user) // true
+`,paraId:153,tocIndex:55},{value:"updateUser \u51FD\u6570\u66F4\u65B0user\u7684 email \u548C password \u5C5E\u6027\u7684\u503C\uFF0C \u5982\u679C\u5B83\u4EEC\u7684\u503C\u4F20\u5165\u51FD\u6570\uFF0C \u51FD\u6570\u8FD4\u56DE\u7684\u5C31\u662F user \u5BF9\u8C61\u3002 updateUser \u51FD\u6570\u7684\u8FD4\u56DE\u503C\u662F user \u5BF9\u8C61\uFF0C\u610F\u5473\u7740updatedUser\u7684\u503C\u4E0E user \u6307\u5411\u7684\u662F\u540C\u4E00\u4E2A user \u5BF9\u8C61\u3002updatedUser === user \u4E3A true.",paraId:154,tocIndex:55}]}}]);

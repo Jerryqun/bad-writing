@@ -1127,4 +1127,4 @@ const userArray = [
 const userObject = Object.fromEntries(userArray);
 console.log(userObject);
 // {name: 'Tom', age: 28, email: 'tom@example.com'}
-`,paraId:82,tocIndex:39}]}}]);
+`,paraId:82,tocIndex:39},{value:"Object.fromEntries \u7528\u4E8E\u5C06\u4E8C\u7EF4\u6570\u7EC4\u8F6C\u6362\u4E3A\u5BF9\u8C61",paraId:83,tocIndex:40}]}}]);

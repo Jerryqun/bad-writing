@@ -1,8 +1,0 @@
-"use strict";(self.webpackChunkblog_cq=self.webpackChunkblog_cq||[]).push([[9354],{37505:function(i,e,_){_.r(e);var t=_(72269),l=_(93359),m=_(61788),E=_(19977),x=_(91558),r=_(24268),h=_(96057),D=_(85939),o=_(53683),a=_(80936),s=_(67294),d=_(70682),n=_(85893);function u(){return(0,n.jsx)(o.dY,{children:(0,n.jsx)(s.Suspense,{fallback:(0,n.jsx)(a.Z,{}),children:(0,n.jsx)(n.Fragment,{children:(0,n.jsxs)("div",{className:"markdown",children:[(0,n.jsxs)("h2",{id:"pm2-\u90E8\u7F72-node-\u670D\u52A1",children:[(0,n.jsx)("a",{"aria-hidden":"true",tabIndex:"-1",href:"#pm2-\u90E8\u7F72-node-\u670D\u52A1",children:(0,n.jsx)("span",{className:"icon icon-link"})}),"pm2 \u90E8\u7F72 node \u670D\u52A1"]}),(0,n.jsx)("p",{children:(0,n.jsx)("a",{href:"https://blog.csdn.net/qq_32445707/article/details/120898799",target:"_blank",rel:"noreferrer",children:d.texts[0].value})}),(0,n.jsx)("p",{children:d.texts[1].value}),(0,n.jsx)(r.Z,{lang:"bash",children:d.texts[2].value})]})})})})}e.default=u},70682:function(i,e,_){_.r(e),_.d(e,{texts:function(){return t}});const t=[{value:"\u53C2\u8003",paraId:0,tocIndex:0},{value:"PM2 \u662F\u5E38\u7528\u7684 node \u8FDB\u7A0B\u7BA1\u7406\u5DE5\u5177\uFF0C\u5B83\u53EF\u4EE5\u63D0\u4F9B node.js \u5E94\u7528\u7BA1\u7406\uFF0C\u5982\u81EA\u52A8\u91CD\u8F7D\u3001\u6027\u80FD\u76D1\u63A7\u3001\u8D1F\u8F7D\u5747\u8861\u7B49\u3002\u540C\u7C7B\u5DE5\u5177\u6709 Supervisor\u3001Forever \u7B49\u3002",paraId:1,tocIndex:0},{value:`pm2 stop xxx \uFF1A\u7ED3\u675F\u67D0\u9879\u8FDB\u7A0B
-
-pm2 stop all \uFF1A\u7ED3\u675F\u6240\u6709\u8FDB\u7A0B
-
-pm2 restart xxx \uFF1A\u91CD\u542F\u67D0\u9879\u8FDB\u7A0B
-
-pm2 delete xxx \uFF1A\u5220\u9664\u67D0\u9879\u8FDB\u7A0B
-`,paraId:2,tocIndex:0}]}}]);
