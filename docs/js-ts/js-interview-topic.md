@@ -1311,5 +1311,28 @@ console.log(updatedUser === user) // true
 updateUser 函数更新user的 email 和 password 属性的值， 如果它们的值传入函数， 函数返回的就是 user 对象。 updateUser 函数的返回值是 user 对象，意味着updatedUser的值与 user 指向的是同一个 user 对象。updatedUser === user 为 true.
 
 
+## 解释
+```js
+const person = {
+  name: "Lydia Hallie",
+  age: 21
+}
+
+[...person] //  报错 
+{...person} // 不报错
+```
+
+当你使用展开运算符 ... 来试图展开一个对象 person 到一个数组时，JavaScript 会抛出错误，因为 person 是一个普通对象，而不是一个可迭代的对象（iterable）。
+
+可迭代对象是实现了 Symbol.iterator 方法的对象，比如数组、字符串、Set 和 Map 等。而普通对象（如字面量对象）不具备这个特性。
+
+使用 {...person} 是利用扩展运算符（spread operator）来创建一个新的对象。这是合法的，因为对象的扩展运算符用于展开对象的键值对到一个新对象中。
+
+这个操作会复制 person 对象的属性到一个新的对象中，而不是尝试将其转换为数组。
+
+
+
+
+
 
 
