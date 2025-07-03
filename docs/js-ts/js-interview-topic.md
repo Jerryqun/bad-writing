@@ -1330,6 +1330,81 @@ const person = {
 
 这个操作会复制 person 对象的属性到一个新的对象中，而不是尝试将其转换为数组。
 
+## 类的私有变量
+
+```js
+class Counter {
+  #number = 10
+
+  increment() {
+    this.#number++
+  }
+
+  getNum() {
+    return this.#number
+  }
+}
+
+const counter = new Counter()
+counter.increment()
+
+console.log(counter.#number)
+```
+
+在 ES2020 中，通过 # 我们可以给 class 添加私有变量。在 class 的外部我们无法获取该值。当我们尝试输出 counter.#number，语法错误被抛出：我们无法在 class Counter 外部获取它!
+
+有同学反馈，上面的代码在 Chrome console里，是可以打印出 11 这个值的，测试之后确实能看到，这一点在MDN上也有明确说明（只在Chrome的console控制台里，才能够访问到私有属性，这是为了开发调试的便利）
+
+## 怎样能在 index.js 中调用 sum.js 中的 sum 方法？
+```js
+// sum.js
+export default function sum(x) {
+	return x + x;
+}
+
+// index.js
+import * as sum from "./sum";
+```
+答案： sum.default(4)
+
+使用符号 *，我们引入文件中的所有值，包括默认和具名。如果我们有以下文件：
+
+
+```js
+// info.js
+export const name = "Lydia";
+export const age = 21;
+export default "I love JavaScript";
+// index.js
+import * as info from "./info";
+console.log(info);
+```
+info--:
+```json
+{
+  default: "I love JavaScript",
+  name: "Lydia",
+  age: 21
+}
+```
+
+## 输出什么？
+
+```js
+const randomValue = 21;
+
+function getInfo() {
+	console.log(typeof randomValue);
+	const randomValue = "Lydia Hallie";
+}
+
+getInfo();
+```
+
+// ReferenceError
+
+通过 const 关键字声明的变量在被初始化之前不可被引用：这被称之为 暂时性死区。在函数 getInfo 中, 变量 randomValue 声明在getInfo 的作用域的此法环境中。在想要对 typeof randomValue 进行log之前，变量 randomValue 仍未被初始化： 错误ReferenceError 被抛出! JS引擎并不会根据作用域链网上寻找该变量，因为我们已经在 getInfo 函数中声明了 randomValue 变量
+
 
 
 
