@@ -1420,3 +1420,7 @@ console.log(userObject);
 ## Object.fromEntries
 
 Object.fromEntries 用于将二维数组转换为对象
+
+## || 
+
+使用||运算符，我们可以返回第一个真值。 如果所有值都是假值，则返回最后一个值。

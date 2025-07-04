@@ -174,3 +174,14 @@ async(function () {
   console.log('all done');
 });
 ```
+
+
+## yield 和yield* js中有什么区别
+- yield:  
+从当前生成器函数中返回一个值并暂停执行。
+每次调用 next() 时，可以返回一个值。
+- yield*:  
+委托执行到另一个生成器或可迭代对象。
+将目标生成器的所有 yield 值都逐一返回，直至目标生成器完结。
+在遇到 done: true 后，控制权会返回到外部生成器。
+

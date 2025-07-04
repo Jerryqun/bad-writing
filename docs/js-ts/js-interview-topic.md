@@ -1405,6 +1405,29 @@ getInfo();
 
 通过 const 关键字声明的变量在被初始化之前不可被引用：这被称之为 暂时性死区。在函数 getInfo 中, 变量 randomValue 声明在getInfo 的作用域的此法环境中。在想要对 typeof randomValue 进行log之前，变量 randomValue 仍未被初始化： 错误ReferenceError 被抛出! JS引擎并不会根据作用域链网上寻找该变量，因为我们已经在 getInfo 函数中声明了 randomValue 变量
 
+## 输出什么？
+```js
+const spookyItems = ["👻", "🎃", "🕸"];
+({ item: spookyItems[3] } = { item: "💀" });
+
+console.log(spookyItems);
+```
+正确：["👻", "🎃", "🕸", "💀"]
+
+通过解构对象们，我们可以从右手边的对象中拆出值，并且将拆出的值分配给左手边对象同名的属性。在这种情况下，我们将值 "💀" 分配给 spookyItems[3]。相当于我们正在篡改数组 spookyItems，我们给它添加了值 "💀"。当输出 spookyItems 时，结果为 ["👻", "🎃", "🕸", "💀"]。
+
+## 输出什么
+```js
+const name = "Lydia Hallie";
+
+console.log(!typeof name === "object");
+console.log(!typeof name === "string");
+```
+false false
+
+typeof name 返回 "string"。字符串 "string" 是一个 truthy 的值，因此 !typeof name 返回一个布尔值 false。 false === "object" 和 false === "string" 都返回 false。 （如果我们想检测一个值的类型，我们应该用 !== 而不是 !typeof）
+
+
 
 
 
