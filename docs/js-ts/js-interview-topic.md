@@ -1428,6 +1428,30 @@ false false
 typeof name 返回 "string"。字符串 "string" 是一个 truthy 的值，因此 !typeof name 返回一个布尔值 false。 false === "object" 和 false === "string" 都返回 false。 （如果我们想检测一个值的类型，我们应该用 !== 而不是 !typeof）
 
 
+## 输出什么
+```js
+function nums(a, b) {
+  if
+  (a > b)
+  console.log('a is bigger')
+  else 
+  console.log('b is bigger')
+  return 
+  a + b
+}
+
+console.log(nums(4, 2))
+console.log(nums(1, 2))
+```
+// a is bigger, undefined and b is bigger, undefined
+
+在JavaScript中，我们不必显式地编写分号(;)，但是JavaScript引擎仍然在语句之后自动添加分号。这称为自动分号插入。例如，一个语句可以是变量，或者像throw、return、break这样的关键字。 在这里，我们在新的一行上写了一个return语句和另一个值a + b 。然而，由于它是一个新行，引擎并不知道它实际上是我们想要返回的值。相反，它会在return后面自动添加分号。你可以这样看:
+```js
+  return;
+  a + b
+```
+这意味着永远不会到达a + b，因为函数在return关键字之后停止运行。如果没有返回值，就像这里，函数返回undefined。注意，在if/else语句之后没有自动插入!
+
 
 
 
