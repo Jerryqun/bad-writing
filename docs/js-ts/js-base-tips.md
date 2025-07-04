@@ -1424,3 +1424,49 @@ Object.fromEntries 用于将二维数组转换为对象
 ## || 
 
 使用||运算符，我们可以返回第一个真值。 如果所有值都是假值，则返回最后一个值。
+
+## && 
+1. 布尔运算（只有当两个操作数都为 true 时，结果才为 true）
+```js
+const a = true;
+const b = false;
+
+console.log(a && b); // false
+console.log(a && true); // true
+console.log(b && false); // false
+```
+
+2. 短路求值
+&& 具有“短路求值”的特性。这意味着如果第一个操作数为 false，JavaScript 不会评估第二个操作数，因为结果一定是 false。这种特性可以用于条件判断。
+```js
+const x = 0;
+const result = x && (x > 5); // x 是 falsy，第二个表达式不会被执行
+console.log(result); // 0
+```
+
+3. 返回最后一个真值
+&& 操作符不仅返回布尔值，还会返回最后一个求值的操作数。这意味着如果第一个操作数为真值，将返回第二个操作数；如果第一个操作数为假值，则返回第一个操作数。
+```js
+const name = "Alice";
+const age = 25;
+
+const output = name && age; // name 为 truthy，返回 age
+console.log(output); // 25
+
+const value = null;
+const result = value && "This won't execute"; // value 为 falsy，直接返回 null
+console.log(result); // null
+
+```
+
+4. 用于条件执行
+通过短路特性，&& 常用于条件执行某个表达式。只有当左侧的表达式为真时，右侧的代码才会执行
+```js
+let isLoggedIn = true;
+
+isLoggedIn && console.log("Welcome!"); // "Welcome!" 会被打印
+
+isLoggedIn = false;
+isLoggedIn && console.log("You won't see this."); // 不会打印任何内容
+
+```
