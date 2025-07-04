@@ -1127,4 +1127,4 @@ const userArray = [
 const userObject = Object.fromEntries(userArray);
 console.log(userObject);
 // {name: 'Tom', age: 28, email: 'tom@example.com'}
-`,paraId:82,tocIndex:39},{value:"Object.fromEntries \u7528\u4E8E\u5C06\u4E8C\u7EF4\u6570\u7EC4\u8F6C\u6362\u4E3A\u5BF9\u8C61",paraId:83,tocIndex:40}]}}]);
+`,paraId:82,tocIndex:39},{value:"Object.fromEntries \u7528\u4E8E\u5C06\u4E8C\u7EF4\u6570\u7EC4\u8F6C\u6362\u4E3A\u5BF9\u8C61",paraId:83,tocIndex:40},{value:"\u4F7F\u7528||\u8FD0\u7B97\u7B26\uFF0C\u6211\u4EEC\u53EF\u4EE5\u8FD4\u56DE\u7B2C\u4E00\u4E2A\u771F\u503C\u3002 \u5982\u679C\u6240\u6709\u503C\u90FD\u662F\u5047\u503C\uFF0C\u5219\u8FD4\u56DE\u6700\u540E\u4E00\u4E2A\u503C\u3002",paraId:84,tocIndex:41}]}}]);
