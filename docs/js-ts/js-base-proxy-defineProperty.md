@@ -119,7 +119,7 @@ const person = { name: 'Lydia' };
 Object.defineProperty(person, 'age', { value: 21 });
 
 console.log(person); // { name: "Lydia", age: 21 }
-console.log(Object.keys(person));
+console.log(Object.keys(person)); // ['name'] 新增的属性默认不可枚举
 
 person.age = 22;
 console.log(person.age); // 21  没变
