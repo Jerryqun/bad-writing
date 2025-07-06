@@ -9521,7 +9521,7 @@ const person = { name: 'Lydia' };
 Object.defineProperty(person, 'age', { value: 21 });
 
 console.log(person); // { name: "Lydia", age: 21 }
-console.log(Object.keys(person));
+console.log(Object.keys(person)); // ['name'] \u65B0\u589E\u7684\u5C5E\u6027\u9ED8\u8BA4\u4E0D\u53EF\u679A\u4E3E
 
 person.age = 22;
 console.log(person.age); // 21  \u6CA1\u53D8
