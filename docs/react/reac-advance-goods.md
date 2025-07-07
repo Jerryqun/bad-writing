@@ -7,6 +7,11 @@ title: React 性能优化
 
 ## React 性能优化
 
+![alt text](./images/image-9.png)
+
+
+### 细节
+
 1. 卸载组件前进行清理操作 如定时任务 监听事件等
 2. PureComponent 和 memo （纯组件，进行浅比较，比较引用类型中引用地址是否一致或者基本类型的值是否一致）
 3. shouldComponentUpdate
