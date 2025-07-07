@@ -1495,7 +1495,29 @@ console.log(myCounter);
 ```js
 const set = new Set([1, 1, 2, 3, 4]);
 
-console.log(set);
+console.log(set);   // Set(4) {1, 2, 3, 4}
+
+let x = y = 10;// 是下面这个表达式的缩写:
+y = 10;
+let x = y;
+
+
+function Car() {
+  this.make = "Lamborghini";
+  return { make: "Maserati" };
+}
+
+const myCar = new Car();
+console.log(myCar.make); // Maserati
+
+function Car() {
+  this.make1 = "Lamborghini";
+  return { make: "Maserati" };
+}
+
+const myCar = new Car();
+console.log(myCar.make1); // undefind
+
 ```
 
 
