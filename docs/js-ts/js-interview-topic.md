@@ -1453,6 +1453,52 @@ console.log(nums(1, 2))
 这意味着永远不会到达a + b，因为函数在return关键字之后停止运行。如果没有返回值，就像这里，函数返回undefined。注意，在if/else语句之后没有自动插入!
 
 
+## delete
+
+delete 同样适用于原型对象
+
+delete 操作符用于删除对象的某个属性；如果没有指向这个属性的引用，那它最终会被释放。
+
+delete操作符返回一个布尔值： true指删除成功，否则返回false。但是通过 var, const 或 let 关键字声明的变量无法用 delete 操作符来删除。
+```js
+const name = 'cq'
+delete name
+console.log('name-delete',delete name) // false
+
+age  = 21
+console.log('age-delete',delete age) // true
+
+```
+
+
+
+name变量由const关键字声明，所以删除不成功:返回 false。
+
+而我们设定age等于21时,我们实际上添加了一个名为age的属性给全局对象。对象中的属性是可以删除的，全局对象也是如此，所以delete age返回true.
+
+## 输出是什么?
+```js
+// counter.js
+let counter = 10;
+export default counter;
+
+// index.js
+import myCounter from './counter';
+myCounter += 1;
+console.log(myCounter);
+```
+
+引入的模块是 只读 的: 你不能修改引入的模块。只有导出他们的模块才能修改其值。 当我们给myCounter增加一个值的时候会抛出一个异常： myCounter是只读的，不能被修改。
+
+## 输出是什么?
+
+```js
+const set = new Set([1, 1, 2, 3, 4]);
+
+console.log(set);
+```
+
+
 
 
 
