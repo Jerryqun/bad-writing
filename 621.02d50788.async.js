@@ -910,5 +910,27 @@ myCounter += 1;
 console.log(myCounter);
 `,paraId:189,tocIndex:64},{value:"\u5F15\u5165\u7684\u6A21\u5757\u662F \u53EA\u8BFB \u7684: \u4F60\u4E0D\u80FD\u4FEE\u6539\u5F15\u5165\u7684\u6A21\u5757\u3002\u53EA\u6709\u5BFC\u51FA\u4ED6\u4EEC\u7684\u6A21\u5757\u624D\u80FD\u4FEE\u6539\u5176\u503C\u3002 \u5F53\u6211\u4EEC\u7ED9myCounter\u589E\u52A0\u4E00\u4E2A\u503C\u7684\u65F6\u5019\u4F1A\u629B\u51FA\u4E00\u4E2A\u5F02\u5E38\uFF1A myCounter\u662F\u53EA\u8BFB\u7684\uFF0C\u4E0D\u80FD\u88AB\u4FEE\u6539\u3002",paraId:190,tocIndex:64},{value:`const set = new Set([1, 1, 2, 3, 4]);
 
-console.log(set);
+console.log(set);   // Set(4) {1, 2, 3, 4}
+
+let x = y = 10;// \u662F\u4E0B\u9762\u8FD9\u4E2A\u8868\u8FBE\u5F0F\u7684\u7F29\u5199:
+y = 10;
+let x = y;
+
+
+function Car() {
+  this.make = "Lamborghini";
+  return { make: "Maserati" };
+}
+
+const myCar = new Car();
+console.log(myCar.make); // Maserati
+
+function Car() {
+  this.make1 = "Lamborghini";
+  return { make: "Maserati" };
+}
+
+const myCar = new Car();
+console.log(myCar.make1); // undefind
+
 `,paraId:191,tocIndex:65}]}}]);
