@@ -43,4 +43,31 @@ export default App;
 ```
 
 上面 demo 打印 341  
-(flushSync 会提高优先级所以 4 先打印，2 和 4 会合并更新 所以只打印一次 4，最后打印 1)
+(flushSync 会提高优先级所以 3 先打印，2 和 4 会合并更新 所以只打印一次 4，最后打印 1)
+
+## flushSync里面是合并更新的
+
+```jsx
+import ReactDOM from 'react-dom';
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      number: 0,
+    };
+  }
+  handleClick = () => {
+    ReactDOM.flushSync(() => {
+      this.setState({ number: 3 });
+      this.setState({ number: 4 });
+    });
+  };
+  render() {
+    console.log(this.state.number); // render 一次 直接打印4
+    return <button onClick={this.handleClick}>点击 控制台查看结果</button>;
+  }
+}
+
+export default App;
+```
+

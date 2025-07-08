@@ -9,6 +9,7 @@ title: pnpm、yarn 的基本安装和使用、查看与修改镜像源
 ## pnpm、yarn 的基本安装和使用、查看与修改镜像源
 
 ### pnpm
+支持monorepos
 
 ```bash
 # npm 安装 pnpm
