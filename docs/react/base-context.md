@@ -6,6 +6,8 @@ mobile: false
 title: Context用法
 ---
 
+## createContext 用法
+
 ```jsx
 import React from 'react';
 
@@ -203,6 +205,45 @@ export default function () {
     >
       <App />
     </ThemeContext.Provider>
+  );
+}
+```
+
+## useContext 结合useReducer 用法
+
+```jsx
+import React from 'react';
+const UserContent = React.createContext();
+
+const Child1 = () => {
+  const { state } = React.useContext(UserContent);
+  return <div>child1 {state}</div>;
+};
+const Child2 = () => {
+  const { dispatch } = React.useContext(UserContent);
+
+  return (
+    <div>
+      child2 <button onClick={() => {dispatch({type:'upate',name:'cq'})}}>test</button>
+    </div>
+  );
+};
+
+export default function () {
+  const reducer = (state, action) => {
+    switch (action.type) {
+      case 'upate':
+        return action.name;
+      default:
+        return null;
+    }
+  };
+  const [state, dispatch] = React.useReducer(reducer,'lg');
+  return (
+    <UserContent.Provider value={{ state, dispatch }}>
+      <Child1 />
+      <Child2 />
+    </UserContent.Provider>
   );
 }
 ```
