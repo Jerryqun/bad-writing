@@ -71,3 +71,30 @@ class App extends React.Component {
 export default App;
 ```
 
+## 什么是react的合并更新的
+
+点击按钮render只会打印一次
+
+```jsx
+import React,{ useState } from 'react';
+
+export default () => {
+  const [state1, setState1] = useState(1);
+  const [state2, setState2] = useState(2);
+  console.log('render.......');
+
+  return (
+    <div
+      onClick={() => {
+        setState1(pre => pre + 1);
+        setState2(pre => pre + 1);
+      }}
+    >
+      {state1}-{state2}
+    </div>
+  );
+};
+
+
+```
+
