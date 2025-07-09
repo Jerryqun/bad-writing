@@ -193,13 +193,7 @@ npm info xxx 查看包的详细信息
 
 ## eslint 初始化
 
-```bash
-npm install eslint eslint-plugin-react @typescript-eslint/eslint-plugin @typescript-eslint/parser  --save-dev
-```
-
-然后我们用执行 npx eslint --init
-
-依据提示选择
+<a target='_blank' href='https://eslint.nodejs.cn/docs/latest/use/getting-started'>官网</a>
 
 ## npm 全局安装包的安装路径
 
