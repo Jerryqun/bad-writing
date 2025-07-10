@@ -14,7 +14,7 @@ title: node版本管理
 npm install -g cnpm -registry=https://registry.npm.taobao.org
 ```
 
-### 方式一：n
+### 方式一：n  （不推荐，容易出现权限问题）
 
 node 有一个模块 n，是专门用来管理 node.js 的版本的。
 
@@ -49,3 +49,26 @@ n use xx.xx.xx a.js
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
 ```
+
+### Example
+```bash
+$ nvm use 16  // 临时使用其他版本
+Now using node v16.9.1 (npm v7.21.1)
+$ node -v
+v16.9.1
+$ nvm use 14
+Now using node v14.18.0 (npm v6.14.15)
+$ node -v
+v14.18.0
+$ nvm install 12
+Now using node v12.22.6 (npm v6.14.5)
+$ node -v
+v12.22.6
+
+设置默认 Node 版本（全局默认）
+nvm alias default <version>
+nvm alias default 14.16.0
+```
+
+
+
