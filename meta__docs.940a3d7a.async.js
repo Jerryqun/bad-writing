@@ -24868,7 +24868,23 @@ sudo n
 \u7136\u540E\u4E0A\u4E0B\u952E\u76D8\u9009\u62E9\u5E76\u56DE\u8F66\u786E\u8BA4\u3002`,paraId:7,tocIndex:1},{value:`6\u3001\u5220\u9664\u67D0\u4E2A\u7248\u672C
 sudo n rm xx.xx.x`,paraId:8,tocIndex:1},{value:`7\u3001\u6307\u5B9A\u7248\u672C\u6765\u8FD0\u884C\u811A\u672C
 n use xx.xx.xx a.js`,paraId:9,tocIndex:1},{value:"nvm",paraId:10,tocIndex:2},{value:"\u5B89\u88C5",paraId:11,tocIndex:2},{value:`curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
-`,paraId:12,tocIndex:2}]},52323:function(o,n,e){e.r(n),e.d(n,{texts:function(){return a}});const a=[{value:"Docker \u662F\u4E00\u4E2A\u5F00\u6E90\u7684\u5BB9\u5668\u5316\u5E73\u53F0\uFF0C\u5B83\u5141\u8BB8\u5F00\u53D1\u8005\u5C06\u5E94\u7528\u7A0B\u5E8F\u53CA\u5176\u4F9D\u8D56\u9879\u6253\u5305\u6210\u5BB9\u5668\u3002\u5BB9\u5668\u662F\u4E00\u79CD\u8F7B\u91CF\u7EA7\u3001\u53EF\u79FB\u690D\u7684\u3001\u81EA\u7ED9\u81EA\u8DB3\u7684\u8F6F\u4EF6\u5305\uFF0C\u5B83\u63D0\u4F9B\u4E86\u4EE3\u7801\u8FD0\u884C\u7684\u4E00\u81F4\u73AF\u5883\uFF0C\u65E0\u8BBA\u5B83\u5728\u5F00\u53D1\u3001\u6D4B\u8BD5\u8FD8\u662F\u751F\u4EA7\u73AF\u5883\u4E2D\u8FD0\u884C\u3002",paraId:0,tocIndex:0},{value:"\u901A\u8FC7\u94FE\u63A5 ",paraId:1,tocIndex:1},{value:"https://smartide.cn/zh/docs/install/docker/osx/",paraId:1,tocIndex:1},{value:`\u9009\u62E9\u5BF9\u5E94\u82AF\u7247\u7684\u7248\u672C\uFF0C\u5B89\u88C5\u684C\u9762\u7A0B\u5E8F\u3002
+`,paraId:12,tocIndex:2},{value:`$ nvm use 16  // \u4E34\u65F6\u4F7F\u7528\u5176\u4ED6\u7248\u672C
+Now using node v16.9.1 (npm v7.21.1)
+$ node -v
+v16.9.1
+$ nvm use 14
+Now using node v14.18.0 (npm v6.14.15)
+$ node -v
+v14.18.0
+$ nvm install 12
+Now using node v12.22.6 (npm v6.14.5)
+$ node -v
+v12.22.6
+
+\u8BBE\u7F6E\u9ED8\u8BA4 Node \u7248\u672C\uFF08\u5168\u5C40\u9ED8\u8BA4\uFF09
+nvm alias default <version>
+nvm alias default 14.16.0
+`,paraId:13,tocIndex:3}]},52323:function(o,n,e){e.r(n),e.d(n,{texts:function(){return a}});const a=[{value:"Docker \u662F\u4E00\u4E2A\u5F00\u6E90\u7684\u5BB9\u5668\u5316\u5E73\u53F0\uFF0C\u5B83\u5141\u8BB8\u5F00\u53D1\u8005\u5C06\u5E94\u7528\u7A0B\u5E8F\u53CA\u5176\u4F9D\u8D56\u9879\u6253\u5305\u6210\u5BB9\u5668\u3002\u5BB9\u5668\u662F\u4E00\u79CD\u8F7B\u91CF\u7EA7\u3001\u53EF\u79FB\u690D\u7684\u3001\u81EA\u7ED9\u81EA\u8DB3\u7684\u8F6F\u4EF6\u5305\uFF0C\u5B83\u63D0\u4F9B\u4E86\u4EE3\u7801\u8FD0\u884C\u7684\u4E00\u81F4\u73AF\u5883\uFF0C\u65E0\u8BBA\u5B83\u5728\u5F00\u53D1\u3001\u6D4B\u8BD5\u8FD8\u662F\u751F\u4EA7\u73AF\u5883\u4E2D\u8FD0\u884C\u3002",paraId:0,tocIndex:0},{value:"\u901A\u8FC7\u94FE\u63A5 ",paraId:1,tocIndex:1},{value:"https://smartide.cn/zh/docs/install/docker/osx/",paraId:1,tocIndex:1},{value:`\u9009\u62E9\u5BF9\u5E94\u82AF\u7247\u7684\u7248\u672C\uFF0C\u5B89\u88C5\u684C\u9762\u7A0B\u5E8F\u3002
 \u5B89\u88C5\u5B8C\u6BD5\u540E\uFF0C\u53EF\u4EE5\u5728\u7EC8\u7AEF\u901A\u8FC7\u4EE5\u4E0B\u547D\u4EE4\uFF0C\u53BB\u5224\u65AD\u662F\u5426\u5B89\u88C5\u6210\u529F:`,paraId:2,tocIndex:1},{value:`docker -v
 
 // Docker version 20.10.8, build 3967b7d
