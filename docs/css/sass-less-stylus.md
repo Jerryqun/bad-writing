@@ -82,3 +82,31 @@ background-color: bgColor;
 }
 
 ```
+
+# Css Module
+CSS Modules 是一种用于模块化和局部作用域 CSS 的流行技术，它可以解决传统 CSS 的全局作用域问题。
+
+CSS Modules 不是官方标准，而是一种构建步骤中的转换技术（通常在 webpack、vite 等打包工具中实现
+
+## Css Module 高级用法
+- composes 组合功能
+```css
+.base {
+  padding: 10px;
+}
+
+.primary {
+  composes: base;
+  background-color: blue;
+}
+```
+
+-  ：global全局作用域
+
+```css
+:global(.global-class) {
+  /* 全局样式 */
+}
+```
+
+
