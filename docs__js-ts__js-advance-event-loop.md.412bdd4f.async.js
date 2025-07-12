@@ -36,12 +36,15 @@ const targetNode = document.body;
 
 // \u521B\u5EFA MutationObserver \u5B9E\u4F8B
 const observer = new MutationObserver((mutationsList) => {
+  console.log('\u53D1\u4E86\u53D8\u5316')
+  observer.disconnect() // \u65AD\u5F00\u76D1\u542C\u9632\u6B62\u6B7B\u5FAA\u73AF
   mutationsList.forEach((mutation) => {
     // \u68C0\u67E5\u662F\u5426\u6709\u5B50\u8282\u70B9\u88AB\u5220\u9664
     if (mutation.removedNodes.length > 0) {
       // \u68C0\u67E5\u88AB\u5220\u9664\u7684\u8282\u70B9\u662F\u5426\u4E3A\u6C34\u5370
       // \u5982\u679C\u662F\uFF0C\u5219\u91CD\u65B0\u63D2\u5165\u6C34\u5370\u5143\u7D20
       // targetNode.appendChild(watermarkElement);
+       observer.observe(targetNode, config);  // \u91CD\u65B0\u76D1\u542C
     }
   });
 });
