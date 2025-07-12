@@ -94,12 +94,15 @@ const targetNode = document.body;
 
 // 创建 MutationObserver 实例
 const observer = new MutationObserver((mutationsList) => {
+  console.log('发了变化')
+  observer.disconnect() // 断开监听防止死循环
   mutationsList.forEach((mutation) => {
     // 检查是否有子节点被删除
     if (mutation.removedNodes.length > 0) {
       // 检查被删除的节点是否为水印
       // 如果是，则重新插入水印元素
       // targetNode.appendChild(watermarkElement);
+       observer.observe(targetNode, config);  // 重新监听
     }
   });
 });
