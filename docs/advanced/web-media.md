@@ -22,7 +22,11 @@ WebGL（全写 Web Graphics Library）是一种 3D 绘图标准，并允许用�
 
 ## WebAssembly
 
+WebAssembly 是一种让接近本地性能的二进制代码能够在网页浏览器中高效、安全运行的新型网络标准。
+
 WebAssembly 或者 wasm 是一个可移植、体积小、加载快并且兼容 Web 的全新格式，是由主流浏览器厂商组成的 W3C 社区团体制定的一个新的规范。
+
+如果把程序源代码（用 C/C++、Rust、Go 等编写）编译成 WebAssembly 字节码，再由浏览器快速加载、解析和执行。
 
 ## 如何优化音频和视频的加载性能
 
