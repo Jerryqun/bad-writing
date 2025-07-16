@@ -36,10 +36,49 @@ export default Test;
 ```
 
 ## 最简单的子元素垂直居中布局
-
+1. 
 ```css
 .center {
   display: grid;
   place-items: center;
 }
+```
+2. 
+```css
+.father {
+  position: relative;
+}
+.son {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  margin: auto;
+  height: 100px;
+  width: 100px;
+}
+```
+3. 
+
+```html
+<style>
+    .father {
+        display: table-cell;
+        width: 200px;
+        height: 200px;
+        background: skyblue;
+        vertical-align: middle;
+        text-align: center;
+    }
+    .son {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        background: red;
+    }
+</style>
+<div class="father">
+    <div class="son"></div>
+</div>
 ```

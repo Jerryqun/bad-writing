@@ -30,12 +30,11 @@ inline 元素的 margin 和 padding 属性，水平方向的 padding-left、padd
 
 ## BFC 的创建方法
 
-- 浮动
-- 绝对定位元素 absolute 或 fixed
-- display: inline-block
-- 表格单元格 display: table-cell
-- overflow 的值不为 visible 的元素 display: table-caption
-- 元素的 display: flex 或 inline-flex
+- 根元素，即HTML元素
+- 绝对定位元素 position: absolute/fixed
+- 行内块元素 display的值为inline-block、table、flex、inline-flex、grid、inline-grid
+- 浮动元素：float值为left、right
+- overflow值不为 visible，为 auto、scroll、hidden
 
 ## BFC 的效果
 
