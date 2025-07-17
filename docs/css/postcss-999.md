@@ -6,6 +6,8 @@ group:
 title: 基于scss语法的99乘法表
 ---
 
+## 基于scss语法的99乘法表
+
 ```jsx
 import './styles/999.scss';
 export default () => {

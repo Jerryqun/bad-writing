@@ -181,7 +181,3 @@ const DemoPage = () => {
 export default DemoPage
 
 ```
-
-## zustand
-
-<a src='https://zustand-demo.pmnd.rs/' target='_blank'>文档</a>
