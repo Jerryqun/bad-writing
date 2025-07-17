@@ -1969,7 +1969,7 @@ export default () => {
       {state1}-{state2}
     </div>
   );
-};`},react:{type:"NPM",value:"18.3.1"}},entry:"index.jsx"},context:{react:t||(t=e.t(T,2))},renderOpts:{compile:function(){var M=w()(g()().mark(function b(){var u,x=arguments;return g()().wrap(function(y){for(;;)switch(y.prev=y.next){case 0:return y.next=2,e.e(250).then(e.bind(e,90250));case 2:return y.abrupt("return",(u=y.sent).default.apply(u,x));case 3:case"end":return y.stop()}},b)}));function E(){return M.apply(this,arguments)}return E}()}}}},44740:function(o,n,e){e.r(n),e.d(n,{demos:function(){return t}});var a=e(67294),t={}},97344:function(o,n,e){e.r(n),e.d(n,{demos:function(){return t}});var a=e(67294),t={}},9339:function(o,n,e){e.r(n),e.d(n,{demos:function(){return t}});var a=e(67294),t={}},52836:function(o,n,e){e.r(n),e.d(n,{demos:function(){return t}});var a=e(67294),t={}},60190:function(o,n,e){e.r(n),e.d(n,{demos:function(){return t}});var a=e(67294),t={}},28112:function(o,n,e){e.r(n),e.d(n,{demos:function(){return t}});var a=e(67294),t={}},32476:function(o,n,e){e.r(n),e.d(n,{demos:function(){return t}});var a=e(67294),t={}},87835:function(o,n,e){e.r(n),e.d(n,{demos:function(){return t}});var a=e(67294),t={}},38273:function(o,n,e){e.r(n),e.d(n,{demos:function(){return t}});var a=e(67294),t={}},32453:function(o,n,e){e.r(n),e.d(n,{demos:function(){return t}});var a=e(67294),t={}},47537:function(o,n,e){e.r(n),e.d(n,{demos:function(){return t}});var a=e(67294),t={}},41440:function(o,n,e){e.r(n)},34499:function(o,n,e){e.r(n)},29518:function(o,n,e){e.r(n)},13229:function(o,n,e){e.r(n),n.default={col:"EPcieVLqfsW84RgEkVIq","col-1":"snpy6HWXXG80p4DGo52i"}},72183:function(o,n,e){e.r(n)},46115:function(o,n,e){e.r(n),e.d(n,{texts:function(){return a}});const a=[{value:"\u6A21\u578B\u53C2\u8003 vnode",paraId:0,tocIndex:0},{value:"\u8003\u8651\u6392\u5E8F\uFF0C\u4E0D\u8981\u7528\u5BF9\u8C61\uFF0C\u8981\u7528\u6570\u7EC4\uFF0C\u5BF9\u8C61\u7684\u5C5E\u6027\u662F\u65E0\u5E8F\u7684",paraId:0,tocIndex:0},{value:`const schema = {
+};`},react:{type:"NPM",value:"18.3.1"}},entry:"index.jsx"},context:{react:t||(t=e.t(T,2))},renderOpts:{compile:function(){var M=w()(g()().mark(function b(){var u,x=arguments;return g()().wrap(function(y){for(;;)switch(y.prev=y.next){case 0:return y.next=2,e.e(250).then(e.bind(e,90250));case 2:return y.abrupt("return",(u=y.sent).default.apply(u,x));case 3:case"end":return y.stop()}},b)}));function E(){return M.apply(this,arguments)}return E}()}}}},44740:function(o,n,e){e.r(n),e.d(n,{demos:function(){return t}});var a=e(67294),t={}},97344:function(o,n,e){e.r(n),e.d(n,{demos:function(){return t}});var a=e(67294),t={}},9339:function(o,n,e){e.r(n),e.d(n,{demos:function(){return t}});var a=e(67294),t={}},52836:function(o,n,e){e.r(n),e.d(n,{demos:function(){return t}});var a=e(67294),t={}},60190:function(o,n,e){e.r(n),e.d(n,{demos:function(){return t}});var a=e(67294),t={}},28112:function(o,n,e){e.r(n),e.d(n,{demos:function(){return t}});var a=e(67294),t={}},2605:function(o,n,e){e.r(n),e.d(n,{demos:function(){return t}});var a=e(67294),t={}},32476:function(o,n,e){e.r(n),e.d(n,{demos:function(){return t}});var a=e(67294),t={}},87835:function(o,n,e){e.r(n),e.d(n,{demos:function(){return t}});var a=e(67294),t={}},38273:function(o,n,e){e.r(n),e.d(n,{demos:function(){return t}});var a=e(67294),t={}},32453:function(o,n,e){e.r(n),e.d(n,{demos:function(){return t}});var a=e(67294),t={}},47537:function(o,n,e){e.r(n),e.d(n,{demos:function(){return t}});var a=e(67294),t={}},41440:function(o,n,e){e.r(n)},34499:function(o,n,e){e.r(n)},29518:function(o,n,e){e.r(n)},13229:function(o,n,e){e.r(n),n.default={col:"EPcieVLqfsW84RgEkVIq","col-1":"snpy6HWXXG80p4DGo52i"}},72183:function(o,n,e){e.r(n)},46115:function(o,n,e){e.r(n),e.d(n,{texts:function(){return a}});const a=[{value:"\u6A21\u578B\u53C2\u8003 vnode",paraId:0,tocIndex:0},{value:"\u8003\u8651\u6392\u5E8F\uFF0C\u4E0D\u8981\u7528\u5BF9\u8C61\uFF0C\u8981\u7528\u6570\u7EC4\uFF0C\u5BF9\u8C61\u7684\u5C5E\u6027\u662F\u65E0\u5E8F\u7684",paraId:0,tocIndex:0},{value:`const schema = {
   title: '\u9875\u9762\u6807\u9898',
   /*\u6269\u5C55\u4FE1\u606F*/
   setting: {},
@@ -27986,7 +27986,7 @@ const DemoPage = () => {
 
 export default DemoPage
 
-`,paraId:0,tocIndex:0},{value:"\u6587\u6863",paraId:1,tocIndex:1}]},68440:function(o,n,e){e.r(n),e.d(n,{texts:function(){return a}});const a=[{value:"\u5F15\u5165\uFF1A ",paraId:0,tocIndex:0},{value:"https://g.alicdn.com/code/lib/pdf.js/2.8.335/pdf.min.js",paraId:0,tocIndex:0},{value:`import { useAsyncEffect, useBoolean } from 'ahooks';
+`,paraId:0,tocIndex:0}]},68440:function(o,n,e){e.r(n),e.d(n,{texts:function(){return a}});const a=[{value:"\u5F15\u5165\uFF1A ",paraId:0,tocIndex:0},{value:"https://g.alicdn.com/code/lib/pdf.js/2.8.335/pdf.min.js",paraId:0,tocIndex:0},{value:`import { useAsyncEffect, useBoolean } from 'ahooks';
 import styles from './index.module.less';
 import { Loading } from 'antd-mobile';
 
@@ -28053,7 +28053,58 @@ export default PdfCompared;
   width: 100%;
   justify-content: center;
 }
-`,paraId:3,tocIndex:0}]},59300:function(o,n,e){e.r(n),e.d(n,{texts:function(){return a}});const a=[{value:"\u53C2\u8003",paraId:0,tocIndex:0},{value:`import React from 'react';
+`,paraId:3,tocIndex:0}]},77188:function(o,n,e){e.r(n),e.d(n,{texts:function(){return a}});const a=[{value:"https://www.npmjs.com/package/postcss-plugin-px2rem",paraId:0,tocIndex:0},{value:`// input
+h1 {
+  margin: 0 0 20px;
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: 1px;
+}
+
+// output
+h1 {
+  margin: 0 0 0.2rem;
+  font-size: 0.32rem;
+  line-height: 1.2;
+  letter-spacing: 0.01rem;
+}
+`,paraId:1,tocIndex:1},{value:`{
+  rootValue: 100, 
+  unitPrecision: 5,
+  propWhiteList: [],
+  propBlackList: [],
+  exclude:false,
+  selectorBlackList: [],
+  ignoreIdentifier: false,
+  replace: true,
+  mediaQuery: false,
+  minPixelValue: 0
+}
+`,paraId:2,tocIndex:2},{value:"\u4F7F\u7528postcss-plugin-px2rem\u8F6C\u6362\u7684\u60C5\u51B5\u4E0B  \u9ED8\u8BA4rootValue = 100 ,\u6BD4\u598220px => 0.2px",paraId:3,tocIndex:3},{value:"\u6BD4\u5982\u8BBE\u8BA1\u7A3F\u5C3A\u5BF8\u662F750px\uFF0C\u5728750\u5C4F\u5E55\u5BBD\u5EA6\u4E0B\uFF0C 1rem = 100px\uFF0C\u6240\u4EE5750\u5C4F\u5E55\u4E0Bhtml\u7684fontSize\u4E3A100px",paraId:4,tocIndex:3},{value:`(function(win) {
+    var docEl = win.document.documentElement;
+    var timer = '';
+
+    function changeRem() {
+      var width = docEl.getBoundingClientRect().width;
+      if (width > 750) { // 750\u662F\u8BBE\u8BA1\u7A3F\u5927\u5C0F
+          width = 750;
+      }
+      var fontS = width / 75; // 7.5\u662F\u5982\u4F55\u6765\u7684 \u8981\u4FDD\u8BC1\u5728750\u5C3A\u5BF8\u4E0B1rem = 100px
+      docEl.style.fontSize = fontS + "px";
+    }
+    win.addEventListener("resize", function() {
+      clearTimeout(timer);
+      timer = setTimeout(changeRem, 30);
+    }, false);
+    win.addEventListener("pageshow", function(e) {
+      if (e.persisted) { //\u6E05\u9664\u7F13\u5B58
+        clearTimeout(timer);
+        timer = setTimeout(changeRem, 30);
+      }
+    }, false);
+    changeRem();
+})(window)
+`,paraId:5,tocIndex:3},{value:"\u6216\u8005\u4F7F\u7528\u6DD8\u5B9D\u63D0\u4F9B\u7684\u5E93 \uFF1A ",paraId:6,tocIndex:3},{value:"https://github.com/amfe/lib-flexible",paraId:6,tocIndex:3}]},59300:function(o,n,e){e.r(n),e.d(n,{texts:function(){return a}});const a=[{value:"\u53C2\u8003",paraId:0,tocIndex:0},{value:`import React from 'react';
 import ReactDOM from 'react-dom';
 import * as ReactIs from 'react-is';
 
