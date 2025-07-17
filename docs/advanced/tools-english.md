@@ -31,3 +31,4 @@ generate  产生
 prepare 准备  
 duration 期间、为期  
 delay 延迟  
+ease  舒适    
