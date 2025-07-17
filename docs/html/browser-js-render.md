@@ -4,7 +4,7 @@ group:
   title: 浏览器
   order: 1
 toc: content
-title: script
+title: script 标签
 mobile: false
 ---
 

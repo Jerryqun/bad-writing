@@ -92,6 +92,10 @@ pc 端 1css 像素 = 1 物理像素(苹果电脑的 Retina 屏 devicePixelRatio 
 3、@import 只在 IE5 以上才能识别，而 link 是 XHTML 标签，无兼容问题；<br/>
 4、`link 方式的样式的权重高于@import 的权重`。
 
+
+第二点举例说明：  
+比如一个css文件index.css包含了以下内容：@import url("reset.css")，那么浏览器就必须先把index.css下载、解析和执行后，才下载、解析和执行第二个文件reset.css
+
 ## 为什么有时候⽤ translate 来改变位置⽽不是定位？
 
 translate 是 transform 的一个值。改变 transform 或者 opacity 不会触发浏览器重新布局，或者重绘，只会触发复合。

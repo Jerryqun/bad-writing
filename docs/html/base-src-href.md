@@ -40,5 +40,5 @@ mobile: false
 href ：a link；<br/>
 src：script img iframe video
 
-4、src 代表的是网站的一部分，没有会对网站的使用造成影响
+4、src 代表的是网站的一部分，没有会对网站的使用造成影响  
 href 代表网站的附属资源，没有不会对网站的核心逻辑和结构造成影响

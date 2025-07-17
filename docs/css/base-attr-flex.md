@@ -11,8 +11,10 @@ title: flex 1
 <a href="https://juejin.cn/post/6971010647492395044?searchId=2023120520375076560F4741B057041E52
 ">参考</a>
 
-首先 flex: 1; 等同于 flex: 1 1 0%;
-flex-grow: 1; flex-shrink: 1; flex-basis: 0%;
+首先 flex: 1; 等同于 flex: 1 1 0%;  
+flex-grow: 1;   
+flex-shrink: 1;  
+ flex-basis: 0%;  
 
 相当于可扩大，可缩小 flex-basis 为 0%
 
