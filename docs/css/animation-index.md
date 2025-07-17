@@ -37,6 +37,7 @@ animation 属性可以实现更复杂的动画效果，例如循环动画、无�
 transition 属性适用于元素从一种状态平滑过渡到另一种状态，例如颜色、大小、位置等属性的变化。
 
 语法：transition: property duration timing-function delay;
+语法：CSS属性，花费时间，效果曲线(默认ease)，延迟时间(默认0)
 
 不足：
 
