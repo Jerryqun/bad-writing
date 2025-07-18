@@ -19,6 +19,46 @@ dom 事件流：
 然后，事件进入到目标阶段，这个阶段不区分捕获和冒泡事件，所有事件按照绑定的顺序触发。
 最后，事件进入到冒泡阶段，这个阶段按照绑定的顺序触发绑定的冒泡事件，各个 DOM 的事件是从内到外触发的
 
+执行顺序： outer capture => inner capture => button capture => button bubble => inner bubble => outer bubble
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="outer" style="padding: 30px; background: #fee">
+      Outer
+      <div id="inner" style="padding: 30px; background: #cfc">
+        Inner
+        <button id="btn">Click me</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    const outer = document.getElementById('outer');
+    const inner = document.getElementById('inner');
+    const btn = document.getElementById('btn');
+
+    // 冒泡阶段监听
+    outer.addEventListener('click', () => console.log('outer bubble'));
+    inner.addEventListener('click', () => console.log('inner bubble'));
+    btn.addEventListener('click', () => console.log('button bubble'));
+
+    // 捕获阶段监听
+    outer.addEventListener('click', () => console.log('outer capture'), true);
+    inner.addEventListener('click', () => console.log('inner capture'), true);
+    btn.addEventListener('click', () => console.log('button capture'), true);
+
+ 
+  </script>
+</html>
+
+```
+
 ## 触摸事件的响应顺序
 
 ontouchstart -> ontouchmove -> ontouchend -> onclick
@@ -94,6 +134,8 @@ return false
 
 stopImmediatePropagation 同样也能实现阻止事件，但是还能阻止该事件目标执行别的注册事件。
 
+注意 addEventListener的第三个参数相同才能阻止生效
+
 ```js
 node.addEventListener(
   'click',
@@ -107,9 +149,9 @@ node.addEventListener(
 node.addEventListener(
   'click',
   event => {
-    console.log('捕获 ')
+    console.log('冒泡1 ')
   },
-  true
+  false
 )
  
 ```
