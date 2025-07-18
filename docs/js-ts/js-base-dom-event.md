@@ -88,3 +88,30 @@ event.preventDefault()方法
 
 return false  
 这个方法比较暴力，他会同事阻止事件冒泡也会阻止默认事件；写上此代码，连接不会被打开，事件也不会传递到上一层的父元素；可以理解为 `return false 就等于同时调用了 event.stopPropagation()和 event.preventDefault()`
+
+
+## stopImmediatePropagation
+
+stopImmediatePropagation 同样也能实现阻止事件，但是还能阻止该事件目标执行别的注册事件。
+
+```js
+node.addEventListener(
+  'click',
+  event => {
+    event.stopImmediatePropagation()
+    console.log('冒泡')
+  },
+  false
+)
+// 点击 node 只会执行上面的函数，该函数不会执行
+node.addEventListener(
+  'click',
+  event => {
+    console.log('捕获 ')
+  },
+  true
+)
+ 
+```
+
+
