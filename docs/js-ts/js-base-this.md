@@ -192,6 +192,82 @@ fn2();
 // 可以从上述代码中发现，不管我们给函数 bind 几次，fn 中的 this 永远由第一次 bind 决定，所以结果永远是 window
 ```
 
+## 箭头函数
+```js
+const fn1 = () => {
+  // 箭头函数中没有arguments
+  console.log('arguments', arguments)
+}
+fn1(100, 300)
+
+const fn2 = () => {
+  // 这里的this指向window，箭头函数的this指向创建时父级的this
+  console.log('this', this)
+}
+// 箭头函数不能修改this
+fn2.call({x: 100})
+
+const obj = {
+  name: 'poetry',
+  getName2() {
+    // 这里的this指向obj
+    return () => {
+      // 这里的this指向obj
+      return this.name
+    }
+  },
+  getName: () => { // 1、不适用箭头函数的场景1：对象方法
+    // 这里不能使用箭头函数，否则箭头函数指向window
+    return this.name
+  }
+}
+
+obj.prototype.getName3 = () => { // 2、不适用箭头函数的场景2：对象原型
+  // 这里不能使用箭头函数，否则this指向window
+  return this.name
+}
+
+const Foo = (name) => { // 3、不适用箭头函数的场景3：构造函数
+  this.name = name
+}
+const f = new Foo('poetry') // 箭头函数没有 prototype 属性，不能进行 new 实例化
+
+const btn1 = document.getElementById('btn1')
+btn1.addEventListener('click',()=>{ // 4、不适用箭头函数的场景4：动态上下文的回调函数
+  // 这里不能使用箭头函数 this === window
+  this.innerHTML = 'click'
+})
+
+// Vue 组件本质上是一个 JS 对象，this需要指向组件实例
+// vue的生命周期和method不能使用箭头函数
+new Vue({
+  data:{name:'poetry'},
+  methods: { // 5、不适用箭头函数的场景5：vue的生命周期和method
+    getName: () => {
+      // 这里不能使用箭头函数，否则this指向window
+      return this.name
+    }
+  },
+  mounted:() => {
+    // 这里不能使用箭头函数，否则this指向window
+    this.getName()
+  }
+})
+
+// React 组件（非 Hooks）它本质上是一个 ES6 class
+class Foo {
+  constructor(name) {
+    this.name = name
+  }
+  getName = () => { // 这里的箭头函数this指向实例本身没有问题的
+    return this.name
+  }
+}
+const f = new Foo('poetry') 
+console.log(f.getName() )
+```
+
+
 ## bind() 连续调用多次
 
 ```js
