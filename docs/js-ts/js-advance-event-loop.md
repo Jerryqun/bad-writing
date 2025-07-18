@@ -11,9 +11,17 @@ title: Event-loop
 
 微任务是在下一轮 dom 渲染之前执行，宏任务是下一轮 dom 渲染之后执行
 
-宏任务 =》 微任务=》dom 渲染 =》宏任务
+`宏任务 => 微任务 => dom 渲染 => 宏任务`
 
 setTimeout(fn,1000) fn 函数打入宏任务队列的时机是 1s 后而不是 setTimeout(fn,1000) 的执行时机
+
+总结：
+1. 执行同步代码，这是宏任务
+2. 执行栈为空 查询是否有需要执行的微任务
+3. 执行所有的微任务
+4. 必要的话渲染UI
+5. 开启下一轮event loop，执行宏任务中的异步代码  
+通过上述的 Event loop 顺序可知，如果宏任务中的异步代码有大量的计算并且需要操作 DOM 的话，为了更快的响应界面响应，我们可以把操作 DOM 放入微任务中
 
 ### 宏任务
 
@@ -36,6 +44,42 @@ setTimeout(() => {
 document.querySelector('body').style.backgroundColor = 'red';
 // 表现为先变红 两秒后变绿
 ```
+
+### event loop 和 DOM 渲染
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="btn">Click me</div>
+  </body>
+  <script>
+    const $ =document.querySelector.bind(document);
+    const div = document.createElement('div');
+    div.id = 'container';
+    div.style.width = '100px';
+    div.style.height = '100px';
+    div.style.backgroundColor = 'lightblue';
+    document.body.appendChild(div);
+
+    console.log('length', document.querySelector('body').children.length);
+    alert('本次 call stack 结束，DOM 结构已更新，但尚未触发渲染');
+    // （alert 会阻断 js 执行，也会阻断 DOM 渲染，便于查看效果）
+    // 到此，即本次 call stack 结束后（同步任务都执行完了），浏览器会自动触发渲染，不用代码干预
+
+    // 另外，按照 event loop 触发 DOM 渲染时机，setTimeout 时 alert ，就能看到 DOM 渲染后的结果了
+    setTimeout(function () {
+      alert('setTimeout 是在下一次 Call Stack ，就能看到 DOM 渲染出来的结果了');
+    });
+  </script>
+</html>
+```
+
 
 ### MutationObserver
 
