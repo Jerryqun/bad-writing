@@ -569,3 +569,52 @@ Promise.resolve()
 
 // 1247386
 ```
+
+## 只要遇到了 await ，后面的代码都相当于放在 callback(微任务) 里
+
+解释 script end 在async1 end之前打印
+```js
+async function async1 () {
+  console.log('async1 start')
+  await async2()
+  console.log('async1 end') // 关键在这一步，它相当于放在 callback 中，最后执行
+  // 类似于Promise.resolve().then(()=>console.log('async1 end'))
+}
+
+async function async2 () {
+  console.log('async2')
+}
+
+console.log('script start')
+async1()
+console.log('script end')
+
+// 打印
+// script start
+// async1 start
+// async2
+// script end
+// async1 end
+```
+
+##  promise catch正常返回fulfilled，里面有报错返回rejected
+```js
+const p1 = Promise.reject('my error').catch(()=>{
+  console.log('catch error')
+})
+p1.then(()=>{
+  console.log(1)
+})
+// console.log(p1) p1返回fulfilled 触发then回调
+const p2 = Promise.reject('my error').catch(()=>{
+  throw new Error('catch error')
+})
+// console.log(p2) p2返回rejected 触发catch回调
+p2.then(()=>{
+  console.log(2)
+}).catch(()=>{
+  console.log(3)
+})
+```
+
+
