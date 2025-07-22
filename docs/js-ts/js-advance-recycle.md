@@ -128,11 +128,36 @@ function func() {
 
 V8 引擎是 Google 开发的一个开源 JavaScript 引擎，广泛应用于 Chrome 浏览器和 Node.js。它主要负责将 JavaScript 代码转换为高效的机器代码，以便快速执行。
 
+
+###  V8 的内存限制是多少, 为什么 V8 这样设计
 64 位操作系统  
-内存限制为 1.5 个 g
+内存限制为 1.4 个 g
 
 32 位操作系统  
-800 兆
+700 兆
+
+开发者可通过 --max-old-space-size 参数调整 单位是 MB。
+例子：   
+node --max-old-space-size=4096 app.js  （4GB）
+
+1. 避免单个 JavaScript 进程无限制占用系统内存
+2. 性能和效率的权衡,堆空间太大管理起来垃圾回收成本增高
+3. 安全和隔离性考虑
+
+
+### 如何查看 V8 的内存使用情况
+process.memoryUsage()
+```js
+{
+  rss: 4935680,
+  heapTotal: 1826816,
+  heapUsed: 650472,
+  external: 49879
+}
+```
+
+heapTotal 和 heapUsed 代表 V8 的内存使用情况。external 代表 V8 管理的，绑定到 Javascript 的 C++对象的内存使用情况。rss, 驻留集大小, 是给这个进程分配了多少物理内存(占总分配内存的一部分) 这些物理内存中包含堆，栈，和代码段。
+
 
 ## 什么是内存泄漏
 
