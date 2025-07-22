@@ -24507,7 +24507,7 @@ sharp(data)
   .toFile('/path/to/resized-image', (err, info) => {
     // ...
   });
-`,paraId:9,tocIndex:0}]},23785:function(o,n,e){e.r(n),e.d(n,{texts:function(){return a}});const a=[{value:"\u53C2\u8003",paraId:0},{value:"\u4E00\u3001 CommonJS \u5BFC\u51FA\u7684\u662F\u503C\u7684\u62F7\u8D1D,ES \u6A21\u5757\u5BFC\u51FA\u7684\u662F\u503C\u7684\u5F15\u7528",paraId:1,tocIndex:0},{value:`// CommonJS \u4E0D\u80FD\u5728\u6D4F\u89C8\u5668\u4E2D\u5DE5\u4F5C\uFF0C\u5B83\u5FC5\u987B\u7ECF\u8FC7\u8F6C\u6362\u548C\u6253\u5305\u3002
+`,paraId:9,tocIndex:0},{value:"\u4E0D\u4F1A\uFF0CBuffer \u5C5E\u4E8E\u5806\u5916\u5185\u5B58\uFF0C\u4E0D\u662F V8 \u5206\u914D\u7684\u3002\u5728\u5E95\u5C42\u5B83\u5206\u914D\u7684\u662F\u64CD\u4F5C\u7CFB\u7EDF\u7684\u5185\u5B58,V8 \u5806\u5185\u5B58\u9650\u5236\u53EA\u9488\u5BF9 JS \u5BF9\u8C61\u7B49\u5728 V8 \u5806\u4E0A\u7684\u5206\u914D",paraId:10,tocIndex:1}]},23785:function(o,n,e){e.r(n),e.d(n,{texts:function(){return a}});const a=[{value:"\u53C2\u8003",paraId:0},{value:"\u4E00\u3001 CommonJS \u5BFC\u51FA\u7684\u662F\u503C\u7684\u62F7\u8D1D,ES \u6A21\u5757\u5BFC\u51FA\u7684\u662F\u503C\u7684\u5F15\u7528",paraId:1,tocIndex:0},{value:`// CommonJS \u4E0D\u80FD\u5728\u6D4F\u89C8\u5668\u4E2D\u5DE5\u4F5C\uFF0C\u5B83\u5FC5\u987B\u7ECF\u8FC7\u8F6C\u6362\u548C\u6253\u5305\u3002
 // lib.js(CommonJS)
 var counter = 3;
 function incCounter() {
