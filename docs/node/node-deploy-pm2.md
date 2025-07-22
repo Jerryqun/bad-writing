@@ -61,5 +61,5 @@ jobs:
           publish_dir: ./dist
 ```
 2. 构建输出base目录为 `/仓库名称/` 如 '/my-github-project/'
-3. git官网 
-Setting => Pages => Branch选择gh-pages
+4. 确保 GitHub Actions 在仓库设置 > Actions > General > Workflow permissions 里，有 Read and write permissions。如果只选了 Read 权限，Actions 就不能推送代码。
+5. git官网 Setting => Pages => Branch选择gh-pages
