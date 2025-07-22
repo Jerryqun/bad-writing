@@ -141,7 +141,7 @@ const cwd = process.cwd(); //用于获取 node.js 流程的当前工作目录。
 
 ## live-server 静态资源服务器
 
-<a href="https://www.npmjs.com/package/live-server">参考</a>
+<a target='_blank' href="https://www.npmjs.com/package/live-server">参考</a>
 
 ```js
 npm install -g live-server
