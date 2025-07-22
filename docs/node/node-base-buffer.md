@@ -6,7 +6,7 @@ mobile: false
 title: Buffer
 ---
 
-## Buffer
+## Buffer (Node.js 环境)
 
 Buffer 对象是一个类似于数组的对象，它的每个元素都是一个表示 8 位字节的整数。
 
@@ -71,3 +71,6 @@ sharp(data)
     // ...
   });
 ```
+
+### 新建 Buffer 会占用 V8 分配的内存吗
+不会，Buffer 属于堆外内存，不是 V8 分配的。在底层它分配的是操作系统的内存,V8 堆内存限制只针对 JS 对象等在 V8 堆上的分配
