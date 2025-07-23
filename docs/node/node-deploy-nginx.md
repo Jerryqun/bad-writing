@@ -60,15 +60,11 @@ sudo nginx -s stop       # 停止
 sudo nginx -s reload     # 重新加载配置
 ```
 
----
-
 ## 4. Nginx 配置文件简介
 
 - 主配置文件： `/etc/nginx/nginx.conf`
 - 站点配置目录（Debian/Ubuntu）： `/etc/nginx/sites-available/` 和 `/etc/nginx/sites-enabled/`
 - 服务器根目录（默认）： `/var/www/html`
-
----
 
 ## 5. 简单的 HTTP 服务器配置实例
 
