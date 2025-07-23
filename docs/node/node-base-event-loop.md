@@ -8,22 +8,16 @@ title: NodeJS-EventLoop和浏览器EventLoop区别
 
 ## NodeJS-EventLoop 和浏览器 EventLoop 区别
 
-1、任务队列个数不同
-node 中有 6 个队列
-浏览器中只有两个 一个宏任务队列 一个微任务队列
+1. 任务队列个数不同,node 中有 6 个队列,浏览器中只有两个 一个宏任务队列 一个微任务队列
 
-2、微任务队列不同
-浏览器中有专门存储微任务的队列 而 node 中没有
-
-3、微任务执行时机不同
+2. 微任务队列不同, 浏览器中有专门存储微任务的队列, 而 node 中没有
+3. 微任务执行时机不同  
 浏览器事件环中每执行完一个宏任务都会去清空微任务队列
 NodeJS 事件环中只有同步代码执行完毕和其它队列之间切换的时候会去清空微任务队列
-
-4、微任务优先级不同
+4. 微任务优先级不同  
 浏览器中微任务的执行顺序是队列的执行顺序 先进先出
 NodeJS 事件环中如果多个微任务同时满足执行条件，会按照优先级执行
-
-5、在 NodeJS 中 ​​process.nextTick​​ 微任务的优先级高于 ​​Promise.resolve​​ 微任务，验证代码如下：
+5. 在 NodeJS 中 ​​process.nextTick​​ 微任务的优先级高于 ​​Promise.resolve​​ 微任务，验证代码如下：
 
 ```js
 Promise.resolve().then(function () {
@@ -45,3 +39,8 @@ process.nextTick(function () {
 // process.nextTick3
 // Promise
 ```
+
+## NodeJS-EventLoop 执行过程
+1. 执行同步代码
+2. 执行微任务（process.nextTick优先级最高）
+3. 按顺序执行6个类型的宏任务（每个开始之前都执行当前的微任务）
