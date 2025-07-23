@@ -24,15 +24,21 @@ CommonJS 通过 require 导入模块，module.exports 或 exports 导出。
 
 浏览器本身不直接支持 CommonJS 规范。CommonJS 主要是为服务器端（如 Node.js）设计的模块规范，通常用于服务器环境中处理模块的加载和管理。浏览器中使用 Commonjs 可以借助 browserify
 
-使用 browserify
-
 ```bash
-// 全局: npm install browserify -g
-// 局部: npm install browserify --save-dev
+全局: npm install browserify -g
+局部: npm install browserify --save-dev
 
-// 根目录下运行browserify js/src/app.js -o js/dist/bundle.js
-// 在index.html文件中引入<script type="text/javascript" src="js/dist/bundle.js"></script>
+根目录下运行browserify js/src/app.js -o js/dist/bundle.js
+在index.html文件中引入<script type="text/javascript" src="js/dist/bundle.js"></script>
+
 ```
+
+
+###  Browserify	与 Babel 的区别  
+Browserify 负责解决模块加载和打包问题，支持 CommonJS 在浏览器使用，仅负责模块兼容，不转译语法    
+Babel 负责代码的语法转换，让你能用最新 JS 语法，兼容老旧环境， 转译语法，不负责模块系统兼容
+
+
 ### 3 AMD  
 AMD 是 CommonJs 的浏览器端实现
 
