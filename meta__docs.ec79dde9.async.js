@@ -7613,7 +7613,8 @@ obj[Symbol.iterator] = function () {
 const [a, b] = obj;
 `,paraId:3,tocIndex:1},{value:"Array Iterator\uFF08\u6570\u7EC4\u8FED\u4EE3\u5668\uFF09",paraId:4,tocIndex:2},{value:`
 String Iterator\uFF08\u5B57\u7B26\u4E32\u8FED\u4EE3\u5668\uFF09`,paraId:4,tocIndex:2},{value:`
-Map Iterator\uFF08\u6620\u5C04\u8FED\u4EE3\u5668\uFF09\u548C Set Iterator\uFF08\u96C6\u5408\u8FED\u4EE3\u5668\uFF09`,paraId:4,tocIndex:2}]},8021:function(o,n,e){e.r(n),e.d(n,{texts:function(){return a}});const a=[{value:"\u6BCF\u4E2A Symbol \u90FD\u662F\u5B8C\u5168\u552F\u4E00\u7684\u3002\u4F20\u9012\u7ED9 Symbol \u7684\u53C2\u6570\u53EA\u662F\u7ED9 Symbol \u7684\u4E00\u4E2A\u63CF\u8FF0\u3002",paraId:0,tocIndex:0},{value:`
+Map Iterator\uFF08\u6620\u5C04\u8FED\u4EE3\u5668\uFF09`,paraId:4,tocIndex:2},{value:`
+Set Iterator\uFF08\u96C6\u5408\u8FED\u4EE3\u5668\uFF09`,paraId:4,tocIndex:2}]},8021:function(o,n,e){e.r(n),e.d(n,{texts:function(){return a}});const a=[{value:"\u6BCF\u4E2A Symbol \u90FD\u662F\u5B8C\u5168\u552F\u4E00\u7684\u3002\u4F20\u9012\u7ED9 Symbol \u7684\u53C2\u6570\u53EA\u662F\u7ED9 Symbol \u7684\u4E00\u4E2A\u63CF\u8FF0\u3002",paraId:0,tocIndex:0},{value:`
 Symbol \u7684\u503C\u4E0D\u4F9D\u8D56\u4E8E\u4F20\u9012\u7684\u53C2\u6570\u3002 \u5F53\u6211\u4EEC\u6D4B\u8BD5\u76F8\u7B49\u65F6\uFF0C\u6211\u4EEC\u521B\u5EFA\u4E86\u4E24\u4E2A\u5168\u65B0\u7684\u7B26\u53F7\uFF1A\u7B2C\u4E00\u4E2A Symbol\uFF08'foo'\uFF09\uFF0C`,paraId:0,tocIndex:0},{value:`
 \u7B2C\u4E8C\u4E2A Symbol\uFF08'foo'\uFF09, \u8FD9\u4E24\u4E2A\u503C\u662F\u552F\u4E00\u7684\uFF0C\u5F7C\u6B64\u4E0D\u76F8\u7B49\uFF0C\u56E0\u6B64\u8FD4\u56DE false\u3002`,paraId:0,tocIndex:0},{value:`console.log(Number(2) === Number(2)); // true
 console.log(Boolean(false) === Boolean(false)); // true
