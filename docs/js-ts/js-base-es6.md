@@ -20,6 +20,8 @@ title: ES6
 
 - 函数可以省略 key：value 形式 直接 func()
 
+- 箭头函数
+
 ```js
 const obj = {
   fn_name() {
@@ -79,4 +81,7 @@ Symbol Set Map WeakSet WeakMap
   不能遍历，方法同 get,set,has,delete<br/>
 
 三、全新的对象、全新的方法、全新的功能
-比如 promise、proxy、object 的 assign、is
+比如 promise、proxy、object 的 Object.assign、Object.is
+
+##  getPrototypeOf
+ES6在Object原型上新增了getPrototypeOf()和setPrototypeOf()方法，用来获取或设置当前对象的prototype对象。这个方法存在的意义在于，ES5中获取设置prototype对像是通过__proto__属性来实现的，然而__proto__属性并不是ES规范中的明文规定的属性，只是浏览器各大产商“私自”加上去的属性，只不过因为适用范围广而被默认使用了，再非浏览器环境中并不一定就可以使用，所以为了稳妥起见，获取或设置当前对象的prototype对象时，都应该采用ES6新增的标准用法

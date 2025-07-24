@@ -5,14 +5,15 @@ toc: content
 title: Object.assign
 ---
 
-## Object.assign
+## Object.assign (浅拷贝)
 
 - 浅拷贝就是拷贝第一层的基本类型值，以及第一层的引用类型地址
-
-concat 只是对数组的第一层进行深拷贝  
-slice 只是对数组的第一层进行深拷贝  
-... 实现的是对象第一层的深拷贝。后面的只是拷贝的引用值  
-Object.assign() 拷贝的是属性值。假如源对象的属性值是一个指向对象的引用，它也只拷贝那个引用值
+- concat 只是对数组的第一层进行深拷贝  
+- slice 只是对数组的第一层进行深拷贝  
+- ... 实现的是对象第一层的深拷贝。后面的只是拷贝的引用值  
+- Object.assign() 拷贝的是属性值。假如源对象的属性值是一个指向对象的引用，它也只拷贝那个引用值
+  
+注意: assign合并的对象target只能合并source1、source2中的自身属性，并不会合并source1、source2中的继承属性，也不会合并不可枚举的属性，且无法正确复制get和set属性（会直接执行get/set函数，取return的值）
 
 ```js
 // 第一步

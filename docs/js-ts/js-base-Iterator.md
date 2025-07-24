@@ -10,8 +10,8 @@ title: Iterator原理
 我们常用的 for of 循环，都是通过调用被循环对象的一个特殊函数 Iterator 来实现的，
 但是以前这个函数是隐藏的我们无法访问， 从 Symbol 引入之后，我们就可以通过 Symbol.iterator 来直接读写这个特殊函数。
 对于循环语句来说，他并不关心被循环的对象到底是什么，他只负责调用 data[Symbol.iterator] 函数，然后根据返回值来进行循环。
-所以任何对象只要提供了标准的 Iterator 接口即可被循环，比如我们现在来创造一个自定义的数据
-ES6 给 Set、Map、Array、String 都加上了[Symbol.iterator]方法
+所以任何对象只要提供了标准的 Iterator 接口即可被循环，比如我们现在来创造一个自定义的数据  
+`ES6 给 Set、Map、Array、String 都加上了[Symbol.iterator]方法`
 
 ```js
 const obj = { name: 'cq' };

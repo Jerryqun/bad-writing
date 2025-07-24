@@ -47,10 +47,14 @@ const obj = {
   name: 'zcq',
   age: 18,
 };
-// console.log('name' in obj); => Reflect.has('name')
+// console.log('name' in obj); => Reflect.has(obj,'name')
 // console.log(delete obj.name); => Reflect.deleteProperty(obj,'name')
 // console.log(Object.keys(obj));=> Reflect.ownKeys(obj)
 ```
+
+###  Reflect作用
+- 所有方法都在 Reflect， 方便操作
+- 因为Proxy可以改写默认的原生API，如果一旦原生API别改写可能就找不到了，所以Reflect也可以起到备份原生API的作用
 
 ES6 中操作对象而提供的新 API，若需要在 Proxy 内部调用对象的默认行为，建议使用 Reflect  
 1、只要 Proxy 对象具有的代理方法，Reflect 对象全部具有，以静态方法的形式存在  
