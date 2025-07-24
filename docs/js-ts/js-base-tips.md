@@ -948,6 +948,8 @@ window.__proto__.constructor === Window;
 
 NaN 与任何值比较都返回 false，包括 NaN 自己。
 
+[NaN].indexOf(NaN) === -1  bug
+
 ### Number.isNaN
 
 判断传入值是否为 NaN 内部不会做任何转换
@@ -969,6 +971,32 @@ window.isNaN('abc'); // true
 window.isNaN(1); // false
 window.isNaN('1212'); // false
 ```
+
+### Number.isFinite 和window.isFinite
+
+Number.isFinite() 是 JavaScript 中用于判断一个值是否为有限数（finite number）的内置方法。
+
+Number.isFinite() 只对 数值类型有效，非数值类型直接返回 false。
+
+```js
+Number.isFinite(15);         // true
+Number.isFinite(0);          // true
+Number.isFinite(-10.5);      // true
+
+Number.isFinite(Infinity);   // false
+Number.isFinite(-Infinity);  // false
+Number.isFinite(NaN);        // false
+
+Number.isFinite("15");       // false (字符串类型，不是数字)
+Number.isFinite(true);       // false (布尔类型)
+Number.isFinite(null);       // false
+
+// 全局 isFinite 会做隐式转换
+isFinite("15");              // true，"15" -> 15，有限数
+isFinite("abc");             // false，"abc" -> NaN
+```
+
+
 
 ## slice 和 splice 区别
 
