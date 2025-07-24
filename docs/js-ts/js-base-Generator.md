@@ -176,7 +176,7 @@ async(function () {
 ```
 
 
-## yield 和yield* js中有什么区别
+## yield 和yield * js中有什么区别
 - yield:  
 从当前生成器函数中返回一个值并暂停执行。
 每次调用 next() 时，可以返回一个值。

@@ -95,4 +95,5 @@ const [a, b] = obj;
 
 Array Iterator（数组迭代器）  
 String Iterator（字符串迭代器）  
-Map Iterator（映射迭代器）和 Set Iterator（集合迭代器）
+Map Iterator（映射迭代器）  
+ Set Iterator（集合迭代器）
