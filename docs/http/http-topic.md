@@ -335,3 +335,8 @@ GET 和 POST 是 HTTP 协议中两种最基本的请求方法，它们在许多�
 1. ajax: 异步请求统称
 2. fetch: 一个浏览器自带的 api
 3. axios: 第三方 npm 包， 基于 XMLHttpRequest 的封装
+
+## 一个 tcp 连接能发几个 http 请求
+如果是 HTTP 1.0，默认不支持长连接，所以 一个 TCP 发送 一个 HTTP 请求；
+
+如果是 HTTP 1.1，支持了长连接，只要 TCP 连接不断开，便可以一直发送 HTTP 请求，HTTP 2.0 同理
