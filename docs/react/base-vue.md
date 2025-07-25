@@ -29,3 +29,8 @@ vue 基于 templete 面向 html
 Modal: 数据模型层，负责业务数据和状态，通常是纯数据结构或逻辑处理  
 View: 视图层，负责 UI 展示，用户界面元素和交互  
 ViewModal: 视图模型层，连接 Model 和 View，负责数据绑定和处理用户交互逻辑
+
+## MVC (Model、View、Controller)
+Model：数据模型层，负责管理应用的数据、业务逻辑和状态  
+View：视图层，负责数据显示和用户界面呈现  
+Controller：控制器层，负责接收用户输入并调用 Model 与 View 进行交互和更新  
