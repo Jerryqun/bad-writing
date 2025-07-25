@@ -12,7 +12,7 @@ mobile: false
 
 <a target="_blank" href="https://fe.ecool.fun/topic/55ba9331-1165-4b0e-baba-dc9a6378a8fb?orderBy=updateTime&order=desc&tagId=12">参考</a>
 
-总结： 照片用 JPG，动画用 GIF，图标用 PNG-8，尽量不用 PNG-24 和 PNG-32
+总结： 照片、大的背景图、轮播图或 Banner 图用 JPG，动画用 GIF，图标用 PNG-8，尽量不用 PNG-24 和 PNG-32
 
 图片的类型  
 1、位图  
@@ -88,7 +88,7 @@ SVG 是一种用 XML 定义的语言，用来描述二维矢量及矢量/栅格�
 
 SVG 图形是可交互的和动态的，可以在 SVG 文件中嵌入动画元素或通过脚本来定义动画。
 
-SVG 与上面图片不同的是它是矢量图，无论你怎么放大，它都不会失真；同时，`SVG 文件通常要比比 JPEG 和 PNG 格式的文件要小很多`。
+SVG 与上面图片不同的是它是矢量图，无论你怎么放大，它都不会失真；同时，`SVG 文件通常要比 JPEG 和 PNG 格式的文件要小很多`。
 
 优点：  
 SVG 可被非常多的工具读取和修改（比如记事本）  

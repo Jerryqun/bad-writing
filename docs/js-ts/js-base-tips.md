@@ -938,7 +938,7 @@ window.__proto__.constructor === Window;
 
 ## window.location.href 和 window.location.reload 的区别
 
-1、当 window.location.href = 'xxxx' orgin 相同时不会刷新页面，只会切换路由，相当于 history.push
+1、当 window.location.href = 'xxxx' orgin 相同时不会刷新页面，只会切换路由，相当于 history.push ，如果是hash路由，会触发onhashchange钩子，如果orgin不同会重载页面
 
 2、特别注意 history.push 不会全局刷新页面，如果用到了全局的 store，store 里面的数据不会清空，而 window.location.relad()会重置页面
 
