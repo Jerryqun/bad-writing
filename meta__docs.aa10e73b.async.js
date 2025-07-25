@@ -9801,7 +9801,7 @@ console.log(person.age); // 21  \u6CA1\u53D8
  * \u7528defineProperty\u65B9\u6CD5\u6DFB\u52A0\u7684\u5C5E\u6027\u9ED8\u8BA4\u4E0D\u53EF\u53D8\u3002\u4F60\u53EF\u4EE5\u901A\u8FC7writable, configurable \u548C enumerable\u5C5E\u6027\u6765\u6539\u53D8\u8FD9\u4E00\u884C\u4E3A\u3002\u8FD9\u6837\u7684\u8BDD\uFF0C
  * \u76F8\u6BD4\u4E8E\u81EA\u5DF1\u6DFB\u52A0\u7684\u5C5E\u6027\uFF0CdefineProperty\u65B9\u6CD5\u6DFB\u52A0\u7684\u5C5E\u6027\u6709\u4E86\u66F4\u591A\u7684\u63A7\u5236\u6743\u3002
  */
-`,paraId:9,tocIndex:3}]},69526:function(o,n,e){e.r(n),e.d(n,{texts:function(){return a}});const a=[{value:"MDN",paraId:0,tocIndex:0},{value:"requestIdleCallback \u6709\u4E00\u4E9B\u517C\u5BB9\u6027\u95EE\u9898",paraId:1,tocIndex:0},{value:"window.requestIdleCallback() \u65B9\u6CD5\u63D2\u5165\u4E00\u4E2A\u51FD\u6570\uFF0C\u8FD9\u4E2A\u51FD\u6570\u5C06\u5728\u6D4F\u89C8\u5668\u7A7A\u95F2\u65F6\u671F\u88AB\u8C03\u7528\u3002\u8FD9\u4F7F\u5F00\u53D1\u8005\u80FD\u591F\u5728\u4E3B\u4E8B\u4EF6\u5FAA\u73AF\u4E0A\u6267\u884C\u540E\u53F0\u548C\u4F4E\u4F18\u5148\u7EA7\u5DE5\u4F5C\uFF0C\u800C\u4E0D\u4F1A\u5F71\u54CD\u5EF6\u8FDF\u5173\u952E\u4E8B\u4EF6\uFF0C\u5982\u52A8\u753B\u548C\u8F93\u5165\u54CD\u5E94\u3002\u51FD\u6570\u4E00\u822C\u4F1A\u6309\u5148\u8FDB\u5148\u8C03\u7528\u7684\u987A\u5E8F\u6267\u884C\uFF0C\u7136\u800C\uFF0C\u5982\u679C\u56DE\u8C03\u51FD\u6570\u6307\u5B9A\u4E86\u6267\u884C\u8D85\u65F6\u65F6\u95F4 timeout\uFF0C\u5219\u6709\u53EF\u80FD\u4E3A\u4E86\u5728\u8D85\u65F6\u524D\u6267\u884C\u51FD\u6570\u800C\u6253\u4E71\u6267\u884C\u987A\u5E8F",paraId:2,tocIndex:0},{value:"requestAnimationFrame\uFF1A \u6BCF\u6B21\u6E32\u67D3\u5B8C\u90FD\u4F1A\u6267\u884C\uFF0C\u641E\u4F18\u5148\u7EA7",paraId:3,tocIndex:1},{value:"requestIdleCallback\uFF1A \u7A7A\u95F2\u65F6\u5019\u6267\u884C\uFF0C\u4F4E\u4F18\u5148\u7EA7",paraId:4,tocIndex:1},{value:"\u5728\u9AD8\u6027\u80FD\u7535\u8111\u7A7A\u95F2\u7684\u65F6\u5019\u8868\u73B0\u53EF\u80FD\u4E00\u6837\u3002",paraId:5,tocIndex:1}]},28304:function(o,n,e){e.r(n),e.d(n,{texts:function(){return a}});const a=[{value:"\u5B9A\u4E49\u53D8\u91CF\u7684\u533A\u57DF\uFF0C\u4F5C\u7528\u57DF\u51B3\u5B9A\u4E86\u5982\u4F55\u67E5\u627E\u53D8\u91CF\uFF0C\u4E5F\u5C31\u662F\u53D8\u91CF\u7684\u8BBF\u95EE\u6743\u9650 \u5206\u4E3A\u9759\u6001\u4F5C\u7528\u57DF\u4E0E\u52A8\u6001\u4F5C\u7528\u57DF\u3002",paraId:0,tocIndex:0},{value:"js \u91C7\u7528\u7684\u662F\u8BCD\u6CD5\u4F5C\u7528\u57DF\u4E5F\u5C31\u662F\u9759\u6001\u4F5C\u7528\u57DF(\u51FD\u6570\u7684\u4F5C\u7528\u57DF\u5728\u51FD\u6570\u5B9A\u4E49\u7684\u65F6\u5019\u5C31\u51B3\u5B9A)",paraId:1,tocIndex:1},{value:`// \u4F8B\u4E00
+`,paraId:9,tocIndex:3}]},69526:function(o,n,e){e.r(n),e.d(n,{texts:function(){return a}});const a=[{value:"MDN",paraId:0,tocIndex:0},{value:"requestIdleCallback \u6709\u4E00\u4E9B\u517C\u5BB9\u6027\u95EE\u9898",paraId:1,tocIndex:0},{value:"window.requestIdleCallback() \u65B9\u6CD5\u63D2\u5165\u4E00\u4E2A\u51FD\u6570\uFF0C\u8FD9\u4E2A\u51FD\u6570\u5C06\u5728\u6D4F\u89C8\u5668\u7A7A\u95F2\u65F6\u671F\u88AB\u8C03\u7528\u3002\u8FD9\u4F7F\u5F00\u53D1\u8005\u80FD\u591F\u5728\u4E3B\u4E8B\u4EF6\u5FAA\u73AF\u4E0A\u6267\u884C\u540E\u53F0\u548C\u4F4E\u4F18\u5148\u7EA7\u5DE5\u4F5C\uFF0C\u800C\u4E0D\u4F1A\u5F71\u54CD\u5EF6\u8FDF\u5173\u952E\u4E8B\u4EF6\uFF0C\u5982\u52A8\u753B\u548C\u8F93\u5165\u54CD\u5E94\u3002\u51FD\u6570\u4E00\u822C\u4F1A\u6309\u5148\u8FDB\u5148\u8C03\u7528\u7684\u987A\u5E8F\u6267\u884C\uFF0C\u7136\u800C\uFF0C\u5982\u679C\u56DE\u8C03\u51FD\u6570\u6307\u5B9A\u4E86\u6267\u884C\u8D85\u65F6\u65F6\u95F4 timeout\uFF0C\u5219\u6709\u53EF\u80FD\u4E3A\u4E86\u5728\u8D85\u65F6\u524D\u6267\u884C\u51FD\u6570\u800C\u6253\u4E71\u6267\u884C\u987A\u5E8F",paraId:2,tocIndex:0},{value:"requestAnimationFrame\uFF1A \u6BCF\u6B21\u6E32\u67D3\u5B8C\u90FD\u4F1A\u6267\u884C\uFF0C\u641E\u4F18\u5148\u7EA7",paraId:3,tocIndex:1},{value:"requestIdleCallback\uFF1A \u7A7A\u95F2\u65F6\u5019\u6267\u884C\uFF0C\u4F4E\u4F18\u5148\u7EA7",paraId:4,tocIndex:1},{value:"\u5728\u9AD8\u6027\u80FD\u7535\u8111\u7A7A\u95F2\u7684\u65F6\u5019\u8868\u73B0\u53EF\u80FD\u4E00\u6837\u3002",paraId:5,tocIndex:1}]},28304:function(o,n,e){e.r(n),e.d(n,{texts:function(){return a}});const a=[{value:"\u5B9A\u4E49\u53D8\u91CF\u7684\u533A\u57DF\uFF0C\u4F5C\u7528\u57DF\u51B3\u5B9A\u4E86\u5982\u4F55\u67E5\u627E\u53D8\u91CF\uFF0C\u4E5F\u5C31\u662F\u53D8\u91CF\u7684\u8BBF\u95EE\u6743\u9650, \u5206\u4E3A\u9759\u6001\u4F5C\u7528\u57DF\u4E0E\u52A8\u6001\u4F5C\u7528\u57DF\u3002",paraId:0,tocIndex:0},{value:"js \u91C7\u7528\u7684\u662F\u8BCD\u6CD5\u4F5C\u7528\u57DF\u4E5F\u5C31\u662F\u9759\u6001\u4F5C\u7528\u57DF(\u51FD\u6570\u7684\u4F5C\u7528\u57DF\u5728\u51FD\u6570\u5B9A\u4E49\u7684\u65F6\u5019\u5C31\u51B3\u5B9A)",paraId:1,tocIndex:1},{value:`// \u4F8B\u4E00
 var value = 1;
 
 function foo() {
@@ -27794,115 +27794,119 @@ vue \u57FA\u4E8E templete \u9762\u5411 html`,paraId:4,tocIndex:0},{value:"Modal:
 View: \u89C6\u56FE\u5C42\uFF0C\u8D1F\u8D23 UI \u5C55\u793A\uFF0C\u7528\u6237\u754C\u9762\u5143\u7D20\u548C\u4EA4\u4E92`,paraId:5,tocIndex:1},{value:`
 ViewModal: \u89C6\u56FE\u6A21\u578B\u5C42\uFF0C\u8FDE\u63A5 Model \u548C View\uFF0C\u8D1F\u8D23\u6570\u636E\u7ED1\u5B9A\u548C\u5904\u7406\u7528\u6237\u4EA4\u4E92\u903B\u8F91`,paraId:5,tocIndex:1},{value:"Model\uFF1A\u6570\u636E\u6A21\u578B\u5C42\uFF0C\u8D1F\u8D23\u7BA1\u7406\u5E94\u7528\u7684\u6570\u636E\u3001\u4E1A\u52A1\u903B\u8F91\u548C\u72B6\u6001",paraId:6,tocIndex:2},{value:`
 View\uFF1A\u89C6\u56FE\u5C42\uFF0C\u8D1F\u8D23\u6570\u636E\u663E\u793A\u548C\u7528\u6237\u754C\u9762\u5448\u73B0`,paraId:6,tocIndex:2},{value:`
-Controller\uFF1A\u63A7\u5236\u5668\u5C42\uFF0C\u8D1F\u8D23\u63A5\u6536\u7528\u6237\u8F93\u5165\u5E76\u8C03\u7528 Model \u4E0E View \u8FDB\u884C\u4EA4\u4E92\u548C\u66F4\u65B0`,paraId:6,tocIndex:2},{value:`
-<!DOCTYPE html>
+Controller\uFF1A\u63A7\u5236\u5668\u5C42\uFF0C\u8D1F\u8D23\u63A5\u6536\u7528\u6237\u8F93\u5165\u5E76\u8C03\u7528 Model \u4E0E View \u8FDB\u884C\u4EA4\u4E92\u548C\u66F4\u65B0`,paraId:6,tocIndex:2},{value:`<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>\u7B80\u6613MVVM\u6846\u67B6Demo\uFF08Proxy\u7248\uFF0C\u4FEE\u6B63\uFF09</title>
-  <style>
-    body { font-family: Arial, sans-serif; padding: 20px; }
-    input { padding: 5px; font-size: 16px; }
-  </style>
-</head>
-<body>
-  <div id="app">
-    <h3>\u7B80\u6613MVVM\u53CC\u5411\u7ED1\u5B9A Demo</h3>
-    <p>\u6D88\u606F\uFF1A{{ message }}</p>
-    <input type="text" v-model="message" placeholder="\u8BF7\u8F93\u5165\u5185\u5BB9\u8BD5\u8BD5..." />
-  </div>
-  <script>
-    class MVVM {
-      constructor(options) {
-        this.$el = typeof options.el === 'string' ? document.querySelector(options.el) : options.el;
-        this.$data = options.data;
-
-        this._bindings = {}; // \u5B58\u653E\u7ED1\u5B9A\u4FE1\u606F
-
-        this.$data = this._proxyData(this.$data);
-
-        this._compile(this.$el);
+  <head>
+    <meta charset="UTF-8" />
+    <title>\u7B80\u6613MVVM\u6846\u67B6Demo\uFF08Proxy\u7248\uFF0C\u4FEE\u6B63\uFF09</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
       }
-
-      _proxyData(data) {
-        const self = this;
-        return new Proxy(data, {
-          get(target, prop) {
-            return target[prop];
-          },
-          set(target, prop, value) {
-            target[prop] = value;
-            self._update(prop, value);
-            return true;
-          }
-        });
+      input {
+        padding: 5px;
+        font-size: 16px;
       }
+    </style>
+  </head>
+  <body>
+    <script>
+      class MVVM {
+        constructor(options) {
+          this.$el =
+            typeof options.el === 'string'
+              ? document.querySelector(options.el)
+              : options.el;
+          // this.$data = options.data;
 
-      _compile(el) {
-        const nodes = el.querySelectorAll('*');
+          this._bindings = {}; // \u5B58\u653E\u7ED1\u5B9A\u4FE1\u606F
 
-        nodes.forEach(node => {
-          // \u5904\u7406\u6587\u672C\u8282\u70B9\u7684 {{}} \u7ED1\u5B9A
-          node.childNodes.forEach(child => {
-            if (child.nodeType === 3) {
-              const reg = /\\{\\{\\s*([^\\s\\{\\}]+)\\s*\\}\\}/g;
-              const text = child.textContent;
-              if (reg.test(text)) {
-                // \u8BB0\u5F55\u6A21\u677F\u539F\u6587
-                const prop = RegExp.$1;
-                this._addBinding(prop, child, 'text', text);
+          this.$data = this._proxyData(options.data || {});
 
-                this._update(prop, this.$data[prop]);
+          this._compile(this.$el);
+        }
+
+        _proxyData(data) {
+          const self = this;
+          return new Proxy(data, {
+            get(target, prop) {
+              return target[prop];
+            },
+            set(target, prop, value) {
+              target[prop] = value;
+              self._update(prop, value);
+              return true;
+            },
+          });
+        }
+
+        _compile(el) {
+          const nodes = el.querySelectorAll('*');
+
+          nodes.forEach((node) => {
+            // \u5904\u7406\u6587\u672C\u8282\u70B9\u7684 {{}} \u7ED1\u5B9A
+            node.childNodes.forEach((child) => {
+              if (child.nodeType === 3) {
+                const reg = /\\{\\{\\s*([^\\s\\{\\}]+)\\s*\\}\\}/g;
+                const text = child.textContent;
+                if (reg.test(text)) {
+                  // \u8BB0\u5F55\u6A21\u677F\u539F\u6587
+                  const prop = RegExp.$1;
+                  this._addBinding(prop, child, 'text', text);
+
+                  this._update(prop, this.$data[prop]);
+                }
               }
+            });
+
+            // \u5904\u7406 v-model \u6307\u4EE4
+            if (node.hasAttribute && node.hasAttribute('v-model')) {
+              const prop = node.getAttribute('v-model');
+              this._addBinding(prop, node, 'input');
+
+              node.value = this.$data[prop];
+
+              node.addEventListener('input', (e) => {
+                this.$data[prop] = e.target.value;
+              });
             }
           });
+        }
 
-          // \u5904\u7406 v-model \u6307\u4EE4
-          if (node.hasAttribute && node.hasAttribute('v-model')) {
-            const prop = node.getAttribute('v-model');
-            this._addBinding(prop, node, 'input');
+        _addBinding(prop, node, type, template = null) {
+          if (!this._bindings[prop]) this._bindings[prop] = [];
+          this._bindings[prop].push({ node, type, template });
+        }
 
-            node.value = this.$data[prop];
-
-            node.addEventListener('input', e => {
-              this.$data[prop] = e.target.value;
-            });
-          }
-        });
+        _update(prop, value) {
+          if (!this._bindings[prop]) return;
+          this._bindings[prop].forEach((binding) => {
+            if (binding.type === 'text') {
+              const originalText = binding.template; // \u8FD9\u91CC\u7528\u4FDD\u5B58\u7684\u6A21\u677F\u6587\u672C
+              if (!originalText) return;
+              const reg = new RegExp(\`\\\\{\\\\{\\\\s*\${prop}\\\\s*\\\\}\\\\}\`, 'g');
+              binding.node.textContent = originalText.replace(reg, value);
+            } else if (
+              binding.type === 'input' &&
+              binding.node.value !== value
+            ) {
+              binding.node.value = value;
+            }
+          });
+        }
       }
 
-      _addBinding(prop, node, type, template=null) {
-        if (!this._bindings[prop]) this._bindings[prop] = [];
-        this._bindings[prop].push({ node, type, template });
-      }
-
-      _update(prop, value) {
-        if (!this._bindings[prop]) return;
-        this._bindings[prop].forEach(binding => {
-          if (binding.type === 'text') {
-            const originalText = binding.template; // \u8FD9\u91CC\u7528\u4FDD\u5B58\u7684\u6A21\u677F\u6587\u672C
-            if (!originalText) return;
-            const reg = new RegExp(\`\\\\{\\\\{\\\\s*\${prop}\\\\s*\\\\}\\\\}\`, 'g');
-            binding.node.textContent = originalText.replace(reg, value);
-          }
-          else if (binding.type === 'input' && binding.node.value !== value) {
-            binding.node.value = value;
-          }
-        });
-      }
-    }
-
-    // \u4F7F\u7528\u793A\u4F8B
-    const vm = new MVVM({
-      el: '#app',
-      data: {
-        message: '\u6B22\u8FCE\u4F7F\u7528\u7B80\u6613MVVM\u6846\u67B6'
-      }
-    });
-  <\/script>
-</body>
+      // \u4F7F\u7528\u793A\u4F8B
+      const vm = new MVVM({
+        el: '#app',
+        data: {
+          message: '\u6B22\u8FCE\u4F7F\u7528\u7B80\u6613MVVM\u6846\u67B6',
+        },
+      });
+    <\/script>
+  </body>
 </html>
-
 `,paraId:7,tocIndex:3}]},20388:function(o,n,e){e.r(n),e.d(n,{texts:function(){return a}});const a=[{value:`/* Input \u7EC4\u4EF6, \u8D1F\u8D23\u56DE\u4F20value\u503C */
 function Input({ onChange, value }) {
   return (
