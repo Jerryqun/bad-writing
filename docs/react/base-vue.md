@@ -22,3 +22,10 @@ Vue：遍历 data 数据对象，使用 Object.definedProperty 将每个属性�
 4、书写  
 react 基于 jsx 面向 js  
 vue 基于 templete 面向 html
+
+
+## MVVM （Modal、View、ViewModal）
+
+Modal: 数据模型层，负责业务数据和状态，通常是纯数据结构或逻辑处理  
+View: 视图层，负责 UI 展示，用户界面元素和交互  
+ViewModal: 视图模型层，连接 Model 和 View，负责数据绑定和处理用户交互逻辑
