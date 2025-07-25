@@ -72,26 +72,21 @@ const proxy = new Proxy(obj, {
 
 ## Object.defineProperty()
 
+obj：要添加属性的对象  
+prop：要定义或修改的属性的名称或 [Symbol]  
+descriptor：要定义或修改的属性描述符  
+
 ```js
 Object.defineProperty(obj, prop, descriptor);
-
-/**
-   * 
-   *  obj：要添加属性的对象
-      prop：要定义或修改的属性的名称或 [Symbol]
-      descriptor：要定义或修改的属性描述符
-  */
 
 const object1 = {};
 
 Object.defineProperty(object1, 'property1', {
-  // value 和get 互斥
-  //   value: 42,
+  // value: 42 （value 和get 互斥）,
   get: function (val) {
     return 'property1Value';
   },
-  // writable 和set 互斥
-  //   writable: false,
+  // writable: false （ writable 和set 互斥）
   set: function (newVal) {},
 });
 
@@ -101,21 +96,12 @@ console.log(object1.property1);
 // expected output: 42
 
 /**
-   *  configurable 是否可以删除属性和属性描述
-      enumerable 才能出现在对象枚举中
-      value 初始值
-      writable 是否能被赋值运算符改变
-      get
-      set
-  */
-
-/**
-   * defineProperty 缺点
-
-  1、不能拦截新增属性
-  2、通过下标的方式修改数组数据无法监听
-  3、需要遍历所有属性 性能差
-  3、vue3 替代方案是proxy   proxy是es6语法 有兼容问题
+  configurable 是否可以删除属性和属性描述
+  enumerable 才能出现在对象枚举中
+  value 初始值
+  writable 是否能被赋值运算符改变
+  get
+  set
   */
 
 const person = { name: 'Lydia' };
@@ -136,3 +122,10 @@ console.log(person.age); // 21  没变
  * 相比于自己添加的属性，defineProperty方法添加的属性有了更多的控制权。
  */
 ```
+
+##  defineProperty 缺点
+
+  1、不能拦截新增属性  
+  2、通过下标的方式修改数组数据无法监听  
+  3、需要遍历所有属性 性能差  
+  3、vue3 替代方案是proxy   proxy是es6语法 有兼容问题  
