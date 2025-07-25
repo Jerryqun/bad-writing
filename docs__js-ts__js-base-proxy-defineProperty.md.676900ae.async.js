@@ -82,4 +82,4 @@ console.log(person.age); // 21  \u6CA1\u53D8
 `,paraId:10,tocIndex:3},{value:"1\u3001\u4E0D\u80FD\u62E6\u622A\u65B0\u589E\u5C5E\u6027",paraId:11,tocIndex:4},{value:`
 2\u3001\u901A\u8FC7\u4E0B\u6807\u7684\u65B9\u5F0F\u4FEE\u6539\u6570\u7EC4\u6570\u636E\u65E0\u6CD5\u76D1\u542C`,paraId:11,tocIndex:4},{value:`
 3\u3001\u9700\u8981\u904D\u5386\u6240\u6709\u5C5E\u6027 \u6027\u80FD\u5DEE`,paraId:11,tocIndex:4},{value:`
-3\u3001vue3 \u66FF\u4EE3\u65B9\u6848\u662Fproxy   proxy\u662Fes6\u8BED\u6CD5 \u6709\u517C\u5BB9\u95EE\u9898`,paraId:11,tocIndex:4}]}}]);
+3\u3001vue3 \u66FF\u4EE3\u65B9\u6848\u662Fproxy\uFF0C proxy\u662Fes6\u8BED\u6CD5\uFF0C\u6709\u517C\u5BB9\u95EE\u9898`,paraId:11,tocIndex:4}]}}]);
