@@ -27794,7 +27794,116 @@ vue \u57FA\u4E8E templete \u9762\u5411 html`,paraId:4,tocIndex:0},{value:"Modal:
 View: \u89C6\u56FE\u5C42\uFF0C\u8D1F\u8D23 UI \u5C55\u793A\uFF0C\u7528\u6237\u754C\u9762\u5143\u7D20\u548C\u4EA4\u4E92`,paraId:5,tocIndex:1},{value:`
 ViewModal: \u89C6\u56FE\u6A21\u578B\u5C42\uFF0C\u8FDE\u63A5 Model \u548C View\uFF0C\u8D1F\u8D23\u6570\u636E\u7ED1\u5B9A\u548C\u5904\u7406\u7528\u6237\u4EA4\u4E92\u903B\u8F91`,paraId:5,tocIndex:1},{value:"Model\uFF1A\u6570\u636E\u6A21\u578B\u5C42\uFF0C\u8D1F\u8D23\u7BA1\u7406\u5E94\u7528\u7684\u6570\u636E\u3001\u4E1A\u52A1\u903B\u8F91\u548C\u72B6\u6001",paraId:6,tocIndex:2},{value:`
 View\uFF1A\u89C6\u56FE\u5C42\uFF0C\u8D1F\u8D23\u6570\u636E\u663E\u793A\u548C\u7528\u6237\u754C\u9762\u5448\u73B0`,paraId:6,tocIndex:2},{value:`
-Controller\uFF1A\u63A7\u5236\u5668\u5C42\uFF0C\u8D1F\u8D23\u63A5\u6536\u7528\u6237\u8F93\u5165\u5E76\u8C03\u7528 Model \u4E0E View \u8FDB\u884C\u4EA4\u4E92\u548C\u66F4\u65B0`,paraId:6,tocIndex:2}]},20388:function(o,n,e){e.r(n),e.d(n,{texts:function(){return a}});const a=[{value:`/* Input \u7EC4\u4EF6, \u8D1F\u8D23\u56DE\u4F20value\u503C */
+Controller\uFF1A\u63A7\u5236\u5668\u5C42\uFF0C\u8D1F\u8D23\u63A5\u6536\u7528\u6237\u8F93\u5165\u5E76\u8C03\u7528 Model \u4E0E View \u8FDB\u884C\u4EA4\u4E92\u548C\u66F4\u65B0`,paraId:6,tocIndex:2},{value:`
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>\u7B80\u6613MVVM\u6846\u67B6Demo\uFF08Proxy\u7248\uFF0C\u4FEE\u6B63\uFF09</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    input { padding: 5px; font-size: 16px; }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <h3>\u7B80\u6613MVVM\u53CC\u5411\u7ED1\u5B9A Demo</h3>
+    <p>\u6D88\u606F\uFF1A{{ message }}</p>
+    <input type="text" v-model="message" placeholder="\u8BF7\u8F93\u5165\u5185\u5BB9\u8BD5\u8BD5..." />
+  </div>
+  <script>
+    class MVVM {
+      constructor(options) {
+        this.$el = typeof options.el === 'string' ? document.querySelector(options.el) : options.el;
+        this.$data = options.data;
+
+        this._bindings = {}; // \u5B58\u653E\u7ED1\u5B9A\u4FE1\u606F
+
+        this.$data = this._proxyData(this.$data);
+
+        this._compile(this.$el);
+      }
+
+      _proxyData(data) {
+        const self = this;
+        return new Proxy(data, {
+          get(target, prop) {
+            return target[prop];
+          },
+          set(target, prop, value) {
+            target[prop] = value;
+            self._update(prop, value);
+            return true;
+          }
+        });
+      }
+
+      _compile(el) {
+        const nodes = el.querySelectorAll('*');
+
+        nodes.forEach(node => {
+          // \u5904\u7406\u6587\u672C\u8282\u70B9\u7684 {{}} \u7ED1\u5B9A
+          node.childNodes.forEach(child => {
+            if (child.nodeType === 3) {
+              const reg = /\\{\\{\\s*([^\\s\\{\\}]+)\\s*\\}\\}/g;
+              const text = child.textContent;
+              if (reg.test(text)) {
+                // \u8BB0\u5F55\u6A21\u677F\u539F\u6587
+                const prop = RegExp.$1;
+                this._addBinding(prop, child, 'text', text);
+
+                this._update(prop, this.$data[prop]);
+              }
+            }
+          });
+
+          // \u5904\u7406 v-model \u6307\u4EE4
+          if (node.hasAttribute && node.hasAttribute('v-model')) {
+            const prop = node.getAttribute('v-model');
+            this._addBinding(prop, node, 'input');
+
+            node.value = this.$data[prop];
+
+            node.addEventListener('input', e => {
+              this.$data[prop] = e.target.value;
+            });
+          }
+        });
+      }
+
+      _addBinding(prop, node, type, template=null) {
+        if (!this._bindings[prop]) this._bindings[prop] = [];
+        this._bindings[prop].push({ node, type, template });
+      }
+
+      _update(prop, value) {
+        if (!this._bindings[prop]) return;
+        this._bindings[prop].forEach(binding => {
+          if (binding.type === 'text') {
+            const originalText = binding.template; // \u8FD9\u91CC\u7528\u4FDD\u5B58\u7684\u6A21\u677F\u6587\u672C
+            if (!originalText) return;
+            const reg = new RegExp(\`\\\\{\\\\{\\\\s*\${prop}\\\\s*\\\\}\\\\}\`, 'g');
+            binding.node.textContent = originalText.replace(reg, value);
+          }
+          else if (binding.type === 'input' && binding.node.value !== value) {
+            binding.node.value = value;
+          }
+        });
+      }
+    }
+
+    // \u4F7F\u7528\u793A\u4F8B
+    const vm = new MVVM({
+      el: '#app',
+      data: {
+        message: '\u6B22\u8FCE\u4F7F\u7528\u7B80\u6613MVVM\u6846\u67B6'
+      }
+    });
+  <\/script>
+</body>
+</html>
+
+`,paraId:7,tocIndex:3}]},20388:function(o,n,e){e.r(n),e.d(n,{texts:function(){return a}});const a=[{value:`/* Input \u7EC4\u4EF6, \u8D1F\u8D23\u56DE\u4F20value\u503C */
 function Input({ onChange, value }) {
   return (
     <input
