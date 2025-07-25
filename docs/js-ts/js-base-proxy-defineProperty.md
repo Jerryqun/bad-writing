@@ -128,4 +128,4 @@ console.log(person.age); // 21  没变
   1、不能拦截新增属性  
   2、通过下标的方式修改数组数据无法监听  
   3、需要遍历所有属性 性能差  
-  3、vue3 替代方案是proxy   proxy是es6语法 有兼容问题  
+  3、vue3 替代方案是proxy， proxy是es6语法，有兼容问题  
