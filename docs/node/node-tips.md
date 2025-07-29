@@ -28,7 +28,9 @@ Node v13.2.0 对应 Npm v6.13.1。
 
 ## cross-env
 
-cross-env 用于在不同操作系统上统一设置环境变量。
+cross-env 用于在不同操作系统上统一设置环境变量，是一个用于设置跨平台环境变量的 npm 包，在不同操作系统（例如 Windows、macOS、Linux）上以统一的方式设置环境变量，避免因环境差异导致的设置失败。
+
+例如，Windows 命令行设置环境变量用 set PORT=9999，而 Unix/macOS 用 PORT=9999，cross-env 把差异封装起来。
 
 ```js
 npm install cross-env --save-dev
