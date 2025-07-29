@@ -31,8 +31,8 @@ brew install nginx
 brew info nginx 查看nginx 安装的具体位置和配置文件所在的位置
 ```
 
-若要加配置 在 /opt/homebrew/etc/nginx/servers/ 文件夹下面添加 xxx.conf  (直接配置server ，配置文件外面不需要再写http)
-servers文件需要自己建
+若要加配置,在 /opt/homebrew/etc/nginx/servers/ 文件夹下面添加 xxx.conf  (直接配置server ，配置文件外面不需要再写http)
+servers文件可能需要自己建
 ## 3. 启动和管理 Nginx
 
 ```bash
@@ -66,7 +66,7 @@ sudo nginx -s reload     # 重新加载配置
 - 站点配置目录（Debian/Ubuntu）： `/etc/nginx/sites-available/` 和 `/etc/nginx/sites-enabled/`
 - 服务器根目录（默认）： `/var/www/html`
 
-## 5. 简单的 HTTP 服务器配置实例
+## 5. 简单的 HTTP 服务器配置实例 (最简单的history路由配置实例)
 
 默认的 nginx.conf 结构中，有类似：
 
@@ -91,6 +91,42 @@ http {
 - `root` 指定网站文件根目录
 - `index` 指定默认首页文件
 - `location` 定义路由规则
+
+
+如果构建后的build文件中路由有对应的html文件，刷新访问的时候应该直接访问对应的html文件，如访问/test 对应的应该是build文件下面的test.html
+
+nginx配置如下
+
+
+```nginx
+server {
+    listen 80;
+    server_name your.domain.com;
+
+    root /var/www/react-app/build;
+    index index.html;
+
+    # 优先访问请求对应的路径（静态资源或目录）
+    location / {
+        # 这里 try_files 按顺序尝试：
+        # 1. 用户访问的路径本身 (如 /about) — 如果是目录或文件返回
+        # 2. 请求路径加 .html（如 /about.html）
+        # 3. 请求路径加 /index.html (支持目录索引)
+        # 4. 回退到 index.html (SPA入口)
+        try_files $uri $uri.html $uri/index.html /index.html;
+    }
+
+    # 静态资源缓存配置
+    location ~* \.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot|json)$ {
+        expires 30d;
+        access_log off;
+        add_header Cache-Control "public";
+    }
+
+    error_page 404 /index.html;
+}
+```
+
 
 ## 6. 启动后访问
 

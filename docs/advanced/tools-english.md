@@ -9,7 +9,7 @@ title: 单词记忆
 ---
 
 composite 合成的    
-compact 紧凑 
+compact 紧凑   
 inherit 继承  
 anonymous 匿名的  
 vendors 供应商  
