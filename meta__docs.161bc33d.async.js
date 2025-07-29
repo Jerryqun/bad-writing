@@ -3350,7 +3350,7 @@ iOS \u7CFB\u7EDF\u7248\u672C\u4E0D\u540C\uFF0C\u8BBE\u7F6E\u53EF\u80FD\u6709\u5D
 `,paraId:51,tocIndex:8},{value:"\u63A8\u9001\u6587\u4EF6\u5230\u8BBE\u5907\uFF1A",paraId:52,tocIndex:8},{value:`adb push /local/path /sdcard/path/to/file
 `,paraId:53,tocIndex:8},{value:"\u67E5\u770B\u8BBE\u5907\u65E5\u5FD7\uFF1A",paraId:54,tocIndex:8},{value:`adb logcat
 `,paraId:55,tocIndex:8}]},28148:function(o,n,e){e.r(n),e.d(n,{texts:function(){return a}});const a=[{value:"\u53C2\u8003",paraId:0,tocIndex:0},{value:"\u57FA\u7840\u67B6\u6784\u56E2\u961F\u4E0D\u6562\u8F7B\u6613\u4FEE\u6539\uFF0C\u4E0B\u7EBF\u5DF2\u6709 API\uFF0C\u56E0\u4E3A\u4E0D\u6E05\u695A\u54EA\u4E9B\u9879\u76EE\u5BF9\u5B83\u6709\u4F9D\u8D56\u4F1A\u53D7\u5230\u5F71\u54CD\uFF0C\u5F00\u53D1\u65B0 feature \u65F6\u5FC5\u987B\u5411\u540E\u517C\u5BB9\uFF0C\u5BFC\u81F4\u6846\u67B6\u8D8A\u53D1\u81C3\u80BF\uFF08\u7269\u4E1A\u7F3A\u4E4F\u7ECF\u8425\u95E8\u5E97\u5BF9\u4E8E\u57FA\u7840\u8BBE\u65BD\u4F7F\u7528\u60C5\u51B5\u7684\u4E86\u89E3\uFF09\u3002",paraId:1,tocIndex:0},{value:"\u6700\u6709\u6548\u7684\u505A\u6CD5\u662F\u5BF9\u5168\u90E8\u5B50\u5E94\u7528\u8FDB\u884C",paraId:2,tocIndex:1},{value:"\u4EE3\u7801\u9759\u6001\u5206\u6790",paraId:2,tocIndex:1},{value:"\uFF0C\u5BF9\u9879\u76EE\u4EE3\u7801\u4E2D\u7684 API \u8C03\u7528\u8FDB\u884C\u5B9A\u4F4D & \u68C0\u6D4B & \u7EDF\u8BA1\uFF0C\u751F\u6210\u4EE3\u7801\u5206\u6790\u62A5\u544A\u3002",paraId:2,tocIndex:1}]},13612:function(o,n,e){e.r(n),e.d(n,{texts:function(){return a}});const a=[{value:"composite \u5408\u6210\u7684",paraId:0},{value:`
-compact \u7D27\u51D1
+compact \u7D27\u51D1`,paraId:0},{value:`
 inherit \u7EE7\u627F`,paraId:0},{value:`
 anonymous \u533F\u540D\u7684`,paraId:0},{value:`
 vendors \u4F9B\u5E94\u5546`,paraId:0},{value:`
@@ -25164,8 +25164,8 @@ sudo apt install nginx
 sudo yum install nginx
 `,paraId:2,tocIndex:3},{value:`brew install nginx
 brew info nginx \u67E5\u770Bnginx \u5B89\u88C5\u7684\u5177\u4F53\u4F4D\u7F6E\u548C\u914D\u7F6E\u6587\u4EF6\u6240\u5728\u7684\u4F4D\u7F6E
-`,paraId:3,tocIndex:4},{value:`\u82E5\u8981\u52A0\u914D\u7F6E \u5728 /opt/homebrew/etc/nginx/servers/ \u6587\u4EF6\u5939\u4E0B\u9762\u6DFB\u52A0 xxx.conf  (\u76F4\u63A5\u914D\u7F6Eserver \uFF0C\u914D\u7F6E\u6587\u4EF6\u5916\u9762\u4E0D\u9700\u8981\u518D\u5199http)
-servers\u6587\u4EF6\u9700\u8981\u81EA\u5DF1\u5EFA`,paraId:4,tocIndex:4},{value:`# \u542F\u52A8 Nginx
+`,paraId:3,tocIndex:4},{value:`\u82E5\u8981\u52A0\u914D\u7F6E,\u5728 /opt/homebrew/etc/nginx/servers/ \u6587\u4EF6\u5939\u4E0B\u9762\u6DFB\u52A0 xxx.conf  (\u76F4\u63A5\u914D\u7F6Eserver \uFF0C\u914D\u7F6E\u6587\u4EF6\u5916\u9762\u4E0D\u9700\u8981\u518D\u5199http)
+servers\u6587\u4EF6\u53EF\u80FD\u9700\u8981\u81EA\u5DF1\u5EFA`,paraId:4,tocIndex:4},{value:`# \u542F\u52A8 Nginx
 sudo systemctl start nginx
 
 # \u505C\u6B62 Nginx
@@ -25195,7 +25195,33 @@ sudo nginx -s reload     # \u91CD\u65B0\u52A0\u8F7D\u914D\u7F6E
         }
     }
 }
-`,paraId:10,tocIndex:7},{value:"listen 80;",paraId:11,tocIndex:7},{value:" \u76D1\u542C 80 \u7AEF\u53E3\uFF08HTTP \u9ED8\u8BA4\u7AEF\u53E3\uFF09",paraId:11,tocIndex:7},{value:"server_name",paraId:11,tocIndex:7},{value:" \u6307\u5B9A\u57DF\u540D\u6216 IP\uFF08\u53EF\u7528 _ \u901A\u914D\uFF09",paraId:11,tocIndex:7},{value:"root",paraId:11,tocIndex:7},{value:" \u6307\u5B9A\u7F51\u7AD9\u6587\u4EF6\u6839\u76EE\u5F55",paraId:11,tocIndex:7},{value:"index",paraId:11,tocIndex:7},{value:" \u6307\u5B9A\u9ED8\u8BA4\u9996\u9875\u6587\u4EF6",paraId:11,tocIndex:7},{value:"location",paraId:11,tocIndex:7},{value:" \u5B9A\u4E49\u8DEF\u7531\u89C4\u5219",paraId:11,tocIndex:7},{value:"\u542F\u52A8 Nginx \u5E76\u8BBF\u95EE\u670D\u52A1\u5668 IP \u6216\u57DF\u540D\u5373\u53EF\u770B\u5230 ",paraId:12,tocIndex:8},{value:"/var/www/html",paraId:12,tocIndex:8},{value:" \u76EE\u5F55\u4E0B\u7684\u9ED8\u8BA4\u7F51\u9875\u3002",paraId:12,tocIndex:8},{value:"\u5047\u5982\u4F60\u6709\u4E00\u4E2A\u540E\u7AEF\u670D\u52A1\u8FD0\u884C\u5728 ",paraId:13,tocIndex:9},{value:"http://127.0.0.1:3000",paraId:13,tocIndex:9},{value:"\uFF0C\u4F60\u60F3\u901A\u8FC7 Nginx \u5BF9\u5916\u63D0\u4F9B\u4EE3\u7406\uFF1A",paraId:13,tocIndex:9},{value:`server {
+`,paraId:10,tocIndex:7},{value:"listen 80;",paraId:11,tocIndex:7},{value:" \u76D1\u542C 80 \u7AEF\u53E3\uFF08HTTP \u9ED8\u8BA4\u7AEF\u53E3\uFF09",paraId:11,tocIndex:7},{value:"server_name",paraId:11,tocIndex:7},{value:" \u6307\u5B9A\u57DF\u540D\u6216 IP\uFF08\u53EF\u7528 _ \u901A\u914D\uFF09",paraId:11,tocIndex:7},{value:"root",paraId:11,tocIndex:7},{value:" \u6307\u5B9A\u7F51\u7AD9\u6587\u4EF6\u6839\u76EE\u5F55",paraId:11,tocIndex:7},{value:"index",paraId:11,tocIndex:7},{value:" \u6307\u5B9A\u9ED8\u8BA4\u9996\u9875\u6587\u4EF6",paraId:11,tocIndex:7},{value:"location",paraId:11,tocIndex:7},{value:" \u5B9A\u4E49\u8DEF\u7531\u89C4\u5219",paraId:11,tocIndex:7},{value:"\u5982\u679C\u6784\u5EFA\u540E\u7684build\u6587\u4EF6\u4E2D\u8DEF\u7531\u6709\u5BF9\u5E94\u7684html\u6587\u4EF6\uFF0C\u5237\u65B0\u8BBF\u95EE\u7684\u65F6\u5019\u5E94\u8BE5\u76F4\u63A5\u8BBF\u95EE\u5BF9\u5E94\u7684html\u6587\u4EF6\uFF0C\u5982\u8BBF\u95EE/test \u5BF9\u5E94\u7684\u5E94\u8BE5\u662Fbuild\u6587\u4EF6\u4E0B\u9762\u7684test.html",paraId:12,tocIndex:7},{value:"nginx\u914D\u7F6E\u5982\u4E0B",paraId:13,tocIndex:7},{value:`server {
+    listen 80;
+    server_name your.domain.com;
+
+    root /var/www/react-app/build;
+    index index.html;
+
+    # \u4F18\u5148\u8BBF\u95EE\u8BF7\u6C42\u5BF9\u5E94\u7684\u8DEF\u5F84\uFF08\u9759\u6001\u8D44\u6E90\u6216\u76EE\u5F55\uFF09
+    location / {
+        # \u8FD9\u91CC try_files \u6309\u987A\u5E8F\u5C1D\u8BD5\uFF1A
+        # 1. \u7528\u6237\u8BBF\u95EE\u7684\u8DEF\u5F84\u672C\u8EAB (\u5982 /about) \u2014 \u5982\u679C\u662F\u76EE\u5F55\u6216\u6587\u4EF6\u8FD4\u56DE
+        # 2. \u8BF7\u6C42\u8DEF\u5F84\u52A0 .html\uFF08\u5982 /about.html\uFF09
+        # 3. \u8BF7\u6C42\u8DEF\u5F84\u52A0 /index.html (\u652F\u6301\u76EE\u5F55\u7D22\u5F15)
+        # 4. \u56DE\u9000\u5230 index.html (SPA\u5165\u53E3)
+        try_files $uri $uri.html $uri/index.html /index.html;
+    }
+
+    # \u9759\u6001\u8D44\u6E90\u7F13\u5B58\u914D\u7F6E
+    location ~* \\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot|json)$ {
+        expires 30d;
+        access_log off;
+        add_header Cache-Control "public";
+    }
+
+    error_page 404 /index.html;
+}
+`,paraId:14,tocIndex:7},{value:"\u542F\u52A8 Nginx \u5E76\u8BBF\u95EE\u670D\u52A1\u5668 IP \u6216\u57DF\u540D\u5373\u53EF\u770B\u5230 ",paraId:15,tocIndex:8},{value:"/var/www/html",paraId:15,tocIndex:8},{value:" \u76EE\u5F55\u4E0B\u7684\u9ED8\u8BA4\u7F51\u9875\u3002",paraId:15,tocIndex:8},{value:"\u5047\u5982\u4F60\u6709\u4E00\u4E2A\u540E\u7AEF\u670D\u52A1\u8FD0\u884C\u5728 ",paraId:16,tocIndex:9},{value:"http://127.0.0.1:3000",paraId:16,tocIndex:9},{value:"\uFF0C\u4F60\u60F3\u901A\u8FC7 Nginx \u5BF9\u5916\u63D0\u4F9B\u4EE3\u7406\uFF1A",paraId:16,tocIndex:9},{value:`server {
     listen 80;
     server_name example.com;
 
@@ -25206,7 +25232,7 @@ sudo nginx -s reload     # \u91CD\u65B0\u52A0\u8F7D\u914D\u7F6E
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     }
 }
-`,paraId:14,tocIndex:9},{value:"\u8BBF\u95EE ",paraId:15,tocIndex:9},{value:"http://example.com",paraId:15,tocIndex:9},{value:" \u4F1A\u88AB\u8F6C\u53D1\u5230 ",paraId:15,tocIndex:9},{value:"http://127.0.0.1:3000",paraId:15,tocIndex:9},{value:"proxy_set_header",paraId:15,tocIndex:9},{value:" \u4F20\u9012\u4E00\u4E9B\u8BF7\u6C42\u5934\uFF0C\u4FDD\u6301\u5BA2\u6237\u7AEF\u4FE1\u606F",paraId:15,tocIndex:9},{value:"\u4F60\u9700\u8981\u5148\u83B7\u53D6 SSL \u8BC1\u4E66\uFF08\u5982\u4F7F\u7528 Let's Encrypt \u514D\u8D39\u8BC1\u4E66\uFF09\u3002",paraId:16,tocIndex:10},{value:`server {
+`,paraId:17,tocIndex:9},{value:"\u8BBF\u95EE ",paraId:18,tocIndex:9},{value:"http://example.com",paraId:18,tocIndex:9},{value:" \u4F1A\u88AB\u8F6C\u53D1\u5230 ",paraId:18,tocIndex:9},{value:"http://127.0.0.1:3000",paraId:18,tocIndex:9},{value:"proxy_set_header",paraId:18,tocIndex:9},{value:" \u4F20\u9012\u4E00\u4E9B\u8BF7\u6C42\u5934\uFF0C\u4FDD\u6301\u5BA2\u6237\u7AEF\u4FE1\u606F",paraId:18,tocIndex:9},{value:"\u4F60\u9700\u8981\u5148\u83B7\u53D6 SSL \u8BC1\u4E66\uFF08\u5982\u4F7F\u7528 Let's Encrypt \u514D\u8D39\u8BC1\u4E66\uFF09\u3002",paraId:19,tocIndex:10},{value:`server {
     listen 443 ssl;
     server_name example.com;
 
@@ -25224,9 +25250,9 @@ server {
     server_name example.com;
     return 301 https://$host$request_uri;
 }
-`,paraId:17,tocIndex:10},{value:"\u8BED\u6CD5\u68C0\u67E5",paraId:18,tocIndex:11},{value:`sudo nginx -t
-`,paraId:19,tocIndex:11},{value:"\u91CD\u65B0\u52A0\u8F7D\u914D\u7F6E\uFF08\u4FEE\u6539\u914D\u7F6E\u540E\u751F\u6548\uFF09",paraId:20,tocIndex:11},{value:`sudo nginx -s reload
-`,paraId:21,tocIndex:11},{value:"\u67E5\u770B\u8BBF\u95EE\u65E5\u5FD7\uFF1A ",paraId:22,tocIndex:11},{value:"/var/log/nginx/access.log",paraId:22,tocIndex:11},{value:"\u67E5\u770B\u9519\u8BEF\u65E5\u5FD7\uFF1A ",paraId:22,tocIndex:11},{value:"/var/log/nginx/error.log",paraId:22,tocIndex:11},{value:"\u8D1F\u8F7D\u5747\u8861\uFF1A",paraId:23,tocIndex:12},{value:`upstream backend {
+`,paraId:20,tocIndex:10},{value:"\u8BED\u6CD5\u68C0\u67E5",paraId:21,tocIndex:11},{value:`sudo nginx -t
+`,paraId:22,tocIndex:11},{value:"\u91CD\u65B0\u52A0\u8F7D\u914D\u7F6E\uFF08\u4FEE\u6539\u914D\u7F6E\u540E\u751F\u6548\uFF09",paraId:23,tocIndex:11},{value:`sudo nginx -s reload
+`,paraId:24,tocIndex:11},{value:"\u67E5\u770B\u8BBF\u95EE\u65E5\u5FD7\uFF1A ",paraId:25,tocIndex:11},{value:"/var/log/nginx/access.log",paraId:25,tocIndex:11},{value:"\u67E5\u770B\u9519\u8BEF\u65E5\u5FD7\uFF1A ",paraId:25,tocIndex:11},{value:"/var/log/nginx/error.log",paraId:25,tocIndex:11},{value:"\u8D1F\u8F7D\u5747\u8861\uFF1A",paraId:26,tocIndex:12},{value:`upstream backend {
     server 127.0.0.1:3000;
     server 127.0.0.1:3001;
 }
@@ -25237,7 +25263,7 @@ server {
         proxy_pass http://backend;
     }
 }
-`,paraId:24,tocIndex:12},{value:"\u9759\u6001\u8D44\u6E90\u7F13\u5B58",paraId:25,tocIndex:12},{value:"URL \u91CD\u5199\u89C4\u5219 (",paraId:25,tocIndex:12},{value:"rewrite",paraId:25,tocIndex:12},{value:")",paraId:25,tocIndex:12},{value:"\u9632\u76D7\u94FE\u3001\u5B89\u5168\u914D\u7F6E",paraId:25,tocIndex:12},{value:"\u9650\u6D41\u3001\u9650\u901F",paraId:25,tocIndex:12},{value:"HTTP/2 \u652F\u6301",paraId:25,tocIndex:12},{value:`server {
+`,paraId:27,tocIndex:12},{value:"\u9759\u6001\u8D44\u6E90\u7F13\u5B58",paraId:28,tocIndex:12},{value:"URL \u91CD\u5199\u89C4\u5219 (",paraId:28,tocIndex:12},{value:"rewrite",paraId:28,tocIndex:12},{value:")",paraId:28,tocIndex:12},{value:"\u9632\u76D7\u94FE\u3001\u5B89\u5168\u914D\u7F6E",paraId:28,tocIndex:12},{value:"\u9650\u6D41\u3001\u9650\u901F",paraId:28,tocIndex:12},{value:"HTTP/2 \u652F\u6301",paraId:28,tocIndex:12},{value:`server {
 	listen 80;
 	server_name static.yangzw.vip;
 	# \u65B0\u589E\u90E8\u5206-\u5F00\u59CB
@@ -25258,7 +25284,7 @@ server {
 	}
 }
 
-`,paraId:26,tocIndex:13}]},15423:function(o,n,e){e.r(n),e.d(n,{texts:function(){return a}});const a=[{value:`
+`,paraId:29,tocIndex:13}]},15423:function(o,n,e){e.r(n),e.d(n,{texts:function(){return a}});const a=[{value:`
 
 vim  + \u6587\u4EF6\u540D\u79F0 \u4FEE\u6539\u6B64\u6587\u4EF6
 \u4FEE\u6539\u540E esc
