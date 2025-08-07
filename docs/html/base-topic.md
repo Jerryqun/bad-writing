@@ -52,7 +52,6 @@ DOCTYPE 声明于文档最前面，告诉浏览器以何种方式来渲染页面
 1、使用 websocket 协议，因为 websocket 协议可以实现服务器推送，所以服务器就可以用来当做这个中介者。标签页通过向服务器发送数据，然后由服务器向其他标签页推送转发。
 
 2、使用 sharedWorker 的方式，sharedWorker 会在页面存在的生命周期内创建一个唯一的线程，并且开启多个页面也只会使用同一个线程。这个时候共享线程就可以充当中介者的角色。标签页间通过共享一个线程，然后通过这个共享的线程来实现数据的交换。
-（https://www.cnblogs.com/imgss/p/14634577.html）
 
 ```js
 // page.js
@@ -72,7 +71,7 @@ onconnect = function (e) {
 };
 ```
 
-3、使用 localStorage 的方式（必须是两个同源页面），我们可以在一个标签页对 localStorage 的变化事件进行监听，然后当另一个标签页修改数据的时候，我们就可以通过这个监听事件来获取到数据。这个时候 localStorage 对象就是充当的中介者的角色。
+3、使用 localStorage 的方式（必须是两个`同源页面(端口、域名、协议都要相同)`），我们可以在一个标签页对 localStorage 的变化事件进行监听，然后当另一个标签页修改数据的时候，我们就可以通过这个监听事件来获取到数据。这个时候 localStorage 对象就是充当的中介者的角色。
 
 ```js
 window.addEventListener('storage', function (e) {
@@ -82,7 +81,7 @@ window.addEventListener('storage', function (e) {
 
 4、使用 postMessage 方法，如果我们能够获得对应标签页的引用，就可以使用 postMessage 方法，进行通信。
 
-postMessage 是一种安全地实现跨源通信的方法。在浏览器中，不同的窗口、iframe、worker 等可以利用 postMessage 方法来相互发送消息，即使它们来自不同的域（也就是跨域）。这使得在例如父窗口和子 iframe 之间或者主线程和 Web Worker 之间的数据交换成为可能。
+postMessage 是一种安全地实现跨源通信的方法。在浏览器中，不同的窗口、iframe、worker 等可以利用 postMessage 方法来相互发送消息，`即使它们来自不同的域（也就是跨域）`。这使得在例如父窗口和子 iframe 之间或者主线程和 Web Worker 之间的数据交换成为可能。
 
 以下是 postMessage 使用的基础步骤：
 
@@ -105,10 +104,17 @@ window.addEventListener('message', (event) => {
 });
 ```
 
-message 是你想要发送的数据。这个消息可以是 JavaScript 中任何可序列化的对象（例如：字符串、数字、对象等）。
+message 是你想要发送的数据。这个消息可以是 JavaScript 中任何`可序列化的对象`（例如：字符串、数字、对象等）。
 targetOrigin 指定哪些窗口可以接收消息，作为安全措施。它是一个字符串，表示消息的目标源（如 "https://example.com"）。如果你不在乎目标窗口的源，可以使用 "\*" 作为通配符。但是，出于安全原因，推荐指定确切的目标源。
 
 5、同站点用 cookie + setInterval
+
+同站点的概念：
+1. 注册域名（eTLD+1）相同即可
+2. 协议不同也可以算同站点
+3. 端口不同也可以算同站点
+4. `https://sub.example.com` 与 `https://example.com` 是同站点
+
 
 ## 如何理解 HTML 语义化？
 

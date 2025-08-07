@@ -86,6 +86,9 @@ worker.postMessage({ text });
 
 SharedWorker 实现多页面数据共享
 
+参考：https://www.cnblogs.com/imgss/p/14634577.html
+
+
 index 页面的 add 按钮，每点击一次，向 sharedWorker 发送一次 add 数据，页面 count 增加 1
 
 ```js
