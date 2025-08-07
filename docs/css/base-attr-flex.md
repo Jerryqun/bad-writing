@@ -29,7 +29,6 @@ flex: auto 对应的是 1 1 auto, 相当于可扩大，可缩小，flex-basis �
 flex: 1 不管内容多少，一般都是平分空间，空间大小都一致
 而 flex: auto 是根据内容的大小来分，不是均分的（除非内容都是一样，才均分）  
 
-
 flex: 160px 的意思是flex-grow:0,flex-shrink:0 ,flex-basis 为160px，也就是项目本身宽度或者高度为160px，不扩大不缩小
 
 ## flex: 1 和 flex auto 有什么区别
