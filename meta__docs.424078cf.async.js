@@ -9106,8 +9106,7 @@ console.log(person1.friends); //["da","dada","dadada"]
 console.log(person2.friends); //["da","dada"]
 console.log(person1.friends === person2.friends); //false
 console.log(person1.sayName === person2.sayName); //true
-`,paraId:0,tocIndex:0}]},6664:function(o,n,e){e.r(n),e.d(n,{texts:function(){return a}});const a=[{value:"el.offsetTop: \u5143\u7D20\u8DDD\u79BB\u5176 offsetParent \u9876\u90E8\u7684\u8DDD\u79BB\uFF08\u50CF\u7D20\uFF09",paraId:0,tocIndex:1},{value:`
-el.offsetParent: \u8FD4\u56DE\u5143\u7D20\u6700\u8FD1\u7684\u5E26\u6709\u5B9A\u4F4D\u7684\u7956\u5148\u5143\u7D20\uFF08\u6216 body\uFF09`,paraId:0,tocIndex:1},{value:"\u5143\u7D20\u8DDD\u79BB\u9876\u90E8\u7684\u8DDD\u79BB \uFF0C\u5982\u679C\u6709\u7236\u5143\u7D20\u5E76\u4E14\u7236\u5143\u7D20\u6709\u5B9A\u4F4D\u5C5E\u6027\uFF0C\u5219\u662F\u76F8\u5BF9\u4E8E\u7236\u5143\u7D20\uFF0C\u5426\u5219\u5411\u4E0A\u627E\u76F4\u5230 body",paraId:1,tocIndex:1},{value:`/**
+`,paraId:0,tocIndex:0}]},6664:function(o,n,e){e.r(n),e.d(n,{texts:function(){return a}});const a=[{value:"el.offsetTop: \u5143\u7D20\u8DDD\u79BB\u5176 offsetParent \u9876\u90E8\u7684\u8DDD\u79BB\uFF08\u50CF\u7D20\uFF09",paraId:0,tocIndex:1},{value:"el.offsetParent: \u8FD4\u56DE\u5143\u7D20\u6700\u8FD1\u7684\u5E26\u6709\u5B9A\u4F4D\u7684\u7956\u5148\u5143\u7D20\uFF08\u6216 body\uFF09\u5143\u7D20\u8DDD\u79BB\u9876\u90E8\u7684\u8DDD\u79BB \uFF0C\u5982\u679C\u6709\u7236\u5143\u7D20\u5E76\u4E14\u7236\u5143\u7D20\u6709\u5B9A\u4F4D\u5C5E\u6027\uFF0C\u5219\u662F\u76F8\u5BF9\u4E8E\u7236\u5143\u7D20\uFF0C\u5426\u5219\u5411\u4E0A\u627E\u76F4\u5230 body",paraId:1,tocIndex:1},{value:`/**
  * \u5143\u7D20\u7684\u5B9E\u9645\u9AD8\u5EA6
  * document.getElementById("div").offsetHeight
  * \u5143\u7D20\u7684\u5B9E\u9645\u5BBD\u5EA6
