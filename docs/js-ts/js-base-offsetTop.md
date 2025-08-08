@@ -9,10 +9,9 @@ title: js 自身高度以及偏移量
 
 ## offsetTop
 
-el.offsetTop: 元素距离其 offsetParent 顶部的距离（像素）  
-el.offsetParent: 返回元素最近的带有定位的祖先元素（或 body）
+el.offsetTop: 元素距离其 offsetParent 顶部的距离（像素）   
 
-元素距离顶部的距离 ，如果有父元素并且父元素有定位属性，则是相对于父元素，否则向上找直到 body
+el.offsetParent: 返回元素最近的带有定位的祖先元素（或 body）元素距离顶部的距离 ，如果有父元素并且父元素有定位属性，则是相对于父元素，否则向上找直到 body
 
 ```js
 /**
