@@ -68,3 +68,30 @@ const dirty =
 const clean = DOMPurify.sanitize(dirty);
 console.log(clean); // 输出: <div>Hello <strong>World</strong>!</div>
 ```
+
+## 4、 使用 he
+
+<a target='_blank' href='https://github.com/mathiasbynens/he'>github he</a>
+主要功能  
+编码: 将特殊字符（如 <, >, &, " 等）转换为 HTML 实体形式，从而避免浏览器解析这些字符为 HTML。  
+解码: 将 HTML 实体转换回原始字符。  
+
+```js
+// 导入 he 库
+const he = require('he');
+
+// 示例字符串，其中包含特殊字符
+const originalString = '<div class="greeting">Hello & welcome to "my website"!</div>';
+
+// 编码示例
+const encodedString = he.encode(originalString);
+console.log('Encoded String:', encodedString);
+// 输出: Encoded String: &lt;div class=&quot;greeting&quot;&gt;Hello &amp; welcome to &quot;my website&quot;!&lt;/div&gt;
+
+// 解码示例
+const decodedString = he.decode(encodedString);
+console.log('Decoded String:', decodedString);
+// 输出: Decoded String: <div class="greeting">Hello & welcome to "my website"!</div>
+
+```
+
