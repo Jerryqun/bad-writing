@@ -7,6 +7,9 @@ title: JS二进制
 
 ## 谈谈 JS 二进制：File、Blob、FileReader、ArrayBuffer、Base64
 
+
+XMLHttpRequest、WebSocket等一般都能直接send(TypedArray/ArrayBuffer/Blob)到服务器，服务器会收到二进制数据  TypedArray/ArrayBuffer在绝大部分js运行环境中都支持，Blob只在浏览器中支持
+
 <a href="https://juejin.cn/post/7148254347401363463" target="_blank">参考</a>
 
 ### Blob
@@ -86,6 +89,10 @@ Base64 是一种基于 64 个可打印字符来表示二进制数据的表示方
 
 - atob：解码，解码一个 Base64 字符串<br/>
 - btoa：编码，从一个字符串或者二进制数据编码一个 Base64 字符串<br/>
+
+### ArrayBuffer
+
+ArrayBuffer 对象用来表示通用的、固定长度的原始二进制数据缓冲区。ArrayBuffer 的内容不能直接操作，只能通过 DataView 对象或 TypedArrray 对象来访问。这些对象用于读取和写入缓冲区内容。
 
 ### 前端实现上传文件的预览
 
