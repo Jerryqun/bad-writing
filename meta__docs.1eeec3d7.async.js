@@ -843,7 +843,7 @@ function Test() {
   );
 }
 
-export default Test;`},react:{type:"NPM",value:"18.3.1"},antd:{type:"NPM",value:"5.27.1"},"./styles/layout.module.less":{type:"FILE",value:e(60741).Z}},entry:"index.tsx"},context:{"./styles/layout.module.less":m,react:a||(a=e.t(g,2)),antd:d,"/home/runner/work/bad-writing/bad-writing/docs/css/styles/layout.module.less":m},renderOpts:{compile:function(){var I=P()(R()().mark(function l(){var r,i=arguments;return R()().wrap(function(c){for(;;)switch(c.prev=c.next){case 0:return c.next=2,e.e(250).then(e.bind(e,90250));case 2:return c.abrupt("return",(r=c.sent).default.apply(r,i));case 3:case"end":return c.stop()}},l)}));function s(){return I.apply(this,arguments)}return s}()}}}},47927:function(o,n,e){e.r(n),e.d(n,{demos:function(){return t}});var a=e(67294),t={}},46670:function(o,n,e){e.r(n),e.d(n,{demos:function(){return t}});var a=e(67294),t={}},37098:function(o,n,e){e.r(n),e.d(n,{demos:function(){return v}});var a=e(15009),t=e.n(a),R=e(49677),j=e.n(R),P=e(99289),g=e.n(P),d=e(67294),m=e(72183),v={"docs-css-postcss-999-demo-0":{component:d.memo(d.lazy(g()(t()().mark(function I(){return t()().wrap(function(l){for(;;)switch(l.prev=l.next){case 0:return l.t0=j(),l.next=3,Promise.resolve().then(e.bind(e,72183));case 3:return l.t1=l.sent,(0,l.t0)(l.t1),l.abrupt("return",{default:function(){var i=new Array(9).fill(1);return d.createElement("div",null,i.map(function(h,c){return d.createElement("div",{className:"row"},new Array(c+1).fill(1).map(function(p,U){return d.createElement("div",{className:"item item-".concat(c,"-").concat(U)})}))}))}});case 6:case"end":return l.stop()}},I)})))),asset:{type:"BLOCK",id:"docs-css-postcss-999-demo-0",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:`import './styles/999.scss';
+export default Test;`},react:{type:"NPM",value:"18.3.1"},antd:{type:"NPM",value:"5.27.3"},"./styles/layout.module.less":{type:"FILE",value:e(60741).Z}},entry:"index.tsx"},context:{"./styles/layout.module.less":m,react:a||(a=e.t(g,2)),antd:d,"/home/runner/work/bad-writing/bad-writing/docs/css/styles/layout.module.less":m},renderOpts:{compile:function(){var I=P()(R()().mark(function l(){var r,i=arguments;return R()().wrap(function(c){for(;;)switch(c.prev=c.next){case 0:return c.next=2,e.e(250).then(e.bind(e,90250));case 2:return c.abrupt("return",(r=c.sent).default.apply(r,i));case 3:case"end":return c.stop()}},l)}));function s(){return I.apply(this,arguments)}return s}()}}}},47927:function(o,n,e){e.r(n),e.d(n,{demos:function(){return t}});var a=e(67294),t={}},46670:function(o,n,e){e.r(n),e.d(n,{demos:function(){return t}});var a=e(67294),t={}},37098:function(o,n,e){e.r(n),e.d(n,{demos:function(){return v}});var a=e(15009),t=e.n(a),R=e(49677),j=e.n(R),P=e(99289),g=e.n(P),d=e(67294),m=e(72183),v={"docs-css-postcss-999-demo-0":{component:d.memo(d.lazy(g()(t()().mark(function I(){return t()().wrap(function(l){for(;;)switch(l.prev=l.next){case 0:return l.t0=j(),l.next=3,Promise.resolve().then(e.bind(e,72183));case 3:return l.t1=l.sent,(0,l.t0)(l.t1),l.abrupt("return",{default:function(){var i=new Array(9).fill(1);return d.createElement("div",null,i.map(function(h,c){return d.createElement("div",{className:"row"},new Array(c+1).fill(1).map(function(p,U){return d.createElement("div",{className:"item item-".concat(c,"-").concat(U)})}))}))}});case 6:case"end":return l.stop()}},I)})))),asset:{type:"BLOCK",id:"docs-css-postcss-999-demo-0",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:`import './styles/999.scss';
 export default () => {
   let arr = new Array(9).fill(1);
   return (
@@ -1659,7 +1659,7 @@ export default () => {
       <Button>{state}</Button>
     </div>
   );
-};`},antd:{type:"NPM",value:"5.27.1"}},entry:"index.jsx"},context:{antd:m},renderOpts:{compile:function(){var I=g()(t()().mark(function l(){var r,i=arguments;return t()().wrap(function(c){for(;;)switch(c.prev=c.next){case 0:return c.next=2,e.e(250).then(e.bind(e,90250));case 2:return c.abrupt("return",(r=c.sent).default.apply(r,i));case 3:case"end":return c.stop()}},l)}));function s(){return I.apply(this,arguments)}return s}()}}}},6081:function(o,n,e){var a;e.r(n),e.d(n,{demos:function(){return I}});var t=e(15009),R=e.n(t),j=e(5574),P=e.n(j),g=e(99289),d=e.n(g),m=e(67294),v=e(73935),I={"docs-react-base-v-18-demo-0":{component:m.memo(m.lazy(d()(R()().mark(function s(){var l,r,i;return R()().wrap(function(c){for(;;)switch(c.prev=c.next){case 0:return c.next=2,Promise.resolve().then(e.t.bind(e,73935,19));case 2:return l=c.sent,r=l.flushSync,i=function(){var U=m.useState(0),D=P()(U,2),w=D[0],T=D[1];return console.log("count: ",w),m.createElement("div",{onClick:function(){r(function(){T(function(k){return k+1}),T(function(k){return k+1})}),r(function(){T(function(k){return k+2})})}},m.createElement("button",null,"count\uFF1A ",w))},c.abrupt("return",{default:i});case 6:case"end":return c.stop()}},s)})))),asset:{type:"BLOCK",id:"docs-react-base-v-18-demo-0",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:`import { flushSync } from 'react-dom';
+};`},antd:{type:"NPM",value:"5.27.3"}},entry:"index.jsx"},context:{antd:m},renderOpts:{compile:function(){var I=g()(t()().mark(function l(){var r,i=arguments;return t()().wrap(function(c){for(;;)switch(c.prev=c.next){case 0:return c.next=2,e.e(250).then(e.bind(e,90250));case 2:return c.abrupt("return",(r=c.sent).default.apply(r,i));case 3:case"end":return c.stop()}},l)}));function s(){return I.apply(this,arguments)}return s}()}}}},6081:function(o,n,e){var a;e.r(n),e.d(n,{demos:function(){return I}});var t=e(15009),R=e.n(t),j=e(5574),P=e.n(j),g=e(99289),d=e.n(g),m=e(67294),v=e(73935),I={"docs-react-base-v-18-demo-0":{component:m.memo(m.lazy(d()(R()().mark(function s(){var l,r,i;return R()().wrap(function(c){for(;;)switch(c.prev=c.next){case 0:return c.next=2,Promise.resolve().then(e.t.bind(e,73935,19));case 2:return l=c.sent,r=l.flushSync,i=function(){var U=m.useState(0),D=P()(U,2),w=D[0],T=D[1];return console.log("count: ",w),m.createElement("div",{onClick:function(){r(function(){T(function(k){return k+1}),T(function(k){return k+1})}),r(function(){T(function(k){return k+2})})}},m.createElement("button",null,"count\uFF1A ",w))},c.abrupt("return",{default:i});case 6:case"end":return c.stop()}},s)})))),asset:{type:"BLOCK",id:"docs-react-base-v-18-demo-0",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:`import { flushSync } from 'react-dom';
 const App = () => {
   const [count, setCount] = React.useState(0);
   console.log('count: ', count);
@@ -8891,9 +8891,7 @@ function CustomComponent() {
 
 export default CustomComponent;
 `,paraId:11,tocIndex:3}]},92876:function(o,n,e){e.r(n),e.d(n,{texts:function(){return a}});const a=[{value:"js \u6548\u7387\u6267\u884C\u68C0\u6D4B\u7F51\u7AD9 ",paraId:0,tocIndex:0},{value:"https://jsperf.com/",paraId:0,tocIndex:0},{value:"\u4ECE\u6267\u884C\u6548\u7387\u770B(\u5FEB\u5230\u6162)",paraId:1,tocIndex:0},{value:`
-for-len > for > for-of > forEach > map > for-in`,paraId:1,tocIndex:0},{value:"\u6CA1\u6709\u8FD4\u56DE\u503C",paraId:2,tocIndex:1},{value:`
-\u4E0D\u80FD\u6539\u53D8 item \u672C\u8EAB`,paraId:2,tocIndex:1},{value:`
-\u5982\u679C\u662F\u5F15\u7528\u7C7B\u578B \u53EF\u4EE5\u6539\u53D8\u5176\u5C5E\u6027(item \u901A\u8FC7\u5F15\u7528\u7C7B\u578B\uFF0C\u6307\u5411\u4E86\u539F\u6765 list \u91CC\u9762\u7684\u6BCF\u4E00\u9879\u3002)`,paraId:2,tocIndex:1},{value:`const list = [
+for-len > for > for-of > forEach > map > for-in`,paraId:1,tocIndex:0},{value:"\u6CA1\u6709\u8FD4\u56DE\u503C",paraId:2,tocIndex:1},{value:"\u4E0D\u80FD\u6539\u53D8 item \u672C\u8EAB",paraId:2,tocIndex:1},{value:"\u5982\u679C\u662F\u5F15\u7528\u7C7B\u578B \u53EF\u4EE5\u6539\u53D8\u5176\u5C5E\u6027(item \u901A\u8FC7\u5F15\u7528\u7C7B\u578B\uFF0C\u6307\u5411\u4E86\u539F\u6765 list \u91CC\u9762\u7684\u6BCF\u4E00\u9879\u3002)",paraId:2,tocIndex:1},{value:`const list = [
   { name: 'a', count: 1 },
   2,
   function fn() {
@@ -8931,13 +8929,20 @@ array.forEach((value, index) => {
   }
   console.log(value); // \u8F93\u51FA 1, 2, 3
 });
-`,paraId:5,tocIndex:1},{value:"1\u3001for in \u5FAA\u73AF\u6570\u7EC4\u5410\u51FA\u7684\u662F index \u5FAA\u73AF\u5BF9\u8C61\u5410\u51FA\u7684\u662F key",paraId:6,tocIndex:2},{value:`
-2\u3001for \u5FAA\u73AF\u4E2D break \u4F1A\u8DF3\u51FA\u6574\u4E2A\u5FAA\u73AF\uFF0Ccontinue \u4F1A\u8DF3\u51FA\u5F53\u524D\u6B21\u5FAA\u73AF\uFF08continue \u540E\u9762\u7684\u4EE3\u7801\u4E0D\u4F1A\u6267\u884C\uFF09`,paraId:6,tocIndex:2},{value:`
-3\u3001for in \u5FAA\u73AF\u4F1A\u904D\u5386\u539F\u578B\u94FE\u4E0A\u7684\u5C5E\u6027`,paraId:6,tocIndex:2},{value:`
-4\u3001for in \u5FAA\u73AF\u65F6\u6570\u5B57\u5C5E\u6027\u4F18\u5148`,paraId:6,tocIndex:2},{value:`
-5\u3001for in \u65E0\u6CD5\u904D\u5386 symbol \u5C5E\u6027 \uFF0C\u83B7\u53D6 symbol \u7528 Object.getOwnPropertySymbols(obj)`,paraId:6,tocIndex:2},{value:`
+`,paraId:5,tocIndex:1},{value:"\u8BBE\u8BA1\u54F2\u5B66\uFF1AforEach \u662F\u51FD\u6570\u5F0F\u7F16\u7A0B\u7684\u4F53\u73B0\uFF0C\u5F3A\u8C03\u58F0\u660E\u5F0F\u548C\u4E0D\u53EF\u53D8\u6027",paraId:6,tocIndex:2},{value:"\u8BED\u6CD5\u9650\u5236\uFF1Abreak/continue \u53EA\u80FD\u5728\u5FAA\u73AF\u7ED3\u6784\u4E2D\u4F7F\u7528\uFF0C\u4E0D\u80FD\u5728\u51FD\u6570\u4E2D\u4F7F\u7528",paraId:6,tocIndex:2},{value:"\u4E00\u81F4\u6027\u8003\u8651\uFF1A\u4FDD\u6301 API \u7684\u7B80\u6D01\u548C\u53EF\u9884\u6D4B\u6027",paraId:6,tocIndex:2},{value:`Array.prototype.forEach = function(callback, thisArg) {
+    for (let i = 0; i < this.length; i++) {
+        if (i in this) {
+            callback.call(thisArg, this[i], i, this);
+        }
+    }
+};
+`,paraId:7,tocIndex:3},{value:"1\u3001for in \u5FAA\u73AF\u6570\u7EC4\u5410\u51FA\u7684\u662F index \u5FAA\u73AF\u5BF9\u8C61\u5410\u51FA\u7684\u662F key",paraId:8,tocIndex:4},{value:`
+2\u3001for \u5FAA\u73AF\u4E2D break \u4F1A\u8DF3\u51FA\u6574\u4E2A\u5FAA\u73AF\uFF0Ccontinue \u4F1A\u8DF3\u51FA\u5F53\u524D\u6B21\u5FAA\u73AF\uFF08continue \u540E\u9762\u7684\u4EE3\u7801\u4E0D\u4F1A\u6267\u884C\uFF09`,paraId:8,tocIndex:4},{value:`
+3\u3001for in \u5FAA\u73AF\u4F1A\u904D\u5386\u539F\u578B\u94FE\u4E0A\u7684\u5C5E\u6027`,paraId:8,tocIndex:4},{value:`
+4\u3001for in \u5FAA\u73AF\u65F6\u6570\u5B57\u5C5E\u6027\u4F18\u5148`,paraId:8,tocIndex:4},{value:`
+5\u3001for in \u65E0\u6CD5\u904D\u5386 symbol \u5C5E\u6027 \uFF0C\u83B7\u53D6 symbol \u7528 Object.getOwnPropertySymbols(obj)`,paraId:8,tocIndex:4},{value:`
 6\u3001for \u5FAA\u73AF\u91CC\u53EF\u4EE5\u6539\u53D8\u6BCF\u4E00\u9879\u7684\u503C
-7\u3001for \u5FAA\u73AF \u548C for of \u5FAA\u73AF\u4E2D\u53EF\u4EE5\u4F7F\u7528 await`,paraId:6,tocIndex:2},{value:`let obj = {
+7\u3001for \u5FAA\u73AF \u548C for of \u5FAA\u73AF\u4E2D\u53EF\u4EE5\u4F7F\u7528 await`,paraId:8,tocIndex:4},{value:`let obj = {
   name: 'poetry',
   age: 22,
   [Symbol('aa')]: 100,
@@ -8966,10 +8971,10 @@ for (let i = 0; i < list.length; i++) {
 }
 
 console.log(list); // [4,4,4,4,4,4,4]
-`,paraId:7,tocIndex:2},{value:"\u8FD4\u56DE\u6BCF\u4E00\u9879",paraId:8,tocIndex:3},{value:`
-\u53EA\u80FD\u5FAA\u73AF iterable \u7C7B\u578B \u4E0D\u80FD\u5FAA\u73AF\u666E\u901A\u7684 object \u5BF9\u8C61`,paraId:8,tocIndex:3},{value:`
-\u6539\u53D8 item \u4E0E forEach \u4E00\u81F4`,paraId:8,tocIndex:3},{value:`
-\u53EF\u4EE5\u7528 await`,paraId:8,tocIndex:3},{value:`const sleep = (time = 2000) =>
+`,paraId:9,tocIndex:4},{value:"\u8FD4\u56DE\u6BCF\u4E00\u9879",paraId:10,tocIndex:5},{value:`
+\u53EA\u80FD\u5FAA\u73AF iterable \u7C7B\u578B \u4E0D\u80FD\u5FAA\u73AF\u666E\u901A\u7684 object \u5BF9\u8C61`,paraId:10,tocIndex:5},{value:`
+\u6539\u53D8 item \u4E0E forEach \u4E00\u81F4`,paraId:10,tocIndex:5},{value:`
+\u53EF\u4EE5\u7528 await`,paraId:10,tocIndex:5},{value:`const sleep = (time = 2000) =>
   new Promise((reslove) => {
     setTimeout(() => {
       reslove(time);
@@ -8980,11 +8985,11 @@ for await (const item of [sleep(1000), sleep(2000), sleep(3000)]) {
   // Print out the results of the request
   console.log(item);
 }
-`,paraId:9,tocIndex:3},{value:"1.for-in \u53EA\u662F\u83B7\u53D6\u6570\u7EC4\u7684\u7D22\u5F15\u6216\u8005\u5BF9\u8C61\u7684 key\uFF1B\u800C for-of \u4F1A\u83B7\u53D6\u6570\u7EC4\u7684\u503C",paraId:10,tocIndex:4},{value:"2.for-in \u4F1A\u904D\u5386\u5BF9\u8C61\u7684\u6574\u4E2A\u539F\u578B\u94FE\uFF0C\u6027\u80FD\u5DEE\uFF1B\u800C for-of \u53EA\u904D\u5386\u5F53\u524D\u5BF9\u8C61\uFF0C\u4E0D\u4F1A\u904D\u5386\u539F\u578B\u94FE ",paraId:11,tocIndex:4},{value:"3.\u5BF9\u4E8E\u6570\u7EC4\u7684\u904D\u5386\uFF0Cfor-in \u4F1A\u8FD4\u56DE\u6570\u7EC4\u4E2D\u6240\u6709\u53EF\u679A\u4E3E\u7684\u5C5E\u6027(\u5305\u62EC\u539F\u578B\u94FE\u4E0A\u53EF\u679A\u4E3E\u7684\u5C5E\u6027)\uFF1Bfor-of \u53EA\u8FD4\u56DE\u6570\u7EC4\u7684\u4E0B\u6807\u5BF9\u5E94\u7684\u5C5E\u6027\u503C",paraId:12,tocIndex:4},{value:"4.for-of \u9002\u7528\u904D\u5386\u6570\u7EC4\uFF0F\u5B57\u7B26\u4E32/map/set \u7B49\u6709\u8FED\u4EE3\u5668 Iterator \u5BF9\u8C61\u7684\u96C6\u5408\uFF0C\u4F46\u662F\u4E0D\u80FD\u904D\u5386\u666E\u901A\u5BF9\u8C61\uFF08obj is not iterable\uFF09",paraId:13,tocIndex:4},{value:"for\u3001while\u3001for in\u3001for of\u3001for await of \u4F7F\u7528 await \u90FD\u662F\u751F\u6548\u7684\uFF1B",paraId:14,tocIndex:4},{value:`
-\u800C\u51E0\u4E4E\u6709\u56DE\u8C03\u7684\u904D\u5386\u65B9\u6CD5\uFF1AforEach\u3001map\u3001filter\u3001reduce\u3001some\u3001every\u3001find \u7B49\uFF0C\u4F7F\u7528 await \u90FD\u662F\u4E0D\u751F\u6548\u7684\uFF1B`,paraId:14,tocIndex:4},{value:"1\u3001\u4F20\u7EDF\u7684 for \u5FAA\u73AF",paraId:15,tocIndex:5},{value:`
-2\u3001for of`,paraId:15,tocIndex:5},{value:`
-3\u3001es6 \u7684 some`,paraId:15,tocIndex:5},{value:"for \u66F4\u5FEB",paraId:16,tocIndex:6},{value:`
-\u56E0\u4E3A forEach \u6BCF\u6B21\u90FD\u8981\u521B\u5EFA\u4E00\u4E2A\u51FD\u6570\u6765\u8C03\u7528\uFF0C\u800C for \u4E0D\u7528\u521B\u5EFA\u51FD\u6570 \uFF0C\u51FD\u6570\u9700\u8981\u72EC\u7ACB\u7684\u4F5C\u7528\u57DF\uFF0C\u9700\u8981\u989D\u5916\u7684\u5F00\u9500`,paraId:16,tocIndex:6}]},18139:function(o,n,e){e.r(n),e.d(n,{texts:function(){return a}});const a=[{value:`/**
+`,paraId:11,tocIndex:5},{value:"1.for-in \u53EA\u662F\u83B7\u53D6\u6570\u7EC4\u7684\u7D22\u5F15\u6216\u8005\u5BF9\u8C61\u7684 key\uFF1B\u800C for-of \u4F1A\u83B7\u53D6\u6570\u7EC4\u7684\u503C",paraId:12,tocIndex:6},{value:"2.for-in \u4F1A\u904D\u5386\u5BF9\u8C61\u7684\u6574\u4E2A\u539F\u578B\u94FE\uFF0C\u6027\u80FD\u5DEE\uFF1B\u800C for-of \u53EA\u904D\u5386\u5F53\u524D\u5BF9\u8C61\uFF0C\u4E0D\u4F1A\u904D\u5386\u539F\u578B\u94FE ",paraId:13,tocIndex:6},{value:"3.\u5BF9\u4E8E\u6570\u7EC4\u7684\u904D\u5386\uFF0Cfor-in \u4F1A\u8FD4\u56DE\u6570\u7EC4\u4E2D\u6240\u6709\u53EF\u679A\u4E3E\u7684\u5C5E\u6027(\u5305\u62EC\u539F\u578B\u94FE\u4E0A\u53EF\u679A\u4E3E\u7684\u5C5E\u6027)\uFF1Bfor-of \u53EA\u8FD4\u56DE\u6570\u7EC4\u7684\u4E0B\u6807\u5BF9\u5E94\u7684\u5C5E\u6027\u503C",paraId:14,tocIndex:6},{value:"4.for-of \u9002\u7528\u904D\u5386\u6570\u7EC4\uFF0F\u5B57\u7B26\u4E32/map/set \u7B49\u6709\u8FED\u4EE3\u5668 Iterator \u5BF9\u8C61\u7684\u96C6\u5408\uFF0C\u4F46\u662F\u4E0D\u80FD\u904D\u5386\u666E\u901A\u5BF9\u8C61\uFF08obj is not iterable\uFF09",paraId:15,tocIndex:6},{value:"for\u3001while\u3001for in\u3001for of\u3001for await of \u4F7F\u7528 await \u90FD\u662F\u751F\u6548\u7684\uFF1B",paraId:16,tocIndex:6},{value:`
+\u800C\u51E0\u4E4E\u6709\u56DE\u8C03\u7684\u904D\u5386\u65B9\u6CD5\uFF1AforEach\u3001map\u3001filter\u3001reduce\u3001some\u3001every\u3001find \u7B49\uFF0C\u4F7F\u7528 await \u90FD\u662F\u4E0D\u751F\u6548\u7684\uFF1B`,paraId:16,tocIndex:6},{value:"1\u3001\u4F20\u7EDF\u7684 for \u5FAA\u73AF",paraId:17,tocIndex:7},{value:`
+2\u3001for of`,paraId:17,tocIndex:7},{value:`
+3\u3001es6 \u7684 some`,paraId:17,tocIndex:7},{value:"for \u66F4\u5FEB",paraId:18,tocIndex:8},{value:`
+\u56E0\u4E3A forEach \u6BCF\u6B21\u90FD\u8981\u521B\u5EFA\u4E00\u4E2A\u51FD\u6570\u6765\u8C03\u7528\uFF0C\u800C for \u4E0D\u7528\u521B\u5EFA\u51FD\u6570 \uFF0C\u51FD\u6570\u9700\u8981\u72EC\u7ACB\u7684\u4F5C\u7528\u57DF\uFF0C\u9700\u8981\u989D\u5916\u7684\u5F00\u9500`,paraId:18,tocIndex:8}]},18139:function(o,n,e){e.r(n),e.d(n,{texts:function(){return a}});const a=[{value:`/**
  * Object.freeze()
  * \u53EA\u80FD\u51BB\u7ED3\u4E00\u5C42\uFF0C\u5BF9\u4E8E\u5D4C\u5957\u7C7B\u578B\u65E0\u6CD5\u51BB\u7ED3
  */
