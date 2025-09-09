@@ -12,11 +12,11 @@ js 效率执行检测网站 https://jsperf.com/
 从执行效率看(快到慢)  
 for-len > for > for-of > forEach > map > for-in
 
-## forEach
+## forEach 特征
 
-没有返回值<br/>
-不能改变 item 本身<br/>
-如果是引用类型 可以改变其属性(item 通过引用类型，指向了原来 list 里面的每一项。)<br/>
+1. 没有返回值<br/>
+2. 不能改变 item 本身<br/>
+3. 如果是引用类型 可以改变其属性(item 通过引用类型，指向了原来 list 里面的每一项。)<br/>
 
 ```js
 const list = [
@@ -63,6 +63,29 @@ array.forEach((value, index) => {
   console.log(value); // 输出 1, 2, 3
 });
 ```
+
+## 为什么forEach不能中断
+
+- 设计哲学：forEach 是函数式编程的体现，强调声明式和不可变性
+- 语法限制：break/continue 只能在循环结构中使用，不能在函数中使用
+- 一致性考虑：保持 API 的简洁和可预测性
+
+## 手写forEach
+```js
+Array.prototype.forEach = function(callback, thisArg) {
+    for (let i = 0; i < this.length; i++) {
+        if (i in this) {
+            callback.call(thisArg, this[i], i, this);
+        }
+    }
+};
+```
+
+
+
+
+
+
 
 ## for 循环 和 for in 循环
 
