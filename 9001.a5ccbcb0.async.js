@@ -583,7 +583,7 @@ streamPromise.then((stream) => {
     a.href = url;
     a.download = 'test.webm';
     a.click();
-    window.URL.revokeObjectURL(url);
+    window.URL.revokeObjectURL(url); // \u4F7F\u7528\u5B8C URL.createObjectURL \u540E\u8981\u8BB0\u5F97\u8C03\u7528 URL.revokeObjectURL()\uFF0C\u5426\u5219\u4F1A\u9020\u6210\u5185\u5B58\u6CC4\u6F0F\u3002
   }
 });
 `,paraId:11,tocIndex:7},{value:`/**
