@@ -638,7 +638,7 @@ streamPromise.then((stream) => {
     a.href = url;
     a.download = 'test.webm';
     a.click();
-    window.URL.revokeObjectURL(url);
+    window.URL.revokeObjectURL(url); // 使用完 URL.createObjectURL 后要记得调用 URL.revokeObjectURL()，否则会造成内存泄漏。
   }
 });
 ```
