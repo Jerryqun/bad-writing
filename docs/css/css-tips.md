@@ -135,6 +135,9 @@ html { filter: grayscale(.95); -webkit-filter: grayscale(.95);
 
 ## 隐藏滚动条
 
+虚拟滚动的时候滚动条可能是js画出来动态的  
+改变其样式需定位到相应的dom进行修改
+
 ```css
 /*Safari*/
 /*chrome*/
