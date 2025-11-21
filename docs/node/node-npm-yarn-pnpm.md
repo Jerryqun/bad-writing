@@ -41,6 +41,8 @@ pnpm config set registry https://registry.npmmirror.com/
 pnpm config set registry http://registry.npm.taobao.org/
 设为官方默认镜像
 pnpm config set registry https://registry.npmjs.org
+阿里tnpm
+pnpm config set registry https://registry.anpm.alibaba-inc.com
 ```
 
 ## yarn
