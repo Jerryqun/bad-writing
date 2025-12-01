@@ -25767,7 +25767,40 @@ npm3+ \u548C yarn \u662F\u901A\u8FC7\u94FA\u5E73\u7684\u6241\u5E73\u5316\u7684\u
 \u76F4\u63A5\u5728\u7F13\u5B58\u4E2D\u4E0B\u8F7D\u4E00\u4EFD vue`,paraId:11,tocIndex:6},{value:`
 \u9879\u76EE A \u4E2D\u7684 vue \u901A\u8FC7\u4E00\u79CD\u7C7B\u4F3C\u4E8E\u5FEB\u6377\u65B9\u5F0F\u7684\u8F6F\u8FDE\u63A5\u53BB\u94FE\u63A5\u5230 \u7F13\u5B58\u4E2D\u7684 Vue`,paraId:11,tocIndex:6},{value:`
 \u90A3\u4E48\u518D\u9879\u76EE B \u4E2D\u4E5F\u5B89\u88C5 vue \u7684\u8BDD\uFF0C\u4E5F\u662F\u4E00\u6837\u7684\uFF0C\u4F1A\u76F4\u63A5\u901A\u8FC7\u94FE\u63A5\u7684\u65B9\u5F0F\u6765\u6307\u5411\u7F13\u5B58\u4E2D\u7684 vue \u5305`,paraId:11,tocIndex:6},{value:`
-\u8FD9\u6837\u505A\u4E0D\u9700\u8981\u62F7\u8D1D\u5305\uFF0C\u5168\u90E8\u5728\u7F13\u5B58\u4E2D\uFF0C\u8282\u7701\u4E86\u78C1\u76D8\u7A7A\u95F4\uFF0C\u53E6\u5916\u4E0D\u9700\u8981\u62F7\u8D1D\uFF0C\u4E5F\u8282\u7701\u7684\u5B89\u88C5\u5305\u7684\u65F6\u5019`,paraId:11,tocIndex:6}]},59256:function(o,n,e){e.r(n),e.d(n,{texts:function(){return a}});const a=[{value:"Node \u8981\u6C42\u4F7F\u7528 ESM \u7684\u6587\u4EF6\u91C7\u7528.mjs \u540E\u7F00\uFF0C\u53EA\u8981\u6587\u4EF6\u4E2D\u5B58\u5728 import/export \u547D\u4EE4\u5C31\u5FC5\u987B\u4F7F\u7528.mjs \u540E\u7F00\u3002\u82E5\u4E0D\u5E0C\u671B\u4FEE\u6539\u6587\u4EF6\u540E\u7F00\uFF0C\u53EF\u5728 package.json \u4E2D\u6307\u5B9A type \u4E3A module\u3002\u57FA\u4E8E\u6B64\uFF0C\u82E5\u5176\u4ED6\u6587\u4EF6\u4F7F\u7528 CJS\uFF0C\u5C31\u9700\u5C06\u5176\u6587\u4EF6\u540E\u7F00\u6539\u6210.cjs\u3002\u82E5\u5728 package.json \u4E2D\u672A\u6307\u5B9A type \u6216\u6307\u5B9A type \u4E3A commonjs\uFF0C\u5219\u4EE5.js \u4E3A\u540E\u7F00\u7684\u6587\u4EF6\u4F1A\u88AB\u89E3\u6790\u4E3A CJS\u3002",paraId:0,tocIndex:0},{value:"Node v13.2.0 \u624D\u652F\u6301 esm",paraId:1,tocIndex:0},{value:"Node v13.2.0 \u5BF9\u5E94 Npm v6.13.1\u3002",paraId:2,tocIndex:0},{value:"\u914D\u7F6E",paraId:3,tocIndex:0},{value:`{
+\u8FD9\u6837\u505A\u4E0D\u9700\u8981\u62F7\u8D1D\u5305\uFF0C\u5168\u90E8\u5728\u7F13\u5B58\u4E2D\uFF0C\u8282\u7701\u4E86\u78C1\u76D8\u7A7A\u95F4\uFF0C\u53E6\u5916\u4E0D\u9700\u8981\u62F7\u8D1D\uFF0C\u4E5F\u8282\u7701\u7684\u5B89\u88C5\u5305\u7684\u65F6\u5019`,paraId:11,tocIndex:6},{value:`  "name": "@ali/example-component-a"
+  "peerDependencies": {
+    "react": "^17 || ^18",
+    "antd":"^5.0.0"
+  },
+`,paraId:12,tocIndex:7},{value:`  "name": "@ali/example-component-b"
+  "peerDependencies": {
+    "react": "^17 || ^18",
+    "antd":"^6.0.0"
+  },
+`,paraId:13,tocIndex:7},{value:`  "name": "@ali/example-component-c"
+  "dependencies": {
+    "@swc/helpers": "^0.5.1",
+    "@ice/jsx-runtime": "^0.3.0",
+    "ali-example-component-b":"file:./ali-example-component-b-0.1.0.tgz",
+    "ali-example-component-a":"file:./ali-example-component-a-0.1.0.tgz"
+  },
+  "peerDependencies": {
+    "react": "^17 || ^18",
+    "antd":"^5.0.0"
+  },
+`,paraId:14,tocIndex:7},{value:"npm i",paraId:15,tocIndex:7},{value:`
+npm i --force \u540E\u7528\u7684\u662Fantd 5 \u8FD8\u662F6\uFF1F`,paraId:15,tocIndex:7},{value:`
+\u4F60\u7684\u9879\u76EE\u6700\u7EC8\u5B89\u88C5\u7684\u662F antd@5.29.1\uFF08v5 \u7248\u672C\uFF09\uFF0C\u800C\u4E0D\u662F v6 \u7248\u672C\u3002`,paraId:15,tocIndex:7},{value:`
+\u65E5\u5FD7\u5206\u6790\u89E3\u8BFB`,paraId:15,tocIndex:7},{value:`
+\u25CF \u5B9E\u9645\u5B89\u88C5\u7248\u672C\u660E\u786E\u663E\u793A\uFF1A`,paraId:15,tocIndex:7},{value:`
+npm warn Found: antd@5.29.1`,paraId:15,tocIndex:7},{value:`
+npm warn node_modules/antd`,paraId:15,tocIndex:7},{value:"\u7248\u672C\u9009\u62E9\u539F\u56E0\uFF1A",paraId:16,tocIndex:7},{value:`
+\u25CF \u6839\u9879\u76EE\u548C\xA0ali-example-component-a\xA0\u90FD\u8981\u6C42\xA0antd@^5.0.0`,paraId:16,tocIndex:7},{value:`
+\u25CF ali-example-component-b\xA0\u8981\u6C42\xA0antd@^6.0.0`,paraId:16,tocIndex:7},{value:`
+\u25CF npm \u4F18\u5148\u6EE1\u8DB3\u6839\u9879\u76EE\u7684\u4F9D\u8D56\u8981\u6C42\uFF0C\u6240\u4EE5\u9009\u62E9\u4E86 v5`,paraId:16,tocIndex:7},{value:`
+"@ali/example-component-b" \u88AB\u8FEB\u4F7F\u7528\u4E86\u4E0D\u517C\u5BB9\u7684\u7248\u672C\u3002`,paraId:16,tocIndex:7},{value:"npm ls antd",paraId:17,tocIndex:7},{value:`
+\u5F53ali-example-component-b\u628Aantd\u653E\u5230dependencies \u65F6\u4F1A\u53D1\u751F\u4EC0\u4E48\uFF1F`,paraId:17,tocIndex:7},{value:`
+\u8FD9\u9A8C\u8BC1\u4E86\uFF1A`,paraId:17,tocIndex:7},{value:"npm3+ \u548C yarn \u662F\u901A\u8FC7\u94FA\u5E73\u7684\u6241\u5E73\u5316\u7684\u65B9\u5F0F\u6765\u7BA1\u7406 node_modules\uFF0C\u89E3\u51B3\u4E86\u5D4C\u5957\u65B9\u5F0F\u7684\u90E8\u5206\u95EE\u9898\uFF0C\u4F46\u662F\u5F15\u5165\u4E86\u5E7D\u7075\u4F9D\u8D56\u7684\u95EE\u9898\uFF0C\u5E76\u4E14\u540C\u540D\u7684\u5305\u53EA\u4F1A\u63D0\u5347\u4E00\u4E2A\u7248\u672C\u7684\uFF0C\u5176\u4F59\u7684\u7248\u672C\u4F9D\u7136\u4F1A\u590D\u5236\u591A\u6B21",paraId:17,tocIndex:7}]},59256:function(o,n,e){e.r(n),e.d(n,{texts:function(){return a}});const a=[{value:"Node \u8981\u6C42\u4F7F\u7528 ESM \u7684\u6587\u4EF6\u91C7\u7528.mjs \u540E\u7F00\uFF0C\u53EA\u8981\u6587\u4EF6\u4E2D\u5B58\u5728 import/export \u547D\u4EE4\u5C31\u5FC5\u987B\u4F7F\u7528.mjs \u540E\u7F00\u3002\u82E5\u4E0D\u5E0C\u671B\u4FEE\u6539\u6587\u4EF6\u540E\u7F00\uFF0C\u53EF\u5728 package.json \u4E2D\u6307\u5B9A type \u4E3A module\u3002\u57FA\u4E8E\u6B64\uFF0C\u82E5\u5176\u4ED6\u6587\u4EF6\u4F7F\u7528 CJS\uFF0C\u5C31\u9700\u5C06\u5176\u6587\u4EF6\u540E\u7F00\u6539\u6210.cjs\u3002\u82E5\u5728 package.json \u4E2D\u672A\u6307\u5B9A type \u6216\u6307\u5B9A type \u4E3A commonjs\uFF0C\u5219\u4EE5.js \u4E3A\u540E\u7F00\u7684\u6587\u4EF6\u4F1A\u88AB\u89E3\u6790\u4E3A CJS\u3002",paraId:0,tocIndex:0},{value:"Node v13.2.0 \u624D\u652F\u6301 esm",paraId:1,tocIndex:0},{value:"Node v13.2.0 \u5BF9\u5E94 Npm v6.13.1\u3002",paraId:2,tocIndex:0},{value:"\u914D\u7F6E",paraId:3,tocIndex:0},{value:`{
   "type": "module",
   "engines": {
     "node": ">=13.2.0",
