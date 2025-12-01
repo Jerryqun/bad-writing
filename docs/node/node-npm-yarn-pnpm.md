@@ -141,3 +141,56 @@ pnpm 就是凭借这个对 npm 和 yarn 降维打击的。
 项目 A 中的 vue 通过一种类似于快捷方式的软连接去链接到 缓存中的 Vue  
 那么再项目 B 中也安装 vue 的话，也是一样的，会直接通过链接的方式来指向缓存中的 vue 包  
 这样做不需要拷贝包，全部在缓存中，节省了磁盘空间，另外不需要拷贝，也节省的安装包的时候
+
+
+## 举例验证
+```json
+  "name": "@ali/example-component-a"
+  "peerDependencies": {
+    "react": "^17 || ^18",
+    "antd":"^5.0.0"
+  },
+```
+```json
+  "name": "@ali/example-component-b"
+  "peerDependencies": {
+    "react": "^17 || ^18",
+    "antd":"^6.0.0"
+  },
+```
+```json
+  "name": "@ali/example-component-c"
+  "dependencies": {
+    "@swc/helpers": "^0.5.1",
+    "@ice/jsx-runtime": "^0.3.0",
+    "ali-example-component-b":"file:./ali-example-component-b-0.1.0.tgz",
+    "ali-example-component-a":"file:./ali-example-component-a-0.1.0.tgz"
+  },
+  "peerDependencies": {
+    "react": "^17 || ^18",
+    "antd":"^5.0.0"
+  },
+```
+
+npm i  
+<img src='./img/image.png'/>
+ npm i --force 后用的是antd 5 还是6？  
+<img src='./img/image (1).png'/>
+你的项目最终安装的是 antd@5.29.1（v5 版本），而不是 v6 版本。  
+日志分析解读  
+● 实际安装版本明确显示：  
+npm warn Found: antd@5.29.1  
+npm warn node_modules/antd  
+
+版本选择原因：  
+    ● 根项目和 ali-example-component-a 都要求 antd@^5.0.0  
+    ● ali-example-component-b 要求 antd@^6.0.0  
+    ● npm 优先满足根项目的依赖要求，所以选择了 v5  
+"@ali/example-component-b" 被迫使用了不兼容的版本。  
+
+ npm ls antd    
+<img src='./img/image (2).png'/>
+当ali-example-component-b把antd放到dependencies 时会发生什么？  
+<img src='./img/image (3).png'/>
+这验证了：`npm3+ 和 yarn 是通过铺平的扁平化的方式来管理 node_modules，解决了嵌套方式的部分问题，但是引入了幽灵依赖的问题，并且同名的包只会提升一个版本的，其余的版本依然会复制多次`
+
