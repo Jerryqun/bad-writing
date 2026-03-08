@@ -111,3 +111,7 @@ http 使用 80，https 使用 443
 
 增加 host 配置
 140.82.113.4 github.com
+
+## dev-sidecar
+
+https://sourceforge.net/projects/dev-sidecar.mirror
