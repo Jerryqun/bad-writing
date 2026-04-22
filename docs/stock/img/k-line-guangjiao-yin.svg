@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="260" viewBox="0 0 280 260">
+  <style>
+    text { font-family: Arial, sans-serif; font-size: 12px; fill: #333; }
+    .label { font-size: 12px; fill: #666; }
+    .title { font-size: 14px; font-weight: bold; fill: #27ae60; text-anchor: middle; }
+  </style>
+  <!-- 标题 -->
+  <text x="100" y="20" class="title">光脚阴线</text>
+  <!-- 上影线 -->
+  <line x1="100" y1="40" x2="100" y2="80" stroke="#27ae60" stroke-width="2.5"/>
+  <!-- K线实体（绿色阴线） -->
+  <rect x="75" y="80" width="50" height="100" fill="#27ae60" stroke="#1e8449" stroke-width="1.5" rx="2"/>
+  <!-- 标注：最高价 -->
+  <line x1="105" y1="40" x2="170" y2="40" stroke="#999" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="174" y="44" class="label">最高价</text>
+  <!-- 标注：开盘价 -->
+  <line x1="130" y1="80" x2="170" y2="80" stroke="#999" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="174" y="84" class="label">开盘价</text>
+  <!-- 标注：收盘价=最低价 -->
+  <line x1="130" y1="180" x2="170" y2="180" stroke="#999" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="174" y="184" class="label">收盘价(最低价)</text>
+  <!-- 说明 -->
+  <text x="100" y="220" text-anchor="middle" class="label">有上影线，无下影线</text>
+</svg>
