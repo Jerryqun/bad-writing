@@ -45,7 +45,7 @@ const bar: number = value as number; // runtime Error
 
 TypeScript 与 ECMAScript 2015 一样，任何包含顶级 import 或者 export 的文件都被当成一个模块，
 相反地，如果一个文件不带有顶级的 import 或者 export 声明，
-例如我们在在一个 TypeScript 工程下建立一个文件 1.ts，声明一个变量 const a = 1，工程下建立另一个文件 2.ts，const a = 2
+例如我们在一个 TypeScript 工程下建立一个文件 1.ts，声明一个变量 const a = 1，工程下建立另一个文件 2.ts，const a = 2
 提示重复声明 a 变量
 
 ### 命名空间

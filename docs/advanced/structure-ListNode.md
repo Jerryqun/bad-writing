@@ -1,5 +1,5 @@
 ---
-nav: Js
+nav: 高阶技术
 group:
   title: 数据结构
   order: 2

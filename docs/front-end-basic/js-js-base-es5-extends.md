@@ -231,7 +231,7 @@ ColorPoint.__proto__ === Point; // true
 Object.getPrototypeOf(B) === Point;
 ```
 
-## es5 中的的构造函数和 es6 中的 class 有什么区别
+## es5 中的构造函数和 es6 中的 class 有什么区别
 
 ES5 和 ES6 中的类有几个关键的区别。下面是它们之间的一些主要差异：
 

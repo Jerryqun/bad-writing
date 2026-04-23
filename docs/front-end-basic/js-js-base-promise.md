@@ -311,7 +311,7 @@ console.log(4);
  * 从上至下，先遇到new Promise，执行其中的同步代码1和2
    跳出promise，往下执行，碰到promise.then这个微任务，将其加入微任务队列
    执行同步代码4 
-   本轮宏任务全部执行完毕，检查微任务队列，发现promise.then这个微任务且状态为为pengding  所以then不会执行。
+   本轮宏任务全部执行完毕，检查微任务队列，发现 promise.then 这个微任务且状态为 pending，所以 then 不会执行。
  */
 
 const promise1 = new Promise((resolve, reject) => {
