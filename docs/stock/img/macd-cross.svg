@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="240" viewBox="0 0 460 240">
+  <style>
+    text { font-family: "PingFang SC", Arial, sans-serif; font-size: 11px; fill: #333; }
+    .title { font-size: 13px; font-weight: bold; fill: #333; text-anchor: middle; }
+    .label { font-size: 10px; fill: #888; }
+  </style>
+  <!-- 左半部分：金叉 -->
+  <text x="110" y="18" class="title">金叉（买入信号）</text>
+  <line x1="20" y1="120" x2="210" y2="120" stroke="#ddd" stroke-width="0.5" stroke-dasharray="3,3"/>
+  <text x="8" y="124" class="label">0</text>
+  <!-- DIF 从下方穿越 DEA -->
+  <polyline points="30,170 60,160 90,145 120,120 150,100 180,85 200,75" fill="none" stroke="#e74c3c" stroke-width="2.5"/>
+  <polyline points="30,155 60,150 90,142 120,130 150,118 180,108 200,100" fill="none" stroke="#2980b9" stroke-width="2.5"/>
+  <!-- 交叉点 -->
+  <circle cx="105" cy="128" r="8" fill="none" stroke="#e74c3c" stroke-width="2"/>
+  <line x1="105" y1="137" x2="105" y2="175" stroke="#e74c3c" stroke-width="0.8" stroke-dasharray="2,2"/>
+  <text x="85" y="188" fill="#e74c3c" font-size="11" font-weight="bold">金叉 ✅</text>
+  <text x="60" y="202" fill="#888" font-size="9">DIF 从下向上穿越 DEA</text>
+  <!-- 箭头标注 -->
+  <text x="202" y="72" fill="#e74c3c" font-size="10" font-weight="bold">DIF ↑</text>
+  <text x="202" y="97" fill="#2980b9" font-size="10" font-weight="bold">DEA</text>
+  <!-- 分隔线 -->
+  <line x1="230" y1="25" x2="230" y2="215" stroke="#eee" stroke-width="1.5"/>
+  <!-- 右半部分：死叉 -->
+  <text x="345" y="18" class="title">死叉（卖出信号）</text>
+  <line x1="250" y1="120" x2="440" y2="120" stroke="#ddd" stroke-width="0.5" stroke-dasharray="3,3"/>
+  <text x="238" y="124" class="label">0</text>
+  <!-- DIF 从上方穿越 DEA -->
+  <polyline points="260,75 290,85 320,100 350,120 380,145 410,160 430,170" fill="none" stroke="#e74c3c" stroke-width="2.5"/>
+  <polyline points="260,100 290,108 320,118 350,130 380,142 410,150 430,155" fill="none" stroke="#2980b9" stroke-width="2.5"/>
+  <!-- 交叉点 -->
+  <circle cx="335" cy="128" r="8" fill="none" stroke="#27ae60" stroke-width="2"/>
+  <line x1="335" y1="137" x2="335" y2="175" stroke="#27ae60" stroke-width="0.8" stroke-dasharray="2,2"/>
+  <text x="315" y="188" fill="#27ae60" font-size="11" font-weight="bold">死叉 ⚠️</text>
+  <text x="290" y="202" fill="#888" font-size="9">DIF 从上向下穿越 DEA</text>
+  <!-- 箭头标注 -->
+  <text x="432" y="167" fill="#e74c3c" font-size="10" font-weight="bold">DIF ↓</text>
+  <text x="432" y="152" fill="#2980b9" font-size="10" font-weight="bold">DEA</text>
+  <!-- 底部图例 -->
+  <line x1="120" y1="225" x2="145" y2="225" stroke="#e74c3c" stroke-width="2.5"/>
+  <text x="150" y="229" font-size="10">DIF（快线）</text>
+  <line x1="260" y1="225" x2="285" y2="225" stroke="#2980b9" stroke-width="2.5"/>
+  <text x="290" y="229" font-size="10">DEA（慢线）</text>
+</svg>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="320" viewBox="0 0 480 320">
+  <style>
+    text { font-family: "PingFang SC", Arial, sans-serif; font-size: 11px; fill: #333; }
+    .title { font-size: 14px; font-weight: bold; fill: #333; text-anchor: middle; }
+    .label { font-size: 10px; fill: #888; }
+    .axis { stroke: #ccc; stroke-width: 1; }
+  </style>
+  <!-- 标题 -->
+  <text x="240" y="20" class="title">MACD 金叉与死叉示意图</text>
+  <!-- 坐标轴 -->
+  <line x1="40" y1="30" x2="40" y2="260" class="axis"/>
+  <line x1="40" y1="150" x2="460" y2="150" class="axis" stroke-dasharray="4,3"/>
+  <text x="25" y="154" class="label">0</text>
+  <!-- 红绿柱 -->
+  <rect x="60" y="155" width="8" height="20" fill="#27ae60" opacity="0.7"/>
+  <rect x="75" y="158" width="8" height="15" fill="#27ae60" opacity="0.7"/>
+  <rect x="90" y="160" width="8" height="10" fill="#27ae60" opacity="0.7"/>
+  <rect x="105" y="162" width="8" height="5" fill="#27ae60" opacity="0.7"/>
+  <rect x="120" y="145" width="8" height="5" fill="#e74c3c" opacity="0.7"/>
+  <rect x="135" y="140" width="8" height="10" fill="#e74c3c" opacity="0.7"/>
+  <rect x="150" y="132" width="8" height="18" fill="#e74c3c" opacity="0.7"/>
+  <rect x="165" y="125" width="8" height="25" fill="#e74c3c" opacity="0.7"/>
+  <rect x="180" y="120" width="8" height="30" fill="#e74c3c" opacity="0.7"/>
+  <rect x="195" y="118" width="8" height="32" fill="#e74c3c" opacity="0.7"/>
+  <rect x="210" y="122" width="8" height="28" fill="#e74c3c" opacity="0.7"/>
+  <rect x="225" y="128" width="8" height="22" fill="#e74c3c" opacity="0.7"/>
+  <rect x="240" y="135" width="8" height="15" fill="#e74c3c" opacity="0.7"/>
+  <rect x="255" y="142" width="8" height="8" fill="#e74c3c" opacity="0.7"/>
+  <rect x="270" y="145" width="8" height="5" fill="#e74c3c" opacity="0.7"/>
+  <rect x="285" y="152" width="8" height="5" fill="#27ae60" opacity="0.7"/>
+  <rect x="300" y="155" width="8" height="12" fill="#27ae60" opacity="0.7"/>
+  <rect x="315" y="158" width="8" height="18" fill="#27ae60" opacity="0.7"/>
+  <rect x="330" y="160" width="8" height="25" fill="#27ae60" opacity="0.7"/>
+  <rect x="345" y="162" width="8" height="30" fill="#27ae60" opacity="0.7"/>
+  <rect x="360" y="160" width="8" height="22" fill="#27ae60" opacity="0.7"/>
+  <rect x="375" y="157" width="8" height="15" fill="#27ae60" opacity="0.7"/>
+  <rect x="390" y="155" width="8" height="8" fill="#27ae60" opacity="0.7"/>
+  <rect x="405" y="148" width="8" height="2" fill="#e74c3c" opacity="0.7"/>
+  <rect x="420" y="142" width="8" height="8" fill="#e74c3c" opacity="0.7"/>
+  <!-- DIF快线 -->
+  <polyline points="64,172 79,168 94,164 109,160 124,148 139,138 154,128 169,118 184,112 199,110 214,115 229,122 244,132 259,140 274,147 289,155 304,162 319,170 334,178 349,182 364,177 379,170 394,160 409,148 424,140" fill="none" stroke="#e74c3c" stroke-width="2"/>
+  <!-- DEA慢线 -->
+  <polyline points="64,175 79,173 94,170 109,167 124,160 139,154 154,146 169,138 184,130 199,125 214,122 229,122 244,128 259,134 274,140 289,148 304,153 319,158 334,165 349,172 364,174 379,173 394,168 409,160 424,153" fill="none" stroke="#2980b9" stroke-width="2"/>
+  <!-- 金叉标注 -->
+  <circle cx="120" cy="148" r="6" fill="none" stroke="#e74c3c" stroke-width="1.5"/>
+  <text x="110" y="198" fill="#e74c3c" font-size="11" font-weight="bold">金叉</text>
+  <line x1="120" y1="154" x2="120" y2="190" stroke="#e74c3c" stroke-width="0.8" stroke-dasharray="2,2"/>
+  <!-- 死叉标注 -->
+  <circle cx="289" cy="152" r="6" fill="none" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="279" y="210" fill="#27ae60" font-size="11" font-weight="bold">死叉</text>
+  <line x1="289" y1="158" x2="289" y2="202" stroke="#27ae60" stroke-width="0.8" stroke-dasharray="2,2"/>
+  <!-- 图例 -->
+  <line x1="60" y1="285" x2="80" y2="285" stroke="#e74c3c" stroke-width="2"/>
+  <text x="85" y="289" font-size="11">DIF（快线）</text>
+  <line x1="170" y1="285" x2="190" y2="285" stroke="#2980b9" stroke-width="2"/>
+  <text x="195" y="289" font-size="11">DEA（慢线）</text>
+  <rect x="280" y="280" width="12" height="10" fill="#e74c3c" opacity="0.7"/>
+  <text x="296" y="289" font-size="11">红柱（多头）</text>
+  <rect x="380" y="280" width="12" height="10" fill="#27ae60" opacity="0.7"/>
+  <text x="396" y="289" font-size="11">绿柱（空头）</text>
+  <!-- 零轴标注 -->
+  <text x="460" y="154" class="label">零轴</text>
+</svg>

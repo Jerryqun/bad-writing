@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="340" viewBox="0 0 480 340">
+  <style>
+    text { font-family: "PingFang SC", Arial, sans-serif; font-size: 11px; fill: #333; }
+    .title { font-size: 14px; font-weight: bold; fill: #333; text-anchor: middle; }
+    .label { font-size: 10px; fill: #888; }
+    .axis { stroke: #ccc; stroke-width: 1; }
+    .ma-label { font-size: 10px; font-weight: bold; }
+  </style>
+  <!-- 标题 -->
+  <text x="240" y="20" class="title">均线压力与支撑示意图</text>
+  <!-- 坐标轴 -->
+  <line x1="40" y1="30" x2="40" y2="290" class="axis"/>
+  <line x1="40" y1="290" x2="460" y2="290" class="axis"/>
+  <!-- MA20均线 -->
+  <polyline points="50,200 80,195 110,185 140,170 170,158 200,150 230,145 260,142 290,148 320,155 350,162 380,160 410,155 440,148" fill="none" stroke="#2980b9" stroke-width="2"/>
+  <text x="442" y="144" class="ma-label" fill="#2980b9">MA20</text>
+  <!-- MA60均线 -->
+  <polyline points="50,220 80,215 110,208 140,198 170,188 200,180 230,175 260,172 290,175 320,180 350,185 380,182 410,178 440,172" fill="none" stroke="#e67e22" stroke-width="2"/>
+  <text x="442" y="168" class="ma-label" fill="#e67e22">MA60</text>
+  <!-- 股价K线走势（简化为折线） -->
+  <polyline points="50,230 65,220 80,210 95,195 110,180 125,170 140,155 155,145 170,135 185,125 200,120 215,115 230,110 245,118 260,130 275,140 290,155 305,148 320,135 335,125 350,118 365,128 380,138 395,145 410,135 425,125 440,115" fill="none" stroke="#e74c3c" stroke-width="1.5"/>
+  <!-- 支撑点标注（股价回踩MA20获得支撑） -->
+  <circle cx="260" cy="130" r="5" fill="none" stroke="#27ae60" stroke-width="2"/>
+  <line x1="260" y1="136" x2="260" y2="255" stroke="#27ae60" stroke-width="0.8" stroke-dasharray="2,2"/>
+  <text x="235" y="268" fill="#27ae60" font-size="11" font-weight="bold">回踩支撑</text>
+  <text x="225" y="280" fill="#27ae60" font-size="9">股价回踩MA20获得支撑</text>
+  <!-- 压力点标注（股价受MA20压制） -->
+  <circle cx="140" cy="155" r="5" fill="none" stroke="#e74c3c" stroke-width="2"/>
+  <text x="95" y="248" fill="#e74c3c" font-size="11" font-weight="bold">突破压力</text>
+  <text x="80" y="260" fill="#e74c3c" font-size="9">股价向上突破MA20</text>
+  <line x1="130" y1="155" x2="130" y2="240" stroke="#e74c3c" stroke-width="0.8" stroke-dasharray="2,2"/>
+  <!-- 标注说明 -->
+  <rect x="55" y="305" width="400" height="25" rx="4" fill="#f8f9fa" stroke="#ddd" stroke-width="1"/>
+  <text x="65" y="322" font-size="11" fill="#555">💡 股价在均线上方运行时，均线构成支撑；在均线下方运行时，均线构成压力</text>
+  <!-- 图例 -->
+  <line x1="60" y1="40" x2="80" y2="40" stroke="#e74c3c" stroke-width="1.5"/>
+  <text x="85" y="44" font-size="10">股价走势</text>
+  <line x1="160" y1="40" x2="180" y2="40" stroke="#2980b9" stroke-width="2"/>
+  <text x="185" y="44" font-size="10">MA20</text>
+  <line x1="230" y1="40" x2="250" y2="40" stroke="#e67e22" stroke-width="2"/>
+  <text x="255" y="44" font-size="10">MA60</text>
+</svg>

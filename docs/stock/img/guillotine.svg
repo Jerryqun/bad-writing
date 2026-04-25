@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="340" viewBox="0 0 480 340">
+  <style>
+    text { font-family: "PingFang SC", Arial, sans-serif; font-size: 11px; fill: #333; }
+    .title { font-size: 14px; font-weight: bold; fill: #e74c3c; text-anchor: middle; }
+    .label { font-size: 10px; fill: #888; }
+    .axis { stroke: #ccc; stroke-width: 1; }
+    .ma-label { font-size: 10px; font-weight: bold; }
+  </style>
+  <!-- 标题 -->
+  <text x="240" y="20" class="title">断头闸刀形态示意图</text>
+  <!-- 坐标轴 -->
+  <line x1="40" y1="30" x2="40" y2="290" class="axis"/>
+  <line x1="40" y1="290" x2="460" y2="290" class="axis"/>
+  <!-- K线蜡烛图 -->
+  <!-- 前期上涨的阳线 -->
+  <line x1="70" y1="170" x2="70" y2="145" stroke="#e74c3c" stroke-width="1.5"/>
+  <rect x="64" y="150" width="12" height="20" fill="#e74c3c" rx="1"/>
+  <line x1="100" y1="155" x2="100" y2="130" stroke="#e74c3c" stroke-width="1.5"/>
+  <rect x="94" y="135" width="12" height="20" fill="#e74c3c" rx="1"/>
+  <line x1="130" y1="140" x2="130" y2="115" stroke="#e74c3c" stroke-width="1.5"/>
+  <rect x="124" y="120" width="12" height="18" fill="#e74c3c" rx="1"/>
+  <line x1="160" y1="128" x2="160" y2="105" stroke="#e74c3c" stroke-width="1.5"/>
+  <rect x="154" y="110" width="12" height="16" fill="#e74c3c" rx="1"/>
+  <!-- 高位盘整小阳小阴 -->
+  <rect x="184" y="108" width="12" height="10" fill="#e74c3c" rx="1"/>
+  <line x1="190" y1="105" x2="190" y2="120" stroke="#e74c3c" stroke-width="1.5"/>
+  <rect x="214" y="110" width="12" height="8" fill="#27ae60" rx="1"/>
+  <line x1="220" y1="106" x2="220" y2="122" stroke="#27ae60" stroke-width="1.5"/>
+  <rect x="244" y="107" width="12" height="10" fill="#e74c3c" rx="1"/>
+  <line x1="250" y1="104" x2="250" y2="120" stroke="#e74c3c" stroke-width="1.5"/>
+  <rect x="274" y="109" width="12" height="8" fill="#27ae60" rx="1"/>
+  <line x1="280" y1="106" x2="280" y2="120" stroke="#27ae60" stroke-width="1.5"/>
+  <!-- ★ 断头闸刀大阴线 -->
+  <line x1="310" y1="105" x2="310" y2="215" stroke="#27ae60" stroke-width="2"/>
+  <rect x="300" y="108" width="20" height="100" fill="#27ae60" stroke="#1e8449" stroke-width="1.5" rx="1"/>
+  <!-- 后续下跌阴线 -->
+  <rect x="334" y="210" width="12" height="20" fill="#27ae60" rx="1"/>
+  <line x1="340" y1="208" x2="340" y2="235" stroke="#27ae60" stroke-width="1.5"/>
+  <rect x="364" y="225" width="12" height="22" fill="#27ae60" rx="1"/>
+  <line x1="370" y1="222" x2="370" y2="252" stroke="#27ae60" stroke-width="1.5"/>
+  <rect x="394" y="245" width="12" height="18" fill="#27ae60" rx="1"/>
+  <line x1="400" y1="242" x2="400" y2="268" stroke="#27ae60" stroke-width="1.5"/>
+  <!-- MA5均线 -->
+  <polyline points="70,158 100,142 130,128 160,116 190,112 220,113 250,111 280,112 310,140 340,175 370,210 400,240" fill="none" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="none"/>
+  <text x="410" y="244" class="ma-label" fill="#e74c3c">MA5</text>
+  <!-- MA10均线 -->
+  <polyline points="70,165 100,152 130,138 160,126 190,120 220,118 250,116 280,115 310,130 340,160 370,195 400,225" fill="none" stroke="#2980b9" stroke-width="1.5"/>
+  <text x="410" y="229" class="ma-label" fill="#2980b9">MA10</text>
+  <!-- MA20均线 -->
+  <polyline points="70,180 100,168 130,155 160,142 190,134 220,128 250,124 280,120 310,122 340,138 370,165 400,198" fill="none" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="410" y="202" class="ma-label" fill="#e67e22">MA20</text>
+  <!-- 断头闸刀标注 -->
+  <line x1="310" y1="220" x2="310" y2="270" stroke="#c0392b" stroke-width="0.8" stroke-dasharray="2,2"/>
+  <text x="265" y="282" fill="#c0392b" font-size="12" font-weight="bold">断头闸刀 ⚠️</text>
+  <text x="248" y="296" fill="#c0392b" font-size="9">一根大阴线跌破MA5/MA10/MA20</text>
+  <!-- 图例 -->
+  <rect x="55" y="310" width="395" height="22" rx="4" fill="#fef5f5" stroke="#f5c6cb" stroke-width="1"/>
+  <text x="65" y="325" font-size="11" fill="#c0392b">⚡ 断头闸刀出现后，近一个月买入者全部被套，多头信心崩溃</text>
+</svg>
