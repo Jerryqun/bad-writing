@@ -707,3 +707,118 @@ HAVING 分组条件          -- 3. 再过滤分组结果
 ORDER BY 排序字段        -- 4. 最后排序
 LIMIT 分页;              -- 5. 最后分页
 ```
+
+---
+
+## 分页（LIMIT 和 OFFSET）
+
+> 现实的接口中，我们查询列表为了效率往往会分页，就是在接口侧，根据前端的需要会查第 n 页，查 m 个
+
+### 两个关键字
+
+| 关键字 | 说明 | 示例 |
+|--------|------|------|
+| **OFFSET** | 从第几个开始查（偏移量） | `OFFSET 10` — 从第 10 个开始查 |
+| **LIMIT** | 只查多少个（限制数量） | `LIMIT 5` — 只查 5 个 |
+
+### 基本语法
+
+```sql
+-- 语法 1：LIMIT + OFFSET
+SELECT * FROM 表名 LIMIT 数量 OFFSET 偏移量;
+
+-- 语法 2：LIMIT 偏移量，数量（MySQL 简写）
+SELECT * FROM 表名 LIMIT 偏移量，数量;
+```
+
+### 示例
+
+```sql
+-- 从第 10 个开始查，查 5 个
+SELECT * FROM users LIMIT 5 OFFSET 10;
+
+-- 等价写法（MySQL 简写）
+SELECT * FROM users LIMIT 10, 5;
+```
+
+### 分页计算公式
+
+```
+偏移量 OFFSET = (页码 - 1) × 每页数量
+```
+
+**示例：**
+```sql
+-- 查第 3 页，每页 10 个
+-- OFFSET = (3 - 1) × 10 = 20
+SELECT * FROM users LIMIT 10 OFFSET 20;
+
+-- 查第 1 页，每页 10 个
+-- OFFSET = (1 - 1) × 10 = 0
+SELECT * FROM users LIMIT 10 OFFSET 0;
+
+-- 查第 5 页，每页 20 个
+-- OFFSET = (5 - 1) × 20 = 80
+SELECT * FROM users LIMIT 20 OFFSET 80;
+```
+
+### 分页 + 排序（标准用法）
+
+> ⚠️ **分页一定要配合排序使用**，否则每次查询的结果顺序可能不一致
+
+```sql
+-- 查询第 2 页，每页 20 条，按创建时间降序
+SELECT * FROM users
+ORDER BY created_at DESC
+LIMIT 20 OFFSET 20;
+
+-- 查询第 3 页，每页 10 条，按工资降序
+SELECT * FROM employees
+ORDER BY salary DESC
+LIMIT 10 OFFSET 20;
+```
+
+### 实际应用场景
+
+```sql
+-- 场景 1：查询用户列表，第 1 页，每页 10 条
+SELECT * FROM users
+ORDER BY created_at DESC
+LIMIT 10 OFFSET 0;
+
+-- 场景 2：查询工资最高的前 10 名员工
+SELECT * FROM employees
+ORDER BY salary DESC
+LIMIT 10;
+
+-- 场景 3：分页查询订单，第 5 页，每页 20 条，按订单时间降序
+SELECT * FROM orders
+ORDER BY order_time DESC
+LIMIT 20 OFFSET 80;
+
+-- 场景 4：分页 + 分组统计，查询用户数前 10 的公司
+SELECT company_id, COUNT(*) AS user_count
+FROM users
+GROUP BY company_id
+ORDER BY user_count DESC
+LIMIT 10;
+```
+
+### 注意事项
+
+- **必须配合 ORDER BY 使用**：否则分页结果可能不一致
+- **页码从 1 开始**：第 1 页 OFFSET = 0，第 2 页 OFFSET = 每页数量
+- **深度分页性能问题**：OFFSET 太大时性能会下降（如 `OFFSET 10000`）
+- **总条数查询**：通常需要配合 `SELECT COUNT(*)` 查询总条数，用于计算总页数
+
+### 深度分页优化
+
+```sql
+--  性能差：OFFSET 太大
+SELECT * FROM users LIMIT 10 OFFSET 100000;
+
+-- ✅ 优化方案：使用子查询或延迟关联
+SELECT * FROM users
+WHERE id > (SELECT id FROM users LIMIT 100000, 1)
+LIMIT 10;
+```
