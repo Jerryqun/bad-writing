@@ -161,10 +161,60 @@ SELECT dept_id, AVG(salary) AS avg_salary
 FROM employees
 GROUP BY dept_id
 HAVING AVG(salary) > 5000;
-`,paraId:86,tocIndex:52},{value:"\u7279\u6027",paraId:87,tocIndex:53},{value:"WHERE",paraId:87,tocIndex:53},{value:"HAVING",paraId:87,tocIndex:53},{value:"\u4F5C\u7528\u65F6\u673A",paraId:87,tocIndex:53},{value:"\u5206\u7EC4\u524D\u8FC7\u6EE4",paraId:87,tocIndex:53},{value:"\u5206\u7EC4\u540E\u8FC7\u6EE4",paraId:87,tocIndex:53},{value:"\u80FD\u5426\u4F7F\u7528\u805A\u5408\u51FD\u6570",paraId:87,tocIndex:53},{value:"\u4E0D\u80FD",paraId:87,tocIndex:53},{value:"\u2705 \u80FD",paraId:87,tocIndex:53},{value:"\u5178\u578B\u573A\u666F",paraId:87,tocIndex:53},{value:"\u8FC7\u6EE4\u539F\u59CB\u6570\u636E",paraId:87,tocIndex:53},{value:"\u8FC7\u6EE4\u7EDF\u8BA1\u7ED3\u679C",paraId:87,tocIndex:53},{value:`-- \u67E5\u8BE2 2024 \u5E74\u521B\u5EFA\u7684\u90E8\u95E8\u4E2D\uFF0C\u5E73\u5747\u5DE5\u8D44\u5927\u4E8E 8000 \u7684\u90E8\u95E8
+`,paraId:86,tocIndex:52},{value:"\u6838\u5FC3\u533A\u522B\uFF1A",paraId:87,tocIndex:53},{value:"\u4F5C\u7528\u65F6\u673A\u4E0D\u540C",paraId:88,tocIndex:53},{value:"WHERE",paraId:89,tocIndex:53},{value:" \u8981\u53D1\u751F\u5728\u5206\u7EC4\u524D\u3002\u5206\u7EC4\u7684\u903B\u8F91\u5C31\u662F\u5148\u9009\u51FA\u6765\u6240\u6709\u6570\u636E \u2192 \u518D\u5206\u7EC4\u3002\u6240\u4EE5\u5982\u679C\u6709 WHERE \u5C31\u662F\u5148\u6309 WHERE \u6761\u4EF6\u9009\u51FA\u6765\u6570\u636E\uFF0C\u518D\u5206\u7EC4\u3002",paraId:89,tocIndex:53},{value:"HAVING",paraId:89,tocIndex:53},{value:" \u662F\u57FA\u4E8E\u5206\u7EC4\u540E\u7ED3\u679C\u7B5B\u9009\uFF0C\u6240\u4EE5\u6211\u4EEC\u4E0A\u4E00\u4E2A\u4F8B\u5B50\uFF0C\u53EA\u80FD\u7528 HAVING\u3002",paraId:89,tocIndex:53},{value:"\u80FD\u5426\u4F7F\u7528\u805A\u5408\u51FD\u6570",paraId:90,tocIndex:53},{value:"WHERE",paraId:91,tocIndex:53},{value:" \u540E\u9762\u662F\u4E0D\u80FD\u8DDF\u805A\u5408\u51FD\u6570\u7684",paraId:91,tocIndex:53},{value:"HAVING",paraId:91,tocIndex:53},{value:" \u53EF\u4EE5\u4F7F\u7528\u805A\u5408\u51FD\u6570",paraId:91,tocIndex:53},{value:"\u7279\u6027",paraId:92,tocIndex:53},{value:"WHERE",paraId:92,tocIndex:53},{value:"HAVING",paraId:92,tocIndex:53},{value:"\u4F5C\u7528\u65F6\u673A",paraId:92,tocIndex:53},{value:"\u5206\u7EC4\u524D\u8FC7\u6EE4",paraId:92,tocIndex:53},{value:"\u5206\u7EC4\u540E\u8FC7\u6EE4",paraId:92,tocIndex:53},{value:"\u80FD\u5426\u4F7F\u7528\u805A\u5408\u51FD\u6570",paraId:92,tocIndex:53},{value:"\u274C \u4E0D\u80FD",paraId:92,tocIndex:53},{value:"\u2705 \u80FD",paraId:92,tocIndex:53},{value:"\u5178\u578B\u573A\u666F",paraId:92,tocIndex:53},{value:"\u8FC7\u6EE4\u539F\u59CB\u6570\u636E",paraId:92,tocIndex:53},{value:"\u8FC7\u6EE4\u7EDF\u8BA1\u7ED3\u679C",paraId:92,tocIndex:53},{value:"\u4F7F\u7528\u573A\u666F\u793A\u4F8B\uFF1A",paraId:93,tocIndex:53},{value:`-- \u573A\u666F 1\uFF1A\u7EDF\u8BA1\u6240\u6709\u516C\u53F8\uFF0C\u5728\u6211\u4EEC\u7528\u6237\u4E2D\u5DE5\u8D44\u5927\u4E8E 1000 \u7684\u4EBA\u6570
+-- WHERE \u66F4\u5408\u9002\uFF0C\u8FD9\u91CC\u7684\u903B\u8F91\u662F\u5148\u7B5B\u9009\u51FA\u90E8\u5206\u7528\u6237\uFF0C\u518D\u5206\u7EC4
+SELECT company_id, COUNT(*) AS user_count
+FROM users
+WHERE salary > 1000
+GROUP BY company_id;
+
+-- \u573A\u666F 2\uFF1A\u7EDF\u8BA1\u5404\u5BB6\u516C\u53F8\u5728\u6211\u4EEC\u7528\u6237\u4E2D\u7684\u4EBA\u6570\uFF0C\u4F46\u662F\u4E0D\u7EDF\u8BA1\u5C0F\u4E8E\u4E24\u4EBA\u7684
+-- HAVING \u66F4\u5408\u9002\uFF0C\u56E0\u4E3A\u662F\u5148\u5206\u7EC4\u7EDF\u8BA1\u518D\u7B5B\u9009
+SELECT company_id, COUNT(*) AS user_count
+FROM users
+GROUP BY company_id
+HAVING COUNT(*) >= 2;
+`,paraId:94,tocIndex:53},{value:`-- \u67E5\u8BE2 2024 \u5E74\u521B\u5EFA\u7684\u90E8\u95E8\u4E2D\uFF0C\u5E73\u5747\u5DE5\u8D44\u5927\u4E8E 8000 \u7684\u90E8\u95E8
 SELECT dept_id, AVG(salary) AS avg_salary
 FROM employees
 WHERE created_at >= '2024-01-01'  -- \u5148\u8FC7\u6EE4 2024 \u5E74\u7684\u6570\u636E
 GROUP BY dept_id
 HAVING AVG(salary) > 8000;        -- \u518D\u8FC7\u6EE4\u5E73\u5747\u5DE5\u8D44\u5927\u4E8E 8000 \u7684\u7EC4
-`,paraId:88,tocIndex:54},{value:"SELECT \u5B50\u53E5\u4E2D\u7684\u5B57\u6BB5",paraId:89,tocIndex:55},{value:"\uFF1A\u8981\u4E48\u662F GROUP BY \u540E\u9762\u7684\u5B57\u6BB5\uFF0C\u8981\u4E48\u5FC5\u987B\u4F7F\u7528\u805A\u5408\u51FD\u6570\u5305\u88F9",paraId:89,tocIndex:55},{value:"\u9519\u8BEF\u793A\u4F8B\uFF1A",paraId:89,tocIndex:55},{value:"SELECT name, COUNT(*) FROM users GROUP BY dept_id",paraId:89,tocIndex:55},{value:"\uFF08name \u672A\u5728 GROUP BY \u4E2D\uFF09",paraId:89,tocIndex:55},{value:"\u2705 \u6B63\u786E\u793A\u4F8B\uFF1A",paraId:89,tocIndex:55},{value:"SELECT dept_id, COUNT(*) FROM users GROUP BY dept_id",paraId:89,tocIndex:55},{value:"\u591A\u4E2A\u5B57\u6BB5\u5206\u7EC4\uFF1A",paraId:89,tocIndex:55},{value:"GROUP BY dept_id, position",paraId:89,tocIndex:55},{value:" \u6309\u90E8\u95E8\u548C\u804C\u4F4D\u540C\u65F6\u5206\u7EC4",paraId:89,tocIndex:55}]}}]);
+`,paraId:95,tocIndex:54},{value:"SELECT \u5B50\u53E5\u4E2D\u7684\u5B57\u6BB5",paraId:96,tocIndex:55},{value:"\uFF1A\u8981\u4E48\u662F GROUP BY \u540E\u9762\u7684\u5B57\u6BB5\uFF0C\u8981\u4E48\u5FC5\u987B\u4F7F\u7528\u805A\u5408\u51FD\u6570\u5305\u88F9",paraId:96,tocIndex:55},{value:"\u9519\u8BEF\u793A\u4F8B\uFF1A",paraId:96,tocIndex:55},{value:"SELECT name, COUNT(*) FROM users GROUP BY dept_id",paraId:96,tocIndex:55},{value:"\uFF08name \u672A\u5728 GROUP BY \u4E2D\uFF09",paraId:96,tocIndex:55},{value:"\u2705 \u6B63\u786E\u793A\u4F8B\uFF1A",paraId:96,tocIndex:55},{value:"SELECT dept_id, COUNT(*) FROM users GROUP BY dept_id",paraId:96,tocIndex:55},{value:"\u591A\u4E2A\u5B57\u6BB5\u5206\u7EC4\uFF1A",paraId:96,tocIndex:55},{value:"GROUP BY dept_id, position",paraId:96,tocIndex:55},{value:" \u6309\u90E8\u95E8\u548C\u804C\u4F4D\u540C\u65F6\u5206\u7EC4",paraId:96,tocIndex:55},{value:"\u56DE\u60F3\u73B0\u5B9E\u5DE5\u4F5C\u4E2D\uFF0C\u6211\u4EEC\u7ECF\u5E38\u4F1A\u6709\u6392\u5E8F\u7684\u9700\u6C42\uFF0C\u8981\u6C42\u63A5\u53E3\u7ED9\u6211\u4EEC\u7684\u6570\u636E\u6309\u67D0\u4E2A\u89C4\u5219\u6392\u5E8F",paraId:97,tocIndex:56},{value:"\u65B9\u6848",paraId:98,tocIndex:57},{value:"\u8BF4\u660E",paraId:98,tocIndex:57},{value:"\u8BC4\u4EF7",paraId:98,tocIndex:57},{value:"Java \u6392\u5E8F",paraId:98,tocIndex:57},{value:"\u67E5\u51FA\u6570\u636E\uFF0C\u5728 Java \u4EE3\u7801\u91CC\u5FAA\u73AF\u6392\u5E8F",paraId:98,tocIndex:57},{value:"\u4E0D\u5408\u9002\uFF0CJava \u8FD8\u5F97\u5199\u4EE3\u7801\uFF0C\u6392\u5E8F\u6548\u7387\u4F4E",paraId:98,tocIndex:57},{value:"SQL \u6392\u5E8F",paraId:98,tocIndex:57},{value:"\u76F4\u63A5\u8BA9\u6570\u636E\u5E93\u67E5\u51FA\u6765\u5C31\u6392\u5E8F\u597D",paraId:98,tocIndex:57},{value:"\u2705 \u6548\u7387\u9AD8\u901F\u5EA6\u5FEB",paraId:98,tocIndex:57},{value:`ORDER BY \u6392\u5E8F\u4F9D\u636E\u5B57\u6BB5 ASC/DESC
+`,paraId:99,tocIndex:58},{value:"ASC",paraId:100,tocIndex:58},{value:"\uFF1A\u5347\u5E8F\uFF08\u4ECE\u5C0F\u5230\u5927\uFF09\uFF0C\u9ED8\u8BA4\u503C\uFF0C\u53EF\u4EE5\u7701\u7565",paraId:100,tocIndex:58},{value:"DESC",paraId:100,tocIndex:58},{value:"\uFF1A\u964D\u5E8F\uFF08\u4ECE\u5927\u5230\u5C0F\uFF09",paraId:100,tocIndex:58},{value:`-- \u6309\u5DE5\u8D44\u5347\u5E8F\u6392\u5217
+SELECT * FROM employees ORDER BY salary ASC;
+
+-- \u6309\u5DE5\u8D44\u964D\u5E8F\u6392\u5217
+SELECT * FROM employees ORDER BY salary DESC;
+
+-- \u6309\u5165\u804C\u65F6\u95F4\u964D\u5E8F\u6392\u5217\uFF08\u6700\u65B0\u7684\u5728\u524D\uFF09
+SELECT * FROM employees ORDER BY created_at DESC;
+
+-- \u6309\u5E74\u9F84\u5347\u5E8F\u6392\u5217\uFF08\u9ED8\u8BA4 ASC\uFF0C\u53EF\u7701\u7565\uFF09
+SELECT * FROM users ORDER BY age;
+`,paraId:101,tocIndex:59},{value:`-- \u5148\u6309\u90E8\u95E8\u5347\u5E8F\uFF0C\u90E8\u95E8\u76F8\u540C\u7684\u518D\u6309\u5DE5\u8D44\u964D\u5E8F
+SELECT * FROM employees
+ORDER BY dept_id ASC, salary DESC;
+
+-- \u5148\u6309\u516C\u53F8\u5206\u7EC4\u7EDF\u8BA1\u4EBA\u6570\uFF0C\u518D\u6309\u4EBA\u6570\u964D\u5E8F\u6392\u5217
+SELECT company_id, COUNT(*) AS user_count
+FROM users
+GROUP BY company_id
+ORDER BY user_count DESC;
+`,paraId:102,tocIndex:60},{value:`-- \u67E5\u8BE2\u5DE5\u8D44\u6700\u9AD8\u7684\u524D 10 \u540D\u5458\u5DE5
+SELECT * FROM employees
+ORDER BY salary DESC
+LIMIT 10;
+
+-- \u5206\u9875\u67E5\u8BE2\uFF1A\u7B2C 2 \u9875\uFF0C\u6BCF\u9875 20 \u6761
+SELECT * FROM users
+ORDER BY created_at DESC
+LIMIT 20 OFFSET 20;  -- \u6216 LIMIT 20, 20
+`,paraId:103,tocIndex:61},{value:"ORDER BY \u5728 WHERE \u4E4B\u540E\u6267\u884C",paraId:104,tocIndex:62},{value:"\uFF1A\u5148\u8FC7\u6EE4\u6570\u636E\uFF0C\u518D\u6392\u5E8F",paraId:104,tocIndex:62},{value:"ORDER BY \u5728 GROUP BY \u4E4B\u540E\u6267\u884C",paraId:104,tocIndex:62},{value:"\uFF1A\u5148\u5206\u7EC4\u7EDF\u8BA1\uFF0C\u518D\u6392\u5E8F",paraId:104,tocIndex:62},{value:"\u53EF\u4EE5\u4F7F\u7528\u522B\u540D\u6392\u5E8F",paraId:104,tocIndex:62},{value:"\uFF1A",paraId:104,tocIndex:62},{value:"SELECT AVG(salary) AS avg_salary FROM employees GROUP BY dept_id ORDER BY avg_salary DESC",paraId:104,tocIndex:62},{value:"NULL \u503C\u6392\u5E8F",paraId:104,tocIndex:62},{value:"\uFF1ANULL \u503C\u9ED8\u8BA4\u6392\u5728\u6700\u540E\uFF08\u5347\u5E8F\uFF09\u6216\u6700\u524D\uFF08\u964D\u5E8F\uFF09\uFF0C\u4E0D\u540C\u6570\u636E\u5E93\u53EF\u80FD\u6709\u5DEE\u5F02",paraId:104,tocIndex:62},{value:`SELECT \u5B57\u6BB5
+FROM \u8868\u540D
+WHERE \u6761\u4EF6              -- 1. \u5148\u8FC7\u6EE4
+GROUP BY \u5206\u7EC4\u5B57\u6BB5        -- 2. \u518D\u5206\u7EC4
+HAVING \u5206\u7EC4\u6761\u4EF6          -- 3. \u518D\u8FC7\u6EE4\u5206\u7EC4\u7ED3\u679C
+ORDER BY \u6392\u5E8F\u5B57\u6BB5        -- 4. \u6700\u540E\u6392\u5E8F
+LIMIT \u5206\u9875;              -- 5. \u6700\u540E\u5206\u9875
+`,paraId:105,tocIndex:63}]}}]);
