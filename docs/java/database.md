@@ -300,54 +300,6 @@ id INT PRIMARY KEY AUTO_INCREMENT
 
 ---
 
-## 条件判断 - 多判断联合
-
-| 场景 | 语法 | 示例 |
-|------|------|------|
-| **多个条件联合（AND）** | `条件 1 AND 条件 2` | `age > 12 AND name LIKE '%张%'` — 年龄大于 12 且姓名包含"张" |
-| **数字在 xx 到 yy 之间** | `BETWEEN xx AND yy` | `age BETWEEN 10 AND 18` — 年龄在 10 到 18 之间（包含 10 和 18） |
-| **或者判断（OR）** | `条件 1 OR 条件 2` | `age > 12 OR name LIKE '%张%'` — 年龄大于 12 或姓名包含"张" |
-
-### 组合示例
-
-```sql
--- 查询年龄在 18 到 30 岁之间，且姓名包含"张"的用户
-SELECT * FROM users 
-WHERE age BETWEEN 18 AND 30 
-  AND name LIKE '%张%';
-
--- 查询年龄大于 18 或者姓名包含"李"的用户
-SELECT * FROM users 
-WHERE age > 18 
-  OR name LIKE '%李%';
-```
-
----
-
-## 条件判断 - 多判断联合
-
-| 场景 | 语法 | 示例 |
-|------|------|------|
-| **多个条件联合（AND）** | `条件 1 AND 条件 2` | `age > 12 AND name LIKE '%张%'` — 年龄大于 12 且姓名包含"张" |
-| **数字在 xx 到 yy 之间** | `BETWEEN xx AND yy` | `age BETWEEN 10 AND 18` — 年龄在 10 到 18 之间（包含 10 和 18） |
-| **或者判断（OR）** | `条件 1 OR 条件 2` | `age > 12 OR name LIKE '%张%'` — 年龄大于 12 或姓名包含"张" |
-
-### 组合示例
-
-```sql
--- 查询年龄在 18 到 30 岁之间，且姓名包含"张"的用户
-SELECT * FROM users 
-WHERE age BETWEEN 18 AND 30 
-  AND name LIKE '%张%';
-
--- 查询年龄大于 18 或者姓名包含"李"的用户
-SELECT * FROM users 
-WHERE age > 18 
-  OR name LIKE '%李%';
-```
-
----
-
 ## 连表查询
 
 ### 基本写法
@@ -458,3 +410,187 @@ GROUP BY dept_id;
 - **COUNT(字段名)** 只统计该字段非 NULL 的行数
 - 聚合函数通常与 **GROUP BY** 配合使用，按组进行统计
 - 聚合函数不能直接用在 WHERE 子句中，如需过滤聚合结果，使用 **HAVING** 子句
+
+---
+
+## 数据库函数提问
+
+### 我们可以通过 Java 代码里写逻辑来代替 SQL 函数，为什么我们还要用 SQL 函数呢？
+
+确实几乎所有函数，它的功能都可以用 Java 里写代码做，不去用函数。那么我们怎么选择呢？
+
+#### 使用 SQL 函数的场景
+
+**一般来说，对于大量数据做聚合运算，我们最好使用 SQL 来做。比如求和、平均值。**
+
+**原因如下：**
+
+假设有 10000 多条数据：
+- ❌ **Java 方案**：先把 10000 条数据全部查询出来给到 Java，Java 再做循环计算
+- ✅ **SQL 方案**：直接运用 SQL 优化好的函数，去做聚合运算
+
+**效率对比：**
+- SQL 方案效率更高，因为数据库内部已经对聚合函数做了深度优化
+- 不用费心写 Java 循环代码
+- 减少网络传输（不需要把大量数据从数据库传到应用）
+- 减少内存消耗（Java 不需要加载所有数据到内存）
+
+#### 使用 Java 代码的场景
+
+**如果涉及到复杂逻辑判断或者算法，那必然 Java 更合适。**
+
+**示例场景：**
+- 项目独特的 ID 生成算法
+- 复杂的多条件判断：
+  - 找出出生年大于 1995
+  - 并且消费次数大于 5
+  - 并且资产大于 1000
+  - 这样很复杂的判断条件的用户
+
+#### 选择原则总结
+
+| 场景 | 推荐方案 | 原因 |
+|------|---------|------|
+| **大量数据聚合运算** | SQL 函数 | 数据库优化好、效率高、减少数据传输 |
+| **简单统计计算** | SQL 函数 | COUNT、SUM、AVG、MAX、MIN 等 |
+| **复杂业务逻辑** | Java 代码 | 灵活、可维护、易测试 |
+| **独特算法** | Java 代码 | 数据库不支持或实现复杂 |
+| **多条件复杂判断** | Java 代码 | 逻辑清晰，便于后续维护 |
+
+### 最佳实践
+
+```sql
+-- ✅ 推荐：用 SQL 做聚合
+SELECT COUNT(*) AS total, AVG(salary) AS avg_salary FROM employees;
+
+-- ❌ 不推荐：查出所有数据让 Java 计算
+SELECT * FROM employees; -- 然后在 Java 里循环计算
+```
+
+```java
+// ✅ 推荐：用 Java 处理复杂业务逻辑
+public List<User> findQualifiedUsers(List<User> users) {
+    return users.stream()
+        .filter(u -> u.getBirthYear() > 1995)
+        .filter(u -> u.getConsumptionCount() > 5)
+        .filter(u -> u.getAssets() > 1000)
+        .filter(u -> generateUniqueId(u).matches(pattern))
+        .collect(Collectors.toList());
+}
+```
+
+---
+
+## 分组（GROUP BY）
+
+> 我们把表里的数据，按某个属性如果相同，则合并为一条数据。以这样的方式查找数据就是分组。
+
+### 基本概念
+
+- 把所有用户按公司分组，同一个公司的用户就会合并为一组（表现出来就是只查为一条数据）
+- 分组后，每组只返回一条记录
+- 通常与**聚合函数**配合使用，对每组数据进行统计
+
+### 基本语法
+
+```sql
+SELECT 字段 1 FROM 表名 GROUP BY 字段 1
+```
+
+### 示例
+
+```sql
+-- 把所有用户属于的公司做一个统计，以公司 id 做一个列表
+SELECT company_id FROM users GROUP BY company_id;
+
+-- 统计每个公司的用户数量
+SELECT company_id, COUNT(*) AS user_count
+FROM users
+GROUP BY company_id;
+
+-- 统计每个公司的平均工资
+SELECT company_id, AVG(salary) AS avg_salary
+FROM employees
+GROUP BY company_id;
+```
+
+### 分组 + 聚合函数（常用组合）
+
+```sql
+-- 统计每个部门的员工数和平均工资
+SELECT dept_id, 
+       COUNT(*) AS emp_count, 
+       AVG(salary) AS avg_salary,
+       MAX(salary) AS max_salary,
+       MIN(salary) AS min_salary
+FROM employees
+GROUP BY dept_id;
+
+-- 统计每天的新增用户数
+SELECT DATE(created_at) AS date, COUNT(*) AS new_users
+FROM users
+GROUP BY DATE(created_at);
+```
+
+### 分组后过滤 - HAVING 子句
+
+> **HAVING 是专门拿来筛选 GROUP BY 的分组结果的**
+> 
+> **WHERE** 过滤分组前的数据，**HAVING** 过滤分组后的结果
+
+**使用场景：** 分组分出了几家公司，假设我们想挑选员工平均工资大于某个值的公司，就可以用 HAVING。
+
+```sql
+-- 第一步：按公司分组，并统计平均工资
+SELECT company_id, AVG(salary) AS avg_salary
+FROM users
+GROUP BY company_id;
+
+-- 第二步：基于分组结果，进一步筛选平均工资大于 400 的公司
+SELECT company_id, AVG(salary) AS avg_salary
+FROM users
+GROUP BY company_id
+HAVING avg_salary > 400;
+```
+
+**更多示例：**
+
+```sql
+-- 查询用户数大于 10 的公司
+SELECT company_id, COUNT(*) AS user_count
+FROM users
+GROUP BY company_id
+HAVING COUNT(*) > 10;
+
+-- 查询平均工资大于 5000 的部门
+SELECT dept_id, AVG(salary) AS avg_salary
+FROM employees
+GROUP BY dept_id
+HAVING AVG(salary) > 5000;
+```
+
+### WHERE vs HAVING 对比
+
+| 特性 | WHERE | HAVING |
+|------|-------|--------|
+| **作用时机** | 分组前过滤 | 分组后过滤 |
+| **能否使用聚合函数** |  不能 | ✅ 能 |
+| **典型场景** | 过滤原始数据 | 过滤统计结果 |
+
+### 完整示例
+
+```sql
+-- 查询 2024 年创建的部门中，平均工资大于 8000 的部门
+SELECT dept_id, AVG(salary) AS avg_salary
+FROM employees
+WHERE created_at >= '2024-01-01'  -- 先过滤 2024 年的数据
+GROUP BY dept_id
+HAVING AVG(salary) > 8000;        -- 再过滤平均工资大于 8000 的组
+```
+
+### 注意事项
+
+- **SELECT 子句中的字段**：要么是 GROUP BY 后面的字段，要么必须使用聚合函数包裹
+-  错误示例：`SELECT name, COUNT(*) FROM users GROUP BY dept_id`（name 未在 GROUP BY 中）
+- ✅ 正确示例：`SELECT dept_id, COUNT(*) FROM users GROUP BY dept_id`
+- 多个字段分组：`GROUP BY dept_id, position` 按部门和职位同时分组
