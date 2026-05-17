@@ -571,11 +571,39 @@ HAVING AVG(salary) > 5000;
 
 ### WHERE vs HAVING 对比
 
+**核心区别：**
+
+1. **作用时机不同**
+   - **WHERE** 要发生在分组前。分组的逻辑就是先选出来所有数据 → 再分组。所以如果有 WHERE 就是先按 WHERE 条件选出来数据，再分组。
+   - **HAVING** 是基于分组后结果筛选，所以我们上一个例子，只能用 HAVING。
+
+2. **能否使用聚合函数**
+   - **WHERE** 后面是不能跟聚合函数的
+   - **HAVING** 可以使用聚合函数
+
 | 特性 | WHERE | HAVING |
 |------|-------|--------|
 | **作用时机** | 分组前过滤 | 分组后过滤 |
-| **能否使用聚合函数** |  不能 | ✅ 能 |
+| **能否使用聚合函数** |  ❌ 不能 | ✅ 能 |
 | **典型场景** | 过滤原始数据 | 过滤统计结果 |
+
+**使用场景示例：**
+
+```sql
+-- 场景 1：统计所有公司，在我们用户中工资大于 1000 的人数
+-- WHERE 更合适，这里的逻辑是先筛选出部分用户，再分组
+SELECT company_id, COUNT(*) AS user_count
+FROM users
+WHERE salary > 1000
+GROUP BY company_id;
+
+-- 场景 2：统计各家公司在我们用户中的人数，但是不统计小于两人的
+-- HAVING 更合适，因为是先分组统计再筛选
+SELECT company_id, COUNT(*) AS user_count
+FROM users
+GROUP BY company_id
+HAVING COUNT(*) >= 2;
+```
 
 ### 完整示例
 
@@ -594,3 +622,88 @@ HAVING AVG(salary) > 8000;        -- 再过滤平均工资大于 8000 的组
 -  错误示例：`SELECT name, COUNT(*) FROM users GROUP BY dept_id`（name 未在 GROUP BY 中）
 - ✅ 正确示例：`SELECT dept_id, COUNT(*) FROM users GROUP BY dept_id`
 - 多个字段分组：`GROUP BY dept_id, position` 按部门和职位同时分组
+
+---
+
+## 排序（ORDER BY）
+
+> 回想现实工作中，我们经常会有排序的需求，要求接口给我们的数据按某个规则排序
+
+### 为什么用 SQL 排序而不是 Java 排序？
+
+| 方案 | 说明 | 评价 |
+|------|------|------|
+| **Java 排序** | 查出数据，在 Java 代码里循环排序 |  不合适，Java 还得写代码，排序效率低 |
+| **SQL 排序** | 直接让数据库查出来就排序好 | ✅ 效率高速度快 |
+
+### 基本语法
+
+```sql
+ORDER BY 排序依据字段 ASC/DESC
+```
+
+- **ASC**：升序（从小到大），默认值，可以省略
+- **DESC**：降序（从大到小）
+
+### 示例
+
+```sql
+-- 按工资升序排列
+SELECT * FROM employees ORDER BY salary ASC;
+
+-- 按工资降序排列
+SELECT * FROM employees ORDER BY salary DESC;
+
+-- 按入职时间降序排列（最新的在前）
+SELECT * FROM employees ORDER BY created_at DESC;
+
+-- 按年龄升序排列（默认 ASC，可省略）
+SELECT * FROM users ORDER BY age;
+```
+
+### 多字段排序
+
+```sql
+-- 先按部门升序，部门相同的再按工资降序
+SELECT * FROM employees
+ORDER BY dept_id ASC, salary DESC;
+
+-- 先按公司分组统计人数，再按人数降序排列
+SELECT company_id, COUNT(*) AS user_count
+FROM users
+GROUP BY company_id
+ORDER BY user_count DESC;
+```
+
+### 排序 + 分页（常用组合）
+
+```sql
+-- 查询工资最高的前 10 名员工
+SELECT * FROM employees
+ORDER BY salary DESC
+LIMIT 10;
+
+-- 分页查询：第 2 页，每页 20 条
+SELECT * FROM users
+ORDER BY created_at DESC
+LIMIT 20 OFFSET 20;  -- 或 LIMIT 20, 20
+```
+
+### 注意事项
+
+- **ORDER BY 在 WHERE 之后执行**：先过滤数据，再排序
+- **ORDER BY 在 GROUP BY 之后执行**：先分组统计，再排序
+- **可以使用别名排序**：`SELECT AVG(salary) AS avg_salary FROM employees GROUP BY dept_id ORDER BY avg_salary DESC`
+- **NULL 值排序**：NULL 值默认排在最后（升序）或最前（降序），不同数据库可能有差异
+
+### 完整执行顺序
+
+```sql
+SELECT 字段
+FROM 表名
+WHERE 条件              -- 1. 先过滤
+GROUP BY 分组字段        -- 2. 再分组
+HAVING 分组条件          -- 3. 再过滤分组结果
+ORDER BY 排序字段        -- 4. 最后排序
+LIMIT 分页;              -- 5. 最后分页
+```
