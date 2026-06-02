@@ -5,7 +5,7 @@
 import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from langgraph.prebuilt import create_react_agent
@@ -54,40 +54,87 @@ STOCK_TOOLS = [
     search_stock_by_name,
 ]
 
+
+# ==================== Structured Output ====================
+
+class StockInfoOutput(BaseModel):
+    """从对话中提取的股票结构化信息"""
+    name: str = Field(default="", description="股票名称，如 贵州茅台")
+    symbol: str = Field(default="", description="股票代码，如 600519")
+    current_price: str = Field(default="", description="当前价格，如 1304.51")
+
+
+# ==================== LLM & Agent ====================
+
+llm_instance = None
 agent = None
 
 
-def get_agent():
-    global agent
-    if agent is None:
+def get_llm():
+    global llm_instance
+    if llm_instance is None:
         api_key = os.getenv("DEEPSEEK_API_KEY")
         if not api_key:
             raise RuntimeError("未配置 DEEPSEEK_API_KEY，请在 .env 文件中设置")
-
-        llm = ChatOpenAI(
+        llm_instance = ChatOpenAI(
             model="deepseek-chat",
             api_key=api_key,
             base_url="https://api.deepseek.com/v1",
             temperature=0.3,
         )
+    return llm_instance
+
+
+def get_agent():
+    global agent
+    if agent is None:
         agent = create_react_agent(
-            model=llm,
+            model=get_llm(),
             tools=STOCK_TOOLS,
             prompt=SYSTEM_PROMPT,
         )
     return agent
 
 
+# ==================== API Models ====================
+
 class ChatRequest(BaseModel):
     message: str
     history: list = []
+
+
+class StockInfo(BaseModel):
+    name: str = ""
+    symbol: str = ""
+    current_price: str = ""
 
 
 class ChatResponse(BaseModel):
     reply: str
     success: bool
     error: str = ""
+    stock_info: StockInfo = StockInfo()
 
+
+# ==================== Structured Extraction ====================
+
+def extract_stock_info_via_llm(reply_text: str) -> StockInfo:
+    """使用 LLM 的 with_structured_output 从回复中提取股票结构化信息"""
+    try:
+        structured_llm = get_llm().with_structured_output(StockInfoOutput)
+        result = structured_llm.invoke(
+            f"从以下回复中提取股票信息（名称、代码、当前价格）。如果没有相关信息则返回空字符串。\n\n{reply_text}"
+        )
+        return StockInfo(
+            name=result.name,
+            symbol=result.symbol,
+            current_price=result.current_price,
+        )
+    except Exception:
+        return StockInfo()
+
+
+# ==================== API Routes ====================
 
 @app.post("/api/chat", response_model=ChatResponse)
 async def chat(request: ChatRequest):
@@ -101,8 +148,15 @@ async def chat(request: ChatRequest):
 
         response = stock_agent.invoke({"messages": messages})
         assistant_message = response["messages"][-1]
+        reply_text = assistant_message.content
 
-        return ChatResponse(reply=assistant_message.content, success=True)
+        stock_info = extract_stock_info_via_llm(reply_text)
+
+        return ChatResponse(
+            reply=reply_text,
+            success=True,
+            stock_info=stock_info,
+        )
     except Exception as error:
         return ChatResponse(reply="", success=False, error=str(error))
 

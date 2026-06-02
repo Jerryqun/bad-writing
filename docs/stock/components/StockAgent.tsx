@@ -4,9 +4,16 @@ import { SendOutlined, RobotOutlined, UserOutlined, StockOutlined } from '@ant-d
 
 const { Text } = Typography;
 
+interface StockInfo {
+  name: string;
+  symbol: string;
+  current_price: string;
+}
+
 interface Message {
   role: 'user' | 'assistant';
   content: string;
+  stockInfo?: StockInfo;
 }
 
 const API_URL = 'http://localhost:8080/api/chat';
@@ -72,7 +79,15 @@ const StockAgent: React.FC = () => {
       const data = await response.json();
 
       if (data.success) {
-        setMessages([...updatedMessages, { role: 'assistant', content: data.reply }]);
+        const hasStockInfo = data.stock_info?.name && data.stock_info?.symbol;
+        setMessages([
+          ...updatedMessages,
+          {
+            role: 'assistant',
+            content: data.reply,
+            stockInfo: hasStockInfo ? data.stock_info : undefined,
+          },
+        ]);
       } else {
         setMessages([
           ...updatedMessages,
@@ -155,31 +170,53 @@ const StockAgent: React.FC = () => {
         )}
 
         {messages.map((message, index) => (
-          <div
-            key={index}
-            style={{
-              ...styles.messageRow,
-              justifyContent: message.role === 'user' ? 'flex-end' : 'flex-start',
-            }}
-          >
-            {message.role === 'assistant' && (
-              <div style={styles.avatarBot}>
-                <RobotOutlined style={{ color: '#fff', fontSize: 14 }} />
+          <div key={index}>
+            {message.stockInfo && (
+              <div style={styles.stockCard}>
+                <div style={styles.stockCardHeader}>
+                  <StockOutlined style={{ color: '#1890ff', fontSize: 16 }} />
+                  <Text strong style={{ fontSize: 15, marginLeft: 8 }}>
+                    {message.stockInfo.name}
+                  </Text>
+                  <Tag color="blue" style={{ marginLeft: 8 }}>
+                    {message.stockInfo.symbol}
+                  </Tag>
+                </div>
+                {message.stockInfo.current_price && (
+                  <div style={styles.stockCardPrice}>
+                    <Text style={{ fontSize: 12, color: '#999' }}>当前价</Text>
+                    <Text strong style={{ fontSize: 28, color: '#cf1322', lineHeight: 1.2 }}>
+                      ¥{message.stockInfo.current_price}
+                    </Text>
+                  </div>
+                )}
               </div>
             )}
             <div
               style={{
-                ...styles.messageBubble,
-                ...(message.role === 'user' ? styles.userBubble : styles.botBubble),
+                ...styles.messageRow,
+                justifyContent: message.role === 'user' ? 'flex-end' : 'flex-start',
               }}
             >
-              <pre style={styles.messageText}>{message.content}</pre>
-            </div>
-            {message.role === 'user' && (
-              <div style={styles.avatarUser}>
-                <UserOutlined style={{ color: '#fff', fontSize: 14 }} />
+              {message.role === 'assistant' && (
+                <div style={styles.avatarBot}>
+                  <RobotOutlined style={{ color: '#fff', fontSize: 14 }} />
+                </div>
+              )}
+              <div
+                style={{
+                  ...styles.messageBubble,
+                  ...(message.role === 'user' ? styles.userBubble : styles.botBubble),
+                }}
+              >
+                <pre style={styles.messageText}>{message.content}</pre>
               </div>
-            )}
+              {message.role === 'user' && (
+                <div style={styles.avatarUser}>
+                  <UserOutlined style={{ color: '#fff', fontSize: 14 }} />
+                </div>
+              )}
+            </div>
           </div>
         ))}
 
@@ -290,6 +327,22 @@ const styles: Record<string, React.CSSProperties> = {
     alignItems: 'center',
     justifyContent: 'center',
     flexShrink: 0,
+  },
+  stockCard: {
+    margin: '0 40px 8px',
+    padding: '14px 18px',
+    background: 'linear-gradient(135deg, #f0f7ff 0%, #e6f4ff 100%)',
+    borderRadius: 12,
+    border: '1px solid #d6e4ff',
+  },
+  stockCardHeader: {
+    display: 'flex',
+    alignItems: 'center',
+  },
+  stockCardPrice: {
+    marginTop: 8,
+    display: 'flex',
+    flexDirection: 'column' as const,
   },
   messageBubble: {
     maxWidth: '75%',
