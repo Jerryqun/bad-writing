@@ -1743,7 +1743,7 @@ else:
 | PUT | `/api/form/schema/update` | FormSchemaUpdateDTO（含 version） | FormSchemaDetailVO |
 | DELETE | `/api/form/schema/delete?formKey=&version=` | formKey,version | boolean |
 | GET | `/api/form/schema/detail?formKey=` | formKey + 隐式上下文 | FormSchemaDetailVO |
-| GET | `/api/form/schema/list` | query DTO + 隐式上下文 | PageResult<FormSchemaVO> |
+| GET | `/api/form/schema/list` | query DTO + 隐式上下文 | `PageResult<FormSchemaVO>` |
 | PUT | `/api/form/schema/datasource` | formKey,version,mongoEnabled,esEnabled | FormSchemaDetailVO |
 | GET | `/api/form/schema/placeholders` | 无 | PlaceholderDefinition[] |
 创建与更新必须校验 Mongo/ES 不同时为 0；Schema 更新必须携带 version，更新、删除、数据源开关只允许 Owner 或 `PLATFORM_ADMIN`，并始终校验 clientId。
