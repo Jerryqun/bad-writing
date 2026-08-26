@@ -1,5 +1,7 @@
 ---
-nav: 前端基础
+nav:
+  title: 前端技术
+  order: 1
 group: JS-案例
 toc: content
 title: 动态生成海报

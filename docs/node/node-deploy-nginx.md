@@ -1,5 +1,7 @@
 ---
-nav: Node
+nav:
+  title: 后端技术
+  order: 2
 group: 部署
 toc: content
 mobile: false

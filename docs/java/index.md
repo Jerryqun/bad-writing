@@ -1,5 +1,7 @@
 ---
-nav: Java
+nav:
+  title: 后端技术
+  order: 2
 group: 基础
 toc: content
 title: Java 入门

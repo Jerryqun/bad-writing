@@ -1,5 +1,7 @@
 ---
-nav: 前端基础
+nav:
+  title: 前端技术
+  order: 1
 group: JS-设计模式
 toc: content
 title: 策略模式

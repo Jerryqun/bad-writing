@@ -1,5 +1,7 @@
 ---
-nav: 高阶技术
+nav:
+  title: 前端技术
+  order: 1
 group:
   title: 前端工具
   order: 2

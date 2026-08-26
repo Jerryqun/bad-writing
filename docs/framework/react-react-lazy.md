@@ -1,5 +1,7 @@
 ---
-nav: 前端框架
+nav:
+  title: 前端技术
+  order: 1
 group: React-基础
 toc: content
 title: React 懒加载

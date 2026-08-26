@@ -17,5 +17,30 @@ export default {
     socialLinks: {
       github: 'https://github.com/Jerryqun/bad-writing',
     },
+    // 顶部大菜单：覆盖约定式路由自动生成的导航
+    // dumi 的自动导航是"每个顶级目录一个导航项"，无法按标题合并，故此处静态声明
+    nav: [
+      {
+        title: '前端技术',
+        link: '/front-end-basic',
+        children: [
+          { title: '前端基础', link: '/front-end-basic' },
+          { title: '前端框架', link: '/framework' },
+          { title: 'Nextjs', link: '/nextjs' },
+          { title: 'Http', link: '/http' },
+          { title: '高阶技术', link: '/advanced' },
+        ],
+      },
+      {
+        title: '后端技术',
+        link: '/java',
+        children: [
+          { title: 'Node', link: '/node' },
+          { title: 'Java', link: '/java' },
+        ],
+      },
+      { title: '股票', link: '/stock' },
+      { title: '考公', link: '/kaogong' },
+    ],
   },
 };

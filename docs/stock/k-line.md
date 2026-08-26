@@ -1,5 +1,7 @@
 ---
-nav: 股票
+nav:
+  title: 股票
+  order: 3
 group: 基础
 toc: content
 title: K线操作技巧

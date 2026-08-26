@@ -1,5 +1,7 @@
 ---
-nav: Java
+nav:
+  title: 后端技术
+  order: 2
 group: 数据库
 toc: content
 title: 数据库基础

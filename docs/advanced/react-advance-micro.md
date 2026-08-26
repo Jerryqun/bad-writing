@@ -1,5 +1,7 @@
 ---
-nav: 高阶技术
+nav:
+  title: 前端技术
+  order: 1
 group: 微前端
 toc: content
 title: 微前端

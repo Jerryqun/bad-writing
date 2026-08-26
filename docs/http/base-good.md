@@ -1,5 +1,7 @@
 ---
-nav: Http
+nav:
+  title: 前端技术
+  order: 1
 group:
   title: 网络知识
   order: 1

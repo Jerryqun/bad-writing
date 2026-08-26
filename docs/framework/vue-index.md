@@ -1,5 +1,7 @@
 ---
-nav: 前端框架
+nav:
+  title: 前端技术
+  order: 1
 group: Vue-基础
 toc: content
 title: 面试

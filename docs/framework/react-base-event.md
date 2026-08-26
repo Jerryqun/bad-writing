@@ -1,5 +1,7 @@
 ---
-nav: 前端框架
+nav:
+  title: 前端技术
+  order: 1
 group: React-基础
 toc: content
 mobile: false
@@ -61,15 +63,6 @@ function App() {
 }
 
 /** react18之前两次渲染，react18之后一次渲染 */
->>>>>>>
-
----
-nav: 前端框架
-group: React-基础
-toc: content
-mobile: false
-title: react合成事件
----
 
 ## React 合成事件
 
@@ -153,16 +146,6 @@ export default App;
 ````
 
 ## 为什么 react 会自己实现一套事件机制
-
----
-
-nav: 前端框架
-group: React-基础
-toc: content
-mobile: false
-title: react 合成事件
-
----
 
 ## React 合成事件
 

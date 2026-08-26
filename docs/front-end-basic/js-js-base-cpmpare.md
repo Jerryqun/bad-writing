@@ -1,5 +1,7 @@
 ---
-nav: 前端基础
+nav:
+  title: 前端技术
+  order: 1
 group: JS-基础概念
 toc: content
 title: JS字符串比较

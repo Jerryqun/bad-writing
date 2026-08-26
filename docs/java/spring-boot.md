@@ -1,5 +1,7 @@
 ---
-nav: Java
+nav:
+  title: 后端技术
+  order: 2
 group: Spring Boot
 toc: content
 title: Spring Boot 入门

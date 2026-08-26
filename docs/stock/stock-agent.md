@@ -1,5 +1,7 @@
 ---
-nav: 股票
+nav:
+  title: 股票
+  order: 3
 group: 工具
 toc: content
 title: 股小智 - AI 股票助手

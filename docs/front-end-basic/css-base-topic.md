@@ -1,5 +1,7 @@
 ---
-nav: 前端基础
+nav:
+  title: 前端技术
+  order: 1
 toc: content
 group:
   title: CSS-面试
