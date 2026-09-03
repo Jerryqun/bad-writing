@@ -42,5 +42,27 @@ export default {
       { title: '股票', link: '/stock' },
       { title: '考公', link: '/kaogong' },
     ],
+    // 侧边栏：覆盖考公目录自动生成的侧边栏
+    // 常用公式（速查页）+ 题型方法（学习方法页）
+    // （考公首页与《资料分析》笔记不出现在侧边栏，页面仍可通过链接访问）
+    sidebar: {
+      '/kaogong': [
+        {
+          title: '常用公式',
+          children: [
+            { title: '资料分析', link: '/kaogong/formula-data-analysis' },
+            { title: '数量关系', link: '/kaogong/formula-quantity' },
+          ],
+        },
+        {
+          title: '题型方法',
+          children: [
+            { title: '言语理解', link: '/kaogong/method-verbal' },
+            { title: '判断推理', link: '/kaogong/method-reasoning' },
+            { title: '常识判断', link: '/kaogong/method-common-sense' },
+          ],
+        },
+      ],
+    },
   },
 };
