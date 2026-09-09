@@ -41,6 +41,7 @@ export default {
       },
       { title: '股票', link: '/stock' },
       { title: '考公', link: '/kaogong' },
+      { title: '羽毛球C级教练', link: '/badminton' },
     ],
     // 侧边栏：覆盖考公目录自动生成的侧边栏
     // 常用公式（速查页）+ 题型方法（学习方法页）
@@ -60,6 +61,30 @@ export default {
             { title: '言语理解', link: '/kaogong/method-verbal' },
             { title: '判断推理', link: '/kaogong/method-reasoning' },
             { title: '常识判断', link: '/kaogong/method-common-sense' },
+          ],
+        },
+      ],
+      // 侧边栏：覆盖羽毛球目录自动生成的侧边栏
+      // 基础（目录首页）+ 运动医学（损伤与疾病）+ 训练教学（监控与计划）
+      '/badminton': [
+        {
+          title: '基础',
+          children: [
+            { title: '羽毛球C级教练', link: '/badminton' },
+          ],
+        },
+        {
+          title: '运动医学',
+          children: [
+            { title: '常见运动损伤', link: '/badminton/injury-basics' },
+            { title: '运动性疾病与处理', link: '/badminton/sports-diseases' },
+          ],
+        },
+        {
+          title: '训练教学',
+          children: [
+            { title: '训练监控', link: '/badminton/training-monitoring' },
+            { title: '教学训练原则与计划', link: '/badminton/teaching-principles' },
           ],
         },
       ],
