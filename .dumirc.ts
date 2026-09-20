@@ -44,14 +44,14 @@ export default {
       { title: '羽毛球C级教练', link: '/badminton' },
     ],
     // 侧边栏：覆盖考公目录自动生成的侧边栏
-    // 常用公式（速查页）+ 题型方法（学习方法页）
-    // （考公首页与《资料分析》笔记不出现在侧边栏，页面仍可通过链接访问）
+    // 常用公式（资料分析、数量关系）+ 题型方法（学习方法页）
+    // （考公首页不出现在侧边栏，页面仍可通过链接访问）
     sidebar: {
       '/kaogong': [
         {
           title: '常用公式',
           children: [
-            { title: '资料分析', link: '/kaogong/formula-data-analysis' },
+            { title: '资料分析', link: '/kaogong/data-analysis' },
             { title: '数量关系', link: '/kaogong/formula-quantity' },
           ],
         },
