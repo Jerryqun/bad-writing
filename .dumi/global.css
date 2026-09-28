@@ -1,3 +1,467 @@
+/**
+ * 「编程小径」全局样式增强
+ *
+ * 主色为青绿色系（teal #0d9488 → cyan #0891b2 渐变点缀），
+ * 主色本身通过 .dumirc.ts 的 lessLoader.modifyVars 在 Less 编译层注入，
+ * 本文件负责在默认主题之上叠加装饰与交互增强（含暗色模式适配）。
+ *
+ * 选择器统一使用重复类名（如 .dumi-default-hero.dumi-default-hero）
+ * 或 .dumi-default-content 祖先选择器，以保证覆盖优先级高于主题默认样式。
+ */
+
+/* ========== 1. 调色变量 ========== */
+:root {
+  --bw-primary: #0d9488;
+  --bw-accent: #0891b2;
+  --bw-gradient: linear-gradient(135deg, #0d9488 0%, #0891b2 100%);
+  --bw-primary-faint: rgba(13, 148, 136, 0.08);
+  --bw-primary-border: rgba(13, 148, 136, 0.22);
+  --bw-shadow-sm: 0 2px 12px rgba(13, 148, 136, 0.08);
+  --bw-shadow-lg: 0 16px 32px rgba(13, 148, 136, 0.18);
+}
+
+[data-prefers-color='dark'] {
+  --bw-primary: #14b8a6;
+  --bw-accent: #22d3ee;
+  --bw-gradient: linear-gradient(135deg, #14b8a6 0%, #0e7490 100%);
+  --bw-primary-faint: rgba(20, 184, 166, 0.12);
+  --bw-primary-border: rgba(20, 184, 166, 0.28);
+  --bw-shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.3);
+  --bw-shadow-lg: 0 16px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* ========== 2. 全局细节：滚动条 / 选区 / Logo ========== */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(13, 148, 136, 0.35);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(13, 148, 136, 0.55);
+}
+
+[data-prefers-color='dark'] ::-webkit-scrollbar-thumb {
+  background: rgba(20, 184, 166, 0.35);
+}
+
+::selection {
+  background: rgba(13, 148, 136, 0.25);
+}
+
+[data-prefers-color='dark'] ::selection {
+  background: rgba(20, 184, 166, 0.3);
+}
+
 .dumi-default-logo img {
   border-radius: 50%;
+}
+
+/* ========== 3. 首页 Hero：渐变背景 ========== */
+/* 以青绿系径向渐变替代默认外链装饰图，摆脱外部依赖且明暗模式均可控 */
+.dumi-default-hero.dumi-default-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  height: auto;
+  min-height: 0;
+  margin: 0 auto;
+  padding: 36px 24px 32px;
+  background: radial-gradient(
+      720px 360px at 18% 28%,
+      rgba(13, 148, 136, 0.16),
+      transparent 60%
+    ),
+    radial-gradient(
+      640px 320px at 82% 18%,
+      rgba(8, 145, 178, 0.13),
+      transparent 60%
+    ),
+    radial-gradient(
+      560px 420px at 55% 92%,
+      rgba(16, 185, 129, 0.1),
+      transparent 60%
+    ),
+    linear-gradient(180deg, #eefbf8 0%, #f7f9fb 100%);
+}
+
+/* 背景直接绘制在容器上，避免定位伪元素盖住标题、描述和按钮。 */
+.dumi-default-hero.dumi-default-hero::before {
+  content: none;
+  display: none;
+}
+
+[data-prefers-color='dark'] .dumi-default-hero.dumi-default-hero {
+  background: radial-gradient(
+      720px 360px at 18% 28%,
+      rgba(20, 184, 166, 0.18),
+      transparent 60%
+    ),
+    radial-gradient(
+      640px 320px at 82% 18%,
+      rgba(34, 211, 238, 0.12),
+      transparent 60%
+    ),
+    radial-gradient(
+      560px 420px at 55% 92%,
+      rgba(16, 185, 129, 0.1),
+      transparent 60%
+    ),
+    linear-gradient(180deg, #0c1719 0%, #131617 100%);
+}
+
+.dumi-default-hero.dumi-default-hero .dumi-default-hero-title {
+  margin: 0;
+  font-family: inherit;
+  font-size: clamp(40px, 5vw, 68px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  color: var(--bw-primary);
+  opacity: 1;
+}
+
+.dumi-default-hero.dumi-default-hero .dumi-default-hero-title > span {
+  display: inline-block;
+  background-image: var(--bw-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-shadow: none;
+}
+
+.dumi-default-hero.dumi-default-hero > p {
+  max-width: 640px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.dumi-default-hero.dumi-default-hero .dumi-default-hero-actions {
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 4px 0 0;
+}
+
+/* Hero 按钮：主按钮渐变填充 + 悬浮上移 */
+.dumi-default-hero.dumi-default-hero .dumi-default-hero-actions > a {
+  min-width: 140px;
+  height: 44px;
+  padding: 0 24px;
+  border: 1px solid transparent;
+  border-radius: 22px;
+  font-size: 15px;
+  line-height: 42px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    background-color 0.25s ease, opacity 0.2s;
+}
+
+.dumi-default-hero .dumi-default-hero-actions > a:first-child {
+  background-image: var(--bw-gradient);
+  box-shadow: 0 8px 20px rgba(13, 148, 136, 0.35);
+}
+
+.dumi-default-hero .dumi-default-hero-actions > a:first-child:hover {
+  opacity: 1;
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(13, 148, 136, 0.42);
+}
+
+.dumi-default-hero.dumi-default-hero
+  .dumi-default-hero-actions
+  > a:not(:first-child) {
+  margin-inline-start: 0;
+  color: var(--bw-primary);
+  border-color: var(--bw-primary-border);
+}
+
+.dumi-default-hero .dumi-default-hero-actions > a:not(:first-child):hover {
+  opacity: 1;
+  transform: translateY(-3px);
+  background-color: var(--bw-primary-faint);
+}
+
+/* ========== 4. 首页 Features：等高网格 ========== */
+.dumi-default-features.dumi-default-features {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-rows: 1fr;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 32px;
+  padding: 8px 24px;
+  overflow: visible;
+}
+
+/* 覆盖延迟加载的主题列宽及 nth-child 外边距，行高由最长内容统一决定。 */
+.dumi-default-features.dumi-default-features[data-cols]
+  > div.dumi-default-features-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  float: none;
+  width: auto;
+  min-width: 0;
+  min-height: 0;
+  box-sizing: border-box;
+  margin: 0;
+  margin-inline: 0;
+  padding: 24px;
+  border: 1px solid var(--bw-primary-border);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: var(--bw-shadow-sm);
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.dumi-default-features.dumi-default-features > .dumi-default-features-item > i {
+  display: flex;
+  align-items: center;
+  height: 44px;
+  flex-shrink: 0;
+  font-size: 36px;
+  line-height: 1;
+  color: var(--bw-primary);
+}
+
+.dumi-default-features.dumi-default-features
+  > .dumi-default-features-item
+  > h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.dumi-default-features.dumi-default-features
+  > .dumi-default-features-item
+  > h3
+  a {
+  color: var(--bw-primary);
+}
+
+.dumi-default-features.dumi-default-features > .dumi-default-features-item > p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+}
+
+[data-prefers-color='dark']
+  .dumi-default-features.dumi-default-features[data-cols]
+  > div.dumi-default-features-item {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.dumi-default-features.dumi-default-features[data-cols]
+  > div.dumi-default-features-item:hover {
+  transform: translateY(-6px);
+  border-color: var(--bw-primary);
+  box-shadow: var(--bw-shadow-lg);
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .dumi-default-features.dumi-default-features {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* 移动端单列随内容自然增高，不裁剪较长描述。 */
+@media (max-width: 767px) {
+  .dumi-default-hero.dumi-default-hero {
+    gap: 16px;
+    padding: 24px 20px;
+  }
+
+  .dumi-default-features.dumi-default-features {
+    grid-template-columns: minmax(0, 1fr);
+    grid-auto-rows: auto;
+    gap: 16px;
+    padding: 8px 20px;
+  }
+}
+
+.dumi-default-hero a:focus-visible,
+.dumi-default-features a:focus-visible {
+  outline: 2px solid var(--bw-primary);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dumi-default-hero.dumi-default-hero .dumi-default-hero-actions > a,
+  .dumi-default-features.dumi-default-features[data-cols]
+    > div.dumi-default-features-item {
+    transition: none;
+    transform: none;
+  }
+}
+
+/* ========== 5. 顶部导航：渐变下划线动效（仅桌面端） ========== */
+@media (min-width: 1025px) {
+  .dumi-default-navbar > li > a {
+    position: relative;
+  }
+
+  .dumi-default-navbar > li > a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    width: 0;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--bw-gradient);
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+  }
+
+  .dumi-default-navbar > li > a:hover::after,
+  .dumi-default-navbar > li > a.active::after {
+    width: 100%;
+  }
+
+  .dumi-default-navbar > li > a.active {
+    color: var(--bw-primary);
+  }
+}
+
+/* 下拉菜单项 hover 背景 */
+.dumi-default-navbar > li > .dumi-default-navbar-dropdown > li > a:hover {
+  background-color: var(--bw-primary-faint);
+}
+
+/* ========== 6. 侧边栏：激活指示条 + 分组标题着色 ========== */
+.dumi-default-sidebar > dl > dt {
+  color: var(--bw-primary);
+  letter-spacing: 0.08em;
+}
+
+.dumi-default-sidebar > dl > dd > a {
+  position: relative;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: color 0.25s ease, background-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.dumi-default-sidebar > dl > dd > a:hover {
+  background-color: var(--bw-primary-faint);
+  transform: translateX(2px);
+}
+
+.dumi-default-sidebar > dl > dd > a.active {
+  background-color: var(--bw-primary-faint);
+}
+
+.dumi-default-sidebar > dl > dd > a.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 3px;
+  height: 18px;
+  border-radius: 2px;
+  background: var(--bw-gradient);
+  transform: translateY(-50%);
+}
+
+/* ========== 7. 正文阅读体验 ========== */
+/* 行高：中文长文阅读 1.78 更舒适（默认 1.5 偏紧） */
+.dumi-default-content .markdown {
+  line-height: 1.78;
+}
+
+/* 一级标题：主色渐隐底边 */
+.dumi-default-content .markdown h1 {
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--bw-primary-border);
+}
+
+/* 二级标题：左侧渐变竖条 + 虚线底边，强化层级感 */
+.dumi-default-content .markdown h2 {
+  position: relative;
+  padding-left: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed var(--bw-primary-border);
+}
+
+.dumi-default-content .markdown h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  bottom: 6px;
+  width: 5px;
+  border-radius: 3px;
+  background: var(--bw-gradient);
+}
+
+/* 行内代码：主色着色，与正文区分 */
+.dumi-default-content .markdown *:not(pre) code {
+  padding: 2px 6px;
+  color: #0f766e;
+  font-weight: 500;
+  background: var(--bw-primary-faint);
+  border-radius: 4px;
+}
+
+[data-prefers-color='dark'] .dumi-default-content .markdown *:not(pre) code {
+  color: #5eead4;
+}
+
+/* 代码块：圆角 + 主色调边框 */
+.dumi-default-content .markdown pre {
+  border: 1px solid var(--bw-primary-border);
+  border-radius: 10px;
+  line-height: 1.7;
+}
+
+/* 引用块：主色左边框 + 渐变浅底，取消中文斜体 */
+.dumi-default-content .markdown blockquote {
+  padding: 14px 18px;
+  font-style: normal;
+  background: var(--bw-primary-faint);
+  border-left: 4px solid var(--bw-primary);
+  border-radius: 0 8px 8px 0;
+}
+
+/* 表格：渐变表头 + 行 hover */
+.dumi-default-content .markdown th {
+  color: #134e4a;
+  font-weight: 600;
+  background: var(--bw-primary-faint);
+}
+
+[data-prefers-color='dark'] .dumi-default-content .markdown th {
+  color: #99f6e4;
+}
+
+.dumi-default-content .markdown tbody tr:hover td {
+  background: var(--bw-primary-faint);
+}
+
+/* 链接：主色下划虚线，hover 变实线 */
+.dumi-default-content .markdown a {
+  border-bottom: 1px dashed var(--bw-primary-border);
+  transition: border-color 0.2s ease;
+}
+
+.dumi-default-content .markdown a:hover {
+  border-bottom-color: var(--bw-primary);
+}
+
+/* ========== 8. 内容卡片：圆角与阴影微调 ========== */
+.dumi-default-content.dumi-default-content:not([data-no-sidebar]) {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }

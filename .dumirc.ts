@@ -6,6 +6,13 @@ export default {
   // base: './bad-writing/',
   history: { type: 'hash' },
   publicPath: '/bad-writing/',
+  // 覆盖默认主题的主色变量（青绿色系）
+  // 暗色模式派生色由主题的 darken() 自动重算，无需单独配置
+  lessLoader: {
+    modifyVars: {
+      'c-primary': '#0d9488',
+    },
+  },
   // 手写一个webpack plugin 示例
   chainWebpack(memo: any, { env, webpack }: any) {
     console.log('chainWebpack');
