@@ -51,7 +51,7 @@ export default {
       { title: '羽毛球C级教练', link: '/badminton' },
     ],
     // 侧边栏：覆盖考公目录自动生成的侧边栏
-    // 常用公式（资料分析、数量关系）+ 题型方法（学习方法页）+ 知识积累（考点滚动收录页）
+    // 常用公式（资料分析、数量关系）+ 题型方法（言语/判断/常识/综合应用能力）+ 知识积累（考点滚动收录页）
     // （考公首页不出现在侧边栏，页面仍可通过链接访问）
     sidebar: {
       '/kaogong': [
@@ -68,6 +68,7 @@ export default {
             { title: '言语理解', link: '/kaogong/method-verbal' },
             { title: '判断推理', link: '/kaogong/method-reasoning' },
             { title: '常识判断', link: '/kaogong/method-common-sense' },
+            { title: '综合应用能力', link: '/kaogong/method-comprehensive' },
           ],
         },
         {
